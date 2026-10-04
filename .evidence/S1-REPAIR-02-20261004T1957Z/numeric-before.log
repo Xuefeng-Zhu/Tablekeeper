@@ -1,0 +1,99 @@
+test_canonicalization_is_independent_of_decimal_context (test_numeric_receipts.NumericReceipts.test_canonicalization_is_independent_of_decimal_context) ... FAIL
+test_concurrent_different_numeric_bodies (test_numeric_receipts.NumericReceipts.test_concurrent_different_numeric_bodies) ... 
+  test_concurrent_different_numeric_bodies (test_numeric_receipts.NumericReceipts.test_concurrent_different_numeric_bodies) (path='/reservations') ... FAIL
+  test_concurrent_different_numeric_bodies (test_numeric_receipts.NumericReceipts.test_concurrent_different_numeric_bodies) (path='/reservation-moves') ... FAIL
+test_decimal_exponent_zero_and_boolean_identity (test_numeric_receipts.NumericReceipts.test_decimal_exponent_zero_and_boolean_identity) ... 
+  test_decimal_exponent_zero_and_boolean_identity (test_numeric_receipts.NumericReceipts.test_decimal_exponent_zero_and_boolean_identity) (path='/reservations', first='0.1234567890123456789012345678') ... ERROR
+  test_decimal_exponent_zero_and_boolean_identity (test_numeric_receipts.NumericReceipts.test_decimal_exponent_zero_and_boolean_identity) (path='/reservations', first='1e999') ... FAIL
+  test_decimal_exponent_zero_and_boolean_identity (test_numeric_receipts.NumericReceipts.test_decimal_exponent_zero_and_boolean_identity) (path='/reservation-moves', first='0.1234567890123456789012345678') ... ERROR
+  test_decimal_exponent_zero_and_boolean_identity (test_numeric_receipts.NumericReceipts.test_decimal_exponent_zero_and_boolean_identity) (path='/reservation-moves', first='1e999') ... FAIL
+test_failed_key_reuse_and_nonfinite_rejection (test_numeric_receipts.NumericReceipts.test_failed_key_reuse_and_nonfinite_rejection) ... ok
+test_large_numeric_receipts_survive_mutation_and_import (test_numeric_receipts.NumericReceipts.test_large_numeric_receipts_survive_mutation_and_import) ... 
+  test_large_numeric_receipts_survive_mutation_and_import (test_numeric_receipts.NumericReceipts.test_large_numeric_receipts_survive_mutation_and_import) (path='/reservations') ... ERROR
+  test_large_numeric_receipts_survive_mutation_and_import (test_numeric_receipts.NumericReceipts.test_large_numeric_receipts_survive_mutation_and_import) (path='/reservation-moves') ... ERROR
+
+======================================================================
+ERROR: test_decimal_exponent_zero_and_boolean_identity (test_numeric_receipts.NumericReceipts.test_decimal_exponent_zero_and_boolean_identity) (path='/reservations', first='0.1234567890123456789012345678')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/frank/mygit/Tablekeeper/result-run-4/stage-1/tests/test_numeric_receipts.py", line 78, in test_decimal_exponent_zero_and_boolean_identity
+    self.assertEqual((result.status_code,result.json['error']['code']),(409,'idempotency_key_reuse'))
+                                         ~~~~~~~~~~~^^^^^^^^^
+KeyError: 'error'
+
+======================================================================
+ERROR: test_decimal_exponent_zero_and_boolean_identity (test_numeric_receipts.NumericReceipts.test_decimal_exponent_zero_and_boolean_identity) (path='/reservation-moves', first='0.1234567890123456789012345678')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/frank/mygit/Tablekeeper/result-run-4/stage-1/tests/test_numeric_receipts.py", line 78, in test_decimal_exponent_zero_and_boolean_identity
+    self.assertEqual((result.status_code,result.json['error']['code']),(409,'idempotency_key_reuse'))
+                                         ~~~~~~~~~~~^^^^^^^^^
+KeyError: 'error'
+
+======================================================================
+ERROR: test_large_numeric_receipts_survive_mutation_and_import (test_numeric_receipts.NumericReceipts.test_large_numeric_receipts_survive_mutation_and_import) (path='/reservations')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/frank/mygit/Tablekeeper/result-run-4/stage-1/tests/test_numeric_receipts.py", line 55, in test_large_numeric_receipts_survive_mutation_and_import
+    self.assertEqual((rejected.status_code,rejected.json['error']['code']),(409,'idempotency_key_reuse'))
+                                           ~~~~~~~~~~~~~^^^^^^^^^
+KeyError: 'error'
+
+======================================================================
+ERROR: test_large_numeric_receipts_survive_mutation_and_import (test_numeric_receipts.NumericReceipts.test_large_numeric_receipts_survive_mutation_and_import) (path='/reservation-moves')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/frank/mygit/Tablekeeper/result-run-4/stage-1/tests/test_numeric_receipts.py", line 55, in test_large_numeric_receipts_survive_mutation_and_import
+    self.assertEqual((rejected.status_code,rejected.json['error']['code']),(409,'idempotency_key_reuse'))
+                                           ~~~~~~~~~~~~~^^^^^^^^^
+KeyError: 'error'
+
+======================================================================
+FAIL: test_canonicalization_is_independent_of_decimal_context (test_numeric_receipts.NumericReceipts.test_canonicalization_is_independent_of_decimal_context)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/frank/mygit/Tablekeeper/result-run-4/stage-1/tests/test_numeric_receipts.py", line 115, in test_canonicalization_is_independent_of_decimal_context
+    self.assertNotEqual(canonical(parse('{"n":'+LARGE+'}')),canonical(parse('{"n":'+str(int(LARGE)+1)+'}')))
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ['object', [['n', ['number', '1E+28']]]] == ['object', [['n', ['number', '1E+28']]]]
+
+======================================================================
+FAIL: test_concurrent_different_numeric_bodies (test_numeric_receipts.NumericReceipts.test_concurrent_different_numeric_bodies) (path='/reservations')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/frank/mygit/Tablekeeper/result-run-4/stage-1/tests/test_numeric_receipts.py", line 91, in test_concurrent_different_numeric_bodies
+    self.assertEqual(sum(r[1]==409 for r in results),49)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 != 49
+
+======================================================================
+FAIL: test_concurrent_different_numeric_bodies (test_numeric_receipts.NumericReceipts.test_concurrent_different_numeric_bodies) (path='/reservation-moves')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/frank/mygit/Tablekeeper/result-run-4/stage-1/tests/test_numeric_receipts.py", line 91, in test_concurrent_different_numeric_bodies
+    self.assertEqual(sum(r[1]==409 for r in results),49)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 != 49
+
+======================================================================
+FAIL: test_decimal_exponent_zero_and_boolean_identity (test_numeric_receipts.NumericReceipts.test_decimal_exponent_zero_and_boolean_identity) (path='/reservations', first='1e999')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/frank/mygit/Tablekeeper/result-run-4/stage-1/tests/test_numeric_receipts.py", line 71, in test_decimal_exponent_zero_and_boolean_identity
+    self.assertEqual(original.status_code,201)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 422 != 201
+
+======================================================================
+FAIL: test_decimal_exponent_zero_and_boolean_identity (test_numeric_receipts.NumericReceipts.test_decimal_exponent_zero_and_boolean_identity) (path='/reservation-moves', first='1e999')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/frank/mygit/Tablekeeper/result-run-4/stage-1/tests/test_numeric_receipts.py", line 71, in test_decimal_exponent_zero_and_boolean_identity
+    self.assertEqual(original.status_code,201)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 422 != 201
+
+----------------------------------------------------------------------
+Ran 5 tests in 1.197s
+
+FAILED (failures=5, errors=4)

@@ -1,0 +1,433 @@
+{
+  "work_item": "S1-IMPLEMENT",
+  "defect": "S1-DEFECT-02",
+  "state": "REVIEW",
+  "owner": "@frankzhu94/factory-backend",
+  "next_recipient": "@frankzhu94/factory-pm",
+  "starting_revision": "c8558d8f5f4003221d92d297db5bcabf6cf3fa30",
+  "product_candidate": "51284ad3202f927d41107b052f721b401c0a6d51",
+  "recorded_at": "2026-10-04T20:03:02.132092+00:00",
+  "room_events": {
+    "receipt": "2c3db3fd-58db-48e0-894f-bc2c62ea9f93",
+    "start": "ef858762-2af3-459d-9514-7b0c7dcfd98a",
+    "progress": "3f0a14b2-beb7-4d7c-bc62-8b34f90abda2"
+  },
+  "workspace": "/Users/frank/mygit/Tablekeeper/result-run-4",
+  "requirements": [
+    "Exact full parsed JSON body identity for both idempotent endpoints, including ignored fields, equivalent numeric values and boolean distinction.",
+    "Preserve original stored bodies/responses and replay behavior across unchanged export/import.",
+    "Keep input-order move validation, atomic writes, rollback and nonfinite errors."
+  ],
+  "commands": [
+    {
+      "command": "git fetch origin && git merge --ff-only origin/run-4",
+      "exit": 0
+    },
+    {
+      "command": "/Users/frank/mygit/Tablekeeper/runs/harness-venv/bin/python .evidence/S1-REPAIR-02-20261004T1957Z/run_reviewer.py before",
+      "exit": 1,
+      "result": "Expected reproduced numeric collision; same-body control200, changed integer incorrectly200",
+      "detail": {
+        "started_at": "2026-10-04T19:57:07.408309+00:00",
+        "actual_revision": "c8558d8f5f4003221d92d297db5bcabf6cf3fa30",
+        "commands": [
+          {
+            "args": [
+              "docker",
+              "build",
+              "-t",
+              "tablekeeper-backend-numeric-before",
+              "/Users/frank/mygit/Tablekeeper/result-run-4/stage-1"
+            ],
+            "exit": 0,
+            "log": "build"
+          },
+          {
+            "args": [
+              "docker",
+              "run",
+              "-d",
+              "--name",
+              "tablekeeper-backend-numeric-before",
+              "--network",
+              "none",
+              "--cpus",
+              "2",
+              "--memory",
+              "2g",
+              "-e",
+              "PORT=8099",
+              "tablekeeper-backend-numeric-before"
+            ],
+            "exit": 0,
+            "log": "start"
+          },
+          {
+            "args": [
+              "docker",
+              "exec",
+              "tablekeeper-backend-numeric-before",
+              "python",
+              "-c",
+              "import time,urllib.request\nfor _ in range(100):\n try:\n  assert urllib.request.urlopen('http://127.0.0.1:8099/health',timeout=1).status==200;break\n except OSError:time.sleep(.1)\nelse:raise RuntimeError('not healthy')"
+            ],
+            "exit": 0,
+            "log": "health"
+          },
+          {
+            "args": [
+              "docker",
+              "cp",
+              "/Users/frank/mygit/Tablekeeper/result-run-4/.evidence/S1-REVIEW-20261004T194647Z/independent.py",
+              "tablekeeper-backend-numeric-before:/tmp/independent.py"
+            ],
+            "exit": 0,
+            "log": "copy-independent.py"
+          },
+          {
+            "args": [
+              "docker",
+              "cp",
+              "/Users/frank/mygit/Tablekeeper/result-run-4/.evidence/S1-REVIEW-20261004T194647Z/numeric_receipts.py",
+              "tablekeeper-backend-numeric-before:/tmp/numeric_receipts.py"
+            ],
+            "exit": 0,
+            "log": "copy-numeric_receipts.py"
+          },
+          {
+            "args": [
+              "docker",
+              "exec",
+              "tablekeeper-backend-numeric-before",
+              "python",
+              "/tmp/numeric_receipts.py"
+            ],
+            "exit": 1,
+            "log": "numeric"
+          },
+          {
+            "args": [
+              "docker",
+              "rm",
+              "-f",
+              "tablekeeper-backend-numeric-before"
+            ],
+            "exit": 0,
+            "log": "cleanup"
+          }
+        ],
+        "source_checksums": {
+          "independent.py": "d972ae37a0ad3771b165b38c55b3323185c255afbd56fe7e37e7430155cd4408",
+          "numeric_receipts.py": "8bfbe166b9a7741174d77476d291afd31d56dc8c36be250017b2e5418b8d0417"
+        },
+        "reproduction_exit": 1,
+        "finished_at": "2026-10-04T19:57:10.509994+00:00"
+      }
+    },
+    {
+      "command": "PYTHONPATH=stage-1 /private/tmp/tablekeeper-s1-backend-venv/bin/python -m unittest discover -s stage-1/tests -p test_numeric_receipts.py -v",
+      "exit": 1,
+      "result": "Before repair five tests, five failures and four errors; preserved numeric-before.log"
+    },
+    {
+      "command": "PYTHONPATH=stage-1 /private/tmp/tablekeeper-s1-backend-venv/bin/python -m unittest discover -s stage-1/tests -v",
+      "exit": 0,
+      "result": "17 PASS against product commit in 2.467s",
+      "log": "own-candidate.log"
+    },
+    {
+      "command": "/Users/frank/mygit/Tablekeeper/runs/harness-venv/bin/python .evidence/S1-REPAIR-02-20261004T1957Z/run_reviewer.py after",
+      "exit": 0,
+      "result": "Unchanged reviewer reproduction PASS; unchanged QA broader script 8/8 PASS as owner support",
+      "detail": {
+        "started_at": "2026-10-04T20:00:04.210423+00:00",
+        "actual_revision": "51284ad3202f927d41107b052f721b401c0a6d51",
+        "commands": [
+          {
+            "args": [
+              "docker",
+              "build",
+              "-t",
+              "tablekeeper-backend-numeric-after",
+              "/Users/frank/mygit/Tablekeeper/result-run-4/stage-1"
+            ],
+            "exit": 0,
+            "log": "build"
+          },
+          {
+            "args": [
+              "docker",
+              "run",
+              "-d",
+              "--name",
+              "tablekeeper-backend-numeric-after",
+              "--network",
+              "none",
+              "--cpus",
+              "2",
+              "--memory",
+              "2g",
+              "-e",
+              "PORT=8099",
+              "tablekeeper-backend-numeric-after"
+            ],
+            "exit": 0,
+            "log": "start"
+          },
+          {
+            "args": [
+              "docker",
+              "exec",
+              "tablekeeper-backend-numeric-after",
+              "python",
+              "-c",
+              "import time,urllib.request\nfor _ in range(100):\n try:\n  assert urllib.request.urlopen('http://127.0.0.1:8099/health',timeout=1).status==200;break\n except OSError:time.sleep(.1)\nelse:raise RuntimeError('not healthy')"
+            ],
+            "exit": 0,
+            "log": "health"
+          },
+          {
+            "args": [
+              "docker",
+              "cp",
+              "/Users/frank/mygit/Tablekeeper/result-run-4/.evidence/S1-REVIEW-20261004T194647Z/independent.py",
+              "tablekeeper-backend-numeric-after:/tmp/independent.py"
+            ],
+            "exit": 0,
+            "log": "copy-independent.py"
+          },
+          {
+            "args": [
+              "docker",
+              "cp",
+              "/Users/frank/mygit/Tablekeeper/result-run-4/.evidence/S1-REVIEW-20261004T194647Z/numeric_receipts.py",
+              "tablekeeper-backend-numeric-after:/tmp/numeric_receipts.py"
+            ],
+            "exit": 0,
+            "log": "copy-numeric_receipts.py"
+          },
+          {
+            "args": [
+              "docker",
+              "exec",
+              "tablekeeper-backend-numeric-after",
+              "python",
+              "/tmp/numeric_receipts.py"
+            ],
+            "exit": 0,
+            "log": "numeric"
+          },
+          {
+            "args": [
+              "docker",
+              "exec",
+              "tablekeeper-backend-numeric-after",
+              "python",
+              "/tmp/independent.py"
+            ],
+            "exit": 0,
+            "log": "independent"
+          },
+          {
+            "args": [
+              "docker",
+              "rm",
+              "-f",
+              "tablekeeper-backend-numeric-after"
+            ],
+            "exit": 0,
+            "log": "cleanup"
+          }
+        ],
+        "source_checksums": {
+          "independent.py": "d972ae37a0ad3771b165b38c55b3323185c255afbd56fe7e37e7430155cd4408",
+          "numeric_receipts.py": "8bfbe166b9a7741174d77476d291afd31d56dc8c36be250017b2e5418b8d0417"
+        },
+        "reproduction_exit": 0,
+        "independent_exit": 0,
+        "finished_at": "2026-10-04T20:00:08.230260+00:00"
+      }
+    },
+    {
+      "command": "/Users/frank/mygit/Tablekeeper/runs/harness-venv/bin/python .evidence/S1-REPAIR-02-20261004T1957Z/compatibility.py",
+      "exit": 0,
+      "result": {
+        "status": "PASS",
+        "legacy_export_unchanged": true,
+        "source_destroyed": true,
+        "endpoints": 2,
+        "original_cancelled_receipts_replayed": true,
+        "distinct_large_integer_rejected": true,
+        "hashed_password_login": true,
+        "source_revision": "c8558d8f5f4003221d92d297db5bcabf6cf3fa30",
+        "target_revision": "51284ad3202f927d41107b052f721b401c0a6d51",
+        "started_at": "2026-10-04T20:00:59.701465+00:00",
+        "finished_at": "2026-10-04T20:01:01.961755+00:00",
+        "layer": "Docker HTTP, network none, 2CPU/2GiB"
+      }
+    },
+    {
+      "command": "docker exec tk-backend-numeric-http python /tmp/http_numeric.py",
+      "exit": 0,
+      "result": {
+        "revision": "51284ad3202f927d41107b052f721b401c0a6d51",
+        "utc": "2026-10-04T20:02:19.902650+00:00",
+        "layer": "real Docker HTTP, network none, 2CPU/2GiB",
+        "results": [
+          {
+            "endpoint": "/reservations",
+            "original": "10000000000000000000000000001",
+            "equivalent": "10000000000000000000000000001.000",
+            "different": "10000000000000000000000000000",
+            "outcome": "PASS"
+          },
+          {
+            "endpoint": "/reservations",
+            "original": "0.1234567890123456789012345678",
+            "equivalent": "1234567890123456789012345678e-28",
+            "different": "0.1234567890123456789012345679",
+            "outcome": "PASS"
+          },
+          {
+            "endpoint": "/reservations",
+            "original": "1",
+            "equivalent": "1e0",
+            "different": "true",
+            "outcome": "PASS"
+          },
+          {
+            "endpoint": "/reservations",
+            "original": "-0",
+            "equivalent": "0.00",
+            "different": "false",
+            "outcome": "PASS"
+          },
+          {
+            "endpoint": "/reservations",
+            "original": "1e999",
+            "equivalent": "10e998",
+            "different": "2e999",
+            "outcome": "PASS"
+          },
+          {
+            "endpoint": "/reservation-moves",
+            "original": "10000000000000000000000000001",
+            "equivalent": "10000000000000000000000000001.000",
+            "different": "10000000000000000000000000000",
+            "outcome": "PASS"
+          },
+          {
+            "endpoint": "/reservation-moves",
+            "original": "0.1234567890123456789012345678",
+            "equivalent": "1234567890123456789012345678e-28",
+            "different": "0.1234567890123456789012345679",
+            "outcome": "PASS"
+          },
+          {
+            "endpoint": "/reservation-moves",
+            "original": "1",
+            "equivalent": "1e0",
+            "different": "true",
+            "outcome": "PASS"
+          },
+          {
+            "endpoint": "/reservation-moves",
+            "original": "-0",
+            "equivalent": "0.00",
+            "different": "false",
+            "outcome": "PASS"
+          },
+          {
+            "endpoint": "/reservation-moves",
+            "original": "1e999",
+            "equivalent": "10e998",
+            "different": "2e999",
+            "outcome": "PASS"
+          }
+        ],
+        "status": "PASS"
+      },
+      "setup_commands": "http-numeric-commands.json"
+    },
+    {
+      "command": "/Users/frank/mygit/Tablekeeper/runs/harness-venv/bin/python -m harness run --track tablekeeper --repo /Users/frank/mygit/Tablekeeper/result-run-4 --stage 1 --mode isolated --out /Users/frank/mygit/Tablekeeper/result-run-4/.evidence/S1-REPAIR-02-20261004T1957Z/official-candidate",
+      "cwd": "/Users/frank/mygit/Tablekeeper/challenge",
+      "exit": 0,
+      "result": {
+        "revision": "51284ad3202f927d41107b052f721b401c0a6d51",
+        "track": "tablekeeper",
+        "stages": {
+          "1": "pass"
+        },
+        "highest_contiguous": 1,
+        "started_at": "2026-10-04T20:00:05.404914+00:00",
+        "finished_at": "2026-10-04T20:00:37.766748+00:00",
+        "schema_version": 2,
+        "run_id": "a56efd62720a44869bdb3650a37b98a9",
+        "mode": "isolated",
+        "provenance": "working-tree",
+        "state": "completed",
+        "pytest_args": [],
+        "suite_digest": "8d7e7d9bb94893b67dff0a19ee8ecb8d6888db7208ed269f64b29c0a661a17a7",
+        "checks": {
+          "1": {
+            "collected": 120,
+            "passed": 120,
+            "failed": 0,
+            "errors": 0,
+            "skipped": 0,
+            "deselected": 0,
+            "xfailed": 0,
+            "files": {
+              "stage_1/test_health_reset_auth.py": {
+                "passed": 12,
+                "total": 12
+              },
+              "stage_1/test_reservations.py": {
+                "passed": 37,
+                "total": 37
+              },
+              "stage_1/test_restaurants_availability.py": {
+                "passed": 18,
+                "total": 18
+              },
+              "stage_1/test_retries_time_input.py": {
+                "passed": 20,
+                "total": 20
+              },
+              "stage_1/test_sample.py": {
+                "passed": 20,
+                "total": 20
+              },
+              "stage_1/test_seeded_state.py": {
+                "passed": 13,
+                "total": 13
+              }
+            }
+          }
+        },
+        "overshoot": null,
+        "claimed_stage": "1",
+        "share": 1.0,
+        "upgrade_sources": {
+          "2": {
+            "folder": "/Users/frank/mygit/Tablekeeper/result-run-4/stage-1",
+            "revision": "51284ad3202f927d41107b052f721b401c0a6d51"
+          }
+        }
+      }
+    }
+  ],
+  "schema": "1 unchanged; canonical form not persisted; raw body/response JSON strings preserved on import",
+  "limitations": [
+    "Independent Reviewer and QA acceptance pending",
+    "Old decimal tokens already rounded by prior float parser preserve stored values; unavailable original lexical digits cannot be reconstructed",
+    "Unchanged reviewer script embeds rejected revision; execution wrapper separately binds actual candidate and checksums",
+    "Official shipped checks are partial judgment coverage; stage2 overshoot remains unassigned and fails"
+  ],
+  "repair_cycles_used": 3,
+  "repair_ceiling": 3,
+  "repair_cycles_remaining": 0,
+  "usage": "UNAVAILABLE",
+  "cost": "UNAVAILABLE"
+}

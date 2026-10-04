@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "legacy_export_unchanged": true,
+  "source_destroyed": true,
+  "endpoints": 2,
+  "original_cancelled_receipts_replayed": true,
+  "distinct_large_integer_rejected": true,
+  "hashed_password_login": true,
+  "source_revision": "c8558d8f5f4003221d92d297db5bcabf6cf3fa30",
+  "target_revision": "51284ad3202f927d41107b052f721b401c0a6d51",
+  "started_at": "2026-10-04T20:00:59.701465+00:00",
+  "finished_at": "2026-10-04T20:01:01.961755+00:00",
+  "layer": "Docker HTTP, network none, 2CPU/2GiB"
+}

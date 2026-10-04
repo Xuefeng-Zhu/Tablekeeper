@@ -1,0 +1,22 @@
+test_concurrent_identical_receipts (test_api.API.test_concurrent_identical_receipts) ... ok
+test_dst_and_boundary (test_api.API.test_dst_and_boundary) ... ok
+test_portability_and_original_receipt (test_api.API.test_portability_and_original_receipt) ... ok
+test_receipt_precedence (test_api.API.test_receipt_precedence) ... ok
+test_swap_and_rollback (test_api.API.test_swap_and_rollback) ... ok
+test_global_shape_before_resource_checks (test_moves_order.MoveOrder.test_global_shape_before_resource_checks) ... ok
+test_input_order_for_lookup_cutoff_cancel_and_changes (test_moves_order.MoveOrder.test_input_order_for_lookup_cutoff_cancel_and_changes) ... ok
+test_restaurant_checks_follow_input_order (test_moves_order.MoveOrder.test_restaurant_checks_follow_input_order) ... ok
+test_swap_rollback_noop_and_original_receipt (test_moves_order.MoveOrder.test_swap_rollback_noop_and_original_receipt) ... ok
+test_canonicalization_is_independent_of_decimal_context (test_numeric_receipts.NumericReceipts.test_canonicalization_is_independent_of_decimal_context) ... ok
+test_concurrent_different_numeric_bodies (test_numeric_receipts.NumericReceipts.test_concurrent_different_numeric_bodies) ... ok
+test_decimal_exponent_zero_and_boolean_identity (test_numeric_receipts.NumericReceipts.test_decimal_exponent_zero_and_boolean_identity) ... ok
+test_failed_key_reuse_and_nonfinite_rejection (test_numeric_receipts.NumericReceipts.test_failed_key_reuse_and_nonfinite_rejection) ... ok
+test_large_numeric_receipts_survive_mutation_and_import (test_numeric_receipts.NumericReceipts.test_large_numeric_receipts_survive_mutation_and_import) ... ok
+test_corrupt_imports_are_atomic (test_state.State.test_corrupt_imports_are_atomic) ... ok
+test_history_and_receipts_roundtrip (test_state.State.test_history_and_receipts_roundtrip) ... ok
+test_reset_shape_and_rollback (test_state.State.test_reset_shape_and_rollback) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 2.474s
+
+OK

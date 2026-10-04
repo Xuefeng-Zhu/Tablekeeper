@@ -1,0 +1,66 @@
+{
+  "utc": "2026-10-04T20:02:20.009730+00:00",
+  "commands": [
+    {
+      "args": [
+        "run",
+        "-d",
+        "--name",
+        "tk-backend-numeric-http",
+        "--network",
+        "none",
+        "--cpus",
+        "2",
+        "--memory",
+        "2g",
+        "-e",
+        "PORT=8099",
+        "tablekeeper-backend-numeric-after"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "exec",
+        "tk-backend-numeric-http",
+        "python",
+        "-c",
+        "import time,urllib.request\nfor _ in range(100):\n try:\n  assert urllib.request.urlopen('http://127.0.0.1:8099/health').status==200;break\n except OSError:time.sleep(.1)\nelse:raise RuntimeError('health')"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "cp",
+        "/Users/frank/mygit/Tablekeeper/result-run-4/.evidence/S1-REVIEW-20261004T194647Z/independent.py",
+        "tk-backend-numeric-http:/tmp/independent.py"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "cp",
+        "/Users/frank/mygit/Tablekeeper/result-run-4/.evidence/S1-REPAIR-02-20261004T1957Z/http_numeric.py",
+        "tk-backend-numeric-http:/tmp/http_numeric.py"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "exec",
+        "tk-backend-numeric-http",
+        "python",
+        "/tmp/http_numeric.py"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "rm",
+        "-f",
+        "tk-backend-numeric-http"
+      ],
+      "exit": 0
+    }
+  ]
+}

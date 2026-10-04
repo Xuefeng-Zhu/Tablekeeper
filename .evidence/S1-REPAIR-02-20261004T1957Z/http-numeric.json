@@ -1,0 +1,78 @@
+{
+  "revision": "51284ad3202f927d41107b052f721b401c0a6d51",
+  "utc": "2026-10-04T20:02:19.902650+00:00",
+  "layer": "real Docker HTTP, network none, 2CPU/2GiB",
+  "results": [
+    {
+      "endpoint": "/reservations",
+      "original": "10000000000000000000000000001",
+      "equivalent": "10000000000000000000000000001.000",
+      "different": "10000000000000000000000000000",
+      "outcome": "PASS"
+    },
+    {
+      "endpoint": "/reservations",
+      "original": "0.1234567890123456789012345678",
+      "equivalent": "1234567890123456789012345678e-28",
+      "different": "0.1234567890123456789012345679",
+      "outcome": "PASS"
+    },
+    {
+      "endpoint": "/reservations",
+      "original": "1",
+      "equivalent": "1e0",
+      "different": "true",
+      "outcome": "PASS"
+    },
+    {
+      "endpoint": "/reservations",
+      "original": "-0",
+      "equivalent": "0.00",
+      "different": "false",
+      "outcome": "PASS"
+    },
+    {
+      "endpoint": "/reservations",
+      "original": "1e999",
+      "equivalent": "10e998",
+      "different": "2e999",
+      "outcome": "PASS"
+    },
+    {
+      "endpoint": "/reservation-moves",
+      "original": "10000000000000000000000000001",
+      "equivalent": "10000000000000000000000000001.000",
+      "different": "10000000000000000000000000000",
+      "outcome": "PASS"
+    },
+    {
+      "endpoint": "/reservation-moves",
+      "original": "0.1234567890123456789012345678",
+      "equivalent": "1234567890123456789012345678e-28",
+      "different": "0.1234567890123456789012345679",
+      "outcome": "PASS"
+    },
+    {
+      "endpoint": "/reservation-moves",
+      "original": "1",
+      "equivalent": "1e0",
+      "different": "true",
+      "outcome": "PASS"
+    },
+    {
+      "endpoint": "/reservation-moves",
+      "original": "-0",
+      "equivalent": "0.00",
+      "different": "false",
+      "outcome": "PASS"
+    },
+    {
+      "endpoint": "/reservation-moves",
+      "original": "1e999",
+      "equivalent": "10e998",
+      "different": "2e999",
+      "outcome": "PASS"
+    }
+  ],
+  "status": "PASS"
+}
