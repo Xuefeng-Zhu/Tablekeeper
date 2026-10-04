@@ -2,12 +2,16 @@
   {
     "id": "S1-ARCHITECTURE",
     "owner": "@frankzhu94/factory-architect",
-    "state": "PROPOSED",
+    "state": "ACCEPTED",
     "dependencies": [
       "PM-INIT"
     ],
     "goal": "Stage 1 architecture covering all applicable specifications",
-    "next_recipient": "@frankzhu94/factory-pm"
+    "next_recipient": "@frankzhu94/factory-pm",
+    "candidate_commit": "2c717c77d408e55b66831a70567c17cc1b3779dc",
+    "reviewer": "@frankzhu94/factory-pm",
+    "review_scope": "Architecture decision only; product checks remain NOT_TESTED",
+    "receipt_event": "3a2d01d7-5e2a-40bb-b7a7-d430f6a9c965"
   },
   {
     "id": "S1-IMPLEMENTATION",
