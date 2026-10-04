@@ -41,15 +41,15 @@
   "files": [
     {
       "path": "README.md",
-      "sha256": "74b2fcfd02c1fe897c38959efd8a53b2c84a590acf31c6a06ae3d9297022d868"
+      "sha256": "6487ac7d10bf29aa0df6e578ae77c965eef1a81f3b8a4ac99d44a06ebfd5e33f"
     },
     {
       "path": "FACTORY.md",
-      "sha256": "4c78baf4dc36d8f73d62f80733c127b92e4efcb503e2aa47a55ab2c27b7f8997"
+      "sha256": "090547535a58f65b2f1d9f7a0d5e440f128391a81cef29b793bb077a06fa79ab"
     },
     {
       "path": "submission-description.md",
-      "sha256": "5185a618fe397ae7cefe617d1b518525b3667573cce8358614ea5b5f061b27b0"
+      "sha256": "012042f70833e5e78e379967e4a0a05b9035f6631582ae0edd211cece53f5edb"
     }
   ],
   "source_draft_files": [
@@ -72,5 +72,13 @@
     "exit_code": 0,
     "root_tree": "3853266bd4829ab423a534ff942151a1ff871be8",
     "scope": "Layout/room/mandate/credential-pattern checks, not product acceptance"
+  },
+  "terminal_presentation": {
+    "snapshot_utc": "2026-10-04T23:46:00Z",
+    "status": "AI-assisted DRAFT; not video",
+    "artifact_commit": "b386bcc",
+    "pptx_sha256": "70b91cb8a4275f3d345ae9136832c3122fb5b88221a338ea0631a0c224adb1ad",
+    "pdf_sha256": "e3c59f375984f7e481f898d8d6eadd004349f530841cbe98f784ce5561b22969",
+    "visual_rendering": "six slides checked in Artifact Tool and LibreOffice/PDF; native PowerPoint not tested"
   }
 }
