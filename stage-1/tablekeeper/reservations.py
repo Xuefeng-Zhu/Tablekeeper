@@ -88,9 +88,19 @@ def moves(db,body,user):
     if not isinstance(items,list) or not 1<=len(items)<=8 or any(not isinstance(i,dict) or not isinstance(i.get('reference'),str) for i in items): fail()
     refs=[i['reference'] for i in items]
     if len(set(refs))!=len(refs): fail()
-    old=[owned(db,ref,user) for ref in refs]
-    if len({r['restaurant_id'] for r in old})!=1: fail()
-    instant=now(); new=[amend(db,r,b,instant) for r,b in zip(old,items)]
+    instant=now()
+    old=[]; new=[]
+    # Section 11 orders all non-occupancy errors by input item. A later
+    # missing reference must not mask an earlier cutoff or invalid change.
+    for item in items:
+        current=owned(db,item['reference'],user)
+        editable(current,instant)
+        if old and current['restaurant_id']!=old[0]['restaurant_id']: fail()
+        proposed=amend(db,current,item,instant)
+        old.append(current)
+        new.append(proposed)
+    # No live rows were changed while constructing these proposals. Only now
+    # compare final occupancy, so swaps and unchanged listed items work together.
     check_occupancy(db,new)
     counter=db.execute('SELECT counter FROM restaurants WHERE id=?',(old[0]['restaurant_id'],)).fetchone()[0]
     changed=any(a!=b for a,b in zip(old,new))

@@ -49,3 +49,12 @@ sessions, receipts and histories. Control endpoints intentionally need no token.
 
 Snapshots are private: they contain password hashes and authentication lookup
 material. Tests hold snapshot/token material in memory and publish only summaries.
+
+Batch validation follows stage-1 §11 input order. After global list shape and
+unique-reference checks, each item resolves its owner-visible reference, checks
+cancelled/cutoff state, checks membership in the first item's restaurant, and
+validates its proposed amendment before the next lookup. A later missing or
+cross-owner reference cannot replace an earlier error. The same captured UTC time
+is used throughout. All proposals remain detached from live rows until every
+non-occupancy check succeeds; collective occupancy then validates swaps and
+unchanged listed items before one atomic commit and receipt.
