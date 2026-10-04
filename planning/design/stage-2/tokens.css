@@ -1,0 +1,44 @@
+/* TK-S2-DESIGN planning tokens. No external fonts/assets. */
+:root {
+  --paper: #f7f3ea;
+  --surface: #ffffff;
+  --ink: #243c32;
+  --text: #252b27;
+  --muted: #58635b;
+  --line: #d5dacf;
+  --control-line: #778377;
+  --accent: #27533d;
+  --accent-hover: #183d2b;
+  --selected-bg: #e7efe7;
+  --unavailable-bg: #eeeee8;
+  --success-text: #205338;
+  --success-bg: #e7f1e8;
+  --error-text: #9c302b;
+  --error-bg: #fff0ed;
+  --uncertain-text: #76500e;
+  --uncertain-bg: #fff3d6;
+  --focus: #205da1;
+  --font-heading: Georgia, 'Times New Roman', serif;
+  --font-body: 'Trebuchet MS', 'Segoe UI', sans-serif;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 40px;
+  --space-8: 56px;
+  --radius-control: 8px;
+  --radius-card: 12px;
+  --radius-panel: 16px;
+  --control-min-height: 44px;
+  --option-min-height: 76px;
+  --content-max: 1200px;
+  --booking-width: 340px;
+  --shadow-panel: 0 8px 24px rgb(36 60 50 / 7%);
+}
+/* Implementation guidance: box-sizing:border-box; min-width:0 on flex/grid
+   children; visible :focus-visible outline 3px solid var(--focus), offset 3px.
+   --line is decorative only. Essential control boundaries use --control-line.
+   White text on accent; token text colours on their paired pale surfaces.
+   Unavailable controls do not use reduced opacity. */
