@@ -1,0 +1,13 @@
+test_concurrent_identical_receipts (test_api.API.test_concurrent_identical_receipts) ... ok
+test_dst_and_boundary (test_api.API.test_dst_and_boundary) ... ok
+test_portability_and_original_receipt (test_api.API.test_portability_and_original_receipt) ... /private/tmp/tablekeeper-s1-backend-venv/lib/python3.13/site-packages/werkzeug/routing/rules.py:837: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10aabb1f0>
+  code = compile(module, "<werkzeug routing>", "exec")
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_receipt_precedence (test_api.API.test_receipt_precedence) ... ok
+test_swap_and_rollback (test_api.API.test_swap_and_rollback) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.493s
+
+OK

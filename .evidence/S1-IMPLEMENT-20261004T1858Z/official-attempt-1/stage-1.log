@@ -1,0 +1,262 @@
+$ docker run --rm --network df-run-dd2baad2307f4d56b339bcb211d58082 -v /Users/frank/mygit/Tablekeeper/challenge:/work:ro -v /Users/frank/mygit/Tablekeeper/result-run-4/.evidence/S1-IMPLEMENT-20261004T1858Z/official-attempt-1:/out -e PYTHONDONTWRITEBYTECODE=1 -e PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 -e COLUMNS=200 -w /work df-harness-runner python -m pytest tablekeeper/test/stage_1 --base-url http://df-svc-6d7e91c4fdaf:8080 -p harness.plugin --rootdir tablekeeper/test -q --harness-summary /out/stage-1.counts.json
+
+......................................................................FFFFFF....................................FFF.....                                                                         [100%]
+=============================================================================================== FAILURES ===============================================================================================
+____________________________________________________________________________ test_booking_a_skipped_local_time_is_rejected _____________________________________________________________________________
+
+zoned = <function zoned.<locals>._make at 0xffffb72f4360>
+
+    def test_booking_a_skipped_local_time_is_rejected(zoned):
+>       ada = zoned()
+              ^^^^^^^
+
+tablekeeper/test/stage_1/test_retries_time_input.py:96: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tablekeeper/test/stage_1/test_retries_time_input.py:83: in _make
+    reset(fx.fixture(restaurants=[berlin, newyork]))
+harness/plugin.py:108: in _reset
+    assert_status(resp, 204)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+resp = <Response [500 INTERNAL SERVER ERROR]>, expected = 204
+
+    def assert_status(resp: httpx.Response, expected: int) -> httpx.Response:
+>       assert resp.status_code == expected, \
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            f"expected {expected}, got {resp.status_code}. {_describe(resp)}"
+E       AssertionError: expected 204, got 500. POST /_test/reset -> 500 '{"error":{"code":"internal_error","message":"Internal service error"}}'
+
+harness/http.py:108: AssertionError
+______________________________________________________________________________ test_fall_back_repeated_hour_appears_once _______________________________________________________________________________
+
+zoned = <function zoned.<locals>._make at 0xffffb72f67a0>, anon = <harness.http.Api object at 0xffffb7304e00>
+
+    def test_fall_back_repeated_hour_appears_once(zoned, anon):
+>       zoned()
+
+tablekeeper/test/stage_1/test_retries_time_input.py:105: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tablekeeper/test/stage_1/test_retries_time_input.py:83: in _make
+    reset(fx.fixture(restaurants=[berlin, newyork]))
+harness/plugin.py:108: in _reset
+    assert_status(resp, 204)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+resp = <Response [500 INTERNAL SERVER ERROR]>, expected = 204
+
+    def assert_status(resp: httpx.Response, expected: int) -> httpx.Response:
+>       assert resp.status_code == expected, \
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            f"expected {expected}, got {resp.status_code}. {_describe(resp)}"
+E       AssertionError: expected 204, got 500. POST /_test/reset -> 500 '{"error":{"code":"internal_error","message":"Internal service error"}}'
+
+harness/http.py:108: AssertionError
+___________________________________________________________________________ test_fall_back_resolves_to_the_first_occurrence ____________________________________________________________________________
+
+zoned = <function zoned.<locals>._make at 0xffffb72f63e0>
+
+    def test_fall_back_resolves_to_the_first_occurrence(zoned):
+        """02:00 on a fall-back night is the one before the clocks change: +02:00."""
+>       ada = zoned()
+              ^^^^^^^
+
+tablekeeper/test/stage_1/test_retries_time_input.py:113: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tablekeeper/test/stage_1/test_retries_time_input.py:83: in _make
+    reset(fx.fixture(restaurants=[berlin, newyork]))
+harness/plugin.py:108: in _reset
+    assert_status(resp, 204)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+resp = <Response [500 INTERNAL SERVER ERROR]>, expected = 204
+
+    def assert_status(resp: httpx.Response, expected: int) -> httpx.Response:
+>       assert resp.status_code == expected, \
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            f"expected {expected}, got {resp.status_code}. {_describe(resp)}"
+E       AssertionError: expected 204, got 500. POST /_test/reset -> 500 '{"error":{"code":"internal_error","message":"Internal service error"}}'
+
+harness/http.py:108: AssertionError
+____________________________________________________________________________ test_duration_is_absolute_time_not_wall_clock _____________________________________________________________________________
+
+zoned = <function zoned.<locals>._make at 0xffffb72f7060>
+
+    def test_duration_is_absolute_time_not_wall_clock(zoned):
+        """90 minutes from 01:30 on a fall-back night ends at local 02:00, not 03:00."""
+>       ada = zoned()
+              ^^^^^^^
+
+tablekeeper/test/stage_1/test_retries_time_input.py:124: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tablekeeper/test/stage_1/test_retries_time_input.py:83: in _make
+    reset(fx.fixture(restaurants=[berlin, newyork]))
+harness/plugin.py:108: in _reset
+    assert_status(resp, 204)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+resp = <Response [500 INTERNAL SERVER ERROR]>, expected = 204
+
+    def assert_status(resp: httpx.Response, expected: int) -> httpx.Response:
+>       assert resp.status_code == expected, \
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            f"expected {expected}, got {resp.status_code}. {_describe(resp)}"
+E       AssertionError: expected 204, got 500. POST /_test/reset -> 500 '{"error":{"code":"internal_error","message":"Internal service error"}}'
+
+harness/http.py:108: AssertionError
+___________________________________________________________________ test_two_zones_book_the_same_instant_from_different_local_times ____________________________________________________________________
+
+zoned = <function zoned.<locals>._make at 0xffffb72f63e0>
+
+    def test_two_zones_book_the_same_instant_from_different_local_times(zoned):
+        """Berlin 18:00 CET and New York 12:00 EST are the same absolute moment."""
+>       ada = zoned()
+              ^^^^^^^
+
+tablekeeper/test/stage_1/test_retries_time_input.py:135: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tablekeeper/test/stage_1/test_retries_time_input.py:83: in _make
+    reset(fx.fixture(restaurants=[berlin, newyork]))
+harness/plugin.py:108: in _reset
+    assert_status(resp, 204)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+resp = <Response [500 INTERNAL SERVER ERROR]>, expected = 204
+
+    def assert_status(resp: httpx.Response, expected: int) -> httpx.Response:
+>       assert resp.status_code == expected, \
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            f"expected {expected}, got {resp.status_code}. {_describe(resp)}"
+E       AssertionError: expected 204, got 500. POST /_test/reset -> 500 '{"error":{"code":"internal_error","message":"Internal service error"}}'
+
+harness/http.py:108: AssertionError
+________________________________________________________________________ test_offsets_are_correct_on_both_sides_of_a_transition ________________________________________________________________________
+
+zoned = <function zoned.<locals>._make at 0xffffb72f6480>
+
+    def test_offsets_are_correct_on_both_sides_of_a_transition(zoned):
+>       ada = zoned()
+              ^^^^^^^
+
+tablekeeper/test/stage_1/test_retries_time_input.py:149: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tablekeeper/test/stage_1/test_retries_time_input.py:83: in _make
+    reset(fx.fixture(restaurants=[berlin, newyork]))
+harness/plugin.py:108: in _reset
+    assert_status(resp, 204)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+resp = <Response [500 INTERNAL SERVER ERROR]>, expected = 204
+
+    def assert_status(resp: httpx.Response, expected: int) -> httpx.Response:
+>       assert resp.status_code == expected, \
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            f"expected {expected}, got {resp.status_code}. {_describe(resp)}"
+E       AssertionError: expected 204, got 500. POST /_test/reset -> 500 '{"error":{"code":"internal_error","message":"Internal service error"}}'
+
+harness/http.py:108: AssertionError
+_________________________________________________________________________ test_reset_rejects_invalid_reservation_references[x] _________________________________________________________________________
+
+reset = <function reset.<locals>._reset at 0xffffb7361940>, reference = 'x'
+
+    @pytest.mark.parametrize("reference", ["x", "lower01", "TOO-LONG-WITH-DASH"])
+    def test_reset_rejects_invalid_reservation_references(reset, reference):
+        date = fx.booking_date()
+        fixture = fx.fixture(reservations=[seeded_reservation(date, reference=reference)])
+>       assert_error(reset(fixture, raw=True), 422, "validation_failed")
+
+tablekeeper/test/stage_1/test_seeded_state.py:76: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+resp = <Response [204 NO CONTENT]>, status = 422, code = 'validation_failed'
+
+    def assert_error(resp: httpx.Response, status: int, code: str) -> httpx.Response:
+        """Assert an error response's status and `error.code` together.
+    
+        Both are asserted in one place so a failure reports the actual code rather
+        than only the status, which is what makes a wrong-code failure debuggable.
+        """
+        actual = error_code(resp) if 400 <= resp.status_code < 600 else None
+>       assert resp.status_code == status and actual == code, (
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            f"expected {status} {code}, got {resp.status_code} {actual}. {_describe(resp)}")
+E       AssertionError: expected 422 validation_failed, got 204 None. POST /_test/reset -> 204 ''
+
+harness/http.py:134: AssertionError
+______________________________________________________________________ test_reset_rejects_invalid_reservation_references[lower01] ______________________________________________________________________
+
+reset = <function reset.<locals>._reset at 0xffffb7361620>, reference = 'lower01'
+
+    @pytest.mark.parametrize("reference", ["x", "lower01", "TOO-LONG-WITH-DASH"])
+    def test_reset_rejects_invalid_reservation_references(reset, reference):
+        date = fx.booking_date()
+        fixture = fx.fixture(reservations=[seeded_reservation(date, reference=reference)])
+>       assert_error(reset(fixture, raw=True), 422, "validation_failed")
+
+tablekeeper/test/stage_1/test_seeded_state.py:76: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+resp = <Response [204 NO CONTENT]>, status = 422, code = 'validation_failed'
+
+    def assert_error(resp: httpx.Response, status: int, code: str) -> httpx.Response:
+        """Assert an error response's status and `error.code` together.
+    
+        Both are asserted in one place so a failure reports the actual code rather
+        than only the status, which is what makes a wrong-code failure debuggable.
+        """
+        actual = error_code(resp) if 400 <= resp.status_code < 600 else None
+>       assert resp.status_code == status and actual == code, (
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            f"expected {status} {code}, got {resp.status_code} {actual}. {_describe(resp)}")
+E       AssertionError: expected 422 validation_failed, got 204 None. POST /_test/reset -> 204 ''
+
+harness/http.py:134: AssertionError
+________________________________________________________________ test_reset_rejects_invalid_reservation_references[TOO-LONG-WITH-DASH] _________________________________________________________________
+
+reset = <function reset.<locals>._reset at 0xffffb7361c60>, reference = 'TOO-LONG-WITH-DASH'
+
+    @pytest.mark.parametrize("reference", ["x", "lower01", "TOO-LONG-WITH-DASH"])
+    def test_reset_rejects_invalid_reservation_references(reset, reference):
+        date = fx.booking_date()
+        fixture = fx.fixture(reservations=[seeded_reservation(date, reference=reference)])
+>       assert_error(reset(fixture, raw=True), 422, "validation_failed")
+
+tablekeeper/test/stage_1/test_seeded_state.py:76: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+resp = <Response [204 NO CONTENT]>, status = 422, code = 'validation_failed'
+
+    def assert_error(resp: httpx.Response, status: int, code: str) -> httpx.Response:
+        """Assert an error response's status and `error.code` together.
+    
+        Both are asserted in one place so a failure reports the actual code rather
+        than only the status, which is what makes a wrong-code failure debuggable.
+        """
+        actual = error_code(resp) if 400 <= resp.status_code < 600 else None
+>       assert resp.status_code == status and actual == code, (
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            f"expected {status} {code}, got {resp.status_code} {actual}. {_describe(resp)}")
+E       AssertionError: expected 422 validation_failed, got 204 None. POST /_test/reset -> 204 ''
+
+harness/http.py:134: AssertionError
+=========================================================================================== warnings summary ===========================================================================================
+../usr/local/lib/python3.12/site-packages/_pytest/cacheprovider.py:469
+  /usr/local/lib/python3.12/site-packages/_pytest/cacheprovider.py:469: PytestCacheWarning: could not create cache path /work/tablekeeper/test/.pytest_cache/v/cache/nodeids: [Errno 30] Read-only file system: '/work/tablekeeper/test/pytest-cache-files-29bwx44x'
+    config.cache.set("cache/nodeids", sorted(self.cached_nodeids))
+
+../usr/local/lib/python3.12/site-packages/_pytest/cacheprovider.py:423
+  /usr/local/lib/python3.12/site-packages/_pytest/cacheprovider.py:423: PytestCacheWarning: could not create cache path /work/tablekeeper/test/.pytest_cache/v/cache/lastfailed: [Errno 30] Read-only file system: '/work/tablekeeper/test/pytest-cache-files-_l8k2_z7'
+    config.cache.set("cache/lastfailed", self.lastfailed)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================================================================================= short test summary info ========================================================================================
+FAILED tablekeeper/test/stage_1/test_retries_time_input.py::test_booking_a_skipped_local_time_is_rejected - AssertionError: expected 204, got 500. POST /_test/reset -> 500 '{"error":{"code":"intern...
+FAILED tablekeeper/test/stage_1/test_retries_time_input.py::test_fall_back_repeated_hour_appears_once - AssertionError: expected 204, got 500. POST /_test/reset -> 500 '{"error":{"code":"internal_e...
+FAILED tablekeeper/test/stage_1/test_retries_time_input.py::test_fall_back_resolves_to_the_first_occurrence - AssertionError: expected 204, got 500. POST /_test/reset -> 500 '{"error":{"code":"inte...
+FAILED tablekeeper/test/stage_1/test_retries_time_input.py::test_duration_is_absolute_time_not_wall_clock - AssertionError: expected 204, got 500. POST /_test/reset -> 500 '{"error":{"code":"intern...
+FAILED tablekeeper/test/stage_1/test_retries_time_input.py::test_two_zones_book_the_same_instant_from_different_local_times - AssertionError: expected 204, got 500. POST /_test/reset -> 500 '{"erro...
+FAILED tablekeeper/test/stage_1/test_retries_time_input.py::test_offsets_are_correct_on_both_sides_of_a_transition - AssertionError: expected 204, got 500. POST /_test/reset -> 500 '{"error":{"code...
+FAILED tablekeeper/test/stage_1/test_seeded_state.py::test_reset_rejects_invalid_reservation_references[x] - AssertionError: expected 422 validation_failed, got 204 None. POST /_test/reset -> 204 ''
+FAILED tablekeeper/test/stage_1/test_seeded_state.py::test_reset_rejects_invalid_reservation_references[lower01] - AssertionError: expected 422 validation_failed, got 204 None. POST /_test/reset ->...
+FAILED tablekeeper/test/stage_1/test_seeded_state.py::test_reset_rejects_invalid_reservation_references[TOO-LONG-WITH-DASH] - AssertionError: expected 422 validation_failed, got 204 None. POST /_te...
+9 failed, 111 passed, 2 warnings in 15.80s
+

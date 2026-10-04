@@ -1,0 +1,257 @@
+{
+  "work_item": "S1-IMPLEMENT",
+  "state": "IN_PROGRESS",
+  "owner": "@frankzhu94/factory-backend",
+  "starting_revision": "17241ca2f83919643bc2c1f702fef1c96f52d5e0",
+  "checkpoint": "2180567d0c12aede1f02e776e76cded44f859269",
+  "recorded_at": "2026-10-04T19:05:39.281937+00:00",
+  "room_events": {
+    "receipt": "f9d2924a-6aaf-455d-90e8-9e1898aa3b08",
+    "start": "27d10ea0-d98e-45e8-b811-d7aecfe291b9",
+    "progress": "0412f9d1-76e1-42e4-9f71-b9a1fcbdc9dc"
+  },
+  "commands": [
+    {
+      "command": "git fetch origin && git merge --ff-only origin/run-4",
+      "exit": 0,
+      "result": "Already current at assigned starting revision"
+    },
+    {
+      "command": "/Users/frank/mygit/Tablekeeper/runs/harness-venv/bin/python -m harness run --help",
+      "cwd": "/Users/frank/mygit/Tablekeeper/challenge",
+      "exit": 0
+    },
+    {
+      "command": "/Users/frank/mygit/Tablekeeper/runs/harness-venv/bin/python -c \"import flask\"",
+      "exit": 1,
+      "result": "Missing Flask in pinned harness interpreter; created isolated /private/tmp/tablekeeper-s1-backend-venv instead"
+    },
+    {
+      "command": "PYTHONPATH=stage-1 /private/tmp/tablekeeper-s1-backend-venv/bin/python -m unittest discover -s stage-1/tests -v",
+      "exit": 0,
+      "result": "5 own Flask test-client checks passed; own-attempt-1,2,3 logs; final is checkpoint source"
+    },
+    {
+      "command": "git push origin HEAD:refs/heads/run-4",
+      "exit": 0,
+      "result": "2180567d0c12aede1f02e776e76cded44f859269 pushed"
+    },
+    {
+      "command": "/Users/frank/mygit/Tablekeeper/runs/harness-venv/bin/python -m harness run --track tablekeeper --repo /Users/frank/mygit/Tablekeeper/result-run-4 --stage 1 --mode isolated --out /Users/frank/mygit/Tablekeeper/result-run-4/.evidence/S1-IMPLEMENT-20261004T1858Z/official-attempt-1",
+      "cwd": "/Users/frank/mygit/Tablekeeper/challenge",
+      "exit": 1,
+      "report": {
+        "revision": "17241ca2f83919643bc2c1f702fef1c96f52d5e0",
+        "track": "tablekeeper",
+        "stages": {
+          "1": "fail"
+        },
+        "highest_contiguous": 0,
+        "started_at": "2026-10-04T19:02:28.089106+00:00",
+        "finished_at": "2026-10-04T19:03:11.883034+00:00",
+        "schema_version": 2,
+        "run_id": "dd2baad2307f4d56b339bcb211d58082",
+        "mode": "isolated",
+        "provenance": "working-tree",
+        "state": "completed",
+        "pytest_args": [],
+        "suite_digest": "8d7e7d9bb94893b67dff0a19ee8ecb8d6888db7208ed269f64b29c0a661a17a7",
+        "checks": {
+          "1": {
+            "collected": 120,
+            "passed": 111,
+            "failed": 9,
+            "errors": 0,
+            "skipped": 0,
+            "deselected": 0,
+            "xfailed": 0,
+            "files": {
+              "stage_1/test_health_reset_auth.py": {
+                "passed": 12,
+                "total": 12
+              },
+              "stage_1/test_reservations.py": {
+                "passed": 37,
+                "total": 37
+              },
+              "stage_1/test_restaurants_availability.py": {
+                "passed": 18,
+                "total": 18
+              },
+              "stage_1/test_retries_time_input.py": {
+                "passed": 14,
+                "total": 20
+              },
+              "stage_1/test_sample.py": {
+                "passed": 20,
+                "total": 20
+              },
+              "stage_1/test_seeded_state.py": {
+                "passed": 10,
+                "total": 13
+              }
+            }
+          }
+        },
+        "overshoot": null,
+        "claimed_stage": "1",
+        "share": 0.9115384615384615,
+        "upgrade_sources": {
+          "2": {
+            "folder": "/Users/frank/mygit/Tablekeeper/result-run-4/stage-1",
+            "revision": "17241ca2f83919643bc2c1f702fef1c96f52d5e0"
+          }
+        }
+      }
+    },
+    {
+      "command": "/Users/frank/mygit/Tablekeeper/runs/harness-venv/bin/python -m harness run --track tablekeeper --repo /Users/frank/mygit/Tablekeeper/result-run-4 --stage 1 --mode isolated --out /Users/frank/mygit/Tablekeeper/result-run-4/.evidence/S1-IMPLEMENT-20261004T1858Z/official-attempt-2",
+      "cwd": "/Users/frank/mygit/Tablekeeper/challenge",
+      "exit": 0,
+      "report": {
+        "revision": "17241ca2f83919643bc2c1f702fef1c96f52d5e0",
+        "track": "tablekeeper",
+        "stages": {
+          "1": "pass"
+        },
+        "highest_contiguous": 1,
+        "started_at": "2026-10-04T19:04:09.549683+00:00",
+        "finished_at": "2026-10-04T19:04:43.637074+00:00",
+        "schema_version": 2,
+        "run_id": "36ad4683394d4084b8027e8bde5729e4",
+        "mode": "isolated",
+        "provenance": "working-tree",
+        "state": "completed",
+        "pytest_args": [],
+        "suite_digest": "8d7e7d9bb94893b67dff0a19ee8ecb8d6888db7208ed269f64b29c0a661a17a7",
+        "checks": {
+          "1": {
+            "collected": 120,
+            "passed": 120,
+            "failed": 0,
+            "errors": 0,
+            "skipped": 0,
+            "deselected": 0,
+            "xfailed": 0,
+            "files": {
+              "stage_1/test_health_reset_auth.py": {
+                "passed": 12,
+                "total": 12
+              },
+              "stage_1/test_reservations.py": {
+                "passed": 37,
+                "total": 37
+              },
+              "stage_1/test_restaurants_availability.py": {
+                "passed": 18,
+                "total": 18
+              },
+              "stage_1/test_retries_time_input.py": {
+                "passed": 20,
+                "total": 20
+              },
+              "stage_1/test_sample.py": {
+                "passed": 20,
+                "total": 20
+              },
+              "stage_1/test_seeded_state.py": {
+                "passed": 13,
+                "total": 13
+              }
+            }
+          }
+        },
+        "overshoot": null,
+        "claimed_stage": "1",
+        "share": 1.0,
+        "upgrade_sources": {
+          "2": {
+            "folder": "/Users/frank/mygit/Tablekeeper/result-run-4/stage-1",
+            "revision": "17241ca2f83919643bc2c1f702fef1c96f52d5e0"
+          }
+        }
+      }
+    },
+    {
+      "command": "/Users/frank/mygit/Tablekeeper/runs/harness-venv/bin/python -m harness run --track tablekeeper --repo /Users/frank/mygit/Tablekeeper/result-run-4 --stage 1 --mode isolated --out /Users/frank/mygit/Tablekeeper/result-run-4/.evidence/S1-IMPLEMENT-20261004T1858Z/official-checkpoint",
+      "cwd": "/Users/frank/mygit/Tablekeeper/challenge",
+      "exit": 0,
+      "report": {
+        "revision": "2180567d0c12aede1f02e776e76cded44f859269",
+        "track": "tablekeeper",
+        "stages": {
+          "1": "pass"
+        },
+        "highest_contiguous": 1,
+        "started_at": "2026-10-04T19:05:06.945060+00:00",
+        "finished_at": "2026-10-04T19:05:41.318233+00:00",
+        "schema_version": 2,
+        "run_id": "d5bc22299a8542a3935564213f8ab687",
+        "mode": "isolated",
+        "provenance": "working-tree",
+        "state": "completed",
+        "pytest_args": [],
+        "suite_digest": "8d7e7d9bb94893b67dff0a19ee8ecb8d6888db7208ed269f64b29c0a661a17a7",
+        "checks": {
+          "1": {
+            "collected": 120,
+            "passed": 120,
+            "failed": 0,
+            "errors": 0,
+            "skipped": 0,
+            "deselected": 0,
+            "xfailed": 0,
+            "files": {
+              "stage_1/test_health_reset_auth.py": {
+                "passed": 12,
+                "total": 12
+              },
+              "stage_1/test_reservations.py": {
+                "passed": 37,
+                "total": 37
+              },
+              "stage_1/test_restaurants_availability.py": {
+                "passed": 18,
+                "total": 18
+              },
+              "stage_1/test_retries_time_input.py": {
+                "passed": 20,
+                "total": 20
+              },
+              "stage_1/test_sample.py": {
+                "passed": 20,
+                "total": 20
+              },
+              "stage_1/test_seeded_state.py": {
+                "passed": 13,
+                "total": 13
+              }
+            }
+          }
+        },
+        "overshoot": null,
+        "claimed_stage": "1",
+        "share": 1.0,
+        "upgrade_sources": {
+          "2": {
+            "folder": "/Users/frank/mygit/Tablekeeper/result-run-4/stage-1",
+            "revision": "2180567d0c12aede1f02e776e76cded44f859269"
+          }
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "IN_PROGRESS checkpoint, not REVIEW or accepted stage",
+    "Import validates relational snapshots but needs deeper malformed-state/domain consistency coverage",
+    "Provenance history fields and accepted-term completeness need architecture review before freezing portable schema",
+    "Own portability uses separate Flask app instances, not isolated source-independent processes",
+    "Container resource/per-request latency and independent QA/reviewer remain incomplete",
+    "Fixture validation beyond shipped examples requires review",
+    "Stage-2 overshoot tests are unassigned; harness runs them automatically, no stage-2 implementation attempted"
+  ],
+  "repairs_used": 1,
+  "max_repairs": 3,
+  "cost": "UNAVAILABLE",
+  "usage": "UNAVAILABLE"
+}
