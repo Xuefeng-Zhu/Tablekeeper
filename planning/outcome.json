@@ -1,0 +1,41 @@
+{
+  "status": "BLOCKED",
+  "recorded_at_utc": "2026-10-04T20:20:12.681495+00:00",
+  "owner": "@frankzhu94/factory-pm",
+  "reviewed_candidate": "7edd47cccf839e8ec175c1e7e7252f40d80cf191",
+  "product_commit": "51284ad3202f927d41107b052f721b401c0a6d51",
+  "accepted_stages": [],
+  "stages_not_started": [
+    2,
+    3,
+    4
+  ],
+  "repairs_used": 3,
+  "repairs_remaining": 0,
+  "defect": "S1-DEFECT-03",
+  "reason": "Valid dates 0001-01-01 and 0999-01-07 return 422 for availability/create instead of 200/201. Required stage-1 sections 4 and 8 fail.",
+  "review_return": {
+    "delivery": "S1-REVIEW-RETURN-D2",
+    "parts": 7,
+    "sha256": "192e6db1b61b28e3e32fb8a27755da85ff539d5a15097e2b383140538d3cd40d",
+    "ack_event": "0634a3a5-cdff-4ae1-bb93-72a8b3c8b4b2"
+  },
+  "pm_rejection_event": "73a4308c-4dce-4c18-97a6-d09f37488705",
+  "evidence_sha256": {
+    "/Users/frank/mygit/Tablekeeper/result-run-4/.evidence/S1-REVIEW2-20261004T200934Z/candidate-acceptance.json": "8a3e6cb39b766b0d2a4b4554b5b67cf3843b75ffdce4f3d1ff02d46773447ea5",
+    "/Users/frank/mygit/Tablekeeper/result-run-4/.evidence/S1-REVIEW2-20261004T200934Z/requirement-map.json": "9dd98730c0f0e40252158a66de488083d79a3344e37141f76834a6561f103556",
+    "/Users/frank/mygit/Tablekeeper/result-run-4/.evidence/S1-REVIEW2-20261004T200934Z/test-provenance.json": "982f64c40cc63787d9347c02df7609b19534e29c0e30c504493ed443f0d962d2",
+    "/Users/frank/mygit/Tablekeeper/result-run-4/.evidence/S1-REVIEW2-20261004T200934Z/calendar_range.py": "a8cd8025aa3061199f4ebadfdcb76d075fda417df2f90ed2d6ab91e7967dbde9",
+    "/Users/frank/mygit/Tablekeeper/result-run-4/.evidence/S1-REVIEW2-20261004T200934Z/calendar-check.stdout": "8238e86079e57bee8ac5971f0118c06f922b9019105d7ee0e89df444176faa9c",
+    "/Users/frank/mygit/Tablekeeper/result-run-4/.evidence/S1-REVIEW2-20261004T200934Z/calendar-commands.json": "95d9ca2490c863022c6017c5ad3528fb06815fe7841e1ffe3909db645c621ecb",
+    "/Users/frank/mygit/Tablekeeper/result-run-4/.evidence/S1-REVIEW2-20261004T200934Z/official/report.json": "6a5c188f00d8cb2458b14a76cbc096715ffbeaa6bcc41af8f1c3ab49fb29b430"
+  },
+  "passing_observations": "Independent isolated stage-1 120/120, QA 8/8, prior defects repaired, numeric HTTP and portability checks, 17 unit tests. These do not waive calendar failure.",
+  "limitations": [
+    "No stage accepted; stage-1 directory is a rejected checkpoint.",
+    "No fourth repair or stage advancement authorized.",
+    "Final human README/FACTORY, actual post-run room export, final packaging and hidden judgment NOT_TESTED.",
+    "Usage/cost UNAVAILABLE."
+  ],
+  "next_action": "Stop implementation under current limits; preserve failed candidate and evidence. Any future repair requires separately authorized scope/budget and a new independent release gate."
+}

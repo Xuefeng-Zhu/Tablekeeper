@@ -5,7 +5,7 @@ This stage defines the initial service and its API.
 
 Build from the supplied requirements. Source code, API documentation and schemas from
 existing products in this domain must not be used.
-",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,All inherited requirements remain mandatory
+",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,7edd47cccf839e8ec175c1e7e7252f40d80cf191,PASS_WITHIN_OBSERVED_SCOPE,/Users/frank/mygit/Tablekeeper/result-run-4/.evidence/S1-REVIEW2-20261004T200934Z/requirement-map.json,73a4308c-4dce-4c18-97a6-d09f37488705,2026-10-04T20:15:22.340106+00:00,No exhaustive input/schedule/hidden-test completeness claim. Calendar failure makes stage release REJECTED. Independent reviewer observations; no stage acceptance.
 S1-01,/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-1.md,9460189eac83802ce158f16ee90989af728a489b32a6147e2dc8e320f383055f,1. Scope,@frankzhu94/factory-backend,S1-IMPLEMENT,"1. Scope
 
 Diners can search restaurant availability, book a table and receive a confirmation
@@ -18,7 +18,7 @@ including during concurrent requests. Occupancy is the half-open interval
 `[starts_at, starts_at + reservation_duration)`. A 90-minute booking at 19:00 therefore
 does not overlap a booking starting at 20:30. Retries and rejected requests must not
 create duplicate or partial bookings.
-",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,All inherited requirements remain mandatory
+",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,7edd47cccf839e8ec175c1e7e7252f40d80cf191,PASS_WITHIN_OBSERVED_SCOPE,/Users/frank/mygit/Tablekeeper/result-run-4/.evidence/S1-REVIEW2-20261004T200934Z/requirement-map.json,73a4308c-4dce-4c18-97a6-d09f37488705,2026-10-04T20:15:22.340106+00:00,No exhaustive input/schedule/hidden-test completeness claim. Calendar failure makes stage release REJECTED. Independent reviewer observations; no stage acceptance.
 S1-02,/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-1.md,9460189eac83802ce158f16ee90989af728a489b32a6147e2dc8e320f383055f,2. Delivery and deployment,@frankzhu94/factory-backend,S1-IMPLEMENT,"2. Delivery and deployment
 
 Deliver an HTTP service, a `Dockerfile` and a `RUN.md` with a command that builds and
@@ -51,7 +51,7 @@ The service must operate within these limits:
 
 Runtime assets and dependencies must be included in the image. This includes fonts,
 scripts and stylesheets; external services are unavailable at runtime.
-",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,All inherited requirements remain mandatory
+",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,7edd47cccf839e8ec175c1e7e7252f40d80cf191,PASS_WITHIN_OBSERVED_SCOPE,/Users/frank/mygit/Tablekeeper/result-run-4/.evidence/S1-REVIEW2-20261004T200934Z/requirement-map.json,73a4308c-4dce-4c18-97a6-d09f37488705,2026-10-04T20:15:22.340106+00:00,No exhaustive input/schedule/hidden-test completeness claim. Calendar failure makes stage release REJECTED. Independent reviewer observations; no stage acceptance.
 S1-03,/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-1.md,9460189eac83802ce158f16ee90989af728a489b32a6147e2dc8e320f383055f,3. Runtime contract,@frankzhu94/factory-backend,S1-IMPLEMENT,"3. Runtime contract
 
 ### 3.1 Listening
@@ -90,7 +90,7 @@ This test endpoint must be enabled in the delivered image and requires no authen
 - Unknown query parameters are ignored.
 - IDs are opaque strings of at most 64 characters. Their format is yours. This limit
   also applies to IDs supplied in reset fixtures.
-",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,All inherited requirements remain mandatory
+",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,7edd47cccf839e8ec175c1e7e7252f40d80cf191,PASS_WITHIN_OBSERVED_SCOPE,/Users/frank/mygit/Tablekeeper/result-run-4/.evidence/S1-REVIEW2-20261004T200934Z/requirement-map.json,73a4308c-4dce-4c18-97a6-d09f37488705,2026-10-04T20:15:22.340106+00:00,No exhaustive input/schedule/hidden-test completeness claim. Calendar failure makes stage release REJECTED. Independent reviewer observations; no stage acceptance.
 S1-04,/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-1.md,9460189eac83802ce158f16ee90989af728a489b32a6147e2dc8e320f383055f,4. Model,@frankzhu94/factory-backend,S1-IMPLEMENT,"4. Model
 
 Restaurants and tables are supplied through `POST /_test/reset` only. Restaurant and
@@ -144,7 +144,7 @@ table creation endpoints are out of scope.
 
 Fixtures may use any calendar date. A booking must not be rejected solely because its
 start is in the past; the cancellation and amendment cutoff rules still apply.
-",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,All inherited requirements remain mandatory
+",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,7edd47cccf839e8ec175c1e7e7252f40d80cf191,FAIL,/Users/frank/mygit/Tablekeeper/result-run-4/.evidence/S1-REVIEW2-20261004T200934Z/requirement-map.json,73a4308c-4dce-4c18-97a6-d09f37488705,2026-10-04T20:15:22.340106+00:00,No exhaustive input/schedule/hidden-test completeness claim. Calendar failure makes stage release REJECTED. Independent reviewer observations; no stage acceptance.
 S1-05,/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-1.md,9460189eac83802ce158f16ee90989af728a489b32a6147e2dc8e320f383055f,5. Errors,@frankzhu94/factory-backend,S1-IMPLEMENT,"5. Errors
 
 Every 4xx and 5xx response carries this body:
@@ -184,7 +184,7 @@ Shared ranges, enforced on every endpoint that takes them:
 | `Idempotency-Key` | 1 to 255 characters | 422 `validation_failed` |
 
 Requests must not produce 5xx responses, including under concurrent load.
-",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,All inherited requirements remain mandatory
+",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,7edd47cccf839e8ec175c1e7e7252f40d80cf191,PASS_WITHIN_OBSERVED_SCOPE,/Users/frank/mygit/Tablekeeper/result-run-4/.evidence/S1-REVIEW2-20261004T200934Z/requirement-map.json,73a4308c-4dce-4c18-97a6-d09f37488705,2026-10-04T20:15:22.340106+00:00,No exhaustive input/schedule/hidden-test completeness claim. Calendar failure makes stage release REJECTED. Independent reviewer observations; no stage acceptance.
 S1-06,/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-1.md,9460189eac83802ce158f16ee90989af728a489b32a6147e2dc8e320f383055f,6. Authentication,@frankzhu94/factory-backend,S1-IMPLEMENT,"6. Authentication
 
 Authentication supports signup and login. Email verification, password reset, refresh
@@ -224,7 +224,7 @@ Tokens do not expire. An account may have multiple valid tokens and concurrent s
 
 Passwords must be stored using a password-hashing function such as bcrypt, scrypt or
 Argon2, or an equivalent. Plaintext password storage is not permitted.
-",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,All inherited requirements remain mandatory
+",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,7edd47cccf839e8ec175c1e7e7252f40d80cf191,PASS_WITHIN_OBSERVED_SCOPE,/Users/frank/mygit/Tablekeeper/result-run-4/.evidence/S1-REVIEW2-20261004T200934Z/requirement-map.json,73a4308c-4dce-4c18-97a6-d09f37488705,2026-10-04T20:15:22.340106+00:00,No exhaustive input/schedule/hidden-test completeness claim. Calendar failure makes stage release REJECTED. Independent reviewer observations; no stage acceptance.
 S1-07,/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-1.md,9460189eac83802ce158f16ee90989af728a489b32a6147e2dc8e320f383055f,7. Idempotency,@frankzhu94/factory-backend,S1-IMPLEMENT,"7. Idempotency
 
 Two write paths require an idempotency key: **`POST /reservations`** (§8) and
@@ -261,7 +261,7 @@ The others return 200 with the same body. The operation takes effect only once.
 
 A successful replay returns the original response, even after the resource changes or
 is cancelled. It makes no further state changes.
-",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,All inherited requirements remain mandatory
+",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,7edd47cccf839e8ec175c1e7e7252f40d80cf191,PASS_WITHIN_OBSERVED_SCOPE,/Users/frank/mygit/Tablekeeper/result-run-4/.evidence/S1-REVIEW2-20261004T200934Z/requirement-map.json,73a4308c-4dce-4c18-97a6-d09f37488705,2026-10-04T20:15:22.340106+00:00,No exhaustive input/schedule/hidden-test completeness claim. Calendar failure makes stage release REJECTED. Independent reviewer observations; no stage acceptance.
 S1-08,/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-1.md,9460189eac83802ce158f16ee90989af728a489b32a6147e2dc8e320f383055f,8. API,@frankzhu94/factory-backend,S1-IMPLEMENT,"8. API
 
 `GET /restaurants`, `GET /restaurants/{id}` and `GET /availability` are **public** — no bearer
@@ -391,7 +391,7 @@ Validation is identical to `POST /reservations`, and the same cutoff rule as can
 new one together. A failed amendment leaves the original booking and its occupancy unchanged.
 
 `reference` and `reservation_id` survive a change.
-",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,All inherited requirements remain mandatory
+",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,7edd47cccf839e8ec175c1e7e7252f40d80cf191,FAIL,/Users/frank/mygit/Tablekeeper/result-run-4/.evidence/S1-REVIEW2-20261004T200934Z/requirement-map.json,73a4308c-4dce-4c18-97a6-d09f37488705,2026-10-04T20:15:22.340106+00:00,No exhaustive input/schedule/hidden-test completeness claim. Calendar failure makes stage release REJECTED. Independent reviewer observations; no stage acceptance.
 S1-09,/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-1.md,9460189eac83802ce158f16ee90989af728a489b32a6147e2dc8e320f383055f,9. Time and DST,@frankzhu94/factory-backend,S1-IMPLEMENT,"9. Time and DST
 
 Local dates and times follow the restaurant's `timezone`, including daylight-saving transitions.
@@ -415,7 +415,7 @@ The transitions that must be handled:
 | `America/New_York` | 2026-03-08, 02:00 → 03:00 | 2026-11-01, 02:00 → 01:00 |
 
 Offsets must follow the IANA rules for the specified zone and date.
-",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,All inherited requirements remain mandatory
+",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,7edd47cccf839e8ec175c1e7e7252f40d80cf191,PASS_WITHIN_OBSERVED_SCOPE,/Users/frank/mygit/Tablekeeper/result-run-4/.evidence/S1-REVIEW2-20261004T200934Z/requirement-map.json,73a4308c-4dce-4c18-97a6-d09f37488705,2026-10-04T20:15:22.340106+00:00,No exhaustive input/schedule/hidden-test completeness claim. Calendar failure makes stage release REJECTED. Independent reviewer observations; no stage acceptance.
 S1-10,/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-1.md,9460189eac83802ce158f16ee90989af728a489b32a6147e2dc8e320f383055f,10. Export and import,@frankzhu94/factory-backend,S1-IMPLEMENT,"10. Export and import
 
 The service must support `GET /_test/export` and `POST /_test/import`. Like reset, these
@@ -440,7 +440,7 @@ reusable. Existing receipts, references, tokens and retries must remain valid af
 replacing the state with a fresh fixture does not satisfy this requirement. Import removes
 all previous destination data and credentials. Reset continues to clear all state, including
 imported state. State need not survive an abrupt container restart.
-",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,All inherited requirements remain mandatory
+",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,7edd47cccf839e8ec175c1e7e7252f40d80cf191,PASS_WITHIN_OBSERVED_SCOPE,/Users/frank/mygit/Tablekeeper/result-run-4/.evidence/S1-REVIEW2-20261004T200934Z/requirement-map.json,73a4308c-4dce-4c18-97a6-d09f37488705,2026-10-04T20:15:22.340106+00:00,No exhaustive input/schedule/hidden-test completeness claim. Calendar failure makes stage release REJECTED. Independent reviewer observations; no stage acceptance.
 S1-11,/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-1.md,9460189eac83802ce158f16ee90989af728a489b32a6147e2dc8e320f383055f,11. Atomic reservation moves,@frankzhu94/factory-backend,S1-IMPLEMENT,"11. Atomic reservation moves
 
 A diner may change several bookings in one request.
@@ -471,7 +471,7 @@ unchanged items.
 Replays return that original response with 200, even after amendments or cancellations.
 No-op moves retain all existing values. Export/import preserves successful batch receipts
 as well as the resulting bookings. No batch UI is required.
-",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,All inherited requirements remain mandatory
+",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,7edd47cccf839e8ec175c1e7e7252f40d80cf191,PASS_WITHIN_OBSERVED_SCOPE,/Users/frank/mygit/Tablekeeper/result-run-4/.evidence/S1-REVIEW2-20261004T200934Z/requirement-map.json,73a4308c-4dce-4c18-97a6-d09f37488705,2026-10-04T20:15:22.340106+00:00,No exhaustive input/schedule/hidden-test completeness claim. Calendar failure makes stage release REJECTED. Independent reviewer observations; no stage acceptance.
 S2-00,/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-2.md,b1aa1b4affad456ff26f208a378eb2f6884153fc6ef667ab37b888fcda96c5dc,Tablekeeper — Stage 2: online booking and combined tables,@frankzhu94/factory-backend,S2-IMPLEMENT,"# Tablekeeper — Stage 2: online booking and combined tables
 
 The stage-1 requirements continue to apply, with the additions below. Numbered section
@@ -492,7 +492,7 @@ the UI. Server-side and client-side rendering are both permitted.
 
 A screen route returns HTML; §3.4's `application/json` convention is about the API, and does
 not govern the routes in the table above.
-",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,All inherited requirements remain mandatory
+",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,NOT_TESTED: stage 1 prerequisite rejected; later-stage execution never authorized.
 S2-01,/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-2.md,b1aa1b4affad456ff26f208a378eb2f6884153fc6ef667ab37b888fcda96c5dc,Competing clients and uncertain outcomes,@frankzhu94/factory-frontend,S2-IMPLEMENT,"Competing clients and uncertain outcomes
 
 The UI must handle responses arriving out of order and connections failing after submission.
@@ -515,7 +515,7 @@ remains authoritative; the browser must not manufacture a successful result from
 The UI must expose the `data-testid` attributes listed below for integration testing.
 Additional elements are permitted, and the visual implementation is the team's choice subject
 to the product-quality requirements below.
-",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,All inherited requirements remain mandatory
+",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,NOT_TESTED: stage 1 prerequisite rejected; later-stage execution never authorized.
 S2-02,/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-2.md,b1aa1b4affad456ff26f208a378eb2f6884153fc6ef667ab37b888fcda96c5dc,Product and visual direction,@frankzhu94/factory-frontend,S2-IMPLEMENT,"Product and visual direction
 
 The browser experience must feel like a coherent, presentation-ready restaurant product, not a
@@ -535,7 +535,7 @@ desktop widths, without horizontal page scrolling. Inputs need visible labels, k
 be apparent, and text and controls need sufficient contrast. Provide considered empty, loading and
 error states, and keep navigation consistent across the required routes. A custom illustration,
 brand asset or exact visual match to a reference is not required.
-",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,All inherited requirements remain mandatory
+",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,NOT_TESTED: stage 1 prerequisite rejected; later-stage execution never authorized.
 S2-03,/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-2.md,b1aa1b4affad456ff26f208a378eb2f6884153fc6ef667ab37b888fcda96c5dc,Signup and login,@frankzhu94/factory-frontend,S2-IMPLEMENT,"Signup and login
 
 | `data-testid` | Element |
@@ -546,7 +546,7 @@ S2-03,/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-2.md,b1aa1
 | `auth-error` | Error message. Present only when there is one |
 | `current-user` | Visible on every screen when signed in. Text contains the display name |
 | `logout-button` | Button |
-",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,All inherited requirements remain mandatory
+",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,NOT_TESTED: stage 1 prerequisite rejected; later-stage execution never authorized.
 S2-04,/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-2.md,b1aa1b4affad456ff26f208a378eb2f6884153fc6ef667ab37b888fcda96c5dc,Search and availability grid — `/`,@frankzhu94/factory-backend,S2-IMPLEMENT,"Search and availability grid — `/`
 
 | `data-testid` | Element |
@@ -565,7 +565,7 @@ size that was searched, and `false` otherwise. Clicking an available cell
 opens the booking form for that table and slot. Clicking an unavailable cell does nothing.
 Booking requires a signed-in user: clicking an available cell while signed out shows `auth-error`
 or navigates to `/login`, your choice.
-",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,All inherited requirements remain mandatory
+",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,NOT_TESTED: stage 1 prerequisite rejected; later-stage execution never authorized.
 S2-05,/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-2.md,b1aa1b4affad456ff26f208a378eb2f6884153fc6ef667ab37b888fcda96c5dc,Booking form,@frankzhu94/factory-frontend,S2-IMPLEMENT,"Booking form
 
 | `data-testid` | Element |
@@ -579,7 +579,7 @@ S2-05,/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-2.md,b1aa1
 Keep the booking form on screen after success. Submitting it again without changing a
 field must return the same `confirmation-reference`, without `booking-error` or another
 booking. Changing a field makes the next submission a new booking request. Retries follow §7.
-",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,All inherited requirements remain mandatory
+",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,NOT_TESTED: stage 1 prerequisite rejected; later-stage execution never authorized.
 S2-06,/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-2.md,b1aa1b4affad456ff26f208a378eb2f6884153fc6ef667ab37b888fcda96c5dc,Confirmation,@frankzhu94/factory-frontend,S2-IMPLEMENT,"Confirmation
 
 Shown after a successful booking.
@@ -589,7 +589,7 @@ Shown after a successful booking.
 | `confirmation` | Container |
 | `confirmation-reference` | Text is exactly the reference, no surrounding words |
 | `confirmation-details` | Text contains the restaurant name, table label and local start time |
-",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,All inherited requirements remain mandatory
+",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,NOT_TESTED: stage 1 prerequisite rejected; later-stage execution never authorized.
 S2-07,/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-2.md,b1aa1b4affad456ff26f208a378eb2f6884153fc6ef667ab37b888fcda96c5dc,Lookup — `/lookup`,@frankzhu94/factory-frontend,S2-IMPLEMENT,"Lookup — `/lookup`
 
 | `data-testid` | Element |
@@ -599,7 +599,7 @@ S2-07,/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-2.md,b1aa1
 | `reservation-status` | Text is exactly `confirmed` or `cancelled` |
 | `reservation-cancel-button` | Cancels. Absent once cancelled |
 | `reservation-error` | Shown when not found, or when a cancel is refused |
-",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,All inherited requirements remain mandatory
+",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,NOT_TESTED: stage 1 prerequisite rejected; later-stage execution never authorized.
 S2-08,/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-2.md,b1aa1b4affad456ff26f208a378eb2f6884153fc6ef667ab37b888fcda96c5dc,Existing clients after an upgrade,@frankzhu94/factory-frontend,S2-IMPLEMENT,"Existing clients after an upgrade
 
 A stage-2 service must accept an export produced by the same team's stage-1 service. A
@@ -609,13 +609,13 @@ was lost before export remains retryable after import with the same body and key
 must recover the original confirmation. These requirements apply when import completes
 between browser requests; migration during an in-flight request is not required. No page
 reload or new screen is required. The form and pending retry identity must survive the upgrade.
-",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,All inherited requirements remain mandatory
+",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,NOT_TESTED: stage 1 prerequisite rejected; later-stage execution never authorized.
 S2-09,/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-2.md,b1aa1b4affad456ff26f208a378eb2f6884153fc6ef667ab37b888fcda96c5dc,Combined tables,@frankzhu94/factory-backend,S2-IMPLEMENT,"Combined tables
 
 A party may book two tables that the restaurant has declared combinable. The booking
 occupies both tables for its full duration.
 Existing single-table request formats remain supported.
-",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,All inherited requirements remain mandatory
+",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,NOT_TESTED: stage 1 prerequisite rejected; later-stage execution never authorized.
 S2-10,/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-2.md,b1aa1b4affad456ff26f208a378eb2f6884153fc6ef667ab37b888fcda96c5dc,Model,@frankzhu94/factory-backend,S2-IMPLEMENT,"Model
 
 The restaurant fixture gains one field:
@@ -636,7 +636,7 @@ A combination's capacity is the sum of its tables' capacities.
 
 Seeded `reservations` are `confirmed` unless they carry a `status` of `cancelled`, and may hold
 either `table_id` or `table_ids`.
-",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,All inherited requirements remain mandatory
+",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,NOT_TESTED: stage 1 prerequisite rejected; later-stage execution never authorized.
 S2-11,/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-2.md,b1aa1b4affad456ff26f208a378eb2f6884153fc6ef667ab37b888fcda96c5dc,API,@frankzhu94/factory-backend,S2-IMPLEMENT,"API
 
 ### `GET /availability`
@@ -689,7 +689,7 @@ member**, and omit it otherwise.
 
 `PATCH /reservations/{reference}` accepts `table_ids` under the same rules. Cancelling frees every
 table in the set.
-",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,All inherited requirements remain mandatory
+",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,NOT_TESTED: stage 1 prerequisite rejected; later-stage execution never authorized.
 S2-12,/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-2.md,b1aa1b4affad456ff26f208a378eb2f6884153fc6ef667ab37b888fcda96c5dc,UI,@frankzhu94/factory-frontend,S2-IMPLEMENT,"UI
 
 The availability grid gains combination cells, shown when a declared pair is available for the
@@ -707,12 +707,12 @@ confirmation and lookup are unchanged.
 Atomic reservation moves from stage 1 also accept `table_ids` per move. No table may
 belong to overlapping resulting bookings. The existing browser recovery and original-receipt
 requirements also apply to combined-table bookings.
-",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,All inherited requirements remain mandatory
+",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,NOT_TESTED: stage 1 prerequisite rejected; later-stage execution never authorized.
 S2-13,/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-2.md,b1aa1b4affad456ff26f208a378eb2f6884153fc6ef667ab37b888fcda96c5dc,Concurrent bookings and amendments,@frankzhu94/factory-backend,S2-IMPLEMENT,"Concurrent bookings and amendments
 
 Concurrent requests must produce the same results as executing them one at a time in some
 order, and the requirements above hold at every read.
-",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,All inherited requirements remain mandatory
+",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,NOT_TESTED: stage 1 prerequisite rejected; later-stage execution never authorized.
 S3-00,/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-3.md,36b7ff5294b3992a6fa2894e9b4f2350072912fe10ed212c1f9a8828be1f9abe,"Tablekeeper — Stage 3: booking policies, history and recurring reservations",@frankzhu94/factory-backend,S3-IMPLEMENT,"# Tablekeeper — Stage 3: booking policies, history and recurring reservations
 
 The requirements from stages 1 and 2 continue to apply, with the additions below.
@@ -720,7 +720,7 @@ Numbered section references such as §5 and §7 refer to `stage-1.md`.
 
 Restaurants can publish dated booking policies. Diners can see why a table is unavailable,
 view their reservation history and arrange recurring bookings.
-",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,All inherited requirements remain mandatory
+",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,NOT_TESTED: stage 1 prerequisite rejected; later-stage execution never authorized.
 S3-01,/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-3.md,36b7ff5294b3992a6fa2894e9b4f2350072912fe10ed212c1f9a8828be1f9abe,Availability explanations,@frankzhu94/factory-backend,S3-IMPLEMENT,"Availability explanations
 
 Whether a table is available for a slot is decided by two rules, each independent of the other:
@@ -764,7 +764,7 @@ With it, every slot carries one further field:
    is true are exactly `available_table_ids`, in the same order.
 4. A closed day still returns `""slots"": []`, and a slot with no available table still appears —
    now with a full `explain` for every table.
-",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,All inherited requirements remain mandatory
+",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,NOT_TESTED: stage 1 prerequisite rejected; later-stage execution never authorized.
 S3-02,/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-3.md,36b7ff5294b3992a6fa2894e9b4f2350072912fe10ed212c1f9a8828be1f9abe,Reservation history,@frankzhu94/factory-backend,S3-IMPLEMENT,"Reservation history
 
 ```http
@@ -800,12 +800,12 @@ The example below shows the event fields; every entry also carries `revision` an
 4. **`cancelled` carries an empty `changes`**, and nothing follows it.
 5. Replaying an idempotent `POST /reservations` records nothing — a replay returns the original
    response and does not re-run the operation (§7).
-",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,All inherited requirements remain mandatory
+",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,NOT_TESTED: stage 1 prerequisite rejected; later-stage execution never authorized.
 S3-03,/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-3.md,36b7ff5294b3992a6fa2894e9b4f2350072912fe10ed212c1f9a8828be1f9abe,Existing screens,@frankzhu94/factory-backend,S3-IMPLEMENT,"Existing screens
 
 No new screens are required for explanations or history. The availability grid continues
 to follow the stage-2 rules.
-",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,All inherited requirements remain mandatory
+",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,NOT_TESTED: stage 1 prerequisite rejected; later-stage execution never authorized.
 S3-04,/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-3.md,36b7ff5294b3992a6fa2894e9b4f2350072912fe10ed212c1f9a8828be1f9abe,Policies and accepted terms,@frankzhu94/factory-backend,S3-IMPLEMENT,"Policies and accepted terms
 
 Restaurants may now declare `manager_user_ids` in their reset fixture (default `[]`). Only
@@ -879,7 +879,7 @@ Each history entry additionally carries the reservation's resulting `revision` a
 returns `{""reference"": ""..."", ""revision"": 1, ""accepted_terms"": {...}}` for the current booking,
 including after cancellation, with history's owner-only 404 rule. History and decision return
 404 even without authentication, resolving the exception to stage 1's general 401 rule.
-",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,All inherited requirements remain mandatory
+",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,NOT_TESTED: stage 1 prerequisite rejected; later-stage execution never authorized.
 S3-05,/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-3.md,36b7ff5294b3992a6fa2894e9b4f2350072912fe10ed212c1f9a8828be1f9abe,Recurring reservations,@frankzhu94/factory-backend,S3-IMPLEMENT,"Recurring reservations
 
 `POST /series` adopts an existing reservation as occurrence zero of a recurring agreement.
@@ -931,7 +931,7 @@ Series creation adds one idempotent write path. Unknown fields are ignored.
 A stage-3 service must accept exports produced by the same team's stage-1 or stage-2
 service. Adoption must work on reservations imported this way. Existing confirmation links,
 sessions and original booking retries remain valid.
-",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,All inherited requirements remain mandatory
+",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,NOT_TESTED: stage 1 prerequisite rejected; later-stage execution never authorized.
 S3-06,/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-3.md,36b7ff5294b3992a6fa2894e9b4f2350072912fe10ed212c1f9a8828be1f9abe,Combined-table history,@frankzhu94/factory-backend,S3-IMPLEMENT,"Combined-table history
 
 Stage 3's accepted terms apply to combinations too; capacity is the sum of the **selected
@@ -941,7 +941,7 @@ For a change involving a pair, use `table_ids` (complete before/after lists) ins
 `table_id`. Table-set order is the declared combination order. A reversed input pair names
 the same set and is not an amendment on its own. Policy selection, revision and replay rules
 are unchanged.
-",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,All inherited requirements remain mandatory
+",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,NOT_TESTED: stage 1 prerequisite rejected; later-stage execution never authorized.
 S3-07,/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-3.md,36b7ff5294b3992a6fa2894e9b4f2350072912fe10ed212c1f9a8828be1f9abe,Collective moves under policies and agreements,@frankzhu94/factory-backend,S3-IMPLEMENT,"Collective moves under policies and agreements
 
 Each real change in `POST /reservation-moves` uses individual PATCH semantics: check the
@@ -953,12 +953,12 @@ changed history entry; the restaurant revision increases once for the whole batc
 Each affected series revision increases once,
 and each changed series occurrence becomes a permanent diner exception. A
 failed batch or replay changes no revisions, histories or exception flags.
-",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,All inherited requirements remain mandatory
+",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,NOT_TESTED: stage 1 prerequisite rejected; later-stage execution never authorized.
 S4-00,/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-4.md,08d02b5a432d41d71f989ccb30585b3cad0977c9c1dd11145c97fb7ddd4946c4,Tablekeeper — Stage 4: seating changes and recurring amendments,@frankzhu94/factory-backend,S4-IMPLEMENT,"# Tablekeeper — Stage 4: seating changes and recurring amendments
 
 Extends all earlier stages, including stage-1 atomic reservation moves, stage-2 table
 combinations and stage-3 policies and recurring agreements. All earlier requirements apply.
-",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,All inherited requirements remain mandatory
+",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,NOT_TESTED: stage 1 prerequisite rejected; later-stage execution never authorized.
 S4-01,/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-4.md,08d02b5a432d41d71f989ccb30585b3cad0977c9c1dd11145c97fb7ddd4946c4,Seating changes after a table closure,@frankzhu94/factory-backend,S4-IMPLEMENT,"Seating changes after a table closure
 
 When a table becomes unavailable, a manager can review a proposed seating arrangement
@@ -1023,7 +1023,7 @@ In explanations, `no_overlap` is false for a closure as for a conflicting bookin
 
 Concurrent applications must not leave partially moved bookings. A closure at another
 restaurant does not invalidate this plan.
-",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,All inherited requirements remain mandatory
+",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,NOT_TESTED: stage 1 prerequisite rejected; later-stage execution never authorized.
 S4-02,/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-4.md,08d02b5a432d41d71f989ccb30585b3cad0977c9c1dd11145c97fb7ddd4946c4,Amend recurring reservations,@frankzhu94/factory-backend,S4-IMPLEMENT,"Amend recurring reservations
 
 `POST /series/{series_id}/amend` is an owner-only idempotent write. Unknown or another owner's
@@ -1063,4 +1063,4 @@ Concurrent amendments from the same expected revision may not both make a real c
 A stage-4 service must accept exports produced by the same team's stages 1–3. These
 operations must support imported series, including moved and cancelled occurrences.
 Earlier booking and series receipts, histories and retries remain valid.
-",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,All inherited requirements remain mandatory
+",Independent QA behavior tests and exact-candidate reviewer isolated harness; designer rendered review for UI,,NOT_TESTED,,,,NOT_TESTED: stage 1 prerequisite rejected; later-stage execution never authorized.

@@ -2,217 +2,225 @@
   {
     "id": "S1-ARCH",
     "owner": "@frankzhu94/factory-architect",
-    "state": "PROPOSED",
+    "state": "ACCEPTED",
     "dependencies": [
       "PM-BOOTSTRAP"
     ],
     "goal": "Stage 1 arch covering all inherited specifications",
     "limitations": [
-      "Not executable until complete addressed handoff and receipt"
-    ]
+      "Advisory architecture accepted; not product acceptance."
+    ],
+    "candidate_commit": "17241ca2f83919643bc2c1f702fef1c96f52d5e0",
+    "room_event": "12938495-e9ec-4c08-a87f-55af69b0ecd0"
   },
   {
     "id": "S1-IMPLEMENT",
     "owner": "@frankzhu94/factory-backend",
-    "state": "PROPOSED",
+    "state": "BLOCKED",
     "dependencies": [
       "S1-ARCH"
     ],
     "goal": "Stage 1 implement covering all inherited specifications",
     "limitations": [
-      "Not executable until complete addressed handoff and receipt"
-    ]
+      "S1-DEFECT-03 remains; independent gate rejected; repair ceiling exhausted."
+    ],
+    "candidate_commit": "7edd47cccf839e8ec175c1e7e7252f40d80cf191",
+    "repairs_used": 3,
+    "repairs_remaining": 0
   },
   {
     "id": "S1-QA",
     "owner": "@frankzhu94/factory-qa",
-    "state": "PROPOSED",
+    "state": "COMPLETED_REPORT",
     "dependencies": [
       "S1-IMPLEMENT"
     ],
     "goal": "Stage 1 qa covering all inherited specifications",
     "limitations": [
-      "Not executable until complete addressed handoff and receipt"
-    ]
+      "Independent QA report rejected original candidate; subsequent reruns attributed to reviewer. No product acceptance."
+    ],
+    "candidate_commit": "fe225bd667dd5a3685bb9140d08e8ad0d52f6af4"
   },
   {
     "id": "S1-REVIEW",
     "owner": "@frankzhu94/factory-reviewer",
-    "state": "PROPOSED",
+    "state": "REJECTED",
     "dependencies": [
       "S1-QA"
     ],
     "goal": "Stage 1 review covering all inherited specifications",
     "limitations": [
-      "Not executable until complete addressed handoff and receipt"
-    ]
+      "Calendar dates below year 1000 fail required availability/create behavior."
+    ],
+    "candidate_commit": "7edd47cccf839e8ec175c1e7e7252f40d80cf191",
+    "evidence": "/Users/frank/mygit/Tablekeeper/result-run-4/.evidence/S1-REVIEW2-20261004T200934Z/candidate-acceptance.json"
   },
   {
     "id": "S2-ARCH",
     "owner": "@frankzhu94/factory-architect",
-    "state": "PROPOSED",
+    "state": "BLOCKED",
     "dependencies": [
       "S1-REVIEW"
     ],
     "goal": "Stage 2 arch covering all inherited specifications",
     "limitations": [
-      "Not executable until complete addressed handoff and receipt"
+      "Not started: stage 1 prerequisite gate rejected."
     ]
   },
   {
     "id": "S2-DESIGN",
     "owner": "@frankzhu94/factory-designer",
-    "state": "PROPOSED",
+    "state": "BLOCKED",
     "dependencies": [
       "S2-ARCH"
     ],
     "goal": "Stage 2 design covering all inherited specifications",
     "limitations": [
-      "Not executable until complete addressed handoff and receipt"
+      "Not started: stage 1 prerequisite gate rejected."
     ]
   },
   {
     "id": "S2-IMPLEMENT",
     "owner": "@frankzhu94/factory-backend",
-    "state": "PROPOSED",
+    "state": "BLOCKED",
     "dependencies": [
       "S2-DESIGN"
     ],
     "goal": "Stage 2 implement covering all inherited specifications",
     "limitations": [
-      "Not executable until complete addressed handoff and receipt"
+      "Not started: stage 1 prerequisite gate rejected."
     ]
   },
   {
     "id": "S2-UI",
     "owner": "@frankzhu94/factory-frontend",
-    "state": "PROPOSED",
+    "state": "BLOCKED",
     "dependencies": [
       "S2-IMPLEMENT"
     ],
     "goal": "Stage 2 ui covering all inherited specifications",
     "limitations": [
-      "Not executable until complete addressed handoff and receipt"
+      "Not started: stage 1 prerequisite gate rejected."
     ]
   },
   {
     "id": "S2-QA",
     "owner": "@frankzhu94/factory-qa",
-    "state": "PROPOSED",
+    "state": "BLOCKED",
     "dependencies": [
       "S2-UI"
     ],
     "goal": "Stage 2 qa covering all inherited specifications",
     "limitations": [
-      "Not executable until complete addressed handoff and receipt"
+      "Not started: stage 1 prerequisite gate rejected."
     ]
   },
   {
     "id": "S2-REVIEW",
     "owner": "@frankzhu94/factory-reviewer",
-    "state": "PROPOSED",
+    "state": "BLOCKED",
     "dependencies": [
       "S2-QA"
     ],
     "goal": "Stage 2 review covering all inherited specifications",
     "limitations": [
-      "Not executable until complete addressed handoff and receipt"
+      "Not started: stage 1 prerequisite gate rejected."
     ]
   },
   {
     "id": "S3-ARCH",
     "owner": "@frankzhu94/factory-architect",
-    "state": "PROPOSED",
+    "state": "BLOCKED",
     "dependencies": [
       "S2-REVIEW"
     ],
     "goal": "Stage 3 arch covering all inherited specifications",
     "limitations": [
-      "Not executable until complete addressed handoff and receipt"
+      "Not started: stage 1 prerequisite gate rejected."
     ]
   },
   {
     "id": "S3-IMPLEMENT",
     "owner": "@frankzhu94/factory-backend",
-    "state": "PROPOSED",
+    "state": "BLOCKED",
     "dependencies": [
       "S3-ARCH"
     ],
     "goal": "Stage 3 implement covering all inherited specifications",
     "limitations": [
-      "Not executable until complete addressed handoff and receipt"
+      "Not started: stage 1 prerequisite gate rejected."
     ]
   },
   {
     "id": "S3-QA",
     "owner": "@frankzhu94/factory-qa",
-    "state": "PROPOSED",
+    "state": "BLOCKED",
     "dependencies": [
       "S3-IMPLEMENT"
     ],
     "goal": "Stage 3 qa covering all inherited specifications",
     "limitations": [
-      "Not executable until complete addressed handoff and receipt"
+      "Not started: stage 1 prerequisite gate rejected."
     ]
   },
   {
     "id": "S3-REVIEW",
     "owner": "@frankzhu94/factory-reviewer",
-    "state": "PROPOSED",
+    "state": "BLOCKED",
     "dependencies": [
       "S3-QA"
     ],
     "goal": "Stage 3 review covering all inherited specifications",
     "limitations": [
-      "Not executable until complete addressed handoff and receipt"
+      "Not started: stage 1 prerequisite gate rejected."
     ]
   },
   {
     "id": "S4-ARCH",
     "owner": "@frankzhu94/factory-architect",
-    "state": "PROPOSED",
+    "state": "BLOCKED",
     "dependencies": [
       "S3-REVIEW"
     ],
     "goal": "Stage 4 arch covering all inherited specifications",
     "limitations": [
-      "Not executable until complete addressed handoff and receipt"
+      "Not started: stage 1 prerequisite gate rejected."
     ]
   },
   {
     "id": "S4-IMPLEMENT",
     "owner": "@frankzhu94/factory-backend",
-    "state": "PROPOSED",
+    "state": "BLOCKED",
     "dependencies": [
       "S4-ARCH"
     ],
     "goal": "Stage 4 implement covering all inherited specifications",
     "limitations": [
-      "Not executable until complete addressed handoff and receipt"
+      "Not started: stage 1 prerequisite gate rejected."
     ]
   },
   {
     "id": "S4-QA",
     "owner": "@frankzhu94/factory-qa",
-    "state": "PROPOSED",
+    "state": "BLOCKED",
     "dependencies": [
       "S4-IMPLEMENT"
     ],
     "goal": "Stage 4 qa covering all inherited specifications",
     "limitations": [
-      "Not executable until complete addressed handoff and receipt"
+      "Not started: stage 1 prerequisite gate rejected."
     ]
   },
   {
     "id": "S4-REVIEW",
     "owner": "@frankzhu94/factory-reviewer",
-    "state": "PROPOSED",
+    "state": "BLOCKED",
     "dependencies": [
       "S4-QA"
     ],
     "goal": "Stage 4 review covering all inherited specifications",
     "limitations": [
-      "Not executable until complete addressed handoff and receipt"
+      "Not started: stage 1 prerequisite gate rejected."
     ]
   }
 ]

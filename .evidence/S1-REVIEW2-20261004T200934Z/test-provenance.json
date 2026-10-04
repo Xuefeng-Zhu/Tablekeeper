@@ -1,0 +1,25 @@
+{
+  "checksums": {
+    "independent.py": "d972ae37a0ad3771b165b38c55b3323185c255afbd56fe7e37e7430155cd4408",
+    "precedence.py": "b33b70152e1719798db463d003cab947b730d1365d27da4ab54f4ab978b25b9a",
+    "numeric_receipts.py": "d7618dbbe696e5111f28b0566a9b5c34ebdbc7193ef1459697c3e9ab09d49449",
+    "http_numeric.py": "45f30115c09546a9a5776e992cee15a1b6026aa4211bf8cdeb2034e8aa5a4fb8",
+    "reviewer_raw.py": "0db0eef86874bbf47762d89648671bd582224a5fa31c7652414225bd05003621",
+    "portability.py": "50674659a3008b405e6be11c5f59865ddc60c2c943cf67f5c3c41d95b84fd2f9",
+    "compatibility.py": "6d9fc39d8d2f0d7bcd01435b6d773915cf67fbf997f9c6e5942f68e467e78a6b",
+    "calendar_range.py": "a8cd8025aa3061199f4ebadfdcb76d075fda417df2f90ed2d6ab91e7967dbde9",
+    "run_checks.py": "b4a19eb49a3aef25f2380fa0513c8bbade6d9b61cc56837973c50a22b121fc89"
+  },
+  "authors": {
+    "independent.py": "Factory QA, unchanged",
+    "precedence.py": "Factory QA, only embedded revision metadata updated",
+    "numeric_receipts.py": "Factory Reviewer, only embedded revision metadata updated",
+    "http_numeric.py": "Factory Backend, only embedded revision metadata updated",
+    "reviewer_raw.py": "Factory Reviewer, newly authored raw HTTP checks",
+    "portability.py": "Factory QA, container/image names updated",
+    "compatibility.py": "Factory Backend, helper path/container images/target revision updated; same assertions",
+    "calendar_range.py": "Factory Reviewer, newly authored valid-calendar range reproduction"
+  },
+  "previous_source_image_id": "sha256:319e438a732275bbf1e7f60b4b61cae88c0fa1692ff5c3f21b461ec3e0364489",
+  "current_image_id": "sha256:e174dcc9bc46b6ffeb2fbfc74d1a2830d29f673d94c7adf5f7cb21edb89fd328"
+}

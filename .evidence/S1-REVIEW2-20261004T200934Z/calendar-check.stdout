@@ -1,0 +1,59 @@
+{
+  "work_item": "S1-REVIEW",
+  "revision": "7edd47cccf839e8ec175c1e7e7252f40d80cf191",
+  "utc": "2026-10-04T20:12:42.488285+00:00",
+  "results": [
+    {
+      "date": "0001-01-01",
+      "create_expected": 201,
+      "create_actual": 422,
+      "create_error": {
+        "code": "validation_failed",
+        "message": "validation failed"
+      },
+      "availability_expected": 200,
+      "availability_actual": 422,
+      "availability_error": {
+        "code": "validation_failed",
+        "message": "validation failed"
+      },
+      "outcome": "FAIL"
+    },
+    {
+      "date": "0999-01-07",
+      "create_expected": 201,
+      "create_actual": 422,
+      "create_error": {
+        "code": "validation_failed",
+        "message": "validation failed"
+      },
+      "availability_expected": 200,
+      "availability_actual": 422,
+      "availability_error": {
+        "code": "validation_failed",
+        "message": "validation failed"
+      },
+      "outcome": "FAIL"
+    },
+    {
+      "date": "1000-01-06",
+      "create_expected": 201,
+      "create_actual": 201,
+      "create_error": null,
+      "availability_expected": 200,
+      "availability_actual": 200,
+      "availability_error": null,
+      "outcome": "PASS"
+    },
+    {
+      "date": "2020-01-06",
+      "create_expected": 201,
+      "create_actual": 201,
+      "create_error": null,
+      "availability_expected": 200,
+      "availability_actual": 200,
+      "availability_error": null,
+      "outcome": "PASS"
+    }
+  ]
+}

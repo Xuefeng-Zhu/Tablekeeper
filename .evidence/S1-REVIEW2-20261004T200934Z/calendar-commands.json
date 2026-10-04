@@ -1,0 +1,75 @@
+[
+  {
+    "command": [
+      "docker",
+      "run",
+      "-d",
+      "--name",
+      "tablekeeper-review2-calendar",
+      "--network",
+      "none",
+      "--cpus",
+      "2",
+      "--memory",
+      "2g",
+      "-e",
+      "PORT=8099",
+      "tablekeeper-review2-7edd47c"
+    ],
+    "exit": 0,
+    "utc": "2026-10-04T20:12:41.512063+00:00"
+  },
+  {
+    "command": [
+      "docker",
+      "exec",
+      "tablekeeper-review2-calendar",
+      "python",
+      "-c",
+      "import time,urllib.request\nfor _ in range(100):\n try:\n  assert urllib.request.urlopen('http://127.0.0.1:8099/health',timeout=1).status==200;break\n except OSError:time.sleep(.1)\nelse:raise RuntimeError('not healthy')"
+    ],
+    "exit": 0,
+    "utc": "2026-10-04T20:12:41.880884+00:00"
+  },
+  {
+    "command": [
+      "docker",
+      "cp",
+      ".evidence/S1-REVIEW2-20261004T200934Z/independent.py",
+      "tablekeeper-review2-calendar:/tmp/independent.py"
+    ],
+    "exit": 0,
+    "utc": "2026-10-04T20:12:41.936265+00:00"
+  },
+  {
+    "command": [
+      "docker",
+      "cp",
+      ".evidence/S1-REVIEW2-20261004T200934Z/calendar_range.py",
+      "tablekeeper-review2-calendar:/tmp/calendar_range.py"
+    ],
+    "exit": 0,
+    "utc": "2026-10-04T20:12:41.966162+00:00"
+  },
+  {
+    "command": [
+      "docker",
+      "exec",
+      "tablekeeper-review2-calendar",
+      "python",
+      "/tmp/calendar_range.py"
+    ],
+    "exit": 1,
+    "utc": "2026-10-04T20:12:42.504617+00:00"
+  },
+  {
+    "command": [
+      "docker",
+      "rm",
+      "-f",
+      "tablekeeper-review2-calendar"
+    ],
+    "exit": 0,
+    "utc": "2026-10-04T20:12:42.615383+00:00"
+  }
+]
