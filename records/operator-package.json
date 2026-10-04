@@ -1,0 +1,55 @@
+{
+  "created_at_utc": "2026-10-04T23:45:46.355081+00:00",
+  "scope": "Post-run operator factual packaging only; no application implementation or independent acceptance",
+  "product_closeout_commit": "350e3d95855a7b10eacafd59fca67ffaf48a348e",
+  "rejected_product_candidate": "3329a8238ece53e06812cce4b5c6222476dd33ab",
+  "unchanged_stage1_tree": "13192852a7341f8d7e6b2bc6076c9e59cfa3843b",
+  "outcome": {
+    "stage1": "REJECTED by independent Reviewer",
+    "stage2": "UNIMPLEMENTED",
+    "stage3": "UNIMPLEMENTED",
+    "stage4": "UNIMPLEMENTED"
+  },
+  "room": {
+    "sha256": "c934ff785a565d1198a12c9a806217897217046f317dc9ef961730a647ef3e3e",
+    "bytes": 7505750,
+    "method": "Native Download full session, unchanged bytes",
+    "events": 4602,
+    "human_texts": 1,
+    "private_review": "No actionable findings in bounded review; not public release approval"
+  },
+  "postrun_supplied_suite": {
+    "candidate": "350e3d95855a7b10eacafd59fca67ffaf48a348e",
+    "stage1_passed": 120,
+    "stage1_collected": 120,
+    "stage1_skipped": 0,
+    "user_vm_cap_mib": 2048,
+    "independent_rejection_unchanged": true,
+    "evidence": "https://github.com/Xuefeng-Zhu/Tablekeeper-factory/tree/11fac73/evidence/run5-postrun-isolated-20261004"
+  },
+  "final_accounting": {
+    "run5_reported_tokens": 75831611,
+    "cumulative_reported_tokens": 221514710,
+    "includes_cached_input": true,
+    "evidence": "https://github.com/Xuefeng-Zhu/Tablekeeper-factory/tree/11fac73/evidence/run5-terminal-closure-20261004"
+  },
+  "narratives": "AI-assisted factual drafts; participant review/authorship resolution remains",
+  "video": "Explicitly deferred by user",
+  "public_release": false,
+  "submitted": false,
+  "new_run_authorized": false,
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "f18eb107e0d498868eb5c89a4b75a4b216ec964a9e5573252fe86cf9a7658bdf"
+    },
+    {
+      "path": "FACTORY.md",
+      "sha256": "f31ee06ebc895127398e8985bcb8dd8ccc3d3538e5af3973ffbe1dd3feb8ce35"
+    },
+    {
+      "path": "submission-description.md",
+      "sha256": "9ced987fdb45e02879d7466e5da9c0bd122ae36b19808bdfbf31620d2a39589f"
+    }
+  ]
+}
