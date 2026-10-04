@@ -1,0 +1,269 @@
+{
+  "id": "TK-S2-DESIGN",
+  "owner": "@frankzhu94/factory-designer",
+  "state": "ACCEPTED",
+  "goal": "Buildable Stage2 design before frontend implementation",
+  "requirements": [
+    "Complete S1/S2 requirements and design dispatch reproduced in handoff.json"
+  ],
+  "starting_revision": "398ebdcbc417400aa32ca510e2546808a43b26ab",
+  "workspace_paths": [
+    "/Users/frank/mygit/Tablekeeper/result-run-3"
+  ],
+  "ownership_boundaries": [
+    "planning/design/stage-2/",
+    "own unique ignored evidence directory"
+  ],
+  "acceptance_conditions": [
+    "Independent PM planning review against complete delivered requirements; actual rendered product review remains later"
+  ],
+  "candidate_commit": "3f2196bc6bf113db49db6a2117f233002260d24d",
+  "commands": [
+    {
+      "command": [
+        "git",
+        "status",
+        "--short"
+      ],
+      "start_utc": "2026-10-04T08:38:17.259365+00:00",
+      "end_utc": "2026-10-04T08:38:17.304279+00:00",
+      "exit_status": 0,
+      "stdout": "?? planning/design/\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "start_utc": "2026-10-04T08:38:17.304294+00:00",
+      "end_utc": "2026-10-04T08:38:17.313889+00:00",
+      "exit_status": 0,
+      "stdout": "398ebdcbc417400aa32ca510e2546808a43b26ab\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "merge-base",
+        "--is-ancestor",
+        "origin/main",
+        "HEAD"
+      ],
+      "start_utc": "2026-10-04T08:38:17.313897+00:00",
+      "end_utc": "2026-10-04T08:38:17.324942+00:00",
+      "exit_status": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "start_utc": "2026-10-04T08:38:17.324968+00:00",
+      "end_utc": "2026-10-04T08:38:17.332975+00:00",
+      "exit_status": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--name-only",
+        "398ebdcbc417400aa32ca510e2546808a43b26ab",
+        "--",
+        "stage-1"
+      ],
+      "start_utc": "2026-10-04T08:38:17.332997+00:00",
+      "end_utc": "2026-10-04T08:38:17.340853+00:00",
+      "exit_status": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "add",
+        "planning/design/stage-2"
+      ],
+      "start_utc": "2026-10-04T08:38:27.484139+00:00",
+      "end_utc": "2026-10-04T08:38:27.500517+00:00",
+      "exit_status": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--cached",
+        "--check"
+      ],
+      "start_utc": "2026-10-04T08:38:27.500739+00:00",
+      "end_utc": "2026-10-04T08:38:27.510594+00:00",
+      "exit_status": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "commit",
+        "-m",
+        "Specify Stage 2 hospitality journeys and resilient booking states"
+      ],
+      "start_utc": "2026-10-04T08:38:27.510909+00:00",
+      "end_utc": "2026-10-04T08:38:27.531831+00:00",
+      "exit_status": 0,
+      "stdout": "[main 3f2196b] Specify Stage 2 hospitality journeys and resilient booking states\n 5 files changed, 247 insertions(+)\n create mode 100644 planning/design/stage-2/check_spec.py\n create mode 100644 planning/design/stage-2/frontend-handoff.md\n create mode 100644 planning/design/stage-2/interaction-specification.md\n create mode 100644 planning/design/stage-2/rendered-review-checklist.md\n create mode 100644 planning/design/stage-2/tokens.css\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "start_utc": "2026-10-04T08:38:27.532045+00:00",
+      "end_utc": "2026-10-04T08:38:27.539451+00:00",
+      "exit_status": 0,
+      "stdout": "3f2196bc6bf113db49db6a2117f233002260d24d\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "status",
+        "--short"
+      ],
+      "start_utc": "2026-10-04T08:38:27.539630+00:00",
+      "end_utc": "2026-10-04T08:38:27.548204+00:00",
+      "exit_status": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "results": [
+    "Static planning and15contrast calculations PASS; actual browser/service/build NOT_TESTED"
+  ],
+  "evidence_paths": [
+    "/Users/frank/mygit/Tablekeeper/result-run-3/.evidence/designer-s2-20261004T0833"
+  ],
+  "limitations": [
+    "No product rendered review; no independent acceptance"
+  ],
+  "next_recipient": "@frankzhu94/factory-pm",
+  "timestamp_utc": "2026-10-04T08:39:20.243096+00:00",
+  "writer_lease": "released",
+  "delivery_sha256": "fb4ed916774fcf23b6fc7207f02efcf954b93eae6e2660f62143d6b377ad87fd",
+  "reviewer": "@frankzhu94/factory-pm",
+  "reviewed_at": "2026-10-04T08:43:25.179988+00:00",
+  "room_event": "bea25066-b670-41f1-acce-116baf93902c",
+  "independent_review": {
+    "scope": "planning only",
+    "receipt_event": "66dab57d-cd17-4678-98ce-85106c013fa2",
+    "delivery_parts": 12,
+    "delivery_digest": "fb4ed916774fcf23b6fc7207f02efcf954b93eae6e2660f62143d6b377ad87fd",
+    "review_clone": "/private/tmp/tablekeeper-pm-s2-design-review-20261004T0843",
+    "checks": [
+      {
+        "command": [
+          "git",
+          "fetch",
+          "origin"
+        ],
+        "exit": 0,
+        "start": "2026-10-04T08:42:47.117179+00:00",
+        "end": "2026-10-04T08:42:48.166021+00:00",
+        "log": "/Users/frank/mygit/Tablekeeper/result-run-3/.evidence/pm-s2-design-review-20261004T0843/check-0.log"
+      },
+      {
+        "command": [
+          "git",
+          "clone",
+          "--no-hardlinks",
+          "/Users/frank/mygit/Tablekeeper/result-run-3",
+          "/private/tmp/tablekeeper-pm-s2-design-review-20261004T0843"
+        ],
+        "exit": 0,
+        "start": "2026-10-04T08:42:48.166048+00:00",
+        "end": "2026-10-04T08:42:48.237131+00:00",
+        "log": "/Users/frank/mygit/Tablekeeper/result-run-3/.evidence/pm-s2-design-review-20261004T0843/check-1.log"
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "/private/tmp/tablekeeper-pm-s2-design-review-20261004T0843",
+          "checkout",
+          "--detach",
+          "3f2196bc6bf113db49db6a2117f233002260d24d"
+        ],
+        "exit": 0,
+        "start": "2026-10-04T08:42:48.237150+00:00",
+        "end": "2026-10-04T08:42:48.249658+00:00",
+        "log": "/Users/frank/mygit/Tablekeeper/result-run-3/.evidence/pm-s2-design-review-20261004T0843/check-2.log"
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "/private/tmp/tablekeeper-pm-s2-design-review-20261004T0843",
+          "status",
+          "--porcelain"
+        ],
+        "exit": 0,
+        "start": "2026-10-04T08:42:48.249676+00:00",
+        "end": "2026-10-04T08:42:48.261050+00:00",
+        "log": "/Users/frank/mygit/Tablekeeper/result-run-3/.evidence/pm-s2-design-review-20261004T0843/check-3.log"
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "/private/tmp/tablekeeper-pm-s2-design-review-20261004T0843",
+          "diff",
+          "--exit-code",
+          "52a179d778b3052acf68c8aafeec62aac8ae6ecd",
+          "HEAD",
+          "--",
+          "stage-1"
+        ],
+        "exit": 0,
+        "start": "2026-10-04T08:42:48.261066+00:00",
+        "end": "2026-10-04T08:42:48.269162+00:00",
+        "log": "/Users/frank/mygit/Tablekeeper/result-run-3/.evidence/pm-s2-design-review-20261004T0843/check-4.log"
+      },
+      {
+        "command": [
+          "git",
+          "-C",
+          "/private/tmp/tablekeeper-pm-s2-design-review-20261004T0843",
+          "diff",
+          "--check",
+          "398ebdcbc417400aa32ca510e2546808a43b26ab",
+          "HEAD"
+        ],
+        "exit": 0,
+        "start": "2026-10-04T08:42:48.269175+00:00",
+        "end": "2026-10-04T08:42:48.278148+00:00",
+        "log": "/Users/frank/mygit/Tablekeeper/result-run-3/.evidence/pm-s2-design-review-20261004T0843/check-5.log"
+      },
+      {
+        "command": [
+          "python3",
+          "/private/tmp/tablekeeper-pm-s2-design-review-20261004T0843/planning/design/stage-2/check_spec.py"
+        ],
+        "exit": 0,
+        "start": "2026-10-04T08:42:48.278162+00:00",
+        "end": "2026-10-04T08:42:48.320053+00:00",
+        "log": "/Users/frank/mygit/Tablekeeper/result-run-3/.evidence/pm-s2-design-review-20261004T0843/check-6.log"
+      }
+    ],
+    "assessment": "Source-linked journeys, exact selectors, responsive seating, all recovery states and accessibility criteria cover supplied requirements. Actual rendered review remains NOT_TESTED. Designer-supplied receipt/progress identifiers are not relabeled verified BAND message IDs; PM receipt/decision above are observed tool results."
+  }
+}
