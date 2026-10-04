@@ -154,8 +154,7 @@ class Service:
     def availability(self,s,q):
         if any(k not in q for k in ['restaurant_id','date','party_size']): fail()
         r=self.get_restaurant(s,q['restaurant_id']); day=date(q['date'])
-        if not re.fullmatch('[0-9]+',q['party_size']) or int(q['party_size'])<1: fail()
-        party=int(q['party_size']); slots=[]
+        party=query_count(q['party_size']); slots=[]
         h=next((x for x in r['opening_hours'] if x['weekday']==DAYS[day.weekday()]),None)
         if h:
             for minute in range(clock(h['opens']),clock(h['closes']),r['slot_minutes']):

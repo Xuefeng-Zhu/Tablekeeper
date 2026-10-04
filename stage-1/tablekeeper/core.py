@@ -38,6 +38,13 @@ def integer(o,k,minimum=1):
     if isinstance(v,bool) or not isinstance(v,(int,Decimal)) or v!=int(v) or v<minimum: fail()
     return int(v)
 
+def query_count(value):
+    """Exact positive ASCII decimal count, independent of int string limits."""
+    if not re.fullmatch('[0-9]+',value): fail()
+    count=Decimal(value)
+    if count<1: fail()
+    return count
+
 def array(o,k):
     if k not in o: fail()
     if not isinstance(o[k],list): fail(400,'malformed_request')
@@ -120,9 +127,12 @@ def timing(r,local):
     if not op<=m<cl: fail(422,'outside_opening_hours')
     if (m-op)%r['slot_minutes']: fail(422,'not_on_slot_grid')
     try:
-        end=start+timedelta(minutes=r['reservation_duration_minutes'])
         closing=resolve(w.replace(hour=cl//60,minute=cl%60),z,True)
-        if end>closing: fail(422,'outside_opening_hours')
+        # Compare elapsed UTC capacity before adding duration at calendar edges.
+        # Whole-minute division is exact even for historical second-based offsets.
+        remaining_minutes=(closing-start)//timedelta(minutes=1)
+        if r['reservation_duration_minutes']>remaining_minutes: fail(422,'outside_opening_hours')
+        end=start+timedelta(minutes=r['reservation_duration_minutes'])
         return stamp(start,z),stamp(end,z)
     except (OverflowError,ValueError): fail()
 
