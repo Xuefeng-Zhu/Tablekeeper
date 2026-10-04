@@ -3,8 +3,14 @@
     "id": "QA-BOUNDARIES",
     "owner": "@frankzhu94/factory-qa",
     "dependencies": [],
-    "state": "PROPOSED",
-    "goal": "Expand requirements with independently verifiable boundaries before implementation"
+    "state": "ACCEPTED",
+    "goal": "Expand requirements with independently verifiable boundaries before implementation",
+    "candidate_commit": "808f13609675c3acbc48c09ac843239e3a1762f5",
+    "reviewer": "@frankzhu94/factory-pm",
+    "limitations": [
+      "Planning scope only; all product checks NOT_TESTED"
+    ],
+    "room_event": "10e7ab02-6821-4a98-9591-52e46a253357 (complete receipt; acceptance separately in room)"
   },
   {
     "id": "ARCH-S1",
