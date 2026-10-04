@@ -10,7 +10,7 @@ Two `confirmed` reservations must never occupy the same table at overlapping tim
 including during concurrent requests. Occupancy is the half-open interval
 `[starts_at, starts_at + reservation_duration)`. A 90-minute booking at 19:00 therefore
 does not overlap a booking starting at 20:30. Retries and rejected requests must not
-create duplicate or partial bookings.",Independent QA behavior tests plus exact-candidate reviewer official isolated harness; designer desktop/375px review for UI,,NOT_TESTED,,,2026-10-04T06:41:03.821825+00:00,Earlier-stage requirements inherited; no gate has passed
+create duplicate or partial bookings.",Independent QA behavior tests plus exact-candidate reviewer official isolated harness; designer desktop/375px review for UI,52a179d778b3052acf68c8aafeec62aac8ae6ecd,ACCEPTED,/Users/frank/mygit/Tablekeeper/result-run-3/.evidence/reviewer-s1-f1-20261004T080315Z/candidate-acceptance.json,a75434a1-4acb-48a6-acc9-e9cfbe82b0a5,2026-10-04T08:07:29.498771+00:00,Bounded independent Stage1 API review; see gate record for NOT_TESTED boundaries; final packaging pending.
 S1-02,/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-1.md,9460189eac83802ce158f16ee90989af728a489b32a6147e2dc8e320f383055f,2. Delivery and deployment,@frankzhu94/factory-backend,TK-S1-BACKEND,"## 2. Delivery and deployment
 
 Deliver an HTTP service, a `Dockerfile` and a `RUN.md` with a command that builds and
@@ -42,7 +42,7 @@ The service must operate within these limits:
 | Disk | ephemeral; state need not survive a container restart |
 
 Runtime assets and dependencies must be included in the image. This includes fonts,
-scripts and stylesheets; external services are unavailable at runtime.",Independent QA behavior tests plus exact-candidate reviewer official isolated harness; designer desktop/375px review for UI,,NOT_TESTED,,,2026-10-04T06:41:03.821825+00:00,Earlier-stage requirements inherited; no gate has passed
+scripts and stylesheets; external services are unavailable at runtime.",Independent QA behavior tests plus exact-candidate reviewer official isolated harness; designer desktop/375px review for UI,52a179d778b3052acf68c8aafeec62aac8ae6ecd,ACCEPTED,/Users/frank/mygit/Tablekeeper/result-run-3/.evidence/reviewer-s1-f1-20261004T080315Z/candidate-acceptance.json,a75434a1-4acb-48a6-acc9-e9cfbe82b0a5,2026-10-04T08:07:29.498771+00:00,Bounded independent Stage1 API review; see gate record for NOT_TESTED boundaries; final packaging pending.
 S1-03,/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-1.md,9460189eac83802ce158f16ee90989af728a489b32a6147e2dc8e320f383055f,3. Runtime contract,@frankzhu94/factory-backend,TK-S1-BACKEND,"## 3. Runtime contract
 
 ### 3.1 Listening
@@ -80,7 +80,7 @@ This test endpoint must be enabled in the delivered image and requires no authen
 - Unknown fields in a request body are ignored, never an error.
 - Unknown query parameters are ignored.
 - IDs are opaque strings of at most 64 characters. Their format is yours. This limit
-  also applies to IDs supplied in reset fixtures.",Independent QA behavior tests plus exact-candidate reviewer official isolated harness; designer desktop/375px review for UI,,NOT_TESTED,,,2026-10-04T06:41:03.821825+00:00,Earlier-stage requirements inherited; no gate has passed
+  also applies to IDs supplied in reset fixtures.",Independent QA behavior tests plus exact-candidate reviewer official isolated harness; designer desktop/375px review for UI,52a179d778b3052acf68c8aafeec62aac8ae6ecd,ACCEPTED,/Users/frank/mygit/Tablekeeper/result-run-3/.evidence/reviewer-s1-f1-20261004T080315Z/candidate-acceptance.json,a75434a1-4acb-48a6-acc9-e9cfbe82b0a5,2026-10-04T08:07:29.498771+00:00,Bounded independent Stage1 API review; see gate record for NOT_TESTED boundaries; final packaging pending.
 S1-04,/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-1.md,9460189eac83802ce158f16ee90989af728a489b32a6147e2dc8e320f383055f,4. Model,@frankzhu94/factory-backend,TK-S1-BACKEND,"## 4. Model
 
 Restaurants and tables are supplied through `POST /_test/reset` only. Restaurant and
@@ -133,7 +133,7 @@ table creation endpoints are out of scope.
   body plus `id`, `reference` and `user_id`.
 
 Fixtures may use any calendar date. A booking must not be rejected solely because its
-start is in the past; the cancellation and amendment cutoff rules still apply.",Independent QA behavior tests plus exact-candidate reviewer official isolated harness; designer desktop/375px review for UI,,NOT_TESTED,,,2026-10-04T06:41:03.821825+00:00,Earlier-stage requirements inherited; no gate has passed
+start is in the past; the cancellation and amendment cutoff rules still apply.",Independent QA behavior tests plus exact-candidate reviewer official isolated harness; designer desktop/375px review for UI,52a179d778b3052acf68c8aafeec62aac8ae6ecd,ACCEPTED,/Users/frank/mygit/Tablekeeper/result-run-3/.evidence/reviewer-s1-f1-20261004T080315Z/candidate-acceptance.json,a75434a1-4acb-48a6-acc9-e9cfbe82b0a5,2026-10-04T08:07:29.498771+00:00,Bounded independent Stage1 API review; see gate record for NOT_TESTED boundaries; final packaging pending.
 S1-05,/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-1.md,9460189eac83802ce158f16ee90989af728a489b32a6147e2dc8e320f383055f,5. Errors,@frankzhu94/factory-backend,TK-S1-BACKEND,"## 5. Errors
 
 Every 4xx and 5xx response carries this body:
@@ -172,7 +172,7 @@ Shared ranges, enforced on every endpoint that takes them:
 |---|---|---|
 | `Idempotency-Key` | 1 to 255 characters | 422 `validation_failed` |
 
-Requests must not produce 5xx responses, including under concurrent load.",Independent QA behavior tests plus exact-candidate reviewer official isolated harness; designer desktop/375px review for UI,,NOT_TESTED,,,2026-10-04T06:41:03.821825+00:00,Earlier-stage requirements inherited; no gate has passed
+Requests must not produce 5xx responses, including under concurrent load.",Independent QA behavior tests plus exact-candidate reviewer official isolated harness; designer desktop/375px review for UI,52a179d778b3052acf68c8aafeec62aac8ae6ecd,ACCEPTED,/Users/frank/mygit/Tablekeeper/result-run-3/.evidence/reviewer-s1-f1-20261004T080315Z/candidate-acceptance.json,a75434a1-4acb-48a6-acc9-e9cfbe82b0a5,2026-10-04T08:07:29.498771+00:00,Bounded independent Stage1 API review; see gate record for NOT_TESTED boundaries; final packaging pending.
 S1-06,/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-1.md,9460189eac83802ce158f16ee90989af728a489b32a6147e2dc8e320f383055f,6. Authentication,@frankzhu94/factory-backend,TK-S1-BACKEND,"## 6. Authentication
 
 Authentication supports signup and login. Email verification, password reset, refresh
@@ -211,7 +211,7 @@ Authorization: Bearer <token>
 Tokens do not expire. An account may have multiple valid tokens and concurrent sessions.
 
 Passwords must be stored using a password-hashing function such as bcrypt, scrypt or
-Argon2, or an equivalent. Plaintext password storage is not permitted.",Independent QA behavior tests plus exact-candidate reviewer official isolated harness; designer desktop/375px review for UI,,NOT_TESTED,,,2026-10-04T06:41:03.821825+00:00,Earlier-stage requirements inherited; no gate has passed
+Argon2, or an equivalent. Plaintext password storage is not permitted.",Independent QA behavior tests plus exact-candidate reviewer official isolated harness; designer desktop/375px review for UI,52a179d778b3052acf68c8aafeec62aac8ae6ecd,ACCEPTED,/Users/frank/mygit/Tablekeeper/result-run-3/.evidence/reviewer-s1-f1-20261004T080315Z/candidate-acceptance.json,a75434a1-4acb-48a6-acc9-e9cfbe82b0a5,2026-10-04T08:07:29.498771+00:00,Bounded independent Stage1 API review; see gate record for NOT_TESTED boundaries; final packaging pending.
 S1-07,/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-1.md,9460189eac83802ce158f16ee90989af728a489b32a6147e2dc8e320f383055f,7. Idempotency,@frankzhu94/factory-backend,TK-S1-BACKEND,"## 7. Idempotency
 
 Two write paths require an idempotency key: **`POST /reservations`** (§8) and
@@ -247,7 +247,7 @@ For concurrent identical requests with an unused key, exactly one returns 201.
 The others return 200 with the same body. The operation takes effect only once.
 
 A successful replay returns the original response, even after the resource changes or
-is cancelled. It makes no further state changes.",Independent QA behavior tests plus exact-candidate reviewer official isolated harness; designer desktop/375px review for UI,,NOT_TESTED,,,2026-10-04T06:41:03.821825+00:00,Earlier-stage requirements inherited; no gate has passed
+is cancelled. It makes no further state changes.",Independent QA behavior tests plus exact-candidate reviewer official isolated harness; designer desktop/375px review for UI,52a179d778b3052acf68c8aafeec62aac8ae6ecd,ACCEPTED,/Users/frank/mygit/Tablekeeper/result-run-3/.evidence/reviewer-s1-f1-20261004T080315Z/candidate-acceptance.json,a75434a1-4acb-48a6-acc9-e9cfbe82b0a5,2026-10-04T08:07:29.498771+00:00,Bounded independent Stage1 API review; see gate record for NOT_TESTED boundaries; final packaging pending.
 S1-08,/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-1.md,9460189eac83802ce158f16ee90989af728a489b32a6147e2dc8e320f383055f,8. API,@frankzhu94/factory-backend,TK-S1-BACKEND,"## 8. API
 
 `GET /restaurants`, `GET /restaurants/{id}` and `GET /availability` are **public** — no bearer
@@ -376,7 +376,7 @@ Validation is identical to `POST /reservations`, and the same cutoff rule as can
 409 `reservation_cancelled`. A successful amendment releases the old slot and reserves the
 new one together. A failed amendment leaves the original booking and its occupancy unchanged.
 
-`reference` and `reservation_id` survive a change.",Independent QA behavior tests plus exact-candidate reviewer official isolated harness; designer desktop/375px review for UI,,NOT_TESTED,,,2026-10-04T06:41:03.821825+00:00,Earlier-stage requirements inherited; no gate has passed
+`reference` and `reservation_id` survive a change.",Independent QA behavior tests plus exact-candidate reviewer official isolated harness; designer desktop/375px review for UI,52a179d778b3052acf68c8aafeec62aac8ae6ecd,ACCEPTED,/Users/frank/mygit/Tablekeeper/result-run-3/.evidence/reviewer-s1-f1-20261004T080315Z/candidate-acceptance.json,a75434a1-4acb-48a6-acc9-e9cfbe82b0a5,2026-10-04T08:07:29.498771+00:00,Bounded independent Stage1 API review; see gate record for NOT_TESTED boundaries; final packaging pending.
 S1-09,/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-1.md,9460189eac83802ce158f16ee90989af728a489b32a6147e2dc8e320f383055f,9. Time and DST,@frankzhu94/factory-backend,TK-S1-BACKEND,"## 9. Time and DST
 
 Local dates and times follow the restaurant's `timezone`, including daylight-saving transitions.
@@ -399,7 +399,7 @@ The transitions that must be handled:
 | `Europe/Berlin` | 2026-03-29, 02:00 → 03:00 | 2026-10-25, 03:00 → 02:00 |
 | `America/New_York` | 2026-03-08, 02:00 → 03:00 | 2026-11-01, 02:00 → 01:00 |
 
-Offsets must follow the IANA rules for the specified zone and date.",Independent QA behavior tests plus exact-candidate reviewer official isolated harness; designer desktop/375px review for UI,,NOT_TESTED,,,2026-10-04T06:41:03.821825+00:00,Earlier-stage requirements inherited; no gate has passed
+Offsets must follow the IANA rules for the specified zone and date.",Independent QA behavior tests plus exact-candidate reviewer official isolated harness; designer desktop/375px review for UI,52a179d778b3052acf68c8aafeec62aac8ae6ecd,ACCEPTED,/Users/frank/mygit/Tablekeeper/result-run-3/.evidence/reviewer-s1-f1-20261004T080315Z/candidate-acceptance.json,a75434a1-4acb-48a6-acc9-e9cfbe82b0a5,2026-10-04T08:07:29.498771+00:00,Bounded independent Stage1 API review; see gate record for NOT_TESTED boundaries; final packaging pending.
 S1-10,/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-1.md,9460189eac83802ce158f16ee90989af728a489b32a6147e2dc8e320f383055f,10. Export and import,@frankzhu94/factory-backend,TK-S1-BACKEND,"## 10. Export and import
 
 The service must support `GET /_test/export` and `POST /_test/import`. Like reset, these
@@ -423,7 +423,7 @@ Identities, statuses and timestamps must not be regenerated. Failed request keys
 reusable. Existing receipts, references, tokens and retries must remain valid after import;
 replacing the state with a fresh fixture does not satisfy this requirement. Import removes
 all previous destination data and credentials. Reset continues to clear all state, including
-imported state. State need not survive an abrupt container restart.",Independent QA behavior tests plus exact-candidate reviewer official isolated harness; designer desktop/375px review for UI,,NOT_TESTED,,,2026-10-04T06:41:03.821825+00:00,Earlier-stage requirements inherited; no gate has passed
+imported state. State need not survive an abrupt container restart.",Independent QA behavior tests plus exact-candidate reviewer official isolated harness; designer desktop/375px review for UI,52a179d778b3052acf68c8aafeec62aac8ae6ecd,ACCEPTED,/Users/frank/mygit/Tablekeeper/result-run-3/.evidence/reviewer-s1-f1-20261004T080315Z/candidate-acceptance.json,a75434a1-4acb-48a6-acc9-e9cfbe82b0a5,2026-10-04T08:07:29.498771+00:00,Bounded independent Stage1 API review; see gate record for NOT_TESTED boundaries; final packaging pending.
 S1-11,/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-1.md,9460189eac83802ce158f16ee90989af728a489b32a6147e2dc8e320f383055f,11. Atomic reservation moves,@frankzhu94/factory-backend,TK-S1-BACKEND,"## 11. Atomic reservation moves
 
 A diner may change several bookings in one request.
@@ -453,7 +453,7 @@ keys. On success return 201 with `{""reservations"": [...]}` in input order, inc
 unchanged items.
 Replays return that original response with 200, even after amendments or cancellations.
 No-op moves retain all existing values. Export/import preserves successful batch receipts
-as well as the resulting bookings. No batch UI is required.",Independent QA behavior tests plus exact-candidate reviewer official isolated harness; designer desktop/375px review for UI,,NOT_TESTED,,,2026-10-04T06:41:03.821825+00:00,Earlier-stage requirements inherited; no gate has passed
+as well as the resulting bookings. No batch UI is required.",Independent QA behavior tests plus exact-candidate reviewer official isolated harness; designer desktop/375px review for UI,52a179d778b3052acf68c8aafeec62aac8ae6ecd,ACCEPTED,/Users/frank/mygit/Tablekeeper/result-run-3/.evidence/reviewer-s1-f1-20261004T080315Z/candidate-acceptance.json,a75434a1-4acb-48a6-acc9-e9cfbe82b0a5,2026-10-04T08:07:29.498771+00:00,Bounded independent Stage1 API review; see gate record for NOT_TESTED boundaries; final packaging pending.
 S2-01,/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-2.md,b1aa1b4affad456ff26f208a378eb2f6884153fc6ef667ab37b888fcda96c5dc,Competing clients and uncertain outcomes,@frankzhu94/factory-frontend,TK-S2-FRONTEND,"## Competing clients and uncertain outcomes
 
 The UI must handle responses arriving out of order and connections failing after submission.

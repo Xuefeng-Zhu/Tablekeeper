@@ -1,3 +1,5 @@
 # Integration record
 
 2026-10-04T06:56:34.505754+00:00 — TK-S1-ARCH by @frankzhu94/factory-architect, original/full integrated commit 747c576212772cd32779c1c0ebf0bb81d8458855, directly descends from bootstrap 7563a9467886e3f1384f2a12ce7e0bb629c3b588 in the single shared checkout. No history rewrite or cherry-pick. PM independently accepted planning only in room event 11666572-4171-476a-a275-3a5c72c0521b; clean review clone /private/tmp/tablekeeper-pm-arch-review-20261004T0656. Product gates NOT_TESTED.
+
+2026-10-04T08:12:11.304897+00:00 — Stage1 accepted at 52a179d778b3052acf68c8aafeec62aac8ae6ecd, Backend original commits ad4e62795814922e49530c0a24fe75190800a53b,739b1bf79c631dedb528d503800b954fbd3e61d9,52a179d778b3052acf68c8aafeec62aac8ae6ecd retained as direct descendants; no history rewrite. Reviewer @frankzhu94/factory-reviewer decision a75434a1-4acb-48a6-acc9-e9cfbe82b0a5. Prior candidate739b1bf rejected for F1; two repair cycles used, one remaining for Stage1 work item. Independent isolated120/120, F1 7/7, QA regression13/13. Stage1 source frozen; Stage2 may extend a future separate copy after architecture/design. Final packaging NOT_TESTED.

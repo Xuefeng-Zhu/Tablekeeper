@@ -1,0 +1,442 @@
+{
+  "id": "TK-S1-REVIEW",
+  "state": "ACCEPTED",
+  "owner": "@frankzhu94/factory-reviewer",
+  "reviewer": "@frankzhu94/factory-reviewer",
+  "implementation_owner": "@frankzhu94/factory-backend",
+  "next_recipient": "@frankzhu94/factory-pm",
+  "goal": "Independently verify F1 repair and accept or reject exact integrated Stage1 candidate.",
+  "requirements": [
+    "BEGIN DISPATCH OPERATING REQUIREMENTS\n# Judged dispatch packet \u2014 tablekeeper\n\nPacket state: REQUIRES_READY_FREEZE\nDispatch mode: all; stages: 1, 2, 3, 4.\nExecute stages 1 through 4 once in increasing order, with an independent gate before advancing.\nThis file is preparation only. Do not dispatch before the freeze reports READY_TO_LAUNCH.\nPinned challenge commit: 803560d2a678ace1414465c098eb0ab5380ffade\nConfiguration SHA-256: 1434400dfbbda37a4b8ea21b29f4db785b898b1d3055845e0d6abd9ec21fb691\n\n## Absolute workspace paths\n- challenge: `/Users/frank/mygit/Tablekeeper/challenge`\n- factory: `/Users/frank/mygit/Tablekeeper/factory`\n- rehearsal: `/Users/frank/mygit/Tablekeeper/rehearsal/repair-result`\n- runs: `/Users/frank/mygit/Tablekeeper/runs`\n- result: `/Users/frank/mygit/Tablekeeper/result-run-3`\n- Assigned output checkout: `/Users/frank/mygit/Tablekeeper/result-run-3`\n\n## Launcher admission and seat execution\nThe launcher checks authentication, approved finite budgets, registered identities\nand recorded permission evidence before connecting seats. For a seat connected by\nthis launcher, those admission gates have already been enforced by the operator;\ndo not repeat them inside the task sandbox.\nDo not run operator-only doctor, preflight, registration/authentication probes,\nfreeze, launch, start-seats or stop-seats commands; do not call\nsubscription_auth_probe or preflight_runtime or create nested Codex app servers.\nUse the injected roster, limits and workspace metadata to execute the delivered\ntask. Test required operations in your assigned workspace and report any actual\ndenied operation with evidence; do not reinterpret an operator probe's sandbox\nfailure as a failed task prerequisite or try to repair operator infrastructure.\nAdmission does not establish product correctness, seat smoke results, peer\ncollaboration or stage acceptance. Perform those assigned checks and retain their\nactual evidence within the existing permissions and limits.\n\n## Execution environment\n- Writable product checkout and Git metadata: `/Users/frank/mygit/Tablekeeper/result-run-3`. One active writer is enforced.\n- Store team test logs, screenshots and results under `/Users/frank/mygit/Tablekeeper/result-run-3/.evidence` in unique run directories; keep generated caches out of commits.\n- Use the platform temporary directory for clean exact-candidate review clones outside stage folders and for dependency caches. Read-only access to sources and factory tools does not grant write access to their directories.\n- The runs directory contains operator-owned control records. Do not alter launcher, usage, dispatch or readiness files or attempt to broaden permissions.\n- Pinned harness interpreter: `/Users/frank/mygit/Tablekeeper/runs/harness-venv/bin/python`. Run the official `-m harness run` from the challenge directory, with `--track tablekeeper`, an absolute `--repo` and `--out` inside your writable evidence directory. Use `--mode isolated` for acceptance; inspect its `--help` for the exact stage options.\n- The factory harness wrapper writes operator evidence under runs; use the official harness directly for seat-owned checks.\n- Docker uses the pinned local socket and private temporary buildx state supplied by the launcher. Do not override them or mount host credentials, broaden host access, or run privileged containers.\n- Browser execution on this Mac uses Chromium inside the official harness Docker image. Native macOS Chromium is blocked by the seat sandbox. For rendered checks, use an isolated test network and copy screenshots back into your evidence directory; the final service must still satisfy the official no-outbound-network harness.\n- Put npm/pip/uv dependency caches inside the writable checkout or temporary directory. No global package or system configuration changes are needed.\n\n## Required repository packaging\nThe submission repository root contains README.md, FACTORY.md, mandates/, room.json, and only genuinely completed stage-1/ through stage-4/ directories.\nEach completed stage is an independent full service containing its own Dockerfile, RUN.md and source. Do not nest the result repository under a factory directory or copy a final implementation backwards into earlier stages.\nAfter dispatch, copy the seven final seat mandates into the output root's mandates/ directory under their existing matching filenames; preserve Harness and Model metadata.\nREADME.md and FACTORY.md are final human-authored narratives. room.json is the actual complete BAND room download after the run. Do not fabricate these artifacts or treat missing post-run metadata as a passing submission check.\nKeep challenge and factory inputs outside the submitted repository. The official harness check validates final packaging; isolated harness run validates each actual stage. Final metadata assembly and public release happen after the autonomous run.\n\n## Actual roster\n- pm: Factory PM; handle: @frankzhu94/factory-pm; identity: 7d26ccf7-2921-4b38-9e16-ca8ebfa2a448; harness: Codex; model: gpt-6-astra\n- architect: Factory Architect; handle: @frankzhu94/factory-architect; identity: 974df2f1-b5e8-4873-a1ce-93658e0404a4; harness: Codex; model: gpt-6-astra\n- designer: Factory Designer; handle: @frankzhu94/factory-designer; identity: a6ee2e58-62bd-4ba9-b573-f164bb3e41d2; harness: Codex; model: gpt-6-astra\n- backend: Factory Backend; handle: @frankzhu94/factory-backend; identity: b2f43e4e-7727-44bb-9154-6cdc2b781749; harness: Codex; model: gpt-6-astra\n- frontend: Factory Frontend; handle: @frankzhu94/factory-frontend; identity: 5ba8923d-b3d9-4b56-818f-3bef60ea617d; harness: Codex; model: gpt-6-astra\n- qa: Factory QA; handle: @frankzhu94/factory-qa; identity: 8e450576-69cd-416c-bc2a-a3a771f020d3; harness: Codex; model: gpt-6-astra\n- reviewer: Factory Reviewer; handle: @frankzhu94/factory-reviewer; identity: 02e4a78d-7d9d-4c77-bf32-b3810a9cfacb; harness: Codex; model: gpt-6-astra\n\n## Finite work limits\n```json\n{\n  \"ack_timeout_seconds\": 120,\n  \"api_billing_allowed\": false,\n  \"approved\": true,\n  \"billing_mode\": \"subscription_only\",\n  \"max_active_seats\": 1,\n  \"max_repairs\": 3,\n  \"max_total_tokens\": 100000000,\n  \"max_turns_per_seat\": 300,\n  \"overall_timeout_seconds\": 70834,\n  \"paid_provisioning_allowed\": false,\n  \"spend_cap_usd\": null,\n  \"stage_timeout_seconds\": 14400,\n  \"turn_timeout_seconds\": 600\n}\n```\n\nBudgets are ceilings, never permission to spend; approved must be true before live work.\nWork stages in increasing order with an independent release gate for each exact commit.\nEvery later stage inherits every earlier specification included below.\nPM assigns material work in the BAND room using the verified actual handles. Handoffs\ncarry requirements, owner, revision, paths, evidence, limitations and next recipient.\nFor oversized packets, number every part and obtain complete-set receipt before execution.\nKeep all seven identities registered; keep implementation concurrency within the limit.\nUse the assigned shared checkout with one active writer. Use separate worktrees only\nafter the operator has provisioned their writable roots and enabled parallel mode;\ndo not create worktrees under operator-owned runs. PM integrates attributable commits\nwithout rewriting history.\nReviewer independently verifies a clean checkout of an exact integrated candidate.\nRetain failed evidence; stop/replan after the repair ceiling or repeated identical failure.\nHuman stage dispatch is the only human input during the judged run. Do not solicit\n\nsteering, approvals or debugging hints. Report a blocker if unattended permissions fail.\nRequired outcome: genuine stage-N outputs, independent Dockerfile/RUN.md, requirement\ncoverage, own QA checks, designer evidence where applicable, official isolated harness\nevidence, candidate acceptance, room event provenance, timing and available usage data.\nThe factory must never label an unobserved check successful or fabricate room exports.\n\n## Task preferences and ownership\nProduct proposal: Tablekeeper, a coherent restaurant reservation experience.\nStarting technical proposal: TypeScript, React/Vite, a small Node HTTP API, SQLite,\nand a tested timezone adapter. The Architect may choose a better compliant option\nand record why. The official specifications always take priority.\nPackage one self-contained container per completed stage. No hosted authentication,\ndatabase, CDN, or AI API is allowed as an application runtime dependency.\nStage 1: complete API behavior, atomic changes, retry correctness, time handling,\nand portability. Stage 2: polished search/booking/lookup, approved table pairs,\ndelayed-response handling, and reliable uncertain-submission recovery.\nStage 3: policy selection, accepted-term history, revisions, recurring agreements,\nand upgrade continuity. Stage 4: deterministic seating replanning, atomic application,\nand series amendments. Preserve genuine incremental earlier stage outputs; do not\ncopy a final implementation backwards. Attempt all stages and label incomplete work.\nPrioritize required behavior and a polished Stage 2 over optional dashboards,\nintegrations, or decorative assets.\nThe PM creates the actual product brief and requirement map from the exact specs.\nThe Architect records implementable architecture decisions before corresponding\nimplementation. The Designer creates journeys, screen hierarchy, interaction states,\nresponsive specifications and design reviews before corresponding UI implementation.\nUse the empty templates as record formats; they contain no preselected decisions.\nDesigner direction: warm hospitality, clear hierarchy and human-readable labels;\ninspect desktop and 375px rendered layouts, keyboard focus and detailed feedback\nstates. Required routes and test attributes come only from the exact official spec.\nClearly mark optional visual ideas. QA independently authors actual behavior tests\ncovering late search responses, conflicts, lost responses, retries and upgrades.\n\n\nEND DISPATCH OPERATING REQUIREMENTS\n\nBEGIN COMPLETE STAGE 1 SPECIFICATION\n# Tablekeeper \u2014 Stage 1: reservations\n\nThis stage defines the initial service and its API.\n\nBuild from the supplied requirements. Source code, API documentation and schemas from\nexisting products in this domain must not be used.\n\n## 1. Scope\n\nDiners can search restaurant availability, book a table and receive a confirmation\nreference. They can cancel or amend their bookings, including changing several bookings\ntogether. Each restaurant has its own table capacities, opening hours and cancellation policy.\nOnly the HTTP API is required.\n\nTwo `confirmed` reservations must never occupy the same table at overlapping times,\nincluding during concurrent requests. Occupancy is the half-open interval\n`[starts_at, starts_at + reservation_duration)`. A 90-minute booking at 19:00 therefore\ndoes not overlap a booking starting at 20:30. Retries and rejected requests must not\ncreate duplicate or partial bookings.\n\n## 2. Delivery and deployment\n\nDeliver an HTTP service, a `Dockerfile` and a `RUN.md` with a command that builds and\nstarts the service without manual setup. Language, framework and storage are unrestricted.\nA `docker-compose.yml` is optional.\n\nThe submission is a containerized HTTP service, not a Python package. Python is not\nrequired in the implementation. TypeScript/JavaScript, Go, Rust, Java, Python and any\nother language are equally valid. The harness builds the submitted `Dockerfile`, starts\nthe resulting image and tests only its HTTP behavior; it does not import or execute the\nsubmission's source files on the judge host.\n\nThe image must run on its own with `-e PORT=<port>` and a port mapping. Runtime networking\nhas no outbound access. All runtime dependencies, initialization and seed data must work\nwithin that single container. Compose configuration is not used to start the service.\n\n### Resource limits\n\nThe service must operate within these limits:\n\n| Limit | Value |\n|---|---|\n| CPU | 2 vCPU |\n| Memory | 2 GiB |\n| Start to first healthy response | 60 s |\n| Concurrent requests | up to 50 in flight |\n| Per-request timeout | 5 s (10 s for `POST /_test/reset`) |\n| Outbound network | available during `docker build`, **none at run time** |\n| Disk | ephemeral; state need not survive a container restart |\n\nRuntime assets and dependencies must be included in the image. This includes fonts,\nscripts and stylesheets; external services are unavailable at runtime.\n\n## 3. Runtime contract\n\n### 3.1 Listening\n\nListen on `0.0.0.0` using the `PORT` environment variable, default `8080`.\n\n### 3.2 Health\n\n```http\nGET /health  ->  200  {\"status\": \"ok\"}\n```\n\nReturn 200 once the service and its data store can serve requests, within 60 seconds\nof container start. Non-200 responses are permitted before the service is ready.\n\n### 3.3 Reset and seed\n\n```http\nPOST /_test/reset\nContent-Type: application/json\n\n{ ...fixture... }\n\n->  204 No Content\n```\n\nReplace all service state with the fixture in the request body (\u00a74). When reset returns\n204, subsequent requests must see only that fixture. Repeated resets are supported.\nThis test endpoint must be enabled in the delivered image and requires no authentication.\n\n### 3.4 Conventions\n\n- Requests and responses are `application/json; charset=utf-8`.\n- Timestamps in responses are RFC 3339 with an explicit offset, e.g. `2026-09-24T19:00:00+02:00`.\n- Unknown fields in a request body are ignored, never an error.\n- Unknown query parameters are ignored.\n- IDs are opaque strings of at most 64 characters. Their format is yours. This limit\n  also applies to IDs supplied in reset fixtures.\n\n## 4. Model\n\nRestaurants and tables are supplied through `POST /_test/reset` only. Restaurant and\ntable creation endpoints are out of scope.\n\n| Field | On | Meaning |\n|---|---|---|\n| `timezone` | Restaurant | IANA zone name, e.g. `Europe/Berlin`. All of the restaurant's times are local to this |\n| `slot_minutes` | Restaurant | Bookings start on a grid of this many minutes from opening time |\n| `reservation_duration_minutes` | Restaurant | How long every reservation occupies its table |\n| `cancellation_cutoff_minutes` | Restaurant | A booking cannot be cancelled or changed within this many minutes of its start |\n| `opening_hours` | Restaurant | Per weekday. A day with no entry is closed |\n| `capacity` | Table | Maximum party size |\n\n### Fixture format\n\n```json\n{\n  \"users\": [\n    { \"id\": \"u_ada\", \"email\": \"ada@example.com\",\n      \"password\": \"correct horse\", \"display_name\": \"Ada\" }\n  ],\n  \"restaurants\": [\n    {\n      \"id\": \"r_anker\",\n      \"name\": \"Zum Anker\",\n      \"timezone\": \"Europe/Berlin\",\n      \"slot_minutes\": 30,\n      \"reservation_duration_minutes\": 90,\n      \"cancellation_cutoff_minutes\": 120,\n      \"opening_hours\": [\n        { \"weekday\": \"thu\", \"opens\": \"18:00\", \"closes\": \"23:00\" },\n        { \"weekday\": \"fri\", \"opens\": \"18:00\", \"closes\": \"23:30\" }\n      ],\n      \"tables\": [\n        { \"id\": \"t_1\", \"label\": \"1\", \"capacity\": 2 },\n        { \"id\": \"t_2\", \"label\": \"2\", \"capacity\": 4 }\n      ]\n    }\n  ],\n  \"reservations\": []\n}\n```\n\n- `weekday` is one of `mon tue wed thu fri sat sun`.\n- `opens` and `closes` are local `HH:MM`, 24-hour. `closes` is always later than `opens` on the\n  same local day \u2014 opening hours never cross midnight.\n- Seeded users must be able to log in with the given password immediately.\n- `reservations` may seed confirmed bookings, with the same fields as a `POST /reservations`\n  body plus `id`, `reference` and `user_id`.\n\nFixtures may use any calendar date. A booking must not be rejected solely because its\nstart is in the past; the cancellation and amendment cutoff rules still apply.\n\n## 5. Errors\n\nEvery 4xx and 5xx response carries this body:\n\n```json\n{ \"error\": { \"code\": \"table_unavailable\", \"message\": \"human readable, any wording\" } }\n```\n\nUse the specified HTTP status and `code`. The human-readable `message` may use any wording.\nEndpoint-specific errors are listed with each endpoint.\n\n| Status | `code` | When |\n|---|---|---|\n| 400 | `malformed_request` | Unparseable body, or a field of the wrong JSON type |\n| 400 | `missing_idempotency_key` | Required `Idempotency-Key` header absent or empty |\n| 401 | `unauthenticated` | Missing, malformed or unknown bearer token |\n| 403 | `forbidden` | Authenticated, but not permitted to touch this resource |\n| 404 | `not_found` | No such resource, or not visible to this caller |\n| 409 | `idempotency_key_reuse` | Key already used by this caller with a different request body |\n| 422 | `validation_failed` | A required field or query parameter is missing, or a stated rule is violated with no more specific code |\n\nA field of the correct JSON type with an invalid format or out-of-range value gives\n422 `validation_failed`, unless an endpoint specifies a different error. This includes\ninvalid dates, negative counts and values exceeding a stated maximum or length. In addition:\n\n- Endpoint-specific field rules take precedence: invalid `party_size` values (including strings\n  and booleans) and `starts_at_local` strings that are not a bare local `YYYY-MM-DDTHH:MM` are\n  422 `validation_failed`. Other wrong JSON types follow the rule below.\n- An integer-valued **query parameter** is written as plain decimal digits: `1e9`, `4.0` and `+4`\n  are 422 `validation_failed` whatever their numeric value.\n- Reserve 400 `malformed_request` for a body that does not parse or a field of the wrong type.\n\nShared ranges, enforced on every endpoint that takes them:\n\n| Field | Valid | Otherwise |\n|---|---|---|\n| `Idempotency-Key` | 1 to 255 characters | 422 `validation_failed` |\n\nRequests must not produce 5xx responses, including under concurrent load.\n\n## 6. Authentication\n\nAuthentication supports signup and login. Email verification, password reset, refresh\ntokens and role-management endpoints are out of scope. Permissions specified elsewhere\nin these requirements still apply.\n\n```http\nPOST /auth/signup\n{ \"email\": \"a@example.com\", \"password\": \"correct horse\", \"display_name\": \"Ada\" }\n\n->  201  { \"user_id\": \"u_1\", \"display_name\": \"Ada\", \"token\": \"...\" }\n```\n\n```http\nPOST /auth/login\n{ \"email\": \"a@example.com\", \"password\": \"correct horse\" }\n\n->  200  { \"user_id\": \"u_1\", \"display_name\": \"Ada\", \"token\": \"...\" }\n```\n\n| Case | Response |\n|---|---|\n| Email already registered | 409 `email_taken` |\n| Password shorter than 8 characters | 422 `validation_failed` |\n| `email` not of the form `local@domain` | 422 `validation_failed` |\n| Wrong password or unknown email on login | 401 `unauthenticated` |\n\nEvery other endpoint requires a bearer token, except `/health`, `/_test/reset`, the two above, and\nthe three public endpoints named at the top of \u00a78 \u2014 `GET /restaurants`, `GET /restaurants/{id}` and\n`GET /availability`:\n\n```http\nAuthorization: Bearer <token>\n```\n\nTokens do not expire. An account may have multiple valid tokens and concurrent sessions.\n\nPasswords must be stored using a password-hashing function such as bcrypt, scrypt or\nArgon2, or an equivalent. Plaintext password storage is not permitted.\n\n## 7. Idempotency\n\nTwo write paths require an idempotency key: **`POST /reservations`** (\u00a78) and\n**`POST /reservation-moves`** (\u00a711).\n\n```http\nIdempotency-Key: <client-chosen string, 1..255 characters>\n```\n\nThe key is scoped to **the authenticated user**. Two different users may use the same key string\nwith no interaction between them.\n\nA replay means the same user sending the **same method, the same path and the same body**. The\nsame key with the same body on a different path is a different request, not a replay, and must\nsucceed normally.\n\nAfter the body has been parsed as a JSON object and the caller authenticated, idempotency\nis resolved before endpoint-specific field validation or current-resource checks. Thus a\nused key with a different JSON body returns `409 idempotency_key_reuse` even when that new\nbody would otherwise be invalid.\n\n| Situation | Response |\n|---|---|\n| Header absent or empty | 400 `missing_idempotency_key` |\n| First use of the key | The normal response, **201** |\n| Replay: same key, same body | **200**, body identical to the original response as a JSON value |\n| Same key, different body | 409 `idempotency_key_reuse` |\n| Key reused after the original request failed with 4xx | Treated as a first use |\n\n\"Same body\" means the same JSON value after parsing \u2014 key order and whitespace do not matter.\n\nFor concurrent identical requests with an unused key, exactly one returns 201.\nThe others return 200 with the same body. The operation takes effect only once.\n\nA successful replay returns the original response, even after the resource changes or\nis cancelled. It makes no further state changes.\n\n## 8. API\n\n`GET /restaurants`, `GET /restaurants/{id}` and `GET /availability` are **public** \u2014 no bearer\ntoken. Everything else needs one. Diners browse before they sign in.\n\n### `GET /restaurants`\n\n```json\n{ \"restaurants\": [ { \"id\": \"r_anker\", \"name\": \"Zum Anker\", \"timezone\": \"Europe/Berlin\" } ] }\n```\n\n### `GET /restaurants/{id}`\n\nThe restaurant with its `slot_minutes`, `reservation_duration_minutes`,\n`cancellation_cutoff_minutes`, `opening_hours` and `tables`, in the fixture's shape. 404 if\nunknown.\n\n### `GET /availability`\n\n```http\nGET /availability?restaurant_id=r_anker&date=2026-09-24&party_size=4\n```\n\nAll three parameters are required; a missing one is 422 `validation_failed`. `date` is a local\ncalendar date at the restaurant.\n\n```json\n{\n  \"restaurant_id\": \"r_anker\",\n  \"date\": \"2026-09-24\",\n  \"timezone\": \"Europe/Berlin\",\n  \"slots\": [\n    { \"starts_at_local\": \"2026-09-24T18:00\",\n      \"starts_at\": \"2026-09-24T18:00:00+02:00\",\n      \"available_table_ids\": [\"t_2\"] }\n  ]\n}\n```\n\n`starts_at_local` is the full `YYYY-MM-DDTHH:MM` and goes into `POST /reservations` unchanged.\n\nA slot appears for every `slot_minutes` step from `opens` such that\n`slot + reservation_duration_minutes <= closes`. `available_table_ids` lists the tables of that\nrestaurant with `capacity >= party_size` and no overlapping confirmed reservation, in fixture\norder. A slot with no available table still appears, with an empty list.\n\nA closed day returns `\"slots\": []`.\n\n### `POST /reservations`\n\n`Idempotency-Key` is required; see \u00a77.\n\n```http\nPOST /reservations\nAuthorization: Bearer <token>\nIdempotency-Key: 2f9c1a...\n\n{ \"restaurant_id\": \"r_anker\", \"table_id\": \"t_2\",\n  \"starts_at_local\": \"2026-09-24T19:00\", \"party_size\": 4 }\n```\n\n`starts_at_local` is wall-clock at the restaurant, with no offset and no `Z`. Resolve it against\nthe restaurant's `timezone`.\n\n```json\n201\n{\n  \"reservation_id\": \"res_7\",\n  \"reference\": \"K3P7QW\",\n  \"restaurant_id\": \"r_anker\",\n  \"table_id\": \"t_2\",\n  \"party_size\": 4,\n  \"status\": \"confirmed\",\n  \"starts_at_local\": \"2026-09-24T19:00\",\n  \"starts_at\": \"2026-09-24T19:00:00+02:00\",\n  \"ends_at\": \"2026-09-24T20:30:00+02:00\",\n  \"created_at\": \"2026-09-21T11:04:03+00:00\"\n}\n```\n\n`reference` is 6 to 12 characters of `A-Z0-9`, unique across all reservations, and never changes.\n\n| Case | Response |\n|---|---|\n| The table is taken for an overlapping interval | 409 `table_unavailable` |\n| `starts_at_local` is not on the slot grid | 422 `not_on_slot_grid` |\n| Slot outside opening hours, or the reservation would end after `closes` | 422 `outside_opening_hours` |\n| `party_size` exceeds the table's `capacity` | 422 `party_exceeds_capacity` |\n| `party_size` below 1, or not an integer | 422 `validation_failed` |\n| `starts_at_local` is a local time that does not exist (see \u00a79) | 422 `invalid_local_time` |\n| Unknown restaurant, unknown table, or the table belongs to another restaurant | 404 `not_found` |\n\n### `GET /reservations`\n\nThe caller's reservations, `starts_at` descending, confirmed and cancelled alike.\nReturn `200` with `{\"reservations\": [...]}`; each entry has the same shape as the\ncreate response. An empty list is `{\"reservations\": []}`.\n\n### `GET /reservations/{reference}`\n\nOne reservation. **404 if it is not the caller's** \u2014 do not leak the existence of other people's\nbookings.\n\n### `POST /reservations/{reference}/cancel`\n\n```json\n200\n{ \"reference\": \"K3P7QW\", \"status\": \"cancelled\", ... }\n```\n\nFrees the table immediately: the next `GET /availability` must offer that slot again.\n\n| Case | Response |\n|---|---|\n| Already cancelled | 200 with the current state \u2014 cancelling twice is not an error |\n| Now is within `cancellation_cutoff_minutes` of `starts_at`, or later | 409 `cutoff_passed` |\n| Not the caller's reservation | 404 `not_found` |\n\n### `PATCH /reservations/{reference}`\n\nChange the time, the table or the party size. Any subset of `table_id`, `starts_at_local`,\n`party_size`. No idempotency key is required here.\n\nValidation is identical to `POST /reservations`, and the same cutoff rule as cancel applies\n(409 `cutoff_passed`), measured against the **current** start time. A cancelled reservation is\n409 `reservation_cancelled`. A successful amendment releases the old slot and reserves the\nnew one together. A failed amendment leaves the original booking and its occupancy unchanged.\n\n`reference` and `reservation_id` survive a change.\n\n## 9. Time and DST\n\nLocal dates and times follow the restaurant's `timezone`, including daylight-saving transitions.\n\n**Spring forward.** Local times in the skipped hour do not exist. They never appear in\navailability, and booking one is 422 `invalid_local_time`.\n\n**Fall back.** Local times in the repeated hour occur twice. **Always resolve to the first\noccurrence \u2014 the one before the clocks change.** The slot appears once in availability, and the\nsecond occurrence is not bookable.\n\n`reservation_duration_minutes` is **absolute time**, not wall-clock. A 90-minute reservation\nstarting at 01:30 on a fall-back night ends 90 real minutes later, and its local `ends_at` will\nread 02:00, not 03:00.\n\nThe transitions that must be handled:\n\n| Zone | Spring forward | Fall back |\n|---|---|---|\n| `Europe/Berlin` | 2026-03-29, 02:00 \u2192 03:00 | 2026-10-25, 03:00 \u2192 02:00 |\n| `America/New_York` | 2026-03-08, 02:00 \u2192 03:00 | 2026-11-01, 02:00 \u2192 01:00 |\n\nOffsets must follow the IANA rules for the specified zone and date.\n\n## 10. Export and import\n\nThe service must support `GET /_test/export` and `POST /_test/import`. Like reset, these\nare unauthenticated test endpoints.\nExports may contain credentials and session tokens; handle them as private test artifacts.\nReturn 200 from export with a JSON object containing `track: \"tablekeeper\"`,\n`format_version: 1` and `state` (an implementation-defined JSON object). The state format\nis opaque to the caller and must be accepted unchanged by import.\n\nImport takes that entire object and atomically replaces the service's state, returning\n204. It must accept an unchanged export produced by this service. No dependency on the\nsource process, files, volume, port or network address is allowed. Import is replacement,\nnot merge; repeating it restores the exported state without duplicating anything. Invalid\nJSON follows \u00a75; missing fields, wrong track/version or an invalid state give 422\n`validation_failed` without changing the destination. Test control calls have a 10-second\ntimeout. Export is an atomic, read-only snapshot; subsequent source writes do not change it.\n\nPreserve accounts and hashed-password login, existing bearer tokens, fixture configuration,\nreservations, references, all completed idempotent request bodies and original responses.\nIdentities, statuses and timestamps must not be regenerated. Failed request keys remain\nreusable. Existing receipts, references, tokens and retries must remain valid after import;\nreplacing the state with a fresh fixture does not satisfy this requirement. Import removes\nall previous destination data and credentials. Reset continues to clear all state, including\nimported state. State need not survive an abrupt container restart.\n\n## 11. Atomic reservation moves\n\nA diner may change several bookings in one request.\n\n`POST /reservation-moves` requires authentication and an idempotency key. Body:\n\n```json\n{\"moves\": [{\"reference\": \"BOOK01\", \"table_id\": \"t_2\"},\n           {\"reference\": \"BOOK02\", \"table_id\": \"t_1\"}]}\n```\n\n`moves` contains 1..8 objects with distinct string references. Invalid shape or duplicate\nreferences gives 422 `validation_failed`. Every booking must belong to the caller and the\nsame restaurant. Unknown/another owner's reference gives 404 `not_found`; different\nrestaurants give 422 `validation_failed`. No token gives 401.\n\nEach item accepts the ordinary PATCH fields `table_id`, `starts_at_local`, `party_size`;\nomitted fields retain their current values and unknown fields are ignored. The booking's\nidentity, owner and creation time never change. Cancelled bookings give 409\n`reservation_cancelled`. Each booking's existing cutoff applies. Non-occupancy errors use\nordinary amendment codes and take precedence in input order, with cutoff errors preceding\nother changes for that booking. An overlap among resulting bookings or with an unlisted\nbooking gives 409 `table_unavailable`. Unchanged listed bookings retain their occupancy.\n\nEither every move commits or nothing changes: occupancy, reservation records and retry\nkeys. On success return 201 with `{\"reservations\": [...]}` in input order, including\nunchanged items.\nReplays return that original response with 200, even after amendments or cancellations.\nNo-op moves retain all existing values. Export/import preserves successful batch receipts\nas well as the resulting bookings. No batch UI is required.\n\nEND COMPLETE STAGE 1 SPECIFICATION\n\nBEGIN ACCEPTED ARCHITECTURE CONTRACT\n# TK-S1-ARCH: Stage 1 implementation contract\n\nOwner: @frankzhu94/factory-architect. Starting revision: `7563a9467886e3f1384f2a12ce7e0bb629c3b588`. State: REVIEW when committed and delivered; acceptance belongs to @frankzhu94/factory-pm. This is architecture, not an implemented service or a product release gate.\n\n## Sources and boundary\n\nNormative sources are the complete handed-off specifications at `/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-1.md` through `stage-4.md`, pinned challenge revision `803560d2a678ace1414465c098eb0ab5380ffade`. Stage 1 SHA-256 is `9460189eac83802ce158f16ee90989af728a489b32a6147e2dc8e320f383055f`; full section text is retained in `/Users/frank/mygit/Tablekeeper/result-run-3/planning/requirements-coverage.csv`. References below use S1\u2013S4 and the original section names. The exact specifications prevail over this implementation contract.\n\nImplement only S1 now. After independent acceptance, copy the accepted service into a new independent stage directory, then extend that copy. Do not implement later endpoints early or rewrite an earlier delivered stage. Stage 2 design and client contracts need Designer input before UI work. No hosted service, provisioning, external domain product code or runtime network dependency is needed.\n\n## Decision 1: one process, ephemeral state, atomic publication\n\n**Chosen:** Node 24 LTS, TypeScript compiled during image build, Node HTTP server, `@js-temporal/polyfill` pinned to 0.5.1 with a committed package lock. The Node runtime supplies ICU timezone data. Start one process, one event loop; no worker or cluster owns application state. Later React/Vite assets can be compiled at build time and served by the same origin. React is a Stage 2 choice, not a Stage 1 dependency.\n\nS1 \u00a72 explicitly permits ephemeral state. Use one in-memory, JSON-compatible root state and synchronous copy-on-write transactions. `transact(fn)` clones the current root, runs all validation and mutations on the private candidate, constructs a detached response, then publishes the candidate with one root assignment only on success. Exceptions discard the candidate. There must be **no await, I/O, callback, yielding or asynchronous validation inside this transaction**. Reads capture one root and synchronously produce their response from it. No code outside the state module may mutate a committed root or returned response. Freeze roots in development and enforce the boundary in module APIs.\n\nThis gives a serial order at publication on Node's event loop, including overlapping writes, reads, batches, receipt claims and snapshot replacement. There is no interval where a read sees half a move. Make response JSON before allowing a later mutation; never retain a live mutable object in the HTTP response layer. A failed transaction cannot consume an ID counter, allocate an idempotency receipt or free occupancy. IDs may instead be cryptographically random and collision-checked inside the candidate.\n\nAlternative: SQLite with explicit write transactions and an occupancy relation is valid, but is not chosen: it adds driver/locking/schema machinery without a restart-durability requirement. A mutable shared object plus asynchronous route handlers is rejected because a failed batch or an await between checks and writes can violate atomicity. This decision is conditional on modest fixture/state sizes: full-state copying is linear in retained state. No specified workload imposes unbounded data volume; measure actual 50-request HTTP tests before acceptance. Do not silently replace the state engine during implementation. A future measured bottleneck can justify structural sharing behind the same transaction API.\n\nAuthentication hashing is asynchronous **outside** transactions. Signup must recheck uniqueness against the current state inside its final transaction. Login must recheck that the same user and credential still exist before publishing its new token, so a reset/import during hashing cannot resurrect removed credentials. Reset builds a complete independent state, hashes fixture passwords outside a transaction, then publishes once; concurrent operations can serialize before its publication. Import validates/builds a detached replacement then publishes once. A monotonic in-process state generation can support these rechecks; it is not an exported business revision.\n\n## Decision 2: internal model and exact external views\n\nKeep JSON arrays for stable fixture order and exported collections; build derived Maps for lookups, never use untrusted IDs as prototype-bearing object keys. Export domain records, not runtime Map internals. Use stable generated IDs of at most 64 characters, collision-checked references of 6\u201312 uppercase letters/digits, and independent opaque random bearer tokens. References never change.\n\nInternal state schema 1 contains:\n\n- users: id, exact email, display name and a versioned scrypt credential; no plaintext password;\n- sessions: exact opaque token and user id, supporting multiple non-expiring sessions;\n- restaurants: original fixture values and ordered tables;\n- reservations: stable id/reference/owner, restaurant, normalized `table_ids` array (one member in S1), party size, status, bare local start, resolved epoch start/end, created timestamp, and saved rule snapshot;\n- receipts: user id, method, exact canonical route path, key, parsed original request JSON, canonical JSON identity and deep-copied original response JSON;\n- internal state schema version and any counters actually used.\n\nSave booking rule snapshots internally in S1 even though the S1 response must not expose S3 revision/terms fields. Save creation inputs/time for later history migration. Store scalar epoch milliseconds, not Date/Temporal instances or BigInts in portable JSON. Store output timestamps or deterministically render saved instants in the saved restaurant zone; preserve existing timestamps on import. A reservation's created_at is a UTC RFC 3339 timestamp with explicit offset. Seeded bookings preserve supplied identity/reference/owner; normalize their start/end once using fixture rules. They do not create completed-write receipts.\n\nS1 views expose exactly the specified create-response fields, including table_id. Stage 2 adds table_ids and retains table_id only for a singleton. List includes confirmed and cancelled own bookings sorted by start instant descending; a stable id tiebreak is allowed. Public restaurant detail retains fixture shape. Never expose credentials, tokens, ownership internals or receipts on ordinary endpoints.\n\n## Decision 3: time, grid, occupancy and cutoff\n\nS1 \u00a7\u00a74, 8\u20139: one `time.ts` adapter owns parsing, timezone resolution, formatting and date arithmetic. Validate exact regex shapes first (`YYYY-MM-DD`, `YYYY-MM-DDTHH:MM`, HH:MM), then use Temporal to reject impossible calendar values. Never use the server/browser timezone or `new Date(localString)` for local parsing.\n\nConvert a valid PlainDateTime using `toZonedDateTime(zone, {disambiguation:'earlier'})`; roundtrip to PlainDateTime and compare with the input. Inequality means a nonexistent local time: 422 invalid_local_time. Equality chooses the earlier fold instant, which is required. Do not use disambiguation reject directly: it would incorrectly reject repeated times. Offset strings are produced without bracketed timezone annotations, with seconds and an explicit numeric offset. UTC may be formatted +00:00.\n\nBuild availability by iterating the **wall-clock grid** from the opening minute in slot_minutes steps, each local grid point once. Skip gap candidates. Resolve start and closing boundary to instants; add reservation duration in absolute minutes on the instant timeline and retain only candidates whose interval fits the opening window. Do not prefilter using wall-clock start plus duration, which is wrong at DST transitions. The slot grid is measured from local opening, independent of DST offsets. Closing/opening boundaries that exist use their first occurrence. For the unspecified case of a boundary in a DST gap, choose the first valid local minute at or after the boundary (a bounded search within that day); preserve the original wall-clock grid. Document this deterministic interpretation in RUN.md; required transition cases remain independently tested.\n\nOccupancy uses half-open intervals: A overlaps B iff A.start < B.end AND B.start < A.end. A conflict requires an intersecting normalized table set and confirmed status. A booking at exactly another end is allowed. Availability includes every fitting slot even with no suitable tables; closed days return an empty slots array. Single tables retain fixture order. Capacity must satisfy integer party_size >= 1. Do not reject a create solely because its start is in the past.\n\nCompute one `now` per write. A booking is editable only if now < currentStart - acceptedCutoffMinutes \u00d7 60000. Equality and later give cutoff_passed. Cancel an already-cancelled booking before cutoff checking and return its current view unchanged. PATCH of cancelled bookings is reservation_cancelled. PATCH uses the original current start for cutoff, then validates the full resulting selection/time/party values, excluding itself from occupancy. Publish release/reserve together. No-op PATCH still needs an editable confirmed booking; retain all values.\n\n## Decision 4: request and validation ordering\n\nCentralize an error constructor returning JSON `{error:{code,message}}`; set application/json; charset=utf-8 on JSON responses, including 4xx/5xx. Test controls return an empty 204. Route unknown resources with 404 not_found; catch unexpected exceptions at the HTTP boundary without leaking internals, but such exceptions remain test failures: a catch-all is not evidence that the no-5xx requirement is met.\n\nPipeline: route -> parse JSON object for body endpoints -> authenticate protected endpoint -> resolve required idempotency key -> endpoint-specific validation/resource checks -> transaction/response. Malformed JSON and non-object request bodies are 400 malformed_request. Required missing fields are 422; ordinary wrong body types are 400; correct type with bad format/range is 422. Exceptions: party_size is always 422 for non-integer, boolean or string; non-bare local timestamp **strings** are 422; local timestamp other wrong types follow 400. Batch moves has its own 422 shape rule for missing/non-array/out-of-range moves, non-object entries and non-string/duplicate references. Unknown body/query fields do not cause rejection, but remain significant in receipt JSON identity.\n\nMissing or empty required Idempotency-Key is 400 missing_idempotency_key; over 255 characters is 422. Unauthenticated token is 401. A valid token belonging to a user without a reservation gets owner-private 404 for lookup/cancel/PATCH. No token on these S1 private paths gives 401. Unknown restaurant/table or wrong restaurant membership gives 404. Bad query party_size lexical forms such as 1e9, 4.0, +4 are 422; accept only plain decimal digits and validate the numeric range without overflow. Apply maximum ID length 64 wherever applicable, including fixtures. Do not add undocumented party-size maximums or future-only constraints.\n\nFor ordinary creates after replay resolution: validate required fields/types/formats, restaurant/table membership, party size and capacity, local instant validity, opening fit/grid, then occupancy. If a time is outside opening hours use outside_opening_hours; if inside but off-grid use not_on_slot_grid. A syntactically valid gap must yield invalid_local_time before grid/opening checks. The specification defines specific priorities for retries and batches, not every pair of independent errors; keep the remaining choice deterministic and test each required code in isolation.\n\nSignup: local@domain form, password >=8, string display name, email duplicate 409 email_taken. Login missing/invalid schema uses shared validation; unknown account/wrong password yields 401 unauthenticated. Use exact email identity consistently; case normalization is not required by the spec. Public health, restaurant list/detail and availability do not require bearer auth. Reset/export/import are public test controls and remain enabled in the image.\n\n## Decision 5: receipts and collective moves\n\nS1 \u00a77: receipt identity is the tuple (user_id, method, path, key), **not** merely (user,key). Same key on a different path is independent. Canonical JSON recursively sorts object keys but preserves array order, values and all unknown fields. Do not fingerprint only validated fields or raw bytes. Retain parsed request JSON as well as its canonical identity, allowing validation on import. JSON numeric spelling and whitespace/key ordering cannot distinguish receipts.\n\nAfter parse/auth/header checks, consult the receipt inside the same state transaction before current resource or endpoint-field validation. A different JSON body gives 409 idempotency_key_reuse; identical body gives 200 with the deep-copied original response. A new successful write saves that response and mutation together, returning 201. No failure reserves a key. Retrying after resource cancellation, mutation or import must return the historical response, not a current serialization. Exactly one simultaneous identical request returns 201; others return 200. No response object may alias a mutable reservation.\n\nS1 \u00a711 moves: first validate 1..8 distinct string-reference item shapes. Process items in input order, resolving owner/private access and same restaurant, confirmed state and old cutoff **before** that item's proposed changes. Do all non-occupancy checks before any occupancy rejection, so a later item's invalid change beats an earlier item's overlap. Normalize each complete candidate without writing anything. For conflict checks, remove the old occupancy of **all listed reservations**, then check every resulting candidate against all other results and unlisted confirmed bookings. Unchanged listed items still occupy their original interval. This permits swaps while preventing conflicts with a listed no-op. Publish all records and the receipt once; return views in input order. On failure no old slot, timestamp, reference, receipt or counter changes.\n\n## Decision 6: state portability and future migrations\n\nS1 \u00a710: envelope is `{track:'tablekeeper',format_version:1,state:{schema_version:1,...}}`. Envelope version stays 1 across stages; use internal schema_version 1..4 for team migrations. Export synchronously serializes one captured committed root, detaching the entire JSON snapshot. Export never changes state. Import accepts an unchanged team's export; validate the entire envelope, schema, record shapes, referential integrity, uniqueness, credential parameters, sessions, receipts and occupancy before one replacement publication. It must neither contact the source nor require shared disk, encryption keys or process addresses. Invalid JSON/type uses shared 400 rules; missing envelope fields, wrong track/version or invalid state is 422, leaving the old destination untouched. Valid import replaces every account/session/configuration/booking/receipt; repeated import returns precisely that snapshot. Reset removes even imported credentials and receipts.\n\nUse Node crypto.scrypt asynchronously with N=16384, r=8, p=1, random >=16-byte salt, 32-byte result; store algorithm/parameters/salt/hash as strings and integers. Compare equal-length hashes using timingSafeEqual. All required credential verification material travels in the private export. Tokens are random opaque values stored in the state; no process-local signing secret exists to invalidate them on migration. Do not log exports/passwords/token values. Only synthetic fixtures may be retained as test artifacts.\n\nLater migrations are pure functions over a detached imported state and cannot regenerate original receipt bodies, tokens, references, identities or timestamps. S2 introduces declared-pair selections and views; old singleton receipts remain byte-independent original JSON values without retroactive added fields. S3 materializes policy 0, accepted terms, revision 1 and created history from saved S1/S2 booking records. Earlier stages did not retain full amendment histories; migrate the observable imported record with a created baseline, without inventing unknown historical amendments. Preserve all prior receipts verbatim even if they lack newer fields. New writes/history use the new model. S3 needs policy selection by greatest effective_from <= local date, ties greatest publication version; real amendments use old cutoff then new-date terms, while no-ops preserve old terms. Store scheduled local dates separately from mutable starts for recurring occurrences. S4 adds stored closures/plans and deterministic solver results without changing the state engine.\n\nRestaurant revision starts at reset 0 and tracks later specified operations; internal S1 counters may be maintained from the start to ease evolution, but are not exposed. S3/S4 transaction boundaries must increment each affected restaurant/series only once per compound action. Implementers must not derive revisions by counting receipts (replays and failed requests are different). Stage 4 planning may enumerate at most 10 seating options for 6 bookings, prune conflicts, and compare the exact lexicographic objective (moved count, unused seats, option rank vector). Preview state has plans only; applying checks stored restaurant revision and applied flag in the same commit that installs closure/assignments. This is an extension boundary, not authorization to implement Stage 4 now.\n\nStage 2 client seam: one monotonic search generation covers restaurant detail, results and selection; ignore any response from an older generation. Keep immutable submission body/key together across transport uncertainty and upgrades. A changed input creates a new attempt; unchanged retry reuses the exact original body/key. Distinguish unknown transport outcome from a confirmed HTTP rejection; never fabricate success. Designer must agree on selected form, loading/refused/uncertain states and their testids before frontend implementation. Same-origin bearer token state remains compatible through imports; do not clear it because the service version changes.\n\n## Deployment and Backend sequence\n\nS1 \u00a72\u20133: stage-1 must contain Dockerfile, RUN.md, source and package lock, independently buildable. Use a Node 24 Debian slim build/runtime family with ICU; pin the resolved image version/digest during implementation and record it. Build dependencies/network are permitted during docker build; final image includes compiler output, production packages, timezone data and all later UI assets. Run unprivileged, bind 0.0.0.0, honor PORT/default8080, initialize empty usable state before /health returns 200. No compose-dependent sibling, runtime package download, CDN, external DB/auth/API, volume or host secret. Health means state is ready, not just a process exists.\n\nBackend order and required focused checks:\n\n1. Establish HTTP/error helpers, strict body/query schemas, time adapter and pure state transaction module. Test both required DST zones/dates, adjacency and opening/grid errors.\n2. Add reset/auth/public browse, ordered fixture normalization, password hashing and multiple tokens. Check invalid types, ID boundaries and repeated reset; prove no old login/token resurrection across a reset during async authentication.\n3. Add create/own list/lookup/cancel/PATCH and receipt wrapper. Check ownership masking, inclusive cutoff boundary, no-op and rollback; 50 actual concurrent HTTP creates/identical retries, with one 201 and 49 original-body 200s for identical input.\n4. Add batch prospective occupancy and deterministic non-occupancy precedence. Test swaps, unchanged blockers, mixed-owner/mixed-restaurant rejection and atomic failure including key reuse after rejection.\n5. Add private-state export/import validation and migration hooks. Test independent process/port destination, existing tokens and hashed login, original receipts after later changes, replacing destination credentials, failed import leaves state intact, repeated import/reset.\n6. Build the standalone container; observe health <60s and response timeouts with 2 CPU/2GiB and no runtime outbound network. Run the official isolated Stage 1 harness through the pinned interpreter as PM dispatches. Deliver source + own evidence to independent QA and Reviewer; their exact-candidate acceptance gates Stage 2.\n\nKeep modules bounded: server/router, validation/errors, auth, time, store/serialization, domain reservations/availability, and tests. Pure validation and candidate construction must be reusable by PATCH and moves; avoid separate subtly divergent implementations. Backend owns service implementation; Architect owns this contract and reviews consequential interface changes before integration.\n\n## Evidence and risk disposition\n\n`/Users/frank/mygit/Tablekeeper/result-run-3/planning/architecture/mechanism-probe.cjs` is a synthetic host experiment, not copied product code. `/Users/frank/mygit/Tablekeeper/result-run-3/.evidence/architect-s1-20261004T0645/mechanism-results.json` records Node v24.14.1 / ICU 78.2: both specified DST gaps rejected, both folds choose earlier offsets, 90-minute absolute ends correct; canonical JSON identity passed; 50 scheduled synchronous transaction attempts returned one creation/49 replays; rollback, detached export and original receipts passed; 50 async scrypt calls completed in 432ms and a JSON credential roundtrip verified. These checks establish mechanisms only, not HTTP/resource-constrained performance, actual service race correctness or independent acceptance.\n\nRisk map: synchronous state mutation boundary (high; code review + actual concurrent HTTP tests); date/fold errors (high; adapter probes passed, container timezone check still required); changed original receipts (high; immutable snapshots + cross-process tests); auth/reset races (high; final-state recheck required); whole-state copy cost (medium; actual fixture/load test pending); timezone boundary inside gap (low/underspecified; deterministic rule above, no claim of official test evidence); old-history migration baseline (medium; upgrade review in S3); container ICU/dependency availability (medium; build/runtime verification pending). No product check has run: Docker/API/browser/official harness all NOT_TESTED.\n\nInitial host Python sqlite3 import failed because its dynamic library is absent; irrelevant to chosen Node engine and not a launcher failure. Initial npm used a prohibited home cache and failed EPERM; retry with `/private/tmp/tablekeeper-architect-npm` succeeded, with no global permission changes. Retain both observations. Measured cost/token consumption is UNAVAILABLE; no new spending was authorized.\n\nPrimary library references inspected for this decision: [Temporal ZonedDateTime](https://tc39.es/proposal-temporal/docs/zoneddatetime.html) for disambiguation and instant/local conversion; [Node crypto.scrypt](https://nodejs.org/api/crypto.html#cryptoscryptpassword-salt-keylen-options-callback) for credential mechanism. The actual pinned-polyfill host probe is the compatibility evidence; current web documentation alone is not proof of a deployed runtime.\n\nEND ACCEPTED ARCHITECTURE CONTRACT\n"
+  ],
+  "starting_revision": "52a179d778b3052acf68c8aafeec62aac8ae6ecd",
+  "candidate_commit": "52a179d778b3052acf68c8aafeec62aac8ae6ecd",
+  "previous_rejected_revision": "739b1bf79c631dedb528d503800b954fbd3e61d9",
+  "workspace_paths": [
+    "/Users/frank/mygit/Tablekeeper/result-run-3",
+    "/private/tmp/tablekeeper-reviewer-s1-f1-20261004T080315Z",
+    "/Users/frank/mygit/Tablekeeper/result-run-3/.evidence/reviewer-s1-f1-20261004T080315Z"
+  ],
+  "ownership_boundaries": "Evidence-only reviewer lease; no shared Git/product/planning/mandate changes, no repair commits. Product remained frozen.",
+  "acceptance_conditions": [
+    "Verify F1 arrays rejected422 validation_failed, unchanged destination and working original login; valid export unchanged accepted204.",
+    "Inspect related type guards and two-file scope; rerun official isolated Stage1 from clean exact clone and independently assess all applicable requirements.",
+    "Require exact HEAD and clean status before/after checks; retain prior rejection and evidence."
+  ],
+  "dependencies": [
+    "TK-S1-REVIEW-D2 complete6/6 SHA2567a72918764bd859a0ed45133b32bf8cf90f1a2235c45efd4ff6021ce236b23da verified",
+    "Backend repair candidate frozen; reviewer separate clean clone",
+    "Accepted architecture747c576212772cd32779c1c0ebf0bb81d8458855"
+  ],
+  "commands": [
+    {
+      "command": "git clone --no-hardlinks /Users/frank/mygit/Tablekeeper/result-run-3 /private/tmp/tablekeeper-reviewer-s1-f1-20261004T080315Z",
+      "exit_status": 0
+    },
+    {
+      "command": "git -C /private/tmp/tablekeeper-reviewer-s1-f1-20261004T080315Z checkout --detach 52a179d778b3052acf68c8aafeec62aac8ae6ecd",
+      "exit_status": 0
+    },
+    {
+      "command": "git -C /private/tmp/tablekeeper-reviewer-s1-f1-20261004T080315Z diff 739b1bf79c631dedb528d503800b954fbd3e61d9 52a179d778b3052acf68c8aafeec62aac8ae6ecd",
+      "exit_status": 0
+    },
+    {
+      "command": "docker build --no-cache -t tablekeeper-reviewer-s1-f1-52a179d /private/tmp/tablekeeper-reviewer-s1-f1-20261004T080315Z/stage-1",
+      "exit_status": 0,
+      "log": "/Users/frank/mygit/Tablekeeper/result-run-3/.evidence/reviewer-s1-f1-20261004T080315Z/build-no-cache.log"
+    },
+    {
+      "command": "/Users/frank/mygit/Tablekeeper/runs/harness-venv/bin/python -m harness run --track tablekeeper --repo /private/tmp/tablekeeper-reviewer-s1-f1-20261004T080315Z --stage 1 --mode isolated --out /Users/frank/mygit/Tablekeeper/result-run-3/.evidence/reviewer-s1-f1-20261004T080315Z/official",
+      "cwd": "/Users/frank/mygit/Tablekeeper/challenge",
+      "exit_status": 0,
+      "log": "/Users/frank/mygit/Tablekeeper/result-run-3/.evidence/reviewer-s1-f1-20261004T080315Z/official-command.log"
+    },
+    {
+      "script": "/Users/frank/mygit/Tablekeeper/result-run-3/.evidence/reviewer-s1-f1-20261004T080315Z/f1-repro.mjs",
+      "command": "docker run --rm --network none --cpus 2 --memory 2g -i --entrypoint node tablekeeper-reviewer-s1-f1-52a179d --input-type=module < /Users/frank/mygit/Tablekeeper/result-run-3/.evidence/reviewer-s1-f1-20261004T080315Z/f1-repro.mjs",
+      "exit_status": 0,
+      "started_at": "2026-10-04T08:05:01.048598+00:00",
+      "finished_at": "2026-10-04T08:05:02.028023+00:00",
+      "image_id": "sha256:bec8e318bba1627b8d837a85080f045d5bee8c7b5475b257474f1cd8947e7655",
+      "actual_revision": "52a179d778b3052acf68c8aafeec62aac8ae6ecd",
+      "log": "/Users/frank/mygit/Tablekeeper/result-run-3/.evidence/reviewer-s1-f1-20261004T080315Z/f1-repro.mjs.log"
+    },
+    {
+      "script": "/Users/frank/mygit/Tablekeeper/result-run-3/.evidence/reviewer-s1-f1-20261004T080315Z/qa-independent-rerun.mjs",
+      "command": "docker run --rm --network none --cpus 2 --memory 2g -i --entrypoint node tablekeeper-reviewer-s1-f1-52a179d --input-type=module < /Users/frank/mygit/Tablekeeper/result-run-3/.evidence/reviewer-s1-f1-20261004T080315Z/qa-independent-rerun.mjs",
+      "exit_status": 0,
+      "started_at": "2026-10-04T08:05:02.028095+00:00",
+      "finished_at": "2026-10-04T08:05:03.798568+00:00",
+      "image_id": "sha256:bec8e318bba1627b8d837a85080f045d5bee8c7b5475b257474f1cd8947e7655",
+      "actual_revision": "52a179d778b3052acf68c8aafeec62aac8ae6ecd",
+      "log": "/Users/frank/mygit/Tablekeeper/result-run-3/.evidence/reviewer-s1-f1-20261004T080315Z/qa-independent-rerun.mjs.log"
+    },
+    {
+      "script": "/Users/frank/mygit/Tablekeeper/result-run-3/.evidence/reviewer-s1-f1-20261004T080315Z/qa-supplement-rerun.mjs",
+      "command": "docker run --rm --network none --cpus 2 --memory 2g -i --entrypoint node tablekeeper-reviewer-s1-f1-52a179d --input-type=module < /Users/frank/mygit/Tablekeeper/result-run-3/.evidence/reviewer-s1-f1-20261004T080315Z/qa-supplement-rerun.mjs",
+      "exit_status": 0,
+      "started_at": "2026-10-04T08:05:03.798624+00:00",
+      "finished_at": "2026-10-04T08:05:04.461211+00:00",
+      "image_id": "sha256:bec8e318bba1627b8d837a85080f045d5bee8c7b5475b257474f1cd8947e7655",
+      "actual_revision": "52a179d778b3052acf68c8aafeec62aac8ae6ecd",
+      "log": "/Users/frank/mygit/Tablekeeper/result-run-3/.evidence/reviewer-s1-f1-20261004T080315Z/qa-supplement-rerun.mjs.log"
+    }
+  ],
+  "results": {
+    "official": {
+      "revision": "52a179d778b3052acf68c8aafeec62aac8ae6ecd",
+      "track": "tablekeeper",
+      "stages": {
+        "1": "pass"
+      },
+      "highest_contiguous": 1,
+      "started_at": "2026-10-04T08:03:35.052422+00:00",
+      "finished_at": "2026-10-04T08:04:03.540979+00:00",
+      "schema_version": 2,
+      "run_id": "2295b9f974b64c99a0859b1a90af91af",
+      "mode": "isolated",
+      "provenance": "working-tree",
+      "state": "completed",
+      "pytest_args": [],
+      "suite_digest": "8d7e7d9bb94893b67dff0a19ee8ecb8d6888db7208ed269f64b29c0a661a17a7",
+      "checks": {
+        "1": {
+          "collected": 120,
+          "passed": 120,
+          "failed": 0,
+          "errors": 0,
+          "skipped": 0,
+          "deselected": 0,
+          "xfailed": 0,
+          "files": {
+            "stage_1/test_health_reset_auth.py": {
+              "passed": 12,
+              "total": 12
+            },
+            "stage_1/test_reservations.py": {
+              "passed": 37,
+              "total": 37
+            },
+            "stage_1/test_restaurants_availability.py": {
+              "passed": 18,
+              "total": 18
+            },
+            "stage_1/test_retries_time_input.py": {
+              "passed": 20,
+              "total": 20
+            },
+            "stage_1/test_sample.py": {
+              "passed": 20,
+              "total": 20
+            },
+            "stage_1/test_seeded_state.py": {
+              "passed": 13,
+              "total": 13
+            }
+          }
+        }
+      },
+      "overshoot": null,
+      "claimed_stage": "1",
+      "share": 1.0,
+      "upgrade_sources": {
+        "2": {
+          "folder": "/private/tmp/tablekeeper-reviewer-s1-f1-20261004T080315Z/stage-1",
+          "revision": "52a179d778b3052acf68c8aafeec62aac8ae6ecd"
+        }
+      }
+    },
+    "reviewer_f1": {
+      "work_item": "TK-S1-REVIEW",
+      "revision": "52a179d778b3052acf68c8aafeec62aac8ae6ecd",
+      "started_at": "2026-10-04T08:05:01.490Z",
+      "finished_at": "2026-10-04T08:05:01.911Z",
+      "node": "v24.14.1",
+      "results": [
+        {
+          "case": "unchanged export accepted and exact state preserved",
+          "outcome": "PASS"
+        },
+        {
+          "case": "credential.salt changed from string to one-element array",
+          "expected_import_status": 422,
+          "actual_import_status": 422,
+          "expected_state_unchanged": true,
+          "actual_state_unchanged": true,
+          "expected_existing_login_status": 200,
+          "actual_existing_login_status": 200,
+          "outcome": "PASS"
+        },
+        {
+          "case": "credential.hash changed from string to one-element array",
+          "expected_import_status": 422,
+          "actual_import_status": 422,
+          "expected_state_unchanged": true,
+          "actual_state_unchanged": true,
+          "expected_existing_login_status": 200,
+          "actual_existing_login_status": 200,
+          "outcome": "PASS"
+        },
+        {
+          "case": "credential.algorithm changed from string to one-element array",
+          "expected_import_status": 422,
+          "actual_import_status": 422,
+          "expected_state_unchanged": true,
+          "actual_state_unchanged": true,
+          "expected_existing_login_status": 200,
+          "actual_existing_login_status": 200,
+          "outcome": "PASS"
+        },
+        {
+          "case": "credential.N changed from string to one-element array",
+          "expected_import_status": 422,
+          "actual_import_status": 422,
+          "expected_state_unchanged": true,
+          "actual_state_unchanged": true,
+          "expected_existing_login_status": 200,
+          "actual_existing_login_status": 200,
+          "outcome": "PASS"
+        },
+        {
+          "case": "credential.r changed from string to one-element array",
+          "expected_import_status": 422,
+          "actual_import_status": 422,
+          "expected_state_unchanged": true,
+          "actual_state_unchanged": true,
+          "expected_existing_login_status": 200,
+          "actual_existing_login_status": 200,
+          "outcome": "PASS"
+        },
+        {
+          "case": "credential.p changed from string to one-element array",
+          "expected_import_status": 422,
+          "actual_import_status": 422,
+          "expected_state_unchanged": true,
+          "actual_state_unchanged": true,
+          "expected_existing_login_status": 200,
+          "actual_existing_login_status": 200,
+          "outcome": "PASS"
+        }
+      ],
+      "unexpected_server_errors": 0
+    },
+    "qa_authored_reviewer_executed": [
+      {
+        "work_item": "TK-S1-REVIEW",
+        "revision": "52a179d778b3052acf68c8aafeec62aac8ae6ecd",
+        "responsible": "@frankzhu94/factory-reviewer",
+        "original_author": "@frankzhu94/factory-qa",
+        "layer": "actual HTTP; two independent Node processes inside same no-network 2CPU/2GiB container",
+        "start": "2026-10-04T08:05:02.198Z",
+        "end": "2026-10-04T08:05:03.722Z",
+        "results": [
+          {
+            "name": "schema-public-owner-masking",
+            "requirements": [
+              "S1 \u00a73.4",
+              "\u00a75",
+              "\u00a76",
+              "\u00a78"
+            ],
+            "status": "PASS",
+            "began": "2026-10-04T08:05:02.289Z",
+            "ended": "2026-10-04T08:05:02.394Z"
+          },
+          {
+            "name": "50-distinct-occupancy-and-50-identical-retries",
+            "requirements": [
+              "S1 \u00a71",
+              "\u00a72",
+              "\u00a77"
+            ],
+            "status": "PASS",
+            "began": "2026-10-04T08:05:02.394Z",
+            "ended": "2026-10-04T08:05:02.555Z"
+          },
+          {
+            "name": "receipt-precedence-user-path-independence-and-history",
+            "requirements": [
+              "S1 \u00a77",
+              "\u00a78",
+              "\u00a711"
+            ],
+            "status": "PASS",
+            "began": "2026-10-04T08:05:02.556Z",
+            "ended": "2026-10-04T08:05:02.645Z"
+          },
+          {
+            "name": "patch-rollback-adjacency-current-cutoff",
+            "requirements": [
+              "S1 \u00a71",
+              "\u00a78"
+            ],
+            "status": "PASS",
+            "began": "2026-10-04T08:05:02.645Z",
+            "ended": "2026-10-04T08:05:02.713Z"
+          },
+          {
+            "name": "both-DST-zones-gaps-folds-absolute-duration",
+            "requirements": [
+              "S1 \u00a78",
+              "\u00a79"
+            ],
+            "status": "PASS",
+            "began": "2026-10-04T08:05:02.713Z",
+            "ended": "2026-10-04T08:05:02.834Z"
+          },
+          {
+            "name": "collective-swaps-noop-blocker-error-order-atomicity",
+            "requirements": [
+              "S1 \u00a711",
+              "\u00a77"
+            ],
+            "status": "PASS",
+            "began": "2026-10-04T08:05:02.834Z",
+            "ended": "2026-10-04T08:05:02.921Z"
+          },
+          {
+            "name": "independent-process-portability-historical-receipts-reset",
+            "requirements": [
+              "S1 \u00a710",
+              "\u00a77",
+              "\u00a711"
+            ],
+            "status": "PASS",
+            "began": "2026-10-04T08:05:02.921Z",
+            "ended": "2026-10-04T08:05:03.152Z"
+          },
+          {
+            "name": "invalid-import-atomicity-and-opaque-export-mutations",
+            "requirements": [
+              "S1 \u00a710"
+            ],
+            "status": "PASS",
+            "began": "2026-10-04T08:05:03.152Z",
+            "ended": "2026-10-04T08:05:03.216Z"
+          },
+          {
+            "name": "reset-concurrent-login-no-removed-account-resurrection",
+            "requirements": [
+              "S1 \u00a73.3",
+              "\u00a76",
+              "architecture decision 1"
+            ],
+            "status": "PASS",
+            "began": "2026-10-04T08:05:03.216Z",
+            "ended": "2026-10-04T08:05:03.722Z"
+          }
+        ],
+        "pass": 9,
+        "fail": 0
+      },
+      {
+        "work_item": "TK-S1-REVIEW",
+        "revision": "52a179d778b3052acf68c8aafeec62aac8ae6ecd",
+        "responsible": "@frankzhu94/factory-reviewer",
+        "original_author": "@frankzhu94/factory-qa",
+        "layer": "actual HTTP; two independent Node processes inside same no-network 2CPU/2GiB container",
+        "start": "2026-10-04T08:05:03.952Z",
+        "end": "2026-10-04T08:05:04.366Z",
+        "results": [
+          {
+            "name": "opaque-id-boundaries-and-ignored-fixture-fields",
+            "requirements": [
+              "S1 \u00a73.4",
+              "\u00a74",
+              "\u00a75"
+            ],
+            "status": "PASS",
+            "began": "2026-10-04T08:05:04.044Z",
+            "ended": "2026-10-04T08:05:04.114Z"
+          },
+          {
+            "name": "auth-schema-signup-sessions-password-hash",
+            "requirements": [
+              "S1 \u00a75",
+              "\u00a76",
+              "\u00a710"
+            ],
+            "status": "PASS",
+            "began": "2026-10-04T08:05:04.115Z",
+            "ended": "2026-10-04T08:05:04.227Z"
+          },
+          {
+            "name": "corrupt-original-receipts-import-atomicity",
+            "requirements": [
+              "S1 \u00a710"
+            ],
+            "status": "PASS",
+            "began": "2026-10-04T08:05:04.227Z",
+            "ended": "2026-10-04T08:05:04.302Z"
+          },
+          {
+            "name": "batch-shape-cutoff-precedence-and-cancel-idempotence",
+            "requirements": [
+              "S1 \u00a78",
+              "\u00a711"
+            ],
+            "status": "PASS",
+            "began": "2026-10-04T08:05:04.302Z",
+            "ended": "2026-10-04T08:05:04.365Z"
+          }
+        ],
+        "pass": 4,
+        "fail": 0
+      }
+    ],
+    "image_id": "sha256:bec8e318bba1627b8d837a85080f045d5bee8c7b5475b257474f1cd8947e7655",
+    "environment": {
+      "node": "v24.14.1",
+      "architecture": "arm64",
+      "runtime_user": "node",
+      "resource_limits": "Docker --network none --cpus2 --memory2g; actual HTTP and subprocesses in image; no credential/privileged mounts",
+      "timezone": "UTC timestamps; local America/Los_Angeles UTC-07:00"
+    },
+    "cleanliness": "Both clone/shared HEAD candidate and porcelain empty before/after; diff only two assigned files.",
+    "source_review": "Strict credential object/string guards precede regex and crypto; exact numeric scrypt params; strict created_at before Temporal. Error converted to422 before replace. Original portability/schema unchanged. Other modules identical to previously independently reviewed source.",
+    "packaging": "Stage1 standalone Dockerfile/RUN.md/source/lockfile; no-cache build exit0; image unprivileged; pinned base/dependencies; all7mandates; no tracked symlink/submodule. Final metadata pending."
+  },
+  "room_event": "a75434a1-4acb-48a6-acc9-e9cfbe82b0a5",
+  "room_events": {
+    "receipt": "a9a7f166-11fc-482c-8774-b5624468506d",
+    "in_progress": "cda68d26-9b1d-48b4-8697-ebe7b0244d15",
+    "acceptance": "a75434a1-4acb-48a6-acc9-e9cfbe82b0a5",
+    "complete_acceptance_delivery": [
+      "68d3c355-6e2b-47ca-bb25-f94e2e3d193a",
+      "40ead763-4989-44a7-88da-f61e57421d85",
+      "9795f284-d376-46c0-ab87-4646fbf097fe",
+      "74c9e8cc-1f9e-477a-9b64-14126f63b74e",
+      "6ea5058e-3a8b-4f43-a3a3-1cdfb38204af",
+      "68ee5d89-5939-4ca3-83b3-cf2af5cece8f"
+    ]
+  },
+  "defects": [],
+  "closed_findings": [
+    {
+      "id": "TK-S1-REVIEW-F1",
+      "status": "CLOSED on new candidate only",
+      "evidence": "/Users/frank/mygit/Tablekeeper/result-run-3/.evidence/reviewer-s1-f1-20261004T080315Z/f1-repro.mjs.log",
+      "prior_rejection": "/Users/frank/mygit/Tablekeeper/result-run-3/.evidence/reviewer-s1-20261004T074128Z/candidate-acceptance.json"
+    }
+  ],
+  "limitations": [
+    "Exact cutoff millisecond equality remains owner domain-level evidence; independently forced HTTP equality NOT_TESTED.",
+    "Actual reset/login concurrency observed; all scheduler interleavings NOT_TESTED.",
+    "50-request load uses small synthetic state; large-history resource growth NOT_TESTED.",
+    "No exhaustive corrupt-state/input proof; bounded coverage plus source review.",
+    "Stage1 is API-only; browser/design rendering not required and NOT_TESTED.",
+    "Stages2\u20134, upgrade continuity, external judging and final submission packaging NOT_TESTED.",
+    "Final README.md/FACTORY.md are human-authored post-run narratives; room.json must be actual full room download; still pending.",
+    "Measured monetary cost/token consumption UNAVAILABLE.",
+    "F1 log retains inherited case wording changed from string for N/r/p although their original values were numbers; actual test code wraps their numeric originals in arrays. Assertions and outcomes remain valid."
+  ],
+  "evidence_paths": [
+    "/Users/frank/mygit/Tablekeeper/result-run-3/.evidence/reviewer-s1-f1-20261004T080315Z"
+  ],
+  "started_at": "2026-10-04T08:03:15.183117+00:00",
+  "completed_at": "2026-10-04T08:07:29.498771+00:00",
+  "next_action": "PM acknowledge complete acceptance handoff, release evidence-only lease, record exact Stage1 acceptance; coordinate subsequent stage only with its complete requirements and ownership. Preserve Stage1 accepted scope and prior rejection.",
+  "remaining_limits": "Reviewer repairs0; Backend2of3 used/1remaining. One active seat/writer. Current finish_work_by2026-10-04T08:11:33.114251Z, hard deadline08:12:33.114251Z;600sturn/60sreserve/120sACK/max2delivery retries. Stage14400s/overall70834s/300turns per seat/100000000tokens cumulative under supervisor. Subscription-only; no API billing/provisioning/publication/escalation/human steering.",
+  "delivery_status": "6/6 sent; matching canonical PM receipt pending, not assumed"
+}
