@@ -10,7 +10,7 @@
     "limitations": [
       "Planning scope only; all product checks NOT_TESTED"
     ],
-    "room_event": "10e7ab02-6821-4a98-9591-52e46a253357 (complete receipt; acceptance separately in room)"
+    "room_event": "6116e1a8-0f35-4b97-bc85-442319cff336"
   },
   {
     "id": "ARCH-S1",
@@ -18,8 +18,14 @@
     "dependencies": [
       "QA-BOUNDARIES"
     ],
-    "state": "PROPOSED",
-    "goal": "Choose implementable architecture and portability contract"
+    "state": "ACCEPTED",
+    "goal": "Choose implementable architecture and portability contract",
+    "candidate_commit": "cf1b074fcdfaffe6fa82d2d81db5fc901ba08eb6",
+    "reviewer": "@frankzhu94/factory-pm",
+    "room_event": "c75a7f2c-d224-4788-a564-ff020a2f6319",
+    "limitations": [
+      "Architecture record only. Container integration and product behavior NOT_TESTED."
+    ]
   },
   {
     "id": "BUILD-S1",
