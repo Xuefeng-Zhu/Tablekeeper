@@ -4,7 +4,7 @@ Team: **MillieMoon** · Track: **Tablekeeper** · Selected evidence: **Run 3**
 
 > Documentation provenance: AI-assisted draft prepared at the participant's request after the run. The participant has not yet reviewed or rewritten it. The guide's participant-authorship requirement remains unresolved; this is not a claim of submission readiness.
 
-Seven BAND seats built and independently reviewed a restaurant-reservation JSON API. **Stage 1 is complete in the shipped checks: 120/120 passed in isolated containers.** Stage 2 reached architecture and design planning before a factory acknowledgment-timer failure stopped the run. This repository contains only the implemented `stage-1/` output; it has no browser UI or Stage 2–4 implementation.
+A seven-seat BAND factory built and independently reviewed a restaurant-reservation JSON API. **Stage 1 is complete in the shipped checks: 120/120 passed in isolated containers.** Stage 2 reached architecture and design planning before a factory acknowledgment-timer failure stopped the run. This repository contains only the implemented `stage-1/` output; it has no browser UI or Stage 2–4 implementation.
 
 ## Read this repository
 
@@ -15,6 +15,7 @@ Seven BAND seats built and independently reviewed a restaurant-reservation JSON 
 | `room.json` | Unchanged full BAND console export: 4,088 events, including tool calls and output |
 | `stage-1/` | BAND-authored TypeScript source, lockfile, tests, Dockerfile and RUN.md |
 | `planning/` | Requirements, architecture, integration decisions and unimplemented Stage 2 design |
+| `presentation/` | Editable evidence deck, matching PDF and a video shotlist; no recorded video yet |
 
 The challenge inputs are pinned to [`803560d2a678ace1414465c098eb0ab5380ffade`](https://github.com/band-ai/dark-factory-wearedevs/tree/803560d2a678ace1414465c098eb0ab5380ffade). The factory was built around that starter's requirements and harness; the submitted application began in a separate empty repository.
 
