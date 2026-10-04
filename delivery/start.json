@@ -1,0 +1,14 @@
+{
+  "at_utc": "2026-10-04T04:32:11.341293+00:00",
+  "owner": "@frankzhu94/factory-pm",
+  "freeze": "/Users/frank/mygit/Tablekeeper/runs/freeze/latest.json",
+  "configuration_sha256": "f1509e2834ce572f8467a4119021d869b597f36ec7b700aac2942f7181a7630d",
+  "freeze_status": "READY_TO_LAUNCH",
+  "source_revision": "803560d2a678ace1414465c098eb0ab5380ffade",
+  "checkout": "/Users/frank/mygit/Tablekeeper/result",
+  "git_fetch_origin_exit": 0,
+  "initial_revision": null,
+  "remote_branches": [],
+  "membership": "All seven IDs and handles verified by band_get_participants; responsiveness not yet tested.",
+  "usage": "UNAVAILABLE"
+}
