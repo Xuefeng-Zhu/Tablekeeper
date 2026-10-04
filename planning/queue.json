@@ -1,0 +1,218 @@
+[
+  {
+    "id": "S1-ARCH",
+    "owner": "@frankzhu94/factory-architect",
+    "state": "PROPOSED",
+    "dependencies": [
+      "PM-BOOTSTRAP"
+    ],
+    "goal": "Stage 1 arch covering all inherited specifications",
+    "limitations": [
+      "Not executable until complete addressed handoff and receipt"
+    ]
+  },
+  {
+    "id": "S1-IMPLEMENT",
+    "owner": "@frankzhu94/factory-backend",
+    "state": "PROPOSED",
+    "dependencies": [
+      "S1-ARCH"
+    ],
+    "goal": "Stage 1 implement covering all inherited specifications",
+    "limitations": [
+      "Not executable until complete addressed handoff and receipt"
+    ]
+  },
+  {
+    "id": "S1-QA",
+    "owner": "@frankzhu94/factory-qa",
+    "state": "PROPOSED",
+    "dependencies": [
+      "S1-IMPLEMENT"
+    ],
+    "goal": "Stage 1 qa covering all inherited specifications",
+    "limitations": [
+      "Not executable until complete addressed handoff and receipt"
+    ]
+  },
+  {
+    "id": "S1-REVIEW",
+    "owner": "@frankzhu94/factory-reviewer",
+    "state": "PROPOSED",
+    "dependencies": [
+      "S1-QA"
+    ],
+    "goal": "Stage 1 review covering all inherited specifications",
+    "limitations": [
+      "Not executable until complete addressed handoff and receipt"
+    ]
+  },
+  {
+    "id": "S2-ARCH",
+    "owner": "@frankzhu94/factory-architect",
+    "state": "PROPOSED",
+    "dependencies": [
+      "S1-REVIEW"
+    ],
+    "goal": "Stage 2 arch covering all inherited specifications",
+    "limitations": [
+      "Not executable until complete addressed handoff and receipt"
+    ]
+  },
+  {
+    "id": "S2-DESIGN",
+    "owner": "@frankzhu94/factory-designer",
+    "state": "PROPOSED",
+    "dependencies": [
+      "S2-ARCH"
+    ],
+    "goal": "Stage 2 design covering all inherited specifications",
+    "limitations": [
+      "Not executable until complete addressed handoff and receipt"
+    ]
+  },
+  {
+    "id": "S2-IMPLEMENT",
+    "owner": "@frankzhu94/factory-backend",
+    "state": "PROPOSED",
+    "dependencies": [
+      "S2-DESIGN"
+    ],
+    "goal": "Stage 2 implement covering all inherited specifications",
+    "limitations": [
+      "Not executable until complete addressed handoff and receipt"
+    ]
+  },
+  {
+    "id": "S2-UI",
+    "owner": "@frankzhu94/factory-frontend",
+    "state": "PROPOSED",
+    "dependencies": [
+      "S2-IMPLEMENT"
+    ],
+    "goal": "Stage 2 ui covering all inherited specifications",
+    "limitations": [
+      "Not executable until complete addressed handoff and receipt"
+    ]
+  },
+  {
+    "id": "S2-QA",
+    "owner": "@frankzhu94/factory-qa",
+    "state": "PROPOSED",
+    "dependencies": [
+      "S2-UI"
+    ],
+    "goal": "Stage 2 qa covering all inherited specifications",
+    "limitations": [
+      "Not executable until complete addressed handoff and receipt"
+    ]
+  },
+  {
+    "id": "S2-REVIEW",
+    "owner": "@frankzhu94/factory-reviewer",
+    "state": "PROPOSED",
+    "dependencies": [
+      "S2-QA"
+    ],
+    "goal": "Stage 2 review covering all inherited specifications",
+    "limitations": [
+      "Not executable until complete addressed handoff and receipt"
+    ]
+  },
+  {
+    "id": "S3-ARCH",
+    "owner": "@frankzhu94/factory-architect",
+    "state": "PROPOSED",
+    "dependencies": [
+      "S2-REVIEW"
+    ],
+    "goal": "Stage 3 arch covering all inherited specifications",
+    "limitations": [
+      "Not executable until complete addressed handoff and receipt"
+    ]
+  },
+  {
+    "id": "S3-IMPLEMENT",
+    "owner": "@frankzhu94/factory-backend",
+    "state": "PROPOSED",
+    "dependencies": [
+      "S3-ARCH"
+    ],
+    "goal": "Stage 3 implement covering all inherited specifications",
+    "limitations": [
+      "Not executable until complete addressed handoff and receipt"
+    ]
+  },
+  {
+    "id": "S3-QA",
+    "owner": "@frankzhu94/factory-qa",
+    "state": "PROPOSED",
+    "dependencies": [
+      "S3-IMPLEMENT"
+    ],
+    "goal": "Stage 3 qa covering all inherited specifications",
+    "limitations": [
+      "Not executable until complete addressed handoff and receipt"
+    ]
+  },
+  {
+    "id": "S3-REVIEW",
+    "owner": "@frankzhu94/factory-reviewer",
+    "state": "PROPOSED",
+    "dependencies": [
+      "S3-QA"
+    ],
+    "goal": "Stage 3 review covering all inherited specifications",
+    "limitations": [
+      "Not executable until complete addressed handoff and receipt"
+    ]
+  },
+  {
+    "id": "S4-ARCH",
+    "owner": "@frankzhu94/factory-architect",
+    "state": "PROPOSED",
+    "dependencies": [
+      "S3-REVIEW"
+    ],
+    "goal": "Stage 4 arch covering all inherited specifications",
+    "limitations": [
+      "Not executable until complete addressed handoff and receipt"
+    ]
+  },
+  {
+    "id": "S4-IMPLEMENT",
+    "owner": "@frankzhu94/factory-backend",
+    "state": "PROPOSED",
+    "dependencies": [
+      "S4-ARCH"
+    ],
+    "goal": "Stage 4 implement covering all inherited specifications",
+    "limitations": [
+      "Not executable until complete addressed handoff and receipt"
+    ]
+  },
+  {
+    "id": "S4-QA",
+    "owner": "@frankzhu94/factory-qa",
+    "state": "PROPOSED",
+    "dependencies": [
+      "S4-IMPLEMENT"
+    ],
+    "goal": "Stage 4 qa covering all inherited specifications",
+    "limitations": [
+      "Not executable until complete addressed handoff and receipt"
+    ]
+  },
+  {
+    "id": "S4-REVIEW",
+    "owner": "@frankzhu94/factory-reviewer",
+    "state": "PROPOSED",
+    "dependencies": [
+      "S4-QA"
+    ],
+    "goal": "Stage 4 review covering all inherited specifications",
+    "limitations": [
+      "Not executable until complete addressed handoff and receipt"
+    ]
+  }
+]
