@@ -11,6 +11,8 @@ class API(unittest.TestCase):
         self.assertEqual(self.client.post('/_test/reset',json=FIXTURE).status_code,204)
         self.token=self.client.post('/auth/login',json={'email':'a@example.com','password':'password1'}).json['token']
         self.headers={'Authorization':'Bearer '+self.token}
+    def tearDown(self):
+        self.app.config['STORE'].db.close()
     def book(self,key='key',table='a',time='2030-11-01T18:00'):
         return self.client.post('/reservations',headers={**self.headers,'Idempotency-Key':key},json={'restaurant_id':'r','table_id':table,'party_size':2,'starts_at_local':time})
     def test_concurrent_identical_receipts(self):
@@ -35,7 +37,9 @@ class API(unittest.TestCase):
     def test_portability_and_original_receipt(self):
         original=self.book().json
         snapshot=self.client.get('/_test/export').json
-        destination=create_app().test_client()
+        destination_app=create_app()
+        self.addCleanup(destination_app.config['STORE'].db.close)
+        destination=destination_app.test_client()
         self.assertEqual(destination.post('/_test/import',json=snapshot).status_code,204)
         self.assertEqual(destination.get('/reservations',headers=self.headers).json['reservations'],[original])
         self.assertEqual(destination.post('/auth/login',json={'email':'a@example.com','password':'password1'}).status_code,200)

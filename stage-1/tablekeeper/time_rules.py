@@ -31,7 +31,8 @@ def interval(restaurant, value):
     if hours is None: fail('outside_opening_hours')
     opening=local_parse(wall.strftime('%Y-%m-%d')+'T'+hours['opens'])
     closing=local_parse(wall.strftime('%Y-%m-%d')+'T'+hours['closes'])
-    end=start+timedelta(minutes=restaurant['reservation_duration_minutes'])
+    try: end=start+timedelta(minutes=restaurant['reservation_duration_minutes'])
+    except OverflowError: fail('outside_opening_hours')
     if wall<opening or wall>=closing or end>resolve(closing,restaurant['timezone'],True): fail('outside_opening_hours')
     if int((wall-opening).total_seconds()/60)%restaurant['slot_minutes']: fail('not_on_slot_grid')
     return start,end

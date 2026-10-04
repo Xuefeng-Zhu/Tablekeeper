@@ -4,7 +4,7 @@ import sqlite3
 from datetime import datetime,timedelta
 from flask import Flask,request,Response
 from werkzeug.exceptions import HTTPException
-from . import auth, reservations as bookings
+from . import auth, receipts, reservations as bookings
 from .store import Store,clear,dumps,export_state,import_state
 from .validation import Problem,fail,parse,string,identifier,query_party,canonical
 from .time_rules import DAYS,local_parse,interval,formatted,now
@@ -38,14 +38,8 @@ def create_app():
     def reset():
         fixture=parse(request.get_data())
         with store.transaction() as db:
-            clear(db)
-            for u in fixture.get('users',[]):
-                user={'id':identifier(u,'id'),'email':string(u,'email'),'display_name':string(u,'display_name'),'password_hash':auth.password_hash(string(u,'password'))}
-                db.execute('INSERT INTO users VALUES(?,?,?)',(user['id'],user['email'],dumps(user)))
-            for i,r in enumerate(fixture.get('restaurants',[])):
-                rid=identifier(r,'id');db.execute('INSERT INTO restaurants(id,position,data) VALUES(?,?,?)',(rid,i,dumps(r)))
-                for j,t in enumerate(r['tables']): db.execute('INSERT INTO dining_tables VALUES(?,?,?,?)',(identifier(t,'id'),rid,j,dumps(t)))
-            for seed in fixture.get('reservations',[]): bookings.create(db,seed,seed['user_id'],seed)
+            from .fixture import replace_fixture
+            replace_fixture(db,fixture)
         return Response(status=204)
     @app.route('/auth/<action>',methods=['POST'])
     def account(action):
@@ -100,19 +94,9 @@ def create_app():
                             candidate={'restaurant_id':rid,'status':'confirmed','table_ids':[t['id']],'starts_at':start.isoformat(),'ends_at':end.isoformat()}
                             if t['capacity']>=size and not any(bookings.overlaps(candidate,o) for o in occupied): available.append(t['id'])
                         slots.append({'starts_at_local':value,'starts_at':formatted(start,r['timezone']),'available_table_ids':available})
-                    wall+=timedelta(minutes=r['slot_minutes'])
+                    wall+=timedelta(minutes=min(r['slot_minutes'],1440))
             result={'restaurant_id':rid,'date':date,'timezone':r['timezone'],'slots':slots}
         return response(result)
-    def receipt(db,user,body):
-        key=request.headers.get('Idempotency-Key')
-        if not key: fail('missing_idempotency_key',400)
-        if len(key)>255: fail()
-        scope=(user,request.method,request.path,key)
-        row=db.execute('SELECT body,response FROM receipts WHERE user_id=? AND method=? AND path=? AND key=?',scope).fetchone()
-        if row:
-            if canonical(json.loads(row[0]))!=canonical(body): fail('idempotency_key_reuse',409)
-            return scope,json.loads(row[1])
-        return scope,None
     @app.route('/reservations',methods=['GET','POST'])
     @app.route('/reservation-moves',methods=['POST'])
     def collection():
@@ -124,10 +108,10 @@ def create_app():
                 rows.sort(key=lambda r:datetime.fromisoformat(r['starts_at']),reverse=True)
                 result={'reservations':[bookings.public(r) for r in rows]};status=200
             else:
-                scope,result=receipt(db,user,body);status=200
+                scope,result=receipts.lookup(db,user,request.method,request.path,request.headers.get('Idempotency-Key'),body);status=200
                 if result is None:
                     result=bookings.moves(db,body,user) if request.path=='/reservation-moves' else bookings.create(db,body,user)
-                    db.execute('INSERT INTO receipts VALUES(?,?,?,?,?,?)',(*scope,dumps(body),dumps(result)));status=201
+                    receipts.save(db,scope,body,result);status=201
         return response(result,status)
     @app.route('/reservations/<reference>',methods=['GET','PATCH'])
     @app.route('/reservations/<reference>/cancel',methods=['POST'])

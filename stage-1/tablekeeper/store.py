@@ -2,7 +2,7 @@ import json
 import sqlite3
 import threading
 from contextlib import contextmanager
-from .validation import fail
+from .validation import fail, Problem
 
 SCHEMA='''
 CREATE TABLE users(id TEXT PRIMARY KEY,email TEXT UNIQUE NOT NULL,data TEXT NOT NULL);
@@ -57,41 +57,15 @@ def import_state(db,body):
             if not isinstance(entity,dict) or entity.get('columns')!=columns or not isinstance(entity.get('rows'),list): fail()
             for row in entity['rows']:
                 if not isinstance(row,list) or len(row)!=len(columns): fail()
+                for column,value in zip(columns,row):
+                    expected=int if column in ('position','counter') else str
+                    if type(value) is not expected: fail()
                 staged.db.execute('INSERT INTO '+table+' VALUES('+','.join('?' for _ in row)+')',row)
+        from .snapshot_validation import validate_snapshot
         validate_snapshot(staged.db)
         clear(db)
         for table in TABLES:
             for row in staged.db.execute('SELECT * FROM '+table):
                 db.execute('INSERT INTO '+table+' VALUES('+','.join('?' for _ in row)+')',tuple(row))
-    except (KeyError,IndexError,TypeError,ValueError,OverflowError,sqlite3.Error): fail()
+    except (Problem,KeyError,IndexError,AttributeError,TypeError,ValueError,OverflowError,sqlite3.Error): fail()
     finally: staged.db.close()
-
-def validate_snapshot(db):
-    # Validate portable credentials, entity snapshots and foreign key relationships.
-    import re
-    for ident,email,raw in db.execute('SELECT * FROM users'):
-        u=json.loads(raw); p=u['password_hash']
-        if u['id']!=ident or u['email']!=email or not isinstance(u['display_name'],str): fail()
-        if p.get('algorithm')!='scrypt' or (p['n'],p['r'],p['p'])!=(16384,8,1): fail()
-        if not re.fullmatch('[0-9a-f]{32}',p['salt']) or not re.fullmatch('[0-9a-f]{64}',p['digest']): fail()
-    for digest,_ in db.execute('SELECT * FROM sessions'):
-        if not isinstance(digest,str) or not re.fullmatch('[0-9a-f]{64}',digest): fail()
-    for table in ['users','restaurants','dining_tables','reservations']:
-        for ident,raw in db.execute('SELECT id,data FROM '+table):
-            if not isinstance(ident,str) or not 1<=len(ident)<=64 or not isinstance(json.loads(raw),dict): fail()
-    from datetime import datetime
-    reservations=[]
-    for ident,reference,user,restaurant,raw in db.execute('SELECT * FROM reservations'):
-        r=json.loads(raw)
-        if r['reservation_id']!=ident or r['reference']!=reference or r['user_id']!=user or r['restaurant_id']!=restaurant: fail()
-        if r['status'] not in ('confirmed','cancelled') or not re.fullmatch('[A-Z0-9]{6,12}',reference): fail()
-        if datetime.fromisoformat(r['starts_at'])>=datetime.fromisoformat(r['ends_at']): fail()
-        actual=[x[0] for x in db.execute('SELECT table_id FROM allocations WHERE reservation_id=?',(ident,))]
-        if actual!=r['table_ids']: fail()
-        reservations.append(r)
-    from .reservations import overlaps
-    for i,a in enumerate(reservations):
-        for b in reservations[i+1:]:
-            if overlaps(a,b): fail()
-    for _,_,_,key,body,response in db.execute('SELECT * FROM receipts'):
-        if not isinstance(key,str) or not 1<=len(key)<=255 or not isinstance(json.loads(body),dict) or not isinstance(json.loads(response),dict): fail()

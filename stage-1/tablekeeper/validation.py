@@ -1,4 +1,5 @@
 import json
+import math
 import re
 from decimal import Decimal
 
@@ -23,16 +24,22 @@ def identifier(body, key):
     return string(body, key, maximum=64)
 
 def party(value):
-    if isinstance(value, bool) or not isinstance(value, (int, float)) or value < 1 or value != int(value): fail()
+    if isinstance(value, bool) or not isinstance(value, (int, float)) or (isinstance(value,float) and not math.isfinite(value)) or value < 1 or value != int(value): fail()
     return int(value)
 
 def query_party(value):
     if not value or not re.fullmatch(r'[0-9]+', value): fail()
-    return party(int(value))
+    try: return party(int(value))
+    except ValueError: fail()
+
+def finite_float(raw):
+    value=float(raw)
+    if not math.isfinite(value): fail()
+    return value
 
 def parse(raw):
     try:
-        value = json.loads(raw, parse_constant=lambda _: fail('malformed_request',400))
+        value = json.loads(raw, parse_float=finite_float, parse_constant=lambda _: fail('malformed_request',400))
     except (ValueError, UnicodeError): fail('malformed_request',400)
     if not isinstance(value, dict): fail('malformed_request',400)
     return value
@@ -42,7 +49,7 @@ def canonical(value):
     if value is None: return ['null']
     if isinstance(value, bool): return ['bool', value]
     if isinstance(value, (int,float)):
-        return ['number', str(Decimal(str(value)).normalize())]
+        return ['number', str(Decimal(str(value)).normalize()) if value else '0']
     if isinstance(value, str): return ['string', value]
     if isinstance(value, list): return ['array', [canonical(v) for v in value]]
     return ['object', [[k,canonical(value[k])] for k in sorted(value)]]

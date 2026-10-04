@@ -42,7 +42,7 @@ def proposal(db,body,base=None):
 
 def editable(r,instant):
     if r['status']=='cancelled': fail('reservation_cancelled',409)
-    if instant>=datetime.fromisoformat(r['starts_at'])-timedelta(minutes=r['accepted_terms']['cancellation_cutoff_minutes']): fail('cutoff_passed',409)
+    if (datetime.fromisoformat(r['starts_at'])-instant).total_seconds()<=r['accepted_terms']['cancellation_cutoff_minutes']*60: fail('cutoff_passed',409)
 
 def persist(db,r):
     db.execute('INSERT INTO reservations VALUES(?,?,?,?,?) ON CONFLICT(id) DO UPDATE SET data=excluded.data',(r['reservation_id'],r['reference'],r['user_id'],r['restaurant_id'],dumps(r)))
@@ -50,7 +50,10 @@ def persist(db,r):
     for tid in r['table_ids']: db.execute('INSERT INTO allocations VALUES(?,?,?)',(r['reservation_id'],r['restaurant_id'],tid))
 
 def history(db,r,event,at):
-    r['history'].append({'seq':len(r['history'])+1,'event':event,'at':at,'revision':r['revision'],'snapshot':public(r),'accepted_terms':r['accepted_terms']})
+    previous=r['history'][-1]['snapshot'] if r['history'] else None
+    changed=[key for key in ('table_id','starts_at_local','party_size','status') if previous is None or previous[key]!=r[key]]
+    if r['history']: at=max(at,r['history'][-1]['at'])
+    r['history'].append({'changed_fields':changed,'seq':len(r['history'])+1,'event':event,'at':at,'revision':r['revision'],'snapshot':public(r),'accepted_terms':r['accepted_terms']})
     db.execute('UPDATE restaurants SET counter=counter+1 WHERE id=?',(r['restaurant_id'],))
 
 def create(db,body,user,seed=None):
@@ -64,7 +67,7 @@ def create(db,body,user,seed=None):
         if not db.execute('SELECT 1 FROM reservations WHERE reference=?',(candidate,)).fetchone(): reference=candidate
     stamp=now().isoformat()
     config=restaurant(db,r['restaurant_id'])
-    r.update(reservation_id=(seed or {}).get('id',secrets.token_hex(16)),reference=reference,user_id=user,created_at=stamp,revision=1,history=[],accepted_terms={'policy_version':0,**{k:config[k] for k in ['slot_minutes','reservation_duration_minutes','cancellation_cutoff_minutes','opening_hours']}})
+    r.update(reservation_id=(seed or {}).get('id',secrets.token_hex(16)),reference=reference,user_id=user,created_at=stamp,revision=1,history=[],accepted_terms={'policy_version':0,**{k:config[k] for k in ['slot_minutes','reservation_duration_minutes','cancellation_cutoff_minutes','opening_hours','timezone','tables']}})
     check_occupancy(db,[r]); history(db,r,'created',stamp); persist(db,r)
     return public(r)
 
