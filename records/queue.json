@@ -1,0 +1,126 @@
+[
+  {
+    "id": "QA-BOUNDARIES",
+    "owner": "@frankzhu94/factory-qa",
+    "dependencies": [],
+    "state": "PROPOSED",
+    "goal": "Expand requirements with independently verifiable boundaries before implementation"
+  },
+  {
+    "id": "ARCH-S1",
+    "owner": "@frankzhu94/factory-architect",
+    "dependencies": [
+      "QA-BOUNDARIES"
+    ],
+    "state": "PROPOSED",
+    "goal": "Choose implementable architecture and portability contract"
+  },
+  {
+    "id": "BUILD-S1",
+    "owner": "@frankzhu94/factory-backend",
+    "dependencies": [
+      "ARCH-S1"
+    ],
+    "state": "PROPOSED",
+    "goal": "Implement stage 1 and owner checks"
+  },
+  {
+    "id": "QA-S1",
+    "owner": "@frankzhu94/factory-qa",
+    "dependencies": [
+      "BUILD-S1"
+    ],
+    "state": "PROPOSED",
+    "goal": "Independent behavior and boundary checks"
+  },
+  {
+    "id": "GATE-S1",
+    "owner": "@frankzhu94/factory-reviewer",
+    "dependencies": [
+      "QA-S1"
+    ],
+    "state": "PROPOSED",
+    "goal": "Official isolated fixed-candidate acceptance"
+  },
+  {
+    "id": "DESIGN-S2",
+    "owner": "@frankzhu94/factory-designer",
+    "dependencies": [
+      "GATE-S1"
+    ],
+    "state": "PROPOSED",
+    "goal": "Browser interaction and responsive design specification"
+  },
+  {
+    "id": "BUILD-S2-API",
+    "owner": "@frankzhu94/factory-backend",
+    "dependencies": [
+      "DESIGN-S2"
+    ],
+    "state": "PROPOSED",
+    "goal": "Stage 2 pairs and upgrade API"
+  },
+  {
+    "id": "BUILD-S2-UI",
+    "owner": "@frankzhu94/factory-frontend",
+    "dependencies": [
+      "BUILD-S2-API"
+    ],
+    "state": "PROPOSED",
+    "goal": "Stage 2 browser implementation"
+  },
+  {
+    "id": "QA-DESIGN-S2",
+    "owner": "@frankzhu94/factory-designer",
+    "dependencies": [
+      "BUILD-S2-UI"
+    ],
+    "state": "PROPOSED",
+    "goal": "Rendered design review"
+  },
+  {
+    "id": "GATE-S2",
+    "owner": "@frankzhu94/factory-reviewer",
+    "dependencies": [
+      "QA-DESIGN-S2"
+    ],
+    "state": "PROPOSED",
+    "goal": "Independent behavior and official isolated gate"
+  },
+  {
+    "id": "BUILD-S3",
+    "owner": "@frankzhu94/factory-backend",
+    "dependencies": [
+      "GATE-S2"
+    ],
+    "state": "PROPOSED",
+    "goal": "Architecture then policy and series implementation"
+  },
+  {
+    "id": "GATE-S3",
+    "owner": "@frankzhu94/factory-reviewer",
+    "dependencies": [
+      "BUILD-S3"
+    ],
+    "state": "PROPOSED",
+    "goal": "QA then official isolated gate"
+  },
+  {
+    "id": "BUILD-S4",
+    "owner": "@frankzhu94/factory-backend",
+    "dependencies": [
+      "GATE-S3"
+    ],
+    "state": "PROPOSED",
+    "goal": "Architecture then planning and amendment implementation"
+  },
+  {
+    "id": "GATE-S4",
+    "owner": "@frankzhu94/factory-reviewer",
+    "dependencies": [
+      "BUILD-S4"
+    ],
+    "state": "PROPOSED",
+    "goal": "QA then official isolated gate"
+  }
+]
