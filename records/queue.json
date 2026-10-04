@@ -33,8 +33,14 @@
     "dependencies": [
       "ARCH-S1"
     ],
-    "state": "PROPOSED",
-    "goal": "Implement stage 1 and owner checks"
+    "state": "REJECTED",
+    "goal": "Implement stage 1 and owner checks",
+    "candidate_commit": "3329a8238ece53e06812cce4b5c6222476dd33ab",
+    "repairs_used": 3,
+    "repair_limit": 3,
+    "limitations": [
+      "Owner implementation delivered; independent release rejected; no further product repair authorized."
+    ]
   },
   {
     "id": "QA-S1",
@@ -42,8 +48,12 @@
     "dependencies": [
       "BUILD-S1"
     ],
-    "state": "PROPOSED",
-    "goal": "Independent behavior and boundary checks"
+    "state": "REVIEW",
+    "goal": "Independent behavior and boundary checks",
+    "candidate_commit": "4026ec71ac6cf5ae0ebe6e998d77fd4a475a8c4d",
+    "limitations": [
+      "Independent host checks closed date/query defects at this revision; later reviewer found receipt integrity defects. No stage acceptance."
+    ]
   },
   {
     "id": "GATE-S1",
@@ -51,8 +61,15 @@
     "dependencies": [
       "QA-S1"
     ],
-    "state": "PROPOSED",
-    "goal": "Official isolated fixed-candidate acceptance"
+    "state": "REJECTED",
+    "goal": "Official isolated fixed-candidate acceptance",
+    "candidate_commit": "3329a8238ece53e06812cce4b5c6222476dd33ab",
+    "room_event": "493ace48-7d8b-469d-ad82-6fb063e05a0f",
+    "limitations": [
+      "Historical receipt request/response contradictions accepted by import.",
+      "Required repaired-candidate isolated/resource checks BLOCKED/NOT_TESTED.",
+      "Repair ceiling 3/3 exhausted; STOP/REPLAN."
+    ]
   },
   {
     "id": "DESIGN-S2",
@@ -60,8 +77,11 @@
     "dependencies": [
       "GATE-S1"
     ],
-    "state": "PROPOSED",
-    "goal": "Browser interaction and responsive design specification"
+    "state": "BLOCKED",
+    "goal": "Browser interaction and responsive design specification",
+    "limitations": [
+      "Not dispatched or implemented: Stage 1 independent gate rejected and repair ceiling exhausted."
+    ]
   },
   {
     "id": "BUILD-S2-API",
@@ -69,8 +89,11 @@
     "dependencies": [
       "DESIGN-S2"
     ],
-    "state": "PROPOSED",
-    "goal": "Stage 2 pairs and upgrade API"
+    "state": "BLOCKED",
+    "goal": "Stage 2 pairs and upgrade API",
+    "limitations": [
+      "Not dispatched or implemented: Stage 1 independent gate rejected and repair ceiling exhausted."
+    ]
   },
   {
     "id": "BUILD-S2-UI",
@@ -78,8 +101,11 @@
     "dependencies": [
       "BUILD-S2-API"
     ],
-    "state": "PROPOSED",
-    "goal": "Stage 2 browser implementation"
+    "state": "BLOCKED",
+    "goal": "Stage 2 browser implementation",
+    "limitations": [
+      "Not dispatched or implemented: Stage 1 independent gate rejected and repair ceiling exhausted."
+    ]
   },
   {
     "id": "QA-DESIGN-S2",
@@ -87,8 +113,11 @@
     "dependencies": [
       "BUILD-S2-UI"
     ],
-    "state": "PROPOSED",
-    "goal": "Rendered design review"
+    "state": "BLOCKED",
+    "goal": "Rendered design review",
+    "limitations": [
+      "Not dispatched or implemented: Stage 1 independent gate rejected and repair ceiling exhausted."
+    ]
   },
   {
     "id": "GATE-S2",
@@ -96,8 +125,11 @@
     "dependencies": [
       "QA-DESIGN-S2"
     ],
-    "state": "PROPOSED",
-    "goal": "Independent behavior and official isolated gate"
+    "state": "BLOCKED",
+    "goal": "Independent behavior and official isolated gate",
+    "limitations": [
+      "Not dispatched or implemented: Stage 1 independent gate rejected and repair ceiling exhausted."
+    ]
   },
   {
     "id": "BUILD-S3",
@@ -105,8 +137,11 @@
     "dependencies": [
       "GATE-S2"
     ],
-    "state": "PROPOSED",
-    "goal": "Architecture then policy and series implementation"
+    "state": "BLOCKED",
+    "goal": "Architecture then policy and series implementation",
+    "limitations": [
+      "Not dispatched or implemented: Stage 1 independent gate rejected and repair ceiling exhausted."
+    ]
   },
   {
     "id": "GATE-S3",
@@ -114,8 +149,11 @@
     "dependencies": [
       "BUILD-S3"
     ],
-    "state": "PROPOSED",
-    "goal": "QA then official isolated gate"
+    "state": "BLOCKED",
+    "goal": "QA then official isolated gate",
+    "limitations": [
+      "Not dispatched or implemented: Stage 1 independent gate rejected and repair ceiling exhausted."
+    ]
   },
   {
     "id": "BUILD-S4",
@@ -123,8 +161,11 @@
     "dependencies": [
       "GATE-S3"
     ],
-    "state": "PROPOSED",
-    "goal": "Architecture then planning and amendment implementation"
+    "state": "BLOCKED",
+    "goal": "Architecture then planning and amendment implementation",
+    "limitations": [
+      "Not dispatched or implemented: Stage 1 independent gate rejected and repair ceiling exhausted."
+    ]
   },
   {
     "id": "GATE-S4",
@@ -132,7 +173,10 @@
     "dependencies": [
       "BUILD-S4"
     ],
-    "state": "PROPOSED",
-    "goal": "QA then official isolated gate"
+    "state": "BLOCKED",
+    "goal": "QA then official isolated gate",
+    "limitations": [
+      "Not dispatched or implemented: Stage 1 independent gate rejected and repair ceiling exhausted."
+    ]
   }
 ]
