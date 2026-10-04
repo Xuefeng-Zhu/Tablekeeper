@@ -1,5 +1,6 @@
 """Successful request identities and immutable response snapshots."""
 import json
+from .exact_json import loads
 from .validation import canonical, fail
 from .store import dumps
 
@@ -10,7 +11,7 @@ def lookup(db, user, method, path, key, body):
     scope=(user,method,path,key)
     row=db.execute('SELECT body,response FROM receipts WHERE user_id=? AND method=? AND path=? AND key=?',scope).fetchone()
     if row:
-        if canonical(json.loads(row[0]))!=canonical(body): fail('idempotency_key_reuse',409)
+        if canonical(loads(row[0]))!=canonical(body): fail('idempotency_key_reuse',409)
         return scope,json.loads(row[1])
     return scope,None
 

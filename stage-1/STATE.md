@@ -58,3 +58,20 @@ cross-owner reference cannot replace an earlier error. The same captured UTC tim
 is used throughout. All proposals remain detached from live rows until every
 non-occupancy check succeeds; collective occupancy then validates swaps and
 unchanged listed items before one atomic commit and receipt.
+
+Numeric receipt identity is exact and independent of Python's Decimal context.
+Integer tokens retain all parsed integer digits. Decimal and exponent tokens use
+Decimal directly during JSON decoding, without passing through binary floating
+point. Comparison inspects sign/digits/exponent and removes trailing zero digits
+without arithmetic or rounding. All zero forms compare equal, while booleans are
+separate typed values. Object order is ignored; array order and ignored fields
+remain significant. Non-finite tokens (NaN/Infinity) are rejected as malformed JSON.
+
+Receipt body serialization emits exact JSON numeric tokens, never numeric strings
+or custom tags, including large exponents. The envelope, schema version and entity
+columns are unchanged. No canonical digest is persisted: comparison is derived
+from the preserved body each time, including after import. Existing schema-1
+exports remain readable and their body/response strings are preserved verbatim.
+Older decimal tokens already rounded by the previous float parser retain their
+stored JSON value; missing original source digits cannot be reconstructed. New
+receipts preserve those digits from the initial parse through export/import.

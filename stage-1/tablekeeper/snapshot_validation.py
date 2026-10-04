@@ -1,5 +1,6 @@
 """Validate logical state independently of the destination before replacement."""
 import json
+from .exact_json import loads
 import re
 from datetime import datetime
 from .validation import fail, Problem, canonical
@@ -12,7 +13,7 @@ def require(condition):
 
 def data(raw):
     require(isinstance(raw,str))
-    value=json.loads(raw,parse_constant=lambda _: fail())
+    value=loads(raw)
     require(isinstance(value,dict))
     return value
 

@@ -2,6 +2,7 @@ import json
 import math
 import re
 from decimal import Decimal
+from .exact_json import loads, number_identity
 
 class Problem(Exception):
     def __init__(self, status, code):
@@ -24,7 +25,7 @@ def identifier(body, key):
     return string(body, key, maximum=64)
 
 def party(value):
-    if isinstance(value, bool) or not isinstance(value, (int, float)) or (isinstance(value,float) and not math.isfinite(value)) or value < 1 or value != int(value): fail()
+    if isinstance(value, bool) or not isinstance(value, (int, float, Decimal)) or (isinstance(value,float) and not math.isfinite(value)) or (isinstance(value,Decimal) and not value.is_finite()) or value < 1 or value != int(value): fail()
     return int(value)
 
 def query_party(value):
@@ -32,14 +33,9 @@ def query_party(value):
     try: return party(int(value))
     except ValueError: fail()
 
-def finite_float(raw):
-    value=float(raw)
-    if not math.isfinite(value): fail()
-    return value
-
 def parse(raw):
     try:
-        value = json.loads(raw, parse_float=finite_float, parse_constant=lambda _: fail('malformed_request',400))
+        value = loads(raw)
     except (ValueError, UnicodeError): fail('malformed_request',400)
     if not isinstance(value, dict): fail('malformed_request',400)
     return value
@@ -48,8 +44,8 @@ def canonical(value):
     # Typed structural representation: true differs from 1; 1 and 1.0 agree.
     if value is None: return ['null']
     if isinstance(value, bool): return ['bool', value]
-    if isinstance(value, (int,float)):
-        return ['number', str(Decimal(str(value)).normalize()) if value else '0']
+    if isinstance(value, (int,float,Decimal)):
+        return ['number', number_identity(value)]
     if isinstance(value, str): return ['string', value]
     if isinstance(value, list): return ['array', [canonical(v) for v in value]]
     return ['object', [[k,canonical(value[k])] for k in sorted(value)]]

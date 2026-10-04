@@ -3,6 +3,7 @@ import sqlite3
 import threading
 from contextlib import contextmanager
 from .validation import fail, Problem
+from .exact_json import dumps
 
 SCHEMA='''
 CREATE TABLE users(id TEXT PRIMARY KEY,email TEXT UNIQUE NOT NULL,data TEXT NOT NULL);
@@ -15,7 +16,6 @@ CREATE TABLE receipts(user_id TEXT REFERENCES users(id),method TEXT,path TEXT,ke
 '''
 TABLES=['users','sessions','restaurants','dining_tables','reservations','allocations','receipts']
 
-def dumps(value): return json.dumps(value,ensure_ascii=False,separators=(',',':'),allow_nan=False)
 
 class Store:
     def __init__(self):
