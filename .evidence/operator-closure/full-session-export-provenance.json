@@ -1,0 +1,37 @@
+{
+  "at": "2026-10-04T20:37:07.672384+00:00",
+  "browser_download_waiter": "Timed out although native download succeeded; file timestamp and full export verified. No duplicate download requested.",
+  "copies_byte_identical": true,
+  "credential_review": "No known configured BAND agent credential values or credential-prefix matches. Two assignment-regex hits were source-code variable assignments, not embedded secrets. Export kept byte-identical.",
+  "event_count": 3774,
+  "event_types": {
+    "participant": 7,
+    "task": 1053,
+    "text": 170,
+    "tool_call": 1272,
+    "tool_result": 1272
+  },
+  "exported_at": "2026-10-04T20:34:22.604Z",
+  "human_dispatch_event": "8f18562f-be68-4d4b-9789-d4b0b30c4d14",
+  "human_text_count": 1,
+  "metadata_note": "Reviewer changed receipt PENDING to ACKNOWLEDGED after PM outcome commit; original pending snapshot remains in prior commit. Operator commit retains that actual acknowledgment and room export only; product rejection unchanged.",
+  "method": "BAND web console Conversation options > Download > Download full session",
+  "original_download": "/Users/frank/Downloads/MillieMoon-Tablekeeper-Run-4.json",
+  "page": "https://app.band.ai/sessions/0b882870-2e49-4d39-bc40-2bf47cc46f08",
+  "pre_packaging_head": "87059c1994c381193383969732160999ab1f9fcc",
+  "redactions": 0,
+  "scope": "full",
+  "sha256": "2942e13db3ab99f208e6c3cf228160126ff8d6dbda62f46cf2c5572c5cda8dd3",
+  "stage1_tree": "be50513daabf911fa11a1df6a6050cdba30f18d4",
+  "ui_filters": {
+    "participants": [],
+    "types": [
+      "text",
+      "thought",
+      "memory",
+      "participant",
+      "system"
+    ]
+  },
+  "unique_event_ids": true
+}

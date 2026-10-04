@@ -421,7 +421,15 @@
   "repairs_remaining": 0,
   "clean_after": true,
   "finished_at": "2026-10-04T20:15:22.340106+00:00",
-  "receipt_status": "PENDING",
+  "receipt_status": "ACKNOWLEDGED",
   "room_decision": "6d03cee9-0b0d-419b-988e-dd38a2a168e2",
-  "return_delivery": "S1-REVIEW-RETURN-D2"
+  "return_delivery": "S1-REVIEW-RETURN-D2",
+  "return_receipt": {
+    "status": "ACKNOWLEDGED",
+    "sender": "@frankzhu94/factory-pm",
+    "delivery": "S1-REVIEW-RETURN-D2",
+    "sha256": "192e6db1b61b28e3e32fb8a27755da85ff539d5a15097e2b383140538d3cd40d",
+    "observed_utc": "2026-10-04T20:20:57.740577+00:00",
+    "source": "Addressed BAND message; event UUID not exposed in received message"
+  }
 }
