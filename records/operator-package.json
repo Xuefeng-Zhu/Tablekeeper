@@ -41,6 +41,20 @@
   "files": [
     {
       "path": "README.md",
+      "sha256": "74b2fcfd02c1fe897c38959efd8a53b2c84a590acf31c6a06ae3d9297022d868"
+    },
+    {
+      "path": "FACTORY.md",
+      "sha256": "4c78baf4dc36d8f73d62f80733c127b92e4efcb503e2aa47a55ab2c27b7f8997"
+    },
+    {
+      "path": "submission-description.md",
+      "sha256": "5185a618fe397ae7cefe617d1b518525b3667573cce8358614ea5b5f061b27b0"
+    }
+  ],
+  "source_draft_files": [
+    {
+      "path": "README.md",
       "sha256": "f18eb107e0d498868eb5c89a4b75a4b216ec964a9e5573252fe86cf9a7658bdf"
     },
     {
@@ -51,5 +65,12 @@
       "path": "submission-description.md",
       "sha256": "9ced987fdb45e02879d7466e5da9c0bd122ae36b19808bdfbf31620d2a39589f"
     }
-  ]
+  ],
+  "initial_metadata_commit": "2d3406b7d305eee21a5555315046f793460e2a08",
+  "offline_package_check": {
+    "at": "2026-10-04T23:46:12.484363Z",
+    "exit_code": 0,
+    "root_tree": "3853266bd4829ab423a534ff942151a1ff871be8",
+    "scope": "Layout/room/mandate/credential-pattern checks, not product acceptance"
+  }
 }
