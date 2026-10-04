@@ -1,0 +1,13 @@
+test_concurrent_identical_receipts (test_api.API.test_concurrent_identical_receipts) ... ok
+test_dst_and_boundary (test_api.API.test_dst_and_boundary) ... ok
+test_portability_and_original_receipt (test_api.API.test_portability_and_original_receipt) ... ok
+test_receipt_precedence (test_api.API.test_receipt_precedence) ... ok
+test_swap_and_rollback (test_api.API.test_swap_and_rollback) ... ok
+test_corrupt_imports_are_atomic (test_state.State.test_corrupt_imports_are_atomic) ... ok
+test_history_and_receipts_roundtrip (test_state.State.test_history_and_receipts_roundtrip) ... ok
+test_reset_shape_and_rollback (test_state.State.test_reset_shape_and_rollback) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.866s
+
+OK

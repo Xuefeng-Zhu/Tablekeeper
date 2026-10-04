@@ -1,0 +1,147 @@
+{
+  "work_item": "S1-IMPLEMENT",
+  "state": "REVIEW",
+  "owner": "@frankzhu94/factory-backend",
+  "next_recipient": "@frankzhu94/factory-pm",
+  "starting_revision": "7174a23084cf03e85a7539a39fc60862b89f2494",
+  "product_candidate": "0342cdb87ab00224c7395dd767e851a994602121",
+  "recorded_at": "2026-10-04T19:18:54.725570+00:00",
+  "input_receipt_event": "999425ce-1e34-4c2e-9518-979cc5fc4b7b",
+  "start_event": "620bb569-224c-471e-85bf-0111585b3c91",
+  "workspace": "/Users/frank/mygit/Tablekeeper/result-run-4",
+  "ownership": [
+    "stage-1/**",
+    "/Users/frank/mygit/Tablekeeper/result-run-4/.evidence/S1-IMPLEMENT-CONTINUE-20261004T1911Z"
+  ],
+  "commands": [
+    {
+      "command": "git fetch origin && git merge --ff-only origin/run-4",
+      "exit": 0
+    },
+    {
+      "command": "PYTHONPATH=stage-1 /private/tmp/tablekeeper-s1-backend-venv/bin/python -m unittest discover -s stage-1/tests -v",
+      "cwd": "/Users/frank/mygit/Tablekeeper/result-run-4",
+      "exit": 0,
+      "log": "own-candidate.log",
+      "result": "8 tests PASS"
+    },
+    {
+      "command": "docker build -t tablekeeper-s1-backend-continue stage-1",
+      "exit": 0,
+      "log": "docker-final-build.log"
+    },
+    {
+      "command": "/Users/frank/mygit/Tablekeeper/runs/harness-venv/bin/python stage-1/tests/container_checks.py tablekeeper-s1-backend-continue",
+      "exit": 0,
+      "result": {
+        "destination_health_seconds": 0.15056208700116258,
+        "import_seconds": 0.010125392000190914,
+        "source_destroyed_before_import": true,
+        "portable_original_receipts_sessions_passwords": true,
+        "replacement_and_repeat_import": true,
+        "health_seconds": 0.17486035398906097,
+        "reset_seconds": 0.040325859998119995,
+        "create_max_seconds": 0.021598751001874916,
+        "login_max_seconds": 1.8739566050062422,
+        "status": "PASS",
+        "started_at": "2026-10-04T19:17:30.124068+00:00",
+        "finished_at": "2026-10-04T19:17:33.471110+00:00",
+        "cpus": 2,
+        "memory_bytes": 2147483648,
+        "network": "none",
+        "concurrent_requests": 50,
+        "image": "tablekeeper-s1-backend-continue"
+      }
+    },
+    {
+      "command": "/Users/frank/mygit/Tablekeeper/runs/harness-venv/bin/python -m harness run --track tablekeeper --repo /Users/frank/mygit/Tablekeeper/result-run-4 --stage 1 --mode isolated --out /Users/frank/mygit/Tablekeeper/result-run-4/.evidence/S1-IMPLEMENT-CONTINUE-20261004T1911Z/official-candidate",
+      "cwd": "/Users/frank/mygit/Tablekeeper/challenge",
+      "exit": 0,
+      "result": {
+        "revision": "0342cdb87ab00224c7395dd767e851a994602121",
+        "track": "tablekeeper",
+        "stages": {
+          "1": "pass"
+        },
+        "highest_contiguous": 1,
+        "started_at": "2026-10-04T19:17:28.420517+00:00",
+        "finished_at": "2026-10-04T19:18:01.142671+00:00",
+        "schema_version": 2,
+        "run_id": "5d3792d4fc7342dca66afd14c7ff0cfa",
+        "mode": "isolated",
+        "provenance": "working-tree",
+        "state": "completed",
+        "pytest_args": [],
+        "suite_digest": "8d7e7d9bb94893b67dff0a19ee8ecb8d6888db7208ed269f64b29c0a661a17a7",
+        "checks": {
+          "1": {
+            "collected": 120,
+            "passed": 120,
+            "failed": 0,
+            "errors": 0,
+            "skipped": 0,
+            "deselected": 0,
+            "xfailed": 0,
+            "files": {
+              "stage_1/test_health_reset_auth.py": {
+                "passed": 12,
+                "total": 12
+              },
+              "stage_1/test_reservations.py": {
+                "passed": 37,
+                "total": 37
+              },
+              "stage_1/test_restaurants_availability.py": {
+                "passed": 18,
+                "total": 18
+              },
+              "stage_1/test_retries_time_input.py": {
+                "passed": 20,
+                "total": 20
+              },
+              "stage_1/test_sample.py": {
+                "passed": 20,
+                "total": 20
+              },
+              "stage_1/test_seeded_state.py": {
+                "passed": 13,
+                "total": 13
+              }
+            }
+          }
+        },
+        "overshoot": null,
+        "claimed_stage": "1",
+        "share": 1.0,
+        "upgrade_sources": {
+          "2": {
+            "folder": "/Users/frank/mygit/Tablekeeper/result-run-4/stage-1",
+            "revision": "0342cdb87ab00224c7395dd767e851a994602121"
+          }
+        }
+      }
+    }
+  ],
+  "batch_concurrency": {
+    "status": "PASS",
+    "layer": "Flask test client",
+    "candidate": "0342cdb87ab00224c7395dd767e851a994602121",
+    "requests": 50,
+    "created": 1,
+    "replays": 49,
+    "counter": 3,
+    "elapsed_seconds": 0.019507834003889002
+  },
+  "limitations": [
+    "Independent QA and reviewer have not accepted this candidate",
+    "Only stage 1 implemented; automatic stage-2 overshoot probe fails as expected",
+    "Shipped checks are partial official coverage, not official final judgment",
+    "Measured Docker latency uses synthetic fixture and this host, not a proof for unbounded inputs",
+    "Schema-1 predecessor snapshots omit optional changed_fields and capacity snapshots; reader preserves originals and documents fallback to unchanged fixture data",
+    "No future-stage migration or UI tested; not dispatched"
+  ],
+  "repair_cycles_used": 1,
+  "repair_ceiling": 3,
+  "usage": "UNAVAILABLE",
+  "cost": "UNAVAILABLE"
+}

@@ -1,0 +1,1 @@
+{"status": "PASS", "layer": "Flask test client", "candidate": "0342cdb87ab00224c7395dd767e851a994602121", "requests": 50, "created": 1, "replays": 49, "counter": 3, "elapsed_seconds": 0.019507834003889002}

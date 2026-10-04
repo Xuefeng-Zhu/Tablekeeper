@@ -1,0 +1,58 @@
+test_concurrent_identical_receipts (test_api.API.test_concurrent_identical_receipts) ... ok
+test_dst_and_boundary (test_api.API.test_dst_and_boundary) ... ok
+test_portability_and_original_receipt (test_api.API.test_portability_and_original_receipt) ... /private/tmp/tablekeeper-s1-backend-venv/lib/python3.13/site-packages/werkzeug/routing/rules.py:837: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10759d5d0>
+  code = compile(module, "<werkzeug routing>", "exec")
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_receipt_precedence (test_api.API.test_receipt_precedence) ... ok
+test_swap_and_rollback (test_api.API.test_swap_and_rollback) ... ok
+test_concurrent_identical_receipts (test_api.API.test_concurrent_identical_receipts) ... /private/tmp/tablekeeper-s1-backend-venv/lib/python3.13/site-packages/werkzeug/routing/rules.py:616: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10759cd60>
+  match = _part_re.match(rule, pos)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/private/tmp/tablekeeper-s1-backend-venv/lib/python3.13/site-packages/werkzeug/routing/rules.py:616: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10759d5d0>
+  match = _part_re.match(rule, pos)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/private/tmp/tablekeeper-s1-backend-venv/lib/python3.13/site-packages/blinker/base.py:204: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x1074c6110>
+  def send(
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/private/tmp/tablekeeper-s1-backend-venv/lib/python3.13/site-packages/blinker/base.py:204: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10759d300>
+  def send(
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/private/tmp/tablekeeper-s1-backend-venv/lib/python3.13/site-packages/blinker/base.py:204: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10759c130>
+  def send(
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_dst_and_boundary (test_api.API.test_dst_and_boundary) ... ok
+test_portability_and_original_receipt (test_api.API.test_portability_and_original_receipt) ... /Users/frank/mygit/Tablekeeper/result-run-4/stage-1/tablekeeper/snapshot_validation.py:30: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x1074c7b50>
+  for ident,email,raw in db.execute('SELECT * FROM users'):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_receipt_precedence (test_api.API.test_receipt_precedence) ... ok
+test_swap_and_rollback (test_api.API.test_swap_and_rollback) ... ok
+test_concurrent_identical_receipts (test_state.State.test_concurrent_identical_receipts) ... /Users/frank/mygit/Tablekeeper/result-run-4/stage-1/tablekeeper/app.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x1074c6c50>
+  row=db.execute('SELECT data FROM users WHERE email=?',(email,)).fetchone()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/frank/mygit/Tablekeeper/result-run-4/stage-1/tablekeeper/app.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10759d5d0>
+  row=db.execute('SELECT data FROM users WHERE email=?',(email,)).fetchone()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_corrupt_imports_are_atomic (test_state.State.test_corrupt_imports_are_atomic) ... ok
+test_dst_and_boundary (test_state.State.test_dst_and_boundary) ... /Users/frank/.local/share/uv/python/cpython-3.13.5-macos-aarch64-none/lib/python3.13/json/decoder.py:345: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10759c9a0>
+  obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_history_and_receipts_roundtrip (test_state.State.test_history_and_receipts_roundtrip) ... ok
+test_portability_and_original_receipt (test_state.State.test_portability_and_original_receipt) ... /private/tmp/tablekeeper-s1-backend-venv/lib/python3.13/site-packages/werkzeug/routing/rules.py:771: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10759c9a0>
+  _convert(elem) if is_dynamic else ast.Constant(elem)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_receipt_precedence (test_state.State.test_receipt_precedence) ... ok
+test_reset_shape_and_rollback (test_state.State.test_reset_shape_and_rollback) ... <frozen abc>:107: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10759c9a0>
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_swap_and_rollback (test_state.State.test_swap_and_rollback) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 1.747s
+
+OK

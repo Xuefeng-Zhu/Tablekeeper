@@ -1,0 +1,19 @@
+{
+  "destination_health_seconds": 0.131869787001051,
+  "import_seconds": 0.008174561997293495,
+  "source_destroyed_before_import": true,
+  "portable_original_receipts_sessions_passwords": true,
+  "replacement_and_repeat_import": true,
+  "health_seconds": 0.20471217000158504,
+  "reset_seconds": 0.035307016005390324,
+  "create_max_seconds": 0.01791459300147835,
+  "login_max_seconds": 1.7118669220071752,
+  "status": "PASS",
+  "started_at": "2026-10-04T19:15:35.236493+00:00",
+  "finished_at": "2026-10-04T19:15:38.440920+00:00",
+  "cpus": 2,
+  "memory_bytes": 2147483648,
+  "network": "none",
+  "concurrent_requests": 50,
+  "image": "tablekeeper-s1-backend-continue"
+}

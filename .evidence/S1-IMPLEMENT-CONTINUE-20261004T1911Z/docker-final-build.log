@@ -1,0 +1,37 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 373B done
+#1 DONE 0.1s
+
+#2 [internal] load metadata for docker.io/library/python:3.13.5-slim
+#2 DONE 0.2s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 64B done
+#3 DONE 0.0s
+
+#4 [1/5] FROM docker.io/library/python:3.13.5-slim@sha256:4c2cf9917bd1cbacc5e9b07320025bdb7cdf2df7b0ceaccb55e9dd7e30987419
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 1.23kB done
+#5 DONE 0.0s
+
+#6 [2/5] WORKDIR /app
+#6 CACHED
+
+#7 [3/5] COPY requirements.txt .
+#7 CACHED
+
+#8 [4/5] RUN pip install --no-cache-dir -r requirements.txt
+#8 CACHED
+
+#9 [5/5] COPY tablekeeper ./tablekeeper
+#9 CACHED
+
+#10 exporting to image
+#10 exporting layers done
+#10 writing image sha256:c53099d42cf24c74945b7c6d635c5e7cda6577ba4c559ff51aa2dedb373c7a5e done
+#10 naming to docker.io/library/tablekeeper-s1-backend-continue done
+#10 DONE 0.0s
