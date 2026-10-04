@@ -2,7 +2,7 @@ import copy, re, secrets
 from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 from .core import *
-from .store import Store,empty
+from .store import Store,Transaction,empty
 class Service:
     def __init__(self,now=None):
         self.store=Store(); self.now=now or (lambda: datetime.now(UTC))
@@ -31,9 +31,15 @@ class Service:
     def changed(self,s,b,p,r,kind):
         if all(b[k]==v for k,v in p.items()): return False
         b.update(p); b['_terms']=self.terms(r); b['_revision']+=1
-        b['_history'].append(dict(sequence=len(b['_history'])+1,kind=kind,at=stamp(self.now()),state=view(b)))
+        self.record_history(s,b,kind,stamp(self.now()))
         return True
-    def bump(self,s,rid): s['restaurant_revisions'][rid]+=1
+    def bump(self,s,rid):
+        s['restaurant_revisions'][rid]+=1
+        s.mark_dirty()
+    def record_history(self,s,b,kind,at):
+        event=dict(sequence=b['_revision'],kind=kind,at=at,state=view(b))
+        if isinstance(s,Transaction): s.append_history(b['reservation_id'],event)
+        else: b.setdefault('_history',[]).append(event)
     def new_booking(self,s,r,b,user,seed=False):
         p=proposal(r,b); self.available(s,p)
         ref=text(b,'reference') if seed else ''.join(secrets.choice('ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789') for _ in range(10))
@@ -41,8 +47,8 @@ class Service:
         if not re.fullmatch('[A-Z0-9]{6,12}',ref): fail()
         bid=text(b,'id',64) if seed else uid()
         if any(x['reference']==ref or x['reservation_id']==bid for x in s['reservations']): fail()
-        result=dict(reservation_id=bid,reference=ref,**p,status='confirmed',created_at=stamp(self.now()),_user_id=user,_terms=self.terms(r),_revision=1,_history=[])
-        result['_history'].append(dict(sequence=1,kind='created',at=result['created_at'],state=view(result)))
+        result=dict(reservation_id=bid,reference=ref,**p,status='confirmed',created_at=stamp(self.now()),_user_id=user,_terms=self.terms(r),_revision=1)
+        self.record_history(s,result,'created',result['created_at'])
         s['reservations'].append(result); return result
     def reset(self,b):
         candidate=empty(); ids=set(); emails=set()
@@ -77,7 +83,7 @@ class Service:
             if generation!=self.store.generation or u not in s['users']: fail(401,'unauthenticated')
             return self.session(s,u)
     def session(self,s,u):
-        token=secrets.token_urlsafe(32); s['sessions'].append(dict(token=token,user_id=u['id']))
+        token=secrets.token_urlsafe(32); s['sessions'].append(dict(token=token,user_id=u['id'])); s.mark_dirty()
         return dict(user_id=u['id'],display_name=u['display_name'],token=token)
     def amend(self,s,b,changes,now):
         if b['status']=='cancelled': fail(409,'reservation_cancelled')
@@ -86,13 +92,13 @@ class Service:
         return r,proposal(r,fields)
     def route(self,method,path,q,b,raw,header,key):
         if method=='GET' and path=='/health':
-            with self.store.transaction(): return 200,{'status':'ok'}
+            self.store.health(); return 200,{'status':'ok'}
         if method=='POST' and path=='/_test/reset': self.reset(b); return 204,None
         if method=='POST' and path=='/_test/import':
             from .state_io import validate_import
             self.store.replace(validate_import(b,self)); return 204,None
         if method=='GET' and path=='/_test/export':
-            with self.store.transaction() as s: return 200,dict(track='tablekeeper',format_version=1,state=s)
+            return 200,dict(track='tablekeeper',format_version=1,state=self.store.export())
         if method=='POST' and path in ['/auth/signup','/auth/login']: return (201 if path.endswith('signup') else 200),self.login(b,path.endswith('signup'))
         write=method in ['POST','PATCH']
         with self.store.transaction(write) as s:
@@ -104,7 +110,7 @@ class Service:
             if receipt_path:
                 if key is None or key=='': fail(400,'missing_idempotency_key')
                 if len(key)>255: fail()
-                receipt=next((x for x in s['receipts'] if (x['user_id'],x['method'],x['path'],x['key'])==(user,method,path,key)),None)
+                receipt=s.receipt(user,method,path,key)
                 if receipt:
                     if not equal(parse(receipt['request']),b): fail(409,'idempotency_key_reuse')
                     return 200,json.loads(receipt['response'])
@@ -135,7 +141,7 @@ class Service:
                 if method=='POST' and cancel:
                     if old['status']!='cancelled':
                         self.cutoff(old,now); old['status']='cancelled'; old['_revision']+=1
-                        old['_history'].append(dict(sequence=len(old['_history'])+1,kind='cancelled',at=stamp(now),state=view(old))); self.bump(s,old['restaurant_id'])
+                        self.record_history(s,old,'cancelled',stamp(now)); self.bump(s,old['restaurant_id'])
                     return 200,view(old)
                 if method=='PATCH' and not cancel:
                     r,p=self.amend(s,old,b,now); self.available(s,p,[ref])
@@ -143,7 +149,7 @@ class Service:
                     return 200,view(old)
                 fail(404,'not_found')
             else: fail(404,'not_found')
-            if receipt_path: s['receipts'].append(dict(user_id=user,method=method,path=path,key=key,request=raw,response=json.dumps(result,separators=(',',':'))))
+            if receipt_path: s.insert_receipt(dict(user_id=user,method=method,path=path,key=key,request=raw,response=json.dumps(result,separators=(',',':'))))
             return status,result
     def availability(self,s,q):
         if any(k not in q for k in ['restaurant_id','date','party_size']): fail()
