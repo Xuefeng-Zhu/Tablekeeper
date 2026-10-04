@@ -1,5 +1,6 @@
 """Detached, versioned portable snapshot validation. Never replay historical writes."""
 from .core import *
+from .receipt_validation import validate_receipt
 
 def validate_import(envelope,service):
     try:
@@ -63,8 +64,8 @@ def validate_import(envelope,service):
             if user not in users or method!='POST' or path not in ['/reservations','/reservation-moves'] or not 1<=len(key)<=255: fail()
             address=(user,method,path,key)
             if address in keys: fail()
-            keys.add(address); parse(text(receipt,'request')); response=parse(text(receipt,'response'))
-            if path=='/reservations' and not isinstance(response.get('reference'),str): fail()
-            if path=='/reservation-moves' and not isinstance(response.get('reservations'),list): fail()
+            keys.add(address)
+            request=parse(text(receipt,'request')); response=parse(text(receipt,'response'))
+            validate_receipt(request,response,receipt,{b['reference']:b for b in bookings},restaurants)
         return s
     except (Error,KeyError,TypeError,ValueError,OverflowError,AttributeError): fail()

@@ -1,4 +1,5 @@
-import json, os
+import os
+from . import codec as json
 from http.server import BaseHTTPRequestHandler,ThreadingHTTPServer
 from urllib.parse import urlsplit,parse_qs,unquote
 from .core import Error,parse,fail,password

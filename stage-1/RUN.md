@@ -14,3 +14,9 @@ The server uses one process, threaded HTTP with backlog 256, a shared reentrant 
 Local ambiguous starts resolve to the earliest UTC instant; gap starts are rejected. A nonexistent opening/closing boundary resolves to the first valid minute after the gap while retaining the original grid anchor. Historical sub-minute offsets are rendered in UTC to retain RFC3339 syntax. Calendar arithmetic outside Python's supported years 0001–9999 is rejected.
 
 Owner unit checks: `docker run --rm -v "$PWD/tests:/tests:ro" tablekeeper-stage-1 python -m unittest discover -s /tests -v`. HTTP tests live separately in the repository's independent QA suite and require two disposable instances.
+
+JSON encoding and decoding retain large integer values through exact decimal conversion,
+without changing interpreter-wide integer limits. Fixture numeric types use ordinary
+400 wrong-type errors; party size retains its specified 422 override. Import validates
+complete historical receipt DTOs and immutable identities, retaining the original text
+and allowing current reservations to differ after amendment or cancellation.

@@ -1,5 +1,6 @@
 """Validation, lossless request comparison, portable password and civil-time rules."""
-import json, re, secrets, hashlib, hmac, threading
+import re, secrets, hashlib, hmac, threading
+from . import codec as json
 from decimal import Decimal
 from datetime import datetime, timedelta, timezone
 from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
@@ -35,7 +36,11 @@ def text(o,k,maximum=None):
 def integer(o,k,minimum=1):
     if k not in o: fail()
     v=o[k]
-    if isinstance(v,bool) or not isinstance(v,(int,Decimal)) or v!=int(v) or v<minimum: fail()
+    if isinstance(v,bool) or not isinstance(v,(int,Decimal)):
+        if k=='party_size': fail()
+        fail(400,'malformed_request')
+    if isinstance(v,Decimal) and not v.is_finite(): fail()
+    if v!=int(v) or v<minimum: fail()
     return int(v)
 
 def query_count(value):

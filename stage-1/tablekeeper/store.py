@@ -2,7 +2,7 @@
 import copy
 import sqlite3
 import threading
-import json
+from . import codec as json
 from contextlib import contextmanager
 
 
