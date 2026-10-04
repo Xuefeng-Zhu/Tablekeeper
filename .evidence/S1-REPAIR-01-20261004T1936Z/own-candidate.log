@@ -1,0 +1,17 @@
+test_concurrent_identical_receipts (test_api.API.test_concurrent_identical_receipts) ... ok
+test_dst_and_boundary (test_api.API.test_dst_and_boundary) ... ok
+test_portability_and_original_receipt (test_api.API.test_portability_and_original_receipt) ... ok
+test_receipt_precedence (test_api.API.test_receipt_precedence) ... ok
+test_swap_and_rollback (test_api.API.test_swap_and_rollback) ... ok
+test_global_shape_before_resource_checks (test_moves_order.MoveOrder.test_global_shape_before_resource_checks) ... ok
+test_input_order_for_lookup_cutoff_cancel_and_changes (test_moves_order.MoveOrder.test_input_order_for_lookup_cutoff_cancel_and_changes) ... ok
+test_restaurant_checks_follow_input_order (test_moves_order.MoveOrder.test_restaurant_checks_follow_input_order) ... ok
+test_swap_rollback_noop_and_original_receipt (test_moves_order.MoveOrder.test_swap_rollback_noop_and_original_receipt) ... ok
+test_corrupt_imports_are_atomic (test_state.State.test_corrupt_imports_are_atomic) ... ok
+test_history_and_receipts_roundtrip (test_state.State.test_history_and_receipts_roundtrip) ... ok
+test_reset_shape_and_rollback (test_state.State.test_reset_shape_and_rollback) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 1.397s
+
+OK

@@ -1,0 +1,9 @@
+{"test": "receipt_identity", "outcome": "PASS", "detail": null, "start_utc": "2026-10-04T19:39:00.292392+00:00", "elapsed_s": 0.0959347679890925}
+{"test": "concurrent_receipts", "outcome": "PASS", "detail": {"requests": 50, "elapsed_s": 0.0261367969942512}, "start_utc": "2026-10-04T19:39:00.388374+00:00", "elapsed_s": 0.09927546100516338}
+{"test": "moves_precedence_noop", "outcome": "PASS", "detail": null, "start_utc": "2026-10-04T19:39:00.487675+00:00", "elapsed_s": 0.09216282700072043}
+{"test": "mixed_write_races", "outcome": "PASS", "detail": {"requests": 50, "status_counts": {"200": 13, "201": 12, "409": 25}}, "start_utc": "2026-10-04T19:39:00.579871+00:00", "elapsed_s": 0.10337094299029559}
+{"test": "swap_read_atomicity", "outcome": "PASS", "detail": null, "start_utc": "2026-10-04T19:39:00.683267+00:00", "elapsed_s": 0.26780877099372447}
+{"test": "restaurant_scope_and_adjacent", "outcome": "PASS", "detail": null, "start_utc": "2026-10-04T19:39:00.951141+00:00", "elapsed_s": 0.07633265000185929}
+{"test": "dst_boundaries", "outcome": "PASS", "detail": null, "start_utc": "2026-10-04T19:39:01.027549+00:00", "elapsed_s": 0.32350614000461064}
+{"test": "snapshot_rollback", "outcome": "PASS", "detail": null, "start_utc": "2026-10-04T19:39:01.351118+00:00", "elapsed_s": 0.11404310099896975}
+{"summary": {"PASS": 8, "FAIL": 0}}

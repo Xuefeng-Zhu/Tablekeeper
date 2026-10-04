@@ -1,0 +1,75 @@
+{
+  "revision": "fe225bd667dd5a3685bb9140d08e8ad0d52f6af4",
+  "utc": "2026-10-04T19:37:18.083145+00:00",
+  "observations": [
+    {
+      "test": "invalid_first_unknown_second",
+      "expected": [
+        422,
+        "validation_failed"
+      ],
+      "actual": [
+        404,
+        "not_found"
+      ],
+      "outcome": "FAIL",
+      "request": {
+        "moves": [
+          {
+            "reference": "J51WIQ17R1",
+            "party_size": 0
+          },
+          {
+            "reference": "ABSENT"
+          }
+        ]
+      }
+    },
+    {
+      "test": "unknown_first_invalid_second",
+      "expected": [
+        404,
+        "not_found"
+      ],
+      "actual": [
+        404,
+        "not_found"
+      ],
+      "outcome": "PASS",
+      "request": {
+        "moves": [
+          {
+            "reference": "ABSENT"
+          },
+          {
+            "reference": "J51WIQ17R1",
+            "party_size": 0
+          }
+        ]
+      }
+    },
+    {
+      "test": "cutoff_first_unknown_second",
+      "expected": [
+        409,
+        "cutoff_passed"
+      ],
+      "actual": [
+        404,
+        "not_found"
+      ],
+      "outcome": "FAIL",
+      "request": {
+        "moves": [
+          {
+            "reference": "SXF2X9OI5J",
+            "party_size": 0
+          },
+          {
+            "reference": "ABSENT"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+test_global_shape_before_resource_checks (test_moves_order.MoveOrder.test_global_shape_before_resource_checks) ... ok
+test_input_order_for_lookup_cutoff_cancel_and_changes (test_moves_order.MoveOrder.test_input_order_for_lookup_cutoff_cancel_and_changes) ... 
+  test_input_order_for_lookup_cutoff_cancel_and_changes (test_moves_order.MoveOrder.test_input_order_for_lookup_cutoff_cancel_and_changes) (moves=[{'reference': '1BUUVIHMHM', 'party_size': 0}, {'reference': 'ABSENT'}]) ... FAIL
+  test_input_order_for_lookup_cutoff_cancel_and_changes (test_moves_order.MoveOrder.test_input_order_for_lookup_cutoff_cancel_and_changes) (moves=[{'reference': '10DI4MI9OP', 'party_size': 0}, {'reference': 'ABSENT'}]) ... FAIL
+  test_input_order_for_lookup_cutoff_cancel_and_changes (test_moves_order.MoveOrder.test_input_order_for_lookup_cutoff_cancel_and_changes) (moves=[{'reference': '1BUUVIHMHM', 'party_size': 0}, {'reference': 'H57SAE8EB8'}]) ... FAIL
+  test_input_order_for_lookup_cutoff_cancel_and_changes (test_moves_order.MoveOrder.test_input_order_for_lookup_cutoff_cancel_and_changes) (moves=[{'reference': '9C80LO079J', 'party_size': 0}, {'reference': 'ABSENT'}]) ... FAIL
+test_restaurant_checks_follow_input_order (test_moves_order.MoveOrder.test_restaurant_checks_follow_input_order) ... FAIL
+test_swap_rollback_noop_and_original_receipt (test_moves_order.MoveOrder.test_swap_rollback_noop_and_original_receipt) ... ok
+
+======================================================================
+FAIL: test_input_order_for_lookup_cutoff_cancel_and_changes (test_moves_order.MoveOrder.test_input_order_for_lookup_cutoff_cancel_and_changes) (moves=[{'reference': '1BUUVIHMHM', 'party_size': 0}, {'reference': 'ABSENT'}])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/frank/mygit/Tablekeeper/result-run-4/stage-1/tests/test_moves_order.py", line 64, in test_input_order_for_lookup_cutoff_cancel_and_changes
+    with self.subTest(moves=moves): self.assert_failure(moves,status,code)
+                                    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/Users/frank/mygit/Tablekeeper/result-run-4/stage-1/tests/test_moves_order.py", line 45, in assert_failure
+    self.assertEqual((response.status_code,response.json.get('error',{}).get('code')),(status,code))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Tuples differ: (404, 'not_found') != (422, 'validation_failed')
+
+First differing element 0:
+404
+422
+
+- (404, 'not_found')
++ (422, 'validation_failed')
+
+======================================================================
+FAIL: test_input_order_for_lookup_cutoff_cancel_and_changes (test_moves_order.MoveOrder.test_input_order_for_lookup_cutoff_cancel_and_changes) (moves=[{'reference': '10DI4MI9OP', 'party_size': 0}, {'reference': 'ABSENT'}])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/frank/mygit/Tablekeeper/result-run-4/stage-1/tests/test_moves_order.py", line 64, in test_input_order_for_lookup_cutoff_cancel_and_changes
+    with self.subTest(moves=moves): self.assert_failure(moves,status,code)
+                                    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/Users/frank/mygit/Tablekeeper/result-run-4/stage-1/tests/test_moves_order.py", line 45, in assert_failure
+    self.assertEqual((response.status_code,response.json.get('error',{}).get('code')),(status,code))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Tuples differ: (404, 'not_found') != (409, 'cutoff_passed')
+
+First differing element 0:
+404
+409
+
+- (404, 'not_found')
++ (409, 'cutoff_passed')
+
+======================================================================
+FAIL: test_input_order_for_lookup_cutoff_cancel_and_changes (test_moves_order.MoveOrder.test_input_order_for_lookup_cutoff_cancel_and_changes) (moves=[{'reference': '1BUUVIHMHM', 'party_size': 0}, {'reference': 'H57SAE8EB8'}])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/frank/mygit/Tablekeeper/result-run-4/stage-1/tests/test_moves_order.py", line 64, in test_input_order_for_lookup_cutoff_cancel_and_changes
+    with self.subTest(moves=moves): self.assert_failure(moves,status,code)
+                                    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/Users/frank/mygit/Tablekeeper/result-run-4/stage-1/tests/test_moves_order.py", line 45, in assert_failure
+    self.assertEqual((response.status_code,response.json.get('error',{}).get('code')),(status,code))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Tuples differ: (404, 'not_found') != (422, 'validation_failed')
+
+First differing element 0:
+404
+422
+
+- (404, 'not_found')
++ (422, 'validation_failed')
+
+======================================================================
+FAIL: test_input_order_for_lookup_cutoff_cancel_and_changes (test_moves_order.MoveOrder.test_input_order_for_lookup_cutoff_cancel_and_changes) (moves=[{'reference': '9C80LO079J', 'party_size': 0}, {'reference': 'ABSENT'}])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/frank/mygit/Tablekeeper/result-run-4/stage-1/tests/test_moves_order.py", line 64, in test_input_order_for_lookup_cutoff_cancel_and_changes
+    with self.subTest(moves=moves): self.assert_failure(moves,status,code)
+                                    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/Users/frank/mygit/Tablekeeper/result-run-4/stage-1/tests/test_moves_order.py", line 45, in assert_failure
+    self.assertEqual((response.status_code,response.json.get('error',{}).get('code')),(status,code))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Tuples differ: (404, 'not_found') != (409, 'reservation_cancelled')
+
+First differing element 0:
+404
+409
+
+- (404, 'not_found')
++ (409, 'reservation_cancelled')
+
+======================================================================
+FAIL: test_restaurant_checks_follow_input_order (test_moves_order.MoveOrder.test_restaurant_checks_follow_input_order)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/frank/mygit/Tablekeeper/result-run-4/stage-1/tests/test_moves_order.py", line 69, in test_restaurant_checks_follow_input_order
+    self.assert_failure([self.item(self.a,party_size=5),self.item(self.second)],422,'party_exceeds_capacity')
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/frank/mygit/Tablekeeper/result-run-4/stage-1/tests/test_moves_order.py", line 45, in assert_failure
+    self.assertEqual((response.status_code,response.json.get('error',{}).get('code')),(status,code))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Tuples differ: (422, 'validation_failed') != (422, 'party_exceeds_capacity')
+
+First differing element 1:
+'validation_failed'
+'party_exceeds_capacity'
+
+- (422, 'validation_failed')
++ (422, 'party_exceeds_capacity')
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.546s
+
+FAILED (failures=5)

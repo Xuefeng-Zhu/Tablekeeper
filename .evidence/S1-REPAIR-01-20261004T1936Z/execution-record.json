@@ -1,0 +1,339 @@
+{
+  "work_item": "S1-IMPLEMENT",
+  "defect": "S1-DEFECT-01",
+  "state": "REVIEW",
+  "owner": "@frankzhu94/factory-backend",
+  "next_recipient": "@frankzhu94/factory-pm",
+  "starting_rejected_revision": "fe225bd667dd5a3685bb9140d08e8ad0d52f6af4",
+  "product_candidate": "8a482eaa7dd0359c3d212962df8cad57645c6a3d",
+  "recorded_at": "2026-10-04T19:40:10.035604+00:00",
+  "room_events": {
+    "rejection": "74cf94a3-3f30-4290-b736-f9756d20d2f8",
+    "receipt": "d43591ae-bcf5-44ae-85ca-fb8f862fa6cf",
+    "start": "ca06f0d4-d4e7-468a-9e6a-0073d815269f",
+    "progress": "56008640-2172-49e6-a850-2338393702f8"
+  },
+  "workspace": "/Users/frank/mygit/Tablekeeper/result-run-4",
+  "ownership": [
+    "stage-1/tablekeeper/reservations.py",
+    "stage-1/tests/test_moves_order.py",
+    "stage-1/STATE.md",
+    "/Users/frank/mygit/Tablekeeper/result-run-4/.evidence/S1-REPAIR-01-20261004T1936Z"
+  ],
+  "requirements": [
+    "Stage-1 section 11: Non-occupancy errors use ordinary amendment codes and take precedence in input order, with cutoff errors preceding other changes for that booking.",
+    "Validate global shape/unique references first; build proposals without mutation; run every occupancy check after all non-occupancy validation.",
+    "Preserve atomic swaps, unchanged items, rollback of state and receipts, original replay and failed-key reuse."
+  ],
+  "commands": [
+    {
+      "command": "git fetch origin && git merge --ff-only origin/run-4",
+      "exit": 0
+    },
+    {
+      "command": "/Users/frank/mygit/Tablekeeper/runs/harness-venv/bin/python .evidence/S1-REPAIR-01-20261004T1936Z/run_qa.py before",
+      "exit": 1,
+      "result": "Expected defect reproduced: 2 FAIL, 1 reversed-order PASS",
+      "details": {
+        "started_at": "2026-10-04T19:37:14.948413+00:00",
+        "actual_revision": "fe225bd667dd5a3685bb9140d08e8ad0d52f6af4",
+        "commands": [
+          {
+            "args": [
+              "docker",
+              "build",
+              "-t",
+              "tablekeeper-backend-repair-before",
+              "/Users/frank/mygit/Tablekeeper/result-run-4/stage-1"
+            ],
+            "exit": 0,
+            "log": "build"
+          },
+          {
+            "args": [
+              "docker",
+              "run",
+              "-d",
+              "--name",
+              "tablekeeper-backend-repair-before",
+              "--network",
+              "none",
+              "--cpus",
+              "2",
+              "--memory",
+              "2g",
+              "-e",
+              "PORT=8099",
+              "tablekeeper-backend-repair-before"
+            ],
+            "exit": 0,
+            "log": "start"
+          },
+          {
+            "args": [
+              "docker",
+              "exec",
+              "tablekeeper-backend-repair-before",
+              "python",
+              "-c",
+              "import time,urllib.request\nfor _ in range(100):\n try:\n  assert urllib.request.urlopen('http://127.0.0.1:8099/health',timeout=1).status==200;break\n except OSError:time.sleep(.1)\nelse:raise RuntimeError('not healthy')"
+            ],
+            "exit": 0,
+            "log": "health"
+          },
+          {
+            "args": [
+              "docker",
+              "cp",
+              "/Users/frank/mygit/Tablekeeper/result-run-4/.evidence/S1-QA-20261004T192516Z/independent.py",
+              "tablekeeper-backend-repair-before:/tmp/independent.py"
+            ],
+            "exit": 0,
+            "log": "copy-independent.py"
+          },
+          {
+            "args": [
+              "docker",
+              "cp",
+              "/Users/frank/mygit/Tablekeeper/result-run-4/.evidence/S1-QA-20261004T192516Z/precedence.py",
+              "tablekeeper-backend-repair-before:/tmp/precedence.py"
+            ],
+            "exit": 0,
+            "log": "copy-precedence.py"
+          },
+          {
+            "args": [
+              "docker",
+              "exec",
+              "tablekeeper-backend-repair-before",
+              "python",
+              "/tmp/precedence.py"
+            ],
+            "exit": 1,
+            "log": "precedence"
+          },
+          {
+            "args": [
+              "docker",
+              "rm",
+              "-f",
+              "tablekeeper-backend-repair-before"
+            ],
+            "exit": 0,
+            "log": "cleanup"
+          }
+        ],
+        "source_checksums": {
+          "independent.py": "d972ae37a0ad3771b165b38c55b3323185c255afbd56fe7e37e7430155cd4408",
+          "precedence.py": "07fb73c33299c68dcf438b624faa30a132dd253da06d2037e1e2e1738d78280b"
+        },
+        "reproduction_exit": 1,
+        "finished_at": "2026-10-04T19:37:18.187091+00:00"
+      }
+    },
+    {
+      "command": "PYTHONPATH=stage-1 /private/tmp/tablekeeper-s1-backend-venv/bin/python -m unittest discover -s stage-1/tests -p test_moves_order.py -v",
+      "exit": 1,
+      "result": "Pre-repair regression: four methods, five failed assertions/subtests; retained regression-before.log"
+    },
+    {
+      "command": "PYTHONPATH=stage-1 /private/tmp/tablekeeper-s1-backend-venv/bin/python -m unittest discover -s stage-1/tests -v",
+      "exit": 0,
+      "result": "12 PASS on committed product candidate",
+      "log": "own-candidate.log"
+    },
+    {
+      "command": "/Users/frank/mygit/Tablekeeper/runs/harness-venv/bin/python .evidence/S1-REPAIR-01-20261004T1936Z/run_qa.py after",
+      "exit": 0,
+      "result": "Unchanged QA reproduction 3 PASS; broader QA scripts 8 PASS; owner-support, not independent acceptance",
+      "details": {
+        "started_at": "2026-10-04T19:38:57.817856+00:00",
+        "actual_revision": "8a482eaa7dd0359c3d212962df8cad57645c6a3d",
+        "commands": [
+          {
+            "args": [
+              "docker",
+              "build",
+              "-t",
+              "tablekeeper-backend-repair-after",
+              "/Users/frank/mygit/Tablekeeper/result-run-4/stage-1"
+            ],
+            "exit": 0,
+            "log": "build"
+          },
+          {
+            "args": [
+              "docker",
+              "run",
+              "-d",
+              "--name",
+              "tablekeeper-backend-repair-after",
+              "--network",
+              "none",
+              "--cpus",
+              "2",
+              "--memory",
+              "2g",
+              "-e",
+              "PORT=8099",
+              "tablekeeper-backend-repair-after"
+            ],
+            "exit": 0,
+            "log": "start"
+          },
+          {
+            "args": [
+              "docker",
+              "exec",
+              "tablekeeper-backend-repair-after",
+              "python",
+              "-c",
+              "import time,urllib.request\nfor _ in range(100):\n try:\n  assert urllib.request.urlopen('http://127.0.0.1:8099/health',timeout=1).status==200;break\n except OSError:time.sleep(.1)\nelse:raise RuntimeError('not healthy')"
+            ],
+            "exit": 0,
+            "log": "health"
+          },
+          {
+            "args": [
+              "docker",
+              "cp",
+              "/Users/frank/mygit/Tablekeeper/result-run-4/.evidence/S1-QA-20261004T192516Z/independent.py",
+              "tablekeeper-backend-repair-after:/tmp/independent.py"
+            ],
+            "exit": 0,
+            "log": "copy-independent.py"
+          },
+          {
+            "args": [
+              "docker",
+              "cp",
+              "/Users/frank/mygit/Tablekeeper/result-run-4/.evidence/S1-QA-20261004T192516Z/precedence.py",
+              "tablekeeper-backend-repair-after:/tmp/precedence.py"
+            ],
+            "exit": 0,
+            "log": "copy-precedence.py"
+          },
+          {
+            "args": [
+              "docker",
+              "exec",
+              "tablekeeper-backend-repair-after",
+              "python",
+              "/tmp/precedence.py"
+            ],
+            "exit": 0,
+            "log": "precedence"
+          },
+          {
+            "args": [
+              "docker",
+              "exec",
+              "tablekeeper-backend-repair-after",
+              "python",
+              "/tmp/independent.py"
+            ],
+            "exit": 0,
+            "log": "independent"
+          },
+          {
+            "args": [
+              "docker",
+              "rm",
+              "-f",
+              "tablekeeper-backend-repair-after"
+            ],
+            "exit": 0,
+            "log": "cleanup"
+          }
+        ],
+        "source_checksums": {
+          "independent.py": "d972ae37a0ad3771b165b38c55b3323185c255afbd56fe7e37e7430155cd4408",
+          "precedence.py": "07fb73c33299c68dcf438b624faa30a132dd253da06d2037e1e2e1738d78280b"
+        },
+        "reproduction_exit": 0,
+        "independent_exit": 0,
+        "finished_at": "2026-10-04T19:39:01.572244+00:00"
+      }
+    },
+    {
+      "command": "/Users/frank/mygit/Tablekeeper/runs/harness-venv/bin/python -m harness run --track tablekeeper --repo /Users/frank/mygit/Tablekeeper/result-run-4 --stage 1 --mode isolated --out /Users/frank/mygit/Tablekeeper/result-run-4/.evidence/S1-REPAIR-01-20261004T1936Z/official-candidate",
+      "cwd": "/Users/frank/mygit/Tablekeeper/challenge",
+      "exit": 0,
+      "result": {
+        "revision": "8a482eaa7dd0359c3d212962df8cad57645c6a3d",
+        "track": "tablekeeper",
+        "stages": {
+          "1": "pass"
+        },
+        "highest_contiguous": 1,
+        "started_at": "2026-10-04T19:38:59.060960+00:00",
+        "finished_at": "2026-10-04T19:39:30.420417+00:00",
+        "schema_version": 2,
+        "run_id": "ff5e4a986bf64b10a81567d0f42718bd",
+        "mode": "isolated",
+        "provenance": "working-tree",
+        "state": "completed",
+        "pytest_args": [],
+        "suite_digest": "8d7e7d9bb94893b67dff0a19ee8ecb8d6888db7208ed269f64b29c0a661a17a7",
+        "checks": {
+          "1": {
+            "collected": 120,
+            "passed": 120,
+            "failed": 0,
+            "errors": 0,
+            "skipped": 0,
+            "deselected": 0,
+            "xfailed": 0,
+            "files": {
+              "stage_1/test_health_reset_auth.py": {
+                "passed": 12,
+                "total": 12
+              },
+              "stage_1/test_reservations.py": {
+                "passed": 37,
+                "total": 37
+              },
+              "stage_1/test_restaurants_availability.py": {
+                "passed": 18,
+                "total": 18
+              },
+              "stage_1/test_retries_time_input.py": {
+                "passed": 20,
+                "total": 20
+              },
+              "stage_1/test_sample.py": {
+                "passed": 20,
+                "total": 20
+              },
+              "stage_1/test_seeded_state.py": {
+                "passed": 13,
+                "total": 13
+              }
+            }
+          }
+        },
+        "overshoot": null,
+        "claimed_stage": "1",
+        "share": 1.0,
+        "upgrade_sources": {
+          "2": {
+            "folder": "/Users/frank/mygit/Tablekeeper/result-run-4/stage-1",
+            "revision": "8a482eaa7dd0359c3d212962df8cad57645c6a3d"
+          }
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "Independent QA rerun and Reviewer acceptance pending",
+    "Unchanged QA precedence.py output embeds the rejected revision; wrapper records actual tested revision and script digests without changing QA source",
+    "Stage-2 automatic overshoot probe fails; not dispatched or implemented",
+    "Shipped official checks cover only a portion of full judging",
+    "No broader source change or schema change made"
+  ],
+  "repair_cycles_used": 2,
+  "repair_ceiling": 3,
+  "repair_cycles_remaining": 1,
+  "usage": "UNAVAILABLE",
+  "cost": "UNAVAILABLE"
+}
