@@ -127,14 +127,22 @@ export function imported(envelope: any): State {
     unique(s.users.map((u) => str(u.email)));
     for (const u of s.users) {
       str(u.display_name);
-      const c = u.credential;
+      // Imported JSON must satisfy runtime types before regex or crypto sees it.
+      // RegExp.test would otherwise coerce a one-element array to a valid string.
+      const c = object(u.credential);
+      const algorithm = str(c.algorithm);
+      const salt = str(c.salt);
+      const hash = str(c.hash);
       if (
-        c.algorithm !== "scrypt" ||
+        algorithm !== "scrypt" ||
+        typeof c.N !== "number" ||
+        typeof c.r !== "number" ||
+        typeof c.p !== "number" ||
         c.N !== 16384 ||
         c.r !== 8 ||
         c.p !== 1 ||
-        !/^[a-f0-9]{32}$/.test(c.salt) ||
-        !/^[a-f0-9]{64}$/.test(c.hash)
+        !/^[a-f0-9]{32}$/.test(salt) ||
+        !/^[a-f0-9]{64}$/.test(hash)
       )
         fail();
     }
@@ -159,7 +167,7 @@ export function imported(envelope: any): State {
         canonical(normalized.rules) !== canonical(b.rules)
       )
         fail();
-      Temporal.Instant.from(b.created_at);
+      Temporal.Instant.from(str(b.created_at));
     }
     occupancy(s, s.reservations);
     unique(
