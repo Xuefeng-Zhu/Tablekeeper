@@ -1,0 +1,702 @@
+[
+  {
+    "id": "TK-S1-ARCH",
+    "owner": "@frankzhu94/factory-architect",
+    "dependencies": [
+      "TK-PM-BOOT"
+    ],
+    "state": "PROPOSED",
+    "goal": "Stage 1 arch for inherited official scope",
+    "requirements": [
+      "All exact requirements from stage 1 through stage 1; complete text in requirements-coverage.csv and material room handoff before READY"
+    ],
+    "starting_revision": null,
+    "workspace_paths": [
+      "/Users/frank/mygit/Tablekeeper/result-run-3"
+    ],
+    "ownership_boundaries": [],
+    "acceptance_conditions": [
+      "Independent exact-candidate review; no earlier-stage regressions; official isolated harness PASS before advancing stage"
+    ],
+    "candidate_commit": null,
+    "commands": [],
+    "results": [],
+    "evidence_paths": [],
+    "limitations": [
+      "Not executable until complete handoff and satisfied dependencies"
+    ],
+    "next_recipient": "@frankzhu94/factory-pm"
+  },
+  {
+    "id": "TK-S1-BACKEND",
+    "owner": "@frankzhu94/factory-backend",
+    "dependencies": [
+      "TK-S1-ARCH"
+    ],
+    "state": "PROPOSED",
+    "goal": "Stage 1 backend for inherited official scope",
+    "requirements": [
+      "All exact requirements from stage 1 through stage 1; complete text in requirements-coverage.csv and material room handoff before READY"
+    ],
+    "starting_revision": null,
+    "workspace_paths": [
+      "/Users/frank/mygit/Tablekeeper/result-run-3"
+    ],
+    "ownership_boundaries": [],
+    "acceptance_conditions": [
+      "Independent exact-candidate review; no earlier-stage regressions; official isolated harness PASS before advancing stage"
+    ],
+    "candidate_commit": null,
+    "commands": [],
+    "results": [],
+    "evidence_paths": [],
+    "limitations": [
+      "Not executable until complete handoff and satisfied dependencies"
+    ],
+    "next_recipient": "@frankzhu94/factory-pm"
+  },
+  {
+    "id": "TK-S1-QA",
+    "owner": "@frankzhu94/factory-qa",
+    "dependencies": [
+      "TK-S1-BACKEND"
+    ],
+    "state": "PROPOSED",
+    "goal": "Stage 1 qa for inherited official scope",
+    "requirements": [
+      "All exact requirements from stage 1 through stage 1; complete text in requirements-coverage.csv and material room handoff before READY"
+    ],
+    "starting_revision": null,
+    "workspace_paths": [
+      "/Users/frank/mygit/Tablekeeper/result-run-3"
+    ],
+    "ownership_boundaries": [],
+    "acceptance_conditions": [
+      "Independent exact-candidate review; no earlier-stage regressions; official isolated harness PASS before advancing stage"
+    ],
+    "candidate_commit": null,
+    "commands": [],
+    "results": [],
+    "evidence_paths": [],
+    "limitations": [
+      "Not executable until complete handoff and satisfied dependencies"
+    ],
+    "next_recipient": "@frankzhu94/factory-pm"
+  },
+  {
+    "id": "TK-S1-REVIEW",
+    "owner": "@frankzhu94/factory-reviewer",
+    "dependencies": [
+      "TK-S1-QA"
+    ],
+    "state": "PROPOSED",
+    "goal": "Stage 1 review for inherited official scope",
+    "requirements": [
+      "All exact requirements from stage 1 through stage 1; complete text in requirements-coverage.csv and material room handoff before READY"
+    ],
+    "starting_revision": null,
+    "workspace_paths": [
+      "/Users/frank/mygit/Tablekeeper/result-run-3"
+    ],
+    "ownership_boundaries": [],
+    "acceptance_conditions": [
+      "Independent exact-candidate review; no earlier-stage regressions; official isolated harness PASS before advancing stage"
+    ],
+    "candidate_commit": null,
+    "commands": [],
+    "results": [],
+    "evidence_paths": [],
+    "limitations": [
+      "Not executable until complete handoff and satisfied dependencies"
+    ],
+    "next_recipient": "@frankzhu94/factory-pm"
+  },
+  {
+    "id": "TK-S2-ARCH",
+    "owner": "@frankzhu94/factory-architect",
+    "dependencies": [
+      "TK-S1-REVIEW"
+    ],
+    "state": "PROPOSED",
+    "goal": "Stage 2 arch for inherited official scope",
+    "requirements": [
+      "All exact requirements from stage 1 through stage 2; complete text in requirements-coverage.csv and material room handoff before READY"
+    ],
+    "starting_revision": null,
+    "workspace_paths": [
+      "/Users/frank/mygit/Tablekeeper/result-run-3"
+    ],
+    "ownership_boundaries": [],
+    "acceptance_conditions": [
+      "Independent exact-candidate review; no earlier-stage regressions; official isolated harness PASS before advancing stage"
+    ],
+    "candidate_commit": null,
+    "commands": [],
+    "results": [],
+    "evidence_paths": [],
+    "limitations": [
+      "Not executable until complete handoff and satisfied dependencies"
+    ],
+    "next_recipient": "@frankzhu94/factory-pm"
+  },
+  {
+    "id": "TK-S2-DESIGN",
+    "owner": "@frankzhu94/factory-designer",
+    "dependencies": [
+      "TK-S2-ARCH"
+    ],
+    "state": "PROPOSED",
+    "goal": "Stage 2 design for inherited official scope",
+    "requirements": [
+      "All exact requirements from stage 1 through stage 2; complete text in requirements-coverage.csv and material room handoff before READY"
+    ],
+    "starting_revision": null,
+    "workspace_paths": [
+      "/Users/frank/mygit/Tablekeeper/result-run-3"
+    ],
+    "ownership_boundaries": [],
+    "acceptance_conditions": [
+      "Independent exact-candidate review; no earlier-stage regressions; official isolated harness PASS before advancing stage"
+    ],
+    "candidate_commit": null,
+    "commands": [],
+    "results": [],
+    "evidence_paths": [],
+    "limitations": [
+      "Not executable until complete handoff and satisfied dependencies"
+    ],
+    "next_recipient": "@frankzhu94/factory-pm"
+  },
+  {
+    "id": "TK-S2-BACKEND",
+    "owner": "@frankzhu94/factory-backend",
+    "dependencies": [
+      "TK-S2-DESIGN"
+    ],
+    "state": "PROPOSED",
+    "goal": "Stage 2 backend for inherited official scope",
+    "requirements": [
+      "All exact requirements from stage 1 through stage 2; complete text in requirements-coverage.csv and material room handoff before READY"
+    ],
+    "starting_revision": null,
+    "workspace_paths": [
+      "/Users/frank/mygit/Tablekeeper/result-run-3"
+    ],
+    "ownership_boundaries": [],
+    "acceptance_conditions": [
+      "Independent exact-candidate review; no earlier-stage regressions; official isolated harness PASS before advancing stage"
+    ],
+    "candidate_commit": null,
+    "commands": [],
+    "results": [],
+    "evidence_paths": [],
+    "limitations": [
+      "Not executable until complete handoff and satisfied dependencies"
+    ],
+    "next_recipient": "@frankzhu94/factory-pm"
+  },
+  {
+    "id": "TK-S2-FRONTEND",
+    "owner": "@frankzhu94/factory-frontend",
+    "dependencies": [
+      "TK-S2-BACKEND"
+    ],
+    "state": "PROPOSED",
+    "goal": "Stage 2 frontend for inherited official scope",
+    "requirements": [
+      "All exact requirements from stage 1 through stage 2; complete text in requirements-coverage.csv and material room handoff before READY"
+    ],
+    "starting_revision": null,
+    "workspace_paths": [
+      "/Users/frank/mygit/Tablekeeper/result-run-3"
+    ],
+    "ownership_boundaries": [],
+    "acceptance_conditions": [
+      "Independent exact-candidate review; no earlier-stage regressions; official isolated harness PASS before advancing stage"
+    ],
+    "candidate_commit": null,
+    "commands": [],
+    "results": [],
+    "evidence_paths": [],
+    "limitations": [
+      "Not executable until complete handoff and satisfied dependencies"
+    ],
+    "next_recipient": "@frankzhu94/factory-pm"
+  },
+  {
+    "id": "TK-S2-QA",
+    "owner": "@frankzhu94/factory-qa",
+    "dependencies": [
+      "TK-S2-FRONTEND"
+    ],
+    "state": "PROPOSED",
+    "goal": "Stage 2 qa for inherited official scope",
+    "requirements": [
+      "All exact requirements from stage 1 through stage 2; complete text in requirements-coverage.csv and material room handoff before READY"
+    ],
+    "starting_revision": null,
+    "workspace_paths": [
+      "/Users/frank/mygit/Tablekeeper/result-run-3"
+    ],
+    "ownership_boundaries": [],
+    "acceptance_conditions": [
+      "Independent exact-candidate review; no earlier-stage regressions; official isolated harness PASS before advancing stage"
+    ],
+    "candidate_commit": null,
+    "commands": [],
+    "results": [],
+    "evidence_paths": [],
+    "limitations": [
+      "Not executable until complete handoff and satisfied dependencies"
+    ],
+    "next_recipient": "@frankzhu94/factory-pm"
+  },
+  {
+    "id": "TK-S2-DESIGN-REVIEW",
+    "owner": "@frankzhu94/factory-designer",
+    "dependencies": [
+      "TK-S2-QA"
+    ],
+    "state": "PROPOSED",
+    "goal": "Stage 2 design-review for inherited official scope",
+    "requirements": [
+      "All exact requirements from stage 1 through stage 2; complete text in requirements-coverage.csv and material room handoff before READY"
+    ],
+    "starting_revision": null,
+    "workspace_paths": [
+      "/Users/frank/mygit/Tablekeeper/result-run-3"
+    ],
+    "ownership_boundaries": [],
+    "acceptance_conditions": [
+      "Independent exact-candidate review; no earlier-stage regressions; official isolated harness PASS before advancing stage"
+    ],
+    "candidate_commit": null,
+    "commands": [],
+    "results": [],
+    "evidence_paths": [],
+    "limitations": [
+      "Not executable until complete handoff and satisfied dependencies"
+    ],
+    "next_recipient": "@frankzhu94/factory-pm"
+  },
+  {
+    "id": "TK-S2-REVIEW",
+    "owner": "@frankzhu94/factory-reviewer",
+    "dependencies": [
+      "TK-S2-DESIGN-REVIEW"
+    ],
+    "state": "PROPOSED",
+    "goal": "Stage 2 review for inherited official scope",
+    "requirements": [
+      "All exact requirements from stage 1 through stage 2; complete text in requirements-coverage.csv and material room handoff before READY"
+    ],
+    "starting_revision": null,
+    "workspace_paths": [
+      "/Users/frank/mygit/Tablekeeper/result-run-3"
+    ],
+    "ownership_boundaries": [],
+    "acceptance_conditions": [
+      "Independent exact-candidate review; no earlier-stage regressions; official isolated harness PASS before advancing stage"
+    ],
+    "candidate_commit": null,
+    "commands": [],
+    "results": [],
+    "evidence_paths": [],
+    "limitations": [
+      "Not executable until complete handoff and satisfied dependencies"
+    ],
+    "next_recipient": "@frankzhu94/factory-pm"
+  },
+  {
+    "id": "TK-S3-ARCH",
+    "owner": "@frankzhu94/factory-architect",
+    "dependencies": [
+      "TK-S2-REVIEW"
+    ],
+    "state": "PROPOSED",
+    "goal": "Stage 3 arch for inherited official scope",
+    "requirements": [
+      "All exact requirements from stage 1 through stage 3; complete text in requirements-coverage.csv and material room handoff before READY"
+    ],
+    "starting_revision": null,
+    "workspace_paths": [
+      "/Users/frank/mygit/Tablekeeper/result-run-3"
+    ],
+    "ownership_boundaries": [],
+    "acceptance_conditions": [
+      "Independent exact-candidate review; no earlier-stage regressions; official isolated harness PASS before advancing stage"
+    ],
+    "candidate_commit": null,
+    "commands": [],
+    "results": [],
+    "evidence_paths": [],
+    "limitations": [
+      "Not executable until complete handoff and satisfied dependencies"
+    ],
+    "next_recipient": "@frankzhu94/factory-pm"
+  },
+  {
+    "id": "TK-S3-DESIGN",
+    "owner": "@frankzhu94/factory-designer",
+    "dependencies": [
+      "TK-S3-ARCH"
+    ],
+    "state": "PROPOSED",
+    "goal": "Stage 3 design for inherited official scope",
+    "requirements": [
+      "All exact requirements from stage 1 through stage 3; complete text in requirements-coverage.csv and material room handoff before READY"
+    ],
+    "starting_revision": null,
+    "workspace_paths": [
+      "/Users/frank/mygit/Tablekeeper/result-run-3"
+    ],
+    "ownership_boundaries": [],
+    "acceptance_conditions": [
+      "Independent exact-candidate review; no earlier-stage regressions; official isolated harness PASS before advancing stage"
+    ],
+    "candidate_commit": null,
+    "commands": [],
+    "results": [],
+    "evidence_paths": [],
+    "limitations": [
+      "Not executable until complete handoff and satisfied dependencies"
+    ],
+    "next_recipient": "@frankzhu94/factory-pm"
+  },
+  {
+    "id": "TK-S3-BACKEND",
+    "owner": "@frankzhu94/factory-backend",
+    "dependencies": [
+      "TK-S3-DESIGN"
+    ],
+    "state": "PROPOSED",
+    "goal": "Stage 3 backend for inherited official scope",
+    "requirements": [
+      "All exact requirements from stage 1 through stage 3; complete text in requirements-coverage.csv and material room handoff before READY"
+    ],
+    "starting_revision": null,
+    "workspace_paths": [
+      "/Users/frank/mygit/Tablekeeper/result-run-3"
+    ],
+    "ownership_boundaries": [],
+    "acceptance_conditions": [
+      "Independent exact-candidate review; no earlier-stage regressions; official isolated harness PASS before advancing stage"
+    ],
+    "candidate_commit": null,
+    "commands": [],
+    "results": [],
+    "evidence_paths": [],
+    "limitations": [
+      "Not executable until complete handoff and satisfied dependencies"
+    ],
+    "next_recipient": "@frankzhu94/factory-pm"
+  },
+  {
+    "id": "TK-S3-FRONTEND",
+    "owner": "@frankzhu94/factory-frontend",
+    "dependencies": [
+      "TK-S3-BACKEND"
+    ],
+    "state": "PROPOSED",
+    "goal": "Stage 3 frontend for inherited official scope",
+    "requirements": [
+      "All exact requirements from stage 1 through stage 3; complete text in requirements-coverage.csv and material room handoff before READY"
+    ],
+    "starting_revision": null,
+    "workspace_paths": [
+      "/Users/frank/mygit/Tablekeeper/result-run-3"
+    ],
+    "ownership_boundaries": [],
+    "acceptance_conditions": [
+      "Independent exact-candidate review; no earlier-stage regressions; official isolated harness PASS before advancing stage"
+    ],
+    "candidate_commit": null,
+    "commands": [],
+    "results": [],
+    "evidence_paths": [],
+    "limitations": [
+      "Not executable until complete handoff and satisfied dependencies"
+    ],
+    "next_recipient": "@frankzhu94/factory-pm"
+  },
+  {
+    "id": "TK-S3-QA",
+    "owner": "@frankzhu94/factory-qa",
+    "dependencies": [
+      "TK-S3-FRONTEND"
+    ],
+    "state": "PROPOSED",
+    "goal": "Stage 3 qa for inherited official scope",
+    "requirements": [
+      "All exact requirements from stage 1 through stage 3; complete text in requirements-coverage.csv and material room handoff before READY"
+    ],
+    "starting_revision": null,
+    "workspace_paths": [
+      "/Users/frank/mygit/Tablekeeper/result-run-3"
+    ],
+    "ownership_boundaries": [],
+    "acceptance_conditions": [
+      "Independent exact-candidate review; no earlier-stage regressions; official isolated harness PASS before advancing stage"
+    ],
+    "candidate_commit": null,
+    "commands": [],
+    "results": [],
+    "evidence_paths": [],
+    "limitations": [
+      "Not executable until complete handoff and satisfied dependencies"
+    ],
+    "next_recipient": "@frankzhu94/factory-pm"
+  },
+  {
+    "id": "TK-S3-DESIGN-REVIEW",
+    "owner": "@frankzhu94/factory-designer",
+    "dependencies": [
+      "TK-S3-QA"
+    ],
+    "state": "PROPOSED",
+    "goal": "Stage 3 design-review for inherited official scope",
+    "requirements": [
+      "All exact requirements from stage 1 through stage 3; complete text in requirements-coverage.csv and material room handoff before READY"
+    ],
+    "starting_revision": null,
+    "workspace_paths": [
+      "/Users/frank/mygit/Tablekeeper/result-run-3"
+    ],
+    "ownership_boundaries": [],
+    "acceptance_conditions": [
+      "Independent exact-candidate review; no earlier-stage regressions; official isolated harness PASS before advancing stage"
+    ],
+    "candidate_commit": null,
+    "commands": [],
+    "results": [],
+    "evidence_paths": [],
+    "limitations": [
+      "Not executable until complete handoff and satisfied dependencies"
+    ],
+    "next_recipient": "@frankzhu94/factory-pm"
+  },
+  {
+    "id": "TK-S3-REVIEW",
+    "owner": "@frankzhu94/factory-reviewer",
+    "dependencies": [
+      "TK-S3-DESIGN-REVIEW"
+    ],
+    "state": "PROPOSED",
+    "goal": "Stage 3 review for inherited official scope",
+    "requirements": [
+      "All exact requirements from stage 1 through stage 3; complete text in requirements-coverage.csv and material room handoff before READY"
+    ],
+    "starting_revision": null,
+    "workspace_paths": [
+      "/Users/frank/mygit/Tablekeeper/result-run-3"
+    ],
+    "ownership_boundaries": [],
+    "acceptance_conditions": [
+      "Independent exact-candidate review; no earlier-stage regressions; official isolated harness PASS before advancing stage"
+    ],
+    "candidate_commit": null,
+    "commands": [],
+    "results": [],
+    "evidence_paths": [],
+    "limitations": [
+      "Not executable until complete handoff and satisfied dependencies"
+    ],
+    "next_recipient": "@frankzhu94/factory-pm"
+  },
+  {
+    "id": "TK-S4-ARCH",
+    "owner": "@frankzhu94/factory-architect",
+    "dependencies": [
+      "TK-S3-REVIEW"
+    ],
+    "state": "PROPOSED",
+    "goal": "Stage 4 arch for inherited official scope",
+    "requirements": [
+      "All exact requirements from stage 1 through stage 4; complete text in requirements-coverage.csv and material room handoff before READY"
+    ],
+    "starting_revision": null,
+    "workspace_paths": [
+      "/Users/frank/mygit/Tablekeeper/result-run-3"
+    ],
+    "ownership_boundaries": [],
+    "acceptance_conditions": [
+      "Independent exact-candidate review; no earlier-stage regressions; official isolated harness PASS before advancing stage"
+    ],
+    "candidate_commit": null,
+    "commands": [],
+    "results": [],
+    "evidence_paths": [],
+    "limitations": [
+      "Not executable until complete handoff and satisfied dependencies"
+    ],
+    "next_recipient": "@frankzhu94/factory-pm"
+  },
+  {
+    "id": "TK-S4-DESIGN",
+    "owner": "@frankzhu94/factory-designer",
+    "dependencies": [
+      "TK-S4-ARCH"
+    ],
+    "state": "PROPOSED",
+    "goal": "Stage 4 design for inherited official scope",
+    "requirements": [
+      "All exact requirements from stage 1 through stage 4; complete text in requirements-coverage.csv and material room handoff before READY"
+    ],
+    "starting_revision": null,
+    "workspace_paths": [
+      "/Users/frank/mygit/Tablekeeper/result-run-3"
+    ],
+    "ownership_boundaries": [],
+    "acceptance_conditions": [
+      "Independent exact-candidate review; no earlier-stage regressions; official isolated harness PASS before advancing stage"
+    ],
+    "candidate_commit": null,
+    "commands": [],
+    "results": [],
+    "evidence_paths": [],
+    "limitations": [
+      "Not executable until complete handoff and satisfied dependencies"
+    ],
+    "next_recipient": "@frankzhu94/factory-pm"
+  },
+  {
+    "id": "TK-S4-BACKEND",
+    "owner": "@frankzhu94/factory-backend",
+    "dependencies": [
+      "TK-S4-DESIGN"
+    ],
+    "state": "PROPOSED",
+    "goal": "Stage 4 backend for inherited official scope",
+    "requirements": [
+      "All exact requirements from stage 1 through stage 4; complete text in requirements-coverage.csv and material room handoff before READY"
+    ],
+    "starting_revision": null,
+    "workspace_paths": [
+      "/Users/frank/mygit/Tablekeeper/result-run-3"
+    ],
+    "ownership_boundaries": [],
+    "acceptance_conditions": [
+      "Independent exact-candidate review; no earlier-stage regressions; official isolated harness PASS before advancing stage"
+    ],
+    "candidate_commit": null,
+    "commands": [],
+    "results": [],
+    "evidence_paths": [],
+    "limitations": [
+      "Not executable until complete handoff and satisfied dependencies"
+    ],
+    "next_recipient": "@frankzhu94/factory-pm"
+  },
+  {
+    "id": "TK-S4-FRONTEND",
+    "owner": "@frankzhu94/factory-frontend",
+    "dependencies": [
+      "TK-S4-BACKEND"
+    ],
+    "state": "PROPOSED",
+    "goal": "Stage 4 frontend for inherited official scope",
+    "requirements": [
+      "All exact requirements from stage 1 through stage 4; complete text in requirements-coverage.csv and material room handoff before READY"
+    ],
+    "starting_revision": null,
+    "workspace_paths": [
+      "/Users/frank/mygit/Tablekeeper/result-run-3"
+    ],
+    "ownership_boundaries": [],
+    "acceptance_conditions": [
+      "Independent exact-candidate review; no earlier-stage regressions; official isolated harness PASS before advancing stage"
+    ],
+    "candidate_commit": null,
+    "commands": [],
+    "results": [],
+    "evidence_paths": [],
+    "limitations": [
+      "Not executable until complete handoff and satisfied dependencies"
+    ],
+    "next_recipient": "@frankzhu94/factory-pm"
+  },
+  {
+    "id": "TK-S4-QA",
+    "owner": "@frankzhu94/factory-qa",
+    "dependencies": [
+      "TK-S4-FRONTEND"
+    ],
+    "state": "PROPOSED",
+    "goal": "Stage 4 qa for inherited official scope",
+    "requirements": [
+      "All exact requirements from stage 1 through stage 4; complete text in requirements-coverage.csv and material room handoff before READY"
+    ],
+    "starting_revision": null,
+    "workspace_paths": [
+      "/Users/frank/mygit/Tablekeeper/result-run-3"
+    ],
+    "ownership_boundaries": [],
+    "acceptance_conditions": [
+      "Independent exact-candidate review; no earlier-stage regressions; official isolated harness PASS before advancing stage"
+    ],
+    "candidate_commit": null,
+    "commands": [],
+    "results": [],
+    "evidence_paths": [],
+    "limitations": [
+      "Not executable until complete handoff and satisfied dependencies"
+    ],
+    "next_recipient": "@frankzhu94/factory-pm"
+  },
+  {
+    "id": "TK-S4-DESIGN-REVIEW",
+    "owner": "@frankzhu94/factory-designer",
+    "dependencies": [
+      "TK-S4-QA"
+    ],
+    "state": "PROPOSED",
+    "goal": "Stage 4 design-review for inherited official scope",
+    "requirements": [
+      "All exact requirements from stage 1 through stage 4; complete text in requirements-coverage.csv and material room handoff before READY"
+    ],
+    "starting_revision": null,
+    "workspace_paths": [
+      "/Users/frank/mygit/Tablekeeper/result-run-3"
+    ],
+    "ownership_boundaries": [],
+    "acceptance_conditions": [
+      "Independent exact-candidate review; no earlier-stage regressions; official isolated harness PASS before advancing stage"
+    ],
+    "candidate_commit": null,
+    "commands": [],
+    "results": [],
+    "evidence_paths": [],
+    "limitations": [
+      "Not executable until complete handoff and satisfied dependencies"
+    ],
+    "next_recipient": "@frankzhu94/factory-pm"
+  },
+  {
+    "id": "TK-S4-REVIEW",
+    "owner": "@frankzhu94/factory-reviewer",
+    "dependencies": [
+      "TK-S4-DESIGN-REVIEW"
+    ],
+    "state": "PROPOSED",
+    "goal": "Stage 4 review for inherited official scope",
+    "requirements": [
+      "All exact requirements from stage 1 through stage 4; complete text in requirements-coverage.csv and material room handoff before READY"
+    ],
+    "starting_revision": null,
+    "workspace_paths": [
+      "/Users/frank/mygit/Tablekeeper/result-run-3"
+    ],
+    "ownership_boundaries": [],
+    "acceptance_conditions": [
+      "Independent exact-candidate review; no earlier-stage regressions; official isolated harness PASS before advancing stage"
+    ],
+    "candidate_commit": null,
+    "commands": [],
+    "results": [],
+    "evidence_paths": [],
+    "limitations": [
+      "Not executable until complete handoff and satisfied dependencies"
+    ],
+    "next_recipient": "@frankzhu94/factory-pm"
+  }
+]
