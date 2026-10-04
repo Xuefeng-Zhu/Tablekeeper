@@ -1,10 +1,206 @@
-import test from 'node:test';
-import assert from 'node:assert/strict';
-import {spawn} from 'node:child_process';
-import {setTimeout as delay} from 'node:timers/promises';
-const processes=[];
-async function start(port){const p=spawn(process.execPath,['dist/server.js'],{env:{...process.env,PORT:String(port)},stdio:'pipe'});processes.push(p);const base=`http://127.0.0.1:${port}`;for(let i=0;i<100;i++){try{if((await fetch(base+'/health')).ok)return base;}catch{}await delay(25);}throw Error('startup failed');}
-async function request(base,path,{method='GET',body,token,key}={}){const r=await fetch(base+path,{method,headers:{...(body?{'Content-Type':'application/json'}:{}),...(token?{Authorization:'Bearer '+token}:{}),...(key?{'Idempotency-Key':key}:{})},body:body===undefined?undefined:JSON.stringify(body)});return {status:r.status,body:r.status===204?null:await r.json()};}
-const fixture={users:[{id:'u',email:'a@b',password:'password',display_name:'A'}],restaurants:[{id:'r',name:'R',timezone:'Europe/Berlin',slot_minutes:30,reservation_duration_minutes:90,cancellation_cutoff_minutes:120,opening_hours:[{weekday:'thu',opens:'18:00',closes:'23:00'}],tables:[{id:'t1',label:'1',capacity:4},{id:'t2',label:'2',capacity:4}]}],reservations:[]};
-const booking={restaurant_id:'r',table_id:'t1',starts_at_local:'2030-09-26T19:00',party_size:2};
-test('actual HTTP concurrency, swap, rollback, historical receipts and cross-process import',async()=>{try{const a=await start(18241),b=await start(18242);assert.equal((await request(a,'/_test/reset',{method:'POST',body:fixture})).status,204);const login=await request(a,'/auth/login',{method:'POST',body:{email:'a@b',password:'password'}});assert.equal(login.status,200);const token=login.body.token;const retries=await Promise.all(Array.from({length:50},()=>request(a,'/reservations',{method:'POST',body:booking,token,key:'one'})));assert.equal(retries.filter(x=>x.status===201).length,1);assert.equal(retries.filter(x=>x.status===200).length,49);for(const x of retries)assert.deepEqual(x.body,retries[0].body);const first=retries[0].body;const second=await request(a,'/reservations',{method:'POST',body:{...booking,table_id:'t2'},token,key:'two'});assert.equal(second.status,201);const swap={moves:[{reference:first.reference,table_id:'t2'},{reference:second.body.reference,table_id:'t1'}]};assert.equal((await request(a,'/reservation-moves',{method:'POST',body:swap,token,key:'swap'})).status,201);const bad={moves:[{reference:first.reference,table_id:'t1'},{reference:second.body.reference,party_size:0}]};assert.equal((await request(a,'/reservation-moves',{method:'POST',body:bad,token,key:'bad'})).body.error.code,'validation_failed');assert.equal((await request(a,'/reservations/'+first.reference,{token})).body.table_id,'t2');assert.equal((await request(a,'/reservations/'+first.reference+'/cancel',{method:'POST',token})).status,200);assert.deepEqual((await request(a,'/reservations',{method:'POST',body:booking,token,key:'one'})).body,first);const exported=(await request(a,'/_test/export')).body;for(let i=0;i<2;i++)assert.equal((await request(b,'/_test/import',{method:'POST',body:exported})).status,204);assert.deepEqual((await request(b,'/_test/export')).body,exported);assert.deepEqual((await request(b,'/reservations',{method:'POST',body:booking,token,key:'one'})).body,first);assert.equal((await request(b,'/auth/login',{method:'POST',body:{email:'a@b',password:'password'}})).status,200);const before=(await request(b,'/_test/export')).body;assert.equal((await request(b,'/_test/import',{method:'POST',body:{...exported,state:{}}})).status,422);assert.deepEqual((await request(b,'/_test/export')).body,before);assert.equal((await request(a,'/reservations',{method:'POST',body:{...booking,party_size:0},token,key:'one'})).body.error.code,'idempotency_key_reuse');}finally{for(const p of processes)p.kill();}});
+import test from "node:test";
+import assert from "node:assert/strict";
+import { spawn } from "node:child_process";
+import { setTimeout as delay } from "node:timers/promises";
+const processes = [];
+async function start(port) {
+  const p = spawn(process.execPath, ["dist/server.js"], {
+    env: { ...process.env, PORT: String(port) },
+    stdio: "pipe",
+  });
+  processes.push(p);
+  const base = `http://127.0.0.1:${port}`;
+  for (let i = 0; i < 100; i++) {
+    try {
+      if ((await fetch(base + "/health")).ok) return base;
+    } catch {}
+    await delay(25);
+  }
+  throw Error("startup failed");
+}
+async function request(base, path, { method = "GET", body, token, key } = {}) {
+  const r = await fetch(base + path, {
+    method,
+    headers: {
+      ...(body ? { "Content-Type": "application/json" } : {}),
+      ...(token ? { Authorization: "Bearer " + token } : {}),
+      ...(key ? { "Idempotency-Key": key } : {}),
+    },
+    body: body === undefined ? undefined : JSON.stringify(body),
+  });
+  return { status: r.status, body: r.status === 204 ? null : await r.json() };
+}
+const fixture = {
+  users: [{ id: "u", email: "a@b", password: "password", display_name: "A" }],
+  restaurants: [
+    {
+      id: "r",
+      name: "R",
+      timezone: "Europe/Berlin",
+      slot_minutes: 30,
+      reservation_duration_minutes: 90,
+      cancellation_cutoff_minutes: 120,
+      opening_hours: [{ weekday: "thu", opens: "18:00", closes: "23:00" }],
+      tables: [
+        { id: "t1", label: "1", capacity: 4 },
+        { id: "t2", label: "2", capacity: 4 },
+      ],
+    },
+  ],
+  reservations: [],
+};
+const booking = {
+  restaurant_id: "r",
+  table_id: "t1",
+  starts_at_local: "2030-09-26T19:00",
+  party_size: 2,
+};
+test("actual HTTP concurrency, swap, rollback, historical receipts and cross-process import", async () => {
+  try {
+    const a = await start(18241),
+      b = await start(18242);
+    assert.equal(
+      (await request(a, "/_test/reset", { method: "POST", body: fixture }))
+        .status,
+      204,
+    );
+    const login = await request(a, "/auth/login", {
+      method: "POST",
+      body: { email: "a@b", password: "password" },
+    });
+    assert.equal(login.status, 200);
+    const token = login.body.token;
+    const retries = await Promise.all(
+      Array.from({ length: 50 }, () =>
+        request(a, "/reservations", {
+          method: "POST",
+          body: booking,
+          token,
+          key: "one",
+        }),
+      ),
+    );
+    assert.equal(retries.filter((x) => x.status === 201).length, 1);
+    assert.equal(retries.filter((x) => x.status === 200).length, 49);
+    for (const x of retries) assert.deepEqual(x.body, retries[0].body);
+    const first = retries[0].body;
+    const second = await request(a, "/reservations", {
+      method: "POST",
+      body: { ...booking, table_id: "t2" },
+      token,
+      key: "two",
+    });
+    assert.equal(second.status, 201);
+    const swap = {
+      moves: [
+        { reference: first.reference, table_id: "t2" },
+        { reference: second.body.reference, table_id: "t1" },
+      ],
+    };
+    assert.equal(
+      (
+        await request(a, "/reservation-moves", {
+          method: "POST",
+          body: swap,
+          token,
+          key: "swap",
+        })
+      ).status,
+      201,
+    );
+    const bad = {
+      moves: [
+        { reference: first.reference, table_id: "t1" },
+        { reference: second.body.reference, party_size: 0 },
+      ],
+    };
+    assert.equal(
+      (
+        await request(a, "/reservation-moves", {
+          method: "POST",
+          body: bad,
+          token,
+          key: "bad",
+        })
+      ).body.error.code,
+      "validation_failed",
+    );
+    assert.equal(
+      (await request(a, "/reservations/" + first.reference, { token })).body
+        .table_id,
+      "t2",
+    );
+    assert.equal(
+      (
+        await request(a, "/reservations/" + first.reference + "/cancel", {
+          method: "POST",
+          token,
+        })
+      ).status,
+      200,
+    );
+    assert.deepEqual(
+      (
+        await request(a, "/reservations", {
+          method: "POST",
+          body: booking,
+          token,
+          key: "one",
+        })
+      ).body,
+      first,
+    );
+    const exported = (await request(a, "/_test/export")).body;
+    for (let i = 0; i < 2; i++)
+      assert.equal(
+        (await request(b, "/_test/import", { method: "POST", body: exported }))
+          .status,
+        204,
+      );
+    assert.deepEqual((await request(b, "/_test/export")).body, exported);
+    assert.deepEqual(
+      (
+        await request(b, "/reservations", {
+          method: "POST",
+          body: booking,
+          token,
+          key: "one",
+        })
+      ).body,
+      first,
+    );
+    assert.equal(
+      (
+        await request(b, "/auth/login", {
+          method: "POST",
+          body: { email: "a@b", password: "password" },
+        })
+      ).status,
+      200,
+    );
+    const before = (await request(b, "/_test/export")).body;
+    assert.equal(
+      (
+        await request(b, "/_test/import", {
+          method: "POST",
+          body: { ...exported, state: {} },
+        })
+      ).status,
+      422,
+    );
+    assert.deepEqual((await request(b, "/_test/export")).body, before);
+    assert.equal(
+      (
+        await request(a, "/reservations", {
+          method: "POST",
+          body: { ...booking, party_size: 0 },
+          token,
+          key: "one",
+        })
+      ).body.error.code,
+      "idempotency_key_reuse",
+    );
+  } finally {
+    for (const p of processes) p.kill();
+  }
+});

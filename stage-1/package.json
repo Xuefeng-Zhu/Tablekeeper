@@ -1,1 +1,18 @@
-{"name":"tablekeeper-stage-1","version":"1.0.0","private":true,"type":"module","scripts":{"build":"tsc","start":"node dist/server.js","test":"node --test test/*.test.mjs"},"dependencies":{"@js-temporal/polyfill":"0.5.1"},"devDependencies":{"@types/node":"24.0.0","typescript":"5.9.3"}}
+{
+  "name": "tablekeeper-stage-1",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "test": "node --test test/*.test.mjs"
+  },
+  "dependencies": {
+    "@js-temporal/polyfill": "0.5.1"
+  },
+  "devDependencies": {
+    "@types/node": "24.0.0",
+    "typescript": "5.9.3"
+  }
+}
