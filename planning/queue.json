@@ -83,8 +83,7 @@
     "id": "S2-DESIGN",
     "owner": "@frankzhu94/factory-designer",
     "dependencies": [
-      "S1-GATE",
-      "S2-DESIGN"
+      "S1-GATE"
     ],
     "state": "PROPOSED",
     "goal": "Specify browser journeys, hierarchy, all states, responsive and focus behavior before UI implementation."
