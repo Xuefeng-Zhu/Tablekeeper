@@ -63,8 +63,43 @@
     "dependencies": [
       "REV-ORACLES"
     ],
-    "state": "PROPOSED",
-    "goal": "Decide implementable architecture, serialization, timezone and upgrade schema before implementation."
+    "state": "IN_PROGRESS",
+    "goal": "Decide implementable architecture, serialization, timezone and upgrade schema before implementation.",
+    "requirements": [
+      "Retain all four exact normative sources/hash,53sections/33classes, independent boundaries and earliest runnable checkpoints.",
+      "Correct every Q07 count/vector and preserve nine Reviewer guidance points.",
+      "Keep observed planning evidence separate from NOT_TESTED product behavior."
+    ],
+    "starting_revision": "b2b2af25c3aa170d75d99f604c4c24a1835efb5c",
+    "workspace_paths": [
+      "/Users/frank/mygit/Tablekeeper/result-run-7"
+    ],
+    "ownership_boundaries": [
+      "Only planning/architecture-decision.md, planning/architecture-state-schema.md, ARCH-DECISION queue entry and unique Architect evidence; no product source."
+    ],
+    "acceptance_conditions": [
+      "Concrete architecture covers Stage1 full module/state/time/atomicity/deployment and upgrade contracts, extension boundaries and Q01-Q12 checkpoints; independent PM/Reviewer review required.",
+      "Preserve exact inherited requirements and evidence; deliver full committed candidate with commands/results/limits."
+    ],
+    "commands": [
+      "git fetch origin",
+      "/Users/frank/mygit/Tablekeeper/runs/harness-venv/bin/python -m harness run --help",
+      "python3 /private/tmp/architect_probe.py",
+      "/usr/bin/python3 architecture-probe.py",
+      "/usr/bin/python3 architecture-probe-attempt-3.py",
+      "python3 scrypt component experiment"
+    ],
+    "results": [
+      "Fetch PASS remote equals starting HEAD; help exit0; host combined probe failures exit1 preserved; split-component probes PASS exit0; all product checks NOT_TESTED."
+    ],
+    "evidence_paths": [
+      "/Users/frank/mygit/Tablekeeper/result-run-7/.evidence/architect-decision-20261005T071322Z"
+    ],
+    "limitations": [
+      "No product implementation/browser/Docker/actual upgrade/gate observed; independent acceptance pending.",
+      "Host capability failures preserved; combined image capabilities require C1."
+    ],
+    "next_recipient": "@frankzhu94/factory-pm"
   },
   {
     "id": "S1-IMPL",
