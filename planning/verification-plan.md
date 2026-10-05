@@ -76,9 +76,9 @@ State and side effects: Exactly one operation/reference/history change; replay n
 
 First checkpoint: S1 public browsing runnable. Status: NOT_TESTED.
 
-Inputs and controls: Known vs unknown restaurant; capacities2,4 in fixture order; opening18:00 closing23:00 grid30 duration90; empty capacity result vs closed weekday.
+Inputs and controls: Known vs unknown restaurant; capacities2,4 in fixture order; opening18:00 closing23:00 grid30 duration90; empty capacity result vs closed weekday. Additional opening-anchored control: opens18:10 closes20:10 grid30 duration60; last valid19:10 vs adjacent19:40.
 
-Independent expected result: Seven local slots 18:00..21:30 inclusive; 22:00 excluded (end23:30). capacity exactly party allowed; IDs in fixture order; slot with no eligible tables retained, closed day slots[]; unknown detail404.
+Independent expected result: Eight local slots [18:00,18:30,19:00,19:30,20:00,20:30,21:00,21:30], count=8; 21:30 ends exactly23:00 and is included; 22:00 excluded (end23:30). Additional non-midnight opening control: [18:10,18:40,19:10], count=3; 19:10 ends exactly20:10 and is included, 19:40 excluded (end20:40). Derive independently with m=opens+k*grid and m+duration<=closes. Capacity exactly party allowed; IDs in fixture order; slot with no eligible tables retained, closed day slots[]; unknown detail404.
 
 State and side effects: Public reads unchanged state; compare fixture detail exactly, including original configuration after later policies.
 
@@ -106,11 +106,11 @@ State and side effects: Identity/reference stable, cancelled occupancy removed; 
 
 First checkpoint: S1 timezone runnable. Status: NOT_TESTED.
 
-Inputs and controls: Berlin spring2026-03-29 02:00/02:30 skipped vs01:30/03:00 valid; fall2026-10-25 02:30 repeated; NewYork spring2026-03-08 02:30 skipped and fall2026-11-01 01:30 repeated; duration90.
+Inputs and controls: Berlin spring2026-03-29 02:00/02:30 skipped vs01:30/03:00 valid; fall2026-10-25 02:30 repeated; NewYork spring2026-03-08 02:30 skipped and fall2026-11-01 01:30 repeated; duration90. Unique-endpoint availability controls: Berlin2026-03-29 opens01:00 closes03:30 and NY2026-11-01 opens00:30 closes02:30, grid30 duration90.
 
-Independent expected result: Hand-computed UTC: Berlin fall02:30+02=00:30Z, end02:00Z=03:00+01; NY fall01:30-04=05:30Z, end07:00Z=02:00-05. Berlin spring01:30+01=00:30Z, end02:00Z=04:00+02. Gap never listed and booking422 invalid_local_time; repeated local label appears once, first occurrence only.
+Independent expected result: Hand-computed UTC: Berlin fall02:30+02=00:30Z, end02:00Z=03:00+01; NY fall01:30-04=05:30Z, end07:00Z=02:00-05. Berlin spring01:30+01=00:30Z, end02:00Z=04:00+02. Gap never listed and booking422 invalid_local_time; repeated local label appears once, first occurrence only. For unique valid opening/closing endpoints, local opening-grid candidate starts are resolved first, skipped starts omitted, duration added in UTC, absolute end<=closing instant. Berlin spring control only[01:00]; NY fold control[00:30,01:00,01:30].
 
-State and side effects: Duration is90 real minutes, offsets IANA. Opening endpoint cases checked against resolved endpoints; ambiguous textual slot/end interpretation goes to Reviewer before implementation, not silently broadened oracle.
+State and side effects: Duration is90 real minutes, offsets IANA. Unique-endpoint controls are required. Closing endpoints themselves inside a skipped/repeated interval lack explicit disambiguation; record convention without mandatory invented error. See planning/oracle-review-guidance.md point3.
 
 ### Q11 — S1-25
 
@@ -166,9 +166,9 @@ State and side effects: Verify server state separately via owner list; one booki
 
 First checkpoint: S2 upgrade checkpoint after acceptedS1 export. Status: NOT_TESTED.
 
-Inputs and controls: Open signed-in S1-client-compatible form, lose committed response, exportS1/importS2 between requests; retain token/ref and pending retry; single booking.
+Inputs and controls: Serve the actual delivered stage2 browser assets through a test routing layer against the real accepted stage1 API; use stage1-compatible table_id single-table body, sign in and lose committed response, exportS1/importS2 between requests, switch API routing toS2; retain actual browser form/token/body/key/reference.
 
-Independent expected result: No reload or signin needed; same browser token authenticated, retained ref lookup works, unchanged pending form retries same key/body and server returns original receipt. Confirm stage1 browser-client compatibility setup explicitly; S1 API-only does not require prior UI service.
+Independent expected result: No reload or signin needed; same browser token authenticated, retained ref lookup works, unchanged pending form retries same key/body and server returns original receipt. Stage1 is API-only: do not require an S1 UI or substitute a synthetic form/compatibility stub. Real stage2 client must send the compatible table_id body while routed toS1. See planning/oracle-review-guidance.md point4.
 
 State and side effects: Assert imported state independently; actual two-service upgrade evidence needed, mocked export/import is NOT_TESTED integration.
 
@@ -286,9 +286,9 @@ State and side effects: No closure/occupancy/history/reservation/restaurantrevis
 
 First checkpoint: S4 exhaustive optimization runnable. Status: NOT_TESTED.
 
-Inputs and controls: Controls for objective1 vs unusedseats, objective2 vs rank, objective3 ties; differing accepted capacities; pair options; fixed conflicts and prior closures; propose closed unused table with zero considered.
+Inputs and controls: Controls for objective1 vs unusedseats, objective2 vs rank, objective3 ties; differing accepted capacities; pair options; fixed conflicts and prior closures; propose closed unused table with zero considered. Reproduce the each-booking accepted-capacity fixture and adjacent-vs-overlapping fixed-tail controls in planning/oracle-review-guidance.md point8.
 
-Independent expected result: Independent Cartesian enumeration of options per considered booking, filter interval/member/fixed/prior/proposed closure conflicts, score lexicographic(changed_count,total_slack,rankvector sortedrefs). Up to10options^6 bounded officiallimit. Compare complete optimum/assignments not production solver. Empty set unique score(0,0,[]) plan allowed.
+Independent expected result: Independent Cartesian enumeration of options per considered booking, filter interval/member/fixed/prior/proposed closure conflicts, score lexicographic(changed_count,total_slack,rankvector sortedrefs). Up to10options^6 bounded officiallimit. Compare complete optimum/assignments not production solver. Empty set unique score(0,0,[]) plan allowed. Point8 expected scores: fixedtD starts20:30 -> four feasible, optimum(1,0,[1,4]); fixedtD starts20:00 -> one feasible, optimum(2,2,[2,1]).
 
 State and side effects: Preserve every considered ref/owner/party/start/end/terms. Re-run oracle after only external fixture change; do not import production normalization or solver.
 
@@ -298,7 +298,7 @@ First checkpoint: S4 apply runnable. Status: NOT_TESTED.
 
 Inputs and controls: Apply validplan; otherrestaurant plan; same key replay after laterwrites; different key alreadyapplied; intervene real booking/change/cancel/policy/adoption/batch; noop/replay/preview intervenes; otherrestaurant closure; concurrent applies.
 
-Independent expected result: Unknown/foreign plan404; own intervening restaurantrevision ->409 stale_plan; applied newkey409 plan_already_applied (both conditions precedence needs Reviewer challenge); successful replay200 original before currentstate validation. Noop/replay/preview do not stale; otherrestaurant changes do not stale.
+Independent expected result: Unknown/foreign plan404. Successful receipt replay resolves first:200 original even after later real writes. Applied plan with a new key returns409 plan_already_applied before staleness; unapplied plan with intervening own restaurantrevision returns409 stale_plan. Apply->newkey is already_applied; preview->realwrite->apply is stale; successful-key replay after realwrite is original200. Noop/replay/preview do not stale; otherrestaurant changes do not stale. This specific precedence prevents plan application itself from making the already_applied requirement unreachable. See planning/oracle-review-guidance.md point9.
 
 State and side effects: Apply atomic closure+allassignments; moved reservationrev+1 with reassigned table_ids/history plan_id, unchanged none; restaurantrev+1 total; no partial reads. Failure no state changes. API reads/UI update current assignments; stale form conflict409 as authoritative.
 
@@ -356,10 +356,14 @@ R5 Plan minimization: enumerate independently all allowed assignments; capacity 
 
 ## Unresolved oracle questions and uncovered classes
 
-Reviewer must challenge source ambiguities before they become mandatory precedence assertions: broad unrelated overlapping errors (authentication/resource/shape where not ordered), stale_plan versus plan_already_applied when both apply, and local opening endpoint comparisons across DST when wall-clock slot+duration wording and absolute-duration rule interact. Explicit precedence remains enforced for idempotency, expected revisions, input/index order and cutoff within a booking. No implementation guess resolves these gaps.
+Reviewer guidance is preserved in planning/oracle-review-guidance.md. Specific apply precedence is resolved: completed receipt replay, then already-applied under a new key, then stale unapplied plan. Unique valid DST closing endpoints use an absolute end comparison and the Q10 explicit vectors. Remaining unspecified cases are broad unrelated overlapping errors (authentication/resource/shape where not ordered) and closing endpoints themselves within skipped/repeated intervals; record chosen conventions without inventing mandatory precedence or codes. Explicit source precedence remains enforced for idempotency, expected revisions, input/index order and cutoff within a booking.
 
 Cutoff equality requires permitted deterministic clock or an externally recorded bracket; no clock-hook mutation is authorized by this planning item. Runtime/network/resource ceilings need actual permitted isolated Docker execution; hashing storage review needs narrow safe inspection. If either cannot be observed, report NOT_TESTED, never substitute host/unit evidence.
 
 The map covers representative boundaries, not every JSON nesting/type combination, IANA zone/date, pair graph, six-booking optimum, concurrency schedule, timeout location, viewport, font/accessibility metric or upgrade state. Product tests, connected browser smoke, rendered design review, official isolated harness and all four stage gates are NOT_TESTED. Source/digest/coverage validation and seat checkout smoke are the only observed checks in this task. Optional reload/cross-tab/polling behavior is not required. No exhaustive correctness claim.
 
 PM receives this planning candidate and gives Reviewer the complete requirements and exact candidate for oracle challenge. Planning receipt/review is not product acceptance. An independent Reviewer must accept each later exact committed stage candidate.
+
+## Independent review repair provenance
+
+F1 rejected a9b717c69ed8b2361a81f3836a8c73d68c528b54 for the incorrect seven-slot count. Repair cycle1 corrects Q07 to the full eight-slot vector and adds the non-midnight opening/equality control. Prior failing evidence remains under .evidence/reviewer-oracles-20261005T062627Z and .evidence/qa-boundaries-20261005T0609Z. The nine reviewer guidance points are preserved in planning/oracle-review-guidance.md; all product checks remain NOT_TESTED. Only independently rerun planning acceptance by Reviewer can resolve this rejection.

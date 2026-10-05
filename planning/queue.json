@@ -7,7 +7,7 @@
     ],
     "state": "IN_PROGRESS",
     "goal": "Add independent boundary cases and first-checkpoint plan to the existing coverage map.",
-    "starting_revision": "758093050e2484a6435395409f501994b9e215b8",
+    "starting_revision": "e20821e14094c1507ae64a7055543ad43673e5de",
     "workspace_paths": [
       "/Users/frank/mygit/Tablekeeper/result-run-7"
     ],
@@ -28,11 +28,13 @@
     ],
     "next_recipient": "@frankzhu94/factory-pm",
     "evidence_paths": [
-      "/Users/frank/mygit/Tablekeeper/result-run-7/.evidence/qa-boundaries-20261005T0609Z"
+      "/Users/frank/mygit/Tablekeeper/result-run-7/.evidence/qa-boundaries-f1-repair-20261005T0643Z"
     ],
     "limitations": [
-      "Product candidate does not exist; product tests NOT_TESTED. Exact REVIEW candidate and command results are recorded after commit in unique evidence and complete room handoff."
-    ]
+      "Product behavior NOT_TESTED; independent re-review pending; previous failures preserved."
+    ],
+    "repair_cycle": 1,
+    "rejected_candidate": "a9b717c69ed8b2361a81f3836a8c73d68c528b54"
   },
   {
     "id": "REV-ORACLES",
