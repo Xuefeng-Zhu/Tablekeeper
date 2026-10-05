@@ -1,0 +1,59 @@
+{
+  "work_item": "TK-QA-PLAN",
+  "starting_revision": "c5bf1e4542190ffd073e839f89bac3e3cb9c4b17",
+  "responsible_handle": "@frankzhu94/factory-qa",
+  "started_utc": "2026-10-05T18:13:53.549150+00:00",
+  "ended_utc": "2026-10-05T18:13:53.609655+00:00",
+  "python": "3.14.3",
+  "observations": [
+    {
+      "layer": "STATIC_AST_COMPILE",
+      "result": "PASS",
+      "groups": 12
+    },
+    {
+      "layer": "REQUIREMENT_MAP_INTEGRITY",
+      "result": "PASS",
+      "original_rows_unchanged": 51,
+      "boundary_cases": 56,
+      "every_original_row_linked": true
+    },
+    {
+      "layer": "CONNECTED_HTTP",
+      "result": "NOT_TESTED",
+      "reason": "No product service or stage source exists"
+    }
+  ],
+  "commands_and_exits": [
+    {
+      "command": "git status --short --branch && git rev-parse HEAD && git fetch origin",
+      "exit_status": 0,
+      "observed_head": "c5bf1e4542190ffd073e839f89bac3e3cb9c4b17"
+    },
+    {
+      "command": "rg --files -g AGENTS.md -g !node_modules -g !.git && cat requirements-coverage.csv && cat .gitignore",
+      "exit_status": 1,
+      "reason": "No matching AGENTS.md; chained reads did not execute; subsequent direct reads succeeded"
+    },
+    {
+      "command": "python3 .evidence/qa-plan-20261005T1805Z/stage1_http.py --list",
+      "exit_status": 0,
+      "layer": "STATIC_INVENTORY"
+    },
+    {
+      "command": "Python AST/compile and baseline CSV field-by-field comparison (this validation cell)",
+      "exit_status": 0
+    }
+  ],
+  "room_events": [
+    "6ad35cef-db04-4a37-9adc-78b214962364",
+    "4a431fe2-8b87-4d68-a12d-282706a5ea21",
+    "5ab118cf-e8ba-44c9-a842-0caa0477912a",
+    "8b303f9d-f1c0-470f-a7f5-f474bf4dae38"
+  ],
+  "limitations": [
+    "All product, container, browser, upgrade, planner and release gates NOT_TESTED",
+    "No independent acceptance",
+    "Usage/cost UNAVAILABLE"
+  ]
+}

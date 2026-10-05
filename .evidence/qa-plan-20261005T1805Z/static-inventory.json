@@ -1,0 +1,87 @@
+{
+  "layer": "STATIC_INVENTORY",
+  "connected_execution": "NOT_TESTED",
+  "checks": [
+    {
+      "name": "test_batch_swap_atomicity_and_noop",
+      "representative_cases": [
+        "Q22"
+      ]
+    },
+    {
+      "name": "test_batch_validation_before_overlap",
+      "representative_cases": [
+        "Q23"
+      ]
+    },
+    {
+      "name": "test_concurrent_identical_and_competing",
+      "representative_cases": [
+        "Q11"
+      ]
+    },
+    {
+      "name": "test_dst_literal_oracles",
+      "representative_cases": [
+        "Q18",
+        "Q19"
+      ]
+    },
+    {
+      "name": "test_export_replacement_receipts_and_rollback",
+      "representative_cases": [
+        "Q20",
+        "Q21"
+      ]
+    },
+    {
+      "name": "test_half_open_and_failed_patch",
+      "representative_cases": [
+        "Q14",
+        "Q17"
+      ]
+    },
+    {
+      "name": "test_key_bounds_and_failed_reuse",
+      "representative_cases": [
+        "Q06"
+      ]
+    },
+    {
+      "name": "test_past_allowed_cutoff_and_cancel",
+      "representative_cases": [
+        "Q16"
+      ]
+    },
+    {
+      "name": "test_public_slots_and_grid",
+      "representative_cases": [
+        "Q01",
+        "Q12",
+        "Q13"
+      ]
+    },
+    {
+      "name": "test_replay_identity_and_precedence",
+      "representative_cases": [
+        "Q08",
+        "Q09"
+      ]
+    },
+    {
+      "name": "test_user_and_path_scopes",
+      "representative_cases": [
+        "Q07",
+        "Q10",
+        "Q15"
+      ]
+    },
+    {
+      "name": "test_validation_classes",
+      "representative_cases": [
+        "Q05",
+        "Q12"
+      ]
+    }
+  ]
+}
