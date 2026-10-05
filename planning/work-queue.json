@@ -3,7 +3,7 @@
     "id": "ARCH",
     "owner": "@frankzhu94/factory-architect",
     "dependencies": [],
-    "state": "IN_PROGRESS",
+    "state": "REVIEW",
     "goal": "Decide implementable architecture and upgrade/state contracts",
     "requirements": [
       "Work item ARCH READY. Owner and recipient @frankzhu94/factory-architect; next recipient @frankzhu94/factory-pm. You have the sole checkout write lease after this handoff, ending when you return your committed delivery or at your tool-reported finish-work deadline. No other writer is authorized. PM releases its lease now.\nGoal: choose an implementable architecture for the complete four-stage Tablekeeper dispatch below, beginning with stage 1. Record decisions before implementation. Prefer a simple reliable implementation; the TypeScript/React proposal is optional. Explicitly decide transaction serialization, time/DST handling, idempotency equality/scope and receipt storage, export/import upgrades, error precedence, and extension contracts for policies/series/replanning. Do not implement product code.\nStarting and current candidate revision f12268f32915298d42a8b1b4076cec651621cef7, clean assigned checkout /Users/frank/mygit/Tablekeeper/result-run-6. PM initial commit was pushed to origin run-6; git fetch and push both exit 0. All seven frozen identities are verified present in this room; responsiveness is not yet established. Your connected execution and addressed receipt establish your own smoke evidence; do not repeat operator probes.\nOwnership: planning/architecture.md and ARCH queue record only. Read planning/product-brief.md and existing planning/requirements-coverage.csv. Set Git author Factory Architect <architect@factory.invalid> locally before committing. Evidence /Users/frank/mygit/Tablekeeper/result-run-6/.evidence/architect-ARCH-20261005 (unique suffix on retries). Root README.md, FACTORY.md and room.json are post-run human artifacts, not yours to invent.\nAcceptance: concrete implementable decisions tied to complete requirements, risks and testable independent oracles; no missing mandatory behavior; a committed attributable record and full addressed handoff to PM. Planning is not release acceptance. QA will next add boundary cases to existing map, then Reviewer challenges risky relationships before implementation. No dependent implementation authorized yet.\nLimits: one active seat/writer, 600-second turn with factory_turn_budget reserve, 120-second receipt deadline, maximum 3 repairs, maximum 2 delivery retries, 28800-second stage limit; earlier cumulative deadline 2026-10-05T02:35:03.700437+00:00 governs. Subscription only, API billing and paid provisioning prohibited. Freeze reported 64496867 remaining tokens, live cost UNAVAILABLE. Do not wait for human input. Report actual blockers to PM. Use only assigned writable checkout or platform temporary directory; do not modify operator sources/runs. No rewriting history. Push new commits with git push origin HEAD:refs/heads/run-6. Return exact revision, paths, commands/exit statuses, limitations, UTC timestamps and remaining budget.\nSource readiness: /Users/frank/mygit/Tablekeeper/runs/run6-preparation-20261004/authorization/ready-summary.json reports READY_TO_LAUNCH matching injected configuration; the packet preparation label below is superseded by that observed frozen readiness. Full original dispatch follows verbatim. Acknowledge the numbered complete payload digest before work, using the mandated standalone HANDOFF-ACK to PM UUID 7d26ccf7-2921-4b38-9e16-ca8ebfa2a448. Then execute ARCH and return to PM, who will schedule QA and Reviewer.\n\n",
@@ -24,7 +24,7 @@
       "Committed attributable architecture record and complete addressed PM handoff.",
       "Independent QA and Reviewer challenge precedes dependent implementation; architecture author does not accept their own work."
     ],
-    "candidate_commit": null,
+    "candidate_commit": "7e484f683f5658c7bab5f4f176e391a377a9d25d",
     "commands": [
       "git status --short --branch",
       "git rev-parse HEAD",
@@ -33,7 +33,9 @@
       "git config user.name 'Factory Architect'",
       "git config user.email 'architect@factory.invalid'",
       "python3 .evidence/architect-ARCH-20261005/probe.py",
-      "git diff --check"
+      "git diff --check",
+      "git add planning/architecture.md planning/work-queue.json",
+      "git commit -m 'Record Tablekeeper architecture and stage evolution contracts'"
     ],
     "results": [
       "All listed commands exited 0; initial checkout clean at starting revision; origin/run-6 already up to date.",
@@ -47,8 +49,8 @@
     ],
     "limitations": [
       "Local host synthetic probes only; container performance, product correctness, browser behavior and official isolated gates NOT_TESTED.",
-      "Independent review pending. Commit snapshot is IN_PROGRESS; post-commit room handoff and subsequent queue record identify immutable review candidate.",
-      "No source export credentials printed; measured monetary cost UNAVAILABLE."
+      "No source export credentials printed; measured monetary cost UNAVAILABLE.",
+      "Independent review pending. Review candidate is the immutable architecture commit; the following queue-only commit records its full ID and REVIEW state without altering architecture."
     ],
     "next_recipient": "@frankzhu94/factory-pm"
   },
