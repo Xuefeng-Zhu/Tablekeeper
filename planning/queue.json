@@ -68,9 +68,11 @@
     "requirements": [
       "Retain all four exact normative sources/hash,53sections/33classes, independent boundaries and earliest runnable checkpoints.",
       "Correct every Q07 count/vector and preserve nine Reviewer guidance points.",
-      "Keep observed planning evidence separate from NOT_TESTED product behavior."
+      "Keep observed planning evidence separate from NOT_TESTED product behavior.",
+      "A1 repair: Stage1 \u00a710 import overrides general type400. Malformed JSON400 malformed_request; every parseable invalid envelope/state including track:7,format_version:\"1\",state:[],state:null,missingfields{},wrongtrack/version2/invalidnestedstate gives422 validation_failed without destination changes. Valid unchanged export204 replaces atomically and repeats without duplication. Add C4/Q11 prospective controls; preserve all other contracts.",
+      "G1 clarification: Stage3 adoption first failing occurrence in index order includes occupancy, unlike global nonoccupancy-first moves/series-amend. Berlin anchor2027-03-14T02:30,count3,week1,Sun01:00..05:00,grid30,duration30,t1,party2; i1Mar21 occupied/i2Mar28 gap ->409 table_unavailable at i1. Complement i1gap/i2occupied ->422 invalid_local_time; all-clear fold control preserves anchor and commits atomically."
     ],
-    "starting_revision": "b2b2af25c3aa170d75d99f604c4c24a1835efb5c",
+    "starting_revision": "73211923b9f940385036cebcf9d0bb4454d28314",
     "workspace_paths": [
       "/Users/frank/mygit/Tablekeeper/result-run-7"
     ],
@@ -79,7 +81,8 @@
     ],
     "acceptance_conditions": [
       "Concrete architecture covers Stage1 full module/state/time/atomicity/deployment and upgrade contracts, extension boundaries and Q01-Q12 checkpoints; independent PM/Reviewer review required.",
-      "Preserve exact inherited requirements and evidence; deliver full committed candidate with commands/results/limits."
+      "Preserve exact inherited requirements and evidence; deliver full committed candidate with commands/results/limits.",
+      "Distinct Reviewer verifies exact repaired candidate: import endpoint422 versus malformedJSON400 and adoption first-index complete validation, unchanged original requirements/other contracts/evidence."
     ],
     "commands": [
       "git fetch origin",
@@ -87,19 +90,31 @@
       "python3 /private/tmp/architect_probe.py",
       "/usr/bin/python3 architecture-probe.py",
       "/usr/bin/python3 architecture-probe-attempt-3.py",
-      "python3 scrypt component experiment"
+      "python3 scrypt component experiment",
+      "python3 /Users/frank/mygit/Tablekeeper/result-run-7/.evidence/architect-repair-a1-20261005T080112Z/validate_repair.py",
+      "git diff --check",
+      "git add planning/architecture-decision.md planning/architecture-state-schema.md planning/queue.json",
+      "git commit -m \"Correct import and adoption architecture precedence\"",
+      "git push origin HEAD:refs/heads/run-7"
     ],
     "results": [
-      "Fetch PASS remote equals starting HEAD; help exit0; host combined probe failures exit1 preserved; split-component probes PASS exit0; all product checks NOT_TESTED."
+      "Fetch PASS remote equals starting HEAD; help exit0; host combined probe failures exit1 preserved; split-component probes PASS exit0; all product checks NOT_TESTED.",
+      "Repair planning checks PASS exit0: A1/G1 wording/prospective controls,53source rows/33NOT_TESTED classes, unchanged inherited inputs/peer entries/unrelated mechanisms/checkpoints and hashed preserved evidence. Commit/push results and full candidate recorded in immutable handoff; product NOT_TESTED."
     ],
     "evidence_paths": [
-      "/Users/frank/mygit/Tablekeeper/result-run-7/.evidence/architect-decision-20261005T071322Z"
+      "/Users/frank/mygit/Tablekeeper/result-run-7/.evidence/architect-decision-20261005T071322Z",
+      "/Users/frank/mygit/Tablekeeper/result-run-7/.evidence/architect-repair-a1-20261005T080112Z"
     ],
     "limitations": [
       "No product implementation/browser/Docker/actual upgrade/gate observed; independent acceptance pending.",
-      "Host capability failures preserved; combined image capabilities require C1."
+      "Host capability failures preserved; combined image capabilities require C1.",
+      "Original exact0.759896s finish-work overrun and incomplete first probe traceback preserved; no original lease renewal."
     ],
-    "next_recipient": "@frankzhu94/factory-pm"
+    "next_recipient": "@frankzhu94/factory-pm",
+    "repair_cycle": 1,
+    "remaining_repairs": 2,
+    "rejected_candidate": "73211923b9f940385036cebcf9d0bb4454d28314",
+    "bounded_next_action": "Deliver new fixed committed architecture candidate with full requirements/evidence to PM for distinct Reviewer recheck; Backend dependency remains unresolved until acceptance."
   },
   {
     "id": "S1-IMPL",
