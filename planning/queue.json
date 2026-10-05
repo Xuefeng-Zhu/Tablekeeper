@@ -1,0 +1,148 @@
+[
+  {
+    "id": "QA-BOUNDARIES",
+    "owner": "@frankzhu94/factory-qa",
+    "dependencies": [
+      "PM-BOOT"
+    ],
+    "state": "PROPOSED",
+    "goal": "Add independent boundary cases and first-checkpoint plan to the existing coverage map."
+  },
+  {
+    "id": "REV-ORACLES",
+    "owner": "@frankzhu94/factory-reviewer",
+    "dependencies": [
+      "QA-BOUNDARIES"
+    ],
+    "state": "PROPOSED",
+    "goal": "Challenge highest-risk requirement relationships and independent oracles."
+  },
+  {
+    "id": "ARCH-DECISION",
+    "owner": "@frankzhu94/factory-architect",
+    "dependencies": [
+      "REV-ORACLES"
+    ],
+    "state": "PROPOSED",
+    "goal": "Decide implementable architecture, serialization, timezone and upgrade schema before implementation."
+  },
+  {
+    "id": "S1-IMPL",
+    "owner": "@frankzhu94/factory-backend",
+    "dependencies": [
+      "ARCH-DECISION"
+    ],
+    "state": "PROPOSED",
+    "goal": "Implement only stage 1 inherited scope in independent full service; frontend gets subsequent exclusive UI lease where needed."
+  },
+  {
+    "id": "S1-QA",
+    "owner": "@frankzhu94/factory-qa",
+    "dependencies": [
+      "S1-IMPL"
+    ],
+    "state": "PROPOSED",
+    "goal": "Run independent boundary and behavior checks; retain failed evidence."
+  },
+  {
+    "id": "S1-GATE",
+    "owner": "@frankzhu94/factory-reviewer",
+    "dependencies": [
+      "S1-QA"
+    ],
+    "state": "PROPOSED",
+    "goal": "Independently accept exact clean candidate with official isolated harness and required evidence."
+  },
+  {
+    "id": "S2-DESIGN",
+    "owner": "@frankzhu94/factory-designer",
+    "dependencies": [
+      "S1-GATE",
+      "S2-DESIGN"
+    ],
+    "state": "PROPOSED",
+    "goal": "Specify browser journeys, hierarchy, all states, responsive and focus behavior before UI implementation."
+  },
+  {
+    "id": "S2-IMPL",
+    "owner": "@frankzhu94/factory-backend",
+    "dependencies": [
+      "S1-GATE",
+      "S2-DESIGN"
+    ],
+    "state": "PROPOSED",
+    "goal": "Implement only stage 2 inherited scope in independent full service; frontend gets subsequent exclusive UI lease where needed."
+  },
+  {
+    "id": "S2-QA",
+    "owner": "@frankzhu94/factory-qa",
+    "dependencies": [
+      "S2-IMPL"
+    ],
+    "state": "PROPOSED",
+    "goal": "Run independent boundary and behavior checks; retain failed evidence."
+  },
+  {
+    "id": "S2-GATE",
+    "owner": "@frankzhu94/factory-reviewer",
+    "dependencies": [
+      "S2-QA"
+    ],
+    "state": "PROPOSED",
+    "goal": "Independently accept exact clean candidate with official isolated harness and required evidence."
+  },
+  {
+    "id": "S3-IMPL",
+    "owner": "@frankzhu94/factory-backend",
+    "dependencies": [
+      "S2-GATE"
+    ],
+    "state": "PROPOSED",
+    "goal": "Implement only stage 3 inherited scope in independent full service; frontend gets subsequent exclusive UI lease where needed."
+  },
+  {
+    "id": "S3-QA",
+    "owner": "@frankzhu94/factory-qa",
+    "dependencies": [
+      "S3-IMPL"
+    ],
+    "state": "PROPOSED",
+    "goal": "Run independent boundary and behavior checks; retain failed evidence."
+  },
+  {
+    "id": "S3-GATE",
+    "owner": "@frankzhu94/factory-reviewer",
+    "dependencies": [
+      "S3-QA"
+    ],
+    "state": "PROPOSED",
+    "goal": "Independently accept exact clean candidate with official isolated harness and required evidence."
+  },
+  {
+    "id": "S4-IMPL",
+    "owner": "@frankzhu94/factory-backend",
+    "dependencies": [
+      "S3-GATE"
+    ],
+    "state": "PROPOSED",
+    "goal": "Implement only stage 4 inherited scope in independent full service; frontend gets subsequent exclusive UI lease where needed."
+  },
+  {
+    "id": "S4-QA",
+    "owner": "@frankzhu94/factory-qa",
+    "dependencies": [
+      "S4-IMPL"
+    ],
+    "state": "PROPOSED",
+    "goal": "Run independent boundary and behavior checks; retain failed evidence."
+  },
+  {
+    "id": "S4-GATE",
+    "owner": "@frankzhu94/factory-reviewer",
+    "dependencies": [
+      "S4-QA"
+    ],
+    "state": "PROPOSED",
+    "goal": "Independently accept exact clean candidate with official isolated harness and required evidence."
+  }
+]
