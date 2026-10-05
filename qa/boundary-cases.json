@@ -65,8 +65,8 @@
       "S1-03"
     ],
     "schedule": "S1 first runnable",
-    "inputs_expected": "Success body with extra {meta:{n:1,a:[1,2],b:true,z:null}}: reorder keys/whitespace and 1.0 =>200 original response. true replacing n:1, reordered a, changed unknown field, or omitted unknown field =>409 idempotency_key_reuse.",
-    "independent_oracle": "Explicit typed JSON values; capture immutable original JSON response and compare recursively (bool distinct from number). Large adjacent unknown integers 9007199254740992/9007199254740993 must not collapse. No production canonicalizer.",
+    "inputs_expected": "Success body with extra {meta:{n:1,a:[1,2],b:true,z:null}}: reorder keys/whitespace and 1.0 =>200 original response. true replacing n:1, reordered a, changed unknown field, or omitted unknown field =>409 idempotency_key_reuse. Raw bytes n=1.0000000000000001 accepted; equivalent1.00000000000000010=>200 original;1.0 ortrue=>409 before and after reset/import. Response parser preserves Decimal values; raw export bytes sent unchanged. Explicit1 vs1.0 remains positive control.",
+    "independent_oracle": "Exact Decimal response parser and literal raw request bytes, bool checked before numbers; no binary float accepted by equality oracle. Original Reviewer fractional witness retained; large adjacent integers/tiny exponents/context precision controls. Replay identity is JSON value, not lexical spelling.",
     "status": "NOT_TESTED"
   },
   {
@@ -152,9 +152,9 @@
       "S1-08",
       "S1-09"
     ],
-    "schedule": "Reviewer interpretation before edge gate",
-    "inputs_expected": "Spring opening02:00 closing05:00 lies in gap; architecture discards whole interval, potentially losing valid03:00/03:30 starts. Spring closing02:30 with00:00 opening and short duration is also undefined.",
-    "independent_oracle": "Flag OPEN interpretation: spec excludes nonexistent starts but gives no boundary-resolution rule. Compare available real grid starts under alternatives; do not approve architecture convention or reject product on invented rule.",
+    "schedule": "S1 first runnable mandatory API regression",
+    "inputs_expected": "Berlin2026-03-29 opens02:15 closes04:45 grid30 duration30: availability exactly03:15,03:45,04:15,all+02:00; each POST accepted201 with ends03:45,04:15,04:45. POST02:15=>422 invalid_local_time;03:00=>422 not_on_slot_grid. Past creation allowed.",
+    "independent_oracle": "Hand-listed wall grid02:15,02:45,03:15,03:45,04:15,04:45; remove first two nonexistent and last duration-over-close. :15 origin retained. Definite Reviewer R1 regression, not OPEN interpretation. Separate closing convention is Q15.",
     "status": "NOT_TESTED"
   },
   {
@@ -163,9 +163,9 @@
       "S1-08",
       "S1-09"
     ],
-    "schedule": "Reviewer interpretation before edge gate",
-    "inputs_expected": "Berlin fall closing02:30, booking01:30 duration90: resolved first closing00:30Z vs booking end01:00Z (02:00+01). Wall end<02:30 but instant end>first closing.",
-    "independent_oracle": "OPEN: absolute-duration rule clear; closing boundary fold choice unspecified. Obtain Reviewer decision, preserve both predicted outcomes; ordinary unambiguous close cases remain release tests.",
+    "schedule": "Reviewer documented closing convention; S1 first runnable convention checks",
+    "inputs_expected": "Repeated closing: Berlin2026-10-25 opens01:00 closes02:30,01:30+90min end01:00Z exceeds first02:30 close00:30Z=>outside_opening_hours under documented convention. Gap closing: Berlin2026-03-29 opens01:00 closes02:30 grid/duration30 retains01:00/01:30 if closing at transition03:00+02.",
+    "independent_oracle": "First repeated close is Reviewer-accepted implementation reading; nonexistent close at forward transition is explicit architecture convention, not normative spec addition. Keep these convention checks separate from mandatory Q14 and first-fold booking vectors.",
     "status": "NOT_TESTED"
   },
   {
@@ -208,7 +208,7 @@
       "S1-10"
     ],
     "schedule": "S1 first runnable",
-    "inputs_expected": "Export A with two sessions,changed/cancelled booking,success create and batch receipts,failed key; import into B with unrelated credentials twice=>204. Old tokens/login/references/timestamps/receipts survive; B credentials vanish; failed key reusable.",
+    "inputs_expected": "Export A with two sessions,changed/cancelled booking,success create and batch receipts,failed key; import into B with unrelated credentials twice=>204. Old tokens/login/references/timestamps/receipts survive; B credentials vanish; failed key reusable. Exact fractional receipt body/key retried before/after import without decoding/re-encoding export through float; equivalent spelling200,distinct fraction409.",
     "independent_oracle": "Independent source/destination services; capture source responses privately in memory; stop source before destination reads. Further source writes cannot mutate saved snapshot. Never print export.",
     "status": "NOT_TESTED"
   },
@@ -353,12 +353,13 @@
   {
     "case_id": "Q32",
     "requirements": [
+      "S1-10",
       "S3-02",
       "S3-05"
     ],
-    "schedule": "Reviewer interpretation before migration gate",
-    "inputs_expected": "Legacy booking amended/cancelled before S3 export has no required pre-S3 history data. Architecture proposes synthesized created/cancelled at same created_at.",
-    "independent_oracle": "OPEN: upgrade requires preservation and adoption, but no exact synthetic legacy history contract. Verify identities/current state/old receipts; do not treat fabricated prior events/times as historical truth. Reviewer must decide baseline convention before gate.",
+    "schedule": "Capture actual event facts at first S1 runnable; S1/S2->S3 first upgrade gate",
+    "inputs_expected": "Actual diner create(t1)->amend(t2)->cancel on separated observed times: upgraded current state cancelled/t2,identities/created_at preserved;history created t1,changed t1->t2,cancelled empty;seq/revisions1/2/3 under private-ledger contract. Original confirmed/t1 receipt unchanged. Separate seeded fixture baseline revision1,provenance fixture_seed,initial_status; no invented cancellation or earlier choices.",
+    "independent_oracle": "Real operations and saved request/response values; HTTP timestamps within separate operation brackets, then exact history equality on S3 export/import. At first storage candidate inspect only private event facts with safe adapter and compare exact recorded timestamps/changes to upgraded entries; schema adapter pending, no timestamp-recovery claim. Cancelled seed control only from S2+ fixture support. Missing historical facts must not become fabricated events.",
     "status": "NOT_TESTED"
   },
   {

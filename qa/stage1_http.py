@@ -5,6 +5,7 @@ No product imports or helpers. Results omit tokens, passwords and exported state
 import argparse
 import concurrent.futures
 import datetime as dt
+from decimal import Decimal
 import json
 import pathlib
 import re
@@ -14,14 +15,32 @@ import urllib.error
 import urllib.request
 
 
+def exact_loads(raw):
+    def reject(token):
+        raise ValueError('non-JSON numeric constant')
+    return json.loads(raw, parse_int=Decimal, parse_float=Decimal, parse_constant=reject)
+
+
 def same(a, b):
+    # Floats have already lost information; fail closed rather than bless a rounded oracle.
+    if isinstance(a, float) or isinstance(b, float):
+        raise TypeError('binary float is not an exact JSON oracle value')
     if isinstance(a, bool) or isinstance(b, bool):
         return type(a) is type(b) and a == b
+    if isinstance(a, (int, Decimal)) and isinstance(b, (int, Decimal)):
+        return a == b
     if isinstance(a, dict) and isinstance(b, dict):
         return a.keys() == b.keys() and all(same(a[k], b[k]) for k in a)
     if isinstance(a, list) and isinstance(b, list):
         return len(a) == len(b) and all(same(x, y) for x, y in zip(a, b))
-    return type(a) is type(b) and a == b if not isinstance(a, (int, float)) else isinstance(b, (int, float)) and a == b
+    return type(a) is type(b) and a == b
+
+
+def numeric_body(token):
+    # Deliberately construct wire bytes from a numeric token, never a Python float.
+    return ('{"restaurant_id":"r1","table_id":"t1",'
+            '"starts_at_local":"2030-06-01T19:00","party_size":4,'
+            '"meta":{"n":' + token + '}}').encode()
 
 
 def fixture(zone='Europe/Berlin', opening='18:00', closing='23:00'):
@@ -36,13 +55,17 @@ class Checks:
     def __init__(self, base):
         self.base, self.token = base.rstrip('/'), None
 
-    def request(self, method, path, body=None, key=None):
+    def request(self, method, path, body=None, key=None, *, raw_body=None, raw_response=False):
         headers = {'Content-Type': 'application/json; charset=utf-8'}
         if self.token:
             headers['Authorization'] = 'Bearer ' + self.token
         if key is not None:
             headers['Idempotency-Key'] = key
-        data = None if body is None else json.dumps(body, ensure_ascii=False).encode()
+        if raw_body is not None and body is not None:
+            raise ValueError('choose raw bytes or structured body')
+        if raw_body is not None and not isinstance(raw_body, bytes):
+            raise TypeError('raw_body must be bytes')
+        data = raw_body if raw_body is not None else (None if body is None else json.dumps(body, ensure_ascii=False, allow_nan=False).encode())
         req = urllib.request.Request(self.base+path, data=data, headers=headers, method=method)
         start = time.monotonic()
         try:
@@ -51,14 +74,14 @@ class Checks:
             response = e
         with response:
             raw = response.read()
-            parsed = json.loads(raw) if raw else None
+            parsed = exact_loads(raw) if raw else None
             status = response.status
         assert time.monotonic()-start <= (10 if path.startswith('/_test/') else 5), 'request deadline exceeded'
         assert status < 500, 'unexpected server 5xx'
-        return status, parsed
+        return status, raw if raw_response else parsed
 
-    def expect(self, method, path, body=None, key=None, status=200, code=None):
-        actual, value = self.request(method, path, body, key)
+    def expect(self, method, path, body=None, key=None, status=200, code=None, **wire):
+        actual, value = self.request(method, path, body, key, **wire)
         assert actual == status, f'HTTP status expected {status}, observed {actual}'
         if code:
             assert value.get('error', {}).get('code') == code, f'expected error code {code}'
@@ -123,6 +146,45 @@ class Checks:
             assert record['ends_at']==date+'T'+end
             assert (dt.datetime.fromisoformat(record['ends_at'])-dt.datetime.fromisoformat(record['starts_at'])).total_seconds()==5400
 
+    def gap_opening(self):
+        f = fixture('Europe/Berlin', '02:15', '04:45')
+        f['restaurants'][0]['reservation_duration_minutes'] = 30
+        self.reset(f)
+        slots = self.expect('GET', '/availability?restaurant_id=r1&date=2026-03-29&party_size=4')['slots']
+        expected = ['03:15', '03:45', '04:15']
+        assert [s['starts_at_local'] for s in slots] == ['2026-03-29T'+t for t in expected]
+        assert [s['starts_at'] for s in slots] == ['2026-03-29T'+t+':00+02:00' for t in expected]
+        for i, t in enumerate(expected):
+            result = self.expect('POST', '/reservations', self.booking(starts_at_local='2026-03-29T'+t), 'gap-grid'+str(i), 201)
+            assert result['starts_at'] == '2026-03-29T'+t+':00+02:00'
+            assert result['ends_at'] == '2026-03-29T'+['03:45','04:15','04:45'][i]+':00+02:00'
+        self.expect('POST', '/reservations', self.booking(starts_at_local='2026-03-29T03:00'), 'off-grid', 422, 'not_on_slot_grid')
+        self.expect('POST', '/reservations', self.booking(starts_at_local='2026-03-29T02:15'), 'missing-wall', 422, 'invalid_local_time')
+
+    def numeric_receipt(self):
+        self.reset()
+        original = self.expect('POST', '/reservations', key='decimal', status=201,
+                               raw_body=numeric_body('1.0000000000000001'))
+        def retry_controls():
+            assert same(original, self.expect('POST', '/reservations', key='decimal',
+                        raw_body=numeric_body('1.00000000000000010')))
+            for token in ['1.0', 'true']:
+                self.expect('POST', '/reservations', key='decimal', status=409,
+                            code='idempotency_key_reuse', raw_body=numeric_body(token))
+        retry_controls()
+        # Same-service reset/import continuation. Separate-image upgrades are another layer.
+        snapshot = self.expect('GET', '/_test/export', raw_response=True)
+        old_token = self.token
+        self.expect('POST', '/_test/reset', fixture(), status=204)
+        self.expect('POST', '/_test/import', status=204, raw_body=snapshot)
+        self.token = old_token
+        retry_controls()
+        assert len(self.expect('GET', '/reservations')['reservations']) == 1
+        self.reset()
+        original = self.expect('POST', '/reservations', key='equiv', status=201, raw_body=numeric_body('1'))
+        assert same(original, self.expect('POST', '/reservations', key='equiv', raw_body=numeric_body('1.0')))
+        self.expect('POST', '/reservations', key='equiv', status=409, code='idempotency_key_reuse', raw_body=numeric_body('true'))
+
     def concurrent(self):
         for identical in [True,False]:
             self.reset()
@@ -171,7 +233,7 @@ def main():
     with out.open('x') as result_file:
         record={'work_item':'S1-QA','candidate_commit':args.candidate,'responsible_handle':'@frankzhu94/factory-qa','started_at_utc':dt.datetime.now(dt.timezone.utc).isoformat(),'layer':'HTTP only; container limits not established by driver','results':[]}
         checker=Checks(args.base_url)
-        for name,ids in [('query_boundaries',['Q03']),('receipt_boundaries',['Q04','Q06','Q08']),('dst',['Q12','Q13']),('concurrent',['Q09']),('atomic_moves',['Q17','Q18'])]:
+        for name,ids in [('query_boundaries',['Q03']),('receipt_boundaries',['Q04','Q06','Q08']),('dst',['Q12','Q13']),('gap_opening',['Q14']),('numeric_receipt',['Q06','Q19']),('concurrent',['Q09']),('atomic_moves',['Q17','Q18'])]:
             start=time.monotonic()
             try:
                 getattr(checker,name)()
