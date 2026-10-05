@@ -1,0 +1,360 @@
+[
+  {
+    "id": "ARCH",
+    "owner": "@frankzhu94/factory-architect",
+    "dependencies": [],
+    "state": "PROPOSED",
+    "goal": "Decide implementable architecture and upgrade/state contracts",
+    "requirements": [],
+    "starting_revision": null,
+    "workspace_paths": [
+      "/Users/frank/mygit/Tablekeeper/result-run-6"
+    ],
+    "ownership_boundaries": [],
+    "acceptance_conditions": [],
+    "candidate_commit": null,
+    "commands": [],
+    "results": [],
+    "evidence_paths": [],
+    "limitations": [
+      "Complete addressed handoff required before READY"
+    ],
+    "next_recipient": "@frankzhu94/factory-pm"
+  },
+  {
+    "id": "QA-PLAN",
+    "owner": "@frankzhu94/factory-qa",
+    "dependencies": [
+      "ARCH"
+    ],
+    "state": "PROPOSED",
+    "goal": "Add representative boundaries and independent evidence targets to existing map",
+    "requirements": [],
+    "starting_revision": null,
+    "workspace_paths": [
+      "/Users/frank/mygit/Tablekeeper/result-run-6"
+    ],
+    "ownership_boundaries": [],
+    "acceptance_conditions": [],
+    "candidate_commit": null,
+    "commands": [],
+    "results": [],
+    "evidence_paths": [],
+    "limitations": [
+      "Complete addressed handoff required before READY"
+    ],
+    "next_recipient": "@frankzhu94/factory-pm"
+  },
+  {
+    "id": "REVIEW-PLAN",
+    "owner": "@frankzhu94/factory-reviewer",
+    "dependencies": [
+      "QA-PLAN"
+    ],
+    "state": "PROPOSED",
+    "goal": "Challenge highest-risk relationships and independent oracles",
+    "requirements": [],
+    "starting_revision": null,
+    "workspace_paths": [
+      "/Users/frank/mygit/Tablekeeper/result-run-6"
+    ],
+    "ownership_boundaries": [],
+    "acceptance_conditions": [],
+    "candidate_commit": null,
+    "commands": [],
+    "results": [],
+    "evidence_paths": [],
+    "limitations": [
+      "Complete addressed handoff required before READY"
+    ],
+    "next_recipient": "@frankzhu94/factory-pm"
+  },
+  {
+    "id": "S1-IMPLEMENT",
+    "owner": "@frankzhu94/factory-backend",
+    "dependencies": [
+      "REVIEW-PLAN"
+    ],
+    "state": "PROPOSED",
+    "goal": "Implement stage 1 required behavior; stage 2 requires Designer and Frontend before UI",
+    "requirements": [],
+    "starting_revision": null,
+    "workspace_paths": [
+      "/Users/frank/mygit/Tablekeeper/result-run-6"
+    ],
+    "ownership_boundaries": [],
+    "acceptance_conditions": [],
+    "candidate_commit": null,
+    "commands": [],
+    "results": [],
+    "evidence_paths": [],
+    "limitations": [
+      "Complete addressed handoff required before READY"
+    ],
+    "next_recipient": "@frankzhu94/factory-pm"
+  },
+  {
+    "id": "S1-QA",
+    "owner": "@frankzhu94/factory-qa",
+    "dependencies": [
+      "S1-IMPLEMENT"
+    ],
+    "state": "PROPOSED",
+    "goal": "Independent stage 1 behavior checks",
+    "requirements": [],
+    "starting_revision": null,
+    "workspace_paths": [
+      "/Users/frank/mygit/Tablekeeper/result-run-6"
+    ],
+    "ownership_boundaries": [],
+    "acceptance_conditions": [],
+    "candidate_commit": null,
+    "commands": [],
+    "results": [],
+    "evidence_paths": [],
+    "limitations": [
+      "Complete addressed handoff required before READY"
+    ],
+    "next_recipient": "@frankzhu94/factory-pm"
+  },
+  {
+    "id": "S1-GATE",
+    "owner": "@frankzhu94/factory-reviewer",
+    "dependencies": [
+      "S1-QA"
+    ],
+    "state": "PROPOSED",
+    "goal": "Accept exact stage 1 candidate with official isolated gate",
+    "requirements": [],
+    "starting_revision": null,
+    "workspace_paths": [
+      "/Users/frank/mygit/Tablekeeper/result-run-6"
+    ],
+    "ownership_boundaries": [],
+    "acceptance_conditions": [],
+    "candidate_commit": null,
+    "commands": [],
+    "results": [],
+    "evidence_paths": [],
+    "limitations": [
+      "Complete addressed handoff required before READY"
+    ],
+    "next_recipient": "@frankzhu94/factory-pm"
+  },
+  {
+    "id": "S2-IMPLEMENT",
+    "owner": "@frankzhu94/factory-backend",
+    "dependencies": [
+      "S1-GATE"
+    ],
+    "state": "PROPOSED",
+    "goal": "Implement stage 2 required behavior; stage 2 requires Designer and Frontend before UI",
+    "requirements": [],
+    "starting_revision": null,
+    "workspace_paths": [
+      "/Users/frank/mygit/Tablekeeper/result-run-6"
+    ],
+    "ownership_boundaries": [],
+    "acceptance_conditions": [],
+    "candidate_commit": null,
+    "commands": [],
+    "results": [],
+    "evidence_paths": [],
+    "limitations": [
+      "Complete addressed handoff required before READY"
+    ],
+    "next_recipient": "@frankzhu94/factory-pm"
+  },
+  {
+    "id": "S2-QA",
+    "owner": "@frankzhu94/factory-qa",
+    "dependencies": [
+      "S2-IMPLEMENT"
+    ],
+    "state": "PROPOSED",
+    "goal": "Independent stage 2 behavior checks",
+    "requirements": [],
+    "starting_revision": null,
+    "workspace_paths": [
+      "/Users/frank/mygit/Tablekeeper/result-run-6"
+    ],
+    "ownership_boundaries": [],
+    "acceptance_conditions": [],
+    "candidate_commit": null,
+    "commands": [],
+    "results": [],
+    "evidence_paths": [],
+    "limitations": [
+      "Complete addressed handoff required before READY"
+    ],
+    "next_recipient": "@frankzhu94/factory-pm"
+  },
+  {
+    "id": "S2-GATE",
+    "owner": "@frankzhu94/factory-reviewer",
+    "dependencies": [
+      "S2-QA"
+    ],
+    "state": "PROPOSED",
+    "goal": "Accept exact stage 2 candidate with official isolated gate",
+    "requirements": [],
+    "starting_revision": null,
+    "workspace_paths": [
+      "/Users/frank/mygit/Tablekeeper/result-run-6"
+    ],
+    "ownership_boundaries": [],
+    "acceptance_conditions": [],
+    "candidate_commit": null,
+    "commands": [],
+    "results": [],
+    "evidence_paths": [],
+    "limitations": [
+      "Complete addressed handoff required before READY"
+    ],
+    "next_recipient": "@frankzhu94/factory-pm"
+  },
+  {
+    "id": "S3-IMPLEMENT",
+    "owner": "@frankzhu94/factory-backend",
+    "dependencies": [
+      "S2-GATE"
+    ],
+    "state": "PROPOSED",
+    "goal": "Implement stage 3 required behavior; stage 2 requires Designer and Frontend before UI",
+    "requirements": [],
+    "starting_revision": null,
+    "workspace_paths": [
+      "/Users/frank/mygit/Tablekeeper/result-run-6"
+    ],
+    "ownership_boundaries": [],
+    "acceptance_conditions": [],
+    "candidate_commit": null,
+    "commands": [],
+    "results": [],
+    "evidence_paths": [],
+    "limitations": [
+      "Complete addressed handoff required before READY"
+    ],
+    "next_recipient": "@frankzhu94/factory-pm"
+  },
+  {
+    "id": "S3-QA",
+    "owner": "@frankzhu94/factory-qa",
+    "dependencies": [
+      "S3-IMPLEMENT"
+    ],
+    "state": "PROPOSED",
+    "goal": "Independent stage 3 behavior checks",
+    "requirements": [],
+    "starting_revision": null,
+    "workspace_paths": [
+      "/Users/frank/mygit/Tablekeeper/result-run-6"
+    ],
+    "ownership_boundaries": [],
+    "acceptance_conditions": [],
+    "candidate_commit": null,
+    "commands": [],
+    "results": [],
+    "evidence_paths": [],
+    "limitations": [
+      "Complete addressed handoff required before READY"
+    ],
+    "next_recipient": "@frankzhu94/factory-pm"
+  },
+  {
+    "id": "S3-GATE",
+    "owner": "@frankzhu94/factory-reviewer",
+    "dependencies": [
+      "S3-QA"
+    ],
+    "state": "PROPOSED",
+    "goal": "Accept exact stage 3 candidate with official isolated gate",
+    "requirements": [],
+    "starting_revision": null,
+    "workspace_paths": [
+      "/Users/frank/mygit/Tablekeeper/result-run-6"
+    ],
+    "ownership_boundaries": [],
+    "acceptance_conditions": [],
+    "candidate_commit": null,
+    "commands": [],
+    "results": [],
+    "evidence_paths": [],
+    "limitations": [
+      "Complete addressed handoff required before READY"
+    ],
+    "next_recipient": "@frankzhu94/factory-pm"
+  },
+  {
+    "id": "S4-IMPLEMENT",
+    "owner": "@frankzhu94/factory-backend",
+    "dependencies": [
+      "S3-GATE"
+    ],
+    "state": "PROPOSED",
+    "goal": "Implement stage 4 required behavior; stage 2 requires Designer and Frontend before UI",
+    "requirements": [],
+    "starting_revision": null,
+    "workspace_paths": [
+      "/Users/frank/mygit/Tablekeeper/result-run-6"
+    ],
+    "ownership_boundaries": [],
+    "acceptance_conditions": [],
+    "candidate_commit": null,
+    "commands": [],
+    "results": [],
+    "evidence_paths": [],
+    "limitations": [
+      "Complete addressed handoff required before READY"
+    ],
+    "next_recipient": "@frankzhu94/factory-pm"
+  },
+  {
+    "id": "S4-QA",
+    "owner": "@frankzhu94/factory-qa",
+    "dependencies": [
+      "S4-IMPLEMENT"
+    ],
+    "state": "PROPOSED",
+    "goal": "Independent stage 4 behavior checks",
+    "requirements": [],
+    "starting_revision": null,
+    "workspace_paths": [
+      "/Users/frank/mygit/Tablekeeper/result-run-6"
+    ],
+    "ownership_boundaries": [],
+    "acceptance_conditions": [],
+    "candidate_commit": null,
+    "commands": [],
+    "results": [],
+    "evidence_paths": [],
+    "limitations": [
+      "Complete addressed handoff required before READY"
+    ],
+    "next_recipient": "@frankzhu94/factory-pm"
+  },
+  {
+    "id": "S4-GATE",
+    "owner": "@frankzhu94/factory-reviewer",
+    "dependencies": [
+      "S4-QA"
+    ],
+    "state": "PROPOSED",
+    "goal": "Accept exact stage 4 candidate with official isolated gate",
+    "requirements": [],
+    "starting_revision": null,
+    "workspace_paths": [
+      "/Users/frank/mygit/Tablekeeper/result-run-6"
+    ],
+    "ownership_boundaries": [],
+    "acceptance_conditions": [],
+    "candidate_commit": null,
+    "commands": [],
+    "results": [],
+    "evidence_paths": [],
+    "limitations": [
+      "Complete addressed handoff required before READY"
+    ],
+    "next_recipient": "@frankzhu94/factory-pm"
+  }
+]
