@@ -1,0 +1,51 @@
+{
+  "id": "QA-BOUNDARIES",
+  "owner": "@frankzhu94/factory-qa",
+  "reviewer": "@frankzhu94/factory-reviewer",
+  "dependencies": [
+    "PM-BOOT"
+  ],
+  "state": "ACCEPTED",
+  "goal": "Preserve complete requirements and independently computable boundary oracles before implementation",
+  "requirements": [
+    "Retain all four exact normative sources/hash,53sections/33classes, independent boundaries and earliest runnable checkpoints.",
+    "Correct every Q07 count/vector and preserve nine Reviewer guidance points.",
+    "Keep observed planning evidence separate from NOT_TESTED product behavior."
+  ],
+  "starting_revision": "e20821e14094c1507ae64a7055543ad43673e5de",
+  "candidate_commit": "d47cfad6b2b700ee4d5779cdae559678238cf7ea",
+  "rejected_candidate": "a9b717c69ed8b2361a81f3836a8c73d68c528b54",
+  "workspace_paths": [
+    "/Users/frank/mygit/Tablekeeper/result-run-7",
+    "/private/tmp/reviewer-f1-20261005T065519Z"
+  ],
+  "ownership_boundaries": [
+    "Reviewer read-only exact candidate; QA repaired planning only."
+  ],
+  "acceptance_conditions": [
+    "Independent257document assertions and independent arithmetic/timezone/Cartesian calculations pass; source/ownership/guidance preserved."
+  ],
+  "commands": [
+    "python3 /Users/frank/mygit/Tablekeeper/result-run-7/.evidence/reviewer-f1-20261005T065519Z/validate_repair.py",
+    "python3 /Users/frank/mygit/Tablekeeper/result-run-7/.evidence/reviewer-f1-20261005T065519Z/independent_oracles.py"
+  ],
+  "results": [
+    "PASS exit0:257 independent document assertions",
+    "PASS exit0:independent reference calculations",
+    "NOT_TESTED:all product HTTP/browser/Docker/actual upgrades/official stage gates"
+  ],
+  "evidence_paths": [
+    "/Users/frank/mygit/Tablekeeper/result-run-7/.evidence/reviewer-f1-20261005T065519Z/candidate-acceptance.json",
+    "/Users/frank/mygit/Tablekeeper/result-run-7/.evidence/reviewer-f1-20261005T065519Z/repair-validation.json",
+    "/Users/frank/mygit/Tablekeeper/result-run-7/.evidence/reviewer-f1-20261005T065519Z/independent-oracle-results.json"
+  ],
+  "limitations": [
+    "Planning acceptance only",
+    "Provider consumption/cost UNAVAILABLE",
+    "Prior failed evidence retained"
+  ],
+  "room_event": "12a6b82d-a5e6-4563-bb7e-6ce776293493",
+  "receipt_event": "19e252cf-69df-47c1-a00a-3fe13fb7c798",
+  "next_recipient": "@frankzhu94/factory-pm",
+  "recorded_at_utc": "2026-10-05T07:06:25.855023+00:00"
+}

@@ -5,7 +5,7 @@
     "dependencies": [
       "PM-BOOT"
     ],
-    "state": "IN_PROGRESS",
+    "state": "ACCEPTED",
     "goal": "Add independent boundary cases and first-checkpoint plan to the existing coverage map.",
     "starting_revision": "e20821e14094c1507ae64a7055543ad43673e5de",
     "workspace_paths": [
@@ -28,13 +28,16 @@
     ],
     "next_recipient": "@frankzhu94/factory-pm",
     "evidence_paths": [
-      "/Users/frank/mygit/Tablekeeper/result-run-7/.evidence/qa-boundaries-f1-repair-20261005T0643Z"
+      "/Users/frank/mygit/Tablekeeper/result-run-7/.evidence/reviewer-f1-20261005T065519Z/candidate-acceptance.json"
     ],
     "limitations": [
-      "Product behavior NOT_TESTED; independent re-review pending; previous failures preserved."
+      "Planning only; all product behavior and stage gates NOT_TESTED."
     ],
     "repair_cycle": 1,
-    "rejected_candidate": "a9b717c69ed8b2361a81f3836a8c73d68c528b54"
+    "rejected_candidate": "a9b717c69ed8b2361a81f3836a8c73d68c528b54",
+    "candidate_commit": "d47cfad6b2b700ee4d5779cdae559678238cf7ea",
+    "reviewer": "@frankzhu94/factory-reviewer",
+    "room_event": "12a6b82d-a5e6-4563-bb7e-6ce776293493"
   },
   {
     "id": "REV-ORACLES",
@@ -42,8 +45,17 @@
     "dependencies": [
       "QA-BOUNDARIES"
     ],
-    "state": "PROPOSED",
-    "goal": "Challenge highest-risk requirement relationships and independent oracles."
+    "state": "ACCEPTED",
+    "goal": "Challenge highest-risk requirement relationships and independent oracles.",
+    "candidate_commit": "d47cfad6b2b700ee4d5779cdae559678238cf7ea",
+    "reviewer": "@frankzhu94/factory-reviewer",
+    "room_event": "12a6b82d-a5e6-4563-bb7e-6ce776293493",
+    "evidence_paths": [
+      "/Users/frank/mygit/Tablekeeper/result-run-7/.evidence/reviewer-f1-20261005T065519Z/candidate-acceptance.json"
+    ],
+    "limitations": [
+      "Planning only; all product behavior and stage gates NOT_TESTED."
+    ]
   },
   {
     "id": "ARCH-DECISION",
