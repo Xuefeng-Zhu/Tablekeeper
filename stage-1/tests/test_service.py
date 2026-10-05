@@ -50,6 +50,32 @@ class Tests(unittest.TestCase):
         self.assertEqual(self.s.ledger(r['reference']),facts)
         self.assertTrue(codec.equal(self.create(),r))
 
+    def test_early_year_availability_and_booking(self):
+        for year in ('0001','0999','1000','2030'):
+            with self.subTest(year=year):
+                fixture=copy.deepcopy(FIXTURE)
+                restaurant=fixture['restaurants'][0]
+                restaurant.update(timezone='UTC',reservation_duration_minutes=60,cancellation_cutoff_minutes=0)
+                for hours in restaurant['opening_hours']:
+                    hours.update(opens='18:00',closes='20:00')
+                self.call('POST','/_test/reset',fixture)
+                _,login=self.call('POST','/auth/login',{'email':'u@example.test','password':'password'})
+                self.headers['Authorization']='Bearer '+login['token']
+                date=year+'-06-01'
+                status,text=self.s.execute('GET','/availability',{'restaurant_id':'r','date':date,'party_size':'2'},{},self.headers)
+                slots=codec.loads(text)['slots']
+                expected=[date+'T'+time for time in ('18:00','18:30','19:00')]
+                self.assertEqual(status,200)
+                self.assertEqual([slot['starts_at_local'] for slot in slots],expected)
+                for index,slot in enumerate(slots):
+                    # Separate dates/tables avoid turning a formatter test into an overlap test.
+                    self.headers['Idempotency-Key']='year-'+year+'-'+str(index)
+                    table='a' if index!=1 else 'b'
+                    status,record=self.call('POST','/reservations',{'restaurant_id':'r','table_id':table,'starts_at_local':slot['starts_at_local'],'party_size':2})
+                    self.assertEqual(status,201)
+                    self.assertEqual(record['starts_at_local'],expected[index])
+                    self.assertEqual(record['starts_at'],expected[index]+':00+00:00')
+
     def test_table_ids_are_restaurant_scoped(self):
         fixture=copy.deepcopy(FIXTURE)
         second=copy.deepcopy(fixture['restaurants'][0]); second['id']='other'

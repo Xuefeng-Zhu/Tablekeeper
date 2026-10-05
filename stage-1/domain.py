@@ -180,7 +180,7 @@ class Service:
             except Error: return 200,dict(restaurant_id=r['id'],date=q['date'],timezone=r['timezone'],slots=[]),False
             candidate=opens
             while candidate<closes:
-                value=candidate.strftime('%Y-%m-%dT%H:%M')
+                value=f'{candidate.year:04d}-{candidate.month:02d}-{candidate.day:02d}T{candidate.hour:02d}:{candidate.minute:02d}'
                 try: starts,ends=interval(r,value)
                 except Error: candidate+=timedelta(minutes=r['slot_minutes']); continue
                 available=[]
