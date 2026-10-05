@@ -1,0 +1,45 @@
+{
+  "work_item": "TK-ARCH-PLAN",
+  "revision": "681a3c2ea6bf317a75a20950f880bb6f939f9c6d",
+  "responsible": "@frankzhu94/factory-architect",
+  "start_utc": "2026-10-05T17:54:21.785935+00:00",
+  "end_utc": "2026-10-05T17:54:22.265236+00:00",
+  "python": "3.13.5",
+  "sqlite": "3.47.1",
+  "results": [
+    {
+      "probe": "DST",
+      "zone": "Europe/Berlin",
+      "gap_candidates": 0,
+      "first": "2026-10-25T02:30:00+02:00",
+      "end": "2026-10-25T03:00:00+01:00",
+      "outcome": "PASS"
+    },
+    {
+      "probe": "DST",
+      "zone": "America/New_York",
+      "gap_candidates": 0,
+      "first": "2026-11-01T01:30:00-04:00",
+      "end": "2026-11-01T02:00:00-05:00",
+      "outcome": "PASS"
+    },
+    {
+      "probe": "typed JSON equality",
+      "outcome": "PASS",
+      "note": "Numeric lexical equivalence is a recommended interpretation pending independent challenge."
+    },
+    {
+      "probe": "SQLite transaction rollback",
+      "outcome": "PASS",
+      "layer": "host mechanism only"
+    },
+    {
+      "probe": "planner leaf bound",
+      "leaves": 1000000,
+      "elapsed_seconds": 0.47372574999462813,
+      "outcome": "PASS",
+      "layer": "host objective enumeration only; container solver budget NOT_TESTED"
+    }
+  ],
+  "usage": "UNAVAILABLE"
+}

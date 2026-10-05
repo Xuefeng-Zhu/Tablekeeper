@@ -1,0 +1,27 @@
+{
+  "configuration_sha256": "cfe683dee71972d0924049d651f1f0324e73e956d26a6ac2ec42a49c36938187",
+  "freeze_status": "READY_TO_LAUNCH",
+  "challenge_revision": "803560d2a678ace1414465c098eb0ab5380ffade",
+  "sources": [
+    {
+      "path": "/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-1.md",
+      "sha256": "9460189eac83802ce158f16ee90989af728a489b32a6147e2dc8e320f383055f"
+    },
+    {
+      "path": "/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-2.md",
+      "sha256": "b1aa1b4affad456ff26f208a378eb2f6884153fc6ef667ab37b888fcda96c5dc"
+    },
+    {
+      "path": "/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-3.md",
+      "sha256": "36b7ff5294b3992a6fa2894e9b4f2350072912fe10ed212c1f9a8828be1f9abe"
+    },
+    {
+      "path": "/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-4.md",
+      "sha256": "08d02b5a432d41d71f989ccb30585b3cad0977c9c1dd11145c97fb7ddd4946c4"
+    }
+  ],
+  "requirements_rows": 51,
+  "remote_fetch_exit": 0,
+  "starting_revision": "UNBORN run-8",
+  "usage": "UNAVAILABLE"
+}
