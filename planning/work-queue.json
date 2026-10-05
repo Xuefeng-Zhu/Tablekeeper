@@ -3,7 +3,7 @@
     "id": "ARCH",
     "owner": "@frankzhu94/factory-architect",
     "dependencies": [],
-    "state": "IN_PROGRESS",
+    "state": "REVIEW",
     "goal": "Decide implementable architecture and upgrade/state contracts",
     "requirements": [
       "ARCH REJECTED -> IN_PROGRESS on owner receipt: repair attempt 1 of maximum3. Recipient/owner @frankzhu94/factory-architect; next recipient @frankzhu94/factory-pm. Correct the rejected architecture only, then return committed evidence promptly. QA corrections and independent re-review follow. Do not implement product or modify QA artifacts. Complete independent rejection and original requirements follow in this payload.\nStarting/failing full revision0456233212ba4a101243c03684706e4fbbbb32e9, clean observed by PM. ARCH content ancestor7e484f683f5658c7bab5f4f176e391a377a9d25d. Workspace /Users/frank/mygit/Tablekeeper/result-run-6. Own planning/architecture.md and ARCH queue fields only. Set author Factory Architect <architect@factory.invalid>. Exclusive write lease begins on complete receipt, ends with committed handoff or tool finish-work deadline; no other writer authorized. Preserve earlier failed design and review evidence/history, commit new repair, push git push origin HEAD:refs/heads/run-6. Evidence /Users/frank/mygit/Tablekeeper/result-run-6/.evidence/architect-ARCH-repair1-20261005. Do not create worktrees or touch operator runs.\nRequired corrections R1 preserve opening wall-grid even when opening is nonexistent: Berlin2026-03-29 opens02:15 closes04:45 grid/duration30 yields03:15,03:45,04:15 +02:00. Resolve each candidate individually; never shift grid to03:00 or close whole day. Document separate gap-closing and first-fold closing convention. R2 make exact numeric parse/compare/export/import mandatory and implementable: 1.0000000000000001 differs from1.0, equivalent decimal spellings equal, bool differs from number, unknown fields count. No float coercion before comparison or export. R3 retain actual private event facts from S1 onward (preferred within existing scope) so later history never invents cancellation timestamp or creation fields. Define seed/migration provenance carefully; existing receipts and public S1 shapes unchanged. Do not expose premature later-stage APIs. Complete reviewer rationale below is authoritative for repair acceptance.\nAcceptance: clear corrected mechanisms plus narrow synthetic proof for corrected boundary/number round trip/provenance, new attributable full revision, exact commands/statuses/evidence/limits. Independent Reviewer must verify fixes; owner probes are not acceptance. QA subsequently fixes its raw-number path and gap/migration expectations. All product HTTP/container/browser/gates remain NOT_TESTED. No required behavior waived.\nLimits:600-second turn with tool reserve; ack120s;2 delivery retries;3 repair maximum (this is first ARCH repair);1 active seat/writer; cumulative deadline2026-10-05T02:35:03.700437+00:00, remaining roughly68 minutes at dispatch. Subscription-only/no paid provisioning/API billing/human steering. Current usage UNAVAILABLE. Keep repair focused to preserve implementation/gate time. Return full applicable requirements but do not recursively paste obsolete assignments. Canonical ACK sender @[[7d26ccf7-2921-4b38-9e16-ca8ebfa2a448]].\n\n",
@@ -25,7 +25,7 @@
       "R3 record private actual S1 event facts and explicit seed provenance; preserve original receipts/public shapes and never invent historical creation fields or cancellation timestamps.",
       "Narrow synthetic evidence, committed attributable new candidate, complete PM handoff; QA and Reviewer independently verify before dependent implementation."
     ],
-    "candidate_commit": null,
+    "candidate_commit": "96e2fa1b0a61ee9f917f5ce76b94726ba8e7cd10",
     "commands": [
       "git status --short --branch",
       "git rev-parse HEAD",
@@ -53,7 +53,8 @@
       "Repair 1 of maximum 3; independent re-review pending. Earlier rejected evidence preserved.",
       "Gap-closing rule is an explicit implementation convention; mandatory gap-opening witness is distinct.",
       "No product code or QA files edited; all product gates NOT_TESTED.",
-      "Measured token/cost consumption UNAVAILABLE."
+      "Measured token/cost consumption UNAVAILABLE.",
+      "This queue-only commit binds the immutable architecture repair candidate without changing its content."
     ],
     "next_recipient": "@frankzhu94/factory-pm",
     "repair_history": [
