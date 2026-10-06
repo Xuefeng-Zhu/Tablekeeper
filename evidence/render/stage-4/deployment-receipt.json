@@ -1,0 +1,54 @@
+{
+  "status": "LIVE_VERIFIED",
+  "checked_at": "2026-10-06T15:49:01.791479+00:00",
+  "application_candidate": "ac1eb4945a2adaeaaf8a62d0817bdbc6a021e566",
+  "deployment_commit": "dfa145748ea91b1863d56b2a6ca270679285324a",
+  "repository": "https://github.com/Xuefeng-Zhu/Tablekeeper",
+  "branch": "main",
+  "service_id": "srv-db28udrtqb8s73chaqmg",
+  "deploy_id": "dep-db2heejtqb8s73de0p9g",
+  "dashboard": "https://dashboard.render.com/web/srv-db28udrtqb8s73chaqmg/deploys/dep-db2heejtqb8s73de0p9g",
+  "url": "https://tablekeeper-stage2.onrender.com",
+  "plan": "free",
+  "region": "oregon",
+  "runtime": "Docker",
+  "dockerfile_path": "./demo-stage4/Dockerfile",
+  "docker_context": "./demo-stage4",
+  "root_directory": null,
+  "health_check": "/health",
+  "deployment_mode": "Manual specific-commit deploy from public Git repository; existing service and URL retained.",
+  "render_deploy_status": "Deploy succeeded | Live",
+  "render_displayed_duration_seconds": 32.3,
+  "render_displayed_started_at": "2026-10-06T15:43:54Z",
+  "render_log_live_at": "2026-10-06T15:44:27Z",
+  "live_http_receipt": "live-http-smoke.json",
+  "http_request_count": 137,
+  "live_checks": [
+    "Public revision endpoint matches expected application candidate and deployment commit",
+    "Health, root HTML and all nine static assets match frozen deployment package",
+    "Synthetic signup, private booking lookup, recurring adoption and Stage4 collective amendment",
+    "Immutable original booking/amendment retry receipts and stale-revision rejection",
+    "105 direct/encoded/all-method private test-route probes return404",
+    "Nonmanager policy/replan forbidden; anonymous/other-account private boundaries preserved",
+    "Both synthetic test reservations cancelled"
+  ],
+  "browser_checks": [
+    "Actual Cedar search for six guests rendered singleton Family and Garden & Corner combination options",
+    "Visible ephemeral demo disclosure",
+    "Browser retains diner UI; advancedStage4 contracts are APIs"
+  ],
+  "state_persistence": "Ephemeral in-process; only fictional restaurants seeded; no manager/user credentials seeded.",
+  "scope": "Actual approved Stage4 deployment and finite HTTP/browser smoke; self-reported runtime revision matches Render-provided source commit. Original factory acceptance/official isolated tests remain separate; no exhaustive live solver or performance acceptance.",
+  "previous_deployment": {
+    "repository": "https://github.com/Xuefeng-Zhu/tablekeeper-stage2",
+    "commit": "382998fe143268754ade2ed2702090df3f71ef56",
+    "deploy_id": "dep-db28ue3tqb8s73char5g",
+    "receipt": "evidence/render/deployment-receipt.json",
+    "observed_source_blocker": "Original deployment repository returned Repository not found on fresh fetch; canonical public repository used for same service.",
+    "history_preserved": true
+  },
+  "screenshots": [
+    "live-app.jpg",
+    "render-live.jpg"
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "startedAt": "2026-10-06T15:45:07.735118+00:00",
+  "expectedDeploymentCommit": "dfa145748ea91b1863d56b2a6ca270679285324a",
+  "applicationCandidate": "ac1eb4945a2adaeaaf8a62d0817bdbc6a021e566",
+  "scope": "Finite actual HTTP smoke of ephemeral demo using synthetic accounts/reservations; no reset/import/export, credentials, private snapshots or exhaustive acceptance.",
+  "groups": {
+    "deployment": {
+      "status": 200,
+      "stage": 4,
+      "commitMatched": true,
+      "candidateMatched": true
+    },
+    "health_root_assets": {
+      "health": 200,
+      "root": 200,
+      "assets": [
+        {
+          "asset": "api.js",
+          "status": 200,
+          "sha256": "9a57a1e8c48b6e9df9cca7a199f8690b4cc716cfccb917d8ef23409e8a0eed8e"
+        },
+        {
+          "asset": "app.js",
+          "status": 200,
+          "sha256": "ce9795c065d509b88a46dedc5896a4bee1a228fa93617d06bef859b23b1ab58e"
+        },
+        {
+          "asset": "auth.js",
+          "status": 200,
+          "sha256": "4c07dcbe95f2e008b66bf343f4e880cd134512dea59a2005f0e2a467fdb5745b"
+        },
+        {
+          "asset": "booking.js",
+          "status": 200,
+          "sha256": "06daf7764d775ed058a276e6a77eed22870ece122cd8e5023fbc104c9f93e6a6"
+        },
+        {
+          "asset": "dom.js",
+          "status": 200,
+          "sha256": "4bb2c46674ab4fd87e161c17c350d865d20269596d14bff2fdae723e9ae48e40"
+        },
+        {
+          "asset": "index.html",
+          "status": 200,
+          "sha256": "a4574cea6cf3e6b4ae77b2d5bce49967ba3d35a9f36cef03a34938e9e7226152"
+        },
+        {
+          "asset": "lookup.js",
+          "status": 200,
+          "sha256": "2f5f42087df0a38623fcf4f5399e1acb7a45aef88a0d7ccd41ee831efcb24e52"
+        },
+        {
+          "asset": "search.js",
+          "status": 200,
+          "sha256": "826f0d993d2419c2d0d7d0d8c3b3c5a320bb512d9c948b194ed46def318c9b53"
+        },
+        {
+          "asset": "style.css",
+          "status": 200,
+          "sha256": "3c82d6173ec7e1b11fd98a93c9f625f49084c2e45c5761a03eff5d691a611e61"
+        }
+      ]
+    },
+    "test_route_closure": {
+      "requests": 105,
+      "allStatuses": 404,
+      "methods": [
+        "GET",
+        "POST",
+        "PATCH",
+        "PUT",
+        "DELETE",
+        "HEAD",
+        "OPTIONS"
+      ],
+      "spellings": [
+        "direct",
+        "percent-decoded",
+        "double-percent-decoded",
+        "query",
+        "prefix-only"
+      ]
+    },
+    "synthetic_transactions": {
+      "signupAccounts": 2,
+      "booking": 201,
+      "lookup": 200,
+      "adoption": 201,
+      "occurrences": 2,
+      "collectiveAmend": 201,
+      "sameKeyReplay": 200,
+      "replayBodyIdentical": true,
+      "originalScheduleDatesPreserved": true,
+      "originalBookingReceiptPreserved": true,
+      "currentSeriesMatchesAmendment": true,
+      "newRevisionAdvanced": true,
+      "staleFreshKey": 409,
+      "otherAccountLookup": 404,
+      "anonymousHistoryAndSeries": 404,
+      "nonmanagerReplanAndPolicy": 403
+    }
+  },
+  "requestCount": 137,
+  "cleanup": {
+    "reservationsDiscovered": 2,
+    "cancelStatuses": [
+      200,
+      200
+    ],
+    "allKnownReservationsCancelled": true,
+    "accounts": "Synthetic accounts remain in ephemeral demo state; no account-deletion API used."
+  },
+  "finishedAt": "2026-10-06T15:45:25.846621+00:00",
+  "status": "PASS",
+  "errors": []
+}

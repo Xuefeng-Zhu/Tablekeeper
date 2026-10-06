@@ -92,7 +92,9 @@ The presentation and video show a historical snapshot before the later Stage 2 a
 
 ## Hosted demo
 
-The [Render demo](https://tablekeeper-stage2.onrender.com) provides seeded fictional restaurants for trying the diner interface. It runs a separate, older Stage 2 snapshot (`b1f7ef6`, deployment `382998fe`); review the current Stage 4 release locally. Demo accounts and reservations are ephemeral. [Demo source](demo) and [deployment evidence](evidence/render) document the snapshot and dated live checks.
+The [Render demo](https://tablekeeper-stage2.onrender.com) now runs the accepted **Stage 4** application through [demo-stage4/](demo-stage4), retaining the existing service and hostname. Deployment commit [`dfa1457`](https://github.com/Xuefeng-Zhu/Tablekeeper/commit/dfa145748ea91b1863d56b2a6ca270679285324a) went live on October 6, 2026 at 15:44 UTC. The [deployment receipt](evidence/render/stage-4/deployment-receipt.json) and [live checks](evidence/render/stage-4/live-http-smoke.json) record matching revision metadata and all nine static assets, booking/lookup, recurring adoption, Stage 4 collective amendments, retries and access controls.
+
+The demo seeds fictional restaurants; signup creates ordinary diner accounts. The browser supports search/auth/booking/lookup, while advanced Stage 4 operations use the APIs. Manager-only policies and seating replans require a configured manager and remain forbidden to public diner accounts. Accounts, reservations and series are held in memory and reset on restart. The previous Stage 2 [demo source](demo) and [deployment records](evidence/render/deployment-receipt.json) remain as dated history; presentation/video footage still shows that older snapshot.
 
 ## Build and submission context
 

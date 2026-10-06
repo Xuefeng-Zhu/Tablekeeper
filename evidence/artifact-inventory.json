@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "createdAt": "2026-10-06T15:39:12.940304+00:00",
-  "scope": "Completed Stage4 application/review artifacts plus separate approved Stage4 Render deployment preparation and local Docker proof; actual live outcome not yet recorded. Original source/factory/room/media and history preserved.",
+  "createdAt": "2026-10-06T15:52:25.496516+00:00",
+  "scope": "Completed accepted Stage4 application/review artifacts and approved Stage4 deployment to existing Render instance, with separate actual provider/finite live HTTP-browser evidence. Original factory source/history, room and historical media preserved; local acceptance and final submission remain separate.",
   "applicationRevision": "ac1eb4945a2adaeaaf8a62d0817bdbc6a021e566",
   "inventoryExclusions": [
     ".git",
@@ -27,13 +27,13 @@
     },
     {
       "path": "FACTORY.md",
-      "bytes": 26093,
-      "sha256": "120c7d759639a40ecfc19dfffdc63f6400cbc02435dc2ca2c069880b407b1e2c"
+      "bytes": 27615,
+      "sha256": "ed6f6ef6e3d57e79b3cf01a8a8e2a1715bf9eece89f2fb9807816a5123033ef3"
     },
     {
       "path": "README.md",
-      "bytes": 8728,
-      "sha256": "3c6e5bcb06f630c01d07e4be6e279568926b5d38645b5f02e230d9ba184980ba"
+      "bytes": 9531,
+      "sha256": "e4fc13d7dbaeb8afcb4552cf0497e4c01f366aca41605e6d30cad95d6993ef1f"
     },
     {
       "path": "WORKING.md",
@@ -317,13 +317,13 @@
     },
     {
       "path": "docs/SUBMISSION-REQUIREMENTS.md",
-      "bytes": 22358,
-      "sha256": "782b3919219a07fc27abe70efaec967b0ffcf834c4971d331d64d409e083f32e"
+      "bytes": 23441,
+      "sha256": "4335505bcc0a8eeb7680ae2e9978625a14bc6ee61da42db19c0ea846c04cb3d9"
     },
     {
       "path": "evidence/artifact-provenance.json",
-      "bytes": 120670,
-      "sha256": "866b07696f93e71d9328f6ed9905c1c04de4add9f08209404416a9a13512f44b"
+      "bytes": 123823,
+      "sha256": "57174ad5cca2e1a2cdd48cea0a9aae319514be677180b20c855f48c5e6567d7f"
     },
     {
       "path": "evidence/factory-runtime/administrative-scripts/README.md",
@@ -1776,9 +1776,24 @@
       "sha256": "86e62354ce2cf587a1cb54a94af7b51a932cd2ad5fd6a7254a4e9c799970598c"
     },
     {
+      "path": "evidence/render/stage-4/deployment-receipt.json",
+      "bytes": 2913,
+      "sha256": "d0acc783a7bc398fda2e003cf5fe92958abdd5a18e51041ceac186e7b77908e1"
+    },
+    {
+      "path": "evidence/render/stage-4/live-app.jpg",
+      "bytes": 49570,
+      "sha256": "4814f52479603f14eb3897bc1d7dec0f66f3a067e69866e103c2445b8da99b32"
+    },
+    {
       "path": "evidence/render/stage-4/live-check.py",
       "bytes": 11017,
       "sha256": "be0684c035e48d637826087cb5329bebc7db189bf2be359bbb8f5ce0d269f4d1"
+    },
+    {
+      "path": "evidence/render/stage-4/live-http-smoke.json",
+      "bytes": 3389,
+      "sha256": "dcf9360a6d5f9ae3c0fe504f3964b454598f515cc4ff24224cd7f2156f19840f"
     },
     {
       "path": "evidence/render/stage-4/local-deployment-check.json",
@@ -1794,6 +1809,11 @@
       "path": "evidence/render/stage-4/package-frozen-provenance.json",
       "bytes": 6275,
       "sha256": "b2ad3fe2c44fb1c952e7a02005f1cfcb7ec18f46b888e536afbff73000ab1f68"
+    },
+    {
+      "path": "evidence/render/stage-4/render-live.jpg",
+      "bytes": 86808,
+      "sha256": "e6396f3cf1b09e7801459db3802ddf75eba762630f29e9304b9a27255f0d4e5a"
     },
     {
       "path": "evidence/render/stage-4/source-provenance.json",
@@ -2657,8 +2677,8 @@
     },
     {
       "path": "submission/presentation/README.md",
-      "bytes": 1411,
-      "sha256": "c9b42381c8b8d30e5ae03d0b2880d013a3917bd501d89d7c649df0ef56b55681"
+      "bytes": 1563,
+      "sha256": "0dda4c8548ccaf83649e602c0e982e9bcd96a04532202960b1ed3b866545c765"
     },
     {
       "path": "submission/presentation/Tablekeeper-Local-Sol-Factory.pdf",
@@ -2677,8 +2697,8 @@
     },
     {
       "path": "submission/video/README.md",
-      "bytes": 3663,
-      "sha256": "c8ddda07a75bb9caf1f8d33988a06a5f68c2cdd2a52f34b9978a12d09bd49916"
+      "bytes": 3845,
+      "sha256": "c8a1fadd3e428a5b43fa570d4b4bd8de3025f977228fdbc734a1aab5602bef5f"
     },
     {
       "path": "submission/video/The-Build-Guild-Tablekeeper-Demo.mp4",

@@ -1879,9 +1879,15 @@
       "source_path": "/Users/frank/mygit/Tablekeeper/runs/stage4-render-live-check-20261006.py",
       "source_sha256": "be0684c035e48d637826087cb5329bebc7db189bf2be359bbb8f5ce0d269f4d1",
       "copied_unchanged": true
+    },
+    {
+      "destination": "evidence/render/stage-4/live-http-smoke.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/stage4-render-live-smoke-20261006.json",
+      "source_sha256": "dcf9360a6d5f9ae3c0fe504f3964b454598f515cc4ff24224cd7f2156f19840f",
+      "copied_unchanged": true
     }
   ],
-  "render_candidate": "b1f7ef64db7f0dce0b3f3a913a3af280c96d70b9",
+  "render_candidate": "ac1eb4945a2adaeaaf8a62d0817bdbc6a021e566",
   "video_rebuild_status": "RESOLVED_VERIFIED_MEDIA; original capture filename collision corrected with uniquely named genuine live stills; actual room clips retained",
   "repaired_video": {
     "path": "submission/video/The-Build-Guild-Tablekeeper-Demo.mp4",
@@ -2132,7 +2138,9 @@
     "independent_document_review": {
       "status": "PASS",
       "scope": "Factual claims, local links and anchors, fixture instructions, media/acceptance boundaries and preserved factory provenance."
-    }
+    },
+    "current_document_bytes_match_this_dated_record": false,
+    "superseded_by": "render_stage4_live_deployment.documentation_update"
   },
   "render_stage4_preparation": {
     "application_candidate": "ac1eb4945a2adaeaaf8a62d0817bdbc6a021e566",
@@ -2146,5 +2154,63 @@
     "target_service_id": "srv-db28udrtqb8s73chaqmg",
     "target_url": "https://tablekeeper-stage2.onrender.com",
     "scope": "Reviewed prepared package and local Docker smoke; actual Render publication/live outcome separate."
+  },
+  "superseded_render_metadata": [
+    {
+      "render_candidate": "b1f7ef64db7f0dce0b3f3a913a3af280c96d70b9",
+      "deployment_commit": "382998fe143268754ade2ed2702090df3f71ef56",
+      "receipt": "evidence/render/deployment-receipt.json",
+      "scope": "Historical Stage2 deployment/media; exact original records retained."
+    }
+  ],
+  "render_deployment_commit": "dfa145748ea91b1863d56b2a6ca270679285324a",
+  "render_stage4_live_deployment": {
+    "status": "LIVE_VERIFIED",
+    "application_candidate": "ac1eb4945a2adaeaaf8a62d0817bdbc6a021e566",
+    "deployment_commit": "dfa145748ea91b1863d56b2a6ca270679285324a",
+    "record": "evidence/render/stage-4/deployment-receipt.json",
+    "record_sha256": "d0acc783a7bc398fda2e003cf5fe92958abdd5a18e51041ceac186e7b77908e1",
+    "live_http_smoke": "evidence/render/stage-4/live-http-smoke.json",
+    "live_http_smoke_sha256": "dcf9360a6d5f9ae3c0fe504f3964b454598f515cc4ff24224cd7f2156f19840f",
+    "service_id": "srv-db28udrtqb8s73chaqmg",
+    "deploy_id": "dep-db2heejtqb8s73de0p9g",
+    "url": "https://tablekeeper-stage2.onrender.com",
+    "scope": "Actual same-service provider live receipt, matching public revision metadata/nineassets and137finite HTTP requests, plus actual diner search. No manager grants, private test-route exposure, durable state or exhaustive live acceptance.",
+    "documentation_update": {
+      "observed_at_utc": "2026-10-06T15:50:09.262036+00:00",
+      "documents": [
+        {
+          "path": "README.md",
+          "sha256": "e4fc13d7dbaeb8afcb4552cf0497e4c01f366aca41605e6d30cad95d6993ef1f",
+          "bytes": 9531
+        },
+        {
+          "path": "FACTORY.md",
+          "sha256": "ed6f6ef6e3d57e79b3cf01a8a8e2a1715bf9eece89f2fb9807816a5123033ef3",
+          "bytes": 27615
+        },
+        {
+          "path": "docs/SUBMISSION-REQUIREMENTS.md",
+          "sha256": "4335505bcc0a8eeb7680ae2e9978625a14bc6ee61da42db19c0ea846c04cb3d9",
+          "bytes": 23441
+        },
+        {
+          "path": "submission/video/README.md",
+          "sha256": "c8a1fadd3e428a5b43fa570d4b4bd8de3025f977228fdbc734a1aab5602bef5f",
+          "bytes": 3845
+        },
+        {
+          "path": "submission/presentation/README.md",
+          "sha256": "0dda4c8548ccaf83649e602c0e982e9bcd96a04532202960b1ed3b866545c765",
+          "bytes": 1563
+        }
+      ],
+      "local_links_checked": 115,
+      "missing_paths": 0
+    },
+    "independent_publication_review": {
+      "status": "PASS",
+      "scope": "Frozen package/source exactness, actual finite live checks/revision/static hashes, current/historical documentation, selected JSON/code/screenshot privacy and valid local links. No actual credential findings."
+    }
   }
 }
