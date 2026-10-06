@@ -27,7 +27,7 @@ export function searchScreen(main) {
   function selected(ids,slot){return selection && selection.slot.starts_at_local===slot.starts_at_local && ids.length===selection.ids.length && ids.every((id,i)=>selection.ids[i]===id);}
   function choose(ids,slot){
     if(!auth()){authErrors.replaceChildren(feedback('auth-error',el('div',{},'Log in to reserve this table. ',el('a',{href:'/login'},'Log in'))));authErrors.querySelector('a').focus();return;}
-    authErrors.replaceChildren();const gen=generation;
+    authErrors.replaceChildren();if(selected(ids,slot) && bookHost.firstChild)return;const gen=generation;
     selection={detail:bundle.detail,scope:bundle.scope,slot,ids:[...ids]};const own=selection;
     booking(bookHost,own,()=>!disposed && generation===gen && selection===own,()=>refresh(gen,own));renderGrid();
   }
@@ -46,7 +46,7 @@ export function searchScreen(main) {
       })));
     });
     const full=!availability.slots.some(s=>s.available_table_ids.length || s.available_options?.length);
-    results.replaceChildren(title,full?el('p',{class:'helper'},'No tables fit your party at these times. Try a different date or party size.'):null,el('div',test('availability-grid'),groups));
+    results.replaceChildren(title,...(full?[el('p',{class:'helper'},'No tables fit your party at these times. Try a different date or party size.')]:[]),el('div',test('availability-grid'),groups));
   }
   async function refresh(gen,own){
     const notice=el('p',{role:'status',class:'helper'},'Updating availability…');results.prepend(notice);

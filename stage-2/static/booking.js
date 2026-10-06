@@ -2,6 +2,16 @@ import {el, test, field, feedback, labels, members, local} from './dom.js';
 import {auth} from './auth.js';
 import {request, Rejection, randomKey} from './api.js';
 
+// Keep valid integer input lexemes exact; JSON.stringify(Number(...)) rounds large parties.
+function bodyText(selection, party) {
+  const {scope, ids, slot}=selection;
+  let number=party;
+  if (/^\d+$/.test(number)) number=number.replace(/^0+(?=\d)/,'');
+  if (!/^-?(?:0|[1-9]\d*)(?:\.\d+)?(?:[eE][+-]?\d+)?$/.test(number)) number=JSON.stringify(Number(party));
+  const fields=JSON.stringify({restaurant_id:scope.restaurant_id,...(ids.length===1?{table_id:ids[0]}:{table_ids:ids}),starts_at_local:slot.starts_at_local});
+  return fields.slice(0,-1)+',"party_size":'+number+'}';
+}
+
 export function booking(host, selection, isCurrent, refresh) {
   const {detail, scope, slot, ids} = selection;
   let revision=0, attempt=null;
@@ -15,7 +25,7 @@ export function booking(host, selection, isCurrent, refresh) {
   const active = a => isCurrent() && attempt === a && a.revision === revision && auth()?.token === a.caller;
   form.addEventListener('submit',async event=>{
     event.preventDefault();if(submit.disabled || !auth())return;
-    if(!attempt) attempt={id:randomKey(),revision,key:randomKey(),caller:auth().token,method:'POST',path:'/reservations',bodyText:JSON.stringify({restaurant_id:scope.restaurant_id,...(ids.length===1?{table_id:ids[0]}:{table_ids:ids}),starts_at_local:slot.starts_at_local,party_size:Number(party.value)})};
+    if(!attempt) attempt={id:randomKey(),revision,key:randomKey(),caller:auth().token,method:'POST',path:'/reservations',bodyText:bodyText(selection,party.value)};
     const a=attempt;submit.disabled=true;party.disabled=true;form.setAttribute('aria-busy','true');submit.textContent='Confirming your reservation…';feedbackHost.replaceChildren(el('p',{role:'status',class:'loading'},'Confirming your reservation…'));
     try {
       const result=await request(a.path,{method:a.method,bodyText:a.bodyText,key:a.key,token:a.caller});

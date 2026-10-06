@@ -131,4 +131,4 @@ async def main():
  finally:
   report={'work_item':'UI-S2','candidate':os.getenv('CANDIDATE'),'responsible':'@frankzhu94/factory-frontend','layer':'actual Chromium + actual packaged API, internal Docker network; route holds/aborts forward real response bytes','started_utc':started,'ended_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'browser':locals().get('version'),'results':results,'page_errors':errors,'cost':'UNAVAILABLE','limitations':['Finite owner cases; independent QA/Designer/Reviewer acceptance pending. No exhaustive schedule or continuous resource profile.']}
   (OUT/'report.json').write_text(json.dumps(report,indent=2))
-asyncio.run(main())
+if __name__=='__main__': asyncio.run(main())
