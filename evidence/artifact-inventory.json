@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "createdAt": "2026-10-06T10:57:21.736511+00:00",
-  "scope": "Local Sol practice artifacts through independently accepted Stage4ac1eb494; original source history, exact selected failures/acceptance, fresh supplied isolated158checks and genuine dated10138-message full-room snapshot; supervisor running-idle observation is not final shutdown or external judging",
+  "createdAt": "2026-10-06T15:26:38.052975+00:00",
+  "scope": "Completed Local Sol Stage4 application and review artifacts with refreshed reviewer documentation; original source history, selected failures/acceptance, supplied isolated158-check run and dated10138-message whole-room snapshot preserved. Local acceptance and final submission remain separate.",
   "applicationRevision": "ac1eb4945a2adaeaaf8a62d0817bdbc6a021e566",
   "inventoryExclusions": [
     ".git",
@@ -27,13 +27,13 @@
     },
     {
       "path": "FACTORY.md",
-      "bytes": 26238,
-      "sha256": "35f19f32f01ff0b69fd877b29993ea783aa0ead8d4d60bb9cbaa7efd1e25dc76"
+      "bytes": 26093,
+      "sha256": "120c7d759639a40ecfc19dfffdc63f6400cbc02435dc2ca2c069880b407b1e2c"
     },
     {
       "path": "README.md",
-      "bytes": 21907,
-      "sha256": "0dab2d0bcfbaf1474c3b24be0346b487ddc3af51c83c70cd902e3230e76031db"
+      "bytes": 8728,
+      "sha256": "3c6e5bcb06f630c01d07e4be6e279568926b5d38645b5f02e230d9ba184980ba"
     },
     {
       "path": "WORKING.md",
@@ -167,13 +167,13 @@
     },
     {
       "path": "docs/SUBMISSION-REQUIREMENTS.md",
-      "bytes": 22333,
-      "sha256": "c12127f7e6ba3f826aa631b1315f82b59a857220ec8805926f1606bc64c9823d"
+      "bytes": 22358,
+      "sha256": "782b3919219a07fc27abe70efaec967b0ffcf834c4971d331d64d409e083f32e"
     },
     {
       "path": "evidence/artifact-provenance.json",
-      "bytes": 107319,
-      "sha256": "9d7ff1e298e0807fc0c342091c407d490fdda61c435893e9f084126f0d6bef89"
+      "bytes": 109755,
+      "sha256": "96ba7f12205262ba784bc84a232ded8b54079a9c8756c0e05425eba0dd64c4e3"
     },
     {
       "path": "evidence/factory-runtime/administrative-scripts/README.md",

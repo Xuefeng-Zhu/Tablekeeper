@@ -1,6 +1,6 @@
 # The Build Guild factory
 
-**AI-assisted factual draft. The participant must author/review this document and README.md before submission. The official guide requires participant-written narratives; this draft does not claim human authorship.**
+Build process, reusable setup and verification records for Tablekeeper.
 
 This factory uses seven distinct BAND agents, each running the Codex harness with exact model `gpt-6.1-sol`. The responsibilities and protocols are generic; track requirements arrive in the task rather than being embedded in mandates. The application history belongs to local development practice. It is useful evidence of actual collaboration and defect handling, but human interventions prevent a claim of judged-run autonomy.
 

@@ -1873,5 +1873,61 @@
       "superseded_by": "ac1eb4945a2adaeaaf8a62d0817bdbc6a021e566",
       "scope": "Current Stage3 artifact-package candidate metadata before Stage4 history import; earlier Stage2 provenance retained"
     }
-  ]
+  ],
+  "documentation_review_update": {
+    "observed_at_utc": "2026-10-06T15:25:47.274658+00:00",
+    "base_main_commit": "d042f6ca22865c92b76e6941becfd35a122f34c7",
+    "scope": "Reviewer guide, verified local fixture quick start and current validation/artifact navigation; original application, factory source, room, media and historical evidence unchanged.",
+    "documents": [
+      {
+        "path": "README.md",
+        "previous_sha256": "0dab2d0bcfbaf1474c3b24be0346b487ddc3af51c83c70cd902e3230e76031db",
+        "sha256": "3c6e5bcb06f630c01d07e4be6e279568926b5d38645b5f02e230d9ba184980ba",
+        "bytes": 8728
+      },
+      {
+        "path": "FACTORY.md",
+        "previous_sha256": "35f19f32f01ff0b69fd877b29993ea783aa0ead8d4d60bb9cbaa7efd1e25dc76",
+        "sha256": "120c7d759639a40ecfc19dfffdc63f6400cbc02435dc2ca2c069880b407b1e2c",
+        "bytes": 26093
+      },
+      {
+        "path": "docs/SUBMISSION-REQUIREMENTS.md",
+        "previous_sha256": "c12127f7e6ba3f826aa631b1315f82b59a857220ec8805926f1606bc64c9823d",
+        "sha256": "782b3919219a07fc27abe70efaec967b0ffcf834c4971d331d64d409e083f32e",
+        "bytes": 22358
+      }
+    ],
+    "local_link_review": {
+      "checked_documents": [
+        "README.md",
+        "FACTORY.md",
+        "docs/SUBMISSION-REQUIREMENTS.md"
+      ],
+      "links_checked": 98,
+      "missing_paths": 0
+    },
+    "local_fixture_smoke": {
+      "service": "unchanged accepted Stage4 Python service on an isolated free local port",
+      "fixture_source": "tests/backend_stage4_inherited.py:Stage4InheritedTests.fixture",
+      "health_status": 200,
+      "reset_status": 204,
+      "browser_root_status": 200,
+      "restaurant_list_status": 200,
+      "availability_status": 200,
+      "availability_case": {
+        "restaurant_id": "r",
+        "date": "2030-01-07",
+        "party_size": 2,
+        "slots": 8
+      },
+      "owned_process_stopped": true,
+      "scope": "Stdlib local service/fixture proof; existing Docker and independent acceptance evidence remain separately dated."
+    },
+    "historical_records": "Prior acceptance, source/privacy review, failures, continuations and artifact revisions remain unchanged or retained in original Git history.",
+    "independent_document_review": {
+      "status": "PASS",
+      "scope": "Factual claims, local links and anchors, fixture instructions, media/acceptance boundaries and preserved factory provenance."
+    }
+  }
 }

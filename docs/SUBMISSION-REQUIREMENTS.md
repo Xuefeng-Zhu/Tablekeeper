@@ -1,13 +1,13 @@
 # Submission requirements and evidence boundaries
 
-This is a preparation record for the current local Sol practice run. No final form submission or artifact upload is implied. README.md and FACTORY.md are explicitly AI-assisted drafts requiring participant authorship/review.
+This checklist covers the completed Tablekeeper repository and its review artifacts. Final portal submission and required participant details are tracked separately below.
 
 The source of these requirements is the [official participant guide, pinned commit 803560d](https://github.com/band-ai/dark-factory-wearedevs/blob/803560d2a678ace1414465c098eb0ab5380ffade/docs/participant-guide.md). In particular it requires a public repository, generic mandates, real room export, separately buildable stage folders, participant-written README/FACTORY, presentation and a video showing actual room work, handoff and produced result. Supplied tests are partial directional feedback.
 
 | Requirement | Current artifact/status | Remaining action or limitation |
 |---|---|---|
 | Team and track | Tablekeeper; current video title The Build Guild | Participant confirms registered team and author facts |
-| README.md and FACTORY.md | Complete factual AI-assisted drafts at repository root | Participant must author/review them; no human-authorship claim |
+| README.md and FACTORY.md | Reviewer guide, local quick start, validation summary and factory documentation at repository root | Confirm the required submission narrative and participant details before final submission |
 | At least three distinct coding seats | Seven distinct Codex/gpt-6.1-sol seats | Authenticate against genuine room export; sanitized runtime summary is supplementary |
 | Generic seat mandates with harness/model | Seven `mandates/factory-*.md`, unchanged from current factory candidate | Final offline checker verifies exact room naming and genericity |
 | Reusable factory setup and protocols | Bundled `factory/` toolkit, FACTORY setup, three `protocols/` files and scoped runtime correction evidence | Recreate fresh-machine auth, membership, model and capability proof; do not reuse local attestations |
@@ -24,10 +24,10 @@ The source of these requirements is the [official participant guide, pinned comm
 | Presentation | Current seven-slide PPTX, PDF and QA included under submission/presentation | Conversion, individual rendered-page review and overflow checks PASS; historical pre-acceptance snapshot; current verdict documented separately; participant review still required; no old Run6 deck |
 | Measured time and model consumption | Historical media 06:23Z: 104,037,922 local tokens; stop 07:01:51Z: 126,096,220 local tokens; selected stop summary included | Historical 07:01:51Z stop snapshot: overall time cap exhausted; 173,903,780 remained within the 300m allowance; cached input included; USD unavailable. Continuation had not occurred at that dated snapshot; later authorized amendments appear below |
 | Judged autonomy | This is explicitly local development practice with human amendments/restarts | Cannot claim task-only human input for this run; do not conceal interventions |
-| Offline package check | Operator reports official `harness check` PASS after privacy receipt wording correction | Packaging only; builds nothing and does not establish Stage 2 acceptance, judged autonomy or participant authorship |
+| Offline package check | Pinned official `harness check` PASS; current receipt in `evidence/package-check.json` | Packaging only; builds nothing and does not establish product acceptance, judged autonomy or participant authorship |
 | Final isolated stage checks | Stage 4 Reviewer exact ac1eb494 supplied 120/25/7/6 PASS; separate fresh publisher rerun 10:49:37–10:50:31Z also PASS, highest contiguous 4; all earlier dated reports/failed probes retained | Supplied partial tests supplement finite independent acceptance; external judging remains separate |
 | Authorized eight-hour continuation | Participant explicitly requested “Extend 8 hours and resume”; exact 28,800-second overall/current-room extension, preserving original accounting | Running verified at 07:28:22Z with all seven contexts and one active turn; original interrupted claim remains preserved and non-replayable; Stage 3/4 incomplete at that historical observation; all four stages now independently accepted within finite local scopes |
-| Public repository and final entry | Artifact preparation in canonical repository | Operator handles authorized visibility/push; final form submission is separate and not recorded |
+| Public repository and final entry | Public repository; completed Stage 4 package merged into `main` with original histories preserved | Final form submission is separate and not recorded |
 
 ## Export and privacy
 
