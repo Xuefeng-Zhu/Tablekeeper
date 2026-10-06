@@ -2,3 +2,5 @@
 
 /* Keep keyboard focus on the pending submit; its controller suppresses activation. */
 .booking button[aria-disabled="true"]{background:#eaf2e8;color:var(--primary);border-style:dashed;cursor:progress}
+
+.booking button{scroll-margin:8px}

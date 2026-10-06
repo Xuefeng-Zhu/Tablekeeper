@@ -33,6 +33,7 @@ async def check(browser,width,pair,state,control=None):
  await expect(tid(page,'booking-form')).to_have_attribute('aria-busy','true')
  await expect(tid(page,'booking-submit')).to_have_text('Confirming your reservation…')
  pending=await focused(page);assert pending['testid']=='booking-submit',pending
+ bounds=await tid(page,'booking-submit').evaluate('(e)=>({top:e.getBoundingClientRect().top,bottom:e.getBoundingClientRect().bottom,height:innerHeight})');assert bounds['top']>=7 and bounds['bottom']<=bounds['height']-7,bounds
  pending_style=await tid(page,'booking-submit').evaluate('(e)=>({border:getComputedStyle(e).borderStyle,outline:getComputedStyle(e).outlineStyle,outlineWidth:getComputedStyle(e).outlineWidth})')
  assert pending_style['border']=='dashed' and pending_style['outline']=='solid' and pending_style['outlineWidth']=='3px',pending_style
  # Real keyboard repeat activation, both Enter and Space, must not send another POST.
@@ -65,6 +66,8 @@ async def check(browser,width,pair,state,control=None):
   await page.wait_for_timeout(100)
  after=await focused(page)
  assert after['testid']==(control_before['testid'] if control else 'booking-submit'),(name,control_before,after)
+ if not control:
+  bounds=await tid(page,'booking-submit').evaluate('(e)=>({top:e.getBoundingClientRect().top,bottom:e.getBoundingClientRect().bottom,height:innerHeight})');assert bounds['top']>=7 and bounds['bottom']<=bounds['height']-7,bounds
  await page.screenshot(path=str(OUT/(name+'-after.png')),full_page=False)
  # A current uncertainty is recoverable through keyboard with the exact identity.
  retry_identity=None

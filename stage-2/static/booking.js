@@ -22,11 +22,16 @@ export function booking(host, selection, isCurrent, refresh) {
   const form=el('form',{class:'panel booking',...test('booking-form'),novalidate:true},el('p',{class:'eyebrow'},'A seat is waiting'),heading,el('p',test('booking-summary'),`${detail.name} · ${labels(detail,ids)} · ${local(slot.starts_at_local)}`),el('p',{class:'helper'},`Times in ${detail.timezone}`),partyWrap,el('p',{class:'helper'},'Changing details starts a new reservation. If the previous result is uncertain, retry those details first to avoid a second booking.'),feedbackHost,submit);
   host.replaceChildren(form);
   party.addEventListener('input',()=>{revision++;attempt=null;feedbackHost.replaceChildren();party.removeAttribute('aria-invalid');party.removeAttribute('aria-describedby');pending=false;submit.removeAttribute('aria-disabled');party.disabled=false;submit.textContent='Confirm reservation';});
+  function keepSubmitVisible(){
+    if(document.activeElement!==submit)return;
+    const bounds=submit.getBoundingClientRect();
+    if(bounds.top<8 || bounds.bottom>innerHeight-8)submit.scrollIntoView({block:'nearest'});
+  }
   const active = a => isCurrent() && attempt === a && a.revision === revision && auth()?.token === a.caller;
   form.addEventListener('submit',async event=>{
     event.preventDefault();if(pending || !auth())return;
     if(!attempt) attempt={id:randomKey(),revision,key:randomKey(),caller:auth().token,method:'POST',path:'/reservations',bodyText:bodyText(selection,party.value)};
-    const a=attempt;party.removeAttribute('aria-invalid');party.removeAttribute('aria-describedby');pending=true;submit.setAttribute('aria-disabled','true');party.disabled=true;form.setAttribute('aria-busy','true');submit.textContent='Confirming your reservation…';feedbackHost.replaceChildren(el('p',{role:'status',class:'loading'},'Confirming your reservation…'));
+    const a=attempt;party.removeAttribute('aria-invalid');party.removeAttribute('aria-describedby');pending=true;submit.setAttribute('aria-disabled','true');party.disabled=true;form.setAttribute('aria-busy','true');submit.textContent='Confirming your reservation…';feedbackHost.replaceChildren(el('p',{role:'status',class:'loading'},'Confirming your reservation…'));keepSubmitVisible();
     try {
       const result=await request(a.path,{method:a.method,bodyText:a.bodyText,key:a.key,token:a.caller});
       if(!active(a))return;
@@ -44,7 +49,7 @@ export function booking(host, selection, isCurrent, refresh) {
       } else {
         a.state='uncertain';feedbackHost.replaceChildren(feedback('booking-uncertain',el('div',{},el('strong',{},"We couldn't confirm the result"),el('p',{},'Your reservation may have been made. Retry the same details to check and recover its reference.')),'uncertain'));submit.textContent='Retry same reservation';
       }
-    } finally {if(active(a)){pending=false;submit.removeAttribute('aria-disabled');party.disabled=false;form.setAttribute('aria-busy','false');}}
+    } finally {if(active(a)){pending=false;submit.removeAttribute('aria-disabled');party.disabled=false;form.setAttribute('aria-busy','false');keepSubmitVisible();}}
   });
   heading.focus();heading.scrollIntoView({block:'nearest'});
   return form;
