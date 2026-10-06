@@ -1,0 +1,25 @@
+{
+  "candidate": "26a041dbaf74169830146cb3d953c16ee8945f96",
+  "responsible": "@frankzhu94/factory-reviewer",
+  "start_utc": "2026-10-06T06:56:43.837651+00:00",
+  "end_utc": "2026-10-06T06:56:54.703933+00:00",
+  "groups": [
+    "API literal cancelled/second-member/adjacency options PASS",
+    "API ordered receipts/precision/original cancel replay/import rollback PASS",
+    "API25final-set layouts/rollback/failed-key reuse PASS",
+    "API later nonoccupancy error before earlier overlap PASS",
+    "API50duplicate+50mixed-member contention PASS",
+    "API literal max/min year and DST pair duration PASS"
+  ],
+  "api_requests": 320,
+  "api_statuses": {
+    "422": 2,
+    "200": 134,
+    "201": 83,
+    "204": 35,
+    "409": 66
+  },
+  "max_api_seconds": 0.09340951999183744,
+  "result": "PASS exact original API slice",
+  "layer": "Packaged original API image; actual HTTP from Docker runner on internal network"
+}

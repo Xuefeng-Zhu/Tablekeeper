@@ -1,0 +1,185 @@
+{
+  "work_item": "Stage2 release / UI-S2 / API-S2 / QA-S2-RUN / RENDER-S2-REPAIR1",
+  "responsible": "@frankzhu94/factory-reviewer",
+  "decision": "ACCEPTED",
+  "integrated_candidate": "108bcd4c48fa4fb4d7dedf286e94c8e4937f7f10",
+  "recorded_utc": "2026-10-06T07:00:48.805165+00:00",
+  "handoff_event": "b065cc30-6e77-4e05-9422-719b3b614dd4",
+  "receipt_event": "75ed753b-f1ce-4f8c-a9d5-6167a4388698",
+  "sources": {
+    "/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-1.md": "9460189eac83802ce158f16ee90989af728a489b32a6147e2dc8e320f383055f",
+    "/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-2.md": "b1aa1b4affad456ff26f208a378eb2f6884153fc6ef667ab37b888fcda96c5dc",
+    "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/ARCHITECTURE.md": "3ab218e821038f8468d8a8a835b250da31c7c59e1691c55d2c607186a277ace3",
+    "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/DESIGN.md": "677188d1b6f6da7f34a3fc810259970e013d153517a078b27cc0bb8716ba433f",
+    "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/WORKING.md": "41bb75489355d279a7f6593eb6799bb627b19f9d90a9446d750be3a5543f5cc3"
+  },
+  "commands": [
+    "/Users/frank/mygit/Tablekeeper/runs/harness-venv/bin/python -m harness run --track tablekeeper --repo /private/tmp/tablekeeper-review-s2-release-20261006T0653Z --stage 2 --mode isolated --out /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s2-release-20261006T0653Z/official",
+    "python3 /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s2-release-20261006T0653Z/execute.py",
+    "python3 /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s2-release-20261006T0653Z/api-original/execute.py",
+    "git -C /private/tmp/tablekeeper-review-s2-release-20261006T0653Z diff --exit-code 26a041dbaf74169830146cb3d953c16ee8945f96 HEAD -- stage-2/*.py",
+    "git -C /private/tmp/tablekeeper-review-s2-release-20261006T0653Z diff --exit-code b3df39340cee6f738ac79a12dd1347fc38e969e9 HEAD -- stage-1"
+  ],
+  "command_results": "All above exit0; exact Docker argv/exits/UTC/environment/cleanup in execution.json and api-original/execution.json; packaged-static.json exit0. Clean exact root and both detached clones verified after checks.",
+  "official": {
+    "revision": "108bcd4c48fa4fb4d7dedf286e94c8e4937f7f10",
+    "track": "tablekeeper",
+    "stages": {
+      "1": "pass",
+      "2": "pass"
+    },
+    "highest_contiguous": 2,
+    "started_at": "2026-10-06T06:51:48.912351+00:00",
+    "finished_at": "2026-10-06T06:52:38.768878+00:00",
+    "schema_version": 2,
+    "run_id": "301e6778849348bda321a18814e5c5f8",
+    "mode": "isolated",
+    "provenance": "working-tree",
+    "state": "completed",
+    "pytest_args": [],
+    "suite_digest": "91f4007512983b527d0f60633e006572f9a3ac7ae4f903df22d13614656f6c06",
+    "checks": {
+      "1": {
+        "collected": 120,
+        "passed": 120,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0,
+        "deselected": 0,
+        "xfailed": 0,
+        "files": {
+          "stage_1/test_health_reset_auth.py": {
+            "passed": 12,
+            "total": 12
+          },
+          "stage_1/test_reservations.py": {
+            "passed": 37,
+            "total": 37
+          },
+          "stage_1/test_restaurants_availability.py": {
+            "passed": 18,
+            "total": 18
+          },
+          "stage_1/test_retries_time_input.py": {
+            "passed": 20,
+            "total": 20
+          },
+          "stage_1/test_sample.py": {
+            "passed": 20,
+            "total": 20
+          },
+          "stage_1/test_seeded_state.py": {
+            "passed": 13,
+            "total": 13
+          }
+        }
+      },
+      "2": {
+        "collected": 25,
+        "passed": 25,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0,
+        "deselected": 0,
+        "xfailed": 0,
+        "files": {
+          "stage_2/test_sample.py": {
+            "passed": 8,
+            "total": 8
+          },
+          "stage_2/test_ui.py": {
+            "passed": 17,
+            "total": 17
+          }
+        }
+      }
+    },
+    "overshoot": null,
+    "claimed_stage": "2",
+    "share": 1.0,
+    "upgrade_sources": {
+      "2": {
+        "folder": "/private/tmp/tablekeeper-review-s2-release-20261006T0653Z/stage-1",
+        "revision": "108bcd4c48fa4fb4d7dedf286e94c8e4937f7f10"
+      },
+      "3": {
+        "folder": "/private/tmp/tablekeeper-review-s2-release-20261006T0653Z/stage-2",
+        "revision": "108bcd4c48fa4fb4d7dedf286e94c8e4937f7f10"
+      }
+    }
+  },
+  "independent_current": {
+    "report": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s2-release-20261006T0653Z/browser-run/report.json",
+    "utc": [
+      "2026-10-06T06:54:32.040141+00:00",
+      "2026-10-06T06:55:12.451551+00:00"
+    ],
+    "focus_cases": 16,
+    "groups": [
+      "Browser late detail/error/finally Bauthority PASS",
+      "Browser lost success replay/exact retry/editrevert new identity PASS",
+      "Browser actual accepted Stage1 export/auth/form/bodykey/legacyreceipt/currentcancelled PASS",
+      "API literal cancelled/second-member/adjacency options PASS",
+      "API ordered receipts/precision/original cancel replay/import rollback PASS",
+      "API25final-set layouts/rollback/failed-key reuse PASS",
+      "API later nonoccupancy error before earlier overlap PASS",
+      "API50duplicate+50mixed-member contention PASS",
+      "API literal max/min year and DST pair duration PASS"
+    ],
+    "api_requests": 331,
+    "api_statuses": {
+      "422": 2,
+      "200": 140,
+      "201": 83,
+      "204": 40,
+      "409": 66
+    },
+    "max_api_seconds": 0.09172347700223327
+  },
+  "independent_original_api": {
+    "candidate": "26a041dbaf74169830146cb3d953c16ee8945f96",
+    "responsible": "@frankzhu94/factory-reviewer",
+    "start_utc": "2026-10-06T06:56:43.837651+00:00",
+    "end_utc": "2026-10-06T06:56:54.703933+00:00",
+    "groups": [
+      "API literal cancelled/second-member/adjacency options PASS",
+      "API ordered receipts/precision/original cancel replay/import rollback PASS",
+      "API25final-set layouts/rollback/failed-key reuse PASS",
+      "API later nonoccupancy error before earlier overlap PASS",
+      "API50duplicate+50mixed-member contention PASS",
+      "API literal max/min year and DST pair duration PASS"
+    ],
+    "api_requests": 320,
+    "api_statuses": {
+      "422": 2,
+      "200": 134,
+      "201": 83,
+      "204": 35,
+      "409": 66
+    },
+    "max_api_seconds": 0.09340951999183744,
+    "result": "PASS exact original API slice",
+    "layer": "Packaged original API image; actual HTTP from Docker runner on internal network"
+  },
+  "environment": "Packaged clean Docker images; official df-harness-runner Python Playwright Chromium153.0.8010.12; internal Docker networks; each app and runner constrained2CPU/2GiB. Scope-specific resources removed, all cleanup exit0. Static9 files equal clean source in network-none package check. Resource cap is configured/observed, peak usage not measured.",
+  "provenance": "Stage1 byte unchanged from accepted b3df39340cee6f738ac79a12dd1347fc38e969e9; all stage-2 Python unchanged from26a041dbaf74169830146cb3d953c16ee8945f96. Original API tested separately at its exact revision. No reviewer product repair.",
+  "finding": "R-F1 resolved:16 independently selected actual current/recovery/user/new-form focus cases PASS including real409, lost committed201, success201, Enter/Space suppression, connected first/free-pair refresh and viewport. Actual accepted Stage1 export/import across live browser requests preserves auth/form/body/key and legacy original receipt after cancellation. No new material defect observed.",
+  "support_audit": "All QA57 manifest artifacts size/SHA verified; record/coverage truthful atb1f7, including explicit focus gap and retained driver failures. Fresh Designer48focus/8core75snapshots/10feedback screenshots and22contrast observations reviewed at108bcd4; initial driver and interrupted runs excluded truthfully. Owner27focus/8core/5edge candidate reports inspected. Owner API22groups738HTTP with filtered official exit3 retained truthfully, not claimed full pass. These support but do not replace independent exact-candidate checks.",
+  "limitations": [
+    "Finite Docker Chromium153.0.8010.12/internal-network execution at desktop1280 and mobile375; no native Mac browser or external judging claim.",
+    "Native200% browser zoom and assistive audio NOT_TESTED; Designer CSS200% text, DOM associations, keyboard and actual contrast observed.",
+    "All input/calendar/zone/error permutations and interleavings, exact HTTP cutoff equality, forced ID collision, Unicode headers, long token elapsed time, continuous peak resource profiling and mapped host ports NOT_TESTED.",
+    "Gap-hour boundary and duplicate unordered declaration conventions underspecified; no invented rejection oracle.",
+    "Stage3 NOT_TESTED/NOT_ACCEPTED; API and evidence acceptance alone cannot advance without integrated UI release acceptance and owner synchronization."
+  ],
+  "monetary_cost": "UNAVAILABLE",
+  "skill": "webapp-testing: /Users/frank/.codex/skills/webapp-testing/SKILL.md",
+  "review_evidence_paths": [
+    "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s2-release-20261006T0653Z/official/report.json",
+    "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s2-release-20261006T0653Z/browser-run/report.json",
+    "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s2-release-20261006T0653Z/execution.json",
+    "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s2-release-20261006T0653Z/api-original/run/report.json",
+    "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s2-release-20261006T0653Z/api-original/execution.json",
+    "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s2-release-20261006T0653Z/packaged-static.json"
+  ]
+}

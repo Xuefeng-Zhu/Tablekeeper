@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "createdAt": "2026-10-06T07:03:13.437461+00:00",
-  "scope": "Local Sol development/practice artifact package; in-progress room snapshot",
+  "createdAt": "2026-10-06T07:24:14.676181+00:00",
+  "scope": "Local Sol practice artifacts; Stage 2 independently accepted, post-time-cap full room snapshot before approved continuation",
   "applicationRevision": "108bcd4c48fa4fb4d7dedf286e94c8e4937f7f10",
   "inventoryExclusions": [
     ".git",
@@ -27,13 +27,13 @@
     },
     {
       "path": "FACTORY.md",
-      "bytes": 13240,
-      "sha256": "cac99af7f0ccd12c2721a5e2f7ab0c5a650dcebb98ad5ab9e5cc4b93212d1114"
+      "bytes": 15641,
+      "sha256": "a7d96cf1e446538707a22611451deb0b5364181778472e5ff4aac238b36df4d6"
     },
     {
       "path": "README.md",
-      "bytes": 8478,
-      "sha256": "b49fffbe4d28b4c09482722b734e88cb8be5144f4890b9950bdc153c3d421a48"
+      "bytes": 11010,
+      "sha256": "ed881c28fd6d2007b09fac21e039b08864e1fa47bb06b9d4b42bb184abec6f5a"
     },
     {
       "path": "WORKING.md",
@@ -167,13 +167,13 @@
     },
     {
       "path": "docs/SUBMISSION-REQUIREMENTS.md",
-      "bytes": 8213,
-      "sha256": "c077f94334be00ef40d56216fc7a88e766a40e488573dedaa8aec51ca4f3f6f2"
+      "bytes": 10827,
+      "sha256": "45be932b18b496796f136596327a31c5aa33e0ff42150634a27b34fd91747c03"
     },
     {
       "path": "evidence/artifact-provenance.json",
-      "bytes": 15624,
-      "sha256": "de038a85fda1b756acfe56863d8039acd5ce75e8ad9aa974c24c8c533f79bb19"
+      "bytes": 21434,
+      "sha256": "3f8642b29df44eb68c772daec74f436231b8b12b3098777eb16ef8828b239106"
     },
     {
       "path": "evidence/factory-runtime/notice-recovery-validation.json",
@@ -204,6 +204,46 @@
       "path": "evidence/factory-runtime/transport.patch",
       "bytes": 11225,
       "sha256": "a1b6a8fb166d4a62cab2bdc5dbc7b749b68db9f6778a61eafcf56c4a76651933"
+    },
+    {
+      "path": "evidence/local-sol/acceptance-privacy-receipt.json",
+      "bytes": 1410,
+      "sha256": "e5b2d323776af2cbc10370b2a230dd5e9886ac6674c4872da9aea005a4413e81"
+    },
+    {
+      "path": "evidence/local-sol/designer-repair-108/assessment.md",
+      "bytes": 5136,
+      "sha256": "a567b4e9924efa109b7fcf7b4445e71f955659472aa0c3951cddb077527d04e3"
+    },
+    {
+      "path": "evidence/local-sol/designer-repair-108/core2-run/browser-report.json",
+      "bytes": 226337,
+      "sha256": "22b30c823dccf23c229e438a1895dfe8616473eaa0efb27cc23cae227d37988d"
+    },
+    {
+      "path": "evidence/local-sol/designer-repair-108/extra-run/supplement-report.json",
+      "bytes": 18418,
+      "sha256": "8c4ab9a831227720aa453ebc80c720f04f3479daa352dcef2d28718b28c82e7e"
+    },
+    {
+      "path": "evidence/local-sol/designer-repair-108/first-run/focus-report.json",
+      "bytes": 16537,
+      "sha256": "bca286df6690ac44193da39cd1487a45884f6e346e79ad0a465e5d3a1b23915b"
+    },
+    {
+      "path": "evidence/local-sol/designer-repair-108/focus3-run/focus-report.json",
+      "bytes": 110458,
+      "sha256": "849f32fde3b700f7636997c236152ccdfb45818263b5d9256b201127a8cf6a7b"
+    },
+    {
+      "path": "evidence/local-sol/designer-repair-108/packaged-static-check.json",
+      "bytes": 1029,
+      "sha256": "52b05613cebd2e18005d43fb0cb0c2d0cd53184cd7ac96ece7209c84982c30f4"
+    },
+    {
+      "path": "evidence/local-sol/designer-repair-108/record.json",
+      "bytes": 3867,
+      "sha256": "9f92d12be483ef2ab7a5a2a5613a7a22e5a9f0958a7f1fc0dd768005d04efb9f"
     },
     {
       "path": "evidence/local-sol/frontend-repair-108/core-report.json",
@@ -246,9 +286,49 @@
       "sha256": "e2dab69f350092f19ffd5a09dcae7d55222b1f274c1d520f8a81fd4868937135"
     },
     {
+      "path": "evidence/local-sol/reviewer-release-108/api-original/execution.json",
+      "bytes": 6454,
+      "sha256": "156383c85589e868f6657c18b507db7e695037f5c63b1aa1052a2dd6f26ce90a"
+    },
+    {
+      "path": "evidence/local-sol/reviewer-release-108/api-original/run/report.json",
+      "bytes": 917,
+      "sha256": "94d75494ca4f210dbf8c4c6caa1538c4e73f0b1d3c2643f169c9ec9272e4904b"
+    },
+    {
+      "path": "evidence/local-sol/reviewer-release-108/browser-run/report.json",
+      "bytes": 47394,
+      "sha256": "c1d415f43467d0f62ccea52b5a53ddb48c2665a36773a5ba48572448bf4b41c9"
+    },
+    {
+      "path": "evidence/local-sol/reviewer-release-108/execution.json",
+      "bytes": 7852,
+      "sha256": "3741010254499b518e5aba19a73cbf4c4aa592476961191e5b2b4944f9911af4"
+    },
+    {
+      "path": "evidence/local-sol/reviewer-release-108/official/report.json",
+      "bytes": 2126,
+      "sha256": "f3d0f52db4962c030e6907b94fc7bb045a63d65566d82fb63a73ea35c0ae0c26"
+    },
+    {
+      "path": "evidence/local-sol/reviewer-release-108/packaged-static.json",
+      "bytes": 1440,
+      "sha256": "07251352840ac10f1f43a74648f404fb412578832da5dc2f1447e86f1b8fa2ae"
+    },
+    {
+      "path": "evidence/local-sol/reviewer-release-108/record.json",
+      "bytes": 10055,
+      "sha256": "f7de178e1441d0349df885c59ba81c963ea9ef0aa3be78d2d332d878cb097c67"
+    },
+    {
       "path": "evidence/local-sol/runtime-summary.json",
       "bytes": 3460,
       "sha256": "475ff4fc7639ec420fb28c9cdc2f302363100e1dbea2a7726316242b25d1a5f6"
+    },
+    {
+      "path": "evidence/local-sol/stop-summary.json",
+      "bytes": 1730,
+      "sha256": "b2bff3de7e2f0e0ab38fdbcd664dbb8de5152a453d1fbda76227c495f558096d"
     },
     {
       "path": "evidence/privacy/bundled-workingtree-privacy-receipt.json",
@@ -259,6 +339,11 @@
       "path": "evidence/privacy/git-history-privacy-receipt.json",
       "bytes": 5080,
       "sha256": "258e66971759a59dd429594368fb0003d3fd4c3ca2042988eaf22426eecac8de"
+    },
+    {
+      "path": "evidence/privacy/room-privacy-receipt-20261006T071134Z.json",
+      "bytes": 4916,
+      "sha256": "41114df3e4fa6db0a61b1644b4b2198cc35f5cc8d5c09982f3b3ccfd9bbe4333"
     },
     {
       "path": "evidence/privacy/room-privacy-receipt.json",
@@ -339,6 +424,11 @@
       "path": "evidence/render/source-provenance.json",
       "bytes": 1997,
       "sha256": "86e62354ce2cf587a1cb54a94af7b51a932cd2ad5fd6a7254a4e9c799970598c"
+    },
+    {
+      "path": "evidence/room-download-20261006T071134Z.json",
+      "bytes": 884,
+      "sha256": "9d41076b1cca6f5a76b2b2f1600cb3b92876f71e276e2c96a1f0bdd27a9a1ad5"
     },
     {
       "path": "evidence/room-download.json",
@@ -777,8 +867,8 @@
     },
     {
       "path": "room.json",
-      "bytes": 9353740,
-      "sha256": "afe76f7fe500f88dbb21f5a9b0529c5d5e7270db55fe62809aa361d856f096e8"
+      "bytes": 10274439,
+      "sha256": "f79f7f9937325f9689c3e0cf55f450887751706b5cee53dac59afeb58787a132"
     },
     {
       "path": "stage-1/Dockerfile",
@@ -921,6 +1011,11 @@
       "sha256": "cc0fd84385e1e9f2eb84546f67a22602b9f3bb71b62b9bbbec81423403e60969"
     },
     {
+      "path": "submission/presentation/README.md",
+      "bytes": 724,
+      "sha256": "89b2d7ac0026de809f9bd4bbbd3a7b201c874d5abed0bb9ad2a79a481de3cbbc"
+    },
+    {
       "path": "submission/presentation/Tablekeeper-Local-Sol-Factory.pdf",
       "bytes": 382856,
       "sha256": "c106391a4062773b3011105d896aab549f60d58b48757c8a952eb8057539c246"
@@ -937,8 +1032,8 @@
     },
     {
       "path": "submission/video/README.md",
-      "bytes": 2525,
-      "sha256": "c5badcbfb4b53858f39ca9195de84bd6ca4b073e883487b3fa292bdf143ceb41"
+      "bytes": 2892,
+      "sha256": "94dac7945b4244553e052422cad96748ab990ef889bead7ac63b866e69c1a5fe"
     },
     {
       "path": "submission/video/The-Build-Guild-Tablekeeper-Demo.mp4",
