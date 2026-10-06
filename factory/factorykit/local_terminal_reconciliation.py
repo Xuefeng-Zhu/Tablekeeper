@@ -23,7 +23,7 @@ def referenced(ref):
     return json.loads(path.read_bytes())
 
 
-def load_terminal_reconciliations(config, room, workflow):
+def load_terminal_reconciliations(config, room, workflow, *, acceptance_relocations=None):
     path = Path(config['paths']['runs']) / 'readiness/local-8h-reconciliation.json'
     if not path.exists():
         return {}
@@ -68,7 +68,14 @@ def load_terminal_reconciliations(config, room, workflow):
         require(sdk['receipt_sender_id'] == seat['agent_id'] and sdk['receipt_recipient_id'] == binding['sender_id'] and sdk['receipt_content_sha256'] == hashlib.sha256(ack_content.encode()).hexdigest(), 'Actual SDK ACK content or sender/recipient differs')
         incident = original['incidents']['turn:' + key]
         require(incident['failed'] is True and incident['closed'] is False and incident['blocked'] is None and not incident['deliveries'], 'Original incident is not a known interrupted callback')
-        acceptance = referenced(entry['acceptance_record'])
+        acceptance_ref = entry['acceptance_record']
+        if acceptance_relocations:
+            require(set(acceptance_relocations) == {acceptance_ref['path']}, 'Unrelated terminal evidence relocation is forbidden')
+            replacement = acceptance_relocations[acceptance_ref['path']]
+            require(replacement['sha256'] == acceptance_ref['sha256'], 'Evidence relocation must preserve exact original bytes')
+            require(Path(replacement['path']).is_absolute() and Path(replacement['path']).parent == Path(config['paths']['runs']) / 'readiness', 'Evidence relocation is outside local run readiness authority')
+            acceptance_ref = replacement
+        acceptance = referenced(acceptance_ref)
         require(acceptance['decision'] == 'ACCEPTED' and acceptance['handoff_event'] == entry['trigger_event_id'] and acceptance['receipt_event'] == entry['receipt_event_id'], 'Accepted verdict evidence differs from interrupted callback')
         result[entry['seat']] = {entry['batch_key']: entry['batch_sha256']}
     return result

@@ -1,0 +1,157 @@
+{
+  "recorded_at_utc": "2026-10-06T09:27:48.338824+00:00",
+  "status": "PASS",
+  "scope": "Source-only review before launch/SDK mutation; operator gate remains separate",
+  "baseline_source": "/Users/frank/mygit/Tablekeeper/runs/local-sol-continuation-source-20261006",
+  "candidate_source": "/Users/frank/mygit/Tablekeeper/runs/local-sol-turn-source-20261006",
+  "source_inventory": {
+    "baseline_count": 59,
+    "candidate_count": 60,
+    "baseline_inventory_sha256": "7f87da109c545aaf96884b0bee73bd89b131f5eca7ffacf6781c6a14600a6f31",
+    "candidate_inventory_sha256": "85800ebf91be9e7ea481b56d5fd58f3805d5acb390f6bdf7c7033dae56ecd352",
+    "errors": []
+  },
+  "changed_files": [
+    {
+      "path": "factorykit/local_deferred_admission.py",
+      "sha256": "d97f94270d5eb47ebf87a28035b17638b62dba801590e6bd2ad9bf3ad25e2e28",
+      "baseline_sha256": null
+    },
+    {
+      "path": "factorykit/local_terminal_reconciliation.py",
+      "sha256": "3f3702fbc6397d45dc90887754d13023e385889ad10fb182a71d4d02fafebedf",
+      "baseline_sha256": "71111d046f78ad1a4d999608f420e3f5e4ae18036a5debd0b7ad4089b9a0c866"
+    },
+    {
+      "path": "factorykit/runtime.py",
+      "sha256": "03ef67da8dfe418f25764e84e804a8917c1d5bf031ddd3ba84ce1ae849325939",
+      "baseline_sha256": "4e4ff4280b3376623c332fc580bac16030cc582aff5d9620b1993acb912fea5f"
+    },
+    {
+      "path": "tests/test_handoff_batching.py",
+      "sha256": "6f6da0ebc149d91e062bda5b623ffe85c7ee34f10feb4c2e3544529bdb9bbe0d",
+      "baseline_sha256": "27ae632486d4b5bc48e511cb5d36dfc1213c5447345e306175a0c216d866836c"
+    },
+    {
+      "path": "tests/test_local_deferred_admission.py",
+      "sha256": "847280ca1f4429fb7591b52e116875fecf78134177352ab5a374020d5413502e",
+      "baseline_sha256": null
+    },
+    {
+      "path": "tests/test_local_terminal_reconciliation.py",
+      "sha256": "265bd46a45b8b6b482736e2109ec5f1050145173b45ca131c70f677095cbc99f",
+      "baseline_sha256": "1975c6b4acd1509c15eb425b26cb3a61b6c473d4714cdbc8853ed50807262739"
+    }
+  ],
+  "resolved_finding": {
+    "id": "CURRENT_WORKFLOW_REPLAY_GUARD",
+    "initial_issue": "Archived never-admitted proof alone did not reject ready derived journal restored after a later actual model admission",
+    "resolution": "Current workflow trigger scan rejects ready journal with any admitted turn; completed derived journal requires exactly one completed turn for same recipient",
+    "regression_test": "test_reset_ready_after_current_model_admission_is_rejected",
+    "status": "FIXED"
+  },
+  "checks": {
+    "approved_delta": "Manifest loader permits only769\u21921000 per-seat cap and isolated paths.factory; exact equality preserves token caps, deadlines/epochs config, permissions, model args, workdir/thread paths, room/roster and launch scope",
+    "source_freeze": "Dynamic full factorykit inventory includes new deferred module; no frozen-source exclusion introduced",
+    "original_failure": "Original PM blocked unsent journal is hash-referenced and never rewritten; old Reviewer160 terminal manifest validated using immutable original769 configuration; interrupted model attempt remains unreplayed",
+    "first_admission": "Exactly one entry; exact room/roster/sender/recipient/parts/content hashes and retained thread proof required; archived and current model admissions block reset-to-ready",
+    "duplicates": "Completed derived journal requires exactly one real completed recipient workflow turn AND exact real watchdog ACK binding/content/hash; duplicate SDK redelivery skips. Claimed/blocked attempt or ambiguous receipt rejects startup.",
+    "receipt_authority": "No new SDK message/ACK manufactured by loader; real model admission retains normal write-ahead receipt claims and authenticated send confirmation",
+    "budget_causality": "Budget reason/stop checked before durable claim. Continuation denial retains cancellation semantics and original reason; denial leaves ready batch/counters unchanged, with synchronous claim/reservation under one-writer semaphore.",
+    "stable_old_terminal_manifest": "Local-practice terminal loader accepts only acceptance_record path relocation; original expected SHA must remain identical. Replacement must be absolute inside same run readiness and referenced rejects missing/nonregular/direct-symlink/changed-hash files. Every other original reference, approval, configuration, interrupted turn, incident, journal and actual ACK binding retains original validation."
+  },
+  "tests": {
+    "test_local_deferred_admission.py": {
+      "passed": 9,
+      "exit": 0
+    },
+    "test_local_terminal_reconciliation.py": {
+      "passed": 8,
+      "exit": 0
+    },
+    "test_handoff_batching.py": {
+      "passed": 31,
+      "exit": 0
+    },
+    "total_passed": 48,
+    "method": "Installed factory Python -B unittest discovery; isolated temporary fixture state; no live SDK operations"
+  },
+  "current_preflight_observed": {
+    "trigger_event_id": "29f45c31-acb1-447e-9f27-7be641802f84",
+    "sdk_trigger_status": "processing",
+    "parts_content_hashes_match_original_journal": true,
+    "original_pm_journal_sha256": "9b85aa7476ea8c4b0ea3b67566a0a00bc6ac178532a129ded4e2879c0ab1d77a",
+    "read_only_sdk_proof_sha256": "cb83bfd0e4e5863f0ed12efd6e5a4e555fa3197cde82b68ea42953f21f671e2d",
+    "note": "Current proof still processing; loader correctly rejects processing and requires separately observed failed/pending before normal SDK pickup"
+  },
+  "launch_gate": "This source-only PASS supersedes prior byte approval for current patch, but is not launch approval or an SDK mutation receipt. Root approval, exact live reconciliation manifest, actual supported one-shot failed disposition, fresh terminal SDK proof, and external effective permission revalidation remain separate requirements. No old model replay, manufactured ACK, token/counter/clock reset or product acceptance inferred.",
+  "remaining_issues": [],
+  "mutation_scope": "Only this audit receipt written. Source/config/runtime/journals/SDK unchanged by reviewer; tests wrote temporary fixture files only.",
+  "review_kind": "SOURCE_ONLY",
+  "source_files": [
+    {
+      "path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-turn-source-20261006/factorykit/local_deferred_admission.py",
+      "sha256": "d97f94270d5eb47ebf87a28035b17638b62dba801590e6bd2ad9bf3ad25e2e28"
+    },
+    {
+      "path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-turn-source-20261006/factorykit/local_terminal_reconciliation.py",
+      "sha256": "3f3702fbc6397d45dc90887754d13023e385889ad10fb182a71d4d02fafebedf"
+    },
+    {
+      "path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-turn-source-20261006/factorykit/runtime.py",
+      "sha256": "03ef67da8dfe418f25764e84e804a8917c1d5bf031ddd3ba84ce1ae849325939"
+    },
+    {
+      "path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-turn-source-20261006/tests/test_handoff_batching.py",
+      "sha256": "6f6da0ebc149d91e062bda5b623ffe85c7ee34f10feb4c2e3544529bdb9bbe0d"
+    },
+    {
+      "path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-turn-source-20261006/tests/test_local_deferred_admission.py",
+      "sha256": "847280ca1f4429fb7591b52e116875fecf78134177352ab5a374020d5413502e"
+    },
+    {
+      "path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-turn-source-20261006/tests/test_local_terminal_reconciliation.py",
+      "sha256": "265bd46a45b8b6b482736e2109ec5f1050145173b45ca131c70f677095cbc99f"
+    },
+    {
+      "path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-20261005/amend-turn-1000.py",
+      "sha256": "78b654f31055f57d73623971e293eba3bae5eb7c2f9e7be8639eadbe6c20d617"
+    },
+    {
+      "path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-20261005/dispose-pm-pre-admission-once.py",
+      "sha256": "b8aed76c132e9303f257363182e303da36aba892592102b74e89a8fa9b3d11c4"
+    }
+  ],
+  "operator_helpers_reviewed": {
+    "scope": "Read source only; not executed",
+    "amendment": "Stopped/idle process checks; exact original consumption/caps/room/model/source; archived backup and original state hashes; no token/epoch/turn reset; exact new derived first-admission journal; original dispatch preserved; clears only causal halted reason. Source-lock host-config drift requires separately recorded fresh effective profile evidence. Exact original acceptance snapshot copied at0600 and SHA checked against unchanged old manifest; only acceptance-record reference gets relocated via new outer manifest. Updated helper passes this map through old terminal validation and includes source review hashes.",
+    "sdk_disposition": "Authenticated exact PM/roster/event/recipient/content checks; supported mark_agent_message_failed with max_retries0; exclusive private write-ahead attempt prevents automatic retry after unknown outcome; no mark_processed, model/thread start, ACK or message send. Actual failed status/content re-read required before after-proof creation.",
+    "external_permissions_limit": "Source/API configuration and adapter code are preserved; actual host profile equivalence is separately revalidated by owner/root and not certified solely by this source review."
+  },
+  "prior_source_review": {
+    "path": "turn1000-deferred-source-review-20261006.json",
+    "sha256": "6901d8789b3504047f8b97ab2033225d7ffb43a02620c93618afd7ae4d3387be",
+    "scope": "Earlier pre-relocation source bytes; preserved unchanged"
+  },
+  "exact_acceptance_relocation": {
+    "old_manifest_sha256": "90c67c80e91a51e0612c7b186831813e7e59e45dd3bc36d00e502ca2aacf9f32",
+    "expected_original_sha256": "f7de178e1441d0349df885c59ba81c963ea9ef0aa3be78d2d332d878cb097c67",
+    "retained_copy": {
+      "path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-20261005/readiness/local-turn-1000-retained-stage2-verdict.json",
+      "sha256": "f7de178e1441d0349df885c59ba81c963ea9ef0aa3be78d2d332d878cb097c67",
+      "mode": "0600"
+    },
+    "canonical_original_copy_sha256": "f7de178e1441d0349df885c59ba81c963ea9ef0aa3be78d2d332d878cb097c67",
+    "current_later_reviewer_record_sha256": "7922c4a07ab5b5880cb48e760298f8e6ca125831c0c66e9e8141fd6b5b4f78b2",
+    "actual_terminal_loader_read_only_validation": "PASS for reviewer; original manifest/workflow/retained copy/later R record hashes unchanged before and after validation",
+    "failure_classification": "Old Reviewer160 remains interrupted and blocked; later Reviewer result is not substituted into old failure evidence",
+    "negative_tests": [
+      "Replacement hash differs from original expected hash",
+      "Missing target",
+      "Direct symlink target",
+      "Outside-readiness target",
+      "Unrelated original-reference override"
+    ],
+    "method": "New outer turn-cap manifest holds relocation map; old8h manifest unchanged"
+  }
+}

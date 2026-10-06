@@ -1,0 +1,56 @@
+{
+  "status": "RUNNING_ACTUAL_FIRST_ADMISSION_COMPLETED",
+  "observed_at": "2026-10-06T09:39:21.209550+00:00",
+  "pid": 13921,
+  "all_seven_contexts_running": true,
+  "active_turn_limit": 1,
+  "active_turn_ids": [
+    "reviewer:171:fdb8e022-4d32-431f-bf13-f3e72b1d604a"
+  ],
+  "model": "gpt-6.1-sol",
+  "mode": "local unjudged development rehearsal",
+  "configuration_sha256": "a0587777fc739bd3a2da733453b54c04cea1413387ab777ae90453820ff95b2c",
+  "factory_source_sha256": "595edf4778edc76e2f20bf4456ef2867b7a5bb83e1fc0f1dc2f6eccf1a25262a",
+  "sealed_snapshot_manifest_sha256": "04e977d61d03f57cecb51578fb48b76284a1972e23674649287c01b4b405c03e",
+  "turn_cap_before": 769,
+  "turn_cap_after": 1000,
+  "absolute_token_cap": 656587855,
+  "historical_baseline_tokens": 356587855,
+  "local_total_allowance_tokens": 300000000,
+  "recorded_cumulative_tokens": 523762802,
+  "local_consumed_tokens": 167174947,
+  "remaining_tokens": 132825053,
+  "recorded_turn_counters": {
+    "architect": 109,
+    "backend": 151,
+    "designer": 30,
+    "frontend": 19,
+    "pm": 770,
+    "qa": 117,
+    "reviewer": 171
+  },
+  "ledger_stop_reason": null,
+  "overall_deadline_utc": "2026-10-06T15:01:44.700437+00:00",
+  "room_deadline_utc": "2026-10-06T15:07:44.288395+00:00",
+  "deadlines_and_epochs_preserved": true,
+  "original_dispatch_preserved": true,
+  "original_blocked_pm_journal_preserved": true,
+  "old_terminal_manifest_preserved": true,
+  "reviewer160_interrupted_turn_preserved": true,
+  "pm770": {
+    "actual_ack_event_id": "fdb8e022-4d32-431f-bf13-f3e72b1d604a",
+    "deferred_journal_status": "completed",
+    "ended_at_utc": "2026-10-06T09:37:39.451489+00:00",
+    "original_codex_thread_preserved": true,
+    "receipt_status": "confirmed",
+    "started_at_utc": "2026-10-06T09:37:22.551618+00:00",
+    "status": "completed",
+    "trigger_event_id": "29f45c31-acb1-447e-9f27-7be641802f84"
+  },
+  "limitations": [
+    "First held startup expired with zero factory admissions and is retained as a failed startup, not successful resumed model work.",
+    "Full judged-readiness freeze remained blocked; supported normal local rehearsal separately sealed its exact source/config and passed normal admission.",
+    "Observed protocol progress and running state do not establish Stage4 implementation or product acceptance."
+  ],
+  "source_receipt_sha256": "a0ebd286285e40c03ddf56b28586603288f9236fcc146b2b6093b54cda20e7a8"
+}

@@ -383,33 +383,9 @@
     },
     {
       "copied_unchanged": true,
-      "destination": "factory/factorykit/local_terminal_reconciliation.py",
-      "source_path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-continuation-source-20261006/factorykit/local_terminal_reconciliation.py",
-      "source_sha256": "71111d046f78ad1a4d999608f420e3f5e4ae18036a5debd0b7ad4089b9a0c866"
-    },
-    {
-      "copied_unchanged": true,
       "destination": "factory/factorykit/handoff_batching.py",
       "source_path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-continuation-source-20261006/factorykit/handoff_batching.py",
       "source_sha256": "9af86052cde2c75613d30364ab7a599228628ad95b86c9db83b1443bae7b88bf"
-    },
-    {
-      "copied_unchanged": true,
-      "destination": "factory/factorykit/runtime.py",
-      "source_path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-continuation-source-20261006/factorykit/runtime.py",
-      "source_sha256": "4e4ff4280b3376623c332fc580bac16030cc582aff5d9620b1993acb912fea5f"
-    },
-    {
-      "copied_unchanged": true,
-      "destination": "factory/tests/test_handoff_batching.py",
-      "source_path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-continuation-source-20261006/tests/test_handoff_batching.py",
-      "source_sha256": "27ae632486d4b5bc48e511cb5d36dfc1213c5447345e306175a0c216d866836c"
-    },
-    {
-      "copied_unchanged": true,
-      "destination": "factory/tests/test_local_terminal_reconciliation.py",
-      "source_path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-continuation-source-20261006/tests/test_local_terminal_reconciliation.py",
-      "source_sha256": "1975c6b4acd1509c15eb425b26cb3a61b6c473d4714cdbc8853ed50807262739"
     },
     {
       "copied_unchanged": true,
@@ -897,6 +873,111 @@
       "source_sha256": "9ed8c743811cbc010ab2a6370b8cb12bee199528062b1542288a51d04efc650d",
       "copied_unchanged": true,
       "snapshot": "Stopped factory after independent Stage3 acceptance and PM turn-limit stop"
+    },
+    {
+      "destination": "factory/factorykit/local_deferred_admission.py",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-turn-source-20261006/factorykit/local_deferred_admission.py",
+      "source_sha256": "d97f94270d5eb47ebf87a28035b17638b62dba801590e6bd2ad9bf3ad25e2e28",
+      "copied_unchanged": true
+    },
+    {
+      "destination": "factory/factorykit/local_terminal_reconciliation.py",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-turn-source-20261006/factorykit/local_terminal_reconciliation.py",
+      "source_sha256": "3f3702fbc6397d45dc90887754d13023e385889ad10fb182a71d4d02fafebedf",
+      "copied_unchanged": true
+    },
+    {
+      "destination": "factory/factorykit/runtime.py",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-turn-source-20261006/factorykit/runtime.py",
+      "source_sha256": "03ef67da8dfe418f25764e84e804a8917c1d5bf031ddd3ba84ce1ae849325939",
+      "copied_unchanged": true
+    },
+    {
+      "destination": "factory/tests/test_handoff_batching.py",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-turn-source-20261006/tests/test_handoff_batching.py",
+      "source_sha256": "6f6da0ebc149d91e062bda5b623ffe85c7ee34f10feb4c2e3544529bdb9bbe0d",
+      "copied_unchanged": true
+    },
+    {
+      "destination": "factory/tests/test_local_deferred_admission.py",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-turn-source-20261006/tests/test_local_deferred_admission.py",
+      "source_sha256": "847280ca1f4429fb7591b52e116875fecf78134177352ab5a374020d5413502e",
+      "copied_unchanged": true
+    },
+    {
+      "destination": "factory/tests/test_local_terminal_reconciliation.py",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-turn-source-20261006/tests/test_local_terminal_reconciliation.py",
+      "source_sha256": "265bd46a45b8b6b482736e2109ec5f1050145173b45ca131c70f677095cbc99f",
+      "copied_unchanged": true
+    },
+    {
+      "destination": "evidence/factory-runtime/administrative-scripts/amend-turn-1000.py",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-20261005/amend-turn-1000.py",
+      "source_sha256": "78b654f31055f57d73623971e293eba3bae5eb7c2f9e7be8639eadbe6c20d617",
+      "copied_unchanged": true
+    },
+    {
+      "destination": "evidence/factory-runtime/administrative-scripts/dispose-pm-pre-admission-once.py",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-20261005/dispose-pm-pre-admission-once.py",
+      "source_sha256": "b8aed76c132e9303f257363182e303da36aba892592102b74e89a8fa9b3d11c4",
+      "copied_unchanged": true
+    },
+    {
+      "destination": "evidence/factory-runtime/turn-1000/local-turn-1000-source-review.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-20261005/readiness/local-turn-1000-source-review.json",
+      "source_sha256": "efa5f8fe29283fb3fae3a87129aa20ccb44cbe449346d020a9572099cad48162",
+      "copied_unchanged": true
+    },
+    {
+      "destination": "evidence/factory-runtime/turn-1000/local-turn-1000-unit-test-result.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-20261005/readiness/local-turn-1000-unit-test-result.json",
+      "source_sha256": "90305416b61feaa3c9fb0fb7e6d4725b8f061b45a92415655f2665b5caabbbd9",
+      "copied_unchanged": true
+    },
+    {
+      "destination": "evidence/factory-runtime/turn-1000/local-turn-1000-unit-tests.log",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-20261005/readiness/local-turn-1000-unit-tests.log",
+      "source_sha256": "c789d9eefa3c9687c87808f59638116e97197a31233e59e63b9c96571713e8ba",
+      "copied_unchanged": true
+    },
+    {
+      "destination": "evidence/factory-runtime/turn-1000/applied-summary.json",
+      "sha256": "4acbd9d18a5bc7a635187a0f16e9cff7c267bab99f958f8e04f5c7be0dd06045",
+      "kind": "sanitized_selected_summary",
+      "input_source_sha256": "e27171786e6d37ab05fb7186c09b141485359088a3b1305cc23ec9711667b7cc"
+    },
+    {
+      "destination": "evidence/factory-runtime/turn-1000/published-source-inventory.json",
+      "sha256": "561057013a278d774072d0b27fbbc50c07c73d47bc03cc9f970cdea27253f33d",
+      "kind": "publisher_source_inventory_or_privacy_receipt"
+    },
+    {
+      "destination": "evidence/privacy/turn1000-publication-source-privacy-20261006.json",
+      "sha256": "9abb1eaabe1a9f3ffac2ea15a0d87edefcb20c5bcdf18b75a74c52732c7f49e7",
+      "kind": "publisher_source_inventory_or_privacy_receipt"
+    },
+    {
+      "destination": "evidence/factory-runtime/turn-1000/held-expiry-summary.json",
+      "sha256": "0aa228860aecb65b4f71c316492dd4b54a092283145435e3325a925399b15e39",
+      "kind": "sanitized_selected_summary",
+      "input_source_sha256": "21c532c35928bc447f68d9403a65070a001c1e6bf691190de6d4b1d6c8e0eb98"
+    },
+    {
+      "destination": "evidence/factory-runtime/turn-1000/running-summary.json",
+      "sha256": "2ac72091d1878e6ece97e347c48842de1eb93fd2c7a1973f3dc3d45abbc7c8d4",
+      "kind": "sanitized_selected_summary",
+      "input_source_sha256": "a0ebd286285e40c03ddf56b28586603288f9236fcc146b2b6093b54cda20e7a8"
+    },
+    {
+      "destination": "evidence/privacy/turn1000-publication-applied-held-privacy-20261006.json",
+      "sha256": "1b488e5ebfa834847a33a02f3e7c42cf296a7b5057114d6edd3c4f702546fee9",
+      "kind": "publisher_privacy_receipt"
+    },
+    {
+      "destination": "evidence/factory-runtime/turn-1000/live-proof.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-20261005/readiness/local-turn-1000-live-proof.json",
+      "source_sha256": "a0ebd286285e40c03ddf56b28586603288f9236fcc146b2b6093b54cda20e7a8",
+      "copied_unchanged": true
     }
   ],
   "render_candidate": "b1f7ef64db7f0dce0b3f3a913a3af280c96d70b9",
@@ -970,6 +1051,73 @@
       },
       "superseded_by_sha256": "9ed8c743811cbc010ab2a6370b8cb12bee199528062b1542288a51d04efc650d",
       "current_destination_matches_this_historical_copy": false
+    },
+    {
+      "destination": "factory/factorykit/local_terminal_reconciliation.py",
+      "record_type": "historical_superseded_source_copy",
+      "original_copy_record": {
+        "copied_unchanged": true,
+        "destination": "factory/factorykit/local_terminal_reconciliation.py",
+        "source_path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-continuation-source-20261006/factorykit/local_terminal_reconciliation.py",
+        "source_sha256": "71111d046f78ad1a4d999608f420e3f5e4ae18036a5debd0b7ad4089b9a0c866"
+      },
+      "superseded_by_sha256": "3f3702fbc6397d45dc90887754d13023e385889ad10fb182a71d4d02fafebedf",
+      "superseded_at_utc": "2026-10-06T09:32:38.412833+00:00",
+      "current_destination_matches_this_historical_copy": false
+    },
+    {
+      "destination": "factory/factorykit/runtime.py",
+      "record_type": "historical_superseded_source_copy",
+      "original_copy_record": {
+        "copied_unchanged": true,
+        "destination": "factory/factorykit/runtime.py",
+        "source_path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-continuation-source-20261006/factorykit/runtime.py",
+        "source_sha256": "4e4ff4280b3376623c332fc580bac16030cc582aff5d9620b1993acb912fea5f"
+      },
+      "superseded_by_sha256": "03ef67da8dfe418f25764e84e804a8917c1d5bf031ddd3ba84ce1ae849325939",
+      "superseded_at_utc": "2026-10-06T09:32:38.412833+00:00",
+      "current_destination_matches_this_historical_copy": false
+    },
+    {
+      "destination": "factory/tests/test_handoff_batching.py",
+      "record_type": "historical_superseded_source_copy",
+      "original_copy_record": {
+        "copied_unchanged": true,
+        "destination": "factory/tests/test_handoff_batching.py",
+        "source_path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-continuation-source-20261006/tests/test_handoff_batching.py",
+        "source_sha256": "27ae632486d4b5bc48e511cb5d36dfc1213c5447345e306175a0c216d866836c"
+      },
+      "superseded_by_sha256": "6f6da0ebc149d91e062bda5b623ffe85c7ee34f10feb4c2e3544529bdb9bbe0d",
+      "superseded_at_utc": "2026-10-06T09:32:38.412833+00:00",
+      "current_destination_matches_this_historical_copy": false
+    },
+    {
+      "destination": "factory/tests/test_local_terminal_reconciliation.py",
+      "record_type": "historical_superseded_source_copy",
+      "original_copy_record": {
+        "copied_unchanged": true,
+        "destination": "factory/tests/test_local_terminal_reconciliation.py",
+        "source_path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-continuation-source-20261006/tests/test_local_terminal_reconciliation.py",
+        "source_sha256": "1975c6b4acd1509c15eb425b26cb3a61b6c473d4714cdbc8853ed50807262739"
+      },
+      "superseded_by_sha256": "265bd46a45b8b6b482736e2109ec5f1050145173b45ca131c70f677095cbc99f",
+      "superseded_at_utc": "2026-10-06T09:32:38.412833+00:00",
+      "current_destination_matches_this_historical_copy": false
     }
-  ]
+  ],
+  "turn_1000_preparation": {
+    "status": "RUNNING_ACTUAL_FIRST_ADMISSION_COMPLETED",
+    "source_copies": "evidence/factory-runtime/turn-1000/published-source-copies.json",
+    "tests": "evidence/factory-runtime/turn-1000/local-turn-1000-unit-test-result.json",
+    "stage_3_publication_commit": "1c1969c91238d9a2d83f92ed5b34a956205ba94d",
+    "claim_limit": "Actual same-run model callback/confirmed ACK and running observation; no Stage4 acceptance or fresh judged/pristine readiness claim.",
+    "applied_summary": "evidence/factory-runtime/turn-1000/applied-summary.json",
+    "source_inventory": "evidence/factory-runtime/turn-1000/published-source-inventory.json",
+    "privacy_receipt": "evidence/privacy/turn1000-publication-source-privacy-20261006.json",
+    "retained_startup_failure": "evidence/factory-runtime/turn-1000/held-expiry-summary.json",
+    "running_summary": "evidence/factory-runtime/turn-1000/running-summary.json",
+    "observed_at": "2026-10-06T09:39:21.209550+00:00",
+    "live_source_receipt_sha256": "a0ebd286285e40c03ddf56b28586603288f9236fcc146b2b6093b54cda20e7a8",
+    "actual_live_proof": "evidence/factory-runtime/turn-1000/live-proof.json"
+  }
 }

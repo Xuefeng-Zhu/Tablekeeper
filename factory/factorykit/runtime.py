@@ -1385,8 +1385,11 @@ def create_handoff_journals(config, room, seats, ledger, watchdog, *, recovery=N
                 raise GateError("Batched room continuation/recovery requires journal-aware reconciliation; unsupported.")
             return journals
         workflow_state = json.loads(watchdog.path.read_text())
+        from .local_deferred_admission import load_deferred_admission
+        reconciliation_config, deferred_paths, acceptance_relocations = load_deferred_admission(config, room, workflow_state)
         from .local_terminal_reconciliation import load_terminal_reconciliations
-        terminal = load_terminal_reconciliations(config, room, workflow_state)
+        terminal = load_terminal_reconciliations(reconciliation_config, room, workflow_state,
+                                                acceptance_relocations=acceptance_relocations)
         previous_turns = workflow_state["turns"]
         expected = {state_dir(config) / f"handoffs-{room}-{seat['id']}.json" for seat in seats}
         expected |= {p.with_suffix(p.suffix + ".lock") for p in expected}
@@ -1396,12 +1399,24 @@ def create_handoff_journals(config, room, seats, ledger, watchdog, *, recovery=N
             path = state_dir(config) / f"handoffs-{room}-{seat['id']}.json"
             if previous_turns and not path.exists():
                 raise GateError("Existing run has no batching journal; automatic migration is blocked.")
+            path = deferred_paths.get(seat['id'], path)
             journals[seat['id']] = HandoffJournal(path, room, seat['agent_id'], [s['agent_id'] for s in seats], workflow=workflow_state,
                                                 terminal_reconciliations=terminal.get(seat['id']))
         return journals
     except Exception:
         ledger.halt("handoff journal startup failed; preserve existing runtime state")
         raise
+
+
+def claim_budgeted_handoff(ledger, seat, journal, event_id, *, cancel_on_denial=False):
+    """Deny exhausted capacity before any durable model claim is written."""
+    reason = ledger.reason(seat)
+    if ledger.stop.is_set() or reason:
+        ledger.halt(reason or "Factory admission is already stopped")
+        if cancel_on_denial:
+            raise asyncio.CancelledError("Factory allowance is closed before handoff model admission")
+        raise GateError("Factory allowance is closed before handoff model admission")
+    return journal.claim(event_id)
 
 
 async def serve(config: dict, mode: str, token: str, recovery_id=None, continuation=None, *, hold_admission=False):
@@ -1636,9 +1651,11 @@ async def _serve(config: dict, mode: str, token: str, recovery_id=None, continua
                 try:
                     if journal is not None:
                         try:
-                            batch_claim = journal.claim(inp.msg.id)
+                            batch_claim = claim_budgeted_handoff(ledger, self.seat['id'], journal, inp.msg.id,
+                                                                cancel_on_denial=admission is not None)
                         except Exception:
-                            ledger.halt("handoff admission failed; preserve journal")
+                            if not ledger.stop.is_set():
+                                ledger.halt("handoff admission failed; preserve journal")
                             raise
                         if batch_claim is False:
                             return

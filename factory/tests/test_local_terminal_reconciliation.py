@@ -49,6 +49,26 @@ class TerminalManifestTests(unittest.TestCase):
         self.config['budgets']['max_total_tokens']+=1;self.record['configuration_sha256']=digest(canonical(self.config))
         with self.assertRaises(FactoryError):self.load()
 
+    def test_exact_acceptance_bytes_may_relocate_without_old_manifest_edit(self):
+        self.load();entry=self.record['entries'][0];oldref=entry['acceptance_record']
+        original=Path(oldref['path']).read_bytes();replacement=self.root/'readiness/retained-original-verdict.json';replacement.write_bytes(original)
+        Path(oldref['path']).write_bytes(canonical({'changed_after_original_receipt':True}))
+        override={oldref['path']:{'path':str(replacement),'sha256':oldref['sha256']}}
+        before=canonical(self.record)
+        self.assertEqual(load_terminal_reconciliations(self.config,self.room,self.workflow,acceptance_relocations=override),{'reviewer':{'pm:release':digest(canonical(self.batch))}})
+        self.assertEqual(canonical(self.record),before)
+        replacement.write_bytes(canonical({'different_verdict':True}));override[oldref['path']]['sha256']=digest(replacement)
+        with self.assertRaises(FactoryError):load_terminal_reconciliations(self.config,self.room,self.workflow,acceptance_relocations=override)
+
+    def test_relocation_missing_symlink_outside_or_unrelated_authority_rejected(self):
+        self.load();oldref=self.record['entries'][0]['acceptance_record'];source=Path(oldref['path'])
+        missing=self.root/'readiness/missing.json'
+        replacement=self.root/'readiness/linked.json';replacement.symlink_to(source)
+        outside=self.root/'outside.json';outside.write_bytes(source.read_bytes())
+        for p in (missing,replacement,outside):
+            with self.subTest(path=p.name),self.assertRaises(FactoryError):load_terminal_reconciliations(self.config,self.room,self.workflow,acceptance_relocations={oldref['path']:{'path':str(p),'sha256':oldref['sha256']}})
+        with self.assertRaises(FactoryError):load_terminal_reconciliations(self.config,self.room,self.workflow,acceptance_relocations={'unrelated':oldref})
+
     def test_changed_original_turn_or_evidence_is_rejected(self):
         self.workflow['turns']['reviewer:1:old-event']['status']='completed'
         with self.assertRaises(FactoryError):self.load()

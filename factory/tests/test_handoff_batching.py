@@ -428,13 +428,14 @@ class RuntimeAdmissionTests(unittest.IsolatedAsyncioTestCase):
         path=self.root/f'runtime/handoffs-{ROOM}-worker.json'
         self.assertEqual(next(iter(json.loads(path.read_text())['batches'].values()))['status'],'completed')
 
-    async def test_budget_denial_after_claim_blocks_and_halts_without_model(self):
+    async def test_budget_denial_precedes_claim_and_preserves_ready_without_model(self):
         self.deny=True
         with self.assertRaises(GateError):await self.run_fixture()
         self.assertEqual(self.inputs,[]);self.assertEqual(self.ledger.data['turns'],{})
-        self.assertIn('did not complete',self.ledger.data['stopped_reason'])
+        self.assertEqual(self.ledger.data['stopped_reason'],'Factory admission is already stopped')
         path=self.root/f'runtime/handoffs-{ROOM}-worker.json'
-        with self.assertRaises(BatchingError):HandoffJournal(path,ROOM,WORKER,[PM,WORKER])
+        HandoffJournal(path,ROOM,WORKER,[PM,WORKER])
+        self.assertEqual(next(iter(json.loads(path.read_text())['batches'].values()))['status'],'ready')
 
     async def test_provider_failure_and_cancellation_preserve_blocked_claim(self):
         for error in (RuntimeError('synthetic provider failure'),asyncio.CancelledError()):
