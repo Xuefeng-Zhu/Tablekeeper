@@ -31,7 +31,7 @@ export function searchScreen(main) {
     selection={detail:bundle.detail,scope:bundle.scope,slot,ids:[...ids]};const own=selection;
     booking(bookHost,own,()=>!disposed && generation===gen && selection===own,()=>refresh(gen,own));renderGrid();
   }
-  function renderGrid(){
+  function renderGrid(preserveCells=false){
     if(!bundle)return;
     const {detail,scope,availability}=bundle;
     const title=el('div',{class:'results-head'},el('p',{class:'eyebrow'},'Choose your seating'),el('h2',{},detail.name),el('p',{},`${scope.date} · ${scope.party_size} guests · ${detail.timezone}`));
@@ -42,15 +42,39 @@ export function searchScreen(main) {
       for(const option of slot.available_options??[])if(option.table_ids.length===2)choices.push({ids:option.table_ids,capacity:option.capacity,available:true});
       return el('section',{class:'time-group','aria-label':time},el('h3',{},time),el('div',{class:'seats'},choices.map(choice=>{
         const isSelected=selected(choice.ids,slot),names=labels(detail,choice.ids);
-        return el('button',{type:'button',class:'seat',...test(`slot-${choice.ids.join('+')}-${time}`),'data-available':String(choice.available),'aria-pressed':String(Boolean(isSelected)),disabled:!choice.available,'aria-label':`${names}, ${time}, ${choice.available?'available':'unavailable'}`,onclick:()=>choice.available&&choose(choice.ids,slot)},el('strong',{},`${choice.ids.length===2?'Tables':'Table'} ${names}`),el('small',{},`${choice.ids.length===2?'Together · ':''}Up to ${choice.capacity} guests`),el('span',{class:'state'},`${isSelected?'Selected · ':''}${choice.available?'Available':'Unavailable'}`));
+        return el('button',{type:'button',class:'seat',...test(`slot-${choice.ids.join('+')}-${time}`),'data-available':String(choice.available),'aria-pressed':String(Boolean(isSelected)),disabled:!choice.available,'aria-label':`${names}, ${time}, ${choice.available?'available':'unavailable'}`,onclick:event=>event.currentTarget.dataset.available==='true'&&choose(choice.ids,slot)},el('strong',{},`${choice.ids.length===2?'Tables':'Table'} ${names}`),el('small',{},`${choice.ids.length===2?'Together · ':''}Up to ${choice.capacity} guests`),el('span',{class:'state'},`${isSelected?'Selected · ':''}${choice.available?'Available':'Unavailable'}`));
       })));
     });
     const full=!availability.slots.some(s=>s.available_table_ids.length || s.available_options?.length);
-    results.replaceChildren(title,...(full?[el('p',{class:'helper'},'No tables fit your party at these times. Try a different date or party size.')]:[]),el('div',test('availability-grid'),groups));
+    const currentGrid=results.querySelector('[data-testid="availability-grid"]');
+    // A same-scope occupancy refresh must keep unaffected focused seats connected.
+    if(preserveCells && currentGrid && currentGrid.children.length===groups.length &&
+       groups.every((group,index)=>group.getAttribute('aria-label')===currentGrid.children[index].getAttribute('aria-label'))){
+      groups.forEach((group,index)=>{
+        const seats=currentGrid.children[index].querySelector('.seats');
+        const incoming=[...group.querySelector('.seats').children];
+        const old=new Map([...seats.children].map(cell=>[cell.dataset.testid,cell]));
+        const wanted=new Set(incoming.map(cell=>cell.dataset.testid));
+        for(const cell of [...seats.children])if(!wanted.has(cell.dataset.testid))cell.remove();
+        incoming.forEach((fresh,position)=>{
+          const cell=old.get(fresh.dataset.testid);
+          if(cell){
+            for(const attribute of [...cell.attributes])if(!fresh.hasAttribute(attribute.name))cell.removeAttribute(attribute.name);
+            for(const attribute of fresh.attributes)cell.setAttribute(attribute.name,attribute.value);
+            cell.replaceChildren(...fresh.childNodes);
+          } else seats.insertBefore(fresh,seats.children[position]??null);
+        });
+      });
+      const fullMessage=results.querySelector('[data-testid="availability-full"]');
+      if(full && !fullMessage)currentGrid.before(el('p',{class:'helper',...test('availability-full')},'No tables fit your party at these times. Try a different date or party size.'));
+      if(!full)fullMessage?.remove();
+      return;
+    }
+    results.replaceChildren(title,...(full?[el('p',{class:'helper',...test('availability-full')},'No tables fit your party at these times. Try a different date or party size.')]:[]),el('div',test('availability-grid'),groups));
   }
   async function refresh(gen,own){
     const notice=el('p',{role:'status',class:'helper'},'Updating availability…');results.prepend(notice);
-    try {const availability=await request(`/availability?${new URLSearchParams(own.scope)}`);if(!disposed && gen===generation && selection===own){bundle={...bundle,availability};renderGrid();}}
+    try {const availability=await request(`/availability?${new URLSearchParams(own.scope)}`);if(!disposed && gen===generation && selection===own){bundle={...bundle,availability};renderGrid(true);}}
     catch {if(!disposed && gen===generation && selection===own)notice.textContent="Availability couldn't be refreshed. Your booking details are still saved. Run your search again for current choices.";}
     finally {if(!disposed && gen===generation && selection===own && notice.isConnected && notice.textContent==='Updating availability…')notice.remove();}
   }
