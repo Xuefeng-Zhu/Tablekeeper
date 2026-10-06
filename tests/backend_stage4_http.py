@@ -100,7 +100,7 @@ class Stage4Tests(Stage4InheritedTests):
         self.create('A','21:00','conflict');self.publish(badpolicy)
         before=self.snapshot();self.error(self.amend(s,'21:00'),422,'party_exceeds_capacity');self.assertEqual(self.snapshot(),before)
         self.publish(self.policy('2030-01-14'),'valid-policy')
-        with concurrent.futures.ThreadPoolExecutor(max_workers=2) as pool:results=list(pool.map(lambda t:self.amend(s,t,key=t),['18:00','20:00']))
+        with concurrent.futures.ThreadPoolExecutor(max_workers=2) as pool:results=list(pool.map(lambda t:self.amend(s,t,key=t),['18:00','19:30']))
         self.assertEqual(sorted(x[0] for x in results),[201,409]);self.assertEqual(next(x for x in results if x[0]==409)[1]['error']['code'],'stale_revision')
     def test_actual_stage3_dates_after_live_anchor_exception(self):
         f=self.fixture();self.request('POST','/_test/reset',f,destination=4)
