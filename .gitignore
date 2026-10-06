@@ -3,3 +3,9 @@
 node_modules/
 __pycache__/
 *.pyc
+
+.env*
+.venv/
+factory/config/factory.yaml
+.factory-private/
+factory/tooling/codex/node_modules/

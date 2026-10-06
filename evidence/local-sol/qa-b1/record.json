@@ -1,0 +1,639 @@
+{
+  "work_item": "QA-S2-RUN",
+  "state": "REVIEW",
+  "candidate": "b1f7ef64db7f0dce0b3f3a913a3af280c96d70b9",
+  "starting_revision": "b1f7ef64db7f0dce0b3f3a913a3af280c96d70b9",
+  "responsible": "@frankzhu94/factory-qa",
+  "created_utc": "2026-10-06T05:48:49.044599+00:00",
+  "sources": "provenance.json verified all clauses/digests",
+  "commands": [
+    {
+      "attempt": "api",
+      "commands": [
+        "docker create --name qa-s2-api --network qa-s2-net-20261006t0540 --entrypoint python df-harness-runner /api.py",
+        "docker cp /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s2-run-20261006T0540Z/api.py qa-s2-api:/api.py",
+        "docker cp /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s2-run-20261006T0540Z/qa_http_helpers.py qa-s2-api:/qa_http_helpers.py",
+        "docker start -a qa-s2-api > /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s2-run-20261006T0540Z/api.txt 2>&1"
+      ],
+      "observed_exit": 0
+    },
+    {
+      "attempt": "inherited",
+      "commands": [
+        "docker create --name qa-s2-inherited --network qa-s2-net-20261006t0540 --entrypoint python df-harness-runner /inherited.py",
+        "docker cp /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s2-run-20261006T0540Z/inherited.py qa-s2-inherited:/inherited.py",
+        "docker start -a qa-s2-inherited > /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s2-run-20261006T0540Z/inherited.txt 2>&1"
+      ],
+      "observed_exit": 0
+    },
+    {
+      "attempt": "supplement",
+      "commands": [
+        "docker create --name qa-s2-supplement --network qa-s2-net-20261006t0540 --entrypoint python df-harness-runner /supplement.py",
+        "docker cp /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s2-run-20261006T0540Z/supplement.py qa-s2-supplement:/supplement.py",
+        "docker cp /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s2-run-20261006T0540Z/qa_http_helpers.py qa-s2-supplement:/qa_http_helpers.py",
+        "docker start -a qa-s2-supplement > /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s2-run-20261006T0540Z/supplement.txt 2>&1"
+      ],
+      "observed_exit": 0
+    },
+    {
+      "attempt": "pair_dst",
+      "commands": [
+        "docker create --name qa-s2-pair-dst --network qa-s2-net-20261006t0540 --entrypoint python df-harness-runner /pair_dst.py",
+        "docker cp /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s2-run-20261006T0540Z/pair_dst.py qa-s2-pair-dst:/pair_dst.py",
+        "docker cp /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s2-run-20261006T0540Z/qa_http_helpers.py qa-s2-pair-dst:/qa_http_helpers.py",
+        "docker start -a qa-s2-pair-dst > /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s2-run-20261006T0540Z/pair_dst.txt 2>&1"
+      ],
+      "observed_exit": 1
+    },
+    {
+      "attempt": "pair_dst2",
+      "commands": [
+        "docker create --name qa-s2-pair-dst2 --network qa-s2-net-20261006t0540 --entrypoint python df-harness-runner /pair_dst.py",
+        "docker cp /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s2-run-20261006T0540Z/pair_dst2.py qa-s2-pair-dst2:/pair_dst.py",
+        "docker cp /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s2-run-20261006T0540Z/qa_http_helpers.py qa-s2-pair-dst2:/qa_http_helpers.py",
+        "docker start -a qa-s2-pair-dst2 > /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s2-run-20261006T0540Z/pair_dst2.txt 2>&1"
+      ],
+      "observed_exit": 0
+    },
+    {
+      "attempt": "browser",
+      "commands": [
+        "docker create --name qa-s2-browser --network qa-s2-net-20261006t0540 --entrypoint python df-harness-runner /browser.py",
+        "docker cp /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s2-run-20261006T0540Z/browser.py qa-s2-browser:/browser.py",
+        "docker start -a qa-s2-browser > /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s2-run-20261006T0540Z/browser.txt 2>&1"
+      ],
+      "observed_exit": 1
+    },
+    {
+      "attempt": "browser2",
+      "commands": [
+        "docker create --name qa-s2-browser2 --network qa-s2-net-20261006t0540 --entrypoint python df-harness-runner /browser.py",
+        "docker cp /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s2-run-20261006T0540Z/browser2.py qa-s2-browser2:/browser.py",
+        "docker start -a qa-s2-browser2 > /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s2-run-20261006T0540Z/browser2.txt 2>&1"
+      ],
+      "observed_exit": 0
+    },
+    {
+      "attempt": "browser3",
+      "commands": [
+        "docker create --name qa-s2-browser3 --network qa-s2-net-20261006t0540 --entrypoint python df-harness-runner /browser.py",
+        "docker cp /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s2-run-20261006T0540Z/browser3.py qa-s2-browser3:/browser.py",
+        "docker start -a qa-s2-browser3 > /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s2-run-20261006T0540Z/browser3.txt 2>&1"
+      ],
+      "observed_exit": 0
+    },
+    {
+      "attempt": "browser4",
+      "commands": [
+        "docker create --name qa-s2-browser4 --network qa-s2-net-20261006t0540 --entrypoint python df-harness-runner /browser.py",
+        "docker cp /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s2-run-20261006T0540Z/browser4.py qa-s2-browser4:/browser.py",
+        "docker start -a qa-s2-browser4 > /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s2-run-20261006T0540Z/browser4.txt 2>&1"
+      ],
+      "observed_exit": 0
+    },
+    {
+      "attempt": "official",
+      "commands": [
+        "/Users/frank/mygit/Tablekeeper/runs/harness-venv/bin/python -m harness run --track tablekeeper --repo /private/tmp/tablekeeper-qa-s2-b1f7ef-20261006T0540Z --stage 2 --mode isolated --out /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s2-run-20261006T0540Z/official > /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s2-run-20261006T0540Z/official.txt 2>&1"
+      ],
+      "cwd": "/Users/frank/mygit/Tablekeeper/challenge",
+      "observed_exit": 0
+    }
+  ],
+  "api_groups": 23,
+  "api_requests": 1264,
+  "api_fiveXX": 0,
+  "api_max_seconds": 0.13556677498854697,
+  "api_results": {
+    "api": [
+      {
+        "case": "T01-T02-options",
+        "outcome": "PASS",
+        "detail": "literal all single/pair capacity thresholds,declared order,both occupied members and cancelled release",
+        "utc_start": "2026-10-06T05:40:04.088116+00:00",
+        "utc_end": "2026-10-06T05:40:04.218455+00:00",
+        "candidate": "b1f7ef64db7f0dce0b3f3a913a3af280c96d70b9"
+      },
+      {
+        "case": "T03-T05-selection",
+        "outcome": "PASS",
+        "detail": "selection shape,type,duplicate,size,nontransitive pair,capacity;selection replacement and current response shapes",
+        "utc_start": "2026-10-06T05:40:04.218486+00:00",
+        "utc_end": "2026-10-06T05:40:04.336039+00:00",
+        "candidate": "b1f7ef64db7f0dce0b3f3a913a3af280c96d70b9"
+      },
+      {
+        "case": "T04-second-member",
+        "outcome": "PASS",
+        "detail": "canonical[B,A] blocked by secondA only,adjacency control,cancelled member frees,failed-key reuse",
+        "utc_start": "2026-10-06T05:40:04.336060+00:00",
+        "utc_end": "2026-10-06T05:40:04.437797+00:00",
+        "candidate": "b1f7ef64db7f0dce0b3f3a913a3af280c96d70b9"
+      },
+      {
+        "case": "T06-finalset25",
+        "outcome": "PASS",
+        "detail": {
+          "layouts": 25,
+          "independent_oracle": "literal member intersection",
+          "counts": {
+            "201": 10,
+            "409": 15
+          },
+          "rollback_keys": "all15failed preserved snapshot and corrected key succeeded"
+        },
+        "utc_start": "2026-10-06T05:40:04.437819+00:00",
+        "utc_end": "2026-10-06T05:40:06.933406+00:00",
+        "candidate": "b1f7ef64db7f0dce0b3f3a913a3af280c96d70b9"
+      },
+      {
+        "case": "T08-T09-identity50",
+        "outcome": "PASS",
+        "detail": [
+          {
+            "path": "/reservations",
+            "counts": {
+              "200": 49,
+              "201": 1
+            },
+            "max_latency_seconds": 0.014016603992786258,
+            "in_flight_clients": 50
+          },
+          {
+            "path": "/reservations",
+            "counts": {
+              "409": 49,
+              "201": 1
+            },
+            "max_latency_seconds": 0.01491645400528796,
+            "in_flight_clients": 50
+          },
+          {
+            "path": "/reservation-moves",
+            "counts": {
+              "200": 49,
+              "201": 1
+            },
+            "max_latency_seconds": 0.010179670003708452,
+            "in_flight_clients": 50
+          }
+        ],
+        "utc_start": "2026-10-06T05:40:06.933438+00:00",
+        "utc_end": "2026-10-06T05:40:07.412752+00:00",
+        "candidate": "b1f7ef64db7f0dce0b3f3a913a3af280c96d70b9"
+      },
+      {
+        "case": "T22-T25-actual-upgrade-API",
+        "outcome": "PASS",
+        "detail": "actual accepted Stage1 export,cancelled current shape,exact legacy create/batch+precision receipts,multiple tokens/login,Stage2reexport/import,invalidrollback",
+        "utc_start": "2026-10-06T05:40:07.412787+00:00",
+        "utc_end": "2026-10-06T05:40:07.714045+00:00",
+        "candidate": "b1f7ef64db7f0dce0b3f3a913a3af280c96d70b9"
+      },
+      {
+        "case": "T11-inherited-extremes",
+        "outcome": "PASS",
+        "detail": "inherited years0001/0099/0999/1000/9999,huge+zero-padded query,huge grid step",
+        "utc_start": "2026-10-06T05:40:07.714073+00:00",
+        "utc_end": "2026-10-06T05:40:07.924504+00:00",
+        "candidate": "b1f7ef64db7f0dce0b3f3a913a3af280c96d70b9"
+      }
+    ],
+    "inherited": [
+      {
+        "case": "Q01-health",
+        "outcome": "PASS",
+        "detail": {
+          "healthy_seconds_from_client_start": 0.02942636198713444,
+          "ports": [
+            8091,
+            8080
+          ]
+        },
+        "utc_start": "2026-10-06T05:44:38.547639+00:00",
+        "utc_end": "2026-10-06T05:44:38.577085+00:00",
+        "candidate": "b1f7ef64db7f0dce0b3f3a913a3af280c96d70b9"
+      },
+      {
+        "case": "Q03-Q09-validation",
+        "outcome": "PASS",
+        "detail": "literal grids, types, formats, missing queries, public and protected routes; error rejections snapshot unchanged",
+        "utc_start": "2026-10-06T05:44:38.577125+00:00",
+        "utc_end": "2026-10-06T05:44:38.836098+00:00",
+        "candidate": "b1f7ef64db7f0dce0b3f3a913a3af280c96d70b9"
+      },
+      {
+        "case": "Q02-Q04-auth-reset",
+        "outcome": "PASS",
+        "detail": "signup/login lengths and errors, multiple sessions, owner-hidden operations, reset clears credentials; ID64/65",
+        "utc_start": "2026-10-06T05:44:38.836126+00:00",
+        "utc_end": "2026-10-06T05:44:39.408746+00:00",
+        "candidate": "b1f7ef64db7f0dce0b3f3a913a3af280c96d70b9"
+      },
+      {
+        "case": "Q10-Q14-occupancy",
+        "outcome": "PASS",
+        "detail": "adjacency and conflict, past create, PATCH rollback, identity/list/cancel/cutoff-past",
+        "utc_start": "2026-10-06T05:44:39.408773+00:00",
+        "utc_end": "2026-10-06T05:44:39.534631+00:00",
+        "candidate": "b1f7ef64db7f0dce0b3f3a913a3af280c96d70b9"
+      },
+      {
+        "case": "Q15-Q17-Q20-retries",
+        "outcome": "PASS",
+        "detail": "key1/255/256/empty, namespaces including identical cross-path body, parsed-invalid precedence, replay after changed/cancelled",
+        "utc_start": "2026-10-06T05:44:39.534658+00:00",
+        "utc_end": "2026-10-06T05:44:39.689672+00:00",
+        "candidate": "b1f7ef64db7f0dce0b3f3a913a3af280c96d70b9"
+      },
+      {
+        "case": "Q18-Q20-precision-portable",
+        "outcome": "PASS",
+        "detail": "11 literal precision/equivalence/type/tag/array pairs, source and independent destination replay/reuse",
+        "utc_start": "2026-10-06T05:44:39.689693+00:00",
+        "utc_end": "2026-10-06T05:44:39.818314+00:00",
+        "candidate": "b1f7ef64db7f0dce0b3f3a913a3af280c96d70b9"
+      },
+      {
+        "case": "Q21-container50-races",
+        "outcome": "PASS",
+        "detail": [
+          {
+            "path": "/reservations",
+            "counts": {
+              "200": 49,
+              "201": 1
+            },
+            "max_latency_seconds": 0.014695910998852924,
+            "in_flight_clients": 50
+          },
+          {
+            "path": "/reservations",
+            "counts": {
+              "409": 49,
+              "201": 1
+            },
+            "max_latency_seconds": 0.01568807700823527,
+            "in_flight_clients": 50
+          },
+          {
+            "path": "/reservation-moves",
+            "counts": {
+              "200": 49,
+              "201": 1
+            },
+            "max_latency_seconds": 0.015440617993590422,
+            "in_flight_clients": 50
+          }
+        ],
+        "utc_start": "2026-10-06T05:44:39.818368+00:00",
+        "utc_end": "2026-10-06T05:44:40.231717+00:00",
+        "candidate": "b1f7ef64db7f0dce0b3f3a913a3af280c96d70b9"
+      },
+      {
+        "case": "Q22-Q27-moves",
+        "outcome": "PASS",
+        "detail": "1/8 extremes, bad shapes,3cycle/noop/unchanged conflict/later rollback/failed-key reuse/time swap/input error ordering",
+        "utc_start": "2026-10-06T05:44:40.231773+00:00",
+        "utc_end": "2026-10-06T05:44:40.574579+00:00",
+        "candidate": "b1f7ef64db7f0dce0b3f3a913a3af280c96d70b9"
+      },
+      {
+        "case": "Q28-Q31-DST-literal",
+        "outcome": "PASS",
+        "detail": [
+          "Europe/Berlinspring fixed outputs",
+          "America/New_Yorkspring fixed outputs",
+          "Europe/Berlinfold first/absolute/adjacency",
+          "America/New_Yorkfold first/absolute/adjacency",
+          "NY closing first01:45 only00:30 eligible"
+        ],
+        "utc_start": "2026-10-06T05:44:40.574608+00:00",
+        "utc_end": "2026-10-06T05:44:41.298645+00:00",
+        "candidate": "b1f7ef64db7f0dce0b3f3a913a3af280c96d70b9"
+      },
+      {
+        "case": "Q32-Q35-import",
+        "outcome": "PASS",
+        "detail": "two containers, original accounts/tokens/login/config/records/create+batch receipts, snapshot immutable, destination replaced, bad envelope/state rollback, failed key reusable,reimport,reset",
+        "utc_start": "2026-10-06T05:44:41.298688+00:00",
+        "utc_end": "2026-10-06T05:44:41.712594+00:00",
+        "candidate": "b1f7ef64db7f0dce0b3f3a913a3af280c96d70b9"
+      },
+      {
+        "case": "Q36-atomic-export",
+        "outcome": "PASS",
+        "detail": "20 exports concurrent with swap each publicly restores complete old/new layout",
+        "utc_start": "2026-10-06T05:44:41.712626+00:00",
+        "utc_end": "2026-10-06T05:44:41.857946+00:00",
+        "candidate": "b1f7ef64db7f0dce0b3f3a913a3af280c96d70b9"
+      }
+    ],
+    "supplement": [
+      {
+        "case": "T08-pair-precision-import",
+        "outcome": "PASS",
+        "detail": "literal adjacentinteger/fraction/differingbool and equivalentdecimals before/afteractualpair receipt import",
+        "utc_start": "2026-10-06T05:45:58.522669+00:00",
+        "utc_end": "2026-10-06T05:45:58.757235+00:00",
+        "candidate": "b1f7ef64db7f0dce0b3f3a913a3af280c96d70b9"
+      },
+      {
+        "case": "T10-T25-pair-state",
+        "outcome": "PASS",
+        "detail": "omitted/confirmed/cancelled pairseeds literalmemberoccupancy;invalidpairimport/reset unchanged;immutablepair snapshot repeatedreplace andresetcredentials",
+        "utc_start": "2026-10-06T05:45:58.757267+00:00",
+        "utc_end": "2026-10-06T05:45:59.302630+00:00",
+        "candidate": "b1f7ef64db7f0dce0b3f3a913a3af280c96d70b9"
+      },
+      {
+        "case": "T06-T07-pair-precedence-cycle",
+        "outcome": "PASS",
+        "detail": "literalthreecycle andsametableadjacenttimeswap;laternonoccupancycapacity beatsearliermemberoverlap andatomicrollback/keyreuse",
+        "utc_start": "2026-10-06T05:45:59.302664+00:00",
+        "utc_end": "2026-10-06T05:45:59.498256+00:00",
+        "candidate": "b1f7ef64db7f0dce0b3f3a913a3af280c96d70b9"
+      },
+      {
+        "case": "T09-mixed-pair-single50",
+        "outcome": "PASS",
+        "detail": {
+          "pair_single_sharedB_clients": 50,
+          "201": 1,
+          "409": 49,
+          "max_seconds": 0.015553867997368798
+        },
+        "utc_start": "2026-10-06T05:45:59.498278+00:00",
+        "utc_end": "2026-10-06T05:45:59.622649+00:00",
+        "candidate": "b1f7ef64db7f0dce0b3f3a913a3af280c96d70b9"
+      }
+    ],
+    "pair_dst2": [
+      {
+        "case": "T11-pair-DST",
+        "outcome": "PASS",
+        "detail": "literal bothspring/fold pair offsets/durations andsecondmemberoverlap/adjacency;bothspring03closing andNY repeatedclosing absolute boundary",
+        "utc_start": "2026-10-06T05:46:45.652745+00:00",
+        "utc_end": "2026-10-06T05:46:46.345886+00:00",
+        "candidate": "b1f7ef64db7f0dce0b3f3a913a3af280c96d70b9"
+      }
+    ]
+  },
+  "browser_groups": 11,
+  "browser_results": {
+    "2": [
+      {
+        "case": "T12-T13-routes-grid",
+        "outcome": "PASS",
+        "detail": "HTML routes,every-route real auth,party5 singles unavailable/pairs available,signed-out selection blocked;desktop/mobile no overflow",
+        "candidate": "b1f7ef64db7f0dce0b3f3a913a3af280c96d70b9",
+        "utc_start": "2026-10-06T05:43:40.857817+00:00",
+        "utc_end": "2026-10-06T05:43:45.510594+00:00"
+      },
+      {
+        "case": "T17-T19-lost-single-pair-pre-postcommit",
+        "outcome": "PASS",
+        "detail": [
+          {
+            "pair": false,
+            "commit": false,
+            "retry_identity_equal": true,
+            "edit_revert_new_key": true
+          },
+          {
+            "pair": false,
+            "commit": true,
+            "retry_identity_equal": true,
+            "edit_revert_new_key": true
+          },
+          {
+            "pair": true,
+            "commit": false,
+            "retry_identity_equal": true,
+            "edit_revert_new_key": true
+          },
+          {
+            "pair": true,
+            "commit": true,
+            "retry_identity_equal": true,
+            "edit_revert_new_key": true
+          }
+        ],
+        "candidate": "b1f7ef64db7f0dce0b3f3a913a3af280c96d70b9",
+        "utc_start": "2026-10-06T05:43:45.517649+00:00",
+        "utc_end": "2026-10-06T05:43:52.077885+00:00"
+      },
+      {
+        "case": "T14-search-detail-availability-order",
+        "outcome": "PASS",
+        "detail": [
+          {
+            "held": "availability",
+            "late_failure": false,
+            "B_unchanged": true
+          },
+          {
+            "held": "availability",
+            "late_failure": true,
+            "B_unchanged": true
+          },
+          {
+            "held": "restaurants/R",
+            "late_failure": false,
+            "B_unchanged": true
+          },
+          {
+            "held": "restaurants/R",
+            "late_failure": true,
+            "B_unchanged": true
+          }
+        ],
+        "candidate": "b1f7ef64db7f0dce0b3f3a913a3af280c96d70b9",
+        "utc_start": "2026-10-06T05:43:52.078224+00:00",
+        "utc_end": "2026-10-06T05:43:58.271542+00:00"
+      },
+      {
+        "case": "T15-stale-POST-success-error-finally-focus",
+        "outcome": "PASS",
+        "detail": "late real POST success,abort,rejection completion/finally/focus did not affectB",
+        "candidate": "b1f7ef64db7f0dce0b3f3a913a3af280c96d70b9",
+        "utc_start": "2026-10-06T05:43:58.271677+00:00",
+        "utc_end": "2026-10-06T05:44:03.270045+00:00"
+      },
+      {
+        "case": "T16-conflict-refresh-order",
+        "outcome": "PASS",
+        "detail": "real409 single/pair retained edited inputs;late scopedrefresh cannot restoreA afterB",
+        "candidate": "b1f7ef64db7f0dce0b3f3a913a3af280c96d70b9",
+        "utc_start": "2026-10-06T05:44:03.270153+00:00",
+        "utc_end": "2026-10-06T05:44:06.922126+00:00"
+      },
+      {
+        "case": "T22-T24-actual-browser-upgrade",
+        "outcome": "PASS",
+        "detail": "actual Stage1 commit/cancel/export and Stage2 import between requests;browser auth/form/exactbodykeycaller retained;legacy original confirmed no-table_ids receipt recovered;current lookup cancelled",
+        "candidate": "b1f7ef64db7f0dce0b3f3a913a3af280c96d70b9",
+        "utc_start": "2026-10-06T05:44:06.922186+00:00",
+        "utc_end": "2026-10-06T05:44:08.218483+00:00"
+      },
+      {
+        "case": "T20-T21-T29-keyboard-lookup-bounds",
+        "outcome": "PASS",
+        "detail": "keyboard pair labels,exact reference/status,cancel every member,huge party legal fullgrid vsclosed,0001/9999 native dates in nonrestaurant browser timezone",
+        "candidate": "b1f7ef64db7f0dce0b3f3a913a3af280c96d70b9",
+        "utc_start": "2026-10-06T05:44:08.222370+00:00",
+        "utc_end": "2026-10-06T05:44:10.703145+00:00"
+      }
+    ],
+    "3": [
+      {
+        "case": "T12-T13-T29-auth-unavailable-searchcapture",
+        "outcome": "PASS",
+        "detail": "real signup/login error/logout and unavailable no-op;unsent searchparty edit retains searched5 in pairform",
+        "candidate": "b1f7ef64db7f0dce0b3f3a913a3af280c96d70b9",
+        "utc_start": "2026-10-06T05:45:13.621330+00:00",
+        "utc_end": "2026-10-06T05:45:15.876280+00:00"
+      },
+      {
+        "case": "T21-late-lookup-cancel-error",
+        "outcome": "PASS",
+        "detail": [
+          "lookup",
+          "cancel",
+          "error"
+        ],
+        "candidate": "b1f7ef64db7f0dce0b3f3a913a3af280c96d70b9",
+        "utc_start": "2026-10-06T05:45:15.884613+00:00",
+        "utc_end": "2026-10-06T05:45:21.029473+00:00"
+      }
+    ],
+    "4": [
+      {
+        "case": "T18-T19-pending-unreadable-selection-revert",
+        "outcome": "PASS",
+        "detail": "oneactualPOST despitependingduplicate;unreadable committed201 uncertain thenexact200;pairselectionchange/revert freshkey/real409",
+        "candidate": "b1f7ef64db7f0dce0b3f3a913a3af280c96d70b9",
+        "utc_start": "2026-10-06T05:47:33.096019+00:00",
+        "utc_end": "2026-10-06T05:47:34.884346+00:00"
+      },
+      {
+        "case": "T21-cutoff-unknown",
+        "outcome": "PASS",
+        "detail": "realpastpair cancel409 retainedconfirmed/alllabels;unknown404removedstaledetail",
+        "candidate": "b1f7ef64db7f0dce0b3f3a913a3af280c96d70b9",
+        "utc_start": "2026-10-06T05:47:34.895389+00:00",
+        "utc_end": "2026-10-06T05:47:36.371588+00:00"
+      }
+    ]
+  },
+  "browser": "Chromium153.0.8010.12 in officialdf-harness-runner",
+  "official": {
+    "checks": {
+      "1": {
+        "collected": 120,
+        "passed": 120,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0,
+        "deselected": 0,
+        "xfailed": 0,
+        "files": {
+          "stage_1/test_health_reset_auth.py": {
+            "passed": 12,
+            "total": 12
+          },
+          "stage_1/test_reservations.py": {
+            "passed": 37,
+            "total": 37
+          },
+          "stage_1/test_restaurants_availability.py": {
+            "passed": 18,
+            "total": 18
+          },
+          "stage_1/test_retries_time_input.py": {
+            "passed": 20,
+            "total": 20
+          },
+          "stage_1/test_sample.py": {
+            "passed": 20,
+            "total": 20
+          },
+          "stage_1/test_seeded_state.py": {
+            "passed": 13,
+            "total": 13
+          }
+        }
+      },
+      "2": {
+        "collected": 25,
+        "passed": 25,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0,
+        "deselected": 0,
+        "xfailed": 0,
+        "files": {
+          "stage_2/test_sample.py": {
+            "passed": 8,
+            "total": 8
+          },
+          "stage_2/test_ui.py": {
+            "passed": 17,
+            "total": 17
+          }
+        }
+      }
+    },
+    "utc_start": "2026-10-06T05:43:59.341226+00:00",
+    "utc_end": "2026-10-06T05:44:45.523440+00:00",
+    "local_harness_isolated_not_external_judgment": true
+  },
+  "actual_browser_upgrade": "PASS realacceptedStage1image with stableorigin/currentUI; oldlogin/committedlostsingleton/cancelledlive/export/importbetweenrequests/unchangedretry exactmethodpathbodykeycaller200legacyreceipt/currentlookupcancelled; no reload/newlogin/formreset",
+  "not_tested": [
+    "Separate Designer presentation/contrast/allstate render gate, long375pxlabels and native200%browserzoom; QA screenshots/nooverflow are finite support only.",
+    "ExactHTTPcutoff equality and +/-1minute deterministicclock boundaries; gap-hour opening/closing convention remains underspecified.",
+    "All calendar/zones/error permutations and concurrency interleavings; competing pairPATCHes/currentread schedules are not exhaustively exercised.",
+    "Lateinitialrestaurantlist versus explicitB choice; same-scope409 refresh after fullyreleasedresponse focus is not separately exercised.",
+    "Unicodeheaders,forcedidentifiercollisions,tokenexpiryelapsed and continuousCPU/memorypeak profiling.",
+    "Mappedhostport integration is not a layer claimed by this internalnetwork execution; officialharness isolated layer reported separately."
+  ],
+  "production_defects_observed": [],
+  "retained_failed_attempts": [
+    {
+      "files": [
+        "browser.py",
+        "browser.txt",
+        "browser-run1/report.json"
+      ],
+      "exit": 1,
+      "diagnosis": "test-driver attempted pair after logoutclearedgrid; dereferenced asynchronousrecovery beforeconfirmationvisible; selecteddisabledA forparty4; leftoverroute propagated ResponseDisposed; correcteddriver browser2 passed allgroups."
+    },
+    {
+      "files": [
+        "pair_dst.py",
+        "pair_dst.txt"
+      ],
+      "exit": 1,
+      "diagnosis": "adjacent04:00 singleton90min ended05:30 after04:30 closing; correct422outside_opening_hours. Expandedvalidcontrolclosing06:00 inpair_dst2; no productchange."
+    }
+  ],
+  "metadata_corrections": [
+    "inherited.py copied Q01 ports field[8091,8080] is stale testlabel; actual verified URLs bothport8080 in internal containers. Healthseconds measure alreadyrunningprocess probe,notstartup latency.",
+    "inherited.txt legacy not_tested list is historical driver text; this record composite inventory supersedes laterstageupgrade/sourcehash/closedday gaps, which were independently observed elsewhere.",
+    "Official Stage3 overshoot artifacts do not accept or dispatch Stage3."
+  ],
+  "cost": "UNAVAILABLE",
+  "ownership": "Evidenceonly,no trackededit/Gitmutation/productrepair. Candidateclean and Stage1byteequalacceptedrevision verified inprovenance.",
+  "build_commands": [
+    {
+      "command": "docker build -t qa-s2-b1f7ef /private/tmp/tablekeeper-qa-s2-b1f7ef-20261006T0540Z/stage-2 > /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s2-run-20261006T0540Z/build.txt 2>&1",
+      "exit": 0
+    },
+    {
+      "command": "docker build -t qa-s2-old-b3df39 /private/tmp/tablekeeper-qa-s2-b1f7ef-20261006T0540Z/stage-1 > /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s2-run-20261006T0540Z/build-old.txt 2>&1",
+      "exit": 0
+    }
+  ],
+  "cleanup": "cleanup.json scopedcommands exit0"
+}

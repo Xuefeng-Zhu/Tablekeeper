@@ -1,0 +1,37 @@
+{
+  "change_scope": "Normal idle authenticated restart with due pending notice verifies admission ownership then uses existing exact live SDK sender-tool derivation. Original claims/budgets/send_due_notice remain unchanged.",
+  "created_at": "2026-10-06T03:17:49.362679+00:00",
+  "current_runtime_sha256": "c20714cd0b53fadc9f5c860b829acb725a254fe0e362581b823d874d8a3b1869",
+  "factory_source_sha256": "d11a6b951cfa721b497a05890feef31d917eddc515af1545842dd1442fce1d1a",
+  "full_scoped_tests": {
+    "count": 132,
+    "exit_code": 0,
+    "path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-transport-source-20261005/notice-recovery-tests.json",
+    "sha256": "f65b406135e40050da3543dad6808d2e4632b5a2f5b490196fec114e6e4f2922"
+  },
+  "latest_sender_binding_test": {
+    "count": 1,
+    "exit_code": 0,
+    "path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-transport-source-20261005/notice-sender-binding-final-test.json",
+    "sha256": "aa3584b4fe8df3f6c3f9e573fe38a92ecbe0f935dcb5182332e6022ab8ffc59f"
+  },
+  "limitations": [
+    "Utility/actual SDK context fixture proof only; no live message, provider, restart or product result observed.",
+    "Run configuration, runtime state/journals, accounting and product untouched."
+  ],
+  "patch": {
+    "path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-transport-source-20261005/notice-recovery.patch",
+    "sha256": "a361b121c2b8f1095240aa1441668cbb5830b4cadb4913374d8985fd7dceacbf"
+  },
+  "previous_runtime_sha256": "92759f8562048c7c64b008eae420cff26db9272f70257c053ed0028ce29e9301",
+  "schema_version": 1,
+  "source_root": "/Users/frank/mygit/Tablekeeper/runs/local-sol-transport-source-20261005",
+  "status": "PASS_SCOPED_NOTICE_RECOVERY_TESTS",
+  "test_facts": [
+    "Seven normal-restart contexts start and stop.",
+    "Original PM REST context alone posts one bounded mock notice to original handoff recipient.",
+    "No provider/model or SDK callback runs.",
+    "Exact prior budget bytes, turn records and original outbound event remain unchanged.",
+    "Existing guard tests reject wrong room/agent/link/REST, stopped/missing contexts, ambiguous roster and changed sender tools."
+  ]
+}

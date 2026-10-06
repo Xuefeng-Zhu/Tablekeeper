@@ -1,0 +1,25 @@
+{
+  "status": "PASS_SUPPLIED_ISOLATED_STAGE2",
+  "candidate": "108bcd4c48fa4fb4d7dedf286e94c8e4937f7f10",
+  "command": "python -m harness run --track tablekeeper --repo publication-checkout --stage 2 --mode isolated --out unique-publication-check-dir",
+  "exit_code": 0,
+  "stage1": {
+    "passed": 120,
+    "collected": 120,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "stage2": {
+    "passed": 25,
+    "collected": 25,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "highest_contiguous": 2,
+  "next_stage_probe": "Stage 3 fail; expected for this Stage 2 candidate; no Stage 3 completion claimed",
+  "evidence": "report.json and per-stage logs/counts retained alongside this receipt",
+  "stage_source_unchanged": true,
+  "scope": "Clean publication checkout; shipped subset only, not independent final factory acceptance or judging"
+}

@@ -1,0 +1,4450 @@
+{
+  "source_basename": "Tablekeeper-Local-Sol-October-5.json",
+  "sha256": "afe76f7fe500f88dbb21f5a9b0529c5d5e7270db55fe62809aa361d856f096e8",
+  "bytes": 9353740,
+  "room": {
+    "id": "4084182d-0b85-46d6-a137-f0bd7d44b498",
+    "title": "Tablekeeper \u00b7 Local Sol \u00b7 October 5"
+  },
+  "scope": "full",
+  "exportedAt": "2026-10-06T06:38:57.986Z",
+  "messages": 6462,
+  "strings_scanned": 49297,
+  "official_patterns": [
+    "bearer-token",
+    "api-key",
+    "aws-access-key",
+    "github-token",
+    "env-assignment",
+    "url-credentials"
+  ],
+  "extra_patterns": [
+    "private-key",
+    "github-fine-grained",
+    "aws-session-access",
+    "google-api",
+    "slack-token",
+    "stripe-secret",
+    "jwt",
+    "basic-auth",
+    "band-key",
+    "quoted-auth-value",
+    "sensitive-query",
+    "email",
+    "ssn"
+  ],
+  "candidate_counts": {
+    "email": 67,
+    "env-assignment": 189
+  },
+  "method": "Every string leaf including tool outputs and metadata; env assignment candidates included although official room scan omits that pattern.",
+  "status": "PASS \u2014 no actual provider/API/GitHub/BAND key, private auth credential or sensitive personal value detected",
+  "strong_credential_matches": 0,
+  "email_candidates_classification": "All 67 matches have synthetic fixture or agent Git identity domains; no private real-email domain detected.",
+  "literal_auth_candidate_count": 107,
+  "literal_auth_unique_count": 11,
+  "literal_auth_classification": "All 11 distinct values are supplied/synthetic fixture passwords or source/UI labels; source context reviewed. Values omitted.",
+  "findings": [
+    {
+      "message_id": "4d26340b-0768-4e02-b618-015229c10e51",
+      "location": "$.messages[7].content",
+      "shape": "email",
+      "line": 253,
+      "fingerprint": "b5fc85e55755f9e0",
+      "length": 15,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "4d26340b-0768-4e02-b618-015229c10e51",
+      "location": "$.messages[7].content",
+      "shape": "email",
+      "line": 336,
+      "fingerprint": "08168cd80dfd534a",
+      "length": 13,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "4d26340b-0768-4e02-b618-015229c10e51",
+      "location": "$.messages[7].content",
+      "shape": "email",
+      "line": 343,
+      "fingerprint": "08168cd80dfd534a",
+      "length": 13,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "81981f96-72e0-459f-b1a0-f53c857a4d1f",
+      "location": "$.messages[38].content",
+      "shape": "email",
+      "line": 1,
+      "fingerprint": "99d4c1429f9136fd",
+      "length": 24,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "07b3a93f-b8d4-46cc-ba79-9cbe0e0025c1",
+      "location": "$.messages[155].content",
+      "shape": "email",
+      "line": 1,
+      "fingerprint": "3423be9d82ca2b06",
+      "length": 50,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "43b6c190-68f0-499b-8003-c18885ff1065",
+      "location": "$.messages[756].content",
+      "shape": "email",
+      "line": 1,
+      "fingerprint": "18d294ec97a6d04c",
+      "length": 50,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "07d52d87-5b2f-4634-b801-3f4b7f6e7161",
+      "location": "$.messages[1125].content",
+      "shape": "email",
+      "line": 1,
+      "fingerprint": "4ca8641cfbef27c5",
+      "length": 29,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "fe766659-d442-43b0-90de-eeca0a4e2345",
+      "location": "$.messages[1150].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "011079a4662a1406",
+      "length": 6,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "fe766659-d442-43b0-90de-eeca0a4e2345",
+      "location": "$.messages[1150].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "31a4ec79b5bd5d5d",
+      "length": 28,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "fe766659-d442-43b0-90de-eeca0a4e2345",
+      "location": "$.messages[1150].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "1d12cf65fd998139",
+      "length": 20,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "fe766659-d442-43b0-90de-eeca0a4e2345",
+      "location": "$.messages[1150].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "1345bbbee0bc68f2",
+      "length": 38,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "fe766659-d442-43b0-90de-eeca0a4e2345",
+      "location": "$.messages[1150].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "ab886ddaea942465",
+      "length": 10,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "02c60871-8da6-4192-8da6-f3a71c219c3c",
+      "location": "$.messages[1159].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "a5c790438c48680a",
+      "length": 11,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": true
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "02c60871-8da6-4192-8da6-f3a71c219c3c",
+      "location": "$.messages[1159].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "58638bdee33a53f4",
+      "length": 9,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": true
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "02c60871-8da6-4192-8da6-f3a71c219c3c",
+      "location": "$.messages[1159].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "2b5898c3ae66fd67",
+      "length": 101,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": true
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "02c60871-8da6-4192-8da6-f3a71c219c3c",
+      "location": "$.messages[1159].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "803e34ee2a2240ba",
+      "length": 11,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": true
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "02c60871-8da6-4192-8da6-f3a71c219c3c",
+      "location": "$.messages[1159].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "2f990c22fe72a931",
+      "length": 43,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": true
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "02c60871-8da6-4192-8da6-f3a71c219c3c",
+      "location": "$.messages[1159].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "bb156681016e592f",
+      "length": 115,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": true
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "02c60871-8da6-4192-8da6-f3a71c219c3c",
+      "location": "$.messages[1159].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "dc64d13efc9d7959",
+      "length": 64,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": true
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "02c60871-8da6-4192-8da6-f3a71c219c3c",
+      "location": "$.messages[1159].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "a1388569daf4916f",
+      "length": 73,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": true
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "02c60871-8da6-4192-8da6-f3a71c219c3c",
+      "location": "$.messages[1159].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "818d001aa208080d",
+      "length": 60,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": true
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "02c60871-8da6-4192-8da6-f3a71c219c3c",
+      "location": "$.messages[1159].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "5ca7d5d08a86eb0d",
+      "length": 72,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": true
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "02c60871-8da6-4192-8da6-f3a71c219c3c",
+      "location": "$.messages[1159].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "143820ad37d45afe",
+      "length": 91,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": true
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "02c60871-8da6-4192-8da6-f3a71c219c3c",
+      "location": "$.messages[1159].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "2f91cde240fe5012",
+      "length": 12,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": true
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "02c60871-8da6-4192-8da6-f3a71c219c3c",
+      "location": "$.messages[1159].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "e29cbe380faa1909",
+      "length": 25,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": true
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "02c60871-8da6-4192-8da6-f3a71c219c3c",
+      "location": "$.messages[1159].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "e29cbe380faa1909",
+      "length": 25,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": true
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "02c60871-8da6-4192-8da6-f3a71c219c3c",
+      "location": "$.messages[1159].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "be728c4aa3c2d5b8",
+      "length": 97,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": true
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "02c60871-8da6-4192-8da6-f3a71c219c3c",
+      "location": "$.messages[1159].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "be728c4aa3c2d5b8",
+      "length": 97,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": true
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "02c60871-8da6-4192-8da6-f3a71c219c3c",
+      "location": "$.messages[1159].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "cad1f6d053b2abfd",
+      "length": 25,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": true
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "02c60871-8da6-4192-8da6-f3a71c219c3c",
+      "location": "$.messages[1159].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "a065da8d7083b4d5",
+      "length": 27,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": true
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "4bd618d9-58d3-4fc2-9ed2-c598fbec5f07",
+      "location": "$.messages[1494].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "e29cbe380faa1909",
+      "length": 25,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": true
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "4bd618d9-58d3-4fc2-9ed2-c598fbec5f07",
+      "location": "$.messages[1494].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "5ef9a7d26786a088",
+      "length": 23,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": true
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "4bd618d9-58d3-4fc2-9ed2-c598fbec5f07",
+      "location": "$.messages[1494].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "69bb5bc95e7ac9db",
+      "length": 23,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": true
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "4bd618d9-58d3-4fc2-9ed2-c598fbec5f07",
+      "location": "$.messages[1494].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "1a13ec9024aed04f",
+      "length": 37,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": true
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "4bd618d9-58d3-4fc2-9ed2-c598fbec5f07",
+      "location": "$.messages[1494].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "a0ab1274aa464af1",
+      "length": 28,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": true
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "4bd618d9-58d3-4fc2-9ed2-c598fbec5f07",
+      "location": "$.messages[1494].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "5c21ec2892e73b09",
+      "length": 43,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": true
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "4bd618d9-58d3-4fc2-9ed2-c598fbec5f07",
+      "location": "$.messages[1494].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "11e157c6557ced17",
+      "length": 18,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "4bd618d9-58d3-4fc2-9ed2-c598fbec5f07",
+      "location": "$.messages[1494].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "4861aaf39e730991",
+      "length": 25,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "4bd618d9-58d3-4fc2-9ed2-c598fbec5f07",
+      "location": "$.messages[1494].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "b716437eba32f724",
+      "length": 23,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "4bd618d9-58d3-4fc2-9ed2-c598fbec5f07",
+      "location": "$.messages[1494].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "3a5ba1018621a1e7",
+      "length": 22,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "4bd618d9-58d3-4fc2-9ed2-c598fbec5f07",
+      "location": "$.messages[1494].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "b221dcbb8317b854",
+      "length": 22,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "4bd618d9-58d3-4fc2-9ed2-c598fbec5f07",
+      "location": "$.messages[1494].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "77532e852d2832bd",
+      "length": 60,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": true
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "4bd618d9-58d3-4fc2-9ed2-c598fbec5f07",
+      "location": "$.messages[1494].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "5717efd68d5ebeab",
+      "length": 11,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "4bd618d9-58d3-4fc2-9ed2-c598fbec5f07",
+      "location": "$.messages[1494].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "2b3943e8ac820622",
+      "length": 22,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "4bd618d9-58d3-4fc2-9ed2-c598fbec5f07",
+      "location": "$.messages[1494].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "8ca51d53b4a31d31",
+      "length": 36,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "4bd618d9-58d3-4fc2-9ed2-c598fbec5f07",
+      "location": "$.messages[1494].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "2ccbb186ba6ba72b",
+      "length": 22,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "4bd618d9-58d3-4fc2-9ed2-c598fbec5f07",
+      "location": "$.messages[1494].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "6444b57160b86750",
+      "length": 57,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "4bd618d9-58d3-4fc2-9ed2-c598fbec5f07",
+      "location": "$.messages[1494].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "c5aa4a362d0d16b1",
+      "length": 20,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "4bd618d9-58d3-4fc2-9ed2-c598fbec5f07",
+      "location": "$.messages[1494].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "7cab703d5e1a9b5a",
+      "length": 20,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "4bd618d9-58d3-4fc2-9ed2-c598fbec5f07",
+      "location": "$.messages[1494].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "8984639e7e60f4d1",
+      "length": 28,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "4bd618d9-58d3-4fc2-9ed2-c598fbec5f07",
+      "location": "$.messages[1494].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "fe04816ea9c951fd",
+      "length": 22,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "4bd618d9-58d3-4fc2-9ed2-c598fbec5f07",
+      "location": "$.messages[1494].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "d2c31fbd74fc7193",
+      "length": 27,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": true
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "4bd618d9-58d3-4fc2-9ed2-c598fbec5f07",
+      "location": "$.messages[1494].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "9b20a9a79f032b85",
+      "length": 16,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "4bd618d9-58d3-4fc2-9ed2-c598fbec5f07",
+      "location": "$.messages[1494].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "87ea60f43c4fba4d",
+      "length": 23,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "4bd618d9-58d3-4fc2-9ed2-c598fbec5f07",
+      "location": "$.messages[1494].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "4065a3b38c5d9000",
+      "length": 10,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "4bd618d9-58d3-4fc2-9ed2-c598fbec5f07",
+      "location": "$.messages[1494].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "224a43167d9086e4",
+      "length": 74,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "4bd618d9-58d3-4fc2-9ed2-c598fbec5f07",
+      "location": "$.messages[1494].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "245a8813c20b78ed",
+      "length": 189,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "4bd618d9-58d3-4fc2-9ed2-c598fbec5f07",
+      "location": "$.messages[1494].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "a49d50e56736d1a7",
+      "length": 35,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "4bd618d9-58d3-4fc2-9ed2-c598fbec5f07",
+      "location": "$.messages[1494].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "9c59beb25a321fa9",
+      "length": 48,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "4bd618d9-58d3-4fc2-9ed2-c598fbec5f07",
+      "location": "$.messages[1494].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "3119bf208a52c091",
+      "length": 30,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "4bd618d9-58d3-4fc2-9ed2-c598fbec5f07",
+      "location": "$.messages[1494].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "69bb5bc95e7ac9db",
+      "length": 23,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "4bd618d9-58d3-4fc2-9ed2-c598fbec5f07",
+      "location": "$.messages[1494].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "548d600e33eb5366",
+      "length": 15,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "4bd618d9-58d3-4fc2-9ed2-c598fbec5f07",
+      "location": "$.messages[1494].content",
+      "shape": "email",
+      "line": 1,
+      "fingerprint": "c4e586d1de802955",
+      "length": 9,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "4bd618d9-58d3-4fc2-9ed2-c598fbec5f07",
+      "location": "$.messages[1494].content",
+      "shape": "email",
+      "line": 1,
+      "fingerprint": "6005a82da2615156",
+      "length": 9,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "4bd618d9-58d3-4fc2-9ed2-c598fbec5f07",
+      "location": "$.messages[1494].content",
+      "shape": "email",
+      "line": 1,
+      "fingerprint": "c4e586d1de802955",
+      "length": 9,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": true
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "4bd618d9-58d3-4fc2-9ed2-c598fbec5f07",
+      "location": "$.messages[1494].content",
+      "shape": "email",
+      "line": 1,
+      "fingerprint": "6005a82da2615156",
+      "length": 9,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": true
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "4bd618d9-58d3-4fc2-9ed2-c598fbec5f07",
+      "location": "$.messages[1494].content",
+      "shape": "email",
+      "line": 1,
+      "fingerprint": "c4e586d1de802955",
+      "length": 9,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "4bd618d9-58d3-4fc2-9ed2-c598fbec5f07",
+      "location": "$.messages[1494].content",
+      "shape": "email",
+      "line": 1,
+      "fingerprint": "690baaa8117e37f8",
+      "length": 12,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "4bd618d9-58d3-4fc2-9ed2-c598fbec5f07",
+      "location": "$.messages[1494].content",
+      "shape": "email",
+      "line": 1,
+      "fingerprint": "6005a82da2615156",
+      "length": 9,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": true
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "4bd618d9-58d3-4fc2-9ed2-c598fbec5f07",
+      "location": "$.messages[1494].content",
+      "shape": "email",
+      "line": 1,
+      "fingerprint": "549f4e7d10e7315e",
+      "length": 11,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "4bd618d9-58d3-4fc2-9ed2-c598fbec5f07",
+      "location": "$.messages[1494].content",
+      "shape": "email",
+      "line": 1,
+      "fingerprint": "549f4e7d10e7315e",
+      "length": 11,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "4bd618d9-58d3-4fc2-9ed2-c598fbec5f07",
+      "location": "$.messages[1494].content",
+      "shape": "email",
+      "line": 1,
+      "fingerprint": "549f4e7d10e7315e",
+      "length": 11,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "ed9bf97e-96be-4daf-af72-37ba136ff895",
+      "location": "$.messages[1523].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "9bd053302c62d373",
+      "length": 24,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "ed9bf97e-96be-4daf-af72-37ba136ff895",
+      "location": "$.messages[1523].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "7ee462d712c185b1",
+      "length": 23,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "ed9bf97e-96be-4daf-af72-37ba136ff895",
+      "location": "$.messages[1523].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "e29cbe380faa1909",
+      "length": 25,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "ed9bf97e-96be-4daf-af72-37ba136ff895",
+      "location": "$.messages[1523].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "69844b197171e2e9",
+      "length": 50,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "ed9bf97e-96be-4daf-af72-37ba136ff895",
+      "location": "$.messages[1523].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "9de003de3fd8a723",
+      "length": 19,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "ed9bf97e-96be-4daf-af72-37ba136ff895",
+      "location": "$.messages[1523].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "8551d63cc8962846",
+      "length": 21,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "ed9bf97e-96be-4daf-af72-37ba136ff895",
+      "location": "$.messages[1523].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "4065a3b38c5d9000",
+      "length": 10,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "ed9bf97e-96be-4daf-af72-37ba136ff895",
+      "location": "$.messages[1523].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "b10da11d838fd958",
+      "length": 59,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "ed9bf97e-96be-4daf-af72-37ba136ff895",
+      "location": "$.messages[1523].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "67fd5e8b836cd335",
+      "length": 23,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "ed9bf97e-96be-4daf-af72-37ba136ff895",
+      "location": "$.messages[1523].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "bf0ef33a051e5e35",
+      "length": 19,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "ed9bf97e-96be-4daf-af72-37ba136ff895",
+      "location": "$.messages[1523].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "f866e16650abe400",
+      "length": 51,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "ed9bf97e-96be-4daf-af72-37ba136ff895",
+      "location": "$.messages[1523].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "7bca67bc28b76835",
+      "length": 44,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "ed9bf97e-96be-4daf-af72-37ba136ff895",
+      "location": "$.messages[1523].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "accb8e2383086ab8",
+      "length": 45,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "ed9bf97e-96be-4daf-af72-37ba136ff895",
+      "location": "$.messages[1523].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "69bb5bc95e7ac9db",
+      "length": 23,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "ed9bf97e-96be-4daf-af72-37ba136ff895",
+      "location": "$.messages[1523].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "a0949c9b6ecae065",
+      "length": 39,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "ed9bf97e-96be-4daf-af72-37ba136ff895",
+      "location": "$.messages[1523].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "cd4d4469a22c8809",
+      "length": 114,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "ed9bf97e-96be-4daf-af72-37ba136ff895",
+      "location": "$.messages[1523].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "4065a3b38c5d9000",
+      "length": 10,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "ed9bf97e-96be-4daf-af72-37ba136ff895",
+      "location": "$.messages[1523].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "b31f7fd9ef8ae1b1",
+      "length": 11,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "ed9bf97e-96be-4daf-af72-37ba136ff895",
+      "location": "$.messages[1523].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "4065a3b38c5d9000",
+      "length": 10,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "ed9bf97e-96be-4daf-af72-37ba136ff895",
+      "location": "$.messages[1523].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "b31f7fd9ef8ae1b1",
+      "length": 11,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "ed9bf97e-96be-4daf-af72-37ba136ff895",
+      "location": "$.messages[1523].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "119fe20e838b07ce",
+      "length": 14,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "ed9bf97e-96be-4daf-af72-37ba136ff895",
+      "location": "$.messages[1523].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "e7998e31e6172f18",
+      "length": 19,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "ed9bf97e-96be-4daf-af72-37ba136ff895",
+      "location": "$.messages[1523].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "4065a3b38c5d9000",
+      "length": 10,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "ed9bf97e-96be-4daf-af72-37ba136ff895",
+      "location": "$.messages[1523].content",
+      "shape": "email",
+      "line": 1,
+      "fingerprint": "6005a82da2615156",
+      "length": 9,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "ed9bf97e-96be-4daf-af72-37ba136ff895",
+      "location": "$.messages[1523].content",
+      "shape": "email",
+      "line": 1,
+      "fingerprint": "1128a0a834769480",
+      "length": 12,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": true
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "ed9bf97e-96be-4daf-af72-37ba136ff895",
+      "location": "$.messages[1523].content",
+      "shape": "email",
+      "line": 1,
+      "fingerprint": "c4e586d1de802955",
+      "length": 9,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": true
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "ed9bf97e-96be-4daf-af72-37ba136ff895",
+      "location": "$.messages[1523].content",
+      "shape": "email",
+      "line": 1,
+      "fingerprint": "c4e586d1de802955",
+      "length": 9,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": true
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "9c37164a-796a-4391-8b75-e3ebfc6d96b4",
+      "location": "$.messages[1533].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "7a01860a3a6dc78c",
+      "length": 23,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "9c37164a-796a-4391-8b75-e3ebfc6d96b4",
+      "location": "$.messages[1533].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "c9b83184d5f097c0",
+      "length": 29,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "9c37164a-796a-4391-8b75-e3ebfc6d96b4",
+      "location": "$.messages[1533].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "9526180dad076e2a",
+      "length": 15,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "9c37164a-796a-4391-8b75-e3ebfc6d96b4",
+      "location": "$.messages[1533].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "9fb69a0b5767fd18",
+      "length": 100,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "e3021d7d-bc52-4b6f-8ecf-fbd5110d06a3",
+      "location": "$.messages[1539].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "ab8f981b558caf90",
+      "length": 43,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "e3021d7d-bc52-4b6f-8ecf-fbd5110d06a3",
+      "location": "$.messages[1539].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "e29cbe380faa1909",
+      "length": 25,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "bdadb6fb-36ef-4d9c-a0da-20b58280ac7d",
+      "location": "$.messages[1552].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "981d3b002d6bcce5",
+      "length": 54,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "bdadb6fb-36ef-4d9c-a0da-20b58280ac7d",
+      "location": "$.messages[1552].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "39e6b4b620c01e1a",
+      "length": 18,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "bdadb6fb-36ef-4d9c-a0da-20b58280ac7d",
+      "location": "$.messages[1552].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "ab886ddaea942465",
+      "length": 10,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "bdadb6fb-36ef-4d9c-a0da-20b58280ac7d",
+      "location": "$.messages[1552].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "d30b31c247b87886",
+      "length": 30,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "840f4593-2c28-48f3-88f9-da05552a5860",
+      "location": "$.messages[1572].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "4065a3b38c5d9000",
+      "length": 10,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "840f4593-2c28-48f3-88f9-da05552a5860",
+      "location": "$.messages[1572].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "e29cbe380faa1909",
+      "length": 25,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "840f4593-2c28-48f3-88f9-da05552a5860",
+      "location": "$.messages[1572].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "69bb5bc95e7ac9db",
+      "length": 23,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "840f4593-2c28-48f3-88f9-da05552a5860",
+      "location": "$.messages[1572].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "2fe97f01fbf7774a",
+      "length": 15,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "840f4593-2c28-48f3-88f9-da05552a5860",
+      "location": "$.messages[1572].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "4065a3b38c5d9000",
+      "length": 10,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "840f4593-2c28-48f3-88f9-da05552a5860",
+      "location": "$.messages[1572].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "95b52c9bee11a881",
+      "length": 34,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "cd173481-e311-4369-96f5-2891eb9769cb",
+      "location": "$.messages[1807].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "e29cbe380faa1909",
+      "length": 25,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": true
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "cd173481-e311-4369-96f5-2891eb9769cb",
+      "location": "$.messages[1807].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "d3808600c5ded1bb",
+      "length": 71,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "cd173481-e311-4369-96f5-2891eb9769cb",
+      "location": "$.messages[1807].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "9f4cf2557d8bb307",
+      "length": 74,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "cd173481-e311-4369-96f5-2891eb9769cb",
+      "location": "$.messages[1807].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "cb91a59ec8077959",
+      "length": 76,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "cd173481-e311-4369-96f5-2891eb9769cb",
+      "location": "$.messages[1807].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "60e939a5d1c04025",
+      "length": 72,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "cd173481-e311-4369-96f5-2891eb9769cb",
+      "location": "$.messages[1807].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "d78bc754c2c1054f",
+      "length": 77,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": true
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "cd173481-e311-4369-96f5-2891eb9769cb",
+      "location": "$.messages[1807].content",
+      "shape": "email",
+      "line": 1,
+      "fingerprint": "9c524c92278164a2",
+      "length": 13,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": true
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "cd173481-e311-4369-96f5-2891eb9769cb",
+      "location": "$.messages[1807].content",
+      "shape": "email",
+      "line": 1,
+      "fingerprint": "9c524c92278164a2",
+      "length": 13,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": true
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "6a9f6fea-35be-4b9c-8227-b5c6677d2f07",
+      "location": "$.messages[1829].content",
+      "shape": "email",
+      "line": 1,
+      "fingerprint": "9c524c92278164a2",
+      "length": 13,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "954ea140-aebe-44f8-82cc-c5c7c6767f7f",
+      "location": "$.messages[2026].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "be728c4aa3c2d5b8",
+      "length": 97,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": true
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "556882b1-9f19-4887-910a-71b05becb001",
+      "location": "$.messages[2318].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "e29cbe380faa1909",
+      "length": 25,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "556882b1-9f19-4887-910a-71b05becb001",
+      "location": "$.messages[2318].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "fa7b321c9e1f7db3",
+      "length": 33,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "556882b1-9f19-4887-910a-71b05becb001",
+      "location": "$.messages[2318].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "fa7b321c9e1f7db3",
+      "length": 33,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": true
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "556882b1-9f19-4887-910a-71b05becb001",
+      "location": "$.messages[2318].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "15af9505c053415a",
+      "length": 13,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "556882b1-9f19-4887-910a-71b05becb001",
+      "location": "$.messages[2318].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "e29cbe380faa1909",
+      "length": 25,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "eb70f495-ecb8-4341-979d-6acad5c26c63",
+      "location": "$.messages[2412].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "be728c4aa3c2d5b8",
+      "length": 97,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "173c06c1-1767-4bc1-9b31-cc5c1ac422c0",
+      "location": "$.messages[2512].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "be728c4aa3c2d5b8",
+      "length": 97,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": true
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "173c06c1-1767-4bc1-9b31-cc5c1ac422c0",
+      "location": "$.messages[2512].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "7a53880f2197e61c",
+      "length": 40,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": true
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "173c06c1-1767-4bc1-9b31-cc5c1ac422c0",
+      "location": "$.messages[2512].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "e29cbe380faa1909",
+      "length": 25,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": true
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "173c06c1-1767-4bc1-9b31-cc5c1ac422c0",
+      "location": "$.messages[2512].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "be728c4aa3c2d5b8",
+      "length": 97,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": true
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "971d51f6-df6c-47cd-b9c9-27a514e0fd87",
+      "location": "$.messages[2762].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "55e038da68595445",
+      "length": 34,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "971d51f6-df6c-47cd-b9c9-27a514e0fd87",
+      "location": "$.messages[2762].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "15af9505c053415a",
+      "length": 13,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "971d51f6-df6c-47cd-b9c9-27a514e0fd87",
+      "location": "$.messages[2762].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "e29cbe380faa1909",
+      "length": 25,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "971d51f6-df6c-47cd-b9c9-27a514e0fd87",
+      "location": "$.messages[2762].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "e29cbe380faa1909",
+      "length": 25,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "971d51f6-df6c-47cd-b9c9-27a514e0fd87",
+      "location": "$.messages[2762].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "e29cbe380faa1909",
+      "length": 25,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": true
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "971d51f6-df6c-47cd-b9c9-27a514e0fd87",
+      "location": "$.messages[2762].content",
+      "shape": "email",
+      "line": 1,
+      "fingerprint": "9c524c92278164a2",
+      "length": 13,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "c600750c-b028-4bdd-9229-ea0c0b14b53b",
+      "location": "$.messages[2977].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "926813d3478ea2b1",
+      "length": 10,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "9267cb10-4a2b-46f9-bb5d-324e40356589",
+      "location": "$.messages[3387].content",
+      "shape": "email",
+      "line": 1,
+      "fingerprint": "9843cc35fbe159d2",
+      "length": 30,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "e13a8690-47a7-442a-9a64-ef518eb4c542",
+      "location": "$.messages[3816].content",
+      "shape": "email",
+      "line": 1,
+      "fingerprint": "18d294ec97a6d04c",
+      "length": 50,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "18348129-9ea4-404a-bfef-ce360f3457be",
+      "location": "$.messages[4240].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "bcd137fae0106ce5",
+      "length": 53,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": true
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "18348129-9ea4-404a-bfef-ce360f3457be",
+      "location": "$.messages[4240].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "11f5c26e45274788",
+      "length": 66,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": true
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "18348129-9ea4-404a-bfef-ce360f3457be",
+      "location": "$.messages[4240].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "b9a9d77daae43d2d",
+      "length": 51,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": true
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "18348129-9ea4-404a-bfef-ce360f3457be",
+      "location": "$.messages[4240].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "a687e29a605a8c49",
+      "length": 65,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": true
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "18348129-9ea4-404a-bfef-ce360f3457be",
+      "location": "$.messages[4240].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "be728c4aa3c2d5b8",
+      "length": 97,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": true
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "18348129-9ea4-404a-bfef-ce360f3457be",
+      "location": "$.messages[4240].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "6f0ef213f73d19db",
+      "length": 54,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": true
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "18348129-9ea4-404a-bfef-ce360f3457be",
+      "location": "$.messages[4240].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "5ef947d35482e6f7",
+      "length": 99,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": true
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "18348129-9ea4-404a-bfef-ce360f3457be",
+      "location": "$.messages[4240].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "e29cbe380faa1909",
+      "length": 25,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": true
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "52b75cd8-85bb-425b-83fb-f106fb4414d3",
+      "location": "$.messages[4293].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "4042346293703e68",
+      "length": 61,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": true
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "52b75cd8-85bb-425b-83fb-f106fb4414d3",
+      "location": "$.messages[4293].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "ffc6aeca298c9a9f",
+      "length": 57,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": true
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "52b75cd8-85bb-425b-83fb-f106fb4414d3",
+      "location": "$.messages[4293].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "f2bb7630dca10f15",
+      "length": 44,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": true
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "52b75cd8-85bb-425b-83fb-f106fb4414d3",
+      "location": "$.messages[4293].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "2681dc6efaf40e49",
+      "length": 144,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": true
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "52b75cd8-85bb-425b-83fb-f106fb4414d3",
+      "location": "$.messages[4293].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "b1d0519422fa7d30",
+      "length": 46,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": true
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "52b75cd8-85bb-425b-83fb-f106fb4414d3",
+      "location": "$.messages[4293].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "75873018a997bb8d",
+      "length": 70,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": true
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "52b75cd8-85bb-425b-83fb-f106fb4414d3",
+      "location": "$.messages[4293].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "f5b1be57ea8c58c3",
+      "length": 84,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": true
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "a74b446b-bf06-4cdf-80c8-6ca93d22c79f",
+      "location": "$.messages[4311].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "be728c4aa3c2d5b8",
+      "length": 97,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": true
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "a74b446b-bf06-4cdf-80c8-6ca93d22c79f",
+      "location": "$.messages[4311].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "bcd137fae0106ce5",
+      "length": 53,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": true
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "78b9c60a-63d6-414f-a0da-7617d98b6b4d",
+      "location": "$.messages[4591].content",
+      "shape": "email",
+      "line": 1,
+      "fingerprint": "54bb91ccfa6c0c98",
+      "length": 50,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "8415c90d-4b82-4a97-bcdd-af17ead4e3df",
+      "location": "$.messages[4603].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "7d009a621d3df6e9",
+      "length": 9,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": true
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "8415c90d-4b82-4a97-bcdd-af17ead4e3df",
+      "location": "$.messages[4603].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "e29cbe380faa1909",
+      "length": 25,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": true
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "f3f9b2f6-5139-46d5-a955-5f7c5c7f9416",
+      "location": "$.messages[4643].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "e29cbe380faa1909",
+      "length": 25,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": true
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "f3f9b2f6-5139-46d5-a955-5f7c5c7f9416",
+      "location": "$.messages[4643].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "5e39cfd6ae11231d",
+      "length": 24,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "f3f9b2f6-5139-46d5-a955-5f7c5c7f9416",
+      "location": "$.messages[4643].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "73fc89ee2390e74c",
+      "length": 24,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "f3f9b2f6-5139-46d5-a955-5f7c5c7f9416",
+      "location": "$.messages[4643].content",
+      "shape": "email",
+      "line": 1,
+      "fingerprint": "c8cd3c6427301eaf",
+      "length": 17,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "f3f9b2f6-5139-46d5-a955-5f7c5c7f9416",
+      "location": "$.messages[4643].content",
+      "shape": "email",
+      "line": 1,
+      "fingerprint": "5b71ed5f946240dc",
+      "length": 17,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "f3f9b2f6-5139-46d5-a955-5f7c5c7f9416",
+      "location": "$.messages[4643].content",
+      "shape": "email",
+      "line": 1,
+      "fingerprint": "c8cd3c6427301eaf",
+      "length": 17,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": true
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "f3f9b2f6-5139-46d5-a955-5f7c5c7f9416",
+      "location": "$.messages[4643].content",
+      "shape": "email",
+      "line": 1,
+      "fingerprint": "02d68ff25bb0a650",
+      "length": 17,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "f3f9b2f6-5139-46d5-a955-5f7c5c7f9416",
+      "location": "$.messages[4643].content",
+      "shape": "email",
+      "line": 1,
+      "fingerprint": "c8cd3c6427301eaf",
+      "length": 17,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "f3f9b2f6-5139-46d5-a955-5f7c5c7f9416",
+      "location": "$.messages[4643].content",
+      "shape": "email",
+      "line": 1,
+      "fingerprint": "5b71ed5f946240dc",
+      "length": 17,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "17599eb7-c3d3-424b-b543-48591decfc87",
+      "location": "$.messages[4661].content",
+      "shape": "email",
+      "line": 1,
+      "fingerprint": "5b71ed5f946240dc",
+      "length": 17,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "17599eb7-c3d3-424b-b543-48591decfc87",
+      "location": "$.messages[4661].content",
+      "shape": "email",
+      "line": 1,
+      "fingerprint": "c8cd3c6427301eaf",
+      "length": 17,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "c7626c46-ed4d-4861-b70b-6afb0c440dce",
+      "location": "$.messages[4756].content",
+      "shape": "email",
+      "line": 1,
+      "fingerprint": "820ccd4bb75d8d49",
+      "length": 24,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "1d3d25c5-b07a-4d4c-b5df-e41ce704118a",
+      "location": "$.messages[4757].content",
+      "shape": "email",
+      "line": 20,
+      "fingerprint": "820ccd4bb75d8d49",
+      "length": 24,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "3315552b-7ae6-44ac-b9fe-f5092d222676",
+      "location": "$.messages[4759].content",
+      "shape": "email",
+      "line": 1,
+      "fingerprint": "820ccd4bb75d8d49",
+      "length": 24,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "b71c4982-3a8a-4761-a5c2-33aaba3c1a4c",
+      "location": "$.messages[4978].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "a0ab1274aa464af1",
+      "length": 28,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": true
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "b71c4982-3a8a-4761-a5c2-33aaba3c1a4c",
+      "location": "$.messages[4978].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "69bb5bc95e7ac9db",
+      "length": 23,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "b71c4982-3a8a-4761-a5c2-33aaba3c1a4c",
+      "location": "$.messages[4978].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "8419441a24521465",
+      "length": 21,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "b71c4982-3a8a-4761-a5c2-33aaba3c1a4c",
+      "location": "$.messages[4978].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "69bb5bc95e7ac9db",
+      "length": 23,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "b71c4982-3a8a-4761-a5c2-33aaba3c1a4c",
+      "location": "$.messages[4978].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "69bb5bc95e7ac9db",
+      "length": 23,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "b71c4982-3a8a-4761-a5c2-33aaba3c1a4c",
+      "location": "$.messages[4978].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "b31f7fd9ef8ae1b1",
+      "length": 11,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "b71c4982-3a8a-4761-a5c2-33aaba3c1a4c",
+      "location": "$.messages[4978].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "f1c2073a14ada72e",
+      "length": 24,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "b71c4982-3a8a-4761-a5c2-33aaba3c1a4c",
+      "location": "$.messages[4978].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "2ac39f0fb1e905f3",
+      "length": 34,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "b71c4982-3a8a-4761-a5c2-33aaba3c1a4c",
+      "location": "$.messages[4978].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "797caf6c7d7dc189",
+      "length": 36,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "b71c4982-3a8a-4761-a5c2-33aaba3c1a4c",
+      "location": "$.messages[4978].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "8d5dcc627f321352",
+      "length": 31,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "b71c4982-3a8a-4761-a5c2-33aaba3c1a4c",
+      "location": "$.messages[4978].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "5dd1936204c17051",
+      "length": 15,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "b71c4982-3a8a-4761-a5c2-33aaba3c1a4c",
+      "location": "$.messages[4978].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "295a6f4fe85dd071",
+      "length": 29,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "b71c4982-3a8a-4761-a5c2-33aaba3c1a4c",
+      "location": "$.messages[4978].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "f9f97e809daeb967",
+      "length": 27,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "b71c4982-3a8a-4761-a5c2-33aaba3c1a4c",
+      "location": "$.messages[4978].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "f9f97e809daeb967",
+      "length": 27,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "b71c4982-3a8a-4761-a5c2-33aaba3c1a4c",
+      "location": "$.messages[4978].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "4065a3b38c5d9000",
+      "length": 10,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "b71c4982-3a8a-4761-a5c2-33aaba3c1a4c",
+      "location": "$.messages[4978].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "295a6f4fe85dd071",
+      "length": 29,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "b71c4982-3a8a-4761-a5c2-33aaba3c1a4c",
+      "location": "$.messages[4978].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "a64d040023812a61",
+      "length": 37,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "b71c4982-3a8a-4761-a5c2-33aaba3c1a4c",
+      "location": "$.messages[4978].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "9d3298b4c6d6ec4a",
+      "length": 34,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "b71c4982-3a8a-4761-a5c2-33aaba3c1a4c",
+      "location": "$.messages[4978].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "e29cbe380faa1909",
+      "length": 25,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "b71c4982-3a8a-4761-a5c2-33aaba3c1a4c",
+      "location": "$.messages[4978].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "69bb5bc95e7ac9db",
+      "length": 23,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "b71c4982-3a8a-4761-a5c2-33aaba3c1a4c",
+      "location": "$.messages[4978].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "f4725c3b14128446",
+      "length": 11,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "b71c4982-3a8a-4761-a5c2-33aaba3c1a4c",
+      "location": "$.messages[4978].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "cd2518b9ebe97f78",
+      "length": 26,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "b71c4982-3a8a-4761-a5c2-33aaba3c1a4c",
+      "location": "$.messages[4978].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "f075b8119b022c58",
+      "length": 23,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "b71c4982-3a8a-4761-a5c2-33aaba3c1a4c",
+      "location": "$.messages[4978].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "fd16a69970e8e217",
+      "length": 34,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "b71c4982-3a8a-4761-a5c2-33aaba3c1a4c",
+      "location": "$.messages[4978].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "8511fc8d6f7b5b89",
+      "length": 47,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "8030ce7d-2676-4ce7-a23c-56b4a3d4edca",
+      "location": "$.messages[4990].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "e29cbe380faa1909",
+      "length": 25,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": true
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "8030ce7d-2676-4ce7-a23c-56b4a3d4edca",
+      "location": "$.messages[4990].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "5e39cfd6ae11231d",
+      "length": 24,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": true
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "8030ce7d-2676-4ce7-a23c-56b4a3d4edca",
+      "location": "$.messages[4990].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "73fc89ee2390e74c",
+      "length": 24,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "8030ce7d-2676-4ce7-a23c-56b4a3d4edca",
+      "location": "$.messages[4990].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "69bb5bc95e7ac9db",
+      "length": 23,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "8030ce7d-2676-4ce7-a23c-56b4a3d4edca",
+      "location": "$.messages[4990].content",
+      "shape": "email",
+      "line": 1,
+      "fingerprint": "c4e586d1de802955",
+      "length": 9,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": true
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "8030ce7d-2676-4ce7-a23c-56b4a3d4edca",
+      "location": "$.messages[4990].content",
+      "shape": "email",
+      "line": 1,
+      "fingerprint": "6005a82da2615156",
+      "length": 9,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "8030ce7d-2676-4ce7-a23c-56b4a3d4edca",
+      "location": "$.messages[4990].content",
+      "shape": "email",
+      "line": 1,
+      "fingerprint": "c4e586d1de802955",
+      "length": 9,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": true
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "8030ce7d-2676-4ce7-a23c-56b4a3d4edca",
+      "location": "$.messages[4990].content",
+      "shape": "email",
+      "line": 1,
+      "fingerprint": "6005a82da2615156",
+      "length": 9,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "fc8f171f-3d9c-4ce2-8d5b-7e32f942b8e4",
+      "location": "$.messages[5046].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "757a1efa600a8deb",
+      "length": 18,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "fc8f171f-3d9c-4ce2-8d5b-7e32f942b8e4",
+      "location": "$.messages[5046].content",
+      "shape": "email",
+      "line": 1,
+      "fingerprint": "e2e68fc6ba536e63",
+      "length": 11,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "fc8f171f-3d9c-4ce2-8d5b-7e32f942b8e4",
+      "location": "$.messages[5046].content",
+      "shape": "email",
+      "line": 1,
+      "fingerprint": "c4e586d1de802955",
+      "length": 9,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "fc8f171f-3d9c-4ce2-8d5b-7e32f942b8e4",
+      "location": "$.messages[5046].content",
+      "shape": "email",
+      "line": 1,
+      "fingerprint": "c4e586d1de802955",
+      "length": 9,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "4bac3e94-5ba2-491b-9d83-3864c5b22e57",
+      "location": "$.messages[5065].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "389400878f7445bb",
+      "length": 98,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "4bac3e94-5ba2-491b-9d83-3864c5b22e57",
+      "location": "$.messages[5065].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "e29cbe380faa1909",
+      "length": 25,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "4bac3e94-5ba2-491b-9d83-3864c5b22e57",
+      "location": "$.messages[5065].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "e29cbe380faa1909",
+      "length": 25,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "4bac3e94-5ba2-491b-9d83-3864c5b22e57",
+      "location": "$.messages[5065].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "e29cbe380faa1909",
+      "length": 25,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "4bac3e94-5ba2-491b-9d83-3864c5b22e57",
+      "location": "$.messages[5065].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "69bb5bc95e7ac9db",
+      "length": 23,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "4bac3e94-5ba2-491b-9d83-3864c5b22e57",
+      "location": "$.messages[5065].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "bf40b7e27f3c2341",
+      "length": 47,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "4bac3e94-5ba2-491b-9d83-3864c5b22e57",
+      "location": "$.messages[5065].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "e29cbe380faa1909",
+      "length": 25,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "4bac3e94-5ba2-491b-9d83-3864c5b22e57",
+      "location": "$.messages[5065].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "190ef794294b470c",
+      "length": 64,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "4bac3e94-5ba2-491b-9d83-3864c5b22e57",
+      "location": "$.messages[5065].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "0269b3b4da6a8e7d",
+      "length": 22,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "4bac3e94-5ba2-491b-9d83-3864c5b22e57",
+      "location": "$.messages[5065].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "2b3943e8ac820622",
+      "length": 22,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "4bac3e94-5ba2-491b-9d83-3864c5b22e57",
+      "location": "$.messages[5065].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "750190e64a6b337c",
+      "length": 37,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "4bac3e94-5ba2-491b-9d83-3864c5b22e57",
+      "location": "$.messages[5065].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "352acfd33f2bb363",
+      "length": 29,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "23610218-2a0c-49f1-bd7d-158d32d838e7",
+      "location": "$.messages[5086].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "5275a4541cda8c5d",
+      "length": 21,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "23610218-2a0c-49f1-bd7d-158d32d838e7",
+      "location": "$.messages[5086].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "30543d9f10520b03",
+      "length": 71,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "23610218-2a0c-49f1-bd7d-158d32d838e7",
+      "location": "$.messages[5086].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "fe04816ea9c951fd",
+      "length": 22,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "23610218-2a0c-49f1-bd7d-158d32d838e7",
+      "location": "$.messages[5086].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "fe04816ea9c951fd",
+      "length": 22,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "e5247c26-0026-464e-8d3f-f534750561d4",
+      "location": "$.messages[5101].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "705e5ef49daa0bf8",
+      "length": 31,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "e5247c26-0026-464e-8d3f-f534750561d4",
+      "location": "$.messages[5101].content",
+      "shape": "email",
+      "line": 1,
+      "fingerprint": "c4e586d1de802955",
+      "length": 9,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "0488dcaa-aef2-4ff5-acfe-837c458830e5",
+      "location": "$.messages[5396].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "e29cbe380faa1909",
+      "length": 25,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": true
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "0488dcaa-aef2-4ff5-acfe-837c458830e5",
+      "location": "$.messages[5396].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "73fc89ee2390e74c",
+      "length": 24,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "0488dcaa-aef2-4ff5-acfe-837c458830e5",
+      "location": "$.messages[5396].content",
+      "shape": "email",
+      "line": 1,
+      "fingerprint": "5a4b0fc269c9a3c0",
+      "length": 17,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "0488dcaa-aef2-4ff5-acfe-837c458830e5",
+      "location": "$.messages[5396].content",
+      "shape": "email",
+      "line": 1,
+      "fingerprint": "513935c4d2db2d2d",
+      "length": 17,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "0488dcaa-aef2-4ff5-acfe-837c458830e5",
+      "location": "$.messages[5396].content",
+      "shape": "email",
+      "line": 1,
+      "fingerprint": "5a4b0fc269c9a3c0",
+      "length": 17,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": true
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "0488dcaa-aef2-4ff5-acfe-837c458830e5",
+      "location": "$.messages[5396].content",
+      "shape": "email",
+      "line": 1,
+      "fingerprint": "5a4b0fc269c9a3c0",
+      "length": 17,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "0488dcaa-aef2-4ff5-acfe-837c458830e5",
+      "location": "$.messages[5396].content",
+      "shape": "email",
+      "line": 1,
+      "fingerprint": "f003050102332743",
+      "length": 15,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "43dbb667-88d0-4008-8027-6b58d5eba82b",
+      "location": "$.messages[5432].content",
+      "shape": "email",
+      "line": 1,
+      "fingerprint": "513935c4d2db2d2d",
+      "length": 17,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "7613fc47-9c48-4f5e-a742-fb0529ed9c08",
+      "location": "$.messages[5793].content",
+      "shape": "env-assignment",
+      "line": 1,
+      "fingerprint": "86ec5ebaa8923672",
+      "length": 12,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "source-code or tool command assignment, not a provider/user credential"
+    },
+    {
+      "message_id": "7613fc47-9c48-4f5e-a742-fb0529ed9c08",
+      "location": "$.messages[5793].content",
+      "shape": "email",
+      "line": 1,
+      "fingerprint": "d25354f658256d39",
+      "length": 15,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "7613fc47-9c48-4f5e-a742-fb0529ed9c08",
+      "location": "$.messages[5793].content",
+      "shape": "email",
+      "line": 1,
+      "fingerprint": "1f6c1f35fba8e0f4",
+      "length": 15,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "7613fc47-9c48-4f5e-a742-fb0529ed9c08",
+      "location": "$.messages[5793].content",
+      "shape": "email",
+      "line": 1,
+      "fingerprint": "d25354f658256d39",
+      "length": 15,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "7613fc47-9c48-4f5e-a742-fb0529ed9c08",
+      "location": "$.messages[5793].content",
+      "shape": "email",
+      "line": 1,
+      "fingerprint": "1f6c1f35fba8e0f4",
+      "length": 15,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "2d2e9dec-37be-4de5-b6d0-8370b8aa366b",
+      "location": "$.messages[5825].content",
+      "shape": "email",
+      "line": 1,
+      "fingerprint": "d25354f658256d39",
+      "length": 15,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "2feda091-5b98-4500-a3a6-b52b6b02ed78",
+      "location": "$.messages[5858].content",
+      "shape": "email",
+      "line": 1,
+      "fingerprint": "d25354f658256d39",
+      "length": 15,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "9f185439-0720-46e2-9690-91e60b620043",
+      "location": "$.messages[5863].content",
+      "shape": "email",
+      "line": 1,
+      "fingerprint": "d25354f658256d39",
+      "length": 15,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "ff681589-633d-4da2-b3a4-463f612703ef",
+      "location": "$.messages[5864].content",
+      "shape": "email",
+      "line": 4,
+      "fingerprint": "d25354f658256d39",
+      "length": 15,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "7fd6ed61-587d-41cd-a738-7f7fc06b0a23",
+      "location": "$.messages[5866].content",
+      "shape": "email",
+      "line": 1,
+      "fingerprint": "d25354f658256d39",
+      "length": 15,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "bdd501ef-43ca-41ce-b563-35491e494873",
+      "location": "$.messages[6039].content",
+      "shape": "email",
+      "line": 1,
+      "fingerprint": "5b71ed5f946240dc",
+      "length": 17,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "4f7a464a-3a5f-48ec-954c-c2ed1953648c",
+      "location": "$.messages[6192].content",
+      "shape": "email",
+      "line": 1,
+      "fingerprint": "820ccd4bb75d8d49",
+      "length": 24,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "402b7680-18e9-4d95-97c8-f8e7a2cc5c37",
+      "location": "$.messages[6193].content",
+      "shape": "email",
+      "line": 18,
+      "fingerprint": "820ccd4bb75d8d49",
+      "length": 24,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "14e12717-2e67-40d5-98cd-892f6c27b536",
+      "location": "$.messages[6195].content",
+      "shape": "email",
+      "line": 1,
+      "fingerprint": "820ccd4bb75d8d49",
+      "length": 24,
+      "context_flags": {
+        "fixture_or_test": false,
+        "source_assignment": false
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    },
+    {
+      "message_id": "84443bff-df5d-409b-85bb-5deaa7a269d2",
+      "location": "$.messages[6456].content",
+      "shape": "email",
+      "line": 1,
+      "fingerprint": "513935c4d2db2d2d",
+      "length": 17,
+      "context_flags": {
+        "fixture_or_test": true,
+        "source_assignment": false
+      },
+      "classification": "synthetic email address on example.com, qa.test, review.test, factory.local, local.invalid or factory.invalid"
+    }
+  ],
+  "literal_auth_findings": [
+    {
+      "message_id": "4d26340b-0768-4e02-b618-015229c10e51",
+      "location": "$.messages[7].content",
+      "line": 254,
+      "shape": "literal-auth-value",
+      "fingerprint": "4104d36f8da2c254",
+      "length": 13,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "4d26340b-0768-4e02-b618-015229c10e51",
+      "location": "$.messages[7].content",
+      "line": 336,
+      "shape": "literal-auth-value",
+      "fingerprint": "4104d36f8da2c254",
+      "length": 13,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "4d26340b-0768-4e02-b618-015229c10e51",
+      "location": "$.messages[7].content",
+      "line": 343,
+      "shape": "literal-auth-value",
+      "fingerprint": "4104d36f8da2c254",
+      "length": 13,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "02c60871-8da6-4192-8da6-f3a71c219c3c",
+      "location": "$.messages[1159].content",
+      "line": 1,
+      "shape": "literal-auth-value",
+      "fingerprint": "0b14d501a594442a",
+      "length": 9,
+      "fixture_or_test": false,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "02c60871-8da6-4192-8da6-f3a71c219c3c",
+      "location": "$.messages[1159].content",
+      "line": 1,
+      "shape": "literal-auth-value",
+      "fingerprint": "6cf615d5bcaac778",
+      "length": 9,
+      "fixture_or_test": false,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "02c60871-8da6-4192-8da6-f3a71c219c3c",
+      "location": "$.messages[1159].content",
+      "line": 1,
+      "shape": "literal-auth-value",
+      "fingerprint": "0b14d501a594442a",
+      "length": 9,
+      "fixture_or_test": false,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "02c60871-8da6-4192-8da6-f3a71c219c3c",
+      "location": "$.messages[1159].content",
+      "line": 1,
+      "shape": "literal-auth-value",
+      "fingerprint": "0b14d501a594442a",
+      "length": 9,
+      "fixture_or_test": false,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "02c60871-8da6-4192-8da6-f3a71c219c3c",
+      "location": "$.messages[1159].content",
+      "line": 1,
+      "shape": "literal-auth-value",
+      "fingerprint": "0b14d501a594442a",
+      "length": 9,
+      "fixture_or_test": false,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "02c60871-8da6-4192-8da6-f3a71c219c3c",
+      "location": "$.messages[1159].content",
+      "line": 1,
+      "shape": "literal-auth-value",
+      "fingerprint": "0b14d501a594442a",
+      "length": 9,
+      "fixture_or_test": false,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "02c60871-8da6-4192-8da6-f3a71c219c3c",
+      "location": "$.messages[1159].content",
+      "line": 1,
+      "shape": "literal-auth-value",
+      "fingerprint": "6cf615d5bcaac778",
+      "length": 9,
+      "fixture_or_test": false,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "02c60871-8da6-4192-8da6-f3a71c219c3c",
+      "location": "$.messages[1159].content.decoded_json.args.command",
+      "line": 59,
+      "shape": "literal-auth-value",
+      "fingerprint": "0b14d501a594442a",
+      "length": 9,
+      "fixture_or_test": false,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "02c60871-8da6-4192-8da6-f3a71c219c3c",
+      "location": "$.messages[1159].content.decoded_json.args.command",
+      "line": 59,
+      "shape": "literal-auth-value",
+      "fingerprint": "6cf615d5bcaac778",
+      "length": 9,
+      "fixture_or_test": false,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "02c60871-8da6-4192-8da6-f3a71c219c3c",
+      "location": "$.messages[1159].content.decoded_json.args.command",
+      "line": 66,
+      "shape": "literal-auth-value",
+      "fingerprint": "0b14d501a594442a",
+      "length": 9,
+      "fixture_or_test": false,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "02c60871-8da6-4192-8da6-f3a71c219c3c",
+      "location": "$.messages[1159].content.decoded_json.args.command",
+      "line": 103,
+      "shape": "literal-auth-value",
+      "fingerprint": "0b14d501a594442a",
+      "length": 9,
+      "fixture_or_test": false,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "02c60871-8da6-4192-8da6-f3a71c219c3c",
+      "location": "$.messages[1159].content.decoded_json.args.command",
+      "line": 141,
+      "shape": "literal-auth-value",
+      "fingerprint": "0b14d501a594442a",
+      "length": 9,
+      "fixture_or_test": false,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "02c60871-8da6-4192-8da6-f3a71c219c3c",
+      "location": "$.messages[1159].content.decoded_json.args.command",
+      "line": 154,
+      "shape": "literal-auth-value",
+      "fingerprint": "0b14d501a594442a",
+      "length": 9,
+      "fixture_or_test": false,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "02c60871-8da6-4192-8da6-f3a71c219c3c",
+      "location": "$.messages[1159].content.decoded_json.args.command",
+      "line": 180,
+      "shape": "literal-auth-value",
+      "fingerprint": "6cf615d5bcaac778",
+      "length": 9,
+      "fixture_or_test": false,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "4bd618d9-58d3-4fc2-9ed2-c598fbec5f07",
+      "location": "$.messages[1494].content",
+      "line": 1,
+      "shape": "literal-auth-value",
+      "fingerprint": "29a2ef988761480f",
+      "length": 14,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "4bd618d9-58d3-4fc2-9ed2-c598fbec5f07",
+      "location": "$.messages[1494].content",
+      "line": 1,
+      "shape": "literal-auth-value",
+      "fingerprint": "29a2ef988761480f",
+      "length": 14,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "4bd618d9-58d3-4fc2-9ed2-c598fbec5f07",
+      "location": "$.messages[1494].content",
+      "line": 1,
+      "shape": "literal-auth-value",
+      "fingerprint": "29a2ef988761480f",
+      "length": 14,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "4bd618d9-58d3-4fc2-9ed2-c598fbec5f07",
+      "location": "$.messages[1494].content",
+      "line": 1,
+      "shape": "literal-auth-value",
+      "fingerprint": "ef797c8118f02dfb",
+      "length": 8,
+      "fixture_or_test": false,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "4bd618d9-58d3-4fc2-9ed2-c598fbec5f07",
+      "location": "$.messages[1494].content",
+      "line": 1,
+      "shape": "literal-auth-value",
+      "fingerprint": "ef797c8118f02dfb",
+      "length": 8,
+      "fixture_or_test": false,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "4bd618d9-58d3-4fc2-9ed2-c598fbec5f07",
+      "location": "$.messages[1494].content",
+      "line": 1,
+      "shape": "literal-auth-value",
+      "fingerprint": "ef797c8118f02dfb",
+      "length": 8,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "4bd618d9-58d3-4fc2-9ed2-c598fbec5f07",
+      "location": "$.messages[1494].content",
+      "line": 1,
+      "shape": "literal-auth-value",
+      "fingerprint": "17fea58a4129572d",
+      "length": 13,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "4bd618d9-58d3-4fc2-9ed2-c598fbec5f07",
+      "location": "$.messages[1494].content",
+      "line": 1,
+      "shape": "literal-auth-value",
+      "fingerprint": "17fea58a4129572d",
+      "length": 13,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "4bd618d9-58d3-4fc2-9ed2-c598fbec5f07",
+      "location": "$.messages[1494].content",
+      "line": 1,
+      "shape": "literal-auth-value",
+      "fingerprint": "17fea58a4129572d",
+      "length": 13,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "4bd618d9-58d3-4fc2-9ed2-c598fbec5f07",
+      "location": "$.messages[1494].content.decoded_json.args.command",
+      "line": 43,
+      "shape": "literal-auth-value",
+      "fingerprint": "29a2ef988761480f",
+      "length": 14,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "4bd618d9-58d3-4fc2-9ed2-c598fbec5f07",
+      "location": "$.messages[1494].content.decoded_json.args.command",
+      "line": 43,
+      "shape": "literal-auth-value",
+      "fingerprint": "29a2ef988761480f",
+      "length": 14,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "4bd618d9-58d3-4fc2-9ed2-c598fbec5f07",
+      "location": "$.messages[1494].content.decoded_json.args.command",
+      "line": 47,
+      "shape": "literal-auth-value",
+      "fingerprint": "29a2ef988761480f",
+      "length": 14,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "4bd618d9-58d3-4fc2-9ed2-c598fbec5f07",
+      "location": "$.messages[1494].content.decoded_json.args.command",
+      "line": 100,
+      "shape": "literal-auth-value",
+      "fingerprint": "ef797c8118f02dfb",
+      "length": 8,
+      "fixture_or_test": false,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "4bd618d9-58d3-4fc2-9ed2-c598fbec5f07",
+      "location": "$.messages[1494].content.decoded_json.args.command",
+      "line": 101,
+      "shape": "literal-auth-value",
+      "fingerprint": "ef797c8118f02dfb",
+      "length": 8,
+      "fixture_or_test": false,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "4bd618d9-58d3-4fc2-9ed2-c598fbec5f07",
+      "location": "$.messages[1494].content.decoded_json.args.command",
+      "line": 102,
+      "shape": "literal-auth-value",
+      "fingerprint": "ef797c8118f02dfb",
+      "length": 8,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "4bd618d9-58d3-4fc2-9ed2-c598fbec5f07",
+      "location": "$.messages[1494].content.decoded_json.args.command",
+      "line": 144,
+      "shape": "literal-auth-value",
+      "fingerprint": "17fea58a4129572d",
+      "length": 13,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "4bd618d9-58d3-4fc2-9ed2-c598fbec5f07",
+      "location": "$.messages[1494].content.decoded_json.args.command",
+      "line": 145,
+      "shape": "literal-auth-value",
+      "fingerprint": "17fea58a4129572d",
+      "length": 13,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "4bd618d9-58d3-4fc2-9ed2-c598fbec5f07",
+      "location": "$.messages[1494].content.decoded_json.args.command",
+      "line": 148,
+      "shape": "literal-auth-value",
+      "fingerprint": "17fea58a4129572d",
+      "length": 13,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "ed9bf97e-96be-4daf-af72-37ba136ff895",
+      "location": "$.messages[1523].content",
+      "line": 1,
+      "shape": "literal-auth-value",
+      "fingerprint": "29a2ef988761480f",
+      "length": 14,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "ed9bf97e-96be-4daf-af72-37ba136ff895",
+      "location": "$.messages[1523].content",
+      "line": 1,
+      "shape": "literal-auth-value",
+      "fingerprint": "29a2ef988761480f",
+      "length": 14,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "ed9bf97e-96be-4daf-af72-37ba136ff895",
+      "location": "$.messages[1523].content",
+      "line": 1,
+      "shape": "literal-auth-value",
+      "fingerprint": "29a2ef988761480f",
+      "length": 14,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "ed9bf97e-96be-4daf-af72-37ba136ff895",
+      "location": "$.messages[1523].content.decoded_json.args.command",
+      "line": 85,
+      "shape": "literal-auth-value",
+      "fingerprint": "29a2ef988761480f",
+      "length": 14,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "ed9bf97e-96be-4daf-af72-37ba136ff895",
+      "location": "$.messages[1523].content.decoded_json.args.command",
+      "line": 91,
+      "shape": "literal-auth-value",
+      "fingerprint": "29a2ef988761480f",
+      "length": 14,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "ed9bf97e-96be-4daf-af72-37ba136ff895",
+      "location": "$.messages[1523].content.decoded_json.args.command",
+      "line": 98,
+      "shape": "literal-auth-value",
+      "fingerprint": "29a2ef988761480f",
+      "length": 14,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "cd173481-e311-4369-96f5-2891eb9769cb",
+      "location": "$.messages[1807].content",
+      "line": 1,
+      "shape": "literal-auth-value",
+      "fingerprint": "d43d39cb82d04dc7",
+      "length": 21,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "cd173481-e311-4369-96f5-2891eb9769cb",
+      "location": "$.messages[1807].content",
+      "line": 1,
+      "shape": "literal-auth-value",
+      "fingerprint": "d43d39cb82d04dc7",
+      "length": 21,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "cd173481-e311-4369-96f5-2891eb9769cb",
+      "location": "$.messages[1807].content.decoded_json.args.command",
+      "line": 21,
+      "shape": "literal-auth-value",
+      "fingerprint": "d43d39cb82d04dc7",
+      "length": 21,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "cd173481-e311-4369-96f5-2891eb9769cb",
+      "location": "$.messages[1807].content.decoded_json.args.command",
+      "line": 24,
+      "shape": "literal-auth-value",
+      "fingerprint": "d43d39cb82d04dc7",
+      "length": 21,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "954ea140-aebe-44f8-82cc-c5c7c6767f7f",
+      "location": "$.messages[2026].content",
+      "line": 1,
+      "shape": "literal-auth-value",
+      "fingerprint": "0b14d501a594442a",
+      "length": 9,
+      "fixture_or_test": false,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "954ea140-aebe-44f8-82cc-c5c7c6767f7f",
+      "location": "$.messages[2026].content.decoded_json.args.command",
+      "line": 15,
+      "shape": "literal-auth-value",
+      "fingerprint": "0b14d501a594442a",
+      "length": 9,
+      "fixture_or_test": false,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "eb70f495-ecb8-4341-979d-6acad5c26c63",
+      "location": "$.messages[2412].content",
+      "line": 1,
+      "shape": "literal-auth-value",
+      "fingerprint": "0b14d501a594442a",
+      "length": 9,
+      "fixture_or_test": false,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "eb70f495-ecb8-4341-979d-6acad5c26c63",
+      "location": "$.messages[2412].content.decoded_json.args.command",
+      "line": 8,
+      "shape": "literal-auth-value",
+      "fingerprint": "0b14d501a594442a",
+      "length": 9,
+      "fixture_or_test": false,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "173c06c1-1767-4bc1-9b31-cc5c1ac422c0",
+      "location": "$.messages[2512].content",
+      "line": 1,
+      "shape": "literal-auth-value",
+      "fingerprint": "0b14d501a594442a",
+      "length": 9,
+      "fixture_or_test": false,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "173c06c1-1767-4bc1-9b31-cc5c1ac422c0",
+      "location": "$.messages[2512].content",
+      "line": 1,
+      "shape": "literal-auth-value",
+      "fingerprint": "0b14d501a594442a",
+      "length": 9,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "173c06c1-1767-4bc1-9b31-cc5c1ac422c0",
+      "location": "$.messages[2512].content",
+      "line": 1,
+      "shape": "literal-auth-value",
+      "fingerprint": "0b14d501a594442a",
+      "length": 9,
+      "fixture_or_test": false,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "173c06c1-1767-4bc1-9b31-cc5c1ac422c0",
+      "location": "$.messages[2512].content.decoded_json.args.command",
+      "line": 7,
+      "shape": "literal-auth-value",
+      "fingerprint": "0b14d501a594442a",
+      "length": 9,
+      "fixture_or_test": false,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "173c06c1-1767-4bc1-9b31-cc5c1ac422c0",
+      "location": "$.messages[2512].content.decoded_json.args.command",
+      "line": 34,
+      "shape": "literal-auth-value",
+      "fingerprint": "0b14d501a594442a",
+      "length": 9,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "173c06c1-1767-4bc1-9b31-cc5c1ac422c0",
+      "location": "$.messages[2512].content.decoded_json.args.command",
+      "line": 40,
+      "shape": "literal-auth-value",
+      "fingerprint": "0b14d501a594442a",
+      "length": 9,
+      "fixture_or_test": false,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "971d51f6-df6c-47cd-b9c9-27a514e0fd87",
+      "location": "$.messages[2762].content",
+      "line": 1,
+      "shape": "literal-auth-value",
+      "fingerprint": "d43d39cb82d04dc7",
+      "length": 21,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "971d51f6-df6c-47cd-b9c9-27a514e0fd87",
+      "location": "$.messages[2762].content.decoded_json.args.command",
+      "line": 36,
+      "shape": "literal-auth-value",
+      "fingerprint": "d43d39cb82d04dc7",
+      "length": 21,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "18348129-9ea4-404a-bfef-ce360f3457be",
+      "location": "$.messages[4240].content",
+      "line": 1,
+      "shape": "literal-auth-value",
+      "fingerprint": "0b14d501a594442a",
+      "length": 9,
+      "fixture_or_test": false,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "18348129-9ea4-404a-bfef-ce360f3457be",
+      "location": "$.messages[4240].content",
+      "line": 1,
+      "shape": "literal-auth-value",
+      "fingerprint": "0b14d501a594442a",
+      "length": 9,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "18348129-9ea4-404a-bfef-ce360f3457be",
+      "location": "$.messages[4240].content",
+      "line": 1,
+      "shape": "literal-auth-value",
+      "fingerprint": "0b14d501a594442a",
+      "length": 9,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "18348129-9ea4-404a-bfef-ce360f3457be",
+      "location": "$.messages[4240].content.decoded_json.args.command",
+      "line": 109,
+      "shape": "literal-auth-value",
+      "fingerprint": "0b14d501a594442a",
+      "length": 9,
+      "fixture_or_test": false,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "18348129-9ea4-404a-bfef-ce360f3457be",
+      "location": "$.messages[4240].content.decoded_json.args.command",
+      "line": 144,
+      "shape": "literal-auth-value",
+      "fingerprint": "0b14d501a594442a",
+      "length": 9,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "18348129-9ea4-404a-bfef-ce360f3457be",
+      "location": "$.messages[4240].content.decoded_json.args.command",
+      "line": 152,
+      "shape": "literal-auth-value",
+      "fingerprint": "0b14d501a594442a",
+      "length": 9,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "52b75cd8-85bb-425b-83fb-f106fb4414d3",
+      "location": "$.messages[4293].content",
+      "line": 1,
+      "shape": "literal-auth-value",
+      "fingerprint": "5906ac361a137e2d",
+      "length": 9,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "52b75cd8-85bb-425b-83fb-f106fb4414d3",
+      "location": "$.messages[4293].content",
+      "line": 1,
+      "shape": "literal-auth-value",
+      "fingerprint": "5906ac361a137e2d",
+      "length": 9,
+      "fixture_or_test": false,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "52b75cd8-85bb-425b-83fb-f106fb4414d3",
+      "location": "$.messages[4293].content.decoded_json.args.command",
+      "line": 4,
+      "shape": "literal-auth-value",
+      "fingerprint": "5906ac361a137e2d",
+      "length": 9,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "52b75cd8-85bb-425b-83fb-f106fb4414d3",
+      "location": "$.messages[4293].content.decoded_json.args.command",
+      "line": 4,
+      "shape": "literal-auth-value",
+      "fingerprint": "5906ac361a137e2d",
+      "length": 9,
+      "fixture_or_test": false,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "a74b446b-bf06-4cdf-80c8-6ca93d22c79f",
+      "location": "$.messages[4311].content",
+      "line": 1,
+      "shape": "literal-auth-value",
+      "fingerprint": "0b14d501a594442a",
+      "length": 9,
+      "fixture_or_test": false,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "a74b446b-bf06-4cdf-80c8-6ca93d22c79f",
+      "location": "$.messages[4311].content.decoded_json.args.command",
+      "line": 10,
+      "shape": "literal-auth-value",
+      "fingerprint": "0b14d501a594442a",
+      "length": 9,
+      "fixture_or_test": false,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "243e6034-2a08-4aa1-989e-627e23f9ecbb",
+      "location": "$.messages[4594].content",
+      "line": 1,
+      "shape": "literal-auth-value",
+      "fingerprint": "595c3e976fe08b24",
+      "length": 16,
+      "fixture_or_test": false,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "243e6034-2a08-4aa1-989e-627e23f9ecbb",
+      "location": "$.messages[4594].content.decoded_json.args.command",
+      "line": 77,
+      "shape": "literal-auth-value",
+      "fingerprint": "595c3e976fe08b24",
+      "length": 16,
+      "fixture_or_test": false,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "f3f9b2f6-5139-46d5-a955-5f7c5c7f9416",
+      "location": "$.messages[4643].content",
+      "line": 1,
+      "shape": "literal-auth-value",
+      "fingerprint": "4104d36f8da2c254",
+      "length": 13,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "f3f9b2f6-5139-46d5-a955-5f7c5c7f9416",
+      "location": "$.messages[4643].content",
+      "line": 1,
+      "shape": "literal-auth-value",
+      "fingerprint": "4104d36f8da2c254",
+      "length": 13,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "f3f9b2f6-5139-46d5-a955-5f7c5c7f9416",
+      "location": "$.messages[4643].content",
+      "line": 1,
+      "shape": "literal-auth-value",
+      "fingerprint": "4104d36f8da2c254",
+      "length": 13,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "f3f9b2f6-5139-46d5-a955-5f7c5c7f9416",
+      "location": "$.messages[4643].content.decoded_json.args.command",
+      "line": 14,
+      "shape": "literal-auth-value",
+      "fingerprint": "4104d36f8da2c254",
+      "length": 13,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "f3f9b2f6-5139-46d5-a955-5f7c5c7f9416",
+      "location": "$.messages[4643].content.decoded_json.args.command",
+      "line": 14,
+      "shape": "literal-auth-value",
+      "fingerprint": "4104d36f8da2c254",
+      "length": 13,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "f3f9b2f6-5139-46d5-a955-5f7c5c7f9416",
+      "location": "$.messages[4643].content.decoded_json.args.command",
+      "line": 74,
+      "shape": "literal-auth-value",
+      "fingerprint": "4104d36f8da2c254",
+      "length": 13,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "17599eb7-c3d3-424b-b543-48591decfc87",
+      "location": "$.messages[4661].content",
+      "line": 1,
+      "shape": "literal-auth-value",
+      "fingerprint": "4104d36f8da2c254",
+      "length": 13,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "17599eb7-c3d3-424b-b543-48591decfc87",
+      "location": "$.messages[4661].content",
+      "line": 1,
+      "shape": "literal-auth-value",
+      "fingerprint": "4104d36f8da2c254",
+      "length": 13,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "17599eb7-c3d3-424b-b543-48591decfc87",
+      "location": "$.messages[4661].content.decoded_json.args.command",
+      "line": 33,
+      "shape": "literal-auth-value",
+      "fingerprint": "4104d36f8da2c254",
+      "length": 13,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "17599eb7-c3d3-424b-b543-48591decfc87",
+      "location": "$.messages[4661].content.decoded_json.args.command",
+      "line": 43,
+      "shape": "literal-auth-value",
+      "fingerprint": "4104d36f8da2c254",
+      "length": 13,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "8030ce7d-2676-4ce7-a23c-56b4a3d4edca",
+      "location": "$.messages[4990].content",
+      "line": 1,
+      "shape": "literal-auth-value",
+      "fingerprint": "29a2ef988761480f",
+      "length": 14,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "8030ce7d-2676-4ce7-a23c-56b4a3d4edca",
+      "location": "$.messages[4990].content",
+      "line": 1,
+      "shape": "literal-auth-value",
+      "fingerprint": "29a2ef988761480f",
+      "length": 14,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "8030ce7d-2676-4ce7-a23c-56b4a3d4edca",
+      "location": "$.messages[4990].content",
+      "line": 1,
+      "shape": "literal-auth-value",
+      "fingerprint": "29a2ef988761480f",
+      "length": 14,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "8030ce7d-2676-4ce7-a23c-56b4a3d4edca",
+      "location": "$.messages[4990].content.decoded_json.args.command",
+      "line": 10,
+      "shape": "literal-auth-value",
+      "fingerprint": "29a2ef988761480f",
+      "length": 14,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "8030ce7d-2676-4ce7-a23c-56b4a3d4edca",
+      "location": "$.messages[4990].content.decoded_json.args.command",
+      "line": 10,
+      "shape": "literal-auth-value",
+      "fingerprint": "29a2ef988761480f",
+      "length": 14,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "8030ce7d-2676-4ce7-a23c-56b4a3d4edca",
+      "location": "$.messages[4990].content.decoded_json.args.command",
+      "line": 99,
+      "shape": "literal-auth-value",
+      "fingerprint": "29a2ef988761480f",
+      "length": 14,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "fc8f171f-3d9c-4ce2-8d5b-7e32f942b8e4",
+      "location": "$.messages[5046].content",
+      "line": 1,
+      "shape": "literal-auth-value",
+      "fingerprint": "29a2ef988761480f",
+      "length": 14,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "fc8f171f-3d9c-4ce2-8d5b-7e32f942b8e4",
+      "location": "$.messages[5046].content.decoded_json.args.command",
+      "line": 16,
+      "shape": "literal-auth-value",
+      "fingerprint": "29a2ef988761480f",
+      "length": 14,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "e5247c26-0026-464e-8d3f-f534750561d4",
+      "location": "$.messages[5101].content",
+      "line": 1,
+      "shape": "literal-auth-value",
+      "fingerprint": "29a2ef988761480f",
+      "length": 14,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "e5247c26-0026-464e-8d3f-f534750561d4",
+      "location": "$.messages[5101].content.decoded_json.args.command",
+      "line": 18,
+      "shape": "literal-auth-value",
+      "fingerprint": "29a2ef988761480f",
+      "length": 14,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "0488dcaa-aef2-4ff5-acfe-837c458830e5",
+      "location": "$.messages[5396].content",
+      "line": 1,
+      "shape": "literal-auth-value",
+      "fingerprint": "c14886bac2fd7c67",
+      "length": 14,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "0488dcaa-aef2-4ff5-acfe-837c458830e5",
+      "location": "$.messages[5396].content",
+      "line": 1,
+      "shape": "literal-auth-value",
+      "fingerprint": "c14886bac2fd7c67",
+      "length": 14,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "0488dcaa-aef2-4ff5-acfe-837c458830e5",
+      "location": "$.messages[5396].content.decoded_json.args.command",
+      "line": 6,
+      "shape": "literal-auth-value",
+      "fingerprint": "c14886bac2fd7c67",
+      "length": 14,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "0488dcaa-aef2-4ff5-acfe-837c458830e5",
+      "location": "$.messages[5396].content.decoded_json.args.command",
+      "line": 6,
+      "shape": "literal-auth-value",
+      "fingerprint": "c14886bac2fd7c67",
+      "length": 14,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "43dbb667-88d0-4008-8027-6b58d5eba82b",
+      "location": "$.messages[5432].content",
+      "line": 1,
+      "shape": "literal-auth-value",
+      "fingerprint": "c14886bac2fd7c67",
+      "length": 14,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "43dbb667-88d0-4008-8027-6b58d5eba82b",
+      "location": "$.messages[5432].content.decoded_json.args.command",
+      "line": 10,
+      "shape": "literal-auth-value",
+      "fingerprint": "c14886bac2fd7c67",
+      "length": 14,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "7613fc47-9c48-4f5e-a742-fb0529ed9c08",
+      "location": "$.messages[5793].content",
+      "line": 1,
+      "shape": "literal-auth-value",
+      "fingerprint": "c7d33531a49aeecf",
+      "length": 18,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "7613fc47-9c48-4f5e-a742-fb0529ed9c08",
+      "location": "$.messages[5793].content",
+      "line": 1,
+      "shape": "literal-auth-value",
+      "fingerprint": "c7d33531a49aeecf",
+      "length": 18,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "7613fc47-9c48-4f5e-a742-fb0529ed9c08",
+      "location": "$.messages[5793].content",
+      "line": 1,
+      "shape": "literal-auth-value",
+      "fingerprint": "c7d33531a49aeecf",
+      "length": 18,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "7613fc47-9c48-4f5e-a742-fb0529ed9c08",
+      "location": "$.messages[5793].content.decoded_json.args.command",
+      "line": 7,
+      "shape": "literal-auth-value",
+      "fingerprint": "c7d33531a49aeecf",
+      "length": 18,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "7613fc47-9c48-4f5e-a742-fb0529ed9c08",
+      "location": "$.messages[5793].content.decoded_json.args.command",
+      "line": 7,
+      "shape": "literal-auth-value",
+      "fingerprint": "c7d33531a49aeecf",
+      "length": 18,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "7613fc47-9c48-4f5e-a742-fb0529ed9c08",
+      "location": "$.messages[5793].content.decoded_json.args.command",
+      "line": 21,
+      "shape": "literal-auth-value",
+      "fingerprint": "c7d33531a49aeecf",
+      "length": 18,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "bdd501ef-43ca-41ce-b563-35491e494873",
+      "location": "$.messages[6039].content",
+      "line": 1,
+      "shape": "literal-auth-value",
+      "fingerprint": "4104d36f8da2c254",
+      "length": 13,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "bdd501ef-43ca-41ce-b563-35491e494873",
+      "location": "$.messages[6039].content.decoded_json.args.command",
+      "line": 30,
+      "shape": "literal-auth-value",
+      "fingerprint": "4104d36f8da2c254",
+      "length": 13,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "84443bff-df5d-409b-85bb-5deaa7a269d2",
+      "location": "$.messages[6456].content",
+      "line": 1,
+      "shape": "literal-auth-value",
+      "fingerprint": "c14886bac2fd7c67",
+      "length": 14,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    },
+    {
+      "message_id": "84443bff-df5d-409b-85bb-5deaa7a269d2",
+      "location": "$.messages[6456].content.decoded_json.args.command",
+      "line": 14,
+      "shape": "literal-auth-value",
+      "fingerprint": "c14886bac2fd7c67",
+      "length": 14,
+      "fixture_or_test": true,
+      "classification": "synthetic test fixture credential or fixture documentation/UI autocomplete string"
+    }
+  ],
+  "limitations": "Pattern scan and source-context review cannot prove absence of every possible encoded or novel secret; no automated claim of exhaustive personal-data recognition."
+}

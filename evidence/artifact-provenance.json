@@ -1,0 +1,303 @@
+{
+  "assembled_for": "https://github.com/Xuefeng-Zhu/Tablekeeper",
+  "copy_scope": "Explicit selected nonsecret current-run artifacts; original raw absolute source paths retained for audit. No old run evidence, private state exports, auth, runtime journals, .git copies or capture intermediates.",
+  "factory_candidate": "108bcd4c48fa4fb4d7dedf286e94c8e4937f7f10",
+  "files": [
+    {
+      "copied_unchanged": true,
+      "destination": "protocols/collaboration.md",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-transport-source-20261005/protocols/collaboration.md",
+      "source_sha256": "192130f5ef0aa5c40686b4534aea888c70385a3aac3ecb6e946652a2998bb664"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "protocols/evidence-and-limits.md",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-transport-source-20261005/protocols/evidence-and-limits.md",
+      "source_sha256": "32a018c17402521d526a49554a23be4dcd0c0b182f34d9a9c1ab36f484d4674a"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "protocols/git-and-review.md",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-transport-source-20261005/protocols/git-and-review.md",
+      "source_sha256": "09e212f1ff2c4f8c31383e721e4fb9e3ce4d1b5098cfe4596bd3a1e0ef8b31f7"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/qa-b1/record.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s2-run-20261006T0540Z/record.json",
+      "source_sha256": "af59831d523c04c5ea815be20bf40615df28d979875d5e33c50b11f5f99ba6cc"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/qa-b1/supplied-isolated-report.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s2-run-20261006T0540Z/official/report.json",
+      "source_sha256": "ff7ed28b331049063c1e1875e6cc458fa95e8202975d452894383d00fb43610e"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/reviewer-b1/record.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s2-focus-20261006T0610Z/record.json",
+      "source_sha256": "e2dab69f350092f19ffd5a09dcae7d55222b1f274c1d520f8a81fd4868937135"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/reviewer-b1/findings.txt",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s2-focus-20261006T0610Z/findings.txt",
+      "source_sha256": "8d5d8ef149bf155dd16622517ada416e7de1d22ad2a684022ab6318fb32a9b17"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/frontend-repair-108/supplied-isolated-report.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/frontend-s2-repair1-20261006T0614Z/official-delivery/report.json",
+      "source_sha256": "e186a07f970ebbf1e52c5f73808d327f1307c498c7b1b2d4a0b8ec1b342dec88"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/frontend-repair-108/focus-report.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/frontend-s2-repair1-20261006T0614Z/delivery-focus/focus-report.json",
+      "source_sha256": "24726a21d80430ca051a9e0412e28dff3d96888b5eaf1b9607abffde680a9388"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/frontend-repair-108/core-report.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/frontend-s2-repair1-20261006T0614Z/delivery-core/report.json",
+      "source_sha256": "0f013012a11485a2a109349627acc49c6a9698afc0628117535cf71c834f299c"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/frontend-repair-108/edge-report.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/frontend-s2-repair1-20261006T0614Z/delivery-edges/edge-report.json",
+      "source_sha256": "a76ac15964e0546b1b3c3214334d4757ec0bbc78fd7207c51f2eeb6a4304c39a"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/render/deployment-receipt.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage2-verification/deployment-receipt.json",
+      "source_sha256": "68e2cde7f4801d15f41d3abc86597479a2ebffb442830ba8e04d054857e77b16"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/render/source-provenance.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage2-verification/source-provenance.json",
+      "source_sha256": "86e62354ce2cf587a1cb54a94af7b51a932cd2ad5fd6a7254a4e9c799970598c"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/render/smoke.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage2-verification/smoke.json",
+      "source_sha256": "7f30dbff8b5c318f3e98fc4f6f6180c8df9bd60dc3daa9b0f3b8add024f35085"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/render/live-smoke-20261006T060444Z.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage2-verification/live-smoke-20261006T060444Z.json",
+      "source_sha256": "7da3774f734919d03803ba24cb4836d310992bb625b409a3c2f18ad44581eff3"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/render/live-stage2.jpg",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage2-verification/live-stage2.jpg",
+      "source_sha256": "ce01cd434aea3cc535c388d6ac35cf20509cee70f27b33668ae96712b65ffc10"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/render/render-live.jpg",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage2-verification/render-live.jpg",
+      "source_sha256": "4dd8969ac7cbb52d70e43e8a732ee651374524f84ffd1c05ecf2db9c51353e9d"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/factory-runtime/transport.patch",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-transport-source-20261005/transport.patch",
+      "source_sha256": "a1b6a8fb166d4a62cab2bdc5dbc7b749b68db9f6778a61eafcf56c4a76651933"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/factory-runtime/notice-recovery.patch",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-transport-source-20261005/notice-recovery.patch",
+      "source_sha256": "a361b121c2b8f1095240aa1441668cbb5830b4cadb4913374d8985fd7dceacbf"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/factory-runtime/transport-validation.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-transport-source-20261005/transport-validation.json",
+      "source_sha256": "70bc8fd8b66dd5506c001af13019c868cb30215c1e7d864366572ac3fc845a83"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/factory-runtime/notice-recovery-validation.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-transport-source-20261005/notice-recovery-validation.json",
+      "source_sha256": "87fd00ff86c8d295676d2792bb770827d331359ecc62e63512b38a0b9c036bb2"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/factory-runtime/transport-baseline.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-transport-source-20261005/transport-baseline.json",
+      "source_sha256": "85b7dde21b0055be668f783208375f3ed623b481dd7f8c5b369766f3c298462f"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "demo/service.py",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage2-20261005/service.py",
+      "source_sha256": "46903d2fd358e2b2c16cd3100d0308004703d6d2dd6adcfa753d9eef0c20dddd"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "demo/temporal.py",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage2-20261005/temporal.py",
+      "source_sha256": "db46eae7b47ce72cfc8e95ccaea45958cd59fc3b556e3227e5f9035b8cf6c439"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "demo/server.py",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage2-20261005/server.py",
+      "source_sha256": "9790bb3353a3059c7730554abc595198bf8ba6633af96ff3e9e13d9ef4ce029a"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "demo/render.yaml",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage2-20261005/render.yaml",
+      "source_sha256": "6c7ff85c9b63901dff13324b55be6f6666b357922153934b8aacb145b733815b"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "demo/values.py",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage2-20261005/values.py",
+      "source_sha256": "7e35fc23a6474e6ac1737bd1948fa9f70e492820608163e1201a0d6f0a20e096"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "demo/deploy.py",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage2-20261005/deploy.py",
+      "source_sha256": "1cb785b4d0cc392e9d173b7db9dfcb4e7e9f54a9bd4ef68d3df4e385ce93e234"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "demo/domain.py",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage2-20261005/domain.py",
+      "source_sha256": "9368dd0d4e479d30b8e17120462ffcd63bbb4490f4d6fa060763f231e12ba62d"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "demo/Dockerfile",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage2-20261005/Dockerfile",
+      "source_sha256": "3a1a8eae4bb3604a034187c3867561d57cfd3bb2d7d9a62943d6db40a2f5590f"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "demo/legacy_state.py",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage2-20261005/legacy_state.py",
+      "source_sha256": "b1094a3ffad1e8f06d858d65aa6fd6cc8fedb16e399836385ca7ea8753f3fec7"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "demo/README.md",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage2-20261005/README.md",
+      "source_sha256": "62a0ae9ff5dd577274a91945c19343c91a840e4c82a78f68397beb540255d8b0"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "demo/.dockerignore",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage2-20261005/.dockerignore",
+      "source_sha256": "ea992525219ee160d281b25d08f30d04361753194b5d69b3850f24f9b7222167"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "demo/.gitignore",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage2-20261005/.gitignore",
+      "source_sha256": "e30ef92a5b5aecbac879e1557d9b9a6737af22f5b08ecc1ce0e8ac635077317e"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "demo/RUN.md",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage2-20261005/RUN.md",
+      "source_sha256": "c2f99469f4dd4083c4916b60db34c090fb09a393bb3678195ba4f379114b7ffd"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "demo/state.py",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage2-20261005/state.py",
+      "source_sha256": "198c9349fee00508fbd47f15f4e85b6304a38bdec8760d4738cefd7fd4c2e1ae"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "demo/legacy_domain.py",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage2-20261005/legacy_domain.py",
+      "source_sha256": "c0c0df86b5ea88d9e48be4ea2ce4c57d2246dc7a4e772e58b724ca93be9c28fd"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "demo/static/lookup.js",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage2-20261005/static/lookup.js",
+      "source_sha256": "2f5f42087df0a38623fcf4f5399e1acb7a45aef88a0d7ccd41ee831efcb24e52"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "demo/static/booking.js",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage2-20261005/static/booking.js",
+      "source_sha256": "5e77f5f571aba9686cb059f14a1f295a5b6f08daf71419c58429df6617862293"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "demo/static/index.html",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage2-20261005/static/index.html",
+      "source_sha256": "961d502e9827942113c0e98c3bac4a97b00579aceb4c8dc3a02cc5c9c8051ead"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "demo/static/auth.js",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage2-20261005/static/auth.js",
+      "source_sha256": "4c07dcbe95f2e008b66bf343f4e880cd134512dea59a2005f0e2a467fdb5745b"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "demo/static/dom.js",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage2-20261005/static/dom.js",
+      "source_sha256": "4bb2c46674ab4fd87e161c17c350d865d20269596d14bff2fdae723e9ae48e40"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "demo/static/style.css",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage2-20261005/static/style.css",
+      "source_sha256": "fb85b41b2075eed91fe065a51824d2c50a71188bd74f239298a76939de9fb753"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "demo/static/api.js",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage2-20261005/static/api.js",
+      "source_sha256": "9a57a1e8c48b6e9df9cca7a199f8690b4cc716cfccb917d8ef23409e8a0eed8e"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "demo/static/search.js",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage2-20261005/static/search.js",
+      "source_sha256": "76a20d6c142d7a362f46a96335c88a8826c8c4c491e9a92c002a2b470185df5d"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "demo/static/app.js",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage2-20261005/static/app.js",
+      "source_sha256": "ce9795c065d509b88a46dedc5896a4bee1a228fa93617d06bef859b23b1ab58e"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "submission/video/The-Build-Guild-Tablekeeper-Demo.srt",
+      "source_path": "/Users/frank/mygit/Tablekeeper/submission/build-guild-demo/output/The-Build-Guild-Tablekeeper-Demo.srt",
+      "source_sha256": "7af27ff6ae955383f7f5afcabbe5afb5a96f3b934cd6dc1cb775f1d7a4cd5668"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "submission/video/transcript.md",
+      "source_path": "/Users/frank/mygit/Tablekeeper/submission/build-guild-demo/output/transcript.md",
+      "source_sha256": "d15f5d97d1ef6a5ea163cf250b1831304ee488ff093734ab41ce5348d7d21f2b"
+    }
+  ],
+  "render_candidate": "b1f7ef64db7f0dce0b3f3a913a3af280c96d70b9",
+  "video_rebuild_status": "RESOLVED_VERIFIED_MEDIA; original capture filename collision corrected with uniquely named genuine live stills; actual room clips retained",
+  "repaired_video": {
+    "path": "submission/video/The-Build-Guild-Tablekeeper-Demo.mp4",
+    "sha256": "6c4741e326a6c019d363b7df49466e692f99fe2823bc09f503b29ba3cb059cd8",
+    "qa": "submission/video/QA.json",
+    "repair_provenance": "submission/video/repair-provenance.json"
+  }
+}

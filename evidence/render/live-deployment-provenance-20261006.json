@@ -1,0 +1,177 @@
+{
+  "observed_at_utc": "2026-10-06T06:46:36.946417+00:00",
+  "public_deployment_repository": "https://github.com/Xuefeng-Zhu/tablekeeper-stage2",
+  "public_main": {
+    "date": "2026-10-06T06:02:32Z",
+    "message": "Deploy Stage 2 demo with sample venues and closed test routes",
+    "sha": "382998fe143268754ade2ed2702090df3f71ef56"
+  },
+  "deployment_url": "https://tablekeeper-stage2.onrender.com",
+  "method": "Read-only GitHub API main/tree and direct HTTPS GET for all nine static client assets. No deployment, app writes, messages, or source edits. Live bytes compared with Git blob IDs and two retained product commits.",
+  "assets": [
+    {
+      "url_path": "/",
+      "http_status": 200,
+      "bytes": 865,
+      "sha256": "961d502e9827942113c0e98c3bac4a97b00579aceb4c8dc3a02cc5c9c8051ead",
+      "git_blob_id": "46fde0e96b5c6e60dbdbc19d65e0de0f6eadfa95",
+      "matches_public_main_blob": true,
+      "source_commit_hashes": {
+        "original_b1f7ef64": {
+          "sha256": "27d191e7e5c1461ff8c7a8cc2193a34b1095ab8ca87c699336af76331fd3a6f0",
+          "matches_live": false
+        },
+        "publication_108bcd4": {
+          "sha256": "27d191e7e5c1461ff8c7a8cc2193a34b1095ab8ca87c699336af76331fd3a6f0",
+          "matches_live": false
+        }
+      }
+    },
+    {
+      "url_path": "/static/search.js",
+      "http_status": 200,
+      "bytes": 6817,
+      "sha256": "76a20d6c142d7a362f46a96335c88a8826c8c4c491e9a92c002a2b470185df5d",
+      "git_blob_id": "a0423273840285b7232e3146f1857d411a44a5a8",
+      "matches_public_main_blob": true,
+      "source_commit_hashes": {
+        "original_b1f7ef64": {
+          "sha256": "76a20d6c142d7a362f46a96335c88a8826c8c4c491e9a92c002a2b470185df5d",
+          "matches_live": true
+        },
+        "publication_108bcd4": {
+          "sha256": "826f0d993d2419c2d0d7d0d8c3b3c5a320bb512d9c948b194ed46def318c9b53",
+          "matches_live": false
+        }
+      }
+    },
+    {
+      "url_path": "/static/booking.js",
+      "http_status": 200,
+      "bytes": 5066,
+      "sha256": "5e77f5f571aba9686cb059f14a1f295a5b6f08daf71419c58429df6617862293",
+      "git_blob_id": "371c6113e5baf11d42eb5f729ef48584ffc802db",
+      "matches_public_main_blob": true,
+      "source_commit_hashes": {
+        "original_b1f7ef64": {
+          "sha256": "5e77f5f571aba9686cb059f14a1f295a5b6f08daf71419c58429df6617862293",
+          "matches_live": true
+        },
+        "publication_108bcd4": {
+          "sha256": "06daf7764d775ed058a276e6a77eed22870ece122cd8e5023fbc104c9f93e6a6",
+          "matches_live": false
+        }
+      }
+    },
+    {
+      "url_path": "/static/style.css",
+      "http_status": 200,
+      "bytes": 5216,
+      "sha256": "fb85b41b2075eed91fe065a51824d2c50a71188bd74f239298a76939de9fb753",
+      "git_blob_id": "e49dc63750c83db77fb575cd9001862216484b8e",
+      "matches_public_main_blob": true,
+      "source_commit_hashes": {
+        "original_b1f7ef64": {
+          "sha256": "fb85b41b2075eed91fe065a51824d2c50a71188bd74f239298a76939de9fb753",
+          "matches_live": true
+        },
+        "publication_108bcd4": {
+          "sha256": "3c82d6173ec7e1b11fd98a93c9f625f49084c2e45c5761a03eff5d691a611e61",
+          "matches_live": false
+        }
+      }
+    },
+    {
+      "url_path": "/static/dom.js",
+      "http_status": 200,
+      "bytes": 1079,
+      "sha256": "4bb2c46674ab4fd87e161c17c350d865d20269596d14bff2fdae723e9ae48e40",
+      "git_blob_id": "ed920bb7d44591a2efc0ff2e5ed15fddd5a0f5e2",
+      "matches_public_main_blob": true,
+      "source_commit_hashes": {
+        "original_b1f7ef64": {
+          "sha256": "4bb2c46674ab4fd87e161c17c350d865d20269596d14bff2fdae723e9ae48e40",
+          "matches_live": true
+        },
+        "publication_108bcd4": {
+          "sha256": "4bb2c46674ab4fd87e161c17c350d865d20269596d14bff2fdae723e9ae48e40",
+          "matches_live": true
+        }
+      }
+    },
+    {
+      "url_path": "/static/app.js",
+      "http_status": 200,
+      "bytes": 478,
+      "sha256": "ce9795c065d509b88a46dedc5896a4bee1a228fa93617d06bef859b23b1ab58e",
+      "git_blob_id": "640862802cc446f8b375d40dd43f0b9ee1aa8d42",
+      "matches_public_main_blob": true,
+      "source_commit_hashes": {
+        "original_b1f7ef64": {
+          "sha256": "ce9795c065d509b88a46dedc5896a4bee1a228fa93617d06bef859b23b1ab58e",
+          "matches_live": true
+        },
+        "publication_108bcd4": {
+          "sha256": "ce9795c065d509b88a46dedc5896a4bee1a228fa93617d06bef859b23b1ab58e",
+          "matches_live": true
+        }
+      }
+    },
+    {
+      "url_path": "/static/auth.js",
+      "http_status": 200,
+      "bytes": 3617,
+      "sha256": "4c07dcbe95f2e008b66bf343f4e880cd134512dea59a2005f0e2a467fdb5745b",
+      "git_blob_id": "0cc66b8ba60593ade81cffab639be1010e5da869",
+      "matches_public_main_blob": true,
+      "source_commit_hashes": {
+        "original_b1f7ef64": {
+          "sha256": "4c07dcbe95f2e008b66bf343f4e880cd134512dea59a2005f0e2a467fdb5745b",
+          "matches_live": true
+        },
+        "publication_108bcd4": {
+          "sha256": "4c07dcbe95f2e008b66bf343f4e880cd134512dea59a2005f0e2a467fdb5745b",
+          "matches_live": true
+        }
+      }
+    },
+    {
+      "url_path": "/static/api.js",
+      "http_status": 200,
+      "bytes": 1197,
+      "sha256": "9a57a1e8c48b6e9df9cca7a199f8690b4cc716cfccb917d8ef23409e8a0eed8e",
+      "git_blob_id": "f59e6f313bc7b80ffcae2cabfaf145ac49937920",
+      "matches_public_main_blob": true,
+      "source_commit_hashes": {
+        "original_b1f7ef64": {
+          "sha256": "9a57a1e8c48b6e9df9cca7a199f8690b4cc716cfccb917d8ef23409e8a0eed8e",
+          "matches_live": true
+        },
+        "publication_108bcd4": {
+          "sha256": "9a57a1e8c48b6e9df9cca7a199f8690b4cc716cfccb917d8ef23409e8a0eed8e",
+          "matches_live": true
+        }
+      }
+    },
+    {
+      "url_path": "/static/lookup.js",
+      "http_status": 200,
+      "bytes": 3744,
+      "sha256": "2f5f42087df0a38623fcf4f5399e1acb7a45aef88a0d7ccd41ee831efcb24e52",
+      "git_blob_id": "401a065c7105372aa3034ed3d05de1d2cb57f9cd",
+      "matches_public_main_blob": true,
+      "source_commit_hashes": {
+        "original_b1f7ef64": {
+          "sha256": "2f5f42087df0a38623fcf4f5399e1acb7a45aef88a0d7ccd41ee831efcb24e52",
+          "matches_live": true
+        },
+        "publication_108bcd4": {
+          "sha256": "2f5f42087df0a38623fcf4f5399e1acb7a45aef88a0d7ccd41ee831efcb24e52",
+          "matches_live": true
+        }
+      }
+    }
+  ],
+  "conclusion": "All live static assets match current public repository main 382998fe. Search and booking assets match original b1f7ef64 and differ from publication source 108bcd4; current app footage must be labeled historical b1 snapshot, not 108b implementation. index.html differs from both product commits because deployment adapter notice is disclosed.",
+  "limits": "Static assets establish client provenance only; server binary/runtime release id was not independently queried. No completed reservation or final acceptance verified."
+}

@@ -1,0 +1,13 @@
+# Shared code and fixed-candidate review
+
+Resolve paths absolutely. Work only in the dispatched repository or an explicitly assigned worktree. Inspect the current status and full revision before writing; preserve unrelated work. Configure the verified seat's Git author locally for its assigned checkout without exposing credentials.
+
+Begin with one writer. A coordinator may enable at most the frozen configured number of concurrent writers after the first team-authored commit exists. Each writer then receives a separate worktree outside the submission repository, non-overlapping ownership and a starting full revision. Worktrees, review clones and their Git metadata must never be placed inside deliverable directories. If isolated worktrees are unavailable, enforce one write lease for the whole checkout, including Git operations. A verbal suggestion to avoid conflicts is not a lease: the coordinator records owner, work item, start, expiry and release in the room before granting another.
+
+Do not reset, clean, amend, rebase, squash, force-push or otherwise rewrite attributable history. The coordinator integrates through a fast-forward or history-preserving merge and records the original commits and resulting integrated revision. Cherry-picking is not the default integration mechanism because it rewrites commit identities. A conflict belongs to the relevant owners and must be resolved in a new attributable commit with room evidence.
+
+Each delivery identifies the full committed revision, commands, results and limitations. After handoff, do not move the candidate under review. The reviewer uses a clean separate checkout at that exact revision; checks start only after confirming revision and cleanliness. Temporary build outputs and evidence go to the assigned run directory. A changed candidate requires a new handoff and fresh decision. Implementation-owner checks support the handoff but cannot replace independent release review.
+
+For incrementally extended deliverables, preserve each completed earlier output at its actual scope. Copy forward only when its gate is accepted, then widen the copy to the next dispatched requirements. Do not copy a later answer backward. Each deliverable remains independently buildable. Remove any copied nested Git metadata before committing files. Never use symlinks or submodules to hide required deliverable contents.
+
+A rejection names the exact failing revision, complete relevant requirements, minimal reproduction, observed and expected behavior and evidence. Its owner makes a new repair commit. The reviewer does not repair and approve the same candidate. Acceptance names the exact integrated revision and the scope independently verified.

@@ -1,0 +1,1179 @@
+{
+  "work_item": "UI-S2 repair1 R-F1",
+  "candidate": "108bcd4c48fa4fb4d7dedf286e94c8e4937f7f10",
+  "responsible": "@frankzhu94/factory-frontend",
+  "utc_start": "2026-10-06T06:21:01.222857+00:00",
+  "utc_end": "2026-10-06T06:21:29.764982+00:00",
+  "browser": "153.0.8010.12",
+  "records": [
+    {
+      "case": "1280-False-success-current",
+      "viewport": [
+        1280,
+        900
+      ],
+      "pair": false,
+      "state": "success",
+      "control": null,
+      "before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 79
+      },
+      "pending": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 79
+      },
+      "control_before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 79
+      },
+      "after": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 282
+      },
+      "pending_style": {
+        "border": "dashed",
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "real_server_statuses": [
+        201
+      ],
+      "pending_post_count": 1,
+      "enter_space_duplicates_suppressed": true,
+      "exact_uncertain_retry": null,
+      "result": "PASS",
+      "utc": "2026-10-06T06:21:04.808547+00:00"
+    },
+    {
+      "case": "1280-False-conflict-current",
+      "viewport": [
+        1280,
+        900
+      ],
+      "pair": false,
+      "state": "conflict",
+      "control": null,
+      "before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 79
+      },
+      "pending": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 79
+      },
+      "control_before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 79
+      },
+      "after": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 116
+      },
+      "pending_style": {
+        "border": "dashed",
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "real_server_statuses": [
+        409
+      ],
+      "pending_post_count": 1,
+      "enter_space_duplicates_suppressed": true,
+      "exact_uncertain_retry": null,
+      "result": "PASS",
+      "utc": "2026-10-06T06:21:05.840147+00:00"
+    },
+    {
+      "case": "1280-False-uncertain-current",
+      "viewport": [
+        1280,
+        900
+      ],
+      "pair": false,
+      "state": "uncertain",
+      "control": null,
+      "before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 79
+      },
+      "pending": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 79
+      },
+      "control_before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 79
+      },
+      "after": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 116
+      },
+      "pending_style": {
+        "border": "dashed",
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "real_server_statuses": [
+        201
+      ],
+      "pending_post_count": 1,
+      "enter_space_duplicates_suppressed": true,
+      "exact_uncertain_retry": true,
+      "result": "PASS",
+      "utc": "2026-10-06T06:21:06.767687+00:00"
+    },
+    {
+      "case": "1280-True-success-current",
+      "viewport": [
+        1280,
+        900
+      ],
+      "pair": true,
+      "state": "success",
+      "control": null,
+      "before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 79
+      },
+      "pending": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 79
+      },
+      "control_before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 79
+      },
+      "after": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 306
+      },
+      "pending_style": {
+        "border": "dashed",
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "real_server_statuses": [
+        201
+      ],
+      "pending_post_count": 1,
+      "enter_space_duplicates_suppressed": true,
+      "exact_uncertain_retry": null,
+      "result": "PASS",
+      "utc": "2026-10-06T06:21:07.648342+00:00"
+    },
+    {
+      "case": "1280-True-conflict-current",
+      "viewport": [
+        1280,
+        900
+      ],
+      "pair": true,
+      "state": "conflict",
+      "control": null,
+      "before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 79
+      },
+      "pending": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 79
+      },
+      "control_before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 79
+      },
+      "after": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 140
+      },
+      "pending_style": {
+        "border": "dashed",
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "real_server_statuses": [
+        409
+      ],
+      "pending_post_count": 1,
+      "enter_space_duplicates_suppressed": true,
+      "exact_uncertain_retry": null,
+      "result": "PASS",
+      "utc": "2026-10-06T06:21:08.723603+00:00"
+    },
+    {
+      "case": "1280-True-uncertain-current",
+      "viewport": [
+        1280,
+        900
+      ],
+      "pair": true,
+      "state": "uncertain",
+      "control": null,
+      "before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 79
+      },
+      "pending": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 79
+      },
+      "control_before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 79
+      },
+      "after": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 140
+      },
+      "pending_style": {
+        "border": "dashed",
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "real_server_statuses": [
+        201
+      ],
+      "pending_post_count": 1,
+      "enter_space_duplicates_suppressed": true,
+      "exact_uncertain_retry": true,
+      "result": "PASS",
+      "utc": "2026-10-06T06:21:09.620705+00:00"
+    },
+    {
+      "case": "375-False-success-current",
+      "viewport": [
+        375,
+        812
+      ],
+      "pair": false,
+      "state": "success",
+      "control": null,
+      "before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 3736
+      },
+      "pending": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 3742
+      },
+      "control_before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 3742
+      },
+      "after": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 4006
+      },
+      "pending_style": {
+        "border": "dashed",
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "real_server_statuses": [
+        201
+      ],
+      "pending_post_count": 1,
+      "enter_space_duplicates_suppressed": true,
+      "exact_uncertain_retry": null,
+      "result": "PASS",
+      "utc": "2026-10-06T06:21:10.477942+00:00"
+    },
+    {
+      "case": "375-False-conflict-current",
+      "viewport": [
+        375,
+        812
+      ],
+      "pair": false,
+      "state": "conflict",
+      "control": null,
+      "before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 3736
+      },
+      "pending": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 3742
+      },
+      "control_before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 3742
+      },
+      "after": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 3323
+      },
+      "pending_style": {
+        "border": "dashed",
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "real_server_statuses": [
+        409
+      ],
+      "pending_post_count": 1,
+      "enter_space_duplicates_suppressed": true,
+      "exact_uncertain_retry": null,
+      "result": "PASS",
+      "utc": "2026-10-06T06:21:11.505275+00:00"
+    },
+    {
+      "case": "375-False-uncertain-current",
+      "viewport": [
+        375,
+        812
+      ],
+      "pair": false,
+      "state": "uncertain",
+      "control": null,
+      "before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 3736
+      },
+      "pending": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 3742
+      },
+      "control_before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 3742
+      },
+      "after": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 3840
+      },
+      "pending_style": {
+        "border": "dashed",
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "real_server_statuses": [
+        201
+      ],
+      "pending_post_count": 1,
+      "enter_space_duplicates_suppressed": true,
+      "exact_uncertain_retry": true,
+      "result": "PASS",
+      "utc": "2026-10-06T06:21:12.316046+00:00"
+    },
+    {
+      "case": "375-True-success-current",
+      "viewport": [
+        375,
+        812
+      ],
+      "pair": true,
+      "state": "success",
+      "control": null,
+      "before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 3736
+      },
+      "pending": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 3742
+      },
+      "control_before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 3742
+      },
+      "after": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 4006
+      },
+      "pending_style": {
+        "border": "dashed",
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "real_server_statuses": [
+        201
+      ],
+      "pending_post_count": 1,
+      "enter_space_duplicates_suppressed": true,
+      "exact_uncertain_retry": null,
+      "result": "PASS",
+      "utc": "2026-10-06T06:21:13.089275+00:00"
+    },
+    {
+      "case": "375-True-conflict-current",
+      "viewport": [
+        375,
+        812
+      ],
+      "pair": true,
+      "state": "conflict",
+      "control": null,
+      "before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 3736
+      },
+      "pending": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 3742
+      },
+      "control_before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 3742
+      },
+      "after": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 3323
+      },
+      "pending_style": {
+        "border": "dashed",
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "real_server_statuses": [
+        409
+      ],
+      "pending_post_count": 1,
+      "enter_space_duplicates_suppressed": true,
+      "exact_uncertain_retry": null,
+      "result": "PASS",
+      "utc": "2026-10-06T06:21:14.024949+00:00"
+    },
+    {
+      "case": "375-True-uncertain-current",
+      "viewport": [
+        375,
+        812
+      ],
+      "pair": true,
+      "state": "uncertain",
+      "control": null,
+      "before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 3736
+      },
+      "pending": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 3742
+      },
+      "control_before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 3742
+      },
+      "after": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 3840
+      },
+      "pending_style": {
+        "border": "dashed",
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "real_server_statuses": [
+        201
+      ],
+      "pending_post_count": 1,
+      "enter_space_duplicates_suppressed": true,
+      "exact_uncertain_retry": true,
+      "result": "PASS",
+      "utc": "2026-10-06T06:21:14.884020+00:00"
+    },
+    {
+      "case": "375-True-success-user-moved",
+      "viewport": [
+        375,
+        812
+      ],
+      "pair": true,
+      "state": "success",
+      "control": "user-moved",
+      "before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 3736
+      },
+      "pending": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 3742
+      },
+      "control_before": {
+        "tag": "INPUT",
+        "testid": "party-size-input",
+        "y": 285
+      },
+      "after": {
+        "tag": "INPUT",
+        "testid": "party-size-input",
+        "y": 285
+      },
+      "pending_style": {
+        "border": "dashed",
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "real_server_statuses": [
+        201
+      ],
+      "pending_post_count": 1,
+      "enter_space_duplicates_suppressed": true,
+      "exact_uncertain_retry": null,
+      "result": "PASS",
+      "utc": "2026-10-06T06:21:15.686553+00:00"
+    },
+    {
+      "case": "375-True-conflict-user-moved",
+      "viewport": [
+        375,
+        812
+      ],
+      "pair": true,
+      "state": "conflict",
+      "control": "user-moved",
+      "before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 3736
+      },
+      "pending": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 3742
+      },
+      "control_before": {
+        "tag": "INPUT",
+        "testid": "party-size-input",
+        "y": 285
+      },
+      "after": {
+        "tag": "INPUT",
+        "testid": "party-size-input",
+        "y": 285
+      },
+      "pending_style": {
+        "border": "dashed",
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "real_server_statuses": [
+        409
+      ],
+      "pending_post_count": 1,
+      "enter_space_duplicates_suppressed": true,
+      "exact_uncertain_retry": null,
+      "result": "PASS",
+      "utc": "2026-10-06T06:21:16.625485+00:00"
+    },
+    {
+      "case": "375-True-uncertain-user-moved",
+      "viewport": [
+        375,
+        812
+      ],
+      "pair": true,
+      "state": "uncertain",
+      "control": "user-moved",
+      "before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 3736
+      },
+      "pending": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 3742
+      },
+      "control_before": {
+        "tag": "INPUT",
+        "testid": "party-size-input",
+        "y": 285
+      },
+      "after": {
+        "tag": "INPUT",
+        "testid": "party-size-input",
+        "y": 285
+      },
+      "pending_style": {
+        "border": "dashed",
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "real_server_statuses": [
+        201
+      ],
+      "pending_post_count": 1,
+      "enter_space_duplicates_suppressed": true,
+      "exact_uncertain_retry": null,
+      "result": "PASS",
+      "utc": "2026-10-06T06:21:17.402472+00:00"
+    },
+    {
+      "case": "375-True-success-keyboard-moved",
+      "viewport": [
+        375,
+        812
+      ],
+      "pair": true,
+      "state": "success",
+      "control": "keyboard-moved",
+      "before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 3736
+      },
+      "pending": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 3742
+      },
+      "control_before": {
+        "tag": "BUTTON",
+        "testid": "slot-B+A-21:30",
+        "y": 3742
+      },
+      "after": {
+        "tag": "BUTTON",
+        "testid": "slot-B+A-21:30",
+        "y": 3742
+      },
+      "pending_style": {
+        "border": "dashed",
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "real_server_statuses": [
+        201
+      ],
+      "pending_post_count": 1,
+      "enter_space_duplicates_suppressed": true,
+      "exact_uncertain_retry": null,
+      "result": "PASS",
+      "utc": "2026-10-06T06:21:18.204496+00:00"
+    },
+    {
+      "case": "375-True-conflict-keyboard-moved",
+      "viewport": [
+        375,
+        812
+      ],
+      "pair": true,
+      "state": "conflict",
+      "control": "keyboard-moved",
+      "before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 3736
+      },
+      "pending": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 3742
+      },
+      "control_before": {
+        "tag": "BUTTON",
+        "testid": "slot-B+A-21:30",
+        "y": 3742
+      },
+      "after": {
+        "tag": "BUTTON",
+        "testid": "slot-B+A-21:30",
+        "y": 3224
+      },
+      "pending_style": {
+        "border": "dashed",
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "real_server_statuses": [
+        409
+      ],
+      "pending_post_count": 1,
+      "enter_space_duplicates_suppressed": true,
+      "exact_uncertain_retry": null,
+      "result": "PASS",
+      "utc": "2026-10-06T06:21:19.155286+00:00"
+    },
+    {
+      "case": "375-True-uncertain-keyboard-moved",
+      "viewport": [
+        375,
+        812
+      ],
+      "pair": true,
+      "state": "uncertain",
+      "control": "keyboard-moved",
+      "before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 3736
+      },
+      "pending": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 3742
+      },
+      "control_before": {
+        "tag": "BUTTON",
+        "testid": "slot-B+A-21:30",
+        "y": 3742
+      },
+      "after": {
+        "tag": "BUTTON",
+        "testid": "slot-B+A-21:30",
+        "y": 3742
+      },
+      "pending_style": {
+        "border": "dashed",
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "real_server_statuses": [
+        201
+      ],
+      "pending_post_count": 1,
+      "enter_space_duplicates_suppressed": true,
+      "exact_uncertain_retry": null,
+      "result": "PASS",
+      "utc": "2026-10-06T06:21:19.936294+00:00"
+    },
+    {
+      "case": "375-True-success-new-form",
+      "viewport": [
+        375,
+        812
+      ],
+      "pair": true,
+      "state": "success",
+      "control": "new-form",
+      "before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 3736
+      },
+      "pending": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 3742
+      },
+      "control_before": {
+        "tag": "INPUT",
+        "testid": "booking-party-size",
+        "y": 3736
+      },
+      "after": {
+        "tag": "INPUT",
+        "testid": "booking-party-size",
+        "y": 3736
+      },
+      "pending_style": {
+        "border": "dashed",
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "real_server_statuses": [
+        201
+      ],
+      "pending_post_count": 1,
+      "enter_space_duplicates_suppressed": true,
+      "exact_uncertain_retry": null,
+      "result": "PASS",
+      "utc": "2026-10-06T06:21:20.886368+00:00"
+    },
+    {
+      "case": "375-True-conflict-new-form",
+      "viewport": [
+        375,
+        812
+      ],
+      "pair": true,
+      "state": "conflict",
+      "control": "new-form",
+      "before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 3736
+      },
+      "pending": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 3742
+      },
+      "control_before": {
+        "tag": "INPUT",
+        "testid": "booking-party-size",
+        "y": 3736
+      },
+      "after": {
+        "tag": "INPUT",
+        "testid": "booking-party-size",
+        "y": 3736
+      },
+      "pending_style": {
+        "border": "dashed",
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "real_server_statuses": [
+        409
+      ],
+      "pending_post_count": 1,
+      "enter_space_duplicates_suppressed": true,
+      "exact_uncertain_retry": null,
+      "result": "PASS",
+      "utc": "2026-10-06T06:21:21.986523+00:00"
+    },
+    {
+      "case": "375-True-uncertain-new-form",
+      "viewport": [
+        375,
+        812
+      ],
+      "pair": true,
+      "state": "uncertain",
+      "control": "new-form",
+      "before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 3736
+      },
+      "pending": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 3742
+      },
+      "control_before": {
+        "tag": "INPUT",
+        "testid": "booking-party-size",
+        "y": 3736
+      },
+      "after": {
+        "tag": "INPUT",
+        "testid": "booking-party-size",
+        "y": 3736
+      },
+      "pending_style": {
+        "border": "dashed",
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "real_server_statuses": [
+        201
+      ],
+      "pending_post_count": 1,
+      "enter_space_duplicates_suppressed": true,
+      "exact_uncertain_retry": null,
+      "result": "PASS",
+      "utc": "2026-10-06T06:21:22.938478+00:00"
+    },
+    {
+      "case": "375-True-success-new-search",
+      "viewport": [
+        375,
+        812
+      ],
+      "pair": true,
+      "state": "success",
+      "control": "new-search",
+      "before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 3736
+      },
+      "pending": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 3742
+      },
+      "control_before": {
+        "tag": "INPUT",
+        "testid": "party-size-input",
+        "y": 192
+      },
+      "after": {
+        "tag": "INPUT",
+        "testid": "party-size-input",
+        "y": 192
+      },
+      "pending_style": {
+        "border": "dashed",
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "real_server_statuses": [
+        201
+      ],
+      "pending_post_count": 1,
+      "enter_space_duplicates_suppressed": true,
+      "exact_uncertain_retry": null,
+      "result": "PASS",
+      "utc": "2026-10-06T06:21:23.942443+00:00"
+    },
+    {
+      "case": "375-True-conflict-new-search",
+      "viewport": [
+        375,
+        812
+      ],
+      "pair": true,
+      "state": "conflict",
+      "control": "new-search",
+      "before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 3736
+      },
+      "pending": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 3742
+      },
+      "control_before": {
+        "tag": "INPUT",
+        "testid": "party-size-input",
+        "y": 192
+      },
+      "after": {
+        "tag": "INPUT",
+        "testid": "party-size-input",
+        "y": 192
+      },
+      "pending_style": {
+        "border": "dashed",
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "real_server_statuses": [
+        409
+      ],
+      "pending_post_count": 1,
+      "enter_space_duplicates_suppressed": true,
+      "exact_uncertain_retry": null,
+      "result": "PASS",
+      "utc": "2026-10-06T06:21:25.131004+00:00"
+    },
+    {
+      "case": "375-True-uncertain-new-search",
+      "viewport": [
+        375,
+        812
+      ],
+      "pair": true,
+      "state": "uncertain",
+      "control": "new-search",
+      "before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 3736
+      },
+      "pending": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 3742
+      },
+      "control_before": {
+        "tag": "INPUT",
+        "testid": "party-size-input",
+        "y": 192
+      },
+      "after": {
+        "tag": "INPUT",
+        "testid": "party-size-input",
+        "y": 192
+      },
+      "pending_style": {
+        "border": "dashed",
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "real_server_statuses": [
+        201
+      ],
+      "pending_post_count": 1,
+      "enter_space_duplicates_suppressed": true,
+      "exact_uncertain_retry": null,
+      "result": "PASS",
+      "utc": "2026-10-06T06:21:26.098655+00:00"
+    },
+    {
+      "case": "375-True-success-logout",
+      "viewport": [
+        375,
+        812
+      ],
+      "pair": true,
+      "state": "success",
+      "control": "logout",
+      "before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 3736
+      },
+      "pending": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 3742
+      },
+      "control_before": {
+        "tag": "INPUT",
+        "testid": "party-size-input",
+        "y": 0
+      },
+      "after": {
+        "tag": "INPUT",
+        "testid": "party-size-input",
+        "y": 0
+      },
+      "pending_style": {
+        "border": "dashed",
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "real_server_statuses": [
+        201
+      ],
+      "pending_post_count": 1,
+      "enter_space_duplicates_suppressed": true,
+      "exact_uncertain_retry": null,
+      "result": "PASS",
+      "utc": "2026-10-06T06:21:27.105574+00:00"
+    },
+    {
+      "case": "375-True-conflict-logout",
+      "viewport": [
+        375,
+        812
+      ],
+      "pair": true,
+      "state": "conflict",
+      "control": "logout",
+      "before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 3736
+      },
+      "pending": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 3742
+      },
+      "control_before": {
+        "tag": "INPUT",
+        "testid": "party-size-input",
+        "y": 0
+      },
+      "after": {
+        "tag": "INPUT",
+        "testid": "party-size-input",
+        "y": 0
+      },
+      "pending_style": {
+        "border": "dashed",
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "real_server_statuses": [
+        409
+      ],
+      "pending_post_count": 1,
+      "enter_space_duplicates_suppressed": true,
+      "exact_uncertain_retry": null,
+      "result": "PASS",
+      "utc": "2026-10-06T06:21:28.239269+00:00"
+    },
+    {
+      "case": "375-True-uncertain-logout",
+      "viewport": [
+        375,
+        812
+      ],
+      "pair": true,
+      "state": "uncertain",
+      "control": "logout",
+      "before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 3736
+      },
+      "pending": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 3742
+      },
+      "control_before": {
+        "tag": "INPUT",
+        "testid": "party-size-input",
+        "y": 0
+      },
+      "after": {
+        "tag": "INPUT",
+        "testid": "party-size-input",
+        "y": 0
+      },
+      "pending_style": {
+        "border": "dashed",
+        "outline": "solid",
+        "outlineWidth": "3px"
+      },
+      "real_server_statuses": [
+        201
+      ],
+      "pending_post_count": 1,
+      "enter_space_duplicates_suppressed": true,
+      "exact_uncertain_retry": null,
+      "result": "PASS",
+      "utc": "2026-10-06T06:21:29.577015+00:00"
+    }
+  ],
+  "expected_cases": 27,
+  "result": "PASS",
+  "layer": "Actual Docker Chromium keyboard Enter/Space + real service409/201; hold/abort actual bytes; unchanged retry200",
+  "limitations": [
+    "Owner checks only; independent Reviewer and Designer rendered gates pending.",
+    "Native browser zoom/assistive audio and exhaustive schedules NOT_TESTED."
+  ],
+  "tokens_logged": false
+}

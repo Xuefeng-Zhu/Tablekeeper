@@ -1,0 +1,92 @@
+{
+  "work_items": [
+    "UI-S2",
+    "RENDER-S2"
+  ],
+  "candidate": "b1f7ef64db7f0dce0b3f3a913a3af280c96d70b9",
+  "responsible": "@frankzhu94/factory-reviewer",
+  "input_event": "dbb6316d-715a-4cdc-a65e-f45f003f0625",
+  "receipt_event": "fa59078c-d602-4660-95db-2bf47885da52",
+  "clone": "/private/tmp/tablekeeper-review-s2-focus-20261006T0610Z",
+  "workspace": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005",
+  "start_utc": "2026-10-06T06:09:35.268913+00:00",
+  "end_utc": "2026-10-06T06:09:50.840277+00:00",
+  "browser": "153.0.8010.12",
+  "decisions": {
+    "UI-S2": "REJECTED R-F1",
+    "RENDER-S2": "ACCEPTED evidence only; product gate FAIL"
+  },
+  "independent_observations": {
+    "conflict_uncertain_failure": 8,
+    "success_failure": 1,
+    "user_newform_focus_controls_pass": 2
+  },
+  "verification_commands": [
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit": 0,
+      "stdout": "b1f7ef64db7f0dce0b3f3a913a3af280c96d70b9\n"
+    },
+    {
+      "argv": [
+        "git",
+        "status",
+        "--porcelain"
+      ],
+      "exit": 0,
+      "stdout": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit": 0,
+      "stdout": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--exit-code",
+        "b3df39340cee6f738ac79a12dd1347fc38e969e9",
+        "HEAD",
+        "--",
+        "stage-1"
+      ],
+      "exit": 0,
+      "stdout": ""
+    }
+  ],
+  "execution_log": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s2-focus-20261006T0610Z/execution.json",
+  "evidence_owner_audit": {
+    "snapshots": 75,
+    "computed_contrasts": 22,
+    "focus_failures": 8,
+    "supplement_snapshots": 10,
+    "initial_failed_attempt_preserved": true
+  },
+  "not_tested": [
+    "Full independent Stage2 release/API/QA assessment pending changed candidate",
+    "Native zoom/real assistive audio/allasyncschedules/exactcutoff/resourcepeaks"
+  ],
+  "cost": "UNAVAILABLE",
+  "skill": "/Users/frank/.codex/skills/webapp-testing/SKILL.md",
+  "record_utc": "2026-10-06T06:10:47.038610+00:00",
+  "verdict_events": {
+    "UI-S2": "0dce0d7d-8f36-40c1-8609-f53018c30f02",
+    "RENDER-S2": "e86f4f79-33ad-45cc-91dc-e0e0d6e60fb2"
+  },
+  "source_digests": {
+    "/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-1.md": "9460189eac83802ce158f16ee90989af728a489b32a6147e2dc8e320f383055f",
+    "/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-2.md": "b1aa1b4affad456ff26f208a378eb2f6884153fc6ef667ab37b888fcda96c5dc",
+    "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/DESIGN.md": "677188d1b6f6da7f34a3fc810259970e013d153517a078b27cc0bb8716ba433f",
+    "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/ARCHITECTURE.md": "3ab218e821038f8468d8a8a835b250da31c7c59e1691c55d2c607186a277ace3",
+    "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/WORKING.md": "41bb75489355d279a7f6593eb6799bb627b19f9d90a9446d750be3a5543f5cc3"
+  }
+}

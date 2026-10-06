@@ -1,0 +1,42 @@
+{
+  "status": "PASS_LOCAL_HTTP",
+  "checked_at": "2026-10-06T06:02:06.499894+00:00",
+  "candidate": "b1f7ef64db7f0dce0b3f3a913a3af280c96d70b9",
+  "checks": [
+    {
+      "name": "health",
+      "status": "PASS"
+    },
+    {
+      "name": "all test endpoints and percent-encoded aliases closed",
+      "status": "PASS",
+      "requests": 49
+    },
+    {
+      "name": "browser routes and local assets",
+      "status": "PASS"
+    },
+    {
+      "name": "synthetic sample restaurants",
+      "status": "PASS",
+      "count": 2
+    },
+    {
+      "name": "signup and login",
+      "status": "PASS"
+    },
+    {
+      "name": "availability and pair booking with stable replay",
+      "status": "PASS"
+    },
+    {
+      "name": "private lookup and auth boundary",
+      "status": "PASS"
+    },
+    {
+      "name": "cancellation",
+      "status": "PASS"
+    }
+  ],
+  "scope": "Real local child Python HTTP server only; no Docker/Render/browser acceptance claimed. Requests use synthetic account; tokens/passwords/reservation reference omitted."
+}

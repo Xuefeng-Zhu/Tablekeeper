@@ -1,0 +1,9 @@
+[project]
+name = "seven-seat-factory"
+version = "0.1.0"
+description = "Reproducible BAND factory preparation utilities"
+requires-python = ">=3.12"
+dependencies = ["band-sdk[codex,claude-sdk,opencode]==4.0.0", "PyYAML==6.0.3", "psutil==7.2.2"]
+
+[tool.uv]
+package = false

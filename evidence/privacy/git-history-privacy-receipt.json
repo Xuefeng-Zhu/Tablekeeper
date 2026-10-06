@@ -1,0 +1,119 @@
+{
+  "method": "All reachable Git objects from --all; every blob decoded with replacement for credential-shape scan; official config-only env policy, room exclusion preserved; broader token/private-key/JWT shapes included.",
+  "refs": [
+    "refs/heads/local-sol-20261005 108bcd4c48fa4fb4d7dedf286e94c8e4937f7f10",
+    "refs/heads/main 36e646e04bc7c86da51a9addee8297f2a0a9ad86",
+    "refs/remotes/origin/HEAD 36e646e04bc7c86da51a9addee8297f2a0a9ad86",
+    "refs/remotes/origin/main 36e646e04bc7c86da51a9addee8297f2a0a9ad86",
+    "refs/remotes/origin/run-2 86ad17c600fd994bcb55c222049b7d0546f2e472",
+    "refs/remotes/origin/run-3 dc4cf0c4dcf8b96e155f156694960df7fc1f4745",
+    "refs/remotes/origin/run-4 13bc38fc1d4396c70c42b529eab369d6f84a0186",
+    "refs/remotes/origin/run-5 268a0bb327ac6ec596f1c7bd4f2847e93f288d35",
+    "refs/remotes/origin/run-6 fea243fb5bd9e38a246c086a81dad337866f1b64",
+    "refs/remotes/origin/run-7 c1da398ef05700ae6e3846a9249d2ff2032648b7",
+    "refs/remotes/origin/run-8 40a3ba605260aa785d9270b89b7e4e98c52f997d"
+  ],
+  "objects_by_type": {
+    "commit": 93,
+    "tree": 252,
+    "blob": 443
+  },
+  "blobs_scanned": 443,
+  "blob_bytes": 27957362,
+  "candidate_count": 10,
+  "candidate_findings": [
+    {
+      "blob_id": "ee9ac9e2e3fe5a2d20fcf3c650942b287d1b8e9c",
+      "path": "qa/boundary-cases.json",
+      "shape": "env-assignment",
+      "line": 47,
+      "length": 12,
+      "fingerprint": "2e30cb835b9115fb",
+      "classification": "false-positive prose describing idempotency HTTP status and missing-token behavior; not a credential"
+    },
+    {
+      "blob_id": "ee9ac9e2e3fe5a2d20fcf3c650942b287d1b8e9c",
+      "path": "qa/boundary-cases.json",
+      "shape": "env-assignment",
+      "line": 307,
+      "length": 8,
+      "fingerprint": "37483b82fe4627b5",
+      "classification": "false-positive prose describing idempotency HTTP status and missing-token behavior; not a credential"
+    },
+    {
+      "blob_id": "ee9ac9e2e3fe5a2d20fcf3c650942b287d1b8e9c",
+      "path": "qa/boundary-cases.json",
+      "shape": "env-assignment",
+      "line": 329,
+      "length": 19,
+      "fingerprint": "a721b218760945b0",
+      "classification": "false-positive prose describing idempotency HTTP status and missing-token behavior; not a credential"
+    },
+    {
+      "blob_id": "ee9ac9e2e3fe5a2d20fcf3c650942b287d1b8e9c",
+      "path": "qa/boundary-cases.json",
+      "shape": "env-assignment",
+      "line": 423,
+      "length": 8,
+      "fingerprint": "37483b82fe4627b5",
+      "classification": "false-positive prose describing idempotency HTTP status and missing-token behavior; not a credential"
+    },
+    {
+      "blob_id": "ee9ac9e2e3fe5a2d20fcf3c650942b287d1b8e9c",
+      "path": "qa/boundary-cases.json",
+      "shape": "env-assignment",
+      "line": 423,
+      "length": 8,
+      "fingerprint": "7620ac4f599ee42a",
+      "classification": "false-positive prose describing idempotency HTTP status and missing-token behavior; not a credential"
+    },
+    {
+      "blob_id": "3ea0658e586f74cc3c282958e68b919710fc6fee",
+      "path": "qa/boundary-cases.json",
+      "shape": "env-assignment",
+      "line": 47,
+      "length": 12,
+      "fingerprint": "2e30cb835b9115fb",
+      "classification": "false-positive prose describing idempotency HTTP status and missing-token behavior; not a credential"
+    },
+    {
+      "blob_id": "3ea0658e586f74cc3c282958e68b919710fc6fee",
+      "path": "qa/boundary-cases.json",
+      "shape": "env-assignment",
+      "line": 307,
+      "length": 8,
+      "fingerprint": "37483b82fe4627b5",
+      "classification": "false-positive prose describing idempotency HTTP status and missing-token behavior; not a credential"
+    },
+    {
+      "blob_id": "3ea0658e586f74cc3c282958e68b919710fc6fee",
+      "path": "qa/boundary-cases.json",
+      "shape": "env-assignment",
+      "line": 329,
+      "length": 19,
+      "fingerprint": "a721b218760945b0",
+      "classification": "false-positive prose describing idempotency HTTP status and missing-token behavior; not a credential"
+    },
+    {
+      "blob_id": "3ea0658e586f74cc3c282958e68b919710fc6fee",
+      "path": "qa/boundary-cases.json",
+      "shape": "env-assignment",
+      "line": 422,
+      "length": 8,
+      "fingerprint": "37483b82fe4627b5",
+      "classification": "false-positive prose describing idempotency HTTP status and missing-token behavior; not a credential"
+    },
+    {
+      "blob_id": "3ea0658e586f74cc3c282958e68b919710fc6fee",
+      "path": "qa/boundary-cases.json",
+      "shape": "env-assignment",
+      "line": 422,
+      "length": 8,
+      "fingerprint": "7620ac4f599ee42a",
+      "classification": "false-positive prose describing idempotency HTTP status and missing-token behavior; not a credential"
+    }
+  ],
+  "status": "PASS \u2014 no actual provider/GitHub/BAND credential detected in reachable history",
+  "strong_credential_matches": 0,
+  "limitations": "All currently reachable refs were scanned, including preserved remote branches; unreachable deleted objects and external GitHub pull request refs were not queried."
+}

@@ -1,0 +1,44 @@
+{
+  "status": "PASS_LIVE_HTTP",
+  "base_url": "https://tablekeeper-stage2.onrender.com",
+  "checked_at": "2026-10-06T06:04:47.779802+00:00",
+  "deployment_commit": "382998fe143268754ade2ed2702090df3f71ef56",
+  "source_candidate": "b1f7ef64db7f0dce0b3f3a913a3af280c96d70b9",
+  "checks": [
+    {
+      "name": "health",
+      "status": "PASS"
+    },
+    {
+      "name": "read-only test endpoint closure",
+      "status": "PASS",
+      "requests": 7
+    },
+    {
+      "name": "browser routes, local assets and demo disclosure",
+      "status": "PASS"
+    },
+    {
+      "name": "synthetic restaurant seed",
+      "status": "PASS",
+      "count": 2
+    },
+    {
+      "name": "synthetic signup and login",
+      "status": "PASS"
+    },
+    {
+      "name": "availability, pair booking and exact idempotent replay",
+      "status": "PASS"
+    },
+    {
+      "name": "private lookup, own list and auth boundary",
+      "status": "PASS"
+    },
+    {
+      "name": "synthetic cancellation",
+      "status": "PASS"
+    }
+  ],
+  "scope": "Actual HTTPS health/API/assets only; no rendered browser, independent factory acceptance, persistent storage or restart proof. Created one synthetic account and cancelled its one synthetic reservation. Secrets and private identifiers omitted."
+}

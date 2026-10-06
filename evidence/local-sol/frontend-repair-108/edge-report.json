@@ -1,0 +1,32 @@
+{
+  "work_item": "UI-S2",
+  "candidate": "108bcd4c48fa4fb4d7dedf286e94c8e4937f7f10",
+  "responsible": "@frankzhu94/factory-frontend",
+  "started_utc": "2026-10-06T06:23:30.733874+00:00",
+  "ended_utc": "2026-10-06T06:23:40.141831+00:00",
+  "browser": "153.0.8010.12",
+  "results": [
+    {
+      "case": "transport-classes-replay-lost-definite-rejection",
+      "result": "PASS"
+    },
+    {
+      "case": "conflict-refresh-loses-to-new-search",
+      "result": "PASS"
+    },
+    {
+      "case": "lookup-detail-cancel-stale-guards",
+      "result": "PASS"
+    },
+    {
+      "case": "keyboard-computed-contrast-reflow-long-labels",
+      "result": "PASS"
+    },
+    {
+      "case": "exact-large-party-json",
+      "result": "PASS"
+    }
+  ],
+  "zoom_limit": "200% text and effective 375px reflow observed; browser native zoom NOT_TESTED",
+  "layer": "actual Docker Chromium and API; held and aborted actual network responses"
+}
