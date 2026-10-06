@@ -10,8 +10,24 @@ from values import fail, field, canonical, integer, APIError
 from state import empty, reset, imported, email, credential, password_matches
 
 
+def integer_text(value):
+    """Format unrestricted fixture integers without changing Python's global guard."""
+    if value.bit_length()<1024:return str(value)
+    negative=value<0;value=abs(value);chunks=[]
+    while value:
+        value,chunk=divmod(value,1000000000);chunks.append(chunk)
+    return ('-' if negative else '')+str(chunks[-1])+''.join(str(chunk).zfill(9) for chunk in reversed(chunks[:-1]))
+
+
+def json_text(value):
+    if type(value) is int:return integer_text(value)
+    if isinstance(value,dict):return '{'+','.join(json.dumps(key,ensure_ascii=True)+':'+json_text(child) for key,child in value.items())+'}'
+    if isinstance(value,list):return '['+','.join(json_text(child) for child in value)+']'
+    return json.dumps(value,ensure_ascii=True,allow_nan=False,separators=(',',':'))
+
+
 def encoded(value):
-    return json.dumps(value, ensure_ascii=True, separators=(',', ':')).encode()
+    return json_text(value).encode()
 
 
 class Service:

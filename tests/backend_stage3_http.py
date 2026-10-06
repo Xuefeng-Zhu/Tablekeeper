@@ -36,6 +36,28 @@ class Stage3Tests(HTTPTests):
     def adopt(self,ref,count=3,weeks=1,key='series'):
         return self.request('POST','/series',{'anchor_reference':ref,'count':count,'interval_weeks':weeks},self.token,key)
     def series(self,sid):return self.request('GET','/series/'+sid,token=self.token)
+    def test_unbounded_fixture_integer_json_roundtrip(self):
+        from decimal import Decimal
+        import urllib.request
+        fixture=self.fixture();fixture['restaurants'][0]['tables'][0]['capacity']='BIGINTEGER'
+        digits='1'+'0'*5000
+        raw=json.dumps(fixture).replace('"BIGINTEGER"',digits)
+        self.assertEqual(self.request('POST','/_test/reset',raw=raw)[0],204)
+        token=self.request('POST','/auth/login',{'email':'a@b','password':'password1'})[1]['token']
+        def read(path):
+            with urllib.request.urlopen(self.urls[0]+path) as response:return response.read()
+        row=json.loads(read('/availability?restaurant_id=r&date=2030-01-07&party_size=1'),parse_int=Decimal)['slots'][0]
+        self.assertEqual(row['available_options'][0]['capacity'],Decimal('1e5000'))
+        body='{"restaurant_id":"r","table_id":"A","party_size":'+digits+',"starts_at_local":"2030-01-07T19:00"}'
+        req=urllib.request.Request(self.urls[0]+'/reservations',data=body.encode(),headers={'Content-Type':'application/json','Authorization':'Bearer '+token,'Idempotency-Key':'big'},method='POST')
+        with urllib.request.urlopen(req) as response:
+            self.assertEqual(response.status,201);record=json.loads(response.read(),parse_int=Decimal)
+        self.assertEqual(record['party_size'],Decimal('1e5000'))
+        exported=read('/_test/export')
+        self.assertEqual(self.request('POST','/_test/import',raw=exported.decode(),destination=1)[0],204)
+        with urllib.request.urlopen(self.urls[1]+'/availability?restaurant_id=r&date=2030-01-07&party_size=1') as response:
+            result=json.loads(response.read(),parse_int=Decimal)
+        self.assertEqual(result['slots'][-1]['available_options'][0]['capacity'],Decimal('1e5000'))
     def test_availability_unknown_restaurant_and_valid_control(self):
         self.error(self.request('GET','/availability?restaurant_id=missing&date=2030-01-07&party_size=1'),404,'not_found')
         self.error(self.request('GET','/availability?restaurant_id=missing&date=2030-01-07&party_size=1&explain=true'),404,'not_found')
