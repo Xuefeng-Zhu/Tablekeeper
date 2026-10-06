@@ -4,22 +4,13 @@ from decimal import Decimal
 from datetime import datetime, timedelta, timezone
 from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 from values import fail, field, identifier, APIError
+from temporal import instant, resolve, to_local, microseconds, MINUTE_US
 UTC = timezone.utc
 WEEKDAYS = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun']
 
 
 def now():
     return datetime.now(UTC)
-
-
-def instant(text):
-    try:
-        value = datetime.fromisoformat(text)
-        if value.tzinfo is None:
-            fail()
-        return value.astimezone(UTC)
-    except (ValueError, TypeError):
-        fail()
 
 
 def local(text):
@@ -29,17 +20,6 @@ def local(text):
         return datetime.strptime(text, '%Y-%m-%dT%H:%M')
     except ValueError:
         fail()
-
-
-def resolve(value, zone):
-    candidates = []
-    for fold in (0, 1):
-        utc = value.replace(tzinfo=zone, fold=fold).astimezone(UTC)
-        if utc.astimezone(zone).replace(tzinfo=None) == value:
-            candidates.append(utc)
-    if not candidates:
-        fail(422, 'invalid_local_time')
-    return min(candidates)
 
 
 def boundary(value, zone):
@@ -90,10 +70,7 @@ def plan(state, body, existing=None):
     naive = local(text)
     zone = ZoneInfo(restaurant['timezone'])
     start = resolve(naive, zone)
-    try:
-        end = start + timedelta(minutes=restaurant['reservation_duration_minutes'])
-    except OverflowError:
-        fail(422, 'outside_opening_hours')
+    end = start + restaurant['reservation_duration_minutes'] * MINUTE_US
     window = hours(restaurant, naive)
     if window is None:
         fail(422, 'outside_opening_hours')
@@ -105,8 +82,8 @@ def plan(state, body, existing=None):
     if existing and all(existing[k] == v for k, v in [('table_id', tid), ('party_size', party), ('starts_at_local', text)]):
         return {k: existing[k] for k in ('restaurant_id', 'table_id', 'party_size', 'starts_at_local', 'starts_at', 'ends_at')}
     return {'restaurant_id': rid, 'table_id': tid, 'party_size': party,
-            'starts_at_local': text, 'starts_at': start.astimezone(zone).isoformat(),
-            'ends_at': end.astimezone(zone).isoformat()}
+            'starts_at_local': text, 'starts_at': to_local(start, zone).isoformat(),
+            'ends_at': to_local(end, zone).isoformat()}
 
 
 def overlaps(a, b):
@@ -132,7 +109,7 @@ def amendable(state, record, clock):
     if record['status'] == 'cancelled':
         fail(409, 'reservation_cancelled')
     restaurant = find_restaurant(state, record['restaurant_id'])
-    if clock >= instant(record['starts_at']) - timedelta(minutes=restaurant['cancellation_cutoff_minutes']):
+    if microseconds(clock) >= instant(record['starts_at']) - restaurant['cancellation_cutoff_minutes'] * MINUTE_US:
         fail(409, 'cutoff_passed')
 
 
@@ -166,8 +143,8 @@ def availability(state, query):
                 if table is None:
                     zone = ZoneInfo(restaurant['timezone'])
                     start = resolve(cursor, zone)
-                    legal = start + timedelta(minutes=restaurant['reservation_duration_minutes']) <= boundary(close, zone)
-                    candidate = {'starts_at': start.astimezone(zone).isoformat()}
+                    legal = start + restaurant['reservation_duration_minutes'] * MINUTE_US <= boundary(close, zone)
+                    candidate = {'starts_at': to_local(start, zone).isoformat()}
                 else:
                     candidate = plan(state, {'restaurant_id': rid, 'table_id': table['id'], 'party_size': 1, 'starts_at_local': text})
                     legal = True

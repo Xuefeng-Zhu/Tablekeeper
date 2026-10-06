@@ -225,6 +225,55 @@ class HTTPTests(unittest.TestCase):
         fixture=self.fixture();fixture['restaurants'][0]['slot_minutes']=0
         self.error(self.request('POST','/_test/reset',fixture),422,'validation_failed')
 
+    def test_offset_calendar_boundaries_and_state(self):
+        fixture=self.fixture('America/New_York')
+        self.assertEqual(self.request('POST','/_test/reset',fixture)[0],204)
+        self.token=self.request('POST','/auth/login',{'email':'a@b','password':'password1'})[1]['token']
+        for date in ['9999-12-30','9999-12-31']:
+            status,body=self.request('GET','/availability?restaurant_id=r&date='+date+'&party_size=4')
+            self.assertEqual(status,200)
+            self.assertEqual(len(body['slots']),8)
+        body=self.booking();body['starts_at_local']='9999-12-31T19:00'
+        status,original=self.create(body,'max')
+        self.assertEqual(status,201)
+        self.assertEqual(original['starts_at'],'9999-12-31T19:00:00-05:00')
+        self.assertEqual(original['ends_at'],'9999-12-31T20:30:00-05:00')
+        adjacent={**body,'starts_at_local':'9999-12-31T20:30'}
+        status,second=self.create(adjacent,'adjacent-max');self.assertEqual(status,201)
+        self.error(self.create({**body,'starts_at_local':'9999-12-31T20:00'},'overlap-max'),409,'table_unavailable')
+        records=self.request('GET','/reservations',token=self.token)[1]['reservations']
+        self.assertEqual([r['reference'] for r in records],[second['reference'],original['reference']])
+        # Both time and table amendments use the same range-safe final-set planner.
+        changed=self.request('PATCH','/reservations/'+original['reference'],{'table_id':'B','starts_at_local':'9999-12-31T19:30'},self.token)
+        self.assertEqual(changed[0],200)
+        moves={'moves':[{'reference':original['reference'],'table_id':'A','starts_at_local':'9999-12-31T20:30'},{'reference':second['reference'],'starts_at_local':'9999-12-31T19:00'}]}
+        status,moved=self.request('POST','/reservation-moves',moves,self.token,'max-swap');self.assertEqual(status,201)
+        cancelled=self.request('POST','/reservations/'+original['reference']+'/cancel',{},self.token)
+        self.assertEqual(cancelled[0],200)
+        snapshot=self.request('GET','/_test/export')[1]
+        self.assertEqual(self.request('POST','/_test/import',snapshot,destination=1)[0],204)
+        self.assertEqual(self.request('POST','/reservations',body,self.token,'max',destination=1),(200,original))
+        self.assertEqual(self.request('POST','/reservation-moves',moves,self.token,'max-swap',destination=1),(200,moved))
+        self.assertEqual(self.request('GET','/reservations/'+original['reference'],token=self.token,destination=1),(200,cancelled[1]))
+        self.assertEqual(self.request('POST','/auth/login',{'email':'a@b','password':'password1'},destination=1)[0],200)
+
+    def test_positive_offset_minimum_local_date(self):
+        # Individually valid calendar and offset combine into UTC year zero.
+        fixture=self.fixture('Etc/GMT-14','00:00','04:00')
+        self.assertEqual(self.request('POST','/_test/reset',fixture)[0],204)
+        self.token=self.request('POST','/auth/login',{'email':'a@b','password':'password1'})[1]['token']
+        status,body=self.request('GET','/availability?restaurant_id=r&date=0001-01-01&party_size=4')
+        self.assertEqual(status,200)
+        self.assertEqual(len(body['slots']),6)
+        booking={**self.booking(),'starts_at_local':'0001-01-01T00:30'}
+        status,record=self.create(booking,'min-offset');self.assertEqual(status,201)
+        self.assertEqual(record['starts_at'],'0001-01-01T00:30:00+14:00')
+        self.assertEqual(record['ends_at'],'0001-01-01T02:00:00+14:00')
+        self.error(self.request('POST','/reservations/'+record['reference']+'/cancel',{},self.token),409,'cutoff_passed')
+        snapshot=self.request('GET','/_test/export')[1]
+        self.assertEqual(self.request('POST','/_test/import',snapshot,destination=1)[0],204)
+        self.assertEqual(self.request('POST','/reservations',booking,self.token,'min-offset',destination=1),(200,record))
+
     def test_errors_ownership_and_reuse_precedence(self):
         self.error(self.create({'restaurant_id':False}),400,'malformed_request')
         for value in [0,-1,4.5,'4',True,None]:
