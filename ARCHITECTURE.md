@@ -1,0 +1,70 @@
+# Stage 1 architecture contract
+
+Work item ARCH-S1; owner @frankzhu94/factory-architect; independent reviewer @frankzhu94/factory-reviewer. Starting revision: `4db34a7e19d97d236de5d15caf8264eb0bdeb1fd`.
+
+Authoritative requirements: `/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-1.md`, SHA-256 `9460189eac83802ce158f16ee90989af728a489b32a6147e2dc8e320f383055f`, sections 1–11, every clause. This document supplies implementation mechanisms, not exceptions to the specification. No product implementation is included.
+
+## Stack and service boundary (S1-1, S1-2, S1-3)
+
+Use Python 3.12 or newer, standard-library HTTP server, JSON, datetime/zoneinfo, hashlib.scrypt, secrets and threading. One process owns in-memory state. Use ThreadingHTTPServer with HTTP/1.1 framing and explicit Content-Length, bounded active work sufficient for 50 concurrent requests, a global state lock and a separate bounded password-hash semaphore. Package IANA timezone data in the image during build, and prove both required zones resolve with runtime networking disabled. Do not assume the host probe proves image contents. Bind 0.0.0.0 at integer PORT, default 8080; health returns the required object only after state initialization.
+
+This avoids an external database, package runtime downloads and persistence machinery that ephemeral Stage 1 does not require. SQLite would add schema/backup coordination without removing the need for atomic multi-booking conflict validation. A multi-process server is incompatible with the selected in-memory authority and must not be used. Standard-library HTTP is adequate for the defined JSON API; later UI assets can be served locally without changing the domain model. Container startup, 2-vCPU/2-GiB memory, 50-in-flight latency under 5 seconds and reset/import under 10 seconds remain implementation acceptance gates, not proven properties of this decision.
+
+Modules should separate HTTP parsing/error mapping, field validation, local-time resolution, booking planning, state transactions, auth and snapshot validation. Share validators between create, PATCH and moves. No restaurant/table creation API; all fixture order is preserved.
+
+## Authority and transactions (S1-1, S1-4, S1-8, S1-10, S1-11)
+
+State is a JSON-compatible aggregate treated as immutable once published. All reads take a consistent snapshot under the same lock. A mutation holds the lock from authentication/current-state lookup through validation, planning and publication. Construct changed collections/records on a private candidate; publish a single state-pointer replacement only after every check succeeds. Never mutate published nested collections. Unexpected exceptions discard the candidate. Error responses do not publish IDs, bookings or retry receipts. Capture one UTC `now` per transaction.
+
+For login/signup/reset hashing, expensive password hashing may happen before acquiring the state lock. Under the lock recheck that the user/hash or generation observed is still current before issuing a token; after reset/import a stale login must not issue a token for removed state. Signup rechecks email uniqueness at commit. Reset/import build and fully validate a replacement privately, then swap under the lock; their linearization point is the swap. Export copies/serializes a consistent immutable snapshot; response bytes cannot alias later state. HTTP response serialization is completed before publication for writes so serialization errors cannot leave a partial operation.
+
+Occupancy is derived solely from confirmed reservations: same restaurant/table and `a.start_utc < b.end_utc AND b.start_utc < a.end_utc`. Cancelled records retain identity/history but occupy nothing. Never cache occupancy independently unless it is rebuilt or committed in the same transaction. No past-date rejection on creation. Cancellation checks ownership first, returns current cancelled state before cutoff checks, and otherwise rejects at `now >= current_start_utc - cutoff`. PATCH checks ownership, cancelled status and current-start cutoff before validating the proposed target; exclude its own old record from overlap checks. Identity/reference/owner/created_at survive all changes.
+
+Batch moves: validate shape (1..8 objects, distinct string references), then process items in input order. For each item resolve owner-visible reference, ensure common restaurant, reject cancelled and cutoff before proposed fields, then apply shared amendment validation. Finish all non-occupancy checks before overlap evaluation. Build the complete resulting set; remove all listed old occupancies only in the private planner. Check resulting listed records pairwise and against unlisted confirmed records. Include unchanged listed records in occupancy and return records in input order. Swaps therefore succeed when the final layout is valid. Publish all records and successful receipt together; any failure publishes nothing. A no-op preserves every stored value.
+
+## Validation and HTTP contract (S1-3, S1-5, S1-6, S1-8, S1-11)
+
+Return UTF-8 JSON and the specified error envelope for every error, including unknown routes. Translate known validation errors to exact status/code; never expose traceback or credentials. Parse strict JSON objects for required request bodies; reject non-finite numbers. Unknown body fields and query parameters are ignored for business validation. Preserve those body fields for idempotency comparison. Required field absence/invalid format/range is 422; wrong JSON type is normally 400. Party size is an explicit exception: require integer >=1, reject boolean/string/fraction with 422. `starts_at_local` strings require exactly bare YYYY-MM-DDTHH:MM, invalid string format is 422; other wrong types follow 400. Query integers require decimal digits, then range validation (no signs, exponents or decimal points). IDs and fixture IDs are opaque strings <=64 characters. References are unique 6..12 A-Z0-9 and never reused/regenerated; generate secrets-based strings with collision checks under the lock.
+
+Public routes are health/reset/export/import/signup/login and the three restaurant/availability GET routes; all others need valid bearer authentication. Tokens are opaque non-expiring random strings, multiple per user; owner-hidden reservation access gives 404. Restaurant/table lookup includes restaurant membership. Availability lists every legal local-grid candidate, including empty table lists, retains fixture table order, and skips nonexistent times. Lists sort by start instant descending. Response times have explicit RFC3339 offsets; created_at may use UTC. REST response shape remains precisely the Stage 1 contract.
+
+## Semantic idempotency (S1-7, S1-10, S1-11)
+
+Receipt key is the tuple `(user_id, method, exact endpoint path, Idempotency-Key)`. Different paths/users are independent namespaces. After body parsing as an object and authentication, check required header (missing/empty 400, >255 characters 422) and resolve receipt before endpoint-specific field/current-resource checks. A found matching receipt returns 200 with its original immutable JSON response, even if bookings changed/cancelled. A found different body returns 409 before invalid field/resource errors. Store receipts only for successful create/moves, atomically with the mutation. Failed 4xx keys remain unused.
+
+Compare parsed JSON values recursively with explicit type tags: objects have sorted keys; arrays preserve order; strings/booleans/null remain distinct; numbers normalize mathematically equal finite decimal representations. In Python avoid raw equality because `True == 1`. Parse numeric values with Decimal for comparison, retaining a JSON-compatible normalized representation for snapshots; reject NaN/Infinity. Preserve original unknown fields in the compared body. Prefer storing the normalized full body rather than relying solely on a hash. Concurrent duplicate requests serialize: one 201, later matching requests 200, one effect. Replays never refresh timestamps, mint identities or change occupancy.
+
+## Local time and DST (S1-4, S1-8, S1-9)
+
+Validate calendar/HH:MM syntax strictly, then resolve using ZoneInfo. Attach fold=0 and fold=1 separately, convert each to UTC and back, and retain only candidates whose local naive fields equal the input. Zero candidates means invalid_local_time; choose the earliest distinct UTC instant when two candidates exist. This selects the first occurrence and excludes gaps without trusting naive timezone attachment. Emit only one availability row per local grid point.
+
+Generate grid candidates with naive local arithmetic from opening time. Resolve candidate and opening/closing boundaries with the same first-occurrence rule. Compute end **in UTC** as start plus absolute minutes, then render in the restaurant zone; never add duration to an aware local datetime. Require local start within the same-day opening window and end_utc <= resolved closing instant. A skipped-hour opening/closing boundary has no defined instant in the source; proposed deterministic convention is to advance that boundary to the first valid local minute that day, preserving the grid's original opening wall time. QA/Reviewer must challenge this convention before implementation; ordinary valid boundaries are unambiguous. Slot grid errors and outside-hours errors retain specified codes. Occupancy and cutoffs always compare UTC instants, not local strings.
+
+## Credentials and portable state schema (S1-6, S1-10)
+
+Use scrypt with random per-user >=16-byte salt, n=16384/r=8/p=1 and 32-byte output initially; store algorithm, parameters, salt and hash encoded as strings, and compare with constant-time compare_digest. Never retain fixture/signup plaintext after hashing or log auth bodies. Hash concurrency is bounded so its memory/CPU cost cannot serialize all state operations or exceed container limits. Tune only with actual 50-request evidence while retaining a password-hashing function.
+
+Export envelope stays `{track:"tablekeeper", format_version:1, state:{...}}`. Internal state has `schema_version:1` and these logical collections (JSON lists preserve order):
+
+- users: id, email, display_name, password credential object; unique email index is derived.
+- sessions: token/user_id; preserve every existing valid token exactly.
+- restaurants: complete fixture restaurant configuration with ordered opening_hours/tables.
+- reservations: reservation_id, reference, user_id, restaurant_id, table_id, party_size, status, starts_at_local, starts_at, ends_at, created_at. Preserve original explicit offsets/timestamps and canonical UTC instants derivable from them; no regeneration on import.
+- receipts: user_id, method, path, key, normalized semantic request body and original response JSON object. Only successful completed requests exist here.
+
+Indexes (ID/reference/email/token and occupancy) are derived and never authoritative snapshot fields. Random identities eliminate a required process-specific counter; any introduced counter must be exported. Import validates envelope/version/state, collection types, credential parameters, referential integrity, unique identifiers/references/keys, timezone validity and booking interval consistency on a private candidate. Reject invalid state with 422 and keep destination unchanged; JSON parse/type failures retain §5 distinctions. Rebuild indexes without changing values, then swap. Do not re-run present-time cutoff or overwrite stored receipts on import. Replacement removes old accounts/tokens/receipts/configuration completely; repeated import is idempotent replacement. Reset also clears all these collections and seeds confirmed bookings and hashed users atomically. Exports are private artifacts and must not be added to Git or room messages.
+
+Future stages may add fields/collections via explicit migrations from schema_version 1 with defaults derived only where later requirements permit. Keep external format_version 1 if required by later specifications; schema version is internal. Preserve IDs, credentials, sessions and old receipts verbatim across migrations. Stage 2–4 policy/history/series semantics require their own dispatched requirements and decisions; do not invent them now. Each stage remains independently container-buildable at its accepted scope.
+
+## Risk map and acceptance implications
+
+| Risk / requirements | Mechanism | Required independent evidence |
+|---|---|---|
+| Double booking, partial PATCH/moves S1-1/8/11 | serialized candidate planning, final-set overlap | 50-request races, swap, later-item failure, unchanged occupancy |
+| Retry corruption S1-7/10/11 | scoped semantic receipts in same commit | duplicate concurrency, key-order/numeric/boolean differences, replay after cancel/import, failed-key reuse |
+| DST error S1-9 | round-trip resolution, UTC duration | both specified gaps/folds, first occurrence, adjacent absolute intervals |
+| Snapshot leakage/invalid replacement S1-10 | immutable export/private validation/swap | source writes after export, round-trip login/tokens/receipts, invalid-import rollback, repeated import/reset |
+| Validation/ownership S1-3/5/6/8/11 | shared typed validation and hidden-owner lookup | error precedence, exceptional field types, limits, unknown fields, batch input ordering |
+| Offline/resource failure S1-2/3 | packaged zone data, one process, bounded hash work | actual isolated container startup/health, network-disabled zones, 50-in-flight latency |
+
+Focused host probe evidence: `.evidence/arch-20261006T0324Z/probe.py` and `probe.txt`, UTC 2026-10-06T03:23:11Z, Python 3.14.3. PASS: required gap/fold resolution in both zones, New York absolute-duration endpoint, JSON object/numeric equivalence and boolean distinction, available scrypt (~0.041 seconds for one synthetic hash), source digest. These validate algorithms on this host only. HTTP, load, container, reset/import and product behavior are NOT_TESTED. QA boundary additions and Reviewer oracle challenge must precede implementation; independent acceptance is still required.
