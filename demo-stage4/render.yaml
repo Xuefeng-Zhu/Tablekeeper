@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: tablekeeper-stage2
+    runtime: docker
+    plan: free
+    region: oregon
+    repo: https://github.com/Xuefeng-Zhu/Tablekeeper
+    branch: main
+    dockerfilePath: ./demo-stage4/Dockerfile
+    dockerContext: ./demo-stage4
+    healthCheckPath: /health
+    autoDeployTrigger: "off"

@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "observed_at_utc": "2026-10-06T15:39:12.935834+00:00",
+  "scope": "Independent read-only prepared adapter/source review plus exact frozen30-file inventory binding; original accepted Stage4 source remains unchanged. No runtime or live-hosting acceptance claimed.",
+  "accepted_python_modules_byte_equal": 14,
+  "accepted_static_assets_byte_equal": 8,
+  "adapted_paths": [
+    "Dockerfile",
+    "RUN.md",
+    "static/index.html"
+  ],
+  "deploy_py_sha256": "060688b19e48eb2688f81db3b0a53dfc9d9614ddb02501af7701cdf6277e6b92",
+  "test_route_guard": "Repeated percent decoding before all-method private test-route rejection.",
+  "seed": "Two fictionalrestaurants only; no users/managers/sessions/native state.",
+  "revision_metadata": "Stage/application candidate and public RENDER_GIT_COMMIT only.",
+  "strong_credential_pattern_candidates": 0,
+  "frozen_provenance_sha256": "b2ad3fe2c44fb1c952e7a02005f1cfcb7ec18f46b888e536afbff73000ab1f68"
+}

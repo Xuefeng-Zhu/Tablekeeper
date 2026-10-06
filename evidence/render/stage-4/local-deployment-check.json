@@ -1,0 +1,32 @@
+{
+  "startedAt": "2026-10-06T15:36:48.575184+00:00",
+  "scope": "Local Docker deployment preparation only; synthetic credentials held in memory, no Render deployment or independent acceptance.",
+  "versionEnvironment": "Public dummy commit fixture, not a deployed revision.",
+  "checks": {
+    "bounded_container": true,
+    "fictional_restaurants_no_managers": true,
+    "signup_login_empty_new_account": true,
+    "additional_nested_slash_route_probes": {
+      "requests": 28,
+      "allStatuses": 404,
+      "HEADNoBody": true
+    },
+    "blocked_mutations_preserve_existing_state": true,
+    "missing_RENDER_GIT_COMMIT_is_null": true
+  },
+  "resources": {
+    "cpus": 1,
+    "memoryBytes": 536870912,
+    "hostPublish": "127.0.0.1 ephemeral port"
+  },
+  "errors": [],
+  "imageId": "sha256:1f8d7a52115d3049c7b9523c5193dd495fa38ef013111faf20557ae1458d6618",
+  "containerId": "fc6b44b65ea29513dc30426aa731ea98654d824dbb294c281e633a24c30729f9",
+  "status": "PASS",
+  "cleanup": {
+    "ownedContainers": 2,
+    "removedContainers": 2,
+    "removedOnlyCreatedContainers": true
+  },
+  "finishedAt": "2026-10-06T15:36:50.620759+00:00"
+}

@@ -1,0 +1,222 @@
+{
+  "status": "PREPARED_SOURCE_VERIFIED",
+  "prepared_at_utc": "2026-10-06T15:37:21.398730+00:00",
+  "application_candidate": "ac1eb4945a2adaeaaf8a62d0817bdbc6a021e566",
+  "application_subdirectory": "stage-4",
+  "deployment_subdirectory": "demo-stage4",
+  "target_service_id": "srv-db28udrtqb8s73chaqmg",
+  "target_url": "https://tablekeeper-stage2.onrender.com",
+  "target_repo": "https://github.com/Xuefeng-Zhu/Tablekeeper",
+  "branch": "main",
+  "source_selection": "Accepted Stage4 source only; no application/native state, credentials, tests, factory records or media in deployment context. Safe ignorefiles included.",
+  "accepted_application_files": [
+    {
+      "path": "Dockerfile",
+      "bytes": 267,
+      "sha256": "3a1a8eae4bb3604a034187c3867561d57cfd3bb2d7d9a62943d6db40a2f5590f",
+      "application_sha256": "a9e5d5953574a0169c432e0ec25626abc365cfd5c4f6c6c95f3d315c2344248c",
+      "application_byte_equal": false
+    },
+    {
+      "path": "RUN.md",
+      "bytes": 1117,
+      "sha256": "8599ae9b5f191408c62e88ff38c42389b567b7adf8c4afe55b76b78e8178b1b9",
+      "application_sha256": "4aff79ffcfa9f5edcc5c010a4231924549fc845b3dfc3dbe28d57e80e4672682",
+      "application_byte_equal": false
+    },
+    {
+      "path": "agreements.py",
+      "bytes": 5614,
+      "sha256": "6b8f185b3a16b9a2374af4ba77c8853eaebeaa8d35e83f08b482b363f4e89bb6",
+      "application_sha256": "6b8f185b3a16b9a2374af4ba77c8853eaebeaa8d35e83f08b482b363f4e89bb6",
+      "application_byte_equal": true
+    },
+    {
+      "path": "domain.py",
+      "bytes": 9386,
+      "sha256": "fcd0c6b8a06845b2c123c391ffea00bd970aaea263292c3f6adbca01be78927c",
+      "application_sha256": "fcd0c6b8a06845b2c123c391ffea00bd970aaea263292c3f6adbca01be78927c",
+      "application_byte_equal": true
+    },
+    {
+      "path": "ledger.py",
+      "bytes": 3506,
+      "sha256": "1800992971618b41ca2217fe1995bfd6e8c08d2708c70fe7baf226112e115db0",
+      "application_sha256": "1800992971618b41ca2217fe1995bfd6e8c08d2708c70fe7baf226112e115db0",
+      "application_byte_equal": true
+    },
+    {
+      "path": "legacy_domain.py",
+      "bytes": 7173,
+      "sha256": "c0c0df86b5ea88d9e48be4ea2ce4c57d2246dc7a4e772e58b724ca93be9c28fd",
+      "application_sha256": "c0c0df86b5ea88d9e48be4ea2ce4c57d2246dc7a4e772e58b724ca93be9c28fd",
+      "application_byte_equal": true
+    },
+    {
+      "path": "legacy_state.py",
+      "bytes": 8956,
+      "sha256": "b1094a3ffad1e8f06d858d65aa6fd6cc8fedb16e399836385ca7ea8753f3fec7",
+      "application_sha256": "b1094a3ffad1e8f06d858d65aa6fd6cc8fedb16e399836385ca7ea8753f3fec7",
+      "application_byte_equal": true
+    },
+    {
+      "path": "repairs.py",
+      "bytes": 7702,
+      "sha256": "0de63c24d73f01883ae95388a3ae79568dffc72617208461486aa3c911d8a3aa",
+      "application_sha256": "0de63c24d73f01883ae95388a3ae79568dffc72617208461486aa3c911d8a3aa",
+      "application_byte_equal": true
+    },
+    {
+      "path": "server.py",
+      "bytes": 3218,
+      "sha256": "9790bb3353a3059c7730554abc595198bf8ba6633af96ff3e9e13d9ef4ce029a",
+      "application_sha256": "9790bb3353a3059c7730554abc595198bf8ba6633af96ff3e9e13d9ef4ce029a",
+      "application_byte_equal": true
+    },
+    {
+      "path": "service.py",
+      "bytes": 15167,
+      "sha256": "38db7ecf4bef6210b340bd2aaa2fe08e61514b93aaf11def70ca38220a8bdff0",
+      "application_sha256": "38db7ecf4bef6210b340bd2aaa2fe08e61514b93aaf11def70ca38220a8bdff0",
+      "application_byte_equal": true
+    },
+    {
+      "path": "snapshot4.py",
+      "bytes": 8247,
+      "sha256": "f337eb95dc711441d115c9f8f69f44d60a1821da1fa2e74545cdf558c1263267",
+      "application_sha256": "f337eb95dc711441d115c9f8f69f44d60a1821da1fa2e74545cdf558c1263267",
+      "application_byte_equal": true
+    },
+    {
+      "path": "stage2_state.py",
+      "bytes": 10342,
+      "sha256": "198c9349fee00508fbd47f15f4e85b6304a38bdec8760d4738cefd7fd4c2e1ae",
+      "application_sha256": "198c9349fee00508fbd47f15f4e85b6304a38bdec8760d4738cefd7fd4c2e1ae",
+      "application_byte_equal": true
+    },
+    {
+      "path": "stage3_state.py",
+      "bytes": 16172,
+      "sha256": "2191680d0f59d4dc8e27edf38441104f54bb64db79d7f84bbef782c95b04dc9f",
+      "application_sha256": "2191680d0f59d4dc8e27edf38441104f54bb64db79d7f84bbef782c95b04dc9f",
+      "application_byte_equal": true
+    },
+    {
+      "path": "state.py",
+      "bytes": 18691,
+      "sha256": "ebfd107ca6c21ec88ac15c15e240f73c4c9175b22b49fd7525f74f12ca3bfecd",
+      "application_sha256": "ebfd107ca6c21ec88ac15c15e240f73c4c9175b22b49fd7525f74f12ca3bfecd",
+      "application_byte_equal": true
+    },
+    {
+      "path": "static/api.js",
+      "bytes": 1197,
+      "sha256": "9a57a1e8c48b6e9df9cca7a199f8690b4cc716cfccb917d8ef23409e8a0eed8e",
+      "application_sha256": "9a57a1e8c48b6e9df9cca7a199f8690b4cc716cfccb917d8ef23409e8a0eed8e",
+      "application_byte_equal": true
+    },
+    {
+      "path": "static/app.js",
+      "bytes": 478,
+      "sha256": "ce9795c065d509b88a46dedc5896a4bee1a228fa93617d06bef859b23b1ab58e",
+      "application_sha256": "ce9795c065d509b88a46dedc5896a4bee1a228fa93617d06bef859b23b1ab58e",
+      "application_byte_equal": true
+    },
+    {
+      "path": "static/auth.js",
+      "bytes": 3617,
+      "sha256": "4c07dcbe95f2e008b66bf343f4e880cd134512dea59a2005f0e2a467fdb5745b",
+      "application_sha256": "4c07dcbe95f2e008b66bf343f4e880cd134512dea59a2005f0e2a467fdb5745b",
+      "application_byte_equal": true
+    },
+    {
+      "path": "static/booking.js",
+      "bytes": 5438,
+      "sha256": "06daf7764d775ed058a276e6a77eed22870ece122cd8e5023fbc104c9f93e6a6",
+      "application_sha256": "06daf7764d775ed058a276e6a77eed22870ece122cd8e5023fbc104c9f93e6a6",
+      "application_byte_equal": true
+    },
+    {
+      "path": "static/dom.js",
+      "bytes": 1079,
+      "sha256": "4bb2c46674ab4fd87e161c17c350d865d20269596d14bff2fdae723e9ae48e40",
+      "application_sha256": "4bb2c46674ab4fd87e161c17c350d865d20269596d14bff2fdae723e9ae48e40",
+      "application_byte_equal": true
+    },
+    {
+      "path": "static/index.html",
+      "bytes": 886,
+      "sha256": "a4574cea6cf3e6b4ae77b2d5bce49967ba3d35a9f36cef03a34938e9e7226152",
+      "application_sha256": "27d191e7e5c1461ff8c7a8cc2193a34b1095ab8ca87c699336af76331fd3a6f0",
+      "application_byte_equal": false
+    },
+    {
+      "path": "static/lookup.js",
+      "bytes": 3744,
+      "sha256": "2f5f42087df0a38623fcf4f5399e1acb7a45aef88a0d7ccd41ee831efcb24e52",
+      "application_sha256": "2f5f42087df0a38623fcf4f5399e1acb7a45aef88a0d7ccd41ee831efcb24e52",
+      "application_byte_equal": true
+    },
+    {
+      "path": "static/search.js",
+      "bytes": 8546,
+      "sha256": "826f0d993d2419c2d0d7d0d8c3b3c5a320bb512d9c948b194ed46def318c9b53",
+      "application_sha256": "826f0d993d2419c2d0d7d0d8c3b3c5a320bb512d9c948b194ed46def318c9b53",
+      "application_byte_equal": true
+    },
+    {
+      "path": "static/style.css",
+      "bytes": 5455,
+      "sha256": "3c82d6173ec7e1b11fd98a93c9f625f49084c2e45c5761a03eff5d691a611e61",
+      "application_sha256": "3c82d6173ec7e1b11fd98a93c9f625f49084c2e45c5761a03eff5d691a611e61",
+      "application_byte_equal": true
+    },
+    {
+      "path": "temporal.py",
+      "bytes": 2711,
+      "sha256": "80d8224217719c94be9281ce2d6e7760409240235444b7f3aa5afb975bbee1ea",
+      "application_sha256": "80d8224217719c94be9281ce2d6e7760409240235444b7f3aa5afb975bbee1ea",
+      "application_byte_equal": true
+    },
+    {
+      "path": "values.py",
+      "bytes": 4089,
+      "sha256": "7e35fc23a6474e6ac1737bd1948fa9f70e492820608163e1201a0d6f0a20e096",
+      "application_sha256": "7e35fc23a6474e6ac1737bd1948fa9f70e492820608163e1201a0d6f0a20e096",
+      "application_byte_equal": true
+    }
+  ],
+  "additional_deployment_files": [
+    {
+      "path": ".dockerignore",
+      "bytes": 57,
+      "sha256": "a725e76d881dee717927f09b1cec622739ea9beb4ba7ab59257e93833b4d38f6"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 51,
+      "sha256": "6fbf5e7303ed25a974ccdfbbd1ab2c4ce656ad6cf2630add30d3f5ab90124da4"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2663,
+      "sha256": "b9472c5e3d589393ae8049d5f8c40402e6ef6d588d6b7eff781a8b134245132e"
+    },
+    {
+      "path": "deploy.py",
+      "bytes": 3015,
+      "sha256": "060688b19e48eb2688f81db3b0a53dfc9d9614ddb02501af7701cdf6277e6b92"
+    },
+    {
+      "path": "render.yaml",
+      "bytes": 313,
+      "sha256": "c34fc644f9776503b21d049c29e4d538dec0e69f1e4cfeb855b6a30a5ea95716"
+    }
+  ],
+  "changed_application_files": [
+    "Dockerfile",
+    "RUN.md",
+    "static/index.html"
+  ],
+  "scope": "Exact accepted Python modules and eight static assets; deployment wrapper seeds fictional restaurants only, closes test routes and exposes public revision metadata. Docker startup, run guide and index notice are separate adaptations; local/live evidence separate."
+}

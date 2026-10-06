@@ -1,6 +1,6 @@
 {
-  "startedAt": "2026-10-06T15:25:47.337114+00:00",
-  "checkedAt": "2026-10-06T15:25:48.607193+00:00",
+  "startedAt": "2026-10-06T15:39:13.218240+00:00",
+  "checkedAt": "2026-10-06T15:39:14.419097+00:00",
   "command": [
     "/Users/frank/mygit/Tablekeeper/runs/harness-venv/bin/python",
     "-m",
@@ -13,5 +13,5 @@
   "exitCode": 0,
   "status": "PASS",
   "output": "ok \u2014 gates 1, 2 and the mandate part of gate 4 pass. Not checked here: gate 3 (stage-1/ builds and serves /health). Run: python -m harness run --track tablekeeper --repo /Users/frank/mygit/Tablekeeper/runs/canonical-repo-20261005 --stage 1 --mode isolated\n",
-  "scope": "Pinned official offline packaging and mandate check after reviewer-documentation update on main; unchanged application and historical evidence. Existing supplied isolated158-check run and independent local factory acceptance remain separately dated; this check does not build the application or establish external judging/final portal submission."
+  "scope": "Pinned official offline packaging/mandate check with separate prepared Stage4 Render package and local Docker checks. Actual deployment is not yet recorded; original product acceptance and158supplied checks remain separately dated."
 }

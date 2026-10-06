@@ -1675,6 +1675,210 @@
       "destination": "evidence/publication-check-stage-4/COPY-INVENTORY.json",
       "sha256": "346eda6c66cb56d4a15a2bb9e894672cd9de74dd6f4e35981a6d0648aaa051e6",
       "kind": "publication_check_copy_inventory"
+    },
+    {
+      "destination": "demo-stage4/.dockerignore",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage4-preparation-20261006/.dockerignore",
+      "source_sha256": "a725e76d881dee717927f09b1cec622739ea9beb4ba7ab59257e93833b4d38f6",
+      "copied_unchanged": true
+    },
+    {
+      "destination": "demo-stage4/.gitignore",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage4-preparation-20261006/.gitignore",
+      "source_sha256": "6fbf5e7303ed25a974ccdfbbd1ab2c4ce656ad6cf2630add30d3f5ab90124da4",
+      "copied_unchanged": true
+    },
+    {
+      "destination": "demo-stage4/Dockerfile",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage4-preparation-20261006/Dockerfile",
+      "source_sha256": "3a1a8eae4bb3604a034187c3867561d57cfd3bb2d7d9a62943d6db40a2f5590f",
+      "copied_unchanged": true
+    },
+    {
+      "destination": "demo-stage4/README.md",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage4-preparation-20261006/README.md",
+      "source_sha256": "b9472c5e3d589393ae8049d5f8c40402e6ef6d588d6b7eff781a8b134245132e",
+      "copied_unchanged": true
+    },
+    {
+      "destination": "demo-stage4/RUN.md",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage4-preparation-20261006/RUN.md",
+      "source_sha256": "8599ae9b5f191408c62e88ff38c42389b567b7adf8c4afe55b76b78e8178b1b9",
+      "copied_unchanged": true
+    },
+    {
+      "destination": "demo-stage4/agreements.py",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage4-preparation-20261006/agreements.py",
+      "source_sha256": "6b8f185b3a16b9a2374af4ba77c8853eaebeaa8d35e83f08b482b363f4e89bb6",
+      "copied_unchanged": true
+    },
+    {
+      "destination": "demo-stage4/deploy.py",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage4-preparation-20261006/deploy.py",
+      "source_sha256": "060688b19e48eb2688f81db3b0a53dfc9d9614ddb02501af7701cdf6277e6b92",
+      "copied_unchanged": true
+    },
+    {
+      "destination": "demo-stage4/domain.py",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage4-preparation-20261006/domain.py",
+      "source_sha256": "fcd0c6b8a06845b2c123c391ffea00bd970aaea263292c3f6adbca01be78927c",
+      "copied_unchanged": true
+    },
+    {
+      "destination": "demo-stage4/ledger.py",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage4-preparation-20261006/ledger.py",
+      "source_sha256": "1800992971618b41ca2217fe1995bfd6e8c08d2708c70fe7baf226112e115db0",
+      "copied_unchanged": true
+    },
+    {
+      "destination": "demo-stage4/legacy_domain.py",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage4-preparation-20261006/legacy_domain.py",
+      "source_sha256": "c0c0df86b5ea88d9e48be4ea2ce4c57d2246dc7a4e772e58b724ca93be9c28fd",
+      "copied_unchanged": true
+    },
+    {
+      "destination": "demo-stage4/legacy_state.py",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage4-preparation-20261006/legacy_state.py",
+      "source_sha256": "b1094a3ffad1e8f06d858d65aa6fd6cc8fedb16e399836385ca7ea8753f3fec7",
+      "copied_unchanged": true
+    },
+    {
+      "destination": "demo-stage4/render.yaml",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage4-preparation-20261006/render.yaml",
+      "source_sha256": "c34fc644f9776503b21d049c29e4d538dec0e69f1e4cfeb855b6a30a5ea95716",
+      "copied_unchanged": true
+    },
+    {
+      "destination": "demo-stage4/repairs.py",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage4-preparation-20261006/repairs.py",
+      "source_sha256": "0de63c24d73f01883ae95388a3ae79568dffc72617208461486aa3c911d8a3aa",
+      "copied_unchanged": true
+    },
+    {
+      "destination": "demo-stage4/server.py",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage4-preparation-20261006/server.py",
+      "source_sha256": "9790bb3353a3059c7730554abc595198bf8ba6633af96ff3e9e13d9ef4ce029a",
+      "copied_unchanged": true
+    },
+    {
+      "destination": "demo-stage4/service.py",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage4-preparation-20261006/service.py",
+      "source_sha256": "38db7ecf4bef6210b340bd2aaa2fe08e61514b93aaf11def70ca38220a8bdff0",
+      "copied_unchanged": true
+    },
+    {
+      "destination": "demo-stage4/snapshot4.py",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage4-preparation-20261006/snapshot4.py",
+      "source_sha256": "f337eb95dc711441d115c9f8f69f44d60a1821da1fa2e74545cdf558c1263267",
+      "copied_unchanged": true
+    },
+    {
+      "destination": "demo-stage4/stage2_state.py",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage4-preparation-20261006/stage2_state.py",
+      "source_sha256": "198c9349fee00508fbd47f15f4e85b6304a38bdec8760d4738cefd7fd4c2e1ae",
+      "copied_unchanged": true
+    },
+    {
+      "destination": "demo-stage4/stage3_state.py",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage4-preparation-20261006/stage3_state.py",
+      "source_sha256": "2191680d0f59d4dc8e27edf38441104f54bb64db79d7f84bbef782c95b04dc9f",
+      "copied_unchanged": true
+    },
+    {
+      "destination": "demo-stage4/state.py",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage4-preparation-20261006/state.py",
+      "source_sha256": "ebfd107ca6c21ec88ac15c15e240f73c4c9175b22b49fd7525f74f12ca3bfecd",
+      "copied_unchanged": true
+    },
+    {
+      "destination": "demo-stage4/static/api.js",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage4-preparation-20261006/static/api.js",
+      "source_sha256": "9a57a1e8c48b6e9df9cca7a199f8690b4cc716cfccb917d8ef23409e8a0eed8e",
+      "copied_unchanged": true
+    },
+    {
+      "destination": "demo-stage4/static/app.js",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage4-preparation-20261006/static/app.js",
+      "source_sha256": "ce9795c065d509b88a46dedc5896a4bee1a228fa93617d06bef859b23b1ab58e",
+      "copied_unchanged": true
+    },
+    {
+      "destination": "demo-stage4/static/auth.js",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage4-preparation-20261006/static/auth.js",
+      "source_sha256": "4c07dcbe95f2e008b66bf343f4e880cd134512dea59a2005f0e2a467fdb5745b",
+      "copied_unchanged": true
+    },
+    {
+      "destination": "demo-stage4/static/booking.js",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage4-preparation-20261006/static/booking.js",
+      "source_sha256": "06daf7764d775ed058a276e6a77eed22870ece122cd8e5023fbc104c9f93e6a6",
+      "copied_unchanged": true
+    },
+    {
+      "destination": "demo-stage4/static/dom.js",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage4-preparation-20261006/static/dom.js",
+      "source_sha256": "4bb2c46674ab4fd87e161c17c350d865d20269596d14bff2fdae723e9ae48e40",
+      "copied_unchanged": true
+    },
+    {
+      "destination": "demo-stage4/static/index.html",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage4-preparation-20261006/static/index.html",
+      "source_sha256": "a4574cea6cf3e6b4ae77b2d5bce49967ba3d35a9f36cef03a34938e9e7226152",
+      "copied_unchanged": true
+    },
+    {
+      "destination": "demo-stage4/static/lookup.js",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage4-preparation-20261006/static/lookup.js",
+      "source_sha256": "2f5f42087df0a38623fcf4f5399e1acb7a45aef88a0d7ccd41ee831efcb24e52",
+      "copied_unchanged": true
+    },
+    {
+      "destination": "demo-stage4/static/search.js",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage4-preparation-20261006/static/search.js",
+      "source_sha256": "826f0d993d2419c2d0d7d0d8c3b3c5a320bb512d9c948b194ed46def318c9b53",
+      "copied_unchanged": true
+    },
+    {
+      "destination": "demo-stage4/static/style.css",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage4-preparation-20261006/static/style.css",
+      "source_sha256": "3c82d6173ec7e1b11fd98a93c9f625f49084c2e45c5761a03eff5d691a611e61",
+      "copied_unchanged": true
+    },
+    {
+      "destination": "demo-stage4/temporal.py",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage4-preparation-20261006/temporal.py",
+      "source_sha256": "80d8224217719c94be9281ce2d6e7760409240235444b7f3aa5afb975bbee1ea",
+      "copied_unchanged": true
+    },
+    {
+      "destination": "demo-stage4/values.py",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage4-preparation-20261006/values.py",
+      "source_sha256": "7e35fc23a6474e6ac1737bd1948fa9f70e492820608163e1201a0d6f0a20e096",
+      "copied_unchanged": true
+    },
+    {
+      "destination": "evidence/render/stage-4/package-frozen-provenance.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage4-preparation-evidence-20261006/package-frozen-provenance.json",
+      "source_sha256": "b2ad3fe2c44fb1c952e7a02005f1cfcb7ec18f46b888e536afbff73000ab1f68",
+      "copied_unchanged": true
+    },
+    {
+      "destination": "evidence/render/stage-4/local-deployment-check.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage4-preparation-evidence-20261006/local-deployment-check.json",
+      "source_sha256": "1240217be2a5d2b34455b79a5eb64fb9b792684824b1c1ddb6f4cf9210c72a99",
+      "copied_unchanged": true
+    },
+    {
+      "destination": "evidence/render/stage-4/local-http-smoke.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/render-stage4-preparation-evidence-20261006/local-http-smoke.json",
+      "source_sha256": "dca0b058cf598485114f0467e63e080356438424d90241135861a4b77355c511",
+      "copied_unchanged": true
+    },
+    {
+      "destination": "evidence/render/stage-4/live-check.py",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/stage4-render-live-check-20261006.py",
+      "source_sha256": "be0684c035e48d637826087cb5329bebc7db189bf2be359bbb8f5ce0d269f4d1",
+      "copied_unchanged": true
     }
   ],
   "render_candidate": "b1f7ef64db7f0dce0b3f3a913a3af280c96d70b9",
@@ -1929,5 +2133,18 @@
       "status": "PASS",
       "scope": "Factual claims, local links and anchors, fixture instructions, media/acceptance boundaries and preserved factory provenance."
     }
+  },
+  "render_stage4_preparation": {
+    "application_candidate": "ac1eb4945a2adaeaaf8a62d0817bdbc6a021e566",
+    "deployment_package": "demo-stage4",
+    "source_provenance": "evidence/render/stage-4/source-provenance.json",
+    "frozen_provenance": "evidence/render/stage-4/package-frozen-provenance.json",
+    "source_review": "evidence/render/stage-4/source-review.json",
+    "local_container_check": "evidence/render/stage-4/local-deployment-check.json",
+    "local_http_smoke": "evidence/render/stage-4/local-http-smoke.json",
+    "verification_script": "evidence/render/stage-4/live-check.py",
+    "target_service_id": "srv-db28udrtqb8s73chaqmg",
+    "target_url": "https://tablekeeper-stage2.onrender.com",
+    "scope": "Reviewed prepared package and local Docker smoke; actual Render publication/live outcome separate."
   }
 }

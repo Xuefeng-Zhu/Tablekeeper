@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "createdAt": "2026-10-06T15:26:38.052975+00:00",
-  "scope": "Completed Local Sol Stage4 application and review artifacts with refreshed reviewer documentation; original source history, selected failures/acceptance, supplied isolated158-check run and dated10138-message whole-room snapshot preserved. Local acceptance and final submission remain separate.",
+  "createdAt": "2026-10-06T15:39:12.940304+00:00",
+  "scope": "Completed Stage4 application/review artifacts plus separate approved Stage4 Render deployment preparation and local Docker proof; actual live outcome not yet recorded. Original source/factory/room/media and history preserved.",
   "applicationRevision": "ac1eb4945a2adaeaaf8a62d0817bdbc6a021e566",
   "inventoryExclusions": [
     ".git",
@@ -39,6 +39,156 @@
       "path": "WORKING.md",
       "bytes": 54006,
       "sha256": "b2366d407161662902fc20d76af324510b4b23556b9507c22017d563fce88f12"
+    },
+    {
+      "path": "demo-stage4/.dockerignore",
+      "bytes": 57,
+      "sha256": "a725e76d881dee717927f09b1cec622739ea9beb4ba7ab59257e93833b4d38f6"
+    },
+    {
+      "path": "demo-stage4/.gitignore",
+      "bytes": 51,
+      "sha256": "6fbf5e7303ed25a974ccdfbbd1ab2c4ce656ad6cf2630add30d3f5ab90124da4"
+    },
+    {
+      "path": "demo-stage4/Dockerfile",
+      "bytes": 267,
+      "sha256": "3a1a8eae4bb3604a034187c3867561d57cfd3bb2d7d9a62943d6db40a2f5590f"
+    },
+    {
+      "path": "demo-stage4/README.md",
+      "bytes": 2663,
+      "sha256": "b9472c5e3d589393ae8049d5f8c40402e6ef6d588d6b7eff781a8b134245132e"
+    },
+    {
+      "path": "demo-stage4/RUN.md",
+      "bytes": 1117,
+      "sha256": "8599ae9b5f191408c62e88ff38c42389b567b7adf8c4afe55b76b78e8178b1b9"
+    },
+    {
+      "path": "demo-stage4/agreements.py",
+      "bytes": 5614,
+      "sha256": "6b8f185b3a16b9a2374af4ba77c8853eaebeaa8d35e83f08b482b363f4e89bb6"
+    },
+    {
+      "path": "demo-stage4/deploy.py",
+      "bytes": 3015,
+      "sha256": "060688b19e48eb2688f81db3b0a53dfc9d9614ddb02501af7701cdf6277e6b92"
+    },
+    {
+      "path": "demo-stage4/domain.py",
+      "bytes": 9386,
+      "sha256": "fcd0c6b8a06845b2c123c391ffea00bd970aaea263292c3f6adbca01be78927c"
+    },
+    {
+      "path": "demo-stage4/ledger.py",
+      "bytes": 3506,
+      "sha256": "1800992971618b41ca2217fe1995bfd6e8c08d2708c70fe7baf226112e115db0"
+    },
+    {
+      "path": "demo-stage4/legacy_domain.py",
+      "bytes": 7173,
+      "sha256": "c0c0df86b5ea88d9e48be4ea2ce4c57d2246dc7a4e772e58b724ca93be9c28fd"
+    },
+    {
+      "path": "demo-stage4/legacy_state.py",
+      "bytes": 8956,
+      "sha256": "b1094a3ffad1e8f06d858d65aa6fd6cc8fedb16e399836385ca7ea8753f3fec7"
+    },
+    {
+      "path": "demo-stage4/render.yaml",
+      "bytes": 313,
+      "sha256": "c34fc644f9776503b21d049c29e4d538dec0e69f1e4cfeb855b6a30a5ea95716"
+    },
+    {
+      "path": "demo-stage4/repairs.py",
+      "bytes": 7702,
+      "sha256": "0de63c24d73f01883ae95388a3ae79568dffc72617208461486aa3c911d8a3aa"
+    },
+    {
+      "path": "demo-stage4/server.py",
+      "bytes": 3218,
+      "sha256": "9790bb3353a3059c7730554abc595198bf8ba6633af96ff3e9e13d9ef4ce029a"
+    },
+    {
+      "path": "demo-stage4/service.py",
+      "bytes": 15167,
+      "sha256": "38db7ecf4bef6210b340bd2aaa2fe08e61514b93aaf11def70ca38220a8bdff0"
+    },
+    {
+      "path": "demo-stage4/snapshot4.py",
+      "bytes": 8247,
+      "sha256": "f337eb95dc711441d115c9f8f69f44d60a1821da1fa2e74545cdf558c1263267"
+    },
+    {
+      "path": "demo-stage4/stage2_state.py",
+      "bytes": 10342,
+      "sha256": "198c9349fee00508fbd47f15f4e85b6304a38bdec8760d4738cefd7fd4c2e1ae"
+    },
+    {
+      "path": "demo-stage4/stage3_state.py",
+      "bytes": 16172,
+      "sha256": "2191680d0f59d4dc8e27edf38441104f54bb64db79d7f84bbef782c95b04dc9f"
+    },
+    {
+      "path": "demo-stage4/state.py",
+      "bytes": 18691,
+      "sha256": "ebfd107ca6c21ec88ac15c15e240f73c4c9175b22b49fd7525f74f12ca3bfecd"
+    },
+    {
+      "path": "demo-stage4/static/api.js",
+      "bytes": 1197,
+      "sha256": "9a57a1e8c48b6e9df9cca7a199f8690b4cc716cfccb917d8ef23409e8a0eed8e"
+    },
+    {
+      "path": "demo-stage4/static/app.js",
+      "bytes": 478,
+      "sha256": "ce9795c065d509b88a46dedc5896a4bee1a228fa93617d06bef859b23b1ab58e"
+    },
+    {
+      "path": "demo-stage4/static/auth.js",
+      "bytes": 3617,
+      "sha256": "4c07dcbe95f2e008b66bf343f4e880cd134512dea59a2005f0e2a467fdb5745b"
+    },
+    {
+      "path": "demo-stage4/static/booking.js",
+      "bytes": 5438,
+      "sha256": "06daf7764d775ed058a276e6a77eed22870ece122cd8e5023fbc104c9f93e6a6"
+    },
+    {
+      "path": "demo-stage4/static/dom.js",
+      "bytes": 1079,
+      "sha256": "4bb2c46674ab4fd87e161c17c350d865d20269596d14bff2fdae723e9ae48e40"
+    },
+    {
+      "path": "demo-stage4/static/index.html",
+      "bytes": 886,
+      "sha256": "a4574cea6cf3e6b4ae77b2d5bce49967ba3d35a9f36cef03a34938e9e7226152"
+    },
+    {
+      "path": "demo-stage4/static/lookup.js",
+      "bytes": 3744,
+      "sha256": "2f5f42087df0a38623fcf4f5399e1acb7a45aef88a0d7ccd41ee831efcb24e52"
+    },
+    {
+      "path": "demo-stage4/static/search.js",
+      "bytes": 8546,
+      "sha256": "826f0d993d2419c2d0d7d0d8c3b3c5a320bb512d9c948b194ed46def318c9b53"
+    },
+    {
+      "path": "demo-stage4/static/style.css",
+      "bytes": 5455,
+      "sha256": "3c82d6173ec7e1b11fd98a93c9f625f49084c2e45c5761a03eff5d691a611e61"
+    },
+    {
+      "path": "demo-stage4/temporal.py",
+      "bytes": 2711,
+      "sha256": "80d8224217719c94be9281ce2d6e7760409240235444b7f3aa5afb975bbee1ea"
+    },
+    {
+      "path": "demo-stage4/values.py",
+      "bytes": 4089,
+      "sha256": "7e35fc23a6474e6ac1737bd1948fa9f70e492820608163e1201a0d6f0a20e096"
     },
     {
       "path": "demo/.dockerignore",
@@ -172,8 +322,8 @@
     },
     {
       "path": "evidence/artifact-provenance.json",
-      "bytes": 109755,
-      "sha256": "96ba7f12205262ba784bc84a232ded8b54079a9c8756c0e05425eba0dd64c4e3"
+      "bytes": 120670,
+      "sha256": "866b07696f93e71d9328f6ed9905c1c04de4add9f08209404416a9a13512f44b"
     },
     {
       "path": "evidence/factory-runtime/administrative-scripts/README.md",
@@ -1624,6 +1774,36 @@
       "path": "evidence/render/source-provenance.json",
       "bytes": 1997,
       "sha256": "86e62354ce2cf587a1cb54a94af7b51a932cd2ad5fd6a7254a4e9c799970598c"
+    },
+    {
+      "path": "evidence/render/stage-4/live-check.py",
+      "bytes": 11017,
+      "sha256": "be0684c035e48d637826087cb5329bebc7db189bf2be359bbb8f5ce0d269f4d1"
+    },
+    {
+      "path": "evidence/render/stage-4/local-deployment-check.json",
+      "bytes": 1134,
+      "sha256": "1240217be2a5d2b34455b79a5eb64fb9b792684824b1c1ddb6f4cf9210c72a99"
+    },
+    {
+      "path": "evidence/render/stage-4/local-http-smoke.json",
+      "bytes": 3389,
+      "sha256": "dca0b058cf598485114f0467e63e080356438424d90241135861a4b77355c511"
+    },
+    {
+      "path": "evidence/render/stage-4/package-frozen-provenance.json",
+      "bytes": 6275,
+      "sha256": "b2ad3fe2c44fb1c952e7a02005f1cfcb7ec18f46b888e536afbff73000ab1f68"
+    },
+    {
+      "path": "evidence/render/stage-4/source-provenance.json",
+      "bytes": 8839,
+      "sha256": "5934e155ac8ab3579d2e0dee78d2a2d3a96c8d42e237f7623003bef398ef9d4a"
+    },
+    {
+      "path": "evidence/render/stage-4/source-review.json",
+      "bytes": 963,
+      "sha256": "5cc506d39920ecdfd9eae9165791a8b69f860646cf33e63b18f78891ea372489"
     },
     {
       "path": "evidence/room-download-20261006T071134Z.json",
