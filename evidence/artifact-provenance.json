@@ -290,6 +290,12 @@
       "destination": "submission/video/transcript.md",
       "source_path": "/Users/frank/mygit/Tablekeeper/submission/build-guild-demo/output/transcript.md",
       "source_sha256": "d15f5d97d1ef6a5ea163cf250b1831304ee488ff093734ab41ce5348d7d21f2b"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "factory/AGENTS.md",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-transport-source-20261005/AGENTS.md",
+      "source_sha256": "784139e91e5ec30229961a0e8a74d23ec0f20702f3c147e252b08ebe42fc9529"
     }
   ],
   "render_candidate": "b1f7ef64db7f0dce0b3f3a913a3af280c96d70b9",

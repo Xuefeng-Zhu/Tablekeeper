@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "createdAt": "2026-10-06T06:53:01.382481+00:00",
+  "createdAt": "2026-10-06T07:03:13.437461+00:00",
   "scope": "Local Sol development/practice artifact package; in-progress room snapshot",
   "applicationRevision": "108bcd4c48fa4fb4d7dedf286e94c8e4937f7f10",
   "inventoryExclusions": [
@@ -27,8 +27,8 @@
     },
     {
       "path": "FACTORY.md",
-      "bytes": 12922,
-      "sha256": "3d6b5d33748a1bb0eba3c9b0cacd20c0a6632d5105b9362d3967834218ddcb8e"
+      "bytes": 13240,
+      "sha256": "cac99af7f0ccd12c2721a5e2f7ab0c5a650dcebb98ad5ab9e5cc4b93212d1114"
     },
     {
       "path": "README.md",
@@ -172,8 +172,8 @@
     },
     {
       "path": "evidence/artifact-provenance.json",
-      "bytes": 15341,
-      "sha256": "764819394b6923dcb40c034b5c9489285f6bb925d627b36b52aa59ce571c852b"
+      "bytes": 15624,
+      "sha256": "de038a85fda1b756acfe56863d8039acd5ce75e8ad9aa974c24c8c533f79bb19"
     },
     {
       "path": "evidence/factory-runtime/notice-recovery-validation.json",
@@ -184,6 +184,11 @@
       "path": "evidence/factory-runtime/notice-recovery.patch",
       "bytes": 1110,
       "sha256": "a361b121c2b8f1095240aa1441668cbb5830b4cadb4913374d8985fd7dceacbf"
+    },
+    {
+      "path": "evidence/factory-runtime/published-source-inventory.json",
+      "bytes": 7919,
+      "sha256": "495a1ee799ad23cb8f7b55f0751b3ebc5fe1796ad6f2d8b04336ff6dfd63b9ab"
     },
     {
       "path": "evidence/factory-runtime/transport-baseline.json",
@@ -339,6 +344,11 @@
       "path": "evidence/room-download.json",
       "bytes": 532,
       "sha256": "952442c798a5ab52414358f377091e4fce65599947bc1dfae70cf7701938f8df"
+    },
+    {
+      "path": "factory/AGENTS.md",
+      "bytes": 1161,
+      "sha256": "784139e91e5ec30229961a0e8a74d23ec0f20702f3c147e252b08ebe42fc9529"
     },
     {
       "path": "factory/agents/README.md",
