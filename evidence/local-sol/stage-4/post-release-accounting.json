@@ -1,0 +1,31 @@
+{
+  "observed_at": "2026-10-06T10:49:44.074387+00:00",
+  "scope": "Dated post-Stage4-release running/idle transport and reported accounting observation; no operator stop or final-run completion inferred",
+  "owner_status": "running",
+  "owner_updated_at": "2026-10-06T10:49:42.933063+00:00",
+  "historical_baseline_tokens": 356587855,
+  "cumulative_tokens": 558228846,
+  "local_tokens": 201640991,
+  "remaining_tokens": 98359009,
+  "authorized_local_total_tokens": 300000000,
+  "ledger_stop_reason": null,
+  "turn_counters": {
+    "architect": 111,
+    "backend": 154,
+    "designer": 30,
+    "frontend": 19,
+    "pm": 796,
+    "qa": 120,
+    "reviewer": 178
+  },
+  "pm796": [
+    {
+      "turn_id": "pm:796:3f9a4693-e5eb-4953-844b-758616c8569c",
+      "status": "completed",
+      "started_at": 1791283161.3053608,
+      "ended_at": 1791283170.408459
+    }
+  ],
+  "new_factory_source_changes": [],
+  "usd_cost": "unavailable"
+}

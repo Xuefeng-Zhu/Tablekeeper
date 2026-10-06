@@ -1,0 +1,114 @@
+[
+  {
+    "command": "docker run --rm --network qa-s4-net-1012 -v /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z:/evidence -w /evidence df-harness-runner python api.py > /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/api-attempt1.txt 2>&1",
+    "exit": 1,
+    "evidence": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/api-attempt1.txt",
+    "timestamps": "case UTC start/end in log; helper-only prepare has file/observed command provenance"
+  },
+  {
+    "command": "docker run --rm --network qa-s4-net-1012 -v /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z:/evidence -w /evidence df-harness-runner python api2.py > /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/api-attempt2.txt 2>&1",
+    "exit": 0,
+    "evidence": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/api-attempt2.txt",
+    "timestamps": "case UTC start/end in log; helper-only prepare has file/observed command provenance"
+  },
+  {
+    "command": "docker run --rm --network qa-s4-net-1012 -v /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z:/evidence -w /evidence df-harness-runner python extended.py > /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/extended-attempt1.txt 2>&1",
+    "exit": 1,
+    "evidence": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/extended-attempt1.txt",
+    "timestamps": "case UTC start/end in log; helper-only prepare has file/observed command provenance"
+  },
+  {
+    "command": "docker run --rm --network qa-s4-net-1012 -v /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z:/evidence -w /evidence df-harness-runner python extended2.py > /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/extended-attempt2.txt 2>&1",
+    "exit": 0,
+    "evidence": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/extended-attempt2.txt",
+    "timestamps": "case UTC start/end in log; helper-only prepare has file/observed command provenance"
+  },
+  {
+    "command": "docker run --rm --network qa-s4-net-1012 -v /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z:/evidence -w /evidence df-harness-runner python legacy-prepare.py > /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/legacy-prepare.txt 2>&1",
+    "exit": 0,
+    "evidence": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/legacy-prepare.txt",
+    "timestamps": "case UTC start/end in log; helper-only prepare has file/observed command provenance"
+  },
+  {
+    "command": "docker run --rm --network qa-s4-net-1012 -v /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z:/evidence -w /evidence df-harness-runner python imports.py > /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/import-attempt1.txt 2>&1",
+    "exit": 1,
+    "evidence": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/import-attempt1.txt",
+    "timestamps": "case UTC start/end in log; helper-only prepare has file/observed command provenance"
+  },
+  {
+    "command": "docker run --rm --network qa-s4-net-1012 -v /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z:/evidence -w /evidence df-harness-runner python diagnose-import.py > /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/import-diagnosis.txt 2>&1",
+    "exit": 0,
+    "evidence": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/import-diagnosis.txt",
+    "timestamps": "case UTC start/end in log; helper-only prepare has file/observed command provenance"
+  },
+  {
+    "command": "docker run --rm --network qa-s4-net-1012 -v /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z:/evidence -w /evidence df-harness-runner python imports2.py > /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/import-attempt2.txt 2>&1",
+    "exit": 0,
+    "evidence": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/import-attempt2.txt",
+    "timestamps": "case UTC start/end in log; helper-only prepare has file/observed command provenance"
+  },
+  {
+    "command": "docker run --rm --network qa-s4-net-1012 -v /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z:/evidence -w /evidence df-harness-runner python extra.py > /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/extra-attempt1.txt 2>&1",
+    "exit": 1,
+    "evidence": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/extra-attempt1.txt",
+    "timestamps": "case UTC start/end in log; helper-only prepare has file/observed command provenance"
+  },
+  {
+    "command": "docker run --rm --network qa-s4-net-1012 -v /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z:/evidence -w /evidence df-harness-runner python extra2.py > /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/extra-attempt2.txt 2>&1",
+    "exit": 1,
+    "evidence": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/extra-attempt2.txt",
+    "timestamps": "case UTC start/end in log; helper-only prepare has file/observed command provenance"
+  },
+  {
+    "command": "docker run --rm --network qa-s4-net-1012 -v /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z:/evidence -w /evidence df-harness-runner python extra3.py > /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/extra-attempt3.txt 2>&1",
+    "exit": 0,
+    "evidence": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/extra-attempt3.txt",
+    "timestamps": "case UTC start/end in log; helper-only prepare has file/observed command provenance"
+  },
+  {
+    "command": "docker run --rm --network qa-s4-net-1012 -v /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z:/evidence -w /evidence df-harness-runner python relationships.py > /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/relationships-attempt1.txt 2>&1",
+    "exit": 1,
+    "evidence": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/relationships-attempt1.txt",
+    "timestamps": "case UTC start/end in log; helper-only prepare has file/observed command provenance"
+  },
+  {
+    "command": "docker run --rm --network qa-s4-net-1012 -v /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z:/evidence -w /evidence df-harness-runner python relationships2.py > /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/relationships-attempt2.txt 2>&1",
+    "exit": 0,
+    "evidence": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/relationships-attempt2.txt",
+    "timestamps": "case UTC start/end in log; helper-only prepare has file/observed command provenance"
+  },
+  {
+    "command": "docker run --rm --network qa-s4-net-1012 -v /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z:/evidence -w /evidence df-harness-runner python solver-literal.py > /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/solver-literal.txt 2>&1",
+    "exit": 0,
+    "evidence": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/solver-literal.txt",
+    "timestamps": "case UTC start/end in log; helper-only prepare has file/observed command provenance"
+  },
+  {
+    "command": "docker run --rm --network qa-s4-net-1012 -v /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z:/evidence -w /evidence df-harness-runner python history-portable.py > /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/history-portable.txt 2>&1",
+    "exit": 1,
+    "evidence": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/history-portable.txt",
+    "timestamps": "case UTC start/end in log; helper-only prepare has file/observed command provenance"
+  },
+  {
+    "command": "docker run --rm --network qa-s4-net-1012 -v /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z:/evidence -w /evidence df-harness-runner python history-portable2.py > /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/history-portable-attempt2.txt 2>&1",
+    "exit": 0,
+    "evidence": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/history-portable-attempt2.txt",
+    "timestamps": "case UTC start/end in log; helper-only prepare has file/observed command provenance"
+  },
+  {
+    "command": "docker run --rm --network qa-s4-net-1012 -v /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z:/evidence -v /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/browser:/out -w /evidence df-harness-runner python browser.py > /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/browser-attempt1.txt 2>&1",
+    "exit": 0,
+    "evidence": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/browser-attempt1.txt"
+  },
+  {
+    "command": "docker run --rm --network qa-s4-net-1012 -v /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z:/evidence -v /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/browser2:/out -w /evidence df-harness-runner python browser2.py > /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/browser-attempt2.txt 2>&1",
+    "exit": 0,
+    "evidence": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/browser-attempt2.txt"
+  },
+  {
+    "command": "/Users/frank/mygit/Tablekeeper/runs/harness-venv/bin/python -m harness run --track tablekeeper --repo /private/tmp/tablekeeper-qa-s4-ac1eb4-20261006T1012Z --stage 4 --mode isolated --out /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/official",
+    "cwd": "/Users/frank/mygit/Tablekeeper/challenge",
+    "exit": 0,
+    "evidence": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/official/report.json"
+  }
+]

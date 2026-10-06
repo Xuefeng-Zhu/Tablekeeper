@@ -1,0 +1,54 @@
+{
+  "groups": [
+    "Actual acceptedStage3 anchor amended beforeadoption revision3 then anchor dateexception/cancelled sibling; actualexport prepared"
+  ],
+  "start_utc": "2026-10-06T10:33:06.890561+00:00",
+  "end_utc": "2026-10-06T10:33:07.022013+00:00",
+  "stats": [
+    {
+      "path": "/_test/reset",
+      "status": 204,
+      "seconds": 0.08841792000748683
+    },
+    {
+      "path": "/auth/login",
+      "status": 200,
+      "seconds": 0.033233930997084826
+    },
+    {
+      "path": "/reservations",
+      "status": 201,
+      "seconds": 0.003992897007265128
+    },
+    {
+      "path": "/reservations/D94C27E685",
+      "status": 200,
+      "seconds": 0.0008314479928230867
+    },
+    {
+      "path": "/reservations/D94C27E685",
+      "status": 200,
+      "seconds": 0.0006576500018127263
+    },
+    {
+      "path": "/series",
+      "status": 201,
+      "seconds": 0.0010196619987254962
+    },
+    {
+      "path": "/reservations/D94C27E685",
+      "status": 200,
+      "seconds": 0.0005178940045880154
+    },
+    {
+      "path": "/reservations/75CB90DD48/cancel",
+      "status": 200,
+      "seconds": 0.0005093520012451336
+    },
+    {
+      "path": "/_test/export",
+      "status": 200,
+      "seconds": 0.0014625119947595522
+    }
+  ]
+}

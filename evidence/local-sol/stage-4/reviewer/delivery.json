@@ -1,0 +1,33 @@
+{
+  "delivery_id": "s4-release-review-accepted-001",
+  "sha256": "ec7bc03a16d5cea1869d8f9dac5d3f54b8a6dbf8a5122fae218864a81fd7a05b",
+  "parts": 2,
+  "receipt": "CONFIRMED",
+  "lease": "released after complete numbered delivery",
+  "utc": "2026-10-06T10:37:02.515700+00:00",
+  "events": [
+    "5e531a10-a5bd-4e61-9330-3898d1a45e71",
+    "74bc4637-9b9c-47cf-bca8-ab786c53f9ff"
+  ],
+  "owner_sync_reports": {
+    "BUILD-S4": {
+      "version": 6,
+      "state": "ACCEPTED",
+      "candidate": "ac1eb4945a2adaeaaf8a62d0817bdbc6a021e566",
+      "owner_sync_pending": false,
+      "pending": null,
+      "verdict": "b621b20a-b654-40b3-8dab-ad2153a2c65d"
+    },
+    "QA-S4-RUN": {
+      "version": 6,
+      "state": "ACCEPTED",
+      "candidate": "ac1eb4945a2adaeaaf8a62d0817bdbc6a021e566",
+      "owner_sync_pending": false,
+      "pending": null,
+      "verdict": "95ff26a6-23d0-4257-992c-eeb13d3538cd",
+      "scope": "finite QA evidence only"
+    }
+  },
+  "receipt_sha256": "ec7bc03a16d5cea1869d8f9dac5d3f54b8a6dbf8a5122fae218864a81fd7a05b",
+  "receipt_utc": "2026-10-06T10:39:02.474025+00:00"
+}

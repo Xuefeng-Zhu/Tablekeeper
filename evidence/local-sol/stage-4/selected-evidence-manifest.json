@@ -1,0 +1,1469 @@
+{
+  "status": "PASS",
+  "recorded_utc": "2026-10-06T10:50:19.404902+00:00",
+  "accepted_candidate": "ac1eb4945a2adaeaaf8a62d0817bdbc6a021e566",
+  "scope": "Selected exact copies of actual Backend, QA and Reviewer Stage4 evidence. No private snapshot/auth/session/context bundles copied. Three selected browser screenshots visually reviewed; values are synthetic local restaurant/user/booking fixtures. Logs preserve failed attempts and successful actual outcomes.",
+  "selected_exact_copies": [
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s4-delivery-20261006T1001Z/browser-checks.txt",
+      "destination": "evidence/local-sol/stage-4/backend/browser-checks.txt",
+      "sha256": "3356b0b9f576d9de7a5fe4f6fda4e866815975a626434b68f5e8f14d3414809b",
+      "bytes": 1293
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s4-delivery-20261006T1001Z/browser-record.json",
+      "destination": "evidence/local-sol/stage-4/backend/browser-record.json",
+      "sha256": "abb3ab8075d60fe73c6f36ab3fe0d60f1806da3aaf5b2ce7c4bf15f88f25b4a5",
+      "bytes": 1491
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s4-delivery-20261006T1001Z/build.txt",
+      "destination": "evidence/local-sol/stage-4/backend/build.txt",
+      "sha256": "2414d7656e539b781b0113b31769a3f5e75a21e4c396b5c93dc61ee2fc786542",
+      "bytes": 922
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s4-delivery-20261006T1001Z/candidate-checks.txt",
+      "destination": "evidence/local-sol/stage-4/backend/candidate-checks.txt",
+      "sha256": "7df6113d6f7ae940ff4f27e83667d01c6a289cfd62078403cd57a2b90c3f262e",
+      "bytes": 6319
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s4-delivery-20261006T1001Z/candidate-record.json",
+      "destination": "evidence/local-sol/stage-4/backend/candidate-record.json",
+      "sha256": "485a623df96642cd5a5dee51372c96c89dde8b35fe5b89ed88379507b6ef9b10",
+      "bytes": 703
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s4-delivery-20261006T1001Z/cleanup.json",
+      "destination": "evidence/local-sol/stage-4/backend/cleanup.json",
+      "sha256": "e00e419dde20befb8c88b7e873e1ca4da2f72092bf5d880a4ab93b22b029d870",
+      "bytes": 786
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s4-delivery-20261006T1001Z/commands.json",
+      "destination": "evidence/local-sol/stage-4/backend/commands.json",
+      "sha256": "4e0634ea068c4816931c76e993114740ca1badd77e00fec0d00d41cb898e73df",
+      "bytes": 3517
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s4-delivery-20261006T1001Z/delivery.json",
+      "destination": "evidence/local-sol/stage-4/backend/delivery.json",
+      "sha256": "39c4b5968de4c90ddd2a89ab3a57ef822a06e05a22898553f5f600d98948367c",
+      "bytes": 407
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s4-delivery-20261006T1001Z/official-command.txt",
+      "destination": "evidence/local-sol/stage-4/backend/official-command.txt",
+      "sha256": "364ca9a32a250765b93ff9c3b376b55ced2a14a396ec5ef68a4df9fea62cea65",
+      "bytes": 1350
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s4-delivery-20261006T1001Z/packaging.json",
+      "destination": "evidence/local-sol/stage-4/backend/packaging.json",
+      "sha256": "5d5be13d18b7d1488d159cc5cc2f8b84ca774173e21331246054ccbe486d55ba",
+      "bytes": 2559
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s4-delivery-20261006T1001Z/provenance.json",
+      "destination": "evidence/local-sol/stage-4/backend/provenance.json",
+      "sha256": "22d83b28096acf831904af588161f2722911d138ddc7776ae2d91060860e5c40",
+      "bytes": 4739
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s4-delivery-20261006T1001Z/repair-notes.txt",
+      "destination": "evidence/local-sol/stage-4/backend/repair-notes.txt",
+      "sha256": "d37fc384a12fd55ad64fa0252df98d5d749b17945f251b325d2efed639163c6e",
+      "bytes": 1113
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s4-delivery-20261006T1001Z/setup.json",
+      "destination": "evidence/local-sol/stage-4/backend/setup.json",
+      "sha256": "df830f404682b49422893e41327f350315533b17a7d7dbb30190409c3d7e118c",
+      "bytes": 1597
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s4-delivery-20261006T1001Z/stopped-applied-source.json",
+      "destination": "evidence/local-sol/stage-4/backend/stopped-applied-source.json",
+      "sha256": "e1ddd29f4742a090b7046c7c5472c19a9e523a3b3920ea716329a1908508a2d5",
+      "bytes": 754
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s4-delivery-20261006T1001Z/stopped-applied.txt",
+      "destination": "evidence/local-sol/stage-4/backend/stopped-applied.txt",
+      "sha256": "3641f9b9bc7900a9ba83f7be9e4465bc9b934975e5a191c58e0f0cbab87d9545",
+      "bytes": 276
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s4-delivery-20261006T1001Z/stopped-pending.txt",
+      "destination": "evidence/local-sol/stage-4/backend/stopped-pending.txt",
+      "sha256": "3a182fa6808e195ef7f6f03c515c5ba5648b340c60f1a87a0e95c04eda615286",
+      "bytes": 276
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s4-delivery-20261006T1001Z/stopped-prepare.txt",
+      "destination": "evidence/local-sol/stage-4/backend/stopped-prepare.txt",
+      "sha256": "5c5377d882c04736ac6255cf13fc23b5bf742c36716641e5e055333b05b6b221",
+      "bytes": 269
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s4-delivery-20261006T1001Z/stopped-sources.json",
+      "destination": "evidence/local-sol/stage-4/backend/stopped-sources.json",
+      "sha256": "0cfe4bb4e5bbe8e7f8d1ac66b401607ae9ddafd7a45a1da9ffe39505928da6dc",
+      "bytes": 969
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s4-delivery-20261006T1001Z/official/report.json",
+      "destination": "evidence/local-sol/stage-4/backend/official/report.json",
+      "sha256": "0b1e3ee7e896b88fd06c0db0cec54f9a7324360939ac79a411185d79f6cd90c2",
+      "bytes": 2871
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s4-delivery-20261006T1001Z/official/stage-1.counts.json",
+      "destination": "evidence/local-sol/stage-4/backend/official/stage-1.counts.json",
+      "sha256": "b18fabdbadab8f1094c6b47d09dd89a3e3215cb6c471340343c5f8787e30b77b",
+      "bytes": 499
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s4-delivery-20261006T1001Z/official/stage-1.log",
+      "destination": "evidence/local-sol/stage-4/backend/official/stage-1.log",
+      "sha256": "f702b21ba3d2178ec304481ab7419af6eac488e6fbf7618fc7c030e633428efa",
+      "bytes": 1430
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s4-delivery-20261006T1001Z/official/stage-2.counts.json",
+      "destination": "evidence/local-sol/stage-4/backend/official/stage-2.counts.json",
+      "sha256": "5e7ced47a9492a568aec12049d401867a868110520ced788cfc9976f400e4b0a",
+      "bytes": 218
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s4-delivery-20261006T1001Z/official/stage-2.log",
+      "destination": "evidence/local-sol/stage-4/backend/official/stage-2.log",
+      "sha256": "b13d26a8641a60c66b573aa792d0fa8a1746a7583c85c18f411fd3cb46e47c49",
+      "bytes": 1481
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s4-delivery-20261006T1001Z/official/stage-3.counts.json",
+      "destination": "evidence/local-sol/stage-4/backend/official/stage-3.counts.json",
+      "sha256": "0690b4b540761c4ee3ae249853e6a8a3bdc4210f686645f4612e3c336d716713",
+      "bytes": 165
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s4-delivery-20261006T1001Z/official/stage-3.log",
+      "destination": "evidence/local-sol/stage-4/backend/official/stage-3.log",
+      "sha256": "0395dccdbc4bbba1d7478ec1d655b26b456c2bf8aac4dc0e2160ce0e9108d282",
+      "bytes": 1479
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s4-delivery-20261006T1001Z/official/stage-4.counts.json",
+      "destination": "evidence/local-sol/stage-4/backend/official/stage-4.counts.json",
+      "sha256": "9634baaeda23ab472e0fe8359c728ccd2fc1c62cf467b7ffdc8c4685446b4089",
+      "bytes": 165
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s4-delivery-20261006T1001Z/official/stage-4.log",
+      "destination": "evidence/local-sol/stage-4/backend/official/stage-4.log",
+      "sha256": "82cbcd0646f5c3cf56b343929e0dbf9440d47e5770800a739d6bf15803d07152",
+      "bytes": 1479
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/record.json",
+      "destination": "evidence/local-sol/stage-4/qa/record.json",
+      "sha256": "c969c0ffda726afb9658be479ea277e7e4b8efe86cc39de2f8bb4c79e92d5737",
+      "bytes": 2964
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/manifest.json",
+      "destination": "evidence/local-sol/stage-4/qa/manifest.json",
+      "sha256": "c6d4f469fcf512059182cdd8501f4a3e37ce395b0b86e27247cbe2e0f8e2982e",
+      "bytes": 27198
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/commands.json",
+      "destination": "evidence/local-sol/stage-4/qa/commands.json",
+      "sha256": "6260c1c0b0bfa3781077de1cd5a9a0fc51fe1e8ee95bb1c0eb567b46ef91d60a",
+      "bytes": 11253
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/provenance.json",
+      "destination": "evidence/local-sol/stage-4/qa/provenance.json",
+      "sha256": "f662529cb2990542ecfed75ff95df7858081abadd79cb065d60a1d04c4b2fb2b",
+      "bytes": 2910
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/sources.json",
+      "destination": "evidence/local-sol/stage-4/qa/sources.json",
+      "sha256": "709ce1d443f4ed42cec329da8f9aa9dbffc25aee45992bbe8de75e8fd59c57c3",
+      "bytes": 1192
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/coverage.txt",
+      "destination": "evidence/local-sol/stage-4/qa/coverage.txt",
+      "sha256": "4e7afe0414d7e18ddc4574c02c28bc504e7a0e64c0444292137ac9604ce4d884",
+      "bytes": 4478
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/failed-attempt-disposition.txt",
+      "destination": "evidence/local-sol/stage-4/qa/failed-attempt-disposition.txt",
+      "sha256": "5d64f53d4944c102ee9271e8c29cbf5d0032b0a036ac3395a031750da210a202",
+      "bytes": 2108
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/final-cleanliness.json",
+      "destination": "evidence/local-sol/stage-4/qa/final-cleanliness.json",
+      "sha256": "fd300f261f368821492578d78b5101e58fb175b668bdf3fe8cf86723aba645b9",
+      "bytes": 182
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/api-attempt1.txt",
+      "destination": "evidence/local-sol/stage-4/qa/api-attempt1.txt",
+      "sha256": "ba1af294eeabb4057a50fa0cf969e07c095b6f40a48d00a931fdd9467386cb75",
+      "bytes": 5507
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/api-attempt2.txt",
+      "destination": "evidence/local-sol/stage-4/qa/api-attempt2.txt",
+      "sha256": "ac9d14f6c6538da78c85e3f48750b8c24deade5c767cf4086eef212b2318de45",
+      "bytes": 2780
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/extended-attempt1.txt",
+      "destination": "evidence/local-sol/stage-4/qa/extended-attempt1.txt",
+      "sha256": "495fe5ad2a09f57b5b6930dfdc952246617c2e3e8478344c0cdfb60ce784cac0",
+      "bytes": 3272
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/extended-attempt2.txt",
+      "destination": "evidence/local-sol/stage-4/qa/extended-attempt2.txt",
+      "sha256": "21f25c3f420f061980d2e4ef15f6087622243baa37e3dee017e02d4e0233f21c",
+      "bytes": 1480
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/extra-attempt1.txt",
+      "destination": "evidence/local-sol/stage-4/qa/extra-attempt1.txt",
+      "sha256": "e799fbba191d92013dea30f6124b1e315dbadd79fe79d5cec19b0122b2059cff",
+      "bytes": 3022
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/extra-attempt3.txt",
+      "destination": "evidence/local-sol/stage-4/qa/extra-attempt3.txt",
+      "sha256": "10e8bc621010d953c8c89fadf45e9616f0069387e3365e9a99be065b00f8e07f",
+      "bytes": 1055
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/import-attempt1.txt",
+      "destination": "evidence/local-sol/stage-4/qa/import-attempt1.txt",
+      "sha256": "12e38ca3c16d9a6e45c448909f843957ab4d8897d9931fd0fe8a6c981ef16446",
+      "bytes": 2862
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/import-attempt2.txt",
+      "destination": "evidence/local-sol/stage-4/qa/import-attempt2.txt",
+      "sha256": "bcd000ab2f3224275df63165bfd1486d16ecbe51ed997a980b9e62a1594d27a4",
+      "bytes": 1330
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/import-diagnosis.txt",
+      "destination": "evidence/local-sol/stage-4/qa/import-diagnosis.txt",
+      "sha256": "dc986eb17b071d80c4d3e987dcd3b7579017bf1976394207278d17cbc27a0d12",
+      "bytes": 548
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/relationships-attempt1.txt",
+      "destination": "evidence/local-sol/stage-4/qa/relationships-attempt1.txt",
+      "sha256": "39bd5be453797d83514e9f5d33c6369b9f12625ec924a150dca2a3c6796b2168",
+      "bytes": 5604
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/relationships-attempt2.txt",
+      "destination": "evidence/local-sol/stage-4/qa/relationships-attempt2.txt",
+      "sha256": "2675431306f01d4dc9f668a3c91e7ed94715f75e041079a87937cb4f8ee81773",
+      "bytes": 704
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/solver-literal.txt",
+      "destination": "evidence/local-sol/stage-4/qa/solver-literal.txt",
+      "sha256": "c0861ac7f86c45a66b36bddc0a6558a219dd43745be5ec19e59273561c4d5782",
+      "bytes": 1065
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/history-portable-attempt2.txt",
+      "destination": "evidence/local-sol/stage-4/qa/history-portable-attempt2.txt",
+      "sha256": "1b5a3422a0e86523c0ae3772884371e2e8a357acc1d6329181032a7524882793",
+      "bytes": 430
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/browser-attempt1.txt",
+      "destination": "evidence/local-sol/stage-4/qa/browser-attempt1.txt",
+      "sha256": "02228bd1722f5bf2d6ddaf1f96d6db3fcc0291ea4b60608f20742d015024a64e",
+      "bytes": 6149
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/browser-attempt2.txt",
+      "destination": "evidence/local-sol/stage-4/qa/browser-attempt2.txt",
+      "sha256": "6489c74fcdff5b570956cf503123bacd0c852dd3c266402809b97aa06ba9b66a",
+      "bytes": 1047
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/browser/report.json",
+      "destination": "evidence/local-sol/stage-4/qa/browser/report.json",
+      "sha256": "a03c8a14ec21ace0988bcf6572feb7e7631bc422e0c7ae89f53f347a788cdbf9",
+      "bytes": 11454
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/browser2/report.json",
+      "destination": "evidence/local-sol/stage-4/qa/browser2/report.json",
+      "sha256": "241efc8527cba0c48034bba15d9b3959bd0d1c9f0050eecd438ca0c598cd83f9",
+      "bytes": 3907
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/resource-configuration.txt",
+      "destination": "evidence/local-sol/stage-4/qa/resource-configuration.txt",
+      "sha256": "edbcc4db6d8bb0e85d500af5c45960acaa3332239251280d3b5ee2ec78dc5405",
+      "bytes": 250
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/stopped-sources.txt",
+      "destination": "evidence/local-sol/stage-4/qa/stopped-sources.txt",
+      "sha256": "d2f2676ecf62f93694ddd2351c78b9953ef353a0058f493de83d6734ae64e32a",
+      "bytes": 44
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/official-command.txt",
+      "destination": "evidence/local-sol/stage-4/qa/official-command.txt",
+      "sha256": "6bcd66069c028017b35b31ed0e8f87a565c8f9e21d4acd783909fb56bf441943",
+      "bytes": 1284
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/cleanup-containers.txt",
+      "destination": "evidence/local-sol/stage-4/qa/cleanup-containers.txt",
+      "sha256": "6c7781b5fb0e48ac89bdaea743dbf69f4f71c0973db32e2e8f8ef6f20f184be4",
+      "bytes": 65
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/cleanup-images.txt",
+      "destination": "evidence/local-sol/stage-4/qa/cleanup-images.txt",
+      "sha256": "5a721dc6076e8efb7dcdadf8055ad437db6733f271efd6fb2e3d75b19896390d",
+      "bytes": 221
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/cleanup-network.txt",
+      "destination": "evidence/local-sol/stage-4/qa/cleanup-network.txt",
+      "sha256": "808938e369971411a2d827606563fe00a1e03a9257b4453ac2fe7bbf23f03a2a",
+      "bytes": 15
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/official/report.json",
+      "destination": "evidence/local-sol/stage-4/qa/official/report.json",
+      "sha256": "57b908cbdca6dddfc40ab8730c720751c72b3c5da5cb569fcc11a7314ae29d50",
+      "bytes": 2859
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/official/stage-1.counts.json",
+      "destination": "evidence/local-sol/stage-4/qa/official/stage-1.counts.json",
+      "sha256": "b18fabdbadab8f1094c6b47d09dd89a3e3215cb6c471340343c5f8787e30b77b",
+      "bytes": 499
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/official/stage-1.log",
+      "destination": "evidence/local-sol/stage-4/qa/official/stage-1.log",
+      "sha256": "ef720ba9fbad0df0b59ba04f9f322a5a2823938dcc230116533ca071cc55a97d",
+      "bytes": 1420
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/official/stage-2.counts.json",
+      "destination": "evidence/local-sol/stage-4/qa/official/stage-2.counts.json",
+      "sha256": "5e7ced47a9492a568aec12049d401867a868110520ced788cfc9976f400e4b0a",
+      "bytes": 218
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/official/stage-2.log",
+      "destination": "evidence/local-sol/stage-4/qa/official/stage-2.log",
+      "sha256": "7c09a4d7fe7bccc97e07bc6876f75a41c45111b9890d737dbbd27f4a8eb485ad",
+      "bytes": 1471
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/official/stage-3.counts.json",
+      "destination": "evidence/local-sol/stage-4/qa/official/stage-3.counts.json",
+      "sha256": "0690b4b540761c4ee3ae249853e6a8a3bdc4210f686645f4612e3c336d716713",
+      "bytes": 165
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/official/stage-3.log",
+      "destination": "evidence/local-sol/stage-4/qa/official/stage-3.log",
+      "sha256": "e7667ef74acf578e710fff6ea245e52da653e56ee678f9d90da1843e572db6fa",
+      "bytes": 1469
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/official/stage-4.counts.json",
+      "destination": "evidence/local-sol/stage-4/qa/official/stage-4.counts.json",
+      "sha256": "9634baaeda23ab472e0fe8359c728ccd2fc1c62cf467b7ffdc8c4685446b4089",
+      "bytes": 165
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/official/stage-4.log",
+      "destination": "evidence/local-sol/stage-4/qa/official/stage-4.log",
+      "sha256": "37b8f10ff232e021a3cd77dc62e1a3959d964468ece9e82e3e4acd1012d80f48",
+      "bytes": 1469
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/browser2/real-upgrade-qa-s4-old3-375.png",
+      "destination": "evidence/local-sol/stage-4/qa/browser2/real-upgrade-qa-s4-old3-375.png",
+      "sha256": "178847691e8625ef13d98631cd49aa76f9641ee4fef82ffa7de81e5d59b649bf",
+      "bytes": 343179
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s4-release-20261006T102629Z/record.json",
+      "destination": "evidence/local-sol/stage-4/reviewer/record.json",
+      "sha256": "0be260a04370be41bf96adfbc0420f9f53a651cb6f3b55616d8657d58a7c1c28",
+      "bytes": 8328
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s4-release-20261006T102629Z/setup.json",
+      "destination": "evidence/local-sol/stage-4/reviewer/setup.json",
+      "sha256": "93db216f0abf679c3b5f762e075059f3e42786c5b85bf471dfac1fe862141640",
+      "bytes": 4189
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s4-release-20261006T102629Z/delivery.json",
+      "destination": "evidence/local-sol/stage-4/reviewer/delivery.json",
+      "sha256": "66baa3675f2b3f7c759d4442ac13527c8b32a44faf94c53f2364147633baa0aa",
+      "bytes": 1092
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s4-release-20261006T102629Z/audit.json",
+      "destination": "evidence/local-sol/stage-4/reviewer/audit.json",
+      "sha256": "0af13d68cbab90f9b32dea8867bf5cb81890ec9dba537039fccb35802fa73d22",
+      "bytes": 269
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s4-release-20261006T102629Z/packaging.json",
+      "destination": "evidence/local-sol/stage-4/reviewer/packaging.json",
+      "sha256": "e6e9a2956c22de1c0f43b0102bf111ea10433a236c4753451e49a3b4e6a2f31c",
+      "bytes": 2644
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s4-release-20261006T102629Z/execution.json",
+      "destination": "evidence/local-sol/stage-4/reviewer/execution.json",
+      "sha256": "140f20e66912b4dc6bf62ebeb82c85d6ac86554a35b6431180bb147564dfb397",
+      "bytes": 17934
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s4-release-20261006T102629Z/api.txt",
+      "destination": "evidence/local-sol/stage-4/reviewer/api.txt",
+      "sha256": "6b03ceba8997b2a84233609e23d2215ea1a319491bd3e2eb859b3c7c6c6d36ca",
+      "bytes": 1528
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s4-release-20261006T102629Z/browser.txt",
+      "destination": "evidence/local-sol/stage-4/reviewer/browser.txt",
+      "sha256": "add10ee83b3d75f0055e5fe70eacfd164e2c0910f1242c259060b6fd2534dc4d",
+      "bytes": 568
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s4-release-20261006T102629Z/failed-attempt-disposition.txt",
+      "destination": "evidence/local-sol/stage-4/reviewer/failed-attempt-disposition.txt",
+      "sha256": "4be17d54b712fc6eea2d61a80f5de927a68e772ea967713bd43864dfdd5b72cf",
+      "bytes": 645
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s4-release-20261006T102629Z/browser-run/report.json",
+      "destination": "evidence/local-sol/stage-4/reviewer/browser-run/report.json",
+      "sha256": "102db18654160c31e4c19bed45ca4268a691a3b7e96e94a90dd419b6bb5221a7",
+      "bytes": 11748
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s4-release-20261006T102629Z/attempt2/execution.json",
+      "destination": "evidence/local-sol/stage-4/reviewer/attempt2/execution.json",
+      "sha256": "16ddc41b09c8bc83fa79d155fb1b7b3affefec8405f041f81b827a7c22ef161f",
+      "bytes": 8742
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s4-release-20261006T102629Z/attempt2/api.txt",
+      "destination": "evidence/local-sol/stage-4/reviewer/attempt2/api.txt",
+      "sha256": "cb7f23fe7dfadebe37b9760b4dff0adf2f9a6d0c01819aff687d672751306b91",
+      "bytes": 940
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s4-release-20261006T102629Z/attempt2/verify.txt",
+      "destination": "evidence/local-sol/stage-4/reviewer/attempt2/verify.txt",
+      "sha256": "4f84f7bed5c26dd096762d8e35abb4101d0c5ab96af6d112c2ddfb6f838c1001",
+      "bytes": 624
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s4-release-20261006T102629Z/attempt2/api-run/report.json",
+      "destination": "evidence/local-sol/stage-4/reviewer/attempt2/api-run/report.json",
+      "sha256": "50a859b6753fee8220bb8050610e0bfd0899b890eaa591d9a364d0d3f4c47e63",
+      "bytes": 22188
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s4-release-20261006T102629Z/attempt2/verify-run/report.json",
+      "destination": "evidence/local-sol/stage-4/reviewer/attempt2/verify-run/report.json",
+      "sha256": "d2569f157dedb469f837cdf1f196bbe9519fbd6ed4d8b6b5bd399d6dce2ff239",
+      "bytes": 3965
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s4-release-20261006T102629Z/supplement/execution.json",
+      "destination": "evidence/local-sol/stage-4/reviewer/supplement/execution.json",
+      "sha256": "0458d9d80cd1c5d1bdadfc1bcb124b87d1faf0bf964ff6eb45564e7bf7ad74a3",
+      "bytes": 7421
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s4-release-20261006T102629Z/supplement/prepare-run/report.json",
+      "destination": "evidence/local-sol/stage-4/reviewer/supplement/prepare-run/report.json",
+      "sha256": "03febfff38946045d899fe5aa747817fa0659d54426a868d5bc138786ff99c89",
+      "bytes": 1247
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s4-release-20261006T102629Z/supplement/verify-run/report.json",
+      "destination": "evidence/local-sol/stage-4/reviewer/supplement/verify-run/report.json",
+      "sha256": "cabfd4a93c793905f16f6d1c5b32e76974d5c697924db8800c2831d5892dc350",
+      "bytes": 4794
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s4-release-20261006T102629Z/official/report.json",
+      "destination": "evidence/local-sol/stage-4/reviewer/official/report.json",
+      "sha256": "18f2b402f777078740405f5e3a38ef78a10eb89a268a6703ccd1eac608a4156e",
+      "bytes": 2880
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s4-release-20261006T102629Z/official/stage-1.counts.json",
+      "destination": "evidence/local-sol/stage-4/reviewer/official/stage-1.counts.json",
+      "sha256": "b18fabdbadab8f1094c6b47d09dd89a3e3215cb6c471340343c5f8787e30b77b",
+      "bytes": 499
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s4-release-20261006T102629Z/official/stage-1.log",
+      "destination": "evidence/local-sol/stage-4/reviewer/official/stage-1.log",
+      "sha256": "9059127f260a9e4ec63e1a841fb270b1263b88e02e8367e0bac80d3c495e58f8",
+      "bytes": 1432
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s4-release-20261006T102629Z/official/stage-2.counts.json",
+      "destination": "evidence/local-sol/stage-4/reviewer/official/stage-2.counts.json",
+      "sha256": "5e7ced47a9492a568aec12049d401867a868110520ced788cfc9976f400e4b0a",
+      "bytes": 218
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s4-release-20261006T102629Z/official/stage-2.log",
+      "destination": "evidence/local-sol/stage-4/reviewer/official/stage-2.log",
+      "sha256": "ff0b4c97f6efe7c9ce61db0f25ab8832ebbc40c0bc63a952624d2d44b43b8537",
+      "bytes": 1483
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s4-release-20261006T102629Z/official/stage-3.counts.json",
+      "destination": "evidence/local-sol/stage-4/reviewer/official/stage-3.counts.json",
+      "sha256": "0690b4b540761c4ee3ae249853e6a8a3bdc4210f686645f4612e3c336d716713",
+      "bytes": 165
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s4-release-20261006T102629Z/official/stage-3.log",
+      "destination": "evidence/local-sol/stage-4/reviewer/official/stage-3.log",
+      "sha256": "e0d3f3d1cdf2613f82dd3e9daac7a35e940afdcb07210834f305e5890675f8e3",
+      "bytes": 1481
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s4-release-20261006T102629Z/official/stage-4.counts.json",
+      "destination": "evidence/local-sol/stage-4/reviewer/official/stage-4.counts.json",
+      "sha256": "9634baaeda23ab472e0fe8359c728ccd2fc1c62cf467b7ffdc8c4685446b4089",
+      "bytes": 165
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s4-release-20261006T102629Z/official/stage-4.log",
+      "destination": "evidence/local-sol/stage-4/reviewer/official/stage-4.log",
+      "sha256": "e1ecc4e3c67266ed5f6426761a46b51f052521b84c92bd640a68b6ed8ba22172",
+      "bytes": 1481
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s4-release-20261006T102629Z/browser-run/current-repaired-lookup375.png",
+      "destination": "evidence/local-sol/stage-4/reviewer/browser-run/current-repaired-lookup375.png",
+      "sha256": "8ae97e40507ee5f648946bf323bbe84524e0b920457d40d6be6b96c84d584669",
+      "bytes": 56908
+    },
+    {
+      "source": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s4-release-20261006T102629Z/browser-run/original-confirmation375.png",
+      "destination": "evidence/local-sol/stage-4/reviewer/browser-run/original-confirmation375.png",
+      "sha256": "d0472b697c1c26b1339c415a17e9728ba96b8d7ee1ad16f21f2dde568a6fbfcc",
+      "bytes": 329942
+    }
+  ],
+  "omitted_source_files": [
+    {
+      "group": "backend",
+      "relative_path": "applied.private.json",
+      "sha256": "c95c0264ba4b13687be0017c8244d5d3b7a7dcfcf74962c309b9e8c7a42a621b",
+      "bytes": 23053,
+      "reason": "private snapshot, session/auth context or bundle"
+    },
+    {
+      "group": "backend",
+      "relative_path": "browser-upgrade-s1.png",
+      "sha256": "21de8a971081d5576e57a1b6c6005c9285d7c321179704ffe4f7579c7b752b53",
+      "bytes": 185034,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "backend",
+      "relative_path": "browser-upgrade-s2.png",
+      "sha256": "dd928f17bd44fde35611d43eeb2a3268cfdfcf745d30cc8e18656cc7992f0a42",
+      "bytes": 250058,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "backend",
+      "relative_path": "browser-upgrade-s3.png",
+      "sha256": "93eeb48a7e9a69c23eec8f5c697d27143090bdbbf9c8efaf678276f4da59efe2",
+      "bytes": 54308,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "backend",
+      "relative_path": "browser-upgrade.py",
+      "sha256": "76d3df4728b6b6d4483e7234e29390a6a957c4cbbf6a10f7cc67e78e78078247",
+      "bytes": 6749,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "backend",
+      "relative_path": "check-candidate.py",
+      "sha256": "3d4b5193d37df43a23b35e9071d15ad4740affa78c4bf8e2148ec8df7262184e",
+      "bytes": 1784,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "backend",
+      "relative_path": "context.private.json",
+      "sha256": "8762c801a4e9fb8cf5a55132a39dcbb7e234fa1bd29f4e2bf0e400cdb38d5daf",
+      "bytes": 9044,
+      "reason": "private snapshot, session/auth context or bundle"
+    },
+    {
+      "group": "backend",
+      "relative_path": "handoff.txt",
+      "sha256": "6e50c94e5da5465bc3012355f3b1339ab201d8d72c7e8e8215dffc0449730647",
+      "bytes": 14792,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "backend",
+      "relative_path": "legacy-2.private.json",
+      "sha256": "b3bd91405449e26de254e6058a8ae22f2d241da15fdc5206f5e986c6d3fa6d33",
+      "bytes": 2486,
+      "reason": "private snapshot, session/auth context or bundle"
+    },
+    {
+      "group": "backend",
+      "relative_path": "legacy-3.private.json",
+      "sha256": "b7755331c23e6fb7f36a536741c1705a11c437a4e55258edc19cb74705b733a9",
+      "bytes": 2566,
+      "reason": "private snapshot, session/auth context or bundle"
+    },
+    {
+      "group": "backend",
+      "relative_path": "legacy-4.private.json",
+      "sha256": "42732ae18b66d8f41f2e40b1703b08526a66ad621b79e4571fb3f1aea51dfaff",
+      "bytes": 14802,
+      "reason": "private snapshot, session/auth context or bundle"
+    },
+    {
+      "group": "backend",
+      "relative_path": "pending.private.json",
+      "sha256": "69d6ef005d49ece64528533ba2a2a8d35b4a81759d2c4a5afa14ff8afa9edcfa",
+      "bytes": 18044,
+      "reason": "private snapshot, session/auth context or bundle"
+    },
+    {
+      "group": "backend",
+      "relative_path": "stopped-source.py",
+      "sha256": "95dfd940c5cf4bf15d7d31cad831ca8edb1f203c486d1d34b43e4464867c7cbb",
+      "bytes": 4170,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "__pycache__/api.cpython-314.pyc",
+      "sha256": "64dd4fb93d888195e7171757431208ea43c7ffd87c98ead126d61378dddc583e",
+      "bytes": 28311,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "__pycache__/common.cpython-312.pyc",
+      "sha256": "4f79c089263870d9916f5a26cb2d1cf8c5413b213c4c58ac74f3e866fa12d53d",
+      "bytes": 3875,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "__pycache__/common_peer.cpython-312.pyc",
+      "sha256": "5915bda40e2ea1fa25260db13a6a9ac11ba7b53f99fd790b73bb9ee8ab87ab4c",
+      "bytes": 3885,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "__pycache__/helpers.cpython-312.pyc",
+      "sha256": "ea86d2709414ba94963e1bbddb1001c60b215f7ec9093f5931cc6f063cd4b463",
+      "bytes": 9023,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "__pycache__/helpers_peer.cpython-312.pyc",
+      "sha256": "6bbcf42b36e9717c287d325771d30d066a611f1de31f35ef6ed1a902753675df",
+      "bytes": 9029,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "api-results-attempt2.json",
+      "sha256": "d44433d39c56c90503b666a82ae67e05a27500e20283806f49f3c2ef81e9e5fd",
+      "bytes": 129561,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "api-results.json",
+      "sha256": "a2606a7b6200d9a61ebdab8887f4ecd3e336b9a5e490a47aa615d5a164e54e89",
+      "bytes": 64800,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "api.py",
+      "sha256": "6739ae53d77e9356748b8bc74eac86db4c5363224a3273b8fbe8a30ef6f87e28",
+      "bytes": 10635,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "api2.py",
+      "sha256": "20b64a20f159b3b90c5970bf608df1c1c3e11b707f75060358de03b3bab972f0",
+      "bytes": 10570,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "browser/real-upgrade-False-1280.png",
+      "sha256": "4be16af00eb0abd21858ab5ca1135b4ccc7d25c204a1d870f614995aa50da5bc",
+      "bytes": 237447,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "browser/real-upgrade-False-375.png",
+      "sha256": "05b54e559318391079824af7fbbf2a7170d5889d1773e537dd17f2cd921b88bd",
+      "bytes": 229169,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "browser/real-upgrade-True-1280.png",
+      "sha256": "098fa31a9c4a6d29177180a4bb30f1744d089d11d75e1bd0ede9cdb8922ff798",
+      "bytes": 351021,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "browser/real-upgrade-True-375.png",
+      "sha256": "b4ac4615e520bdb658ada731ce44f49b68b35918fa583502a3b6743159980566",
+      "bytes": 342572,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "browser/recovered-False-False-1280.png",
+      "sha256": "deac2a0f4a4dda60ec724e54a96832bff5e433f08b93eb981052881cb421dc81",
+      "bytes": 346513,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "browser/recovered-False-False-375.png",
+      "sha256": "83ca125a4a4d80ac267b7053ac505a226b2407bdba7c80bfa08cc1aed4aa2f1f",
+      "bytes": 339216,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "browser/recovered-False-True-1280.png",
+      "sha256": "e5a8eb1d95f1b20b933fadf36106ef8981662ce91f1825f69bb05f626561be41",
+      "bytes": 346579,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "browser/recovered-False-True-375.png",
+      "sha256": "1c627051a91168eb52498c997fafc9f99bce7cdf7118fbbf2b1eb5852d878321",
+      "bytes": 339022,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "browser/recovered-True-False-1280.png",
+      "sha256": "c2eee73245ad01cff235cc3dffddbfd86749f93a19bba0ca5758a6ee2e82132c",
+      "bytes": 352188,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "browser/recovered-True-False-375.png",
+      "sha256": "39701cb0e2cea0fe3936714a40f220e6d477da4b1d1a332f8773ffe221e40a29",
+      "bytes": 343416,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "browser/recovered-True-True-1280.png",
+      "sha256": "39492e6742098b5ac9276b0318ae8b43c08e8c832bbfd85d3ec1e9e3dac16d83",
+      "bytes": 351666,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "browser/recovered-True-True-375.png",
+      "sha256": "dbec84e0883c61c62ac719ace0463a675c2766baff9b37284a8f41246ee8f8ed",
+      "bytes": 343260,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "browser/repaired-current-vs-original-1280.png",
+      "sha256": "0d7c32625d51974d0a12a5ac1d054cbb657c9aba1561610495f6330b712654c4",
+      "bytes": 60958,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "browser/repaired-current-vs-original-375.png",
+      "sha256": "12e655948ee5aabd0fd5975962d30249d637e59125a645e1e3969f3191244d31",
+      "bytes": 56049,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "browser-restart-scoped.txt",
+      "sha256": "84d52c27f8e4c62a887c4fd6740704c7a074fb1bc002518593db35641a90f659",
+      "bytes": 33,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "browser.py",
+      "sha256": "62e8275460f8b1705f75803822441c8d825474e6bed78218c1fa7c0157142a87",
+      "bytes": 23728,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "browser2/real-upgrade-qa-s4-old1-1280.png",
+      "sha256": "1c57aadc864cf8a939adc872afcb631cf0e1041c02e12e4c18514db2e07e6c07",
+      "bytes": 238576,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "browser2/real-upgrade-qa-s4-old1-375.png",
+      "sha256": "4f4958148563566470cf6f85426f7b61e1e1ef2ee808dee2be7d13c95744aedf",
+      "bytes": 230152,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "browser2/real-upgrade-qa-s4-old2-1280.png",
+      "sha256": "a6d025d612682aea1f00ef3620b3378294a4cf3d54f81acffd4e2d9d1f33944d",
+      "bytes": 351593,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "browser2/real-upgrade-qa-s4-old2-375.png",
+      "sha256": "cda066a7b213a814d057d6cf271a835bc6445a2fe6f72d974fecdde4621e7e21",
+      "bytes": 342843,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "browser2/real-upgrade-qa-s4-old3-1280.png",
+      "sha256": "1d5654e2e82a746220fbbb3c37075a3da4dee733debf36d4addbbeacdf531d66",
+      "bytes": 351592,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "browser2.py",
+      "sha256": "2f1846b7ae1cba5273372c71409b4dfe506786f7dc61b95413e63fd6d421ac57",
+      "bytes": 23346,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "build-1.txt",
+      "sha256": "18714772177b458cca760423fbef8740dfc864de2b6d087bff01764cea949631",
+      "bytes": 924,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "build-2.txt",
+      "sha256": "08fa4c329f79eca38aa788d6c255270fe271ca242cbcc85151b5e2e2e5773d7e",
+      "bytes": 909,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "build-3.txt",
+      "sha256": "d992aae02de5a83586a12e3e5e11ca51912dff4b339474ac00abb2a0b9fa877f",
+      "bytes": 910,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "build-4.txt",
+      "sha256": "31b19ba833bfbf4959ed650e53a725b269f74494cff50fd62b59397858c87544",
+      "bytes": 921,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "common.py",
+      "sha256": "44e2033a45b25ddc051a28a8740f9a1086ed74b76cb54f9feb5a510dbc43bde1",
+      "bytes": 1823,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "common_peer.py",
+      "sha256": "268650566b77ce0fe669204210582d38a3db1cb26954e4cfe83cedccd2a518a6",
+      "bytes": 1828,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "diagnose-import.py",
+      "sha256": "c64319b27bf0ef4aa2f3266189a071006f3ee5dee18915e978603ddfc9b80a47",
+      "bytes": 714,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "extended-results-attempt2.json",
+      "sha256": "61536754e8016c330af0c5a2dcbc4b558759e9d41655f30691de13cde7f33145",
+      "bytes": 22435,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "extended-results.json",
+      "sha256": "84afaa101c98a93fd4f658d1a35e12306c80087b81f7bb2d091a06e316f972e3",
+      "bytes": 24923,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "extended.py",
+      "sha256": "c60fd152739a7d8fd7665354659000665c7ed12a21eabc3b191676a538aec403",
+      "bytes": 6473,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "extended2.py",
+      "sha256": "a44df03253eef9922c1a6d975d5f102ffc02188059bed247372fd8a110b26de3",
+      "bytes": 5577,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "extra-attempt2.txt",
+      "sha256": "78f75a66ec86dbfbd10d6b4f53390593d8f612cad2bb4a415775c961eab65724",
+      "bytes": 2703,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "extra-results-attempt2.json",
+      "sha256": "df576d7b05a1887f33a894e4485f69d631b4ac2886ac19ef00b677b4b5c8c1e7",
+      "bytes": 9062,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "extra-results-attempt3.json",
+      "sha256": "6f24753479df058ed3b009e9660ce10daa1c325ad54bad694273cfc7c96aff12",
+      "bytes": 15391,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "extra-results.json",
+      "sha256": "80f044c7d01257d0873fd12163154a1ec0b737879c0e691be893440358155dca",
+      "bytes": 13996,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "extra.py",
+      "sha256": "300fc149e778f5958b1a8cbf18206a84c8bf8c5944c5a3468285f07677cf8281",
+      "bytes": 3863,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "extra2.py",
+      "sha256": "1600641c115c57f35e279dc2c1e7de3ff3214154b9351fe9b0fa18a6bb4ffed0",
+      "bytes": 3881,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "extra3.py",
+      "sha256": "c8fb3c43d282fb33337a873789c9d1b8388950e621ccf8f8007c605687da4634",
+      "bytes": 3881,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "helpers.py",
+      "sha256": "865f1a590febbf5c436d219ba3742bcddabeaa1e5500af66c4b5307261154243",
+      "bytes": 4423,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "helpers_peer.py",
+      "sha256": "7658e09faa888a66769595a8a569b023cd0f2abf6bdf00d513ddbec667cdd14e",
+      "bytes": 4424,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "history-portable-results-attempt2.json",
+      "sha256": "50b9f0f24f71723eee4196e98f9df8fc058ba8c8381cb36bd3c9ad41bd078938",
+      "bytes": 9494,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "history-portable-results.json",
+      "sha256": "488cd446a72c7412fc834092f88402739becac9956d0383bf07157e464c89423",
+      "bytes": 14453,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "history-portable.py",
+      "sha256": "b811a9c68a8ba5fc4d919d3277bc81886481fb19d986fec66b8969cd95a3bfe8",
+      "bytes": 1991,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "history-portable.txt",
+      "sha256": "dace4f239bfe50025c05b3e021ffd340197fff0685090fefae43b0548c7d6926",
+      "bytes": 11595,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "history-portable2.py",
+      "sha256": "63e8d8841b4143e0c0fb913c3563f6f65c9925308244690f7136b2dc328c02bf",
+      "bytes": 2103,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "import-results-attempt2.json",
+      "sha256": "684df11398e42420f8d9d5279da714a7c0b1f2b3e2e3d24e0128b9668ede8b42",
+      "bytes": 14326,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "import-results.json",
+      "sha256": "9908c8061a5432fbd656f807a3491f60b38ac52ac53f7a5d6bad24c7e729a0b9",
+      "bytes": 7679,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "imports.py",
+      "sha256": "8f5c5ee577eeba86eb98c8112495d239b7d6a0d48acba24be1ac72d8a1f9d848",
+      "bytes": 4739,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "imports2.py",
+      "sha256": "e25cb1960d9353074714ce2acb32956a16e704f850bdee6a37686958beceb6c2",
+      "bytes": 5039,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "input-map.txt",
+      "sha256": "7b696e378aef6323186baf5986ed2aba210149eaecc5d5cd5e41d8039038f7bd",
+      "bytes": 929,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "legacy-prepare-results.json",
+      "sha256": "fc654815e725eecc346a6287af502ba71f2df4d081f127d204c6335dc8bff5cc",
+      "bytes": 5578,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "legacy-prepare.py",
+      "sha256": "87dd66df92b645cac085ac5eb3565b9f841b7e9b18b2458d1256120554866620",
+      "bytes": 1797,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "legacy-prepare.txt",
+      "sha256": "2c878844d25aca2faf72fee9882f84723f4b02634c8b0ce4ed84149a85f575fa",
+      "bytes": 331,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "legacy1-context-private.json",
+      "sha256": "c15798a18cc91a887390f926d9ab1f315dcd730f15d32d444ef2f16a863ab9f2",
+      "bytes": 584,
+      "reason": "private snapshot, session/auth context or bundle"
+    },
+    {
+      "group": "qa",
+      "relative_path": "legacy1-private.json",
+      "sha256": "b36189d57ea7c86a6845534e7bf344c427b0c0c1d8f043021ce7c2f11d06154f",
+      "bytes": 2759,
+      "reason": "private snapshot, session/auth context or bundle"
+    },
+    {
+      "group": "qa",
+      "relative_path": "legacy2-context-private.json",
+      "sha256": "b688286dce5fcd1e3d2da15ee6fd5c4df28b11bf7a9f56dd2327bd03aa8867e2",
+      "bytes": 604,
+      "reason": "private snapshot, session/auth context or bundle"
+    },
+    {
+      "group": "qa",
+      "relative_path": "legacy2-private.json",
+      "sha256": "3d9895f2acfebecd87715f04470182720d5ce5699ee397f5343e1239336fe32a",
+      "bytes": 2839,
+      "reason": "private snapshot, session/auth context or bundle"
+    },
+    {
+      "group": "qa",
+      "relative_path": "legacy3-context-private.json",
+      "sha256": "6363d2636d9499488dcd384bacf9ce1ae55b4281208b246ef0c98c65cc6661da",
+      "bytes": 5511,
+      "reason": "private snapshot, session/auth context or bundle"
+    },
+    {
+      "group": "qa",
+      "relative_path": "legacy3-private.json",
+      "sha256": "c94b4ab9529342b5d422fb6456d573a74f5b27d11f8f92ce46e16d1a25c5d015",
+      "bytes": 21110,
+      "reason": "private snapshot, session/auth context or bundle"
+    },
+    {
+      "group": "qa",
+      "relative_path": "native-applied-private.json",
+      "sha256": "41391e682feced4fa35b7e67a1ff631533d7d2a2f3b50283c1faca3a1effd008",
+      "bytes": 26059,
+      "reason": "private snapshot, session/auth context or bundle"
+    },
+    {
+      "group": "qa",
+      "relative_path": "native-context-private.json",
+      "sha256": "74ea5b30df2ab82cf2415fb811f6e543bbc3e8bc4e393ca9b6d330fa4ae4577c",
+      "bytes": 5741,
+      "reason": "private snapshot, session/auth context or bundle"
+    },
+    {
+      "group": "qa",
+      "relative_path": "native-pending-private.json",
+      "sha256": "0a4742ce8220feacbc4b1c988508b8a18c1992a1a17d913f70c996e1f48b2a03",
+      "bytes": 23678,
+      "reason": "private snapshot, session/auth context or bundle"
+    },
+    {
+      "group": "qa",
+      "relative_path": "relationships-results-attempt2.json",
+      "sha256": "382f0ab6d667d79a27a592e6ddbff367f6ca2b5cc76db2e865e63f9703d280da",
+      "bytes": 6535,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "relationships-results.json",
+      "sha256": "b180d311005a153a2c37f0e3f285006912e783aea5977cd3ff8a735bb08221b1",
+      "bytes": 5835,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "relationships.py",
+      "sha256": "4e04e13e2693d71765fbcd20781d4585f3a7bba93ca5b3a85caee4db1a5d1764",
+      "bytes": 2223,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "relationships2.py",
+      "sha256": "133bbfab51519971572bd2e143962bcaf8922878abf5469cedac9b83f2008828",
+      "bytes": 2232,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "solver-literal-results.json",
+      "sha256": "aa8c114a54994f751ee14524cecee86e5a0e3b2009f2dbdf341a581b5a4bac9d",
+      "bytes": 66093,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "qa",
+      "relative_path": "solver-literal.py",
+      "sha256": "227ccaee5d611cdde73e43a66a1e7a2edcda74ef3dbeeed6ba43e0e40240acc3",
+      "bytes": 5083,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "reviewer",
+      "relative_path": "api.py",
+      "sha256": "9840e7181b673226c312079d739a75b9f48082efd3f033e24578aa24cc55d0da",
+      "bytes": 12658,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "reviewer",
+      "relative_path": "attempt2/api-run/private-bundle.json",
+      "sha256": "f458590a076c9ac9374e8f9d0c7c5efc805678b792aa525316f81ad9e2cb0da5",
+      "bytes": 78650,
+      "reason": "private snapshot, session/auth context or bundle"
+    },
+    {
+      "group": "reviewer",
+      "relative_path": "attempt2/api.py",
+      "sha256": "16d12705da431b3eaaddf173bfd918bdc02521b9bec3c78db3896f1938edf0a9",
+      "bytes": 12646,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "reviewer",
+      "relative_path": "attempt2/execute.py",
+      "sha256": "e2a79bc86f6dc6113ed919b0e9fabb1391de6b87f09a73edec58d925d9c00ce4",
+      "bytes": 2471,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "reviewer",
+      "relative_path": "attempt2/verify.py",
+      "sha256": "6e1a3a59b4251035379854329099ab6f769b378408839855fa92ac3ca0dcbb07",
+      "bytes": 5873,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "reviewer",
+      "relative_path": "browser-run/1280-False-conflict-current.png",
+      "sha256": "f8bf699c053734557b3ddb16f8569dee7d1d4e56b1f251c218c49a51ba39ebd9",
+      "bytes": 112019,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "reviewer",
+      "relative_path": "browser-run/1280-False-uncertain-current.png",
+      "sha256": "9d86100ed3baec08b573967c597791b7bdf18d480a162c81b2ffa2de769f8558",
+      "bytes": 110269,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "reviewer",
+      "relative_path": "browser-run/1280-True-conflict-current.png",
+      "sha256": "189a15ec111f77161e1f1ad35bdd7c1dfb5d8bee3918ae3df5e3e15492a6f844",
+      "bytes": 115197,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "reviewer",
+      "relative_path": "browser-run/1280-True-uncertain-current.png",
+      "sha256": "e82c76d2b5669e55dcdd00dce9c9c74a92c2fcfb19bb74a878097dc8f1459a98",
+      "bytes": 112782,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "reviewer",
+      "relative_path": "browser-run/375-False-conflict-current.png",
+      "sha256": "55c917eb140af43e51d82d9370ae47adb847237c9ee42ad21cbe776eac831bae",
+      "bytes": 48562,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "reviewer",
+      "relative_path": "browser-run/375-False-uncertain-current.png",
+      "sha256": "020748426769dbba197937437d7ab33fa7fd106c8c775a7f6a27e92b07920905",
+      "bytes": 49807,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "reviewer",
+      "relative_path": "browser-run/375-True-conflict-current.png",
+      "sha256": "1bffe83d6f192b171ea11a7539a6facd816c81f6b833c6303bce7f9532658b37",
+      "bytes": 49477,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "reviewer",
+      "relative_path": "browser-run/375-True-conflict-first-free-pair.png",
+      "sha256": "1d7c1891bb658a05c785410ed1e13974ee552469e2a80e0d6f0ff201c7543c1a",
+      "bytes": 49634,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "reviewer",
+      "relative_path": "browser-run/375-True-conflict-new-form.png",
+      "sha256": "cfb21cb65f68cdd19564aa053fbf16266ad2c37ba1a145bed975b7a60cd217b6",
+      "bytes": 43922,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "reviewer",
+      "relative_path": "browser-run/375-True-conflict-user-moved.png",
+      "sha256": "447733817d746f690d217e259ea6050c3ccb77b32bf3afa5dc2234a67a29377c",
+      "bytes": 38915,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "reviewer",
+      "relative_path": "browser-run/375-True-uncertain-current.png",
+      "sha256": "a3f4d7ae896ddf5848166ce8f3c874e0394e441ed05161758dbc5be7db0fed60",
+      "bytes": 50742,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "reviewer",
+      "relative_path": "browser-run/actual-upgrade-cancelled-1.png",
+      "sha256": "e9037efd8b4601ae1047c750fdef88ea89b8a406f337db3633acf7e9b5496eee",
+      "bytes": 55808,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "reviewer",
+      "relative_path": "browser-run/actual-upgrade-cancelled-2.png",
+      "sha256": "9e01b50b307f2e8351c83c1cbbbe84b31023c4a60446211e5a42aaaafbc34a77",
+      "bytes": 57339,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "reviewer",
+      "relative_path": "browser-run/actual-upgrade-cancelled-3.png",
+      "sha256": "53f69b13ae63060c364d5533bd8718235d3f3dec54201840809d69f75875bcff",
+      "bytes": 55733,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "reviewer",
+      "relative_path": "browser.py",
+      "sha256": "d0520fd563716c25820eaac7ab58c731a89ec82997549ed61f075fa304f421ee",
+      "bytes": 27122,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "reviewer",
+      "relative_path": "build1.txt",
+      "sha256": "71e99ae4c104738b1f9c2f623c7f64a1e6a7e3689ff191f3970746f8a0f83046",
+      "bytes": 932,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "reviewer",
+      "relative_path": "build2.txt",
+      "sha256": "765215f1e069a50b9e985d25aede6f2a42e4ef0f9c7c1ab53c15dcbf24861508",
+      "bytes": 917,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "reviewer",
+      "relative_path": "build3.txt",
+      "sha256": "53aa72703f9898c39dda3fd18ca625b96e249a8ffc172b7147bcdc01a85bb58b",
+      "bytes": 917,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "reviewer",
+      "relative_path": "build4.txt",
+      "sha256": "e4f9138a2c7b221abfc9dcfa154c229b7cc8a633699ebacbbccce00527d6ef1b",
+      "bytes": 917,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "reviewer",
+      "relative_path": "execute.py",
+      "sha256": "251ba72e0a7cff5a31f30817eb432ec7ead7e9830e8c0bc630057d2ff2382ff0",
+      "bytes": 2527,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "reviewer",
+      "relative_path": "handoff.txt",
+      "sha256": "ec7bc03a16d5cea1869d8f9dac5d3f54b8a6dbf8a5122fae218864a81fd7a05b",
+      "bytes": 9890,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "reviewer",
+      "relative_path": "inherited-browser.py",
+      "sha256": "d05c62a3e7af87fd53d999e1884a7b9d587e5b300bf756bc9cb1b6d3f82d4857",
+      "bytes": 23825,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "reviewer",
+      "relative_path": "supplement/execute.py",
+      "sha256": "fbe787d2001e434ab6ba9ea8b849fc16d7810b2f48e6168875f52b32bb16b2e6",
+      "bytes": 1834,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "reviewer",
+      "relative_path": "supplement/prepare-run/private-old3.json",
+      "sha256": "621d70870b90a711df559e032a620980e3514889eeb1ccb0723091a4504998c1",
+      "bytes": 25089,
+      "reason": "private snapshot, session/auth context or bundle"
+    },
+    {
+      "group": "reviewer",
+      "relative_path": "supplement/prepare.py",
+      "sha256": "16a60c9d664f1bee960b6114297e39a885223781f782ba964d01f4b485404c28",
+      "bytes": 4920,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "reviewer",
+      "relative_path": "supplement/verify.py",
+      "sha256": "26c1b69b0841d97569bd22b9ccd0f0bb03b6e4ef1f4ae8d6df207e63acd23031",
+      "bytes": 8309,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    },
+    {
+      "group": "reviewer",
+      "relative_path": "verify.py",
+      "sha256": "6e1a3a59b4251035379854329099ab6f769b378408839855fa92ac3ca0dcbb07",
+      "bytes": 5873,
+      "reason": "unselected raw result, helper, duplicate browser proof or runtime bytecode; retained locally"
+    }
+  ],
+  "source_copy_count": 97,
+  "omitted_count": 124,
+  "findings": [],
+  "notes": [
+    "QA historical state REVIEW describes pre-Reviewer delivery; later actual Reviewer ACCEPTED and current owner synchronization bind completion. Backend and Reviewer historical pending labels remain unedited.",
+    "Helper/raw snapshot references in original manifests are evidence provenance, not claims those omitted artifacts are published.",
+    "extra-attempt2.txt omitted because it embeds a synthetic authentication literal; failure disposition remains exact and public.",
+    "Source history privacy is separately bound by stage4-source-history-privacy-20261006.json. No full room privacy review performed here."
+  ]
+}

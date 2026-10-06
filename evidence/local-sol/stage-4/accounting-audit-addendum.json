@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "recorded_utc": "2026-10-06T10:50:54.604034+00:00",
+  "scope": "Focused accounting-copy privacy/truth arithmetic and selected evidence inventory binding addendum. Historical observation does not infer final factory shutdown.",
+  "post_release_accounting": {
+    "source": "/Users/frank/mygit/Tablekeeper/runs/artifact-audit-20261005/stage4-post-release-accounting-20261006.json",
+    "destination": "/Users/frank/mygit/Tablekeeper/runs/canonical-repo-20261005/evidence/local-sol/stage-4/post-release-accounting.json",
+    "sha256": "7147b0990301aca54630a99b8e12ba61a12d14c7401125764bc138e21416c497",
+    "exact_copy": true,
+    "reported_accounting_arithmetic_consistent": true
+  },
+  "selection_manifest_sha256": "4607f271983f1ddae65368903d0a52a43504f9ce868a753d94a6c95763984056",
+  "unique_destination_count": 97,
+  "all_97_copies_still_exact": true,
+  "privacy_findings": [],
+  "limitations": [
+    "Operator source observation records owner running and idle dated10:49:44Z. This addendum verifies exact supplied receipt copy and arithmetic; it does not add an independent SDK or process observation.",
+    "Room export, changed global docs/provenance and fresh publication harness are separately owned and not covered."
+  ]
+}

@@ -1,0 +1,270 @@
+[
+  {
+    "argv": [
+      "docker",
+      "network",
+      "create",
+      "--internal",
+      "review-s4-extra-net"
+    ],
+    "start_utc": "2026-10-06T10:33:05.692902+00:00",
+    "end_utc": "2026-10-06T10:33:06.152594+00:00",
+    "exit": 0,
+    "stdout": "a966ffbc29fc4fbef11211ddc37ee586e8a79b39d9f46a0d9a6d3f73b0af2c52\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "run",
+      "-d",
+      "--name",
+      "review-s4-extra",
+      "--network",
+      "review-s4-extra-net",
+      "--cpus",
+      "2",
+      "--memory",
+      "2g",
+      "tablekeeper-review-s4-4:1026"
+    ],
+    "start_utc": "2026-10-06T10:33:06.153277+00:00",
+    "end_utc": "2026-10-06T10:33:06.454319+00:00",
+    "exit": 0,
+    "stdout": "8eb0d9da0069783a9b8ab40d539f2f28e424c4f7bbea70b952e5981901c4ef73\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "run",
+      "-d",
+      "--name",
+      "review-s4-old3-extra",
+      "--network",
+      "review-s4-extra-net",
+      "--cpus",
+      "2",
+      "--memory",
+      "2g",
+      "tablekeeper-review-s4-3:1026"
+    ],
+    "start_utc": "2026-10-06T10:33:06.454999+00:00",
+    "end_utc": "2026-10-06T10:33:06.634880+00:00",
+    "exit": 0,
+    "stdout": "70fe9ba13a0ad066983bc6cedd7086f406bdd513952c2cd76adf6eb44a91008c\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "create",
+      "--name",
+      "review-s4-extra-prepare",
+      "--network",
+      "review-s4-extra-net",
+      "--cpus",
+      "2",
+      "--memory",
+      "2g",
+      "--entrypoint",
+      "python",
+      "df-harness-runner",
+      "/review.py"
+    ],
+    "start_utc": "2026-10-06T10:33:06.635591+00:00",
+    "end_utc": "2026-10-06T10:33:06.707566+00:00",
+    "exit": 0,
+    "stdout": "99fd81a816eb9fec5763e5cc2091af5ae99852c7a78d19444462c6f2cd5223ab\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "cp",
+      "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s4-release-20261006T102629Z/supplement/prepare.py",
+      "review-s4-extra-prepare:/review.py"
+    ],
+    "start_utc": "2026-10-06T10:33:06.708008+00:00",
+    "end_utc": "2026-10-06T10:33:06.740039+00:00",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "start",
+      "-a",
+      "review-s4-extra-prepare"
+    ],
+    "start_utc": "2026-10-06T10:33:06.740471+00:00",
+    "end_utc": "2026-10-06T10:33:07.111430+00:00",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "cp",
+      "review-s4-extra-prepare:/out",
+      "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s4-release-20261006T102629Z/supplement/prepare-run"
+    ],
+    "start_utc": "2026-10-06T10:33:07.112286+00:00",
+    "end_utc": "2026-10-06T10:33:07.143846+00:00",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "stop",
+      "--time",
+      "2",
+      "review-s4-old3-extra"
+    ],
+    "start_utc": "2026-10-06T10:33:07.144139+00:00",
+    "end_utc": "2026-10-06T10:33:09.290867+00:00",
+    "exit": 0,
+    "stdout": "Flag --time has been deprecated, use --timeout instead\nreview-s4-old3-extra\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "create",
+      "--name",
+      "review-s4-extra-verify",
+      "--network",
+      "review-s4-extra-net",
+      "--cpus",
+      "2",
+      "--memory",
+      "2g",
+      "--entrypoint",
+      "python",
+      "df-harness-runner",
+      "/review.py"
+    ],
+    "start_utc": "2026-10-06T10:33:09.291755+00:00",
+    "end_utc": "2026-10-06T10:33:09.357743+00:00",
+    "exit": 0,
+    "stdout": "eb143ea641732f71eaf3a509dfdb17fe8d5c1adedf07cd5b92cbf99d2653e72e\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "cp",
+      "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s4-release-20261006T102629Z/supplement/verify.py",
+      "review-s4-extra-verify:/review.py"
+    ],
+    "start_utc": "2026-10-06T10:33:09.358358+00:00",
+    "end_utc": "2026-10-06T10:33:09.389457+00:00",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "cp",
+      "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s4-release-20261006T102629Z/supplement/prepare-run/private-old3.json",
+      "review-s4-extra-verify:/bundle.json"
+    ],
+    "start_utc": "2026-10-06T10:33:09.389850+00:00",
+    "end_utc": "2026-10-06T10:33:09.420762+00:00",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "start",
+      "-a",
+      "review-s4-extra-verify"
+    ],
+    "start_utc": "2026-10-06T10:33:09.421150+00:00",
+    "end_utc": "2026-10-06T10:33:09.908998+00:00",
+    "exit": 0,
+    "stdout": "{\n  \"groups\": [\n    \"Actual STOPPED Stage3 export originalscheduleddates vs editedanchor, cancelled/exceptions, stale-beforevalidation, earlieroverlap/laternonoccupancy, policy-invalid no-op/keyreuse\",\n    \"Actual6tables4pairs6overlappingbookings pigeonholeinfeasible, <5s configured2CPU2GiB/no state\",\n    \"Crossrestaurant writes and no-op do not stale r plan; first/repeatcancel and closure-onlyapply exact0..4 counters\"\n  ],\n  \"requests\": 36,\n  \"adverse_seconds\": 0.0027318920037942007\n}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "cp",
+      "review-s4-extra-verify:/out",
+      "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s4-release-20261006T102629Z/supplement/verify-run"
+    ],
+    "start_utc": "2026-10-06T10:33:09.910264+00:00",
+    "end_utc": "2026-10-06T10:33:09.940087+00:00",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "inspect",
+      "review-s4-extra",
+      "review-s4-old3-extra",
+      "review-s4-extra-prepare",
+      "review-s4-extra-verify",
+      "--format",
+      "{{.Name}} cpu={{.HostConfig.NanoCpus}} memory={{.HostConfig.Memory}} exit={{.State.ExitCode}}"
+    ],
+    "start_utc": "2026-10-06T10:33:09.940421+00:00",
+    "end_utc": "2026-10-06T10:33:09.964746+00:00",
+    "exit": 0,
+    "stdout": "/review-s4-extra cpu=2000000000 memory=2147483648 exit=0\n/review-s4-old3-extra cpu=2000000000 memory=2147483648 exit=137\n/review-s4-extra-prepare cpu=2000000000 memory=2147483648 exit=0\n/review-s4-extra-verify cpu=2000000000 memory=2147483648 exit=0\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "network",
+      "inspect",
+      "review-s4-extra-net",
+      "--format",
+      "internal={{.Internal}}"
+    ],
+    "start_utc": "2026-10-06T10:33:09.965096+00:00",
+    "end_utc": "2026-10-06T10:33:09.985396+00:00",
+    "exit": 0,
+    "stdout": "internal=true\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "rm",
+      "-f",
+      "review-s4-extra",
+      "review-s4-old3-extra",
+      "review-s4-extra-prepare",
+      "review-s4-extra-verify"
+    ],
+    "start_utc": "2026-10-06T10:33:09.985765+00:00",
+    "end_utc": "2026-10-06T10:33:10.123041+00:00",
+    "exit": 0,
+    "stdout": "review-s4-extra\nreview-s4-old3-extra\nreview-s4-extra-prepare\nreview-s4-extra-verify\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "network",
+      "rm",
+      "review-s4-extra-net"
+    ],
+    "start_utc": "2026-10-06T10:33:10.123463+00:00",
+    "end_utc": "2026-10-06T10:33:10.210227+00:00",
+    "exit": 0,
+    "stdout": "review-s4-extra-net\n",
+    "stderr": ""
+  }
+]

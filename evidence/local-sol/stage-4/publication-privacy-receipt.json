@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "recorded_utc": "2026-10-06T10:50:19.404902+00:00",
+  "scope": "Selected Stage4 publication evidence and imported source history; current docs/global provenance/room separately owned and not covered by this receipt.",
+  "selected_count": 97,
+  "omitted_count": 124,
+  "manifest_path": "/Users/frank/mygit/Tablekeeper/runs/canonical-repo-20261005/evidence/local-sol/stage-4/selected-evidence-manifest.json",
+  "manifest_sha256": "4607f271983f1ddae65368903d0a52a43504f9ce868a753d94a6c95763984056",
+  "completion_observation_sha256": "4f8ed55282de7c1500453e2ae7e5fc7842bc6b37f262da635297c1b272cf5f24",
+  "source_history_receipt_sha256": "abaac8c146e1505b5768676e6068068a97c6bbe7f802906cebc66cf364c18ae8",
+  "findings": [],
+  "credential_scan": "Official credential shapes plus provider/private-key/auth literal checks; literal fixtures classified, no secret values emitted.",
+  "visual_reviewed_files": [
+    "evidence/local-sol/stage-4/qa/browser2/real-upgrade-qa-s4-old3-375.png",
+    "evidence/local-sol/stage-4/reviewer/browser-run/current-repaired-lookup375.png",
+    "evidence/local-sol/stage-4/reviewer/browser-run/original-confirmation375.png"
+  ],
+  "limitations": [
+    "QA historical state REVIEW describes pre-Reviewer delivery; later actual Reviewer ACCEPTED and current owner synchronization bind completion. Backend and Reviewer historical pending labels remain unedited.",
+    "Helper/raw snapshot references in original manifests are evidence provenance, not claims those omitted artifacts are published.",
+    "extra-attempt2.txt omitted because it embeds a synthetic authentication literal; failure disposition remains exact and public.",
+    "Source history privacy is separately bound by stage4-source-history-privacy-20261006.json. No full room privacy review performed here."
+  ]
+}

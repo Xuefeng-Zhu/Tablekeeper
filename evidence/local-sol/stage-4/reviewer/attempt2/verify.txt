@@ -1,0 +1,12 @@
+{
+  "groups": [
+    "Stopped actual source pending native snapshot exact roundtrip/historicalcreate/adoption/application/replay",
+    "Stopped actual source applied native snapshot exact roundtrip/historicalcreate/adoption/application/replay",
+    "Stopped actual source latest native snapshot exact roundtrip/historicalcreate/adoption/application/replay",
+    "Invalid scheduled native import422 full exact rollback",
+    "Invalid closure native import422 full exact rollback",
+    "Invalid mutation native import422 full exact rollback",
+    "Invalid snapshot native import422 full exact rollback"
+  ],
+  "requests": 28
+}

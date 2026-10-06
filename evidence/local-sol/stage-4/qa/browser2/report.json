@@ -1,0 +1,90 @@
+{
+  "candidate": "ac1eb4945a2adaeaaf8a62d0817bdbc6a021e566",
+  "browser": "153.0.8010.12",
+  "results": [
+    {
+      "case": "B-old1-old2-old3-distinct-screenshots",
+      "outcome": "PASS",
+      "detail": [
+        {
+          "source": "http://qa-s4-old1:8080",
+          "schema": 1,
+          "retained_exact_method_path_body_key_caller": true,
+          "original_response_fields_absent": true,
+          "same_url_no_reload_login_formreset": true,
+          "retry_focus_retained": true,
+          "currentcancelledlookup": true,
+          "newadoption": true
+        },
+        {
+          "source": "http://qa-s4-old2:8080",
+          "schema": 2,
+          "retained_exact_method_path_body_key_caller": true,
+          "original_response_fields_absent": true,
+          "same_url_no_reload_login_formreset": true,
+          "retry_focus_retained": true,
+          "currentcancelledlookup": true,
+          "newadoption": true
+        },
+        {
+          "source": "http://qa-s4-old3:8080",
+          "schema": 3,
+          "retained_exact_method_path_body_key_caller": true,
+          "original_response_fields_absent": true,
+          "same_url_no_reload_login_formreset": true,
+          "retry_focus_retained": true,
+          "currentcancelledlookup": true,
+          "newadoption": true
+        }
+      ],
+      "candidate": "ac1eb4945a2adaeaaf8a62d0817bdbc6a021e566",
+      "utc_start": "2026-10-06T10:19:33.070827+00:00",
+      "utc_end": "2026-10-06T10:19:36.914484+00:00"
+    }
+  ],
+  "traffic_redacted": [
+    {
+      "method": "POST",
+      "url": "http://qa-s4-app:8080/reservations",
+      "body": "{\"restaurant_id\":\"R\",\"table_id\":\"A\",\"starts_at_local\":\"2030-01-03T19:00\",\"party_size\":2}",
+      "key_sha256": "051bcd758986fe846a25160fe5908f10024b60cc853bd83655ae0786d213a28d",
+      "caller_sha256": "e2ee804e261c2b1315cd63d334dbf69c7864a1e196b38297d8ccd88ffa8aaa3e"
+    },
+    {
+      "method": "POST",
+      "url": "http://qa-s4-app:8080/reservations",
+      "body": "{\"restaurant_id\":\"R\",\"table_id\":\"A\",\"starts_at_local\":\"2030-01-03T19:00\",\"party_size\":2}",
+      "key_sha256": "051bcd758986fe846a25160fe5908f10024b60cc853bd83655ae0786d213a28d",
+      "caller_sha256": "e2ee804e261c2b1315cd63d334dbf69c7864a1e196b38297d8ccd88ffa8aaa3e"
+    },
+    {
+      "method": "POST",
+      "url": "http://qa-s4-app:8080/reservations",
+      "body": "{\"restaurant_id\":\"R\",\"table_ids\":[\"B\",\"A\"],\"starts_at_local\":\"2030-01-03T19:00\",\"party_size\":2}",
+      "key_sha256": "860a0361c79a194252bf1d2d58391317feabf0783c24ce46e4f3292d33ac3b8d",
+      "caller_sha256": "9d7d1086b9901b53d3086043d188a51ef7ff22fe8a3fae77af6ec31bf3cc6b9d"
+    },
+    {
+      "method": "POST",
+      "url": "http://qa-s4-app:8080/reservations",
+      "body": "{\"restaurant_id\":\"R\",\"table_ids\":[\"B\",\"A\"],\"starts_at_local\":\"2030-01-03T19:00\",\"party_size\":2}",
+      "key_sha256": "860a0361c79a194252bf1d2d58391317feabf0783c24ce46e4f3292d33ac3b8d",
+      "caller_sha256": "9d7d1086b9901b53d3086043d188a51ef7ff22fe8a3fae77af6ec31bf3cc6b9d"
+    },
+    {
+      "method": "POST",
+      "url": "http://qa-s4-app:8080/reservations",
+      "body": "{\"restaurant_id\":\"R\",\"table_ids\":[\"B\",\"A\"],\"starts_at_local\":\"2030-01-03T19:00\",\"party_size\":2}",
+      "key_sha256": "c4adcc8b81c9ab2691075f80fecec89e02a9ba163e98abeb17f73a0c1d8f8578",
+      "caller_sha256": "46ef87579a651c0ec2d62dd77cb93288d8046b17c49a9ff41edb8dc3f7946e8d"
+    },
+    {
+      "method": "POST",
+      "url": "http://qa-s4-app:8080/reservations",
+      "body": "{\"restaurant_id\":\"R\",\"table_ids\":[\"B\",\"A\"],\"starts_at_local\":\"2030-01-03T19:00\",\"party_size\":2}",
+      "key_sha256": "c4adcc8b81c9ab2691075f80fecec89e02a9ba163e98abeb17f73a0c1d8f8578",
+      "caller_sha256": "46ef87579a651c0ec2d62dd77cb93288d8046b17c49a9ff41edb8dc3f7946e8d"
+    }
+  ],
+  "page_errors": []
+}

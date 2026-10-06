@@ -1,0 +1,5 @@
+public keys ['restaurant_id', 'party_size', 'starts_at_local', 'starts_at', 'ends_at', 'revision', 'accepted_terms', 'reservation_id', 'reference', 'status', 'created_at', 'table_ids', 'table_id']
+private keys ['restaurant_id', 'party_size', 'starts_at_local', 'starts_at', 'ends_at', 'revision', 'accepted_terms', 'reservation_id', 'reference', 'user_id', 'status', 'created_at', 'table_ids', 'table_id']
+ref order matches False
+perfield differences [[], [], []]
+mutationlog keys [['revision', 'kind', 'changes'], ['revision', 'kind', 'changes']]

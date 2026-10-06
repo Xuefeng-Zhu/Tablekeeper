@@ -1,0 +1,40 @@
+{
+  "candidate": "ac1eb4945a2adaeaaf8a62d0817bdbc6a021e566",
+  "argv": [
+    "docker",
+    "exec",
+    "backend-s4-s4b-1001",
+    "python",
+    "-c",
+    "import pathlib,hashlib,json; p=pathlib.Path('/app'); print(json.dumps({str(f.relative_to(p)):hashlib.sha256(f.read_bytes()).hexdigest() for f in p.rglob('*') if f.is_file() and (f.suffix=='.py' or 'static' in f.parts)}))"
+  ],
+  "exit": 0,
+  "utc": "2026-10-06T10:03:00.578533+00:00",
+  "result": "PASS",
+  "packaged_py_static_count": 23,
+  "manifest": {
+    "agreements.py": "6b8f185b3a16b9a2374af4ba77c8853eaebeaa8d35e83f08b482b363f4e89bb6",
+    "domain.py": "fcd0c6b8a06845b2c123c391ffea00bd970aaea263292c3f6adbca01be78927c",
+    "ledger.py": "1800992971618b41ca2217fe1995bfd6e8c08d2708c70fe7baf226112e115db0",
+    "legacy_domain.py": "c0c0df86b5ea88d9e48be4ea2ce4c57d2246dc7a4e772e58b724ca93be9c28fd",
+    "legacy_state.py": "b1094a3ffad1e8f06d858d65aa6fd6cc8fedb16e399836385ca7ea8753f3fec7",
+    "repairs.py": "0de63c24d73f01883ae95388a3ae79568dffc72617208461486aa3c911d8a3aa",
+    "server.py": "9790bb3353a3059c7730554abc595198bf8ba6633af96ff3e9e13d9ef4ce029a",
+    "service.py": "38db7ecf4bef6210b340bd2aaa2fe08e61514b93aaf11def70ca38220a8bdff0",
+    "snapshot4.py": "f337eb95dc711441d115c9f8f69f44d60a1821da1fa2e74545cdf558c1263267",
+    "stage2_state.py": "198c9349fee00508fbd47f15f4e85b6304a38bdec8760d4738cefd7fd4c2e1ae",
+    "stage3_state.py": "2191680d0f59d4dc8e27edf38441104f54bb64db79d7f84bbef782c95b04dc9f",
+    "state.py": "ebfd107ca6c21ec88ac15c15e240f73c4c9175b22b49fd7525f74f12ca3bfecd",
+    "temporal.py": "80d8224217719c94be9281ce2d6e7760409240235444b7f3aa5afb975bbee1ea",
+    "values.py": "7e35fc23a6474e6ac1737bd1948fa9f70e492820608163e1201a0d6f0a20e096",
+    "static/api.js": "9a57a1e8c48b6e9df9cca7a199f8690b4cc716cfccb917d8ef23409e8a0eed8e",
+    "static/app.js": "ce9795c065d509b88a46dedc5896a4bee1a228fa93617d06bef859b23b1ab58e",
+    "static/auth.js": "4c07dcbe95f2e008b66bf343f4e880cd134512dea59a2005f0e2a467fdb5745b",
+    "static/booking.js": "06daf7764d775ed058a276e6a77eed22870ece122cd8e5023fbc104c9f93e6a6",
+    "static/dom.js": "4bb2c46674ab4fd87e161c17c350d865d20269596d14bff2fdae723e9ae48e40",
+    "static/index.html": "27d191e7e5c1461ff8c7a8cc2193a34b1095ab8ca87c699336af76331fd3a6f0",
+    "static/lookup.js": "2f5f42087df0a38623fcf4f5399e1acb7a45aef88a0d7ccd41ee831efcb24e52",
+    "static/search.js": "826f0d993d2419c2d0d7d0d8c3b3c5a320bb512d9c948b194ed46def318c9b53",
+    "static/style.css": "3c82d6173ec7e1b11fd98a93c9f625f49084c2e45c5761a03eff5d691a611e61"
+  }
+}

@@ -1,0 +1,413 @@
+{
+  "recorded_utc": "2026-10-06T10:49:23.841120+00:00",
+  "status": "PASS",
+  "scope": "Read-only newly imported Stage4 ancestral source versions and exact current packaged source/test equality; no credential values emitted. Curated evidence separately reviewed.",
+  "base_publication_prefix": "3571115",
+  "accepted_candidate": "ac1eb4945a2adaeaaf8a62d0817bdbc6a021e566",
+  "new_ancestral_commits": [
+    "ac1eb4945a2adaeaaf8a62d0817bdbc6a021e566",
+    "0c45c22e9c976b2bc5a4b738e76b5697cae1faba",
+    "66f25bd407a87e2e55d7dde4bf4a330aa186bc80",
+    "d0b3ba287222f11cc00f9d07b19ad631a077b6ed"
+  ],
+  "changed_paths": [
+    "ARCHITECTURE.md",
+    "WORKING.md",
+    "stage-4/Dockerfile",
+    "stage-4/RUN.md",
+    "stage-4/agreements.py",
+    "stage-4/domain.py",
+    "stage-4/ledger.py",
+    "stage-4/legacy_domain.py",
+    "stage-4/legacy_state.py",
+    "stage-4/repairs.py",
+    "stage-4/server.py",
+    "stage-4/service.py",
+    "stage-4/snapshot4.py",
+    "stage-4/stage2_state.py",
+    "stage-4/stage3_state.py",
+    "stage-4/state.py",
+    "stage-4/static/api.js",
+    "stage-4/static/app.js",
+    "stage-4/static/auth.js",
+    "stage-4/static/booking.js",
+    "stage-4/static/dom.js",
+    "stage-4/static/index.html",
+    "stage-4/static/lookup.js",
+    "stage-4/static/search.js",
+    "stage-4/static/style.css",
+    "stage-4/temporal.py",
+    "stage-4/values.py",
+    "tests/backend_stage4_http.py",
+    "tests/backend_stage4_inherited.py"
+  ],
+  "scanned_versions": [
+    {
+      "revision": "ac1eb4945a2adaeaaf8a62d0817bdbc6a021e566",
+      "path": "tests/backend_stage4_http.py",
+      "sha256": "33a3af87ef48c8978c4fc137ddd4802162a27185ff2e1a8177b71e4974a759cd",
+      "bytes": 20050
+    },
+    {
+      "revision": "0c45c22e9c976b2bc5a4b738e76b5697cae1faba",
+      "path": "stage-4/repairs.py",
+      "sha256": "0de63c24d73f01883ae95388a3ae79568dffc72617208461486aa3c911d8a3aa",
+      "bytes": 7702
+    },
+    {
+      "revision": "0c45c22e9c976b2bc5a4b738e76b5697cae1faba",
+      "path": "stage-4/temporal.py",
+      "sha256": "80d8224217719c94be9281ce2d6e7760409240235444b7f3aa5afb975bbee1ea",
+      "bytes": 2711
+    },
+    {
+      "revision": "0c45c22e9c976b2bc5a4b738e76b5697cae1faba",
+      "path": "tests/backend_stage4_http.py",
+      "sha256": "3a8e66d4ae9d2d49f23ef296b2c231ff1ec8bc2147d7dbb3e028de1469df04ef",
+      "bytes": 20050
+    },
+    {
+      "revision": "66f25bd407a87e2e55d7dde4bf4a330aa186bc80",
+      "path": "stage-4/Dockerfile",
+      "sha256": "a9e5d5953574a0169c432e0ec25626abc365cfd5c4f6c6c95f3d315c2344248c",
+      "bytes": 267
+    },
+    {
+      "revision": "66f25bd407a87e2e55d7dde4bf4a330aa186bc80",
+      "path": "stage-4/RUN.md",
+      "sha256": "4aff79ffcfa9f5edcc5c010a4231924549fc845b3dfc3dbe28d57e80e4672682",
+      "bytes": 3139
+    },
+    {
+      "revision": "66f25bd407a87e2e55d7dde4bf4a330aa186bc80",
+      "path": "stage-4/agreements.py",
+      "sha256": "6b8f185b3a16b9a2374af4ba77c8853eaebeaa8d35e83f08b482b363f4e89bb6",
+      "bytes": 5614
+    },
+    {
+      "revision": "66f25bd407a87e2e55d7dde4bf4a330aa186bc80",
+      "path": "stage-4/domain.py",
+      "sha256": "fcd0c6b8a06845b2c123c391ffea00bd970aaea263292c3f6adbca01be78927c",
+      "bytes": 9386
+    },
+    {
+      "revision": "66f25bd407a87e2e55d7dde4bf4a330aa186bc80",
+      "path": "stage-4/ledger.py",
+      "sha256": "1800992971618b41ca2217fe1995bfd6e8c08d2708c70fe7baf226112e115db0",
+      "bytes": 3506
+    },
+    {
+      "revision": "66f25bd407a87e2e55d7dde4bf4a330aa186bc80",
+      "path": "stage-4/legacy_domain.py",
+      "sha256": "c0c0df86b5ea88d9e48be4ea2ce4c57d2246dc7a4e772e58b724ca93be9c28fd",
+      "bytes": 7173
+    },
+    {
+      "revision": "66f25bd407a87e2e55d7dde4bf4a330aa186bc80",
+      "path": "stage-4/legacy_state.py",
+      "sha256": "b1094a3ffad1e8f06d858d65aa6fd6cc8fedb16e399836385ca7ea8753f3fec7",
+      "bytes": 8956
+    },
+    {
+      "revision": "66f25bd407a87e2e55d7dde4bf4a330aa186bc80",
+      "path": "stage-4/repairs.py",
+      "sha256": "ef3a2d7c190590cac1b85841ad3e08b2a4b9e50015a34dcb9e98647ea4ca198d",
+      "bytes": 7696
+    },
+    {
+      "revision": "66f25bd407a87e2e55d7dde4bf4a330aa186bc80",
+      "path": "stage-4/server.py",
+      "sha256": "9790bb3353a3059c7730554abc595198bf8ba6633af96ff3e9e13d9ef4ce029a",
+      "bytes": 3218
+    },
+    {
+      "revision": "66f25bd407a87e2e55d7dde4bf4a330aa186bc80",
+      "path": "stage-4/service.py",
+      "sha256": "38db7ecf4bef6210b340bd2aaa2fe08e61514b93aaf11def70ca38220a8bdff0",
+      "bytes": 15167
+    },
+    {
+      "revision": "66f25bd407a87e2e55d7dde4bf4a330aa186bc80",
+      "path": "stage-4/snapshot4.py",
+      "sha256": "f337eb95dc711441d115c9f8f69f44d60a1821da1fa2e74545cdf558c1263267",
+      "bytes": 8247
+    },
+    {
+      "revision": "66f25bd407a87e2e55d7dde4bf4a330aa186bc80",
+      "path": "stage-4/stage2_state.py",
+      "sha256": "198c9349fee00508fbd47f15f4e85b6304a38bdec8760d4738cefd7fd4c2e1ae",
+      "bytes": 10342
+    },
+    {
+      "revision": "66f25bd407a87e2e55d7dde4bf4a330aa186bc80",
+      "path": "stage-4/stage3_state.py",
+      "sha256": "2191680d0f59d4dc8e27edf38441104f54bb64db79d7f84bbef782c95b04dc9f",
+      "bytes": 16172
+    },
+    {
+      "revision": "66f25bd407a87e2e55d7dde4bf4a330aa186bc80",
+      "path": "stage-4/state.py",
+      "sha256": "ebfd107ca6c21ec88ac15c15e240f73c4c9175b22b49fd7525f74f12ca3bfecd",
+      "bytes": 18691
+    },
+    {
+      "revision": "66f25bd407a87e2e55d7dde4bf4a330aa186bc80",
+      "path": "stage-4/static/api.js",
+      "sha256": "9a57a1e8c48b6e9df9cca7a199f8690b4cc716cfccb917d8ef23409e8a0eed8e",
+      "bytes": 1197
+    },
+    {
+      "revision": "66f25bd407a87e2e55d7dde4bf4a330aa186bc80",
+      "path": "stage-4/static/app.js",
+      "sha256": "ce9795c065d509b88a46dedc5896a4bee1a228fa93617d06bef859b23b1ab58e",
+      "bytes": 478
+    },
+    {
+      "revision": "66f25bd407a87e2e55d7dde4bf4a330aa186bc80",
+      "path": "stage-4/static/auth.js",
+      "sha256": "4c07dcbe95f2e008b66bf343f4e880cd134512dea59a2005f0e2a467fdb5745b",
+      "bytes": 3617
+    },
+    {
+      "revision": "66f25bd407a87e2e55d7dde4bf4a330aa186bc80",
+      "path": "stage-4/static/booking.js",
+      "sha256": "06daf7764d775ed058a276e6a77eed22870ece122cd8e5023fbc104c9f93e6a6",
+      "bytes": 5438
+    },
+    {
+      "revision": "66f25bd407a87e2e55d7dde4bf4a330aa186bc80",
+      "path": "stage-4/static/dom.js",
+      "sha256": "4bb2c46674ab4fd87e161c17c350d865d20269596d14bff2fdae723e9ae48e40",
+      "bytes": 1079
+    },
+    {
+      "revision": "66f25bd407a87e2e55d7dde4bf4a330aa186bc80",
+      "path": "stage-4/static/index.html",
+      "sha256": "27d191e7e5c1461ff8c7a8cc2193a34b1095ab8ca87c699336af76331fd3a6f0",
+      "bytes": 673
+    },
+    {
+      "revision": "66f25bd407a87e2e55d7dde4bf4a330aa186bc80",
+      "path": "stage-4/static/lookup.js",
+      "sha256": "2f5f42087df0a38623fcf4f5399e1acb7a45aef88a0d7ccd41ee831efcb24e52",
+      "bytes": 3744
+    },
+    {
+      "revision": "66f25bd407a87e2e55d7dde4bf4a330aa186bc80",
+      "path": "stage-4/static/search.js",
+      "sha256": "826f0d993d2419c2d0d7d0d8c3b3c5a320bb512d9c948b194ed46def318c9b53",
+      "bytes": 8546
+    },
+    {
+      "revision": "66f25bd407a87e2e55d7dde4bf4a330aa186bc80",
+      "path": "stage-4/static/style.css",
+      "sha256": "3c82d6173ec7e1b11fd98a93c9f625f49084c2e45c5761a03eff5d691a611e61",
+      "bytes": 5455
+    },
+    {
+      "revision": "66f25bd407a87e2e55d7dde4bf4a330aa186bc80",
+      "path": "stage-4/temporal.py",
+      "sha256": "db46eae7b47ce72cfc8e95ccaea45958cd59fc3b556e3227e5f9035b8cf6c439",
+      "bytes": 2138
+    },
+    {
+      "revision": "66f25bd407a87e2e55d7dde4bf4a330aa186bc80",
+      "path": "stage-4/values.py",
+      "sha256": "7e35fc23a6474e6ac1737bd1948fa9f70e492820608163e1201a0d6f0a20e096",
+      "bytes": 4089
+    },
+    {
+      "revision": "66f25bd407a87e2e55d7dde4bf4a330aa186bc80",
+      "path": "tests/backend_stage4_http.py",
+      "sha256": "d1a035f68a5daaaae64d32f2b48b24bb3b121033e83df4e7b277123fd354d572",
+      "bytes": 18738
+    },
+    {
+      "revision": "66f25bd407a87e2e55d7dde4bf4a330aa186bc80",
+      "path": "tests/backend_stage4_inherited.py",
+      "sha256": "9c7d4201a2deb84e8bf7b48f07222d208d27f823c63874769e8b4c1e6cbcc091",
+      "bytes": 21485
+    },
+    {
+      "revision": "d0b3ba287222f11cc00f9d07b19ad631a077b6ed",
+      "path": "ARCHITECTURE.md",
+      "sha256": "503dd98c09c443c7b8f8b9e85af1f01a552d19fde104dff58c6bbc66a7f944a4",
+      "bytes": 68596
+    },
+    {
+      "revision": "d0b3ba287222f11cc00f9d07b19ad631a077b6ed",
+      "path": "WORKING.md",
+      "sha256": "b2366d407161662902fc20d76af324510b4b23556b9507c22017d563fce88f12",
+      "bytes": 54006
+    }
+  ],
+  "source_bindings": [
+    {
+      "path": "stage-4/stage2_state.py",
+      "sha256": "198c9349fee00508fbd47f15f4e85b6304a38bdec8760d4738cefd7fd4c2e1ae",
+      "matches_backend_manifest": true,
+      "matches_candidate_blob": true
+    },
+    {
+      "path": "stage-4/stage3_state.py",
+      "sha256": "2191680d0f59d4dc8e27edf38441104f54bb64db79d7f84bbef782c95b04dc9f",
+      "matches_backend_manifest": true,
+      "matches_candidate_blob": true
+    },
+    {
+      "path": "stage-4/service.py",
+      "sha256": "38db7ecf4bef6210b340bd2aaa2fe08e61514b93aaf11def70ca38220a8bdff0",
+      "matches_backend_manifest": true,
+      "matches_candidate_blob": true
+    },
+    {
+      "path": "stage-4/temporal.py",
+      "sha256": "80d8224217719c94be9281ce2d6e7760409240235444b7f3aa5afb975bbee1ea",
+      "matches_backend_manifest": true,
+      "matches_candidate_blob": true
+    },
+    {
+      "path": "stage-4/server.py",
+      "sha256": "9790bb3353a3059c7730554abc595198bf8ba6633af96ff3e9e13d9ef4ce029a",
+      "matches_backend_manifest": true,
+      "matches_candidate_blob": true
+    },
+    {
+      "path": "stage-4/values.py",
+      "sha256": "7e35fc23a6474e6ac1737bd1948fa9f70e492820608163e1201a0d6f0a20e096",
+      "matches_backend_manifest": true,
+      "matches_candidate_blob": true
+    },
+    {
+      "path": "stage-4/domain.py",
+      "sha256": "fcd0c6b8a06845b2c123c391ffea00bd970aaea263292c3f6adbca01be78927c",
+      "matches_backend_manifest": true,
+      "matches_candidate_blob": true
+    },
+    {
+      "path": "stage-4/Dockerfile",
+      "sha256": "a9e5d5953574a0169c432e0ec25626abc365cfd5c4f6c6c95f3d315c2344248c",
+      "matches_backend_manifest": true,
+      "matches_candidate_blob": true
+    },
+    {
+      "path": "stage-4/legacy_state.py",
+      "sha256": "b1094a3ffad1e8f06d858d65aa6fd6cc8fedb16e399836385ca7ea8753f3fec7",
+      "matches_backend_manifest": true,
+      "matches_candidate_blob": true
+    },
+    {
+      "path": "stage-4/ledger.py",
+      "sha256": "1800992971618b41ca2217fe1995bfd6e8c08d2708c70fe7baf226112e115db0",
+      "matches_backend_manifest": true,
+      "matches_candidate_blob": true
+    },
+    {
+      "path": "stage-4/snapshot4.py",
+      "sha256": "f337eb95dc711441d115c9f8f69f44d60a1821da1fa2e74545cdf558c1263267",
+      "matches_backend_manifest": true,
+      "matches_candidate_blob": true
+    },
+    {
+      "path": "stage-4/agreements.py",
+      "sha256": "6b8f185b3a16b9a2374af4ba77c8853eaebeaa8d35e83f08b482b363f4e89bb6",
+      "matches_backend_manifest": true,
+      "matches_candidate_blob": true
+    },
+    {
+      "path": "stage-4/repairs.py",
+      "sha256": "0de63c24d73f01883ae95388a3ae79568dffc72617208461486aa3c911d8a3aa",
+      "matches_backend_manifest": true,
+      "matches_candidate_blob": true
+    },
+    {
+      "path": "stage-4/RUN.md",
+      "sha256": "4aff79ffcfa9f5edcc5c010a4231924549fc845b3dfc3dbe28d57e80e4672682",
+      "matches_backend_manifest": true,
+      "matches_candidate_blob": true
+    },
+    {
+      "path": "stage-4/state.py",
+      "sha256": "ebfd107ca6c21ec88ac15c15e240f73c4c9175b22b49fd7525f74f12ca3bfecd",
+      "matches_backend_manifest": true,
+      "matches_candidate_blob": true
+    },
+    {
+      "path": "stage-4/legacy_domain.py",
+      "sha256": "c0c0df86b5ea88d9e48be4ea2ce4c57d2246dc7a4e772e58b724ca93be9c28fd",
+      "matches_backend_manifest": true,
+      "matches_candidate_blob": true
+    },
+    {
+      "path": "stage-4/static/lookup.js",
+      "sha256": "2f5f42087df0a38623fcf4f5399e1acb7a45aef88a0d7ccd41ee831efcb24e52",
+      "matches_backend_manifest": true,
+      "matches_candidate_blob": true
+    },
+    {
+      "path": "stage-4/static/booking.js",
+      "sha256": "06daf7764d775ed058a276e6a77eed22870ece122cd8e5023fbc104c9f93e6a6",
+      "matches_backend_manifest": true,
+      "matches_candidate_blob": true
+    },
+    {
+      "path": "stage-4/static/index.html",
+      "sha256": "27d191e7e5c1461ff8c7a8cc2193a34b1095ab8ca87c699336af76331fd3a6f0",
+      "matches_backend_manifest": true,
+      "matches_candidate_blob": true
+    },
+    {
+      "path": "stage-4/static/auth.js",
+      "sha256": "4c07dcbe95f2e008b66bf343f4e880cd134512dea59a2005f0e2a467fdb5745b",
+      "matches_backend_manifest": true,
+      "matches_candidate_blob": true
+    },
+    {
+      "path": "stage-4/static/dom.js",
+      "sha256": "4bb2c46674ab4fd87e161c17c350d865d20269596d14bff2fdae723e9ae48e40",
+      "matches_backend_manifest": true,
+      "matches_candidate_blob": true
+    },
+    {
+      "path": "stage-4/static/style.css",
+      "sha256": "3c82d6173ec7e1b11fd98a93c9f625f49084c2e45c5761a03eff5d691a611e61",
+      "matches_backend_manifest": true,
+      "matches_candidate_blob": true
+    },
+    {
+      "path": "stage-4/static/api.js",
+      "sha256": "9a57a1e8c48b6e9df9cca7a199f8690b4cc716cfccb917d8ef23409e8a0eed8e",
+      "matches_backend_manifest": true,
+      "matches_candidate_blob": true
+    },
+    {
+      "path": "stage-4/static/search.js",
+      "sha256": "826f0d993d2419c2d0d7d0d8c3b3c5a320bb512d9c948b194ed46def318c9b53",
+      "matches_backend_manifest": true,
+      "matches_candidate_blob": true
+    },
+    {
+      "path": "stage-4/static/app.js",
+      "sha256": "ce9795c065d509b88a46dedc5896a4bee1a228fa93617d06bef859b23b1ab58e",
+      "matches_backend_manifest": true,
+      "matches_candidate_blob": true
+    },
+    {
+      "path": "tests/backend_stage4_http.py",
+      "sha256": "33a3af87ef48c8978c4fc137ddd4802162a27185ff2e1a8177b71e4974a759cd",
+      "matches_backend_manifest": true,
+      "matches_candidate_blob": true
+    },
+    {
+      "path": "tests/backend_stage4_inherited.py",
+      "sha256": "9c7d4201a2deb84e8bf7b48f07222d208d27f823c63874769e8b4c1e6cbcc091",
+      "matches_backend_manifest": true,
+      "matches_candidate_blob": true
+    }
+  ],
+  "findings": [],
+  "limitations": [
+    "Shape and contextual privacy audit, not a vulnerability or exhaustive security review. Factory fixture email addresses under factory.invalid are synthetic. No full room transcript rescan."
+  ],
+  "changed_path_count": 29
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "argv": [
+      "docker",
+      "rm",
+      "-f",
+      "backend-s4-s4a-1000"
+    ],
+    "start_utc": "2026-10-06T10:01:15.956353+00:00",
+    "end_utc": "2026-10-06T10:01:16.320852+00:00",
+    "exit": 0,
+    "stdout": "backend-s4-s4a-1000",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "run",
+      "-d",
+      "--name",
+      "backend-s4-s4a-1001",
+      "--network",
+      "backend-s4-0956",
+      "--network-alias",
+      "s4a",
+      "--cpus=2",
+      "--memory=2g",
+      "-e",
+      "PORT=8080",
+      "tablekeeper-backend-s4:delivery"
+    ],
+    "start_utc": "2026-10-06T10:01:16.320878+00:00",
+    "end_utc": "2026-10-06T10:01:16.498210+00:00",
+    "exit": 0,
+    "stdout": "1e2fe4a5b93af599d71ba12cf2060e214c16fc9d5549d77c5516f290624505ba",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "rm",
+      "-f",
+      "backend-s4-s4b-1000"
+    ],
+    "start_utc": "2026-10-06T10:01:16.498248+00:00",
+    "end_utc": "2026-10-06T10:01:16.645826+00:00",
+    "exit": 0,
+    "stdout": "backend-s4-s4b-1000",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "run",
+      "-d",
+      "--name",
+      "backend-s4-s4b-1001",
+      "--network",
+      "backend-s4-0956",
+      "--network-alias",
+      "s4b",
+      "--cpus=2",
+      "--memory=2g",
+      "-e",
+      "PORT=8080",
+      "tablekeeper-backend-s4:delivery"
+    ],
+    "start_utc": "2026-10-06T10:01:16.645880+00:00",
+    "end_utc": "2026-10-06T10:01:16.797076+00:00",
+    "exit": 0,
+    "stdout": "30f7454edd33140b92e6c6fca9b8ad7e17b325c18f3fcc8fb13b2161c2e82033",
+    "stderr": ""
+  }
+]

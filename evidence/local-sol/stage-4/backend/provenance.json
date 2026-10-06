@@ -1,0 +1,62 @@
+{
+  "work_item": "BUILD-S4",
+  "candidate": "ac1eb4945a2adaeaaf8a62d0817bdbc6a021e566",
+  "starting_revision": "d0b3ba287222f11cc00f9d07b19ad631a077b6ed",
+  "responsible": "@frankzhu94/factory-backend",
+  "utc": "2026-10-06T10:01:49.475328+00:00",
+  "clean": true,
+  "unchanged_prior_files": {
+    "stage-1": 8,
+    "stage-2": 19,
+    "stage-3": 22
+  },
+  "nine_static_assets_unchanged": true,
+  "manifest": {
+    "stage-4/stage2_state.py": "198c9349fee00508fbd47f15f4e85b6304a38bdec8760d4738cefd7fd4c2e1ae",
+    "stage-4/stage3_state.py": "2191680d0f59d4dc8e27edf38441104f54bb64db79d7f84bbef782c95b04dc9f",
+    "stage-4/service.py": "38db7ecf4bef6210b340bd2aaa2fe08e61514b93aaf11def70ca38220a8bdff0",
+    "stage-4/temporal.py": "80d8224217719c94be9281ce2d6e7760409240235444b7f3aa5afb975bbee1ea",
+    "stage-4/server.py": "9790bb3353a3059c7730554abc595198bf8ba6633af96ff3e9e13d9ef4ce029a",
+    "stage-4/values.py": "7e35fc23a6474e6ac1737bd1948fa9f70e492820608163e1201a0d6f0a20e096",
+    "stage-4/domain.py": "fcd0c6b8a06845b2c123c391ffea00bd970aaea263292c3f6adbca01be78927c",
+    "stage-4/Dockerfile": "a9e5d5953574a0169c432e0ec25626abc365cfd5c4f6c6c95f3d315c2344248c",
+    "stage-4/legacy_state.py": "b1094a3ffad1e8f06d858d65aa6fd6cc8fedb16e399836385ca7ea8753f3fec7",
+    "stage-4/ledger.py": "1800992971618b41ca2217fe1995bfd6e8c08d2708c70fe7baf226112e115db0",
+    "stage-4/snapshot4.py": "f337eb95dc711441d115c9f8f69f44d60a1821da1fa2e74545cdf558c1263267",
+    "stage-4/agreements.py": "6b8f185b3a16b9a2374af4ba77c8853eaebeaa8d35e83f08b482b363f4e89bb6",
+    "stage-4/repairs.py": "0de63c24d73f01883ae95388a3ae79568dffc72617208461486aa3c911d8a3aa",
+    "stage-4/RUN.md": "4aff79ffcfa9f5edcc5c010a4231924549fc845b3dfc3dbe28d57e80e4672682",
+    "stage-4/state.py": "ebfd107ca6c21ec88ac15c15e240f73c4c9175b22b49fd7525f74f12ca3bfecd",
+    "stage-4/legacy_domain.py": "c0c0df86b5ea88d9e48be4ea2ce4c57d2246dc7a4e772e58b724ca93be9c28fd",
+    "stage-4/static/lookup.js": "2f5f42087df0a38623fcf4f5399e1acb7a45aef88a0d7ccd41ee831efcb24e52",
+    "stage-4/static/booking.js": "06daf7764d775ed058a276e6a77eed22870ece122cd8e5023fbc104c9f93e6a6",
+    "stage-4/static/index.html": "27d191e7e5c1461ff8c7a8cc2193a34b1095ab8ca87c699336af76331fd3a6f0",
+    "stage-4/static/auth.js": "4c07dcbe95f2e008b66bf343f4e880cd134512dea59a2005f0e2a467fdb5745b",
+    "stage-4/static/dom.js": "4bb2c46674ab4fd87e161c17c350d865d20269596d14bff2fdae723e9ae48e40",
+    "stage-4/static/style.css": "3c82d6173ec7e1b11fd98a93c9f625f49084c2e45c5761a03eff5d691a611e61",
+    "stage-4/static/api.js": "9a57a1e8c48b6e9df9cca7a199f8690b4cc716cfccb917d8ef23409e8a0eed8e",
+    "stage-4/static/search.js": "826f0d993d2419c2d0d7d0d8c3b3c5a320bb512d9c948b194ed46def318c9b53",
+    "stage-4/static/app.js": "ce9795c065d509b88a46dedc5896a4bee1a228fa93617d06bef859b23b1ab58e",
+    "tests/backend_stage4_http.py": "33a3af87ef48c8978c4fc137ddd4802162a27185ff2e1a8177b71e4974a759cd",
+    "tests/backend_stage4_inherited.py": "9c7d4201a2deb84e8bf7b48f07222d208d27f823c63874769e8b4c1e6cbcc091"
+  },
+  "sources": {
+    "/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-1.md": "9460189eac83802ce158f16ee90989af728a489b32a6147e2dc8e320f383055f",
+    "/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-2.md": "b1aa1b4affad456ff26f208a378eb2f6884153fc6ef667ab37b888fcda96c5dc",
+    "/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-3.md": "36b7ff5294b3992a6fa2894e9b4f2350072912fe10ed212c1f9a8828be1f9abe",
+    "/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-4.md": "08d02b5a432d41d71f989ccb30585b3cad0977c9c1dd11145c97fb7ddd4946c4",
+    "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/ARCHITECTURE.md": "503dd98c09c443c7b8f8b9e85af1f01a552d19fde104dff58c6bbc66a7f944a4",
+    "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/WORKING.md": "b2366d407161662902fc20d76af324510b4b23556b9507c22017d563fce88f12",
+    "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/DESIGN.md": "677188d1b6f6da7f34a3fc810259970e013d153517a078b27cc0bb8716ba433f",
+    "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-arch-s4-20261006T094159Z/runnable-targets.txt": "2bc9cb9a8fe4ba6d8dc8b3cae8dce6896f04ddb6aa9c30a9ce5c15ae59a404a2"
+  },
+  "authors": [
+    "ac1eb4945a2adaeaaf8a62d0817bdbc6a021e566 Factory Backend <backend@factory.invalid>",
+    "0c45c22e9c976b2bc5a4b738e76b5697cae1faba Factory Backend <backend@factory.invalid>",
+    "66f25bd407a87e2e55d7dde4bf4a330aa186bc80 Factory Backend <backend@factory.invalid>"
+  ],
+  "assignment_event": "f9a8f816-6c71-47f5-a146-c587d3fbab2c",
+  "receipt_event": "32b68bc9-ba5e-428f-8288-40e659e983e9",
+  "cost": "UNAVAILABLE",
+  "independent_acceptance": "PENDING"
+}

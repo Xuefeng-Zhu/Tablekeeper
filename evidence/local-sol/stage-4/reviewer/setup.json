@@ -1,0 +1,153 @@
+{
+  "clone": "/private/tmp/tablekeeper-review-s4-release-20261006T102629Z",
+  "evidence": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s4-release-20261006T102629Z",
+  "commands": [
+    {
+      "argv": [
+        "git",
+        "clone",
+        "--no-hardlinks",
+        "--no-checkout",
+        "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005",
+        "/private/tmp/tablekeeper-review-s4-release-20261006T102629Z"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": "Cloning into '/private/tmp/tablekeeper-review-s4-release-20261006T102629Z'...\ndone.\n",
+      "utc": "2026-10-06T10:26:30.118941+00:00"
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/private/tmp/tablekeeper-review-s4-release-20261006T102629Z",
+        "checkout",
+        "--detach",
+        "ac1eb4945a2adaeaaf8a62d0817bdbc6a021e566"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": "HEAD is now at ac1eb49 Make both expected-revision race controls independently feasible\n",
+      "utc": "2026-10-06T10:26:30.147272+00:00"
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/private/tmp/tablekeeper-review-s4-release-20261006T102629Z",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit": 0,
+      "stdout": "ac1eb4945a2adaeaaf8a62d0817bdbc6a021e566\n",
+      "stderr": "",
+      "utc": "2026-10-06T10:26:30.156022+00:00"
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/private/tmp/tablekeeper-review-s4-release-20261006T102629Z",
+        "status",
+        "--porcelain"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "utc": "2026-10-06T10:26:30.170444+00:00"
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/private/tmp/tablekeeper-review-s4-release-20261006T102629Z",
+        "diff",
+        "--check"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "utc": "2026-10-06T10:26:30.183697+00:00"
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/private/tmp/tablekeeper-review-s4-release-20261006T102629Z",
+        "diff",
+        "--exit-code",
+        "b3df39340cee6f738ac79a12dd1347fc38e969e9",
+        "--",
+        "stage-1"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "utc": "2026-10-06T10:26:30.192728+00:00"
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/private/tmp/tablekeeper-review-s4-release-20261006T102629Z",
+        "diff",
+        "--exit-code",
+        "108bcd4c48fa4fb4d7dedf286e94c8e4937f7f10",
+        "--",
+        "stage-2"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "utc": "2026-10-06T10:26:30.202032+00:00"
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/private/tmp/tablekeeper-review-s4-release-20261006T102629Z",
+        "diff",
+        "--exit-code",
+        "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3",
+        "--",
+        "stage-3"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "utc": "2026-10-06T10:26:30.211134+00:00"
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/private/tmp/tablekeeper-review-s4-release-20261006T102629Z",
+        "diff",
+        "--exit-code",
+        "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3",
+        "--",
+        "DESIGN.md"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "utc": "2026-10-06T10:26:30.219737+00:00"
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/private/tmp/tablekeeper-review-s4-release-20261006T102629Z",
+        "show",
+        "--format=fuller",
+        "--stat",
+        "HEAD"
+      ],
+      "exit": 0,
+      "stdout": "commit ac1eb4945a2adaeaaf8a62d0817bdbc6a021e566\nAuthor:     Factory Backend <backend@factory.invalid>\nAuthorDate: Tue Oct 6 03:00:54 2026 -0700\nCommit:     Factory Backend <backend@factory.invalid>\nCommitDate: Tue Oct 6 03:00:54 2026 -0700\n\n    Make both expected-revision race controls independently feasible\n\n tests/backend_stage4_http.py | 2 +-\n 1 file changed, 1 insertion(+), 1 deletion(-)\n",
+      "stderr": "",
+      "utc": "2026-10-06T10:26:30.229279+00:00"
+    }
+  ],
+  "static_unchanged": true
+}

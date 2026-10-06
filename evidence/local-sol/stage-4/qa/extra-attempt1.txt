@@ -1,0 +1,22 @@
+{"case": "R-pair-member-declaration-nontransitive-ranks", "outcome": "PASS", "detail": "second pair member closed; declaredDC canonical output; no transitiveAC; original rank after filteringB wins; pairhistory canonical", "utc_start": "2026-10-06T10:17:44.981196+00:00", "utc_end": "2026-10-06T10:17:45.480180+00:00", "candidate": "ac1eb4945a2adaeaaf8a62d0817bdbc6a021e566"}
+Traceback (most recent call last):
+  File "/evidence/helpers.py", line 36, in case
+    detail=fn(); result={'case':name,'outcome':'PASS','detail':detail}
+           ^^^^
+  File "/evidence/extra.py", line 17, in multi_series
+    t=reset(f());m=manager();a=create(t,'A','2030-01-07T18:00',1);b=create(t,'A','2030-01-07T20:00',1);s1=adopt(t,a['reference']);s2=adopt(t,b['reference']);r0=counter_state();p=plan(m,start='2030-01-07T00:00:00Z',end='2030-01-15T00:00:00Z');assert len(p['assignments'])==4 and p['moved_count']==4;out=apply(m,p);assert counter_state()==r0+1
+                                                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/evidence/common.py", line 12, in adopt
+    def adopt(t,r,count=2,weeks=1,key='s',status=201,code=None,base=A):return expect('POST','/series',status,code,body={'anchor_reference':r,'count':count,'interval_weeks':weeks},token=t,key=key,base=base)
+                                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/evidence/helpers.py", line 29, in expect
+    assert got==status, f'{method} {path}: expected{status}/{code} observed{got}/'+str(value.get('error',{}).get('code') if isinstance(value,dict) else None)
+           ^^^^^^^^^^^
+AssertionError: POST /series: expected201/None observed409/idempotency_key_reuse
+{"case": "R-multi-series-deduplicated-counters", "outcome": "FAIL", "detail": "POST /series: expected201/None observed409/idempotency_key_reuse", "exception": "AssertionError", "utc_start": "2026-10-06T10:17:45.480366+00:00", "utc_end": "2026-10-06T10:17:45.641380+00:00", "candidate": "ac1eb4945a2adaeaaf8a62d0817bdbc6a021e566"}
+{"case": "R-input-boundaries-and-identity", "outcome": "PASS", "detail": "malformed values/ranges/calendar/offset422 unchanged;unknown404 permissions403/401;failedkey later201 thenchanged409", "utc_start": "2026-10-06T10:17:45.641458+00:00", "utc_end": "2026-10-06T10:17:45.809276+00:00", "candidate": "ac1eb4945a2adaeaaf8a62d0817bdbc6a021e566"}
+Traceback (most recent call last):
+  File "/evidence/extra.py", line 29, in <module>
+    Path('/evidence/extra-results.json').write_text(json.dumps({'candidate':REV,'results':results,'observations':observations},indent=2));assert all(x['outcome']=='PASS' for x in results)
+                                                                                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

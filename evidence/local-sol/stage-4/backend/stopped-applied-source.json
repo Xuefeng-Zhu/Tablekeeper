@@ -1,0 +1,35 @@
+[
+  {
+    "argv": [
+      "docker",
+      "stop",
+      "backend-s4-s4b-1001"
+    ],
+    "start_utc": "2026-10-06T10:03:19.299613+00:00",
+    "end_utc": "2026-10-06T10:03:29.546224+00:00",
+    "exit": 0,
+    "stdout": "backend-s4-s4b-1001"
+  },
+  {
+    "argv": [
+      "docker",
+      "run",
+      "-d",
+      "--name",
+      "backend-s4-s4c-1003",
+      "--network",
+      "backend-s4-0956",
+      "--network-alias",
+      "s4c",
+      "--cpus=2",
+      "--memory=2g",
+      "-e",
+      "PORT=8080",
+      "tablekeeper-backend-s4:delivery"
+    ],
+    "start_utc": "2026-10-06T10:03:29.546263+00:00",
+    "end_utc": "2026-10-06T10:03:29.738783+00:00",
+    "exit": 0,
+    "stdout": "b3327d7ff36666b2c2acd29483965a402a7691375538be150d1f0059a18e4978"
+  }
+]

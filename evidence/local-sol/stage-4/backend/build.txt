@@ -1,0 +1,37 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 306B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.12-slim
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/5] FROM docker.io/library/python:3.12-slim
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 1.67kB done
+#5 DONE 0.0s
+
+#6 [3/5] WORKDIR /app
+#6 CACHED
+
+#7 [2/5] RUN apt-get update && apt-get install -y --no-install-recommends tzdata && rm -rf /var/lib/apt/lists/*
+#7 CACHED
+
+#8 [4/5] COPY . ./
+#8 CACHED
+
+#9 [5/5] RUN mkdir -p static
+#9 CACHED
+
+#10 exporting to image
+#10 exporting layers done
+#10 writing image sha256:4d4ffc29f277861b35ee20edbcd779855042fe0013b53d929276e9d90692130d done
+#10 naming to docker.io/library/tablekeeper-backend-s4:delivery done
+#10 DONE 0.0s

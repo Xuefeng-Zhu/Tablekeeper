@@ -1,0 +1,69 @@
+{
+  "work_item": "QA-S4-RUN",
+  "candidate": "ac1eb4945a2adaeaaf8a62d0817bdbc6a021e566",
+  "author": "@frankzhu94/factory-qa",
+  "independence": "Own prior QA helpers reused; actual S4 oracles independently authored from complete spec/six reviewed targets. Backend browser fixture read only for stable-origin route setup. No imported production helpers or owner suite used as oracle.",
+  "operations": [
+    {
+      "command": "git clone --no-hardlinks --no-checkout /Users/frank/mygit/Tablekeeper/result-local-sol-20261005 /private/tmp/tablekeeper-qa-s4-ac1eb4-20261006T1012Z",
+      "exit": 0
+    },
+    {
+      "command": "git checkout --detach ac1eb4945a2adaeaaf8a62d0817bdbc6a021e566",
+      "cwd": "/private/tmp/tablekeeper-qa-s4-ac1eb4-20261006T1012Z",
+      "exit": 0
+    },
+    {
+      "command": "docker network create --internal qa-s4-net-1012",
+      "exit": 0
+    },
+    {
+      "command": "docker build -t qa-s4-image4-1012 /private/tmp/tablekeeper-qa-s4-ac1eb4-20261006T1012Z/stage-4",
+      "exit": 0,
+      "evidence": "build-4.txt"
+    },
+    {
+      "command": "docker build -t qa-s4-image1-1012 /private/tmp/tablekeeper-qa-s4-ac1eb4-20261006T1012Z/stage-1",
+      "exit": 0,
+      "evidence": "build-1.txt"
+    },
+    {
+      "command": "docker build -t qa-s4-image2-1012 /private/tmp/tablekeeper-qa-s4-ac1eb4-20261006T1012Z/stage-2",
+      "exit": 0,
+      "evidence": "build-2.txt"
+    },
+    {
+      "command": "docker build -t qa-s4-image3-1012 /private/tmp/tablekeeper-qa-s4-ac1eb4-20261006T1012Z/stage-3",
+      "exit": 0,
+      "evidence": "build-3.txt"
+    },
+    {
+      "command": "docker run -d --name qa-s4-app --network qa-s4-net-1012 --cpus 2 --memory 2g qa-s4-image4-1012",
+      "exit": 0
+    },
+    {
+      "command": "docker run -d --name qa-s4-peer --network qa-s4-net-1012 --cpus 2 --memory 2g qa-s4-image4-1012",
+      "exit": 0
+    },
+    {
+      "command": "docker run -d --name qa-s4-old1 --network qa-s4-net-1012 --cpus 2 --memory 2g qa-s4-image1-1012",
+      "exit": 0
+    },
+    {
+      "command": "docker run -d --name qa-s4-old2 --network qa-s4-net-1012 --cpus 2 --memory 2g qa-s4-image2-1012",
+      "exit": 0
+    },
+    {
+      "command": "docker run -d --name qa-s4-old3 --network qa-s4-net-1012 --cpus 2 --memory 2g qa-s4-image3-1012",
+      "exit": 0
+    },
+    {
+      "command": "docker run -d --name qa-s4-dest --network qa-s4-net-1012 --cpus 2 --memory 2g qa-s4-image4-1012",
+      "exit": 0
+    }
+  ],
+  "verified_sources_file": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/sources.json",
+  "permissions": "existing authorized Docker/internalnetwork only; no hostbrowser,operatorprobes,spending or permission widening",
+  "failed_attempts": "failed-attempt-disposition.txt; all original scripts/logs/results retained",
+  "cleanup": "cleanup-containers.txt/cleanup-network.txt/cleanup-images.txt exit0"
+}

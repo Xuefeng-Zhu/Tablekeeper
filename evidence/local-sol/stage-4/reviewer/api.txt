@@ -1,0 +1,9 @@
+REAL_CLOCK_BOUNDARY_WAIT 0.347
+Traceback (most recent call last):
+  File "/review.py", line 81, in <module>
+    result=req('/series/'+s['series_id']+'/amend',{'expected_revision':1,'from_index':0,'local_time':future.strftime('%H:%M')},t,'noop',expected=201);assert result==s;after=export();assert all(after['state'][k]==snapshot['state'][k] for k in ['reservations','histories','restaurant_revisions','series']);req('/reservations/'+b['reference'],{'starts_at_local':b['starts_at_local']},t,method='PATCH',expected=409,code='cancellation_cutoff');req('/series/'+s['series_id']+'/amend',{'expected_revision':1,'from_index':0,'local_time':(future+datetime.timedelta(minutes=1)).strftime('%H:%M')},t,'real',expected=409,code='cancellation_cutoff');assert req('/series/'+s['series_id']+'/amend',{'expected_revision':1,'from_index':0,'local_time':future.strftime('%H:%M')},t,'noop')==s
+                                                                                                                                                                                                                                                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/review.py", line 11, in req
+    if code:assert v['error']['code']==code,v
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'error': {'code': 'cutoff_passed', 'message': 'cutoff passed'}}

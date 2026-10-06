@@ -1,0 +1,919 @@
+{
+  "candidate": "ac1eb4945a2adaeaaf8a62d0817bdbc6a021e566",
+  "start_utc": "2026-10-06T10:31:33.302701+00:00",
+  "end_utc": "2026-10-06T10:32:00.384070+00:00",
+  "groups": [
+    "Forced opposite seed/reference order literal rank vector(3,4,5), all3 moved, preview/apply/history/stale/original replay",
+    "24 actual API independent Cartesian samples + full stored interval fixed-booking conflict outside closure",
+    "Accepted policy0 capacities preserve surplus choiceC while currentpolicy choosesB; unmoved policy1 exact",
+    "LowercaseRFC3339 exact rational tail adjacency/positive submicrosecond overlap and native exports",
+    "50 unique-key atomic apply, closurecreate/explain independent false rules, exact restaurantcounter2",
+    "REAL elapsed cutoff0 all-no-op series201/businessunchanged vs individualnoopPATCH409 and realseries409; replay200",
+    "Native3siblingsrepair/seriesamend prepared: immutable receipts histories, pending/applied/latest snapshots for stopped-source validation"
+  ],
+  "stats": [
+    {
+      "path": "/_test/reset",
+      "status": 204,
+      "seconds": 0.09264300799986813
+    },
+    {
+      "path": "/auth/login",
+      "status": 200,
+      "seconds": 0.03356746899953578
+    },
+    {
+      "path": "/_test/export",
+      "status": 200,
+      "seconds": 0.0012987090012757108
+    },
+    {
+      "path": "/restaurants/r/replans",
+      "status": 201,
+      "seconds": 0.0012512480025179684
+    },
+    {
+      "path": "/_test/export",
+      "status": 200,
+      "seconds": 0.0010862370108952746
+    },
+    {
+      "path": "/restaurants/r/replans",
+      "status": 201,
+      "seconds": 0.00068100199860055
+    },
+    {
+      "path": "/restaurants/r/replans/plan_9e98eb0dd9a600038296687d0220de3d/apply",
+      "status": 201,
+      "seconds": 0.0006623759982176125
+    },
+    {
+      "path": "/restaurants/r/replans/plan_91b8586875d9ac711b7d0dfef397f22e/apply",
+      "status": 409,
+      "seconds": 0.0004186100122751668
+    },
+    {
+      "path": "/restaurants/r/replans/plan_9e98eb0dd9a600038296687d0220de3d/apply",
+      "status": 409,
+      "seconds": 0.0004291119985282421
+    },
+    {
+      "path": "/restaurants/r/replans/plan_9e98eb0dd9a600038296687d0220de3d/apply",
+      "status": 200,
+      "seconds": 0.0005443690024549142
+    },
+    {
+      "path": "/reservations/AAAAAA/history",
+      "status": 200,
+      "seconds": 0.0004403620114317164
+    },
+    {
+      "path": "/reservations/YYYYYY/history",
+      "status": 200,
+      "seconds": 0.0004643629945348948
+    },
+    {
+      "path": "/reservations/ZZZZZZ/history",
+      "status": 200,
+      "seconds": 0.0004819070018129423
+    },
+    {
+      "path": "/restaurants/r/replans",
+      "status": 200,
+      "seconds": 0.0003922749892808497
+    },
+    {
+      "path": "/_test/reset",
+      "status": 204,
+      "seconds": 0.06575997300387826
+    },
+    {
+      "path": "/auth/login",
+      "status": 200,
+      "seconds": 0.032007451009121723
+    },
+    {
+      "path": "/restaurants/r/replans",
+      "status": 201,
+      "seconds": 0.0007483810040866956
+    },
+    {
+      "path": "/_test/reset",
+      "status": 204,
+      "seconds": 0.06425837500137277
+    },
+    {
+      "path": "/auth/login",
+      "status": 200,
+      "seconds": 0.032049494999228045
+    },
+    {
+      "path": "/restaurants/r/replans",
+      "status": 201,
+      "seconds": 0.0008540140115655959
+    },
+    {
+      "path": "/_test/reset",
+      "status": 204,
+      "seconds": 0.06321159900107887
+    },
+    {
+      "path": "/auth/login",
+      "status": 200,
+      "seconds": 0.03213145899644587
+    },
+    {
+      "path": "/restaurants/r/replans",
+      "status": 201,
+      "seconds": 0.0007571329915663227
+    },
+    {
+      "path": "/_test/reset",
+      "status": 204,
+      "seconds": 0.06265068799257278
+    },
+    {
+      "path": "/auth/login",
+      "status": 200,
+      "seconds": 0.03135840900358744
+    },
+    {
+      "path": "/restaurants/r/replans",
+      "status": 201,
+      "seconds": 0.000795718005974777
+    },
+    {
+      "path": "/_test/reset",
+      "status": 204,
+      "seconds": 0.06231408299936447
+    },
+    {
+      "path": "/auth/login",
+      "status": 200,
+      "seconds": 0.031590965008945204
+    },
+    {
+      "path": "/restaurants/r/replans",
+      "status": 201,
+      "seconds": 0.000767842007917352
+    },
+    {
+      "path": "/_test/reset",
+      "status": 204,
+      "seconds": 0.06255193099786993
+    },
+    {
+      "path": "/auth/login",
+      "status": 200,
+      "seconds": 0.03175397599989083
+    },
+    {
+      "path": "/restaurants/r/replans",
+      "status": 201,
+      "seconds": 0.0008343869994860142
+    },
+    {
+      "path": "/_test/reset",
+      "status": 204,
+      "seconds": 0.06328210400533862
+    },
+    {
+      "path": "/auth/login",
+      "status": 200,
+      "seconds": 0.031921653004246764
+    },
+    {
+      "path": "/restaurants/r/replans",
+      "status": 201,
+      "seconds": 0.0008711400005267933
+    },
+    {
+      "path": "/_test/reset",
+      "status": 204,
+      "seconds": 0.06920102899312042
+    },
+    {
+      "path": "/auth/login",
+      "status": 200,
+      "seconds": 0.03487834599218331
+    },
+    {
+      "path": "/restaurants/r/replans",
+      "status": 201,
+      "seconds": 0.0010480259952601045
+    },
+    {
+      "path": "/_test/reset",
+      "status": 204,
+      "seconds": 0.06734332600899506
+    },
+    {
+      "path": "/auth/login",
+      "status": 200,
+      "seconds": 0.033351078993291594
+    },
+    {
+      "path": "/restaurants/r/replans",
+      "status": 201,
+      "seconds": 0.0010267339966958389
+    },
+    {
+      "path": "/_test/reset",
+      "status": 204,
+      "seconds": 0.06377017700287979
+    },
+    {
+      "path": "/auth/login",
+      "status": 200,
+      "seconds": 0.03197978199750651
+    },
+    {
+      "path": "/restaurants/r/replans",
+      "status": 201,
+      "seconds": 0.0008871830068528652
+    },
+    {
+      "path": "/_test/reset",
+      "status": 204,
+      "seconds": 0.06322030899173114
+    },
+    {
+      "path": "/auth/login",
+      "status": 200,
+      "seconds": 0.031600508009432815
+    },
+    {
+      "path": "/restaurants/r/replans",
+      "status": 201,
+      "seconds": 0.0008800569921731949
+    },
+    {
+      "path": "/_test/reset",
+      "status": 204,
+      "seconds": 0.06258697499288246
+    },
+    {
+      "path": "/auth/login",
+      "status": 200,
+      "seconds": 0.031572380001307465
+    },
+    {
+      "path": "/restaurants/r/replans",
+      "status": 201,
+      "seconds": 0.0008758899930398911
+    },
+    {
+      "path": "/_test/reset",
+      "status": 204,
+      "seconds": 0.06284999300260097
+    },
+    {
+      "path": "/auth/login",
+      "status": 200,
+      "seconds": 0.0316093839937821
+    },
+    {
+      "path": "/restaurants/r/replans",
+      "status": 201,
+      "seconds": 0.0007641330012120306
+    },
+    {
+      "path": "/_test/reset",
+      "status": 204,
+      "seconds": 0.06334619100380223
+    },
+    {
+      "path": "/auth/login",
+      "status": 200,
+      "seconds": 0.036506742995698005
+    },
+    {
+      "path": "/restaurants/r/replans",
+      "status": 201,
+      "seconds": 0.0025611659948481247
+    },
+    {
+      "path": "/_test/reset",
+      "status": 204,
+      "seconds": 0.06648460299766157
+    },
+    {
+      "path": "/auth/login",
+      "status": 200,
+      "seconds": 0.03236080700298771
+    },
+    {
+      "path": "/restaurants/r/replans",
+      "status": 201,
+      "seconds": 0.0008845159900374711
+    },
+    {
+      "path": "/_test/reset",
+      "status": 204,
+      "seconds": 0.06455472800007556
+    },
+    {
+      "path": "/auth/login",
+      "status": 200,
+      "seconds": 0.03148887600400485
+    },
+    {
+      "path": "/restaurants/r/replans",
+      "status": 201,
+      "seconds": 0.0007856339943828061
+    },
+    {
+      "path": "/_test/reset",
+      "status": 204,
+      "seconds": 0.06243034001090564
+    },
+    {
+      "path": "/auth/login",
+      "status": 200,
+      "seconds": 0.03135999199002981
+    },
+    {
+      "path": "/restaurants/r/replans",
+      "status": 201,
+      "seconds": 0.0008287620003102347
+    },
+    {
+      "path": "/_test/reset",
+      "status": 204,
+      "seconds": 0.06290182899101637
+    },
+    {
+      "path": "/auth/login",
+      "status": 200,
+      "seconds": 0.03388365500723012
+    },
+    {
+      "path": "/restaurants/r/replans",
+      "status": 201,
+      "seconds": 0.0008533879881724715
+    },
+    {
+      "path": "/_test/reset",
+      "status": 204,
+      "seconds": 0.06478915999468882
+    },
+    {
+      "path": "/auth/login",
+      "status": 200,
+      "seconds": 0.032447353994939476
+    },
+    {
+      "path": "/restaurants/r/replans",
+      "status": 201,
+      "seconds": 0.0008485970029141754
+    },
+    {
+      "path": "/_test/reset",
+      "status": 204,
+      "seconds": 0.06361858500167727
+    },
+    {
+      "path": "/auth/login",
+      "status": 200,
+      "seconds": 0.0316455520078307
+    },
+    {
+      "path": "/restaurants/r/replans",
+      "status": 201,
+      "seconds": 0.0007467980030924082
+    },
+    {
+      "path": "/_test/reset",
+      "status": 204,
+      "seconds": 0.06204206599795725
+    },
+    {
+      "path": "/auth/login",
+      "status": 200,
+      "seconds": 0.03117793900310062
+    },
+    {
+      "path": "/restaurants/r/replans",
+      "status": 201,
+      "seconds": 0.0007054210000205785
+    },
+    {
+      "path": "/_test/reset",
+      "status": 204,
+      "seconds": 0.06264885400014464
+    },
+    {
+      "path": "/auth/login",
+      "status": 200,
+      "seconds": 0.03127423599653412
+    },
+    {
+      "path": "/restaurants/r/replans",
+      "status": 201,
+      "seconds": 0.0006797530077164993
+    },
+    {
+      "path": "/_test/reset",
+      "status": 204,
+      "seconds": 0.06263989600120112
+    },
+    {
+      "path": "/auth/login",
+      "status": 200,
+      "seconds": 0.0319032780098496
+    },
+    {
+      "path": "/restaurants/r/replans",
+      "status": 409,
+      "seconds": 0.0007500490028178319
+    },
+    {
+      "path": "/_test/reset",
+      "status": 204,
+      "seconds": 0.06243246600206476
+    },
+    {
+      "path": "/auth/login",
+      "status": 200,
+      "seconds": 0.03147474999423139
+    },
+    {
+      "path": "/restaurants/r/replans",
+      "status": 409,
+      "seconds": 0.0006484170007752255
+    },
+    {
+      "path": "/_test/reset",
+      "status": 204,
+      "seconds": 0.06228041400026996
+    },
+    {
+      "path": "/auth/login",
+      "status": 200,
+      "seconds": 0.03126481900108047
+    },
+    {
+      "path": "/restaurants/r/replans",
+      "status": 201,
+      "seconds": 0.000726546990335919
+    },
+    {
+      "path": "/_test/reset",
+      "status": 204,
+      "seconds": 0.06221882700629067
+    },
+    {
+      "path": "/auth/login",
+      "status": 200,
+      "seconds": 0.0311924400011776
+    },
+    {
+      "path": "/reservations",
+      "status": 201,
+      "seconds": 0.0007345479971263558
+    },
+    {
+      "path": "/restaurants/r/policies",
+      "status": 201,
+      "seconds": 0.00048732300638221204
+    },
+    {
+      "path": "/reservations",
+      "status": 201,
+      "seconds": 0.0005315339949447662
+    },
+    {
+      "path": "/restaurants/r/replans",
+      "status": 201,
+      "seconds": 0.0005156999977771193
+    },
+    {
+      "path": "/restaurants/r/replans/plan_914e55e5b9a4dc56ac99018e18ba1f2e/apply",
+      "status": 201,
+      "seconds": 0.0005309929983923212
+    },
+    {
+      "path": "/_test/reset",
+      "status": 204,
+      "seconds": 0.06228058099804912
+    },
+    {
+      "path": "/auth/login",
+      "status": 200,
+      "seconds": 0.03129523800453171
+    },
+    {
+      "path": "/reservations",
+      "status": 201,
+      "seconds": 0.0006705429987050593
+    },
+    {
+      "path": "/restaurants/r/replans",
+      "status": 201,
+      "seconds": 0.0005437430081656203
+    },
+    {
+      "path": "/restaurants/r/replans/plan_59451d603d2698390724547510307eea/apply",
+      "status": 201,
+      "seconds": 0.00043623600504361093
+    },
+    {
+      "path": "/restaurants/r/replans",
+      "status": 201,
+      "seconds": 0.0005804129905300215
+    },
+    {
+      "path": "/restaurants/r/replans/plan_ba3d0537d7b279d5025a913b0b77a9d1/apply",
+      "status": 201,
+      "seconds": 0.0005084500007797033
+    },
+    {
+      "path": "/_test/reset",
+      "status": 204,
+      "seconds": 0.06241367199982051
+    },
+    {
+      "path": "/auth/login",
+      "status": 200,
+      "seconds": 0.03146433200163301
+    },
+    {
+      "path": "/reservations",
+      "status": 201,
+      "seconds": 0.0006775020010536537
+    },
+    {
+      "path": "/restaurants/r/replans",
+      "status": 201,
+      "seconds": 0.0005074079963378608
+    },
+    {
+      "path": "/restaurants/r/replans/plan_f699018d1fd2569d80d022a120b11458/apply",
+      "status": 201,
+      "seconds": 0
+    },
+    {
+      "path": "/restaurants/r/replans/plan_f699018d1fd2569d80d022a120b11458/apply",
+      "status": 409,
+      "seconds": 0
+    },
+    {
+      "path": "/restaurants/r/replans/plan_f699018d1fd2569d80d022a120b11458/apply",
+      "status": 409,
+      "seconds": 0
+    },
+    {
+      "path": "/restaurants/r/replans/plan_f699018d1fd2569d80d022a120b11458/apply",
+      "status": 409,
+      "seconds": 0
+    },
+    {
+      "path": "/restaurants/r/replans/plan_f699018d1fd2569d80d022a120b11458/apply",
+      "status": 409,
+      "seconds": 0
+    },
+    {
+      "path": "/restaurants/r/replans/plan_f699018d1fd2569d80d022a120b11458/apply",
+      "status": 409,
+      "seconds": 0
+    },
+    {
+      "path": "/restaurants/r/replans/plan_f699018d1fd2569d80d022a120b11458/apply",
+      "status": 409,
+      "seconds": 0
+    },
+    {
+      "path": "/restaurants/r/replans/plan_f699018d1fd2569d80d022a120b11458/apply",
+      "status": 409,
+      "seconds": 0
+    },
+    {
+      "path": "/restaurants/r/replans/plan_f699018d1fd2569d80d022a120b11458/apply",
+      "status": 409,
+      "seconds": 0
+    },
+    {
+      "path": "/restaurants/r/replans/plan_f699018d1fd2569d80d022a120b11458/apply",
+      "status": 409,
+      "seconds": 0
+    },
+    {
+      "path": "/restaurants/r/replans/plan_f699018d1fd2569d80d022a120b11458/apply",
+      "status": 409,
+      "seconds": 0
+    },
+    {
+      "path": "/restaurants/r/replans/plan_f699018d1fd2569d80d022a120b11458/apply",
+      "status": 409,
+      "seconds": 0
+    },
+    {
+      "path": "/restaurants/r/replans/plan_f699018d1fd2569d80d022a120b11458/apply",
+      "status": 409,
+      "seconds": 0
+    },
+    {
+      "path": "/restaurants/r/replans/plan_f699018d1fd2569d80d022a120b11458/apply",
+      "status": 409,
+      "seconds": 0
+    },
+    {
+      "path": "/restaurants/r/replans/plan_f699018d1fd2569d80d022a120b11458/apply",
+      "status": 409,
+      "seconds": 0
+    },
+    {
+      "path": "/restaurants/r/replans/plan_f699018d1fd2569d80d022a120b11458/apply",
+      "status": 409,
+      "seconds": 0
+    },
+    {
+      "path": "/restaurants/r/replans/plan_f699018d1fd2569d80d022a120b11458/apply",
+      "status": 409,
+      "seconds": 0
+    },
+    {
+      "path": "/restaurants/r/replans/plan_f699018d1fd2569d80d022a120b11458/apply",
+      "status": 409,
+      "seconds": 0
+    },
+    {
+      "path": "/restaurants/r/replans/plan_f699018d1fd2569d80d022a120b11458/apply",
+      "status": 409,
+      "seconds": 0
+    },
+    {
+      "path": "/restaurants/r/replans/plan_f699018d1fd2569d80d022a120b11458/apply",
+      "status": 409,
+      "seconds": 0
+    },
+    {
+      "path": "/restaurants/r/replans/plan_f699018d1fd2569d80d022a120b11458/apply",
+      "status": 409,
+      "seconds": 0
+    },
+    {
+      "path": "/restaurants/r/replans/plan_f699018d1fd2569d80d022a120b11458/apply",
+      "status": 409,
+      "seconds": 0
+    },
+    {
+      "path": "/restaurants/r/replans/plan_f699018d1fd2569d80d022a120b11458/apply",
+      "status": 409,
+      "seconds": 0
+    },
+    {
+      "path": "/restaurants/r/replans/plan_f699018d1fd2569d80d022a120b11458/apply",
+      "status": 409,
+      "seconds": 0
+    },
+    {
+      "path": "/restaurants/r/replans/plan_f699018d1fd2569d80d022a120b11458/apply",
+      "status": 409,
+      "seconds": 0
+    },
+    {
+      "path": "/restaurants/r/replans/plan_f699018d1fd2569d80d022a120b11458/apply",
+      "status": 409,
+      "seconds": 0
+    },
+    {
+      "path": "/restaurants/r/replans/plan_f699018d1fd2569d80d022a120b11458/apply",
+      "status": 409,
+      "seconds": 0
+    },
+    {
+      "path": "/restaurants/r/replans/plan_f699018d1fd2569d80d022a120b11458/apply",
+      "status": 409,
+      "seconds": 0
+    },
+    {
+      "path": "/restaurants/r/replans/plan_f699018d1fd2569d80d022a120b11458/apply",
+      "status": 409,
+      "seconds": 0
+    },
+    {
+      "path": "/restaurants/r/replans/plan_f699018d1fd2569d80d022a120b11458/apply",
+      "status": 409,
+      "seconds": 0
+    },
+    {
+      "path": "/restaurants/r/replans/plan_f699018d1fd2569d80d022a120b11458/apply",
+      "status": 409,
+      "seconds": 0
+    },
+    {
+      "path": "/restaurants/r/replans/plan_f699018d1fd2569d80d022a120b11458/apply",
+      "status": 409,
+      "seconds": 0
+    },
+    {
+      "path": "/restaurants/r/replans/plan_f699018d1fd2569d80d022a120b11458/apply",
+      "status": 409,
+      "seconds": 0
+    },
+    {
+      "path": "/restaurants/r/replans/plan_f699018d1fd2569d80d022a120b11458/apply",
+      "status": 409,
+      "seconds": 0
+    },
+    {
+      "path": "/restaurants/r/replans/plan_f699018d1fd2569d80d022a120b11458/apply",
+      "status": 409,
+      "seconds": 0
+    },
+    {
+      "path": "/restaurants/r/replans/plan_f699018d1fd2569d80d022a120b11458/apply",
+      "status": 409,
+      "seconds": 0
+    },
+    {
+      "path": "/restaurants/r/replans/plan_f699018d1fd2569d80d022a120b11458/apply",
+      "status": 409,
+      "seconds": 0
+    },
+    {
+      "path": "/restaurants/r/replans/plan_f699018d1fd2569d80d022a120b11458/apply",
+      "status": 409,
+      "seconds": 0
+    },
+    {
+      "path": "/restaurants/r/replans/plan_f699018d1fd2569d80d022a120b11458/apply",
+      "status": 409,
+      "seconds": 0
+    },
+    {
+      "path": "/restaurants/r/replans/plan_f699018d1fd2569d80d022a120b11458/apply",
+      "status": 409,
+      "seconds": 0
+    },
+    {
+      "path": "/restaurants/r/replans/plan_f699018d1fd2569d80d022a120b11458/apply",
+      "status": 409,
+      "seconds": 0
+    },
+    {
+      "path": "/restaurants/r/replans/plan_f699018d1fd2569d80d022a120b11458/apply",
+      "status": 409,
+      "seconds": 0
+    },
+    {
+      "path": "/restaurants/r/replans/plan_f699018d1fd2569d80d022a120b11458/apply",
+      "status": 409,
+      "seconds": 0
+    },
+    {
+      "path": "/restaurants/r/replans/plan_f699018d1fd2569d80d022a120b11458/apply",
+      "status": 409,
+      "seconds": 0
+    },
+    {
+      "path": "/restaurants/r/replans/plan_f699018d1fd2569d80d022a120b11458/apply",
+      "status": 409,
+      "seconds": 0
+    },
+    {
+      "path": "/restaurants/r/replans/plan_f699018d1fd2569d80d022a120b11458/apply",
+      "status": 409,
+      "seconds": 0
+    },
+    {
+      "path": "/restaurants/r/replans/plan_f699018d1fd2569d80d022a120b11458/apply",
+      "status": 409,
+      "seconds": 0
+    },
+    {
+      "path": "/restaurants/r/replans/plan_f699018d1fd2569d80d022a120b11458/apply",
+      "status": 409,
+      "seconds": 0
+    },
+    {
+      "path": "/restaurants/r/replans/plan_f699018d1fd2569d80d022a120b11458/apply",
+      "status": 409,
+      "seconds": 0
+    },
+    {
+      "path": "/restaurants/r/replans/plan_f699018d1fd2569d80d022a120b11458/apply",
+      "status": 409,
+      "seconds": 0
+    },
+    {
+      "path": "/_test/export",
+      "status": 200,
+      "seconds": 0.0009005579922813922
+    },
+    {
+      "path": "/reservations",
+      "status": 409,
+      "seconds": 0.0005352010048227385
+    },
+    {
+      "path": "/availability",
+      "status": 200,
+      "seconds": 0.001372381011606194
+    },
+    {
+      "path": "/_test/reset",
+      "status": 204,
+      "seconds": 0.06475340700126253
+    },
+    {
+      "path": "/auth/login",
+      "status": 200,
+      "seconds": 0.034175715991295874
+    },
+    {
+      "path": "/reservations",
+      "status": 201,
+      "seconds": 0.0008358880004379898
+    },
+    {
+      "path": "/series",
+      "status": 201,
+      "seconds": 0.0007302140002138913
+    },
+    {
+      "path": "/_test/export",
+      "status": 200,
+      "seconds": 0.0008953499927883968
+    },
+    {
+      "path": "/series/series_6adf2c364e5acb76b884b6ae93d549c7/amend",
+      "status": 201,
+      "seconds": 0.050633574996027164
+    },
+    {
+      "path": "/_test/export",
+      "status": 200,
+      "seconds": 0.002359986989176832
+    },
+    {
+      "path": "/reservations/1B33EC402D",
+      "status": 409,
+      "seconds": 0.0009159759938484058
+    },
+    {
+      "path": "/series/series_6adf2c364e5acb76b884b6ae93d549c7/amend",
+      "status": 409,
+      "seconds": 0.0006496260029962286
+    },
+    {
+      "path": "/series/series_6adf2c364e5acb76b884b6ae93d549c7/amend",
+      "status": 200,
+      "seconds": 0.0006867110059829429
+    },
+    {
+      "path": "/_test/reset",
+      "status": 204,
+      "seconds": 0.07154451499809511
+    },
+    {
+      "path": "/auth/login",
+      "status": 200,
+      "seconds": 0.031976697995560244
+    },
+    {
+      "path": "/reservations",
+      "status": 201,
+      "seconds": 0.0009109340026043355
+    },
+    {
+      "path": "/series",
+      "status": 201,
+      "seconds": 0.000946936008404009
+    },
+    {
+      "path": "/restaurants/r/replans",
+      "status": 201,
+      "seconds": 0.000794592997408472
+    },
+    {
+      "path": "/_test/export",
+      "status": 200,
+      "seconds": 0.0014832629967713729
+    },
+    {
+      "path": "/restaurants/r/replans/plan_6193f516e397942be929af98a87c9972/apply",
+      "status": 201,
+      "seconds": 0.0006920869927853346
+    },
+    {
+      "path": "/_test/export",
+      "status": 200,
+      "seconds": 0.0015426000027218834
+    },
+    {
+      "path": "/series/series_59a933a6e95427e94d48f69787085a64/amend",
+      "status": 201,
+      "seconds": 0.0007771329983370379
+    },
+    {
+      "path": "/_test/export",
+      "status": 200,
+      "seconds": 0.0019468349928501993
+    }
+  ],
+  "max_seconds": 0.09264300799986813,
+  "fiveXX": 0,
+  "sample_count": 24
+}

@@ -1,0 +1,151 @@
+{
+  "work_items": [
+    "BUILD-S4",
+    "QA-S4-RUN"
+  ],
+  "candidate": "ac1eb4945a2adaeaaf8a62d0817bdbc6a021e566",
+  "starting_revision": "d0b3ba287222f11cc00f9d07b19ad631a077b6ed",
+  "responsible": "@frankzhu94/factory-reviewer",
+  "decision": "ACCEPTED",
+  "scope": "Stage4 integrated release all inherited Stage1\u20133 and Stage4 at this exact revision; QA evidence accepted independently within finite actual scope",
+  "clone": "/private/tmp/tablekeeper-review-s4-release-20261006T102629Z",
+  "workspace": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005",
+  "input_room_event": "c04f172e-9379-46d3-9160-ce2cfc1c50ed",
+  "input_receipt_event": "bc3bad8b-cb62-4bae-9e78-cf91c3ecfbc5",
+  "environment": {
+    "host": "macOS task orchestration",
+    "runtime": "actual packagedPython3.12 service; officialdf-harness-runner Chromium153.0.8010.12; internalnetwork;2CPU/2GiB each inspected; independent image hash inspection networknone",
+    "resource_claim": "configured caps/finite latency only, no peak usage measurement"
+  },
+  "official": {
+    "command": "/Users/frank/mygit/Tablekeeper/runs/harness-venv/bin/python -m harness run --track tablekeeper --repo /private/tmp/tablekeeper-review-s4-release-20261006T102629Z --stage 4 --mode isolated --out /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s4-release-20261006T102629Z/official",
+    "cwd": "/Users/frank/mygit/Tablekeeper/challenge",
+    "exit": 0,
+    "utc_start": "2026-10-06T10:26:36.959419+00:00",
+    "utc_end": "2026-10-06T10:27:26.837210+00:00",
+    "checks": {
+      "1": {
+        "collected": 120,
+        "passed": 120,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0,
+        "deselected": 0
+      },
+      "2": {
+        "collected": 25,
+        "passed": 25,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0,
+        "deselected": 0
+      },
+      "3": {
+        "collected": 7,
+        "passed": 7,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0,
+        "deselected": 0
+      },
+      "4": {
+        "collected": 6,
+        "passed": 6,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0,
+        "deselected": 0
+      }
+    },
+    "scope": "local shipped isolated harness, not external judging"
+  },
+  "independent": {
+    "reports": [
+      "browser-run/report.json",
+      "attempt2/api-run/report.json",
+      "attempt2/verify-run/report.json",
+      "supplement/prepare-run/report.json",
+      "supplement/verify-run/report.json"
+    ],
+    "focus_cases": 11,
+    "browser_groups": 6,
+    "api_scenario_groups": 7,
+    "native_stoppedsource_groups": 7,
+    "old3_prepare_groups": 1,
+    "old3_solver_counter_groups": 3,
+    "logged_helper_http": 279,
+    "fiveXX": 0,
+    "max_measured_helper_seconds": 0.09264300799986813,
+    "race_latency": "50 apply race request durations UNAVAILABLE; raw seconds0 placeholders excluded from latency claim. Status/body assertions actual.",
+    "adverse6_4_6_seconds": 0.0027318920037942007,
+    "utc_api_start": "2026-10-06T10:31:33.302701+00:00",
+    "utc_api_end": "2026-10-06T10:33:09.804577+00:00",
+    "precision_layer": "literal rational closure tail1e-28 and distinct offset/lowercase endpoints, exact historical response reuse; QA separately precise unknown-number receipt identity"
+  },
+  "closed_gaps": [
+    "Forced opposite seed/reference order all3moved optimum rankvector(3,4,5)",
+    "Real clock cutoff0 elapsed all-noop series201/no businessdelta vs editableindividualnoopPATCH409 and realseries409",
+    "Actual stoppedacceptedStage3 anchorrevision3 beforeadoption/editedanchor/cancelledsibling originaldates migration",
+    "Early occupancy/later nonoccupancy index precedence/stalebeforevalidation/new-policy-invalid no-op failedkeyreuse",
+    "Stopped native pending/applied/latest snapshots originalcreate/adoption/apply receipts and4corruptions422 fullrollback"
+  ],
+  "browser_evidence": {
+    "actual_sources": [
+      1,
+      2,
+      3
+    ],
+    "source_setup": "Stable origin shell with routing to actual accepted source images and switch only between requests after real export/import. Auth/form/method/body/key/caller retained; no reload/login/formreset; original response shapes asserted.",
+    "label_clarification": "Reused inherited upgrade helper prints Stage1 label for all three groups; code dispatch source and field-presence assertions identify actual1/2/3. No extra coverage inferred from label.",
+    "visual": "375px screenshot inspected currentCorner lookup humanlabels/actions/readable/nonoverflow; originalAlcove receipt distinct; no new fullDesigner gate claimed",
+    "focus": "Current submit/retry retained; duplicateEnterSpace pending oneactualPOST; held409/uncertainty,firstfreepair,usernewerfocus/newform scopedguards checked"
+  },
+  "qa_audit": {
+    "qa_manifest_artifacts": 119,
+    "all_digests_sizes_match": true,
+    "qa_record": "c969c0ffda726afb9658be479ea277e7e4b8efe86cc39de2f8bb4c79e92d5737",
+    "manifest": "c6d4f469fcf512059182cdd8501f4a3e37ce395b0b86e27247cbe2e0f8e2982e",
+    "failed_disposition_read": true
+  },
+  "failed_attempts": [
+    "Original API expected nonexistent cancellation_cutoff code; specified cutoff_passed returned correctly, driver1. Corrected isolated attempt2 passes; original logs preserved.",
+    "Subsequent missingprivatebundle copy failure follows APIclientfailure; retained; attempt2 complete actualsource-stop verification passes.",
+    "Initial read stage-4/replan.py absent exit1; actualrepairs.py inspected, no product failure."
+  ],
+  "packaging": {
+    "files": 23,
+    "match": true,
+    "static9unchanged": true,
+    "earlier_accepted_stage_trees_unchanged": true
+  },
+  "cleanup": "Own initial/attempt2/supplement containers and internal networks removed exit0. Images/clones/evidence retained; private snapshotmode600 no repository commit/no roomdump.",
+  "skill": "/Users/frank/.codex/skills/webapp-testing/SKILL.md",
+  "limitations": [
+    "Finite cases do not exhaust objectives/calendar/error policy permutations/concurrent interleavings/invalid snapshot crossproducts",
+    "Exact HTTP cutoff equality, forced reference/token collision, Unicodeheaders/longsessionelapsed/nativezoom/audio and continuousresourcepeak NOT_TESTED",
+    "6/4/6 pigeonhole adverse timing is one real bounded case, not every possible worst-shape latency guarantee",
+    "No new screens/newfullDesigner review required; inherited unchanged design and freshactualbrowser meaningfulcontrols only",
+    "Bootstrap/internal baseline conventions remain source-bounded; no retroactive nativehistory rewrite",
+    "CostUNAVAILABLE; originaloneactive3repairs1200turn43200stage249139overall1000seatturns300mlocalcumulative656587855/subscriptiononly/noAPIbilling/provisioning; existing clocks retained"
+  ],
+  "record_utc": "2026-10-06T10:34:41.236833+00:00",
+  "sources": {
+    "/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-1.md": "9460189eac83802ce158f16ee90989af728a489b32a6147e2dc8e320f383055f",
+    "/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-2.md": "b1aa1b4affad456ff26f208a378eb2f6884153fc6ef667ab37b888fcda96c5dc",
+    "/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-3.md": "36b7ff5294b3992a6fa2894e9b4f2350072912fe10ed212c1f9a8828be1f9abe",
+    "/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-4.md": "08d02b5a432d41d71f989ccb30585b3cad0977c9c1dd11145c97fb7ddd4946c4",
+    "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/ARCHITECTURE.md": "503dd98c09c443c7b8f8b9e85af1f01a552d19fde104dff58c6bbc66a7f944a4",
+    "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/WORKING.md": "b2366d407161662902fc20d76af324510b4b23556b9507c22017d563fce88f12",
+    "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/DESIGN.md": "677188d1b6f6da7f34a3fc810259970e013d153517a078b27cc0bb8716ba433f",
+    "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-arch-s4-20261006T094159Z/runnable-targets.txt": "2bc9cb9a8fe4ba6d8dc8b3cae8dce6896f04ddb6aa9c30a9ce5c15ae59a404a2"
+  },
+  "verdict_events": {
+    "BUILD-S4": "b621b20a-b654-40b3-8dab-ad2153a2c65d",
+    "QA-S4-RUN": "95ff26a6-23d0-4257-992c-eeb13d3538cd"
+  },
+  "board_versions": {
+    "BUILD-S4": 5,
+    "QA-S4-RUN": 5
+  },
+  "owner_sync_pending_at_publication": true
+}

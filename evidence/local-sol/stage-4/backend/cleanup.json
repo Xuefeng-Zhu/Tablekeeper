@@ -1,0 +1,33 @@
+[
+  {
+    "argv": [
+      "docker",
+      "rm",
+      "-f",
+      "backend-s4-s1-0956",
+      "backend-s4-s2-0956",
+      "backend-s4-s3-0956",
+      "backend-s4-s4a-1001",
+      "backend-s4-s4b-1001",
+      "backend-s4-s4c-1003"
+    ],
+    "start_utc": "2026-10-06T10:04:27.716777+00:00",
+    "end_utc": "2026-10-06T10:04:28.108642+00:00",
+    "exit": 0,
+    "stdout": "backend-s4-s1-0956\nbackend-s4-s2-0956\nbackend-s4-s3-0956\nbackend-s4-s4a-1001\nbackend-s4-s4b-1001\nbackend-s4-s4c-1003",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "network",
+      "rm",
+      "backend-s4-0956"
+    ],
+    "start_utc": "2026-10-06T10:04:28.108674+00:00",
+    "end_utc": "2026-10-06T10:04:28.234613+00:00",
+    "exit": 0,
+    "stdout": "backend-s4-0956",
+    "stderr": ""
+  }
+]

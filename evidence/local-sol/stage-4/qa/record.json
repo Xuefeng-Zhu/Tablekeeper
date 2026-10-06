@@ -1,0 +1,64 @@
+{
+  "work_item": "QA-S4-RUN",
+  "state": "REVIEW",
+  "candidate": "ac1eb4945a2adaeaaf8a62d0817bdbc6a021e566",
+  "starting_revision": "ac1eb4945a2adaeaaf8a62d0817bdbc6a021e566",
+  "responsible": "@frankzhu94/factory-qa",
+  "room_dispatch": "313c11ec-b960-4945-93ca-7521c71be9f5",
+  "receipt": "df4594e7-58cc-48b7-a399-f2a6ba6baf0d",
+  "workspace": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005",
+  "clone": "/private/tmp/tablekeeper-qa-s4-ac1eb4-20261006T1012Z",
+  "host": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "container_python": "3.12",
+  "browser": "153.0.8010.12",
+  "api_case_count": 20,
+  "logged_http_requests": 1046,
+  "fiveXX": 0,
+  "max_logged_request_seconds": 0.12192635099927429,
+  "api_start_utc": "2026-10-06T10:13:55.161636+00:00",
+  "api_end_utc": "2026-10-06T10:21:36.192130+00:00",
+  "api_elapsed_seconds": 461.030494,
+  "browser_distinct_groups": 6,
+  "browser_supplemental_groups": 1,
+  "actual_50client_classes": 3,
+  "official": {
+    "1": {
+      "passed": 120,
+      "skipped": 0
+    },
+    "2": {
+      "passed": 25,
+      "skipped": 0
+    },
+    "3": {
+      "passed": 7,
+      "skipped": 0
+    },
+    "4": {
+      "passed": 6,
+      "skipped": 0
+    }
+  },
+  "successful_run_files": [
+    "api-results-attempt2.json",
+    "extended-results-attempt2.json",
+    "import-results-attempt2.json",
+    "extra-results-attempt3.json",
+    "relationships-results-attempt2.json",
+    "solver-literal-results.json",
+    "history-portable-results-attempt2.json"
+  ],
+  "defects": "No material product defect established by these finite checks. Failed QA attempts retained and diagnosed; no repair.",
+  "limitations": [
+    "Past-cutoff all-noop series and exact HTTP cutoff equality NOT_TESTED; past adoption correctly refuses cutoff, no synthetic substitute.",
+    "Forced opposite-creation reference ordering and exhaustive objective fixtures/permutations NOT_TESTED; sorted actual references and independent Cartesian oracle observed.",
+    "All policy/cancellation/replay permutations, every error-precedence combination, forced token/reference collisions and elapsed-session expiration NOT_TESTED.",
+    "Native zoom, assistive audio, comprehensive new rendered Designer gate, continuous resource/peak profiling and exhaustive concurrent interleavings NOT_TESTED.",
+    "Fresh exhaustive DST/calendar suites not rerun independently for Stage4; inherited official120/25/7 controls passed.",
+    "Browser first pair screenshot filenames reused for old2/old3; distinct-source supplemental actual upgrade run preserved separately; initial artifacts retained.",
+    "State-contaminated extra2/relationships1 and all initial bad QA oracle/transport attempts excluded from accepted successful-run coverage; retained with explicit dispositions."
+  ],
+  "monetary_cost": "UNAVAILABLE",
+  "cleanup": "Own6containers/internalnetwork/4image tags removed; clone and all evidence retained.",
+  "final_utc": "2026-10-06T10:22:57.024646+00:00"
+}

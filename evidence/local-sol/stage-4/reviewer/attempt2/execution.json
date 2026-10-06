@@ -1,0 +1,269 @@
+[
+  {
+    "argv": [
+      "docker",
+      "network",
+      "create",
+      "--internal",
+      "review-s4-net-1026b"
+    ],
+    "start_utc": "2026-10-06T10:31:32.302381+00:00",
+    "end_utc": "2026-10-06T10:31:32.616503+00:00",
+    "exit": 0,
+    "stdout": "0a30a3728b83d470e09b255ea1dc7746377a0a6f4fd70037a83275ab1ef8d56d\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "run",
+      "-d",
+      "--name",
+      "review-s4-app",
+      "--network",
+      "review-s4-net-1026b",
+      "--cpus",
+      "2",
+      "--memory",
+      "2g",
+      "tablekeeper-review-s4-4:1026"
+    ],
+    "start_utc": "2026-10-06T10:31:32.616991+00:00",
+    "end_utc": "2026-10-06T10:31:32.834970+00:00",
+    "exit": 0,
+    "stdout": "66243dfed465be1bb5fb0f6bb34f9b6035644f4bfaddcd3aae66debddef0791b\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "run",
+      "-d",
+      "--name",
+      "review-s4-dest",
+      "--network",
+      "review-s4-net-1026b",
+      "--cpus",
+      "2",
+      "--memory",
+      "2g",
+      "tablekeeper-review-s4-4:1026"
+    ],
+    "start_utc": "2026-10-06T10:31:32.835891+00:00",
+    "end_utc": "2026-10-06T10:31:33.000660+00:00",
+    "exit": 0,
+    "stdout": "06a21309a8f9b50a0e1f03c18dcc0ee638c28726869328991b179388c64d8ec8\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "create",
+      "--name",
+      "review-s4-api",
+      "--network",
+      "review-s4-net-1026b",
+      "--cpus",
+      "2",
+      "--memory",
+      "2g",
+      "--entrypoint",
+      "python",
+      "df-harness-runner",
+      "/review.py"
+    ],
+    "start_utc": "2026-10-06T10:31:33.001603+00:00",
+    "end_utc": "2026-10-06T10:31:33.106028+00:00",
+    "exit": 0,
+    "stdout": "332d319b4aa4a6132e45c2bbde2e31ebe589513a1a993e185001e53257959ee6\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "cp",
+      "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s4-release-20261006T102629Z/attempt2/api.py",
+      "review-s4-api:/review.py"
+    ],
+    "start_utc": "2026-10-06T10:31:33.106417+00:00",
+    "end_utc": "2026-10-06T10:31:33.140798+00:00",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "start",
+      "-a",
+      "review-s4-api"
+    ],
+    "start_utc": "2026-10-06T10:31:33.141304+00:00",
+    "end_utc": "2026-10-06T10:32:00.610854+00:00",
+    "exit": 0,
+    "stdout": "REAL_CLOCK_BOUNDARY_WAIT 23.923\n{\n  \"groups\": [\n    \"Forced opposite seed/reference order literal rank vector(3,4,5), all3 moved, preview/apply/history/stale/original replay\",\n    \"24 actual API independent Cartesian samples + full stored interval fixed-booking conflict outside closure\",\n    \"Accepted policy0 capacities preserve surplus choiceC while currentpolicy choosesB; unmoved policy1 exact\",\n    \"LowercaseRFC3339 exact rational tail adjacency/positive submicrosecond overlap and native exports\",\n    \"50 unique-key atomic apply, closurecreate/explain independent false rules, exact restaurantcounter2\",\n    \"REAL elapsed cutoff0 all-no-op series201/businessunchanged vs individualnoopPATCH409 and realseries409; replay200\",\n    \"Native3siblingsrepair/seriesamend prepared: immutable receipts histories, pending/applied/latest snapshots for stopped-source validation\"\n  ],\n  \"requests\": 180,\n  \"max_seconds\": 0.09264300799986813\n}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "cp",
+      "review-s4-api:/out",
+      "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s4-release-20261006T102629Z/attempt2/api-run"
+    ],
+    "start_utc": "2026-10-06T10:32:00.611735+00:00",
+    "end_utc": "2026-10-06T10:32:00.738001+00:00",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "inspect",
+      "review-s4-app",
+      "review-s4-dest",
+      "review-s4-api",
+      "--format",
+      "{{.Name}} image={{.Image}} cpu={{.HostConfig.NanoCpus}} memory={{.HostConfig.Memory}} start={{.State.StartedAt}} end={{.State.FinishedAt}} exit={{.State.ExitCode}}"
+    ],
+    "start_utc": "2026-10-06T10:32:00.738357+00:00",
+    "end_utc": "2026-10-06T10:32:00.764925+00:00",
+    "exit": 0,
+    "stdout": "/review-s4-app image=sha256:15a3df274643a11db0b1a774ee65c76180725790e946043f69eca3e8dc2dd793 cpu=2000000000 memory=2147483648 start=2026-10-06T10:31:32.726757979Z end=0001-01-01T00:00:00Z exit=0\n/review-s4-dest image=sha256:15a3df274643a11db0b1a774ee65c76180725790e946043f69eca3e8dc2dd793 cpu=2000000000 memory=2147483648 start=2026-10-06T10:31:32.922724146Z end=0001-01-01T00:00:00Z exit=0\n/review-s4-api image=sha256:da249723d954671d7e57ac5b3b55ced42a7f34430edf45116da52a4ea94963cd cpu=2000000000 memory=2147483648 start=2026-10-06T10:31:33.184484163Z end=2026-10-06T10:32:00.414048266Z exit=0\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "network",
+      "inspect",
+      "review-s4-net-1026b",
+      "--format",
+      "internal={{.Internal}}"
+    ],
+    "start_utc": "2026-10-06T10:32:00.765287+00:00",
+    "end_utc": "2026-10-06T10:32:00.786559+00:00",
+    "exit": 0,
+    "stdout": "internal=true\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "stop",
+      "--time",
+      "2",
+      "review-s4-app"
+    ],
+    "start_utc": "2026-10-06T10:32:00.786891+00:00",
+    "end_utc": "2026-10-06T10:32:02.949143+00:00",
+    "exit": 0,
+    "stdout": "Flag --time has been deprecated, use --timeout instead\nreview-s4-app\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "create",
+      "--name",
+      "review-s4-verify",
+      "--network",
+      "review-s4-net-1026b",
+      "--cpus",
+      "2",
+      "--memory",
+      "2g",
+      "--entrypoint",
+      "python",
+      "df-harness-runner",
+      "/verify.py"
+    ],
+    "start_utc": "2026-10-06T10:32:02.949563+00:00",
+    "end_utc": "2026-10-06T10:32:03.021782+00:00",
+    "exit": 0,
+    "stdout": "6d3530afcfa8c8f3d39a747b658a0817abbd12e46901d1881db4f71b6b1bc71a\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "cp",
+      "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s4-release-20261006T102629Z/attempt2/verify.py",
+      "review-s4-verify:/verify.py"
+    ],
+    "start_utc": "2026-10-06T10:32:03.022372+00:00",
+    "end_utc": "2026-10-06T10:32:03.047547+00:00",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "cp",
+      "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s4-release-20261006T102629Z/attempt2/api-run/private-bundle.json",
+      "review-s4-verify:/bundle.json"
+    ],
+    "start_utc": "2026-10-06T10:32:03.047943+00:00",
+    "end_utc": "2026-10-06T10:32:03.078009+00:00",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "start",
+      "-a",
+      "review-s4-verify"
+    ],
+    "start_utc": "2026-10-06T10:32:03.078354+00:00",
+    "end_utc": "2026-10-06T10:32:03.457015+00:00",
+    "exit": 0,
+    "stdout": "{\n  \"groups\": [\n    \"Stopped actual source pending native snapshot exact roundtrip/historicalcreate/adoption/application/replay\",\n    \"Stopped actual source applied native snapshot exact roundtrip/historicalcreate/adoption/application/replay\",\n    \"Stopped actual source latest native snapshot exact roundtrip/historicalcreate/adoption/application/replay\",\n    \"Invalid scheduled native import422 full exact rollback\",\n    \"Invalid closure native import422 full exact rollback\",\n    \"Invalid mutation native import422 full exact rollback\",\n    \"Invalid snapshot native import422 full exact rollback\"\n  ],\n  \"requests\": 28\n}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "cp",
+      "review-s4-verify:/out",
+      "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s4-release-20261006T102629Z/attempt2/verify-run"
+    ],
+    "start_utc": "2026-10-06T10:32:03.460149+00:00",
+    "end_utc": "2026-10-06T10:32:03.488702+00:00",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "rm",
+      "-f",
+      "review-s4-app",
+      "review-s4-dest",
+      "review-s4-api",
+      "review-s4-verify"
+    ],
+    "start_utc": "2026-10-06T10:32:03.489126+00:00",
+    "end_utc": "2026-10-06T10:32:03.620944+00:00",
+    "exit": 0,
+    "stdout": "review-s4-app\nreview-s4-dest\nreview-s4-api\nreview-s4-verify\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "network",
+      "rm",
+      "review-s4-net-1026b"
+    ],
+    "start_utc": "2026-10-06T10:32:03.621566+00:00",
+    "end_utc": "2026-10-06T10:32:03.708203+00:00",
+    "exit": 0,
+    "stdout": "review-s4-net-1026b\n",
+    "stderr": ""
+  }
+]

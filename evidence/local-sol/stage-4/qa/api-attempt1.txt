@@ -1,0 +1,59 @@
+{"case": "R-Cartesian-capacities-full-interval-objectives", "outcome": "FAIL", "detail": "'kind'", "exception": "KeyError", "utc_start": "2026-10-06T10:13:19.386349+00:00", "utc_end": "2026-10-06T10:13:19.605496+00:00", "candidate": "ac1eb4945a2adaeaaf8a62d0817bdbc6a021e566"}
+Traceback (most recent call last):
+  File "/evidence/helpers.py", line 36, in case
+    detail=fn(); result={'case':name,'outcome':'PASS','detail':detail}
+           ^^^^
+  File "/evidence/api.py", line 41, in exact_solver
+    if changed:assert hh[-1]['kind']=='reassigned' and hh[-1]['plan_id']==p['plan_id'] and hh[-1]['changes']==[{'field':'table_ids','from':old['table_ids'],'to':r['table_ids']}]
+                      ~~~~~~^^^^^^^^
+KeyError: 'kind'
+Traceback (most recent call last):
+  File "/evidence/helpers.py", line 36, in case
+    detail=fn(); result={'case':name,'outcome':'PASS','detail':detail}
+           ^^^^
+  File "/evidence/api.py", line 50, in closure_paths
+    unchanged(lambda:expect('POST','/reservations',409,'conflict',body=body('A','2030-01-07T19:00',1),token=t,key='bad'))
+  File "/evidence/helpers.py", line 57, in unchanged
+    before=export();fn();assert export()==before,'rejection mutated destination'
+                    ^^^^
+  File "/evidence/api.py", line 50, in <lambda>
+    unchanged(lambda:expect('POST','/reservations',409,'conflict',body=body('A','2030-01-07T19:00',1),token=t,key='bad'))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/evidence/helpers.py", line 30, in expect
+    if code: assert value['error']['code']==code, f'expected{code} observed'+value['error']['code']
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: expectedconflict observedtable_unavailable
+{"case": "C-all-write-closure-and-explanations", "outcome": "FAIL", "detail": "expectedconflict observedtable_unavailable", "exception": "AssertionError", "utc_start": "2026-10-06T10:13:19.605513+00:00", "utc_end": "2026-10-06T10:13:19.775529+00:00", "candidate": "ac1eb4945a2adaeaaf8a62d0817bdbc6a021e566"}
+Traceback (most recent call last):
+  File "/evidence/helpers.py", line 36, in case
+    detail=fn(); result={'case':name,'outcome':'PASS','detail':detail}
+           ^^^^
+  File "/evidence/api.py", line 63, in rational
+    expect('POST','/reservations',409 if closed else 201,'conflict' if closed else None,body=body('A','2030-01-07T19:00',1),token=t,key='tail')
+  File "/evidence/helpers.py", line 30, in expect
+    if code: assert value['error']['code']==code, f'expected{code} observed'+value['error']['code']
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: expectedconflict observedtable_unavailable
+{"case": "C-exact-rational-tail-half-open", "outcome": "FAIL", "detail": "expectedconflict observedtable_unavailable", "exception": "AssertionError", "utc_start": "2026-10-06T10:13:19.775547+00:00", "utc_end": "2026-10-06T10:13:19.939964+00:00", "candidate": "ac1eb4945a2adaeaaf8a62d0817bdbc6a021e566"}
+{"case": "R-100-concurrent-apply", "outcome": "PASS", "detail": "two previews same base; 50 different keys one apply49already; other preview stale;50samekey1mutation49exactreceipts; closure-only revision1", "utc_start": "2026-10-06T10:13:19.939985+00:00", "utc_end": "2026-10-06T10:13:20.330786+00:00", "candidate": "ac1eb4945a2adaeaaf8a62d0817bdbc6a021e566"}
+Traceback (most recent call last):
+  File "/evidence/helpers.py", line 36, in case
+    detail=fn(); result={'case':name,'outcome':'PASS','detail':detail}
+           ^^^^
+  File "/evidence/api.py", line 90, in series_changes
+    t=reset(f());r=create(t,'A','2020-01-06T19:00',1);s=adopt(t,r['reference']);rev=counter_state();assert amend(t,s,clock='19:00')==s and counter_state()==rev;unchanged(lambda:amend(t,s,clock='20:30',key='real',status=409,code='cutoff_passed'))
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/evidence/common.py", line 12, in adopt
+    def adopt(t,r,count=2,weeks=1,key='s',status=201,code=None,base=A):return expect('POST','/series',status,code,body={'anchor_reference':r,'count':count,'interval_weeks':weeks},token=t,key=key,base=base)
+                                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/evidence/helpers.py", line 29, in expect
+    assert got==status, f'{method} {path}: expected{status}/{code} observed{got}/'+str(value.get('error',{}).get('code') if isinstance(value,dict) else None)
+           ^^^^^^^^^^^
+AssertionError: POST /series: expected201/None observed409/cutoff_passed
+{"case": "S-original-dates-exclusions-noops", "outcome": "FAIL", "detail": "POST /series: expected201/None observed409/cutoff_passed", "exception": "AssertionError", "utc_start": "2026-10-06T10:13:20.330820+00:00", "utc_end": "2026-10-06T10:13:20.686767+00:00", "candidate": "ac1eb4945a2adaeaaf8a62d0817bdbc6a021e566"}
+{"case": "S-50-real-series-CAS", "outcome": "PASS", "detail": "50 independent keys matchingrevision exactlyone20149stale;seriesrevision2", "utc_start": "2026-10-06T10:13:20.686788+00:00", "utc_end": "2026-10-06T10:13:20.841482+00:00", "candidate": "ac1eb4945a2adaeaaf8a62d0817bdbc6a021e566"}
+Traceback (most recent call last):
+  File "/evidence/api.py", line 103, in <module>
+    assert all(x['outcome']=='PASS' for x in results)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

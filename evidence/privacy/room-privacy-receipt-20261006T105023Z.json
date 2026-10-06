@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "audited_at": "2026-10-06T10:51:34.074406+00:00",
+  "scope": "Genuine full BAND console snapshot after finite Stage4 acceptance; running idle supervisor, not final ended run or external judging.",
+  "source_basename": "Tablekeeper-Local-Sol-October-5 (3).json",
+  "sha256": "7e1a4fea5f38e201bc5418320557a57933bdc98998b2274aa0029bfcc3995526",
+  "bytes": 15045743,
+  "room_id": "4084182d-0b85-46d6-a137-f0bd7d44b498",
+  "exportedAt": "2026-10-06T10:50:23.264Z",
+  "console_scope": "full",
+  "messages": 10138,
+  "unique_message_ids": 10138,
+  "completeness": {
+    "previous_sha256": "9ed8c743811cbc010ab2a6370b8cb12bee199528062b1542288a51d04efc650d",
+    "prior_messages": 8743,
+    "prior_ids_retained": 8743,
+    "missing_prior_ids": 0,
+    "new_ids": 1395,
+    "changed_prior_messages": 5,
+    "changed_fields": {
+      "metadata": 5
+    },
+    "core_content_or_identity_changes": 0
+  },
+  "privacy": {
+    "strings_scanned": 129926,
+    "embedded_structured_payloads_decoded": 9623,
+    "strong_credentials_or_personal_shape_matches": 0,
+    "nonfixture_email_matches": 0,
+    "literal_auth_matches": 164,
+    "literal_auth_classification": "All values match fingerprints previously audited as synthetic fixture/source labels, expressions or placeholders; no values emitted.",
+    "credential_environment_assignments": 0,
+    "email_domains": {
+      "example.com": 66,
+      "local.invalid": 6,
+      "factory.local": 12,
+      "qa.test": 56,
+      "review.test": 14,
+      "factory.invalid": 12
+    },
+    "method": "Every string leaf and recursively decoded embedded JSON/Python literals scanned using retained credential/person-data-shape scanner; prior fingerprint classifications checked against published PASS audit. This finite scan is not a guarantee against every possible secret encoding."
+  },
+  "incomplete_first_attempt": {
+    "exportedAt": "2026-10-06T10:48:43.779Z",
+    "sha256": "ed86b9eedf935391a381f17326ab800e7962c6ccdf18289443f4a31eef26a332",
+    "messages": 5500,
+    "missing_previous_ids": 4638,
+    "publication_eligible": false,
+    "disposition": "First actual full-console download retained unchanged locally; never used as root room; second actual full-console download verified complete."
+  },
+  "unchanged_console_output": true
+}

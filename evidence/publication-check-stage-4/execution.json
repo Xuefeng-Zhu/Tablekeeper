@@ -1,0 +1,27 @@
+{
+  "started_at": "2026-10-06T10:49:37.130651+00:00",
+  "finished_at": "2026-10-06T10:50:31.363432+00:00",
+  "command": [
+    "/Users/frank/mygit/Tablekeeper/runs/harness-venv/bin/python",
+    "-m",
+    "harness",
+    "run",
+    "--track",
+    "tablekeeper",
+    "--repo",
+    "/Users/frank/mygit/Tablekeeper/runs/stage4-publication-check-20261006T104846Z-6e737429/accepted-code",
+    "--stage",
+    "4",
+    "--mode",
+    "isolated",
+    "--out",
+    "/Users/frank/mygit/Tablekeeper/runs/stage4-publication-check-20261006T104846Z-6e737429/official"
+  ],
+  "cwd": "/Users/frank/mygit/Tablekeeper/challenge",
+  "exit_code": 0,
+  "source_candidate": "ac1eb4945a2adaeaaf8a62d0817bdbc6a021e566",
+  "challenge_commit": "803560d2a678ace1414465c098eb0ab5380ffade",
+  "scope": "Fresh operator clean-container pinned supplied isolated checks through Stage4 against exact accepted clone; independent factory product acceptance retained separately",
+  "docker_resource_receipt_sha256": "acf82a4f73b7c4f368ccb42088e179656e46997b64027fb99b8677560d0ec1fc",
+  "candidate_snapshot_sha256": "1cedd7e75a9642e98f5406338cd632c89cf927e7f55e9c180fb80b1eb580d07c"
+}

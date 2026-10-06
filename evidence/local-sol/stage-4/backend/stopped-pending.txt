@@ -1,0 +1,1 @@
+{"work_item": "BUILD-S4", "candidate": "ac1eb4945a2adaeaaf8a62d0817bdbc6a021e566", "phase": "verify-pending", "start_utc": "2026-10-06T10:03:04.679152+00:00", "end_utc": "2026-10-06T10:03:04.829365+00:00", "result": "PASS", "private_snapshots": "ignored; values not printed"}

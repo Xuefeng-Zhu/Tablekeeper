@@ -1,0 +1,24 @@
+{"case": "R-adverse-6-4-6-and-limits", "outcome": "PASS", "detail": {"exact_6tables_4pairs_6considered_seconds": 0.002465514000505209, "independent_oracle": "six simultaneous nonempty disjoint sets over five available members infeasible", "10power6_possible_capacity_options": true, "adjacent_limits": "7tables/5pairs/7considered422"}, "utc_start": "2026-10-06T10:15:24.217095+00:00", "utc_end": "2026-10-06T10:15:24.907248+00:00", "candidate": "ac1eb4945a2adaeaaf8a62d0817bdbc6a021e566"}
+{"case": "S-nonoccupancy-before-occupancy-and-closure", "outcome": "PASS", "detail": "earlier occupancy loses later index nonoccupancy; closure second occurrence atomic rollback; failed receipt not consumed", "utc_start": "2026-10-06T10:15:24.907487+00:00", "utc_end": "2026-10-06T10:15:25.236920+00:00", "candidate": "ac1eb4945a2adaeaaf8a62d0817bdbc6a021e566"}
+Traceback (most recent call last):
+  File "/evidence/helpers_peer.py", line 36, in case
+    detail=fn(); result={'case':name,'outcome':'PASS','detail':detail}
+           ^^^^
+  File "/evidence/extended.py", line 38, in counters_matrix
+    p=preview(m,date='2031-01-07',table='D');apply(m,p);assert counter_state()==8
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/evidence/extended.py", line 5, in preview
+    def preview(m,table='A',date='2030-01-07',start='19:00',end='20:30',key='p',status=201,code=None,base=A):return expect('POST','/restaurants/R/replans',status,code,body={'table_id':table,'from':date+'T'+start+':00Z','to':date+'T'+end+':00Z'},token=m,key=key,base=base)
+                                                                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/evidence/helpers_peer.py", line 29, in expect
+    assert got==status, f'{method} {path}: expected{status}/{code} observed{got}/'+str(value.get('error',{}).get('code') if isinstance(value,dict) else None)
+           ^^^^^^^^^^^
+AssertionError: POST /restaurants/R/replans: expected201/None observed409/idempotency_key_reuse
+{"case": "R-public-counter-matrix", "outcome": "FAIL", "detail": "POST /restaurants/R/replans: expected201/None observed409/idempotency_key_reuse", "exception": "AssertionError", "utc_start": "2026-10-06T10:15:25.237093+00:00", "utc_end": "2026-10-06T10:15:25.418259+00:00", "candidate": "ac1eb4945a2adaeaaf8a62d0817bdbc6a021e566"}
+{"case": "R-cross-restaurant-and-scope", "outcome": "PASS", "detail": "otherrestaurant create not stale; wrongrestaurant/unknown404", "utc_start": "2026-10-06T10:15:25.418277+00:00", "utc_end": "2026-10-06T10:15:25.586598+00:00", "candidate": "ac1eb4945a2adaeaaf8a62d0817bdbc6a021e566"}
+NATIVE_PREPARED_REAL_SOURCE
+Traceback (most recent call last):
+  File "/evidence/extended.py", line 50, in <module>
+    Path('/evidence/extended-results.json').write_text(json.dumps({'candidate':REV,'results':results,'observations':observations},indent=2));assert all(x['outcome']=='PASS' for x in results)
+                                                                                                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
