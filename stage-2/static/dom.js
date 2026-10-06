@@ -13,7 +13,7 @@ export function field(label, id, attrs = {}) {
   return [el('div', {class:'field'}, el('label', {for:id}, label), input), input];
 }
 export function feedback(id, text, kind = 'error') {
-  return el('div', {...test(id), class:`feedback ${kind}`, role:kind === 'error' ? 'alert' : 'status'}, text);
+  return el('div', {id,...test(id), class:`feedback ${kind}`, role:kind === 'error' ? 'alert' : 'status'}, text);
 }
 export function labels(detail, ids) {
   return ids.map(id => detail.tables.find(table => table.id === id)?.label ?? id).join(' & ');

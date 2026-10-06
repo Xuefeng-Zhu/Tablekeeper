@@ -47,6 +47,7 @@ async def lookup_races(browser):
   if layer=='cancel':await expect(tid(page,'reservation-detail')).to_be_visible();await tid(page,'reservation-cancel-button').click()
   await held.wait();await tid(page,'lookup-reference-input').fill(two['reference']);await tid(page,'lookup-submit').click();await expect(tid(page,'reservation-detail')).to_contain_text('Evening House');release.set();await page.wait_for_timeout(150);await expect(tid(page,'reservation-detail')).to_contain_text('Evening House');await expect(tid(page,'reservation-status')).to_have_text('confirmed');await expect(tid(page,'reservation-cancel-button')).to_be_visible();await ctx.close()
 def luminance(hex):
+ if len(hex)==4:hex='#'+''.join(c*2 for c in hex[1:])
  vals=[int(hex[i:i+2],16)/255 for i in [1,3,5]];vals=[v/12.92 if v<=.04045 else ((v+.055)/1.055)**2.4 for v in vals];return sum(a*b for a,b in zip(vals,[.2126,.7152,.0722]))
 def ratio(a,b):
  x,y=sorted([luminance(a),luminance(b)]);return (y+.05)/(x+.05)
