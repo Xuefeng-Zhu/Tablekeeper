@@ -7,22 +7,41 @@ docker build -t tablekeeper-stage3 stage-3
 docker run --rm --cpus=2 --memory=2g -e PORT=8080 -p 8080:8080 tablekeeper-stage3
 ```
 
-The service binds 0.0.0.0, defaults to port 8080 and becomes healthy at
-GET /health. For a different port change both PORT and the port mapping.
-No external service, mounted data or runtime network access is required.
-All state is ephemeral in one process. Reset seeds it using POST /_test/reset.
-IANA timezone data is included at image build. The API includes authentication,
-availability, reservations, atomic batch moves, and private export/import.
+One process binds 0.0.0.0, default PORT8080. GET /health reports readiness.
+Change PORT and the published mapping together. State is ephemeral; no external
+service, database, runtime dependency download or outbound networking is needed.
+The image includes IANA timezone data and the accepted local Stage2 browser assets.
+GET /, /signup, /login and /lookup serve HTML; /static files are confined to their root.
 
-Exports contain password hashes and bearer tokens: keep them private.
-For local development, PORT=8080 python3 stage-3/server.py uses the same service.
-The HTTP owner suite runs with python3 tests/backend_stage2_inherited.py and python3 tests/backend_stage2_pairs.py.
+Stage3 adds dated manager policies, accepted terms/revisions, owner histories and
+decisions, and atomic recurring adoption. Policy publication and series adoption
+require Idempotency-Key, as do create and collective moves. Each transaction
+publishes reservations, histories, counters, exception flags and receipt together.
+Original receipts remain immutable across later changes and schema upgrades.
 
-Opening/closing boundaries falling inside a DST gap advance to the first valid
-minute; this boundary convention is unspecified by the inherited Stage 1 contract. Ordinary nonexistent
-booking starts are rejected, repeated starts choose the first occurrence, and
-durations always use absolute elapsed time.
+POST /_test/reset seeds fixtures. Private exports/imports use external format1,
+internal schema3; actual schema1/2 snapshots migrate credentials/tokens and live
+records while preserving original responses without backfilling new fields.
+Cancelled legacy records bootstrap created/cancelled history at the same stored
+created_at/revision1 because their earlier history is unavailable. Schema3 keeps
+actual histories and validates terms against their originating policy.
+Series snapshots carry private baseline revisions and a mutation ledger to validate
+portable revisions/exceptions; public series responses omit this internal metadata.
+Restaurant counters are internal portable transaction counters, with no new public API.
 
-Stage 3 adds declared two-table combinations and schema1-to-schema2 portable migration. Old successful receipts are returned without adding fields; current singleton records carry both table_id and table_ids. The server serves static/index.html at /, /signup, /login and /lookup and confines /static/ files to that asset root. All four browser routes and local ES modules/styles are packaged in this image. Search is public; booking and private lookup use the signed-in session. Unchanged retries retain the exact body and key, including historical singleton requests across an import. Browser credentials remain in session storage; no external assets are loaded. Owner browser checks run inside the official harness Chromium image on an internal Docker network (see tests/frontend_stage2_browser.py).
+Exports contain password hashes and bearer tokens. Keep them private and outside Git.
+Opening/closing boundaries in DST gaps advance to the first valid minute, an
+explicit convention for an underspecified boundary; booking gap starts are rejected,
+fold starts choose their first occurrence, and durations use absolute elapsed time.
 
-Stage3 adds dated manager policies, accepted terms/revisions, owner histories/decisions and atomic recurring adoption. POST policies and series require Idempotency-Key. Internal schema3 snapshots validate historical terms against their original policy; actual schema1/2 imports bootstrap revision1 and policy0 while retaining old receipts untouched. Cancelled legacy records bootstrap terminal history at created_at/revision1; missing historical amendments cannot be reconstructed. Restaurant counters are portable internal transaction counters; no new public counter API is exposed.
+Owner HTTP checks:
+
+```sh
+PYTHONDONTWRITEBYTECODE=1 python3 tests/backend_stage3_http.py
+PYTHONDONTWRITEBYTECODE=1 python3 tests/backend_stage3_inherited.py
+```
+
+The focused suite starts actual Stage1, Stage2 and two Stage3 services locally.
+BACKEND_TEST_URLS can supply those four URLs in order Stage3, Stage3, Stage1, Stage2.
+This is distinct from packaged offline and actual Chromium evidence retained in
+.evidence; owner checks do not substitute for independent release acceptance.

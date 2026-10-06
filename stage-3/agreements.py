@@ -18,8 +18,9 @@ def terms(policy):
 
 
 def selected(state, rid, date):
+    restaurant=find_restaurant(state,rid)
     eligible=[p for p in state['policies'][rid] if p['effective_from']<=date]
-    return terms(max(eligible,key=lambda p:(p['effective_from'],p['policy_version']))) if eligible else policy0(find_restaurant(state,rid))
+    return terms(max(eligible,key=lambda p:(p['effective_from'],p['policy_version']))) if eligible else policy0(restaurant)
 
 
 def view(state, rid, accepted):

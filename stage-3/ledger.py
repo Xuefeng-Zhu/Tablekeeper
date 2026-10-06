@@ -49,7 +49,7 @@ def deltas(state, changed, clock, adoption=None):
     for item in state['series']:
         refs={o['reference'] for o in item['occurrences']}
         if refs & (real|cancelled):
-            log={'revision':item['revision']+1,'changes':[{'reference':r['reference'],'revision':r['revision'],'event':'cancelled' if r['reference'] in cancelled else 'changed'} for r in changed if r['reference'] in refs and r['reference'] in real|cancelled]}
+            log={'revision':item['revision']+1,'changes':[{'reference':r['reference'],'revision':r['revision'],'event':'cancelled' if r['reference'] in cancelled else 'changed'} for r in changed if r['reference'] in refs and r['reference'] in (real | cancelled)]}
             item={**item,'revision':item['revision']+1,'mutation_log':item['mutation_log']+[log],'occurrences':[{**o,'exception':o['exception'] or o['reference'] in real} for o in item['occurrences']]}
         series.append(item)
     if adoption:

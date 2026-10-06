@@ -36,6 +36,12 @@ class Stage3Tests(HTTPTests):
     def adopt(self,ref,count=3,weeks=1,key='series'):
         return self.request('POST','/series',{'anchor_reference':ref,'count':count,'interval_weeks':weeks},self.token,key)
     def series(self,sid):return self.request('GET','/series/'+sid,token=self.token)
+    def test_availability_unknown_restaurant_and_valid_control(self):
+        self.error(self.request('GET','/availability?restaurant_id=missing&date=2030-01-07&party_size=1'),404,'not_found')
+        self.error(self.request('GET','/availability?restaurant_id=missing&date=2030-01-07&party_size=1&explain=true'),404,'not_found')
+        self.assertEqual(self.request('GET','/availability?restaurant_id=r&date=2030-01-07&party_size=1&explain=true')[0],200)
+        self.request('POST','/_test/reset',{'restaurants':[]})
+        self.error(self.request('GET','/availability?restaurant_id=r&date=2030-01-07&party_size=1'),404,'not_found')
     def test_policy_order_validation_receipts(self):
         dates=['2030-01-14','2030-01-07','2030-01-14','2029-12-31']
         for i,date in enumerate(dates):
@@ -184,13 +190,23 @@ class Stage3Tests(HTTPTests):
             if destination==2:body['table_ids']=['ignored-old-field']
             original=self.request('POST','/reservations',body,token,'legacy',destination=destination)[1]
             self.assertNotIn('revision',original)
+            companion=self.request('POST','/reservations',self.booking('B'),token,'companion',destination=destination)[1]
+            self.assertEqual(self.request('PATCH','/reservations/'+original['reference'],{'party_size':2},token,destination=destination)[0],200)
+            moves={'moves':[{'reference':original['reference'],'table_id':'B','restaurant_id':'ignored-move-field'},{'reference':companion['reference'],'table_id':'A'}]}
+            moved=self.request('POST','/reservation-moves',moves,token,'legacy-moves',destination=destination)[1]
+            self.assertEqual(self.request('POST','/reservations/'+original['reference']+'/cancel',{},token,destination=destination)[0],200)
+            precise_raw='{"restaurant_id":"r","table_id":"C","party_size":1,"starts_at_local":"2030-01-08T19:00","x":10000000000000000000000000001}'
+            precise=self.request('POST','/reservations',raw=precise_raw,token=token,key='legacy-precise',destination=destination)[1]
             exported=self.request('GET','/_test/export',destination=destination)[1]
             self.assertEqual(self.request('POST','/_test/import',exported,destination=1)[0],204)
             self.assertEqual(self.request('POST','/reservations',body,token,'legacy',destination=1),(200,original))
             self.assertEqual(self.request('POST','/auth/login',{'email':'a@b','password':'password1'},destination=1)[0],200)
             current=self.request('GET','/reservations/'+original['reference'],token=token,destination=1)[1]
-            self.assertEqual(current['revision'],1);self.assertEqual(current['accepted_terms']['policy_version'],0)
-            self.assertEqual(self.request('POST','/series',{'anchor_reference':original['reference'],'count':2,'interval_weeks':1},token,'legacyseries',destination=1)[0],201)
+            self.assertEqual(current['revision'],1);self.assertEqual(current['accepted_terms']['policy_version'],0);self.assertEqual(current['status'],'cancelled')
+            self.assertEqual(self.request('POST','/reservation-moves',moves,token,'legacy-moves',destination=1),(200,moved))
+            self.assertEqual(self.request('POST','/reservations',raw=precise_raw,token=token,key='legacy-precise',destination=1),(200,precise))
+            self.error(self.request('POST','/reservations',raw=precise_raw.replace('10000000000000000000000000001','10000000000000000000000000002'),token=token,key='legacy-precise',destination=1),409,'idempotency_key_reuse')
+            self.assertEqual(self.request('POST','/series',{'anchor_reference':companion['reference'],'count':2,'interval_weeks':1},token,'legacyseries',destination=1)[0],201)
             native=self.request('GET','/_test/export',destination=1)[1]
             self.assertEqual(self.request('POST','/_test/import',native,destination=1)[0],204)
 for name in vars(HTTPTests):
