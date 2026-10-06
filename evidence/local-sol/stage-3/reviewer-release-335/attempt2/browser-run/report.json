@@ -1,0 +1,1454 @@
+{
+  "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3",
+  "responsible": "@frankzhu94/factory-reviewer",
+  "start_utc": "2026-10-06T08:15:46.953104+00:00",
+  "end_utc": "2026-10-06T08:16:23.609910+00:00",
+  "browser": "153.0.8010.12",
+  "focus_cases": [
+    {
+      "name": "1280-False-conflict-current",
+      "viewport": [
+        1280,
+        900
+      ],
+      "pair": false,
+      "state": "conflict",
+      "control": null,
+      "before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 79
+      },
+      "pending": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 79
+      },
+      "control_before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 79
+      },
+      "after": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 116
+      },
+      "actual_server_status": [
+        409
+      ],
+      "outcome": "PASS recovery focus",
+      "utc": "2026-10-06T08:15:52.129107+00:00"
+    },
+    {
+      "name": "1280-False-uncertain-current",
+      "viewport": [
+        1280,
+        900
+      ],
+      "pair": false,
+      "state": "uncertain",
+      "control": null,
+      "before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 79
+      },
+      "pending": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 79
+      },
+      "control_before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 79
+      },
+      "after": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 116
+      },
+      "actual_server_status": [
+        201
+      ],
+      "outcome": "PASS recovery focus",
+      "utc": "2026-10-06T08:15:55.352108+00:00"
+    },
+    {
+      "name": "1280-True-conflict-current",
+      "viewport": [
+        1280,
+        900
+      ],
+      "pair": true,
+      "state": "conflict",
+      "control": null,
+      "before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 79
+      },
+      "pending": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 79
+      },
+      "control_before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 79
+      },
+      "after": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 140
+      },
+      "actual_server_status": [
+        409
+      ],
+      "outcome": "PASS recovery focus",
+      "utc": "2026-10-06T08:15:57.430340+00:00"
+    },
+    {
+      "name": "1280-True-uncertain-current",
+      "viewport": [
+        1280,
+        900
+      ],
+      "pair": true,
+      "state": "uncertain",
+      "control": null,
+      "before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 79
+      },
+      "pending": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 79
+      },
+      "control_before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 79
+      },
+      "after": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 140
+      },
+      "actual_server_status": [
+        201
+      ],
+      "outcome": "PASS recovery focus",
+      "utc": "2026-10-06T08:15:59.292951+00:00"
+    },
+    {
+      "name": "375-False-conflict-current",
+      "viewport": [
+        375,
+        812
+      ],
+      "pair": false,
+      "state": "conflict",
+      "control": null,
+      "before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5392
+      },
+      "pending": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5398
+      },
+      "control_before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5398
+      },
+      "after": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 4979
+      },
+      "actual_server_status": [
+        409
+      ],
+      "outcome": "PASS recovery focus",
+      "utc": "2026-10-06T08:16:00.922869+00:00"
+    },
+    {
+      "name": "375-False-uncertain-current",
+      "viewport": [
+        375,
+        812
+      ],
+      "pair": false,
+      "state": "uncertain",
+      "control": null,
+      "before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5392
+      },
+      "pending": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5398
+      },
+      "control_before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5398
+      },
+      "after": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5496
+      },
+      "actual_server_status": [
+        201
+      ],
+      "outcome": "PASS recovery focus",
+      "utc": "2026-10-06T08:16:02.673085+00:00"
+    },
+    {
+      "name": "375-True-conflict-current",
+      "viewport": [
+        375,
+        812
+      ],
+      "pair": true,
+      "state": "conflict",
+      "control": null,
+      "before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5392
+      },
+      "pending": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5398
+      },
+      "control_before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5398
+      },
+      "after": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 4979
+      },
+      "actual_server_status": [
+        409
+      ],
+      "outcome": "PASS recovery focus",
+      "utc": "2026-10-06T08:16:04.189009+00:00"
+    },
+    {
+      "name": "375-True-uncertain-current",
+      "viewport": [
+        375,
+        812
+      ],
+      "pair": true,
+      "state": "uncertain",
+      "control": null,
+      "before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5392
+      },
+      "pending": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5398
+      },
+      "control_before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5398
+      },
+      "after": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5496
+      },
+      "actual_server_status": [
+        201
+      ],
+      "outcome": "PASS recovery focus",
+      "utc": "2026-10-06T08:16:05.614229+00:00"
+    },
+    {
+      "name": "375-True-conflict-first-free-pair",
+      "viewport": [
+        375,
+        812
+      ],
+      "pair": true,
+      "state": "conflict",
+      "control": "first-free-pair",
+      "before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5392
+      },
+      "pending": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5398
+      },
+      "control_before": {
+        "tag": "BUTTON",
+        "testid": "slot-b+a-21:30",
+        "y": 5398
+      },
+      "after": {
+        "tag": "BUTTON",
+        "testid": "slot-b+a-21:30",
+        "y": 4880
+      },
+      "actual_server_status": [
+        409
+      ],
+      "outcome": "PASS guarded focus",
+      "utc": "2026-10-06T08:16:07.069845+00:00"
+    },
+    {
+      "name": "375-True-success-user-moved",
+      "viewport": [
+        375,
+        812
+      ],
+      "pair": true,
+      "state": "success",
+      "control": "user-moved",
+      "before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5392
+      },
+      "pending": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5398
+      },
+      "control_before": {
+        "tag": "INPUT",
+        "testid": "party-size-input",
+        "y": 285
+      },
+      "after": {
+        "tag": "INPUT",
+        "testid": "party-size-input",
+        "y": 285
+      },
+      "actual_server_status": [
+        201
+      ],
+      "outcome": "PASS guarded focus",
+      "utc": "2026-10-06T08:16:08.411488+00:00"
+    },
+    {
+      "name": "375-True-success-new-form",
+      "viewport": [
+        375,
+        812
+      ],
+      "pair": true,
+      "state": "success",
+      "control": "new-form",
+      "before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5392
+      },
+      "pending": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5398
+      },
+      "control_before": {
+        "tag": "INPUT",
+        "testid": "booking-party-size",
+        "y": 5392
+      },
+      "after": {
+        "tag": "INPUT",
+        "testid": "booking-party-size",
+        "y": 5392
+      },
+      "actual_server_status": [
+        201
+      ],
+      "outcome": "PASS guarded focus",
+      "utc": "2026-10-06T08:16:10.030853+00:00"
+    }
+  ],
+  "groups": [
+    "Inherited Enter-number focus phase observed; keyboard Tab reaches recoverysubmit PASS, not fieldfocus preservation",
+    "Browser late detail/error/finally Bauthority PASS",
+    "Browser lost success replay/exact retry/editrevert new identity PASS",
+    "Browser actual accepted Stage1 export/auth/form/bodykey/legacyreceipt/currentcancelled PASS",
+    "Browser actual accepted Stage1 export/auth/form/bodykey/legacyreceipt/currentcancelled PASS",
+    "S3 literal version ordering/immutable booking/history/canonical invalid-policy no-op/stale-before-invalid PASS",
+    "S3 amendedanchor3/originalreceipt1/selectedperdate/mixedrealnoopdedup/replay/nativehistoryseriesreceipt rollback PASS",
+    "S3 firstfailingindex atomic failed-key reuse/native numericprecision versus ordered array receipt PASS",
+    "S3 independent50CAS+50duplicateadoption/owner-hidden historydecision PASS"
+  ],
+  "api_requests": 207,
+  "api_statuses": {
+    "422": 5,
+    "200": 109,
+    "201": 22,
+    "204": 16,
+    "404": 2,
+    "409": 53
+  },
+  "max_api_seconds": 0.17830888400203548,
+  "api_observations": [
+    {
+      "path": "/_test/reset",
+      "status": 204,
+      "seconds": 0.0924804359965492
+    },
+    {
+      "path": "/auth/login",
+      "status": 200,
+      "seconds": 0.0779773730027955
+    },
+    {
+      "path": "/auth/login",
+      "status": 200,
+      "seconds": 0.04461852301028557
+    },
+    {
+      "path": "/reservations",
+      "status": 201,
+      "seconds": 0.04460185600328259
+    },
+    {
+      "path": "/_test/reset",
+      "status": 204,
+      "seconds": 0.07890779399895109
+    },
+    {
+      "path": "/auth/login",
+      "status": 200,
+      "seconds": 0.07808199999271892
+    },
+    {
+      "path": "/auth/login",
+      "status": 200,
+      "seconds": 0.042758307012263685
+    },
+    {
+      "path": "/reservations",
+      "status": 201,
+      "seconds": 0.04367235201061703
+    },
+    {
+      "path": "/_test/reset",
+      "status": 204,
+      "seconds": 0.07605436599988025
+    },
+    {
+      "path": "/auth/login",
+      "status": 200,
+      "seconds": 0.07765487200231291
+    },
+    {
+      "path": "/_test/reset",
+      "status": 204,
+      "seconds": 0.10958396599744447
+    },
+    {
+      "path": "/auth/login",
+      "status": 200,
+      "seconds": 0.08279356099956203
+    },
+    {
+      "path": "/_test/reset",
+      "status": 204,
+      "seconds": 0.08042442599253263
+    },
+    {
+      "path": "/auth/login",
+      "status": 200,
+      "seconds": 0.08344006400147919
+    },
+    {
+      "path": "/_test/reset",
+      "status": 204,
+      "seconds": 0.10200797599100042
+    },
+    {
+      "path": "/auth/login",
+      "status": 200,
+      "seconds": 0.07923900500463787
+    },
+    {
+      "path": "/reservations/C546097694/cancel",
+      "status": 200,
+      "seconds": 0.04163750998850446
+    },
+    {
+      "path": "/_test/export",
+      "status": 200,
+      "seconds": 0.0019517579930834472
+    },
+    {
+      "path": "/_test/import",
+      "status": 204,
+      "seconds": 0.009114205007790588
+    },
+    {
+      "path": "/_test/reset",
+      "status": 204,
+      "seconds": 0.08620032500766683
+    },
+    {
+      "path": "/auth/login",
+      "status": 200,
+      "seconds": 0.0792123370047193
+    },
+    {
+      "path": "/reservations/29FCFE9BB3/cancel",
+      "status": 200,
+      "seconds": 0.04404360400803853
+    },
+    {
+      "path": "/_test/export",
+      "status": 200,
+      "seconds": 0.0023493849876103923
+    },
+    {
+      "path": "/_test/import",
+      "status": 204,
+      "seconds": 0.01656040400848724
+    },
+    {
+      "path": "/_test/reset",
+      "status": 204,
+      "seconds": 0.17830888400203548
+    },
+    {
+      "path": "/auth/login",
+      "status": 200,
+      "seconds": 0.09824508499877993
+    },
+    {
+      "path": "/reservations",
+      "status": 201,
+      "seconds": 0.04685094900196418
+    },
+    {
+      "path": "/reservations/E89A52778E/history",
+      "status": 200,
+      "seconds": 0.043268642999464646
+    },
+    {
+      "path": "/restaurants/r/policies",
+      "status": 201,
+      "seconds": 0.042096055010915734
+    },
+    {
+      "path": "/restaurants/r/policies",
+      "status": 201,
+      "seconds": 0.04308239099918865
+    },
+    {
+      "path": "/restaurants/r/policies",
+      "status": 201,
+      "seconds": 0.04328643401095178
+    },
+    {
+      "path": "/restaurants/r/policies",
+      "status": 201,
+      "seconds": 0.04448202298954129
+    },
+    {
+      "path": "/availability",
+      "status": 200,
+      "seconds": 0.017982160003157333
+    },
+    {
+      "path": "/availability",
+      "status": 200,
+      "seconds": 0.01260730400099419
+    },
+    {
+      "path": "/availability",
+      "status": 200,
+      "seconds": 0.04283597398898564
+    },
+    {
+      "path": "/availability",
+      "status": 200,
+      "seconds": 0.0049098129966296256
+    },
+    {
+      "path": "/availability",
+      "status": 200,
+      "seconds": 0.0041974759951699525
+    },
+    {
+      "path": "/reservations/E89A52778E",
+      "status": 200,
+      "seconds": 0.042249680001987144
+    },
+    {
+      "path": "/reservations/E89A52778E/history",
+      "status": 200,
+      "seconds": 0.042966224005795084
+    },
+    {
+      "path": "/restaurants/r/policies",
+      "status": 201,
+      "seconds": 0.043864977997145616
+    },
+    {
+      "path": "/_test/export",
+      "status": 200,
+      "seconds": 0.007476114988094196
+    },
+    {
+      "path": "/reservations/E89A52778E",
+      "status": 200,
+      "seconds": 0.044387856003595516
+    },
+    {
+      "path": "/_test/export",
+      "status": 200,
+      "seconds": 0.007597782998345792
+    },
+    {
+      "path": "/reservations/E89A52778E",
+      "status": 422,
+      "seconds": 0.043471726996358484
+    },
+    {
+      "path": "/_test/export",
+      "status": 200,
+      "seconds": 0.006128984998213127
+    },
+    {
+      "path": "/reservations/E89A52778E",
+      "status": 409,
+      "seconds": 0.04390493700338993
+    },
+    {
+      "path": "/reservations",
+      "status": 200,
+      "seconds": 0.04283918200235348
+    },
+    {
+      "path": "/_test/reset",
+      "status": 204,
+      "seconds": 0.10366944200359285
+    },
+    {
+      "path": "/auth/login",
+      "status": 200,
+      "seconds": 0.11214335300610401
+    },
+    {
+      "path": "/reservations",
+      "status": 201,
+      "seconds": 0.05901891800749581
+    },
+    {
+      "path": "/reservations/8213DFBE29",
+      "status": 200,
+      "seconds": 0.04311397600395139
+    },
+    {
+      "path": "/reservations/8213DFBE29",
+      "status": 200,
+      "seconds": 0.04341876899707131
+    },
+    {
+      "path": "/reservations/8213DFBE29",
+      "status": 200,
+      "seconds": 0.04393485300533939
+    },
+    {
+      "path": "/reservations/8213DFBE29/history",
+      "status": 200,
+      "seconds": 0.003913891996489838
+    },
+    {
+      "path": "/restaurants/r/policies",
+      "status": 201,
+      "seconds": 0.04299622499092948
+    },
+    {
+      "path": "/series",
+      "status": 201,
+      "seconds": 0.004908187998807989
+    },
+    {
+      "path": "/reservations/8213DFBE29/history",
+      "status": 200,
+      "seconds": 0.0016393410041928291
+    },
+    {
+      "path": "/reservations",
+      "status": 200,
+      "seconds": 0.042366472000139765
+    },
+    {
+      "path": "/_test/export",
+      "status": 200,
+      "seconds": 0.003730265991180204
+    },
+    {
+      "path": "/reservation-moves",
+      "status": 201,
+      "seconds": 0.001661216010688804
+    },
+    {
+      "path": "/series/series_681ed9df923a2686f3e9b8321dd47263",
+      "status": 200,
+      "seconds": 0.000991129010799341
+    },
+    {
+      "path": "/_test/export",
+      "status": 200,
+      "seconds": 0.0031607639975845814
+    },
+    {
+      "path": "/_test/export",
+      "status": 200,
+      "seconds": 0.0019545079994713888
+    },
+    {
+      "path": "/reservation-moves",
+      "status": 201,
+      "seconds": 0.0012130889954278246
+    },
+    {
+      "path": "/_test/export",
+      "status": 200,
+      "seconds": 0.009963125005015172
+    },
+    {
+      "path": "/series",
+      "status": 200,
+      "seconds": 0.003026138001587242
+    },
+    {
+      "path": "/_test/export",
+      "status": 200,
+      "seconds": 0.002384884995990433
+    },
+    {
+      "path": "/reservation-moves",
+      "status": 409,
+      "seconds": 0.0430414330039639
+    },
+    {
+      "path": "/_test/export",
+      "status": 200,
+      "seconds": 0.0035335569991730154
+    },
+    {
+      "path": "/reservation-moves",
+      "status": 201,
+      "seconds": 0.0014355900057125837
+    },
+    {
+      "path": "/reservations/50DD20F192/cancel",
+      "status": 200,
+      "seconds": 0.04729840900108684
+    },
+    {
+      "path": "/_test/export",
+      "status": 200,
+      "seconds": 0.00274001200159546
+    },
+    {
+      "path": "/_test/import",
+      "status": 204,
+      "seconds": 0.034999523995793425
+    },
+    {
+      "path": "/_test/export",
+      "status": 200,
+      "seconds": 0.0031411380041390657
+    },
+    {
+      "path": "/series",
+      "status": 200,
+      "seconds": 0.0037226819986244664
+    },
+    {
+      "path": "/reservations",
+      "status": 200,
+      "seconds": 0.042162180005107075
+    },
+    {
+      "path": "/_test/import",
+      "status": 422,
+      "seconds": 0.04638748899742495
+    },
+    {
+      "path": "/_test/export",
+      "status": 200,
+      "seconds": 0.0024960520095191896
+    },
+    {
+      "path": "/_test/import",
+      "status": 422,
+      "seconds": 0.047002033999888226
+    },
+    {
+      "path": "/_test/export",
+      "status": 200,
+      "seconds": 0.003055845998460427
+    },
+    {
+      "path": "/_test/import",
+      "status": 422,
+      "seconds": 0.052218054988770746
+    },
+    {
+      "path": "/_test/export",
+      "status": 200,
+      "seconds": 0.006492736007203348
+    },
+    {
+      "path": "/_test/reset",
+      "status": 204,
+      "seconds": 0.09077484501176514
+    },
+    {
+      "path": "/auth/login",
+      "status": 200,
+      "seconds": 0.08105213700036984
+    },
+    {
+      "path": "/reservations",
+      "status": 201,
+      "seconds": 0.04964587799622677
+    },
+    {
+      "path": "/restaurants/r/policies",
+      "status": 201,
+      "seconds": 0.04343335200974252
+    },
+    {
+      "path": "/reservations",
+      "status": 201,
+      "seconds": 0.0426444740005536
+    },
+    {
+      "path": "/_test/export",
+      "status": 200,
+      "seconds": 0.0025741779973031953
+    },
+    {
+      "path": "/series",
+      "status": 422,
+      "seconds": 0.04292272499878891
+    },
+    {
+      "path": "/_test/export",
+      "status": 200,
+      "seconds": 0.002114050992531702
+    },
+    {
+      "path": "/restaurants/r/policies",
+      "status": 201,
+      "seconds": 0.04175163600302767
+    },
+    {
+      "path": "/reservations/EF404CE9ED/cancel",
+      "status": 200,
+      "seconds": 0.042385513996123336
+    },
+    {
+      "path": "/series",
+      "status": 201,
+      "seconds": 0.0016173399926628917
+    },
+    {
+      "path": "/_test/reset",
+      "status": 204,
+      "seconds": 0.07260210100503173
+    },
+    {
+      "path": "/auth/login",
+      "status": 200,
+      "seconds": 0.0783627089986112
+    },
+    {
+      "path": "/reservations",
+      "status": 201,
+      "seconds": 0.04506806698918808
+    },
+    {
+      "path": "/_test/export",
+      "status": 200,
+      "seconds": 0.0016304229939123616
+    },
+    {
+      "path": "/_test/import",
+      "status": 204,
+      "seconds": 0.00276897000730969
+    },
+    {
+      "path": "/reservations",
+      "status": 200,
+      "seconds": 0.04182242800015956
+    },
+    {
+      "path": "/reservations",
+      "status": 409,
+      "seconds": 0.04165076000208501
+    },
+    {
+      "path": "/reservations",
+      "status": 409,
+      "seconds": 0.042595848004566506
+    },
+    {
+      "path": "/_test/reset",
+      "status": 204,
+      "seconds": 0.07283093500882387
+    },
+    {
+      "path": "/auth/login",
+      "status": 200,
+      "seconds": 0.0777782479999587
+    },
+    {
+      "path": "/reservations",
+      "status": 201,
+      "seconds": 0.04335776800871827
+    },
+    {
+      "path": "/reservations/3E76CD244C",
+      "status": 409,
+      "seconds": 0.035607027006335557
+    },
+    {
+      "path": "/reservations/3E76CD244C",
+      "status": 409,
+      "seconds": 0.065273485990474
+    },
+    {
+      "path": "/reservations/3E76CD244C",
+      "status": 409,
+      "seconds": 0.06540515400411095
+    },
+    {
+      "path": "/reservations/3E76CD244C",
+      "status": 409,
+      "seconds": 0.06552823699894361
+    },
+    {
+      "path": "/reservations/3E76CD244C",
+      "status": 409,
+      "seconds": 0.06538236199412495
+    },
+    {
+      "path": "/reservations/3E76CD244C",
+      "status": 200,
+      "seconds": 0.0681169570016209
+    },
+    {
+      "path": "/reservations/3E76CD244C",
+      "status": 409,
+      "seconds": 0.06589128100313246
+    },
+    {
+      "path": "/reservations/3E76CD244C",
+      "status": 409,
+      "seconds": 0.06592328099941369
+    },
+    {
+      "path": "/reservations/3E76CD244C",
+      "status": 409,
+      "seconds": 0.06605553100234829
+    },
+    {
+      "path": "/reservations/3E76CD244C",
+      "status": 409,
+      "seconds": 0.06589944699953776
+    },
+    {
+      "path": "/reservations/3E76CD244C",
+      "status": 409,
+      "seconds": 0.06700353600899689
+    },
+    {
+      "path": "/reservations/3E76CD244C",
+      "status": 409,
+      "seconds": 0.06684478500392288
+    },
+    {
+      "path": "/reservations/3E76CD244C",
+      "status": 409,
+      "seconds": 0.06631411600392312
+    },
+    {
+      "path": "/reservations/3E76CD244C",
+      "status": 409,
+      "seconds": 0.0669913690071553
+    },
+    {
+      "path": "/reservations/3E76CD244C",
+      "status": 409,
+      "seconds": 0.0663702000019839
+    },
+    {
+      "path": "/reservations/3E76CD244C",
+      "status": 409,
+      "seconds": 0.06752528800279833
+    },
+    {
+      "path": "/reservations/3E76CD244C",
+      "status": 409,
+      "seconds": 0.06853341699752491
+    },
+    {
+      "path": "/reservations/3E76CD244C",
+      "status": 409,
+      "seconds": 0.06866120899212547
+    },
+    {
+      "path": "/reservations/3E76CD244C",
+      "status": 409,
+      "seconds": 0.0664345749974018
+    },
+    {
+      "path": "/reservations/3E76CD244C",
+      "status": 409,
+      "seconds": 0.06780603900551796
+    },
+    {
+      "path": "/reservations/3E76CD244C",
+      "status": 409,
+      "seconds": 0.07065805100137368
+    },
+    {
+      "path": "/reservations/3E76CD244C",
+      "status": 409,
+      "seconds": 0.06805237400112674
+    },
+    {
+      "path": "/reservations/3E76CD244C",
+      "status": 409,
+      "seconds": 0.06810362300893757
+    },
+    {
+      "path": "/reservations/3E76CD244C",
+      "status": 409,
+      "seconds": 0.06815045700932387
+    },
+    {
+      "path": "/reservations/3E76CD244C",
+      "status": 409,
+      "seconds": 0.06809033200261183
+    },
+    {
+      "path": "/reservations/3E76CD244C",
+      "status": 409,
+      "seconds": 0.06823033200635109
+    },
+    {
+      "path": "/reservations/3E76CD244C",
+      "status": 409,
+      "seconds": 0.06825995800318196
+    },
+    {
+      "path": "/reservations/3E76CD244C",
+      "status": 409,
+      "seconds": 0.06827908300329
+    },
+    {
+      "path": "/reservations/3E76CD244C",
+      "status": 409,
+      "seconds": 0.06842058400798123
+    },
+    {
+      "path": "/reservations/3E76CD244C",
+      "status": 409,
+      "seconds": 0.06881987700762693
+    },
+    {
+      "path": "/reservations/3E76CD244C",
+      "status": 409,
+      "seconds": 0.06959817100141663
+    },
+    {
+      "path": "/reservations/3E76CD244C",
+      "status": 409,
+      "seconds": 0.0697583799919812
+    },
+    {
+      "path": "/reservations/3E76CD244C",
+      "status": 409,
+      "seconds": 0.06997225699888077
+    },
+    {
+      "path": "/reservations/3E76CD244C",
+      "status": 409,
+      "seconds": 0.06987379799829796
+    },
+    {
+      "path": "/reservations/3E76CD244C",
+      "status": 409,
+      "seconds": 0.06988088099751621
+    },
+    {
+      "path": "/reservations/3E76CD244C",
+      "status": 409,
+      "seconds": 0.07006617399747483
+    },
+    {
+      "path": "/reservations/3E76CD244C",
+      "status": 409,
+      "seconds": 0.0708356770046521
+    },
+    {
+      "path": "/reservations/3E76CD244C",
+      "status": 409,
+      "seconds": 0.07148701300320681
+    },
+    {
+      "path": "/reservations/3E76CD244C",
+      "status": 409,
+      "seconds": 0.07155855500604957
+    },
+    {
+      "path": "/reservations/3E76CD244C",
+      "status": 409,
+      "seconds": 0.07152818000758998
+    },
+    {
+      "path": "/reservations/3E76CD244C",
+      "status": 409,
+      "seconds": 0.07208197400905192
+    },
+    {
+      "path": "/reservations/3E76CD244C",
+      "status": 409,
+      "seconds": 0.0722580569999991
+    },
+    {
+      "path": "/reservations/3E76CD244C",
+      "status": 409,
+      "seconds": 0.07222830700629856
+    },
+    {
+      "path": "/reservations/3E76CD244C",
+      "status": 409,
+      "seconds": 0.07405131599807646
+    },
+    {
+      "path": "/reservations/3E76CD244C",
+      "status": 409,
+      "seconds": 0.07432285801041871
+    },
+    {
+      "path": "/reservations/3E76CD244C",
+      "status": 409,
+      "seconds": 0.07445965000079013
+    },
+    {
+      "path": "/reservations/3E76CD244C",
+      "status": 409,
+      "seconds": 0.07480527699226514
+    },
+    {
+      "path": "/reservations/3E76CD244C",
+      "status": 409,
+      "seconds": 0.07490169399534352
+    },
+    {
+      "path": "/reservations/3E76CD244C",
+      "status": 409,
+      "seconds": 0.07508190300723072
+    },
+    {
+      "path": "/reservations/3E76CD244C",
+      "status": 409,
+      "seconds": 0.07513902900973335
+    },
+    {
+      "path": "/reservations/3E76CD244C",
+      "status": 200,
+      "seconds": 0.04269405700324569
+    },
+    {
+      "path": "/series",
+      "status": 201,
+      "seconds": 0.009025121995364316
+    },
+    {
+      "path": "/series",
+      "status": 200,
+      "seconds": 0.009199123000144027
+    },
+    {
+      "path": "/series",
+      "status": 200,
+      "seconds": 0.007655282999621704
+    },
+    {
+      "path": "/series",
+      "status": 200,
+      "seconds": 0.009229581002728082
+    },
+    {
+      "path": "/series",
+      "status": 200,
+      "seconds": 0.010591754005872644
+    },
+    {
+      "path": "/series",
+      "status": 200,
+      "seconds": 0.009073163993889466
+    },
+    {
+      "path": "/series",
+      "status": 200,
+      "seconds": 0.011883507992024533
+    },
+    {
+      "path": "/series",
+      "status": 200,
+      "seconds": 0.011864133994095027
+    },
+    {
+      "path": "/series",
+      "status": 200,
+      "seconds": 0.013175806001527235
+    },
+    {
+      "path": "/series",
+      "status": 200,
+      "seconds": 0.012572804000228643
+    },
+    {
+      "path": "/series",
+      "status": 200,
+      "seconds": 0.01177263300633058
+    },
+    {
+      "path": "/series",
+      "status": 200,
+      "seconds": 0.012653552999836393
+    },
+    {
+      "path": "/series",
+      "status": 200,
+      "seconds": 0.012548760991194285
+    },
+    {
+      "path": "/series",
+      "status": 200,
+      "seconds": 0.012259886003448628
+    },
+    {
+      "path": "/series",
+      "status": 200,
+      "seconds": 0.008007326003280468
+    },
+    {
+      "path": "/series",
+      "status": 200,
+      "seconds": 0.008155992996762507
+    },
+    {
+      "path": "/series",
+      "status": 200,
+      "seconds": 0.00830491099623032
+    },
+    {
+      "path": "/series",
+      "status": 200,
+      "seconds": 0.008477077994029969
+    },
+    {
+      "path": "/series",
+      "status": 200,
+      "seconds": 0.013773684011539444
+    },
+    {
+      "path": "/series",
+      "status": 200,
+      "seconds": 0.008819370996206999
+    },
+    {
+      "path": "/series",
+      "status": 200,
+      "seconds": 0.009026455009006895
+    },
+    {
+      "path": "/series",
+      "status": 200,
+      "seconds": 0.012839470990002155
+    },
+    {
+      "path": "/series",
+      "status": 200,
+      "seconds": 0.013012555995373987
+    },
+    {
+      "path": "/series",
+      "status": 200,
+      "seconds": 0.01376785000320524
+    },
+    {
+      "path": "/series",
+      "status": 200,
+      "seconds": 0.013982727003167383
+    },
+    {
+      "path": "/series",
+      "status": 200,
+      "seconds": 0.01380376699671615
+    },
+    {
+      "path": "/series",
+      "status": 200,
+      "seconds": 0.025936527003068477
+    },
+    {
+      "path": "/series",
+      "status": 200,
+      "seconds": 0.026603154998156242
+    },
+    {
+      "path": "/series",
+      "status": 200,
+      "seconds": 0.02876274799928069
+    },
+    {
+      "path": "/series",
+      "status": 200,
+      "seconds": 0.027743910002755
+    },
+    {
+      "path": "/series",
+      "status": 200,
+      "seconds": 0.027328866999596357
+    },
+    {
+      "path": "/series",
+      "status": 200,
+      "seconds": 0.023127641004975885
+    },
+    {
+      "path": "/series",
+      "status": 200,
+      "seconds": 0.023412683003698476
+    },
+    {
+      "path": "/series",
+      "status": 200,
+      "seconds": 0.023208890997921117
+    },
+    {
+      "path": "/series",
+      "status": 200,
+      "seconds": 0.022889888990903273
+    },
+    {
+      "path": "/series",
+      "status": 200,
+      "seconds": 0.02354922601080034
+    },
+    {
+      "path": "/series",
+      "status": 200,
+      "seconds": 0.022943931006011553
+    },
+    {
+      "path": "/series",
+      "status": 200,
+      "seconds": 0.02379618499253411
+    },
+    {
+      "path": "/series",
+      "status": 200,
+      "seconds": 0.023985977008123882
+    },
+    {
+      "path": "/series",
+      "status": 200,
+      "seconds": 0.023396350006805733
+    },
+    {
+      "path": "/series",
+      "status": 200,
+      "seconds": 0.024923689998104237
+    },
+    {
+      "path": "/series",
+      "status": 200,
+      "seconds": 0.023437933006789535
+    },
+    {
+      "path": "/series",
+      "status": 200,
+      "seconds": 0.024103186005959287
+    },
+    {
+      "path": "/series",
+      "status": 200,
+      "seconds": 0.024439146000077017
+    },
+    {
+      "path": "/series",
+      "status": 200,
+      "seconds": 0.02387347699550446
+    },
+    {
+      "path": "/series",
+      "status": 200,
+      "seconds": 0.023876642997493036
+    },
+    {
+      "path": "/series",
+      "status": 200,
+      "seconds": 0.02487810599268414
+    },
+    {
+      "path": "/series",
+      "status": 200,
+      "seconds": 0.024214436998590827
+    },
+    {
+      "path": "/series",
+      "status": 200,
+      "seconds": 0.0240378110029269
+    },
+    {
+      "path": "/series",
+      "status": 200,
+      "seconds": 0.024768189003225416
+    },
+    {
+      "path": "/reservations/3E76CD244C/history",
+      "status": 404,
+      "seconds": 0.042491722997510806
+    },
+    {
+      "path": "/reservations/3E76CD244C/decision",
+      "status": 404,
+      "seconds": 0.0417390110087581
+    }
+  ],
+  "result": "PASS finite independent scopes",
+  "tokens_logged": false
+}

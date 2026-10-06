@@ -1,0 +1,18 @@
+{
+  "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3",
+  "responsible": "@frankzhu94/factory-reviewer",
+  "phase": "verify",
+  "start_utc": "2026-10-06T08:17:45.105358+00:00",
+  "end_utc": "2026-10-06T08:17:45.123299+00:00",
+  "groups": [
+    "Actually stopped native source/destination exact snapshot/historicalanchor1-seriesanchor3-originalreplays PASS"
+  ],
+  "api_requests": 4,
+  "api_statuses": {
+    "200": 3,
+    "204": 1
+  },
+  "max_api_seconds": 0.0034634729963727295,
+  "result": "PASS",
+  "tokens_logged": false
+}

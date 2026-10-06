@@ -1,0 +1,190 @@
+{
+  "work_item": "QA-S3-RUN",
+  "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3",
+  "starting_revision": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3",
+  "responsible": "@frankzhu94/factory-qa",
+  "verified_utc": "2026-10-06T08:08:08.007744+00:00",
+  "host": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "clone": "/private/tmp/tablekeeper-qa-s3-335f16-20261006T0800Z",
+  "workspace": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005",
+  "sources": {
+    "/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-1.md": "9460189eac83802ce158f16ee90989af728a489b32a6147e2dc8e320f383055f",
+    "/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-2.md": "b1aa1b4affad456ff26f208a378eb2f6884153fc6ef667ab37b888fcda96c5dc",
+    "/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-3.md": "36b7ff5294b3992a6fa2894e9b4f2350072912fe10ed212c1f9a8828be1f9abe",
+    "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/ARCHITECTURE.md": "d9073895d6621001434c29064316c6799d578cd2093a849cdffa06d214cfb184",
+    "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/WORKING.md": "06ca0be85a76a9c3db40cb0ae31bad01b6e88f77eff26cd7e6d16c3bdd7b256d",
+    "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/DESIGN.md": "677188d1b6f6da7f34a3fc810259970e013d153517a078b27cc0bb8716ba433f",
+    "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-arch-s3-20261006T0740Z/runnable-targets.txt": "df1509fed6dba7042c90c8beef064398e204bb467d4ec9454d5e9cdfe4a39e8e"
+  },
+  "clean_fixed_candidate": true,
+  "historical_stage1_byte_equal": "b3df39340cee6f738ac79a12dd1347fc38e969e9",
+  "historical_stage2_byte_equal": "108bcd4c48fa4fb4d7dedf286e94c8e4937f7f10",
+  "packaged_sources_byte_equal": true,
+  "containers": [
+    {
+      "name": "/qa-s3-app",
+      "image": "sha256:fc4408c51d1047f2c2554c5f49be1c60bec72afaa972483f99b07588ab1911e2",
+      "started_at": "2026-10-06T08:00:31.324511071Z",
+      "finished_at": "0001-01-01T00:00:00Z",
+      "exit_code": 0,
+      "running": true,
+      "nanocpus": 2000000000,
+      "memory_bytes": 2147483648,
+      "network_mode": "qa-s3-net-0800"
+    },
+    {
+      "name": "/qa-s3-peer",
+      "image": "sha256:fc4408c51d1047f2c2554c5f49be1c60bec72afaa972483f99b07588ab1911e2",
+      "started_at": "2026-10-06T08:00:31.519098484Z",
+      "finished_at": "0001-01-01T00:00:00Z",
+      "exit_code": 0,
+      "running": true,
+      "nanocpus": 2000000000,
+      "memory_bytes": 2147483648,
+      "network_mode": "qa-s3-net-0800"
+    },
+    {
+      "name": "/qa-s3-old1",
+      "image": "sha256:dbf730160f49215f917ecbe95b67b6d573756bdbdf35b194bd8637007cb63b14",
+      "started_at": "2026-10-06T08:00:31.682285136Z",
+      "finished_at": "0001-01-01T00:00:00Z",
+      "exit_code": 0,
+      "running": true,
+      "nanocpus": 2000000000,
+      "memory_bytes": 2147483648,
+      "network_mode": "qa-s3-net-0800"
+    },
+    {
+      "name": "/qa-s3-old2",
+      "image": "sha256:2f5fc6d8e34bb4fab45ddad1683662a3dde9c59cd360cd6d7b914d84c1f3db19",
+      "started_at": "2026-10-06T08:00:31.857220099Z",
+      "finished_at": "0001-01-01T00:00:00Z",
+      "exit_code": 0,
+      "running": true,
+      "nanocpus": 2000000000,
+      "memory_bytes": 2147483648,
+      "network_mode": "qa-s3-net-0800"
+    },
+    {
+      "name": "/qa-s3-exportsource",
+      "image": "sha256:fc4408c51d1047f2c2554c5f49be1c60bec72afaa972483f99b07588ab1911e2",
+      "started_at": "2026-10-06T08:04:07.593451204Z",
+      "finished_at": "2026-10-06T08:04:13.570242894Z",
+      "exit_code": 137,
+      "running": false,
+      "nanocpus": 2000000000,
+      "memory_bytes": 2147483648,
+      "network_mode": "qa-s3-net-0800"
+    },
+    {
+      "name": "/qa-s3-api",
+      "image": "sha256:da249723d954671d7e57ac5b3b55ced42a7f34430edf45116da52a4ea94963cd",
+      "started_at": "2026-10-06T08:02:07.39158266Z",
+      "finished_at": "2026-10-06T08:02:12.302773851Z",
+      "exit_code": 1,
+      "running": false,
+      "nanocpus": 0,
+      "memory_bytes": 0,
+      "network_mode": "qa-s3-net-0800"
+    },
+    {
+      "name": "/qa-s3-api2",
+      "image": "sha256:da249723d954671d7e57ac5b3b55ced42a7f34430edf45116da52a4ea94963cd",
+      "started_at": "2026-10-06T08:02:32.476189277Z",
+      "finished_at": "2026-10-06T08:02:33.897254033Z",
+      "exit_code": 1,
+      "running": false,
+      "nanocpus": 0,
+      "memory_bytes": 0,
+      "network_mode": "qa-s3-net-0800"
+    },
+    {
+      "name": "/qa-s3-api3",
+      "image": "sha256:da249723d954671d7e57ac5b3b55ced42a7f34430edf45116da52a4ea94963cd",
+      "started_at": "2026-10-06T08:03:18.506490909Z",
+      "finished_at": "2026-10-06T08:03:19.190875779Z",
+      "exit_code": 0,
+      "running": false,
+      "nanocpus": 0,
+      "memory_bytes": 0,
+      "network_mode": "qa-s3-net-0800"
+    },
+    {
+      "name": "/qa-s3-browser",
+      "image": "sha256:da249723d954671d7e57ac5b3b55ced42a7f34430edf45116da52a4ea94963cd",
+      "started_at": "2026-10-06T08:03:37.425230419Z",
+      "finished_at": "2026-10-06T08:04:15.028973173Z",
+      "exit_code": 1,
+      "running": false,
+      "nanocpus": 0,
+      "memory_bytes": 0,
+      "network_mode": "qa-s3-net-0800"
+    },
+    {
+      "name": "/qa-s3-focus",
+      "image": "sha256:da249723d954671d7e57ac5b3b55ced42a7f34430edf45116da52a4ea94963cd",
+      "started_at": "2026-10-06T08:04:49.69567542Z",
+      "finished_at": "2026-10-06T08:04:58.02002062Z",
+      "exit_code": 0,
+      "running": false,
+      "nanocpus": 0,
+      "memory_bytes": 0,
+      "network_mode": "qa-s3-net-0800"
+    },
+    {
+      "name": "/qa-s3-focus-control",
+      "image": "sha256:da249723d954671d7e57ac5b3b55ced42a7f34430edf45116da52a4ea94963cd",
+      "started_at": "2026-10-06T08:05:45.675023028Z",
+      "finished_at": "2026-10-06T08:05:53.584101384Z",
+      "exit_code": 0,
+      "running": false,
+      "nanocpus": 0,
+      "memory_bytes": 0,
+      "network_mode": "qa-s3-net-0800"
+    },
+    {
+      "name": "/qa-s3-native-client",
+      "image": "sha256:da249723d954671d7e57ac5b3b55ced42a7f34430edf45116da52a4ea94963cd",
+      "started_at": "2026-10-06T08:04:08.281483618Z",
+      "finished_at": "2026-10-06T08:04:13.844184907Z",
+      "exit_code": 0,
+      "running": false,
+      "nanocpus": 0,
+      "memory_bytes": 0,
+      "network_mode": "qa-s3-net-0800"
+    },
+    {
+      "name": "/qa-s3-supplement",
+      "image": "sha256:da249723d954671d7e57ac5b3b55ced42a7f34430edf45116da52a4ea94963cd",
+      "started_at": "2026-10-06T08:06:26.806930817Z",
+      "finished_at": "2026-10-06T08:06:28.266552688Z",
+      "exit_code": 0,
+      "running": false,
+      "nanocpus": 0,
+      "memory_bytes": 0,
+      "network_mode": "qa-s3-net-0800"
+    },
+    {
+      "name": "/qa-s3-relations",
+      "image": "sha256:da249723d954671d7e57ac5b3b55ced42a7f34430edf45116da52a4ea94963cd",
+      "started_at": "2026-10-06T08:07:14.631468516Z",
+      "finished_at": "2026-10-06T08:07:16.109181025Z",
+      "exit_code": 0,
+      "running": false,
+      "nanocpus": 0,
+      "memory_bytes": 0,
+      "network_mode": "qa-s3-net-0800"
+    }
+  ],
+  "network_internal": true,
+  "runner_image": "sha256:da249723d954671d7e57ac5b3b55ced42a7f34430edf45116da52a4ea94963cd",
+  "room_events": [
+    "1690817b-ee6d-42af-b264-318cc1337ce7",
+    "c4305eb9-c3a7-4ce4-80a5-9076b0ac63a7",
+    "cc0b89f7-c30d-4930-b0ca-102c6c795de0",
+    "8b6a2714-ad6e-48d6-b742-05a6881452c8",
+    "62aa67a8-f00d-4cf9-9dfd-1791f4b03666",
+    "d4501777-5c49-47dd-8185-46f408d691cf"
+  ],
+  "cost": "UNAVAILABLE"
+}

@@ -1,0 +1,112 @@
+[
+  {
+    "argv": [
+      "git",
+      "clone",
+      "--no-hardlinks",
+      "--no-checkout",
+      "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005",
+      "/private/tmp/tablekeeper-review-s3-release-20261006T0813Z"
+    ],
+    "start_utc": "2026-10-06T08:12:47.003309+00:00",
+    "end_utc": "2026-10-06T08:12:47.169299+00:00",
+    "exit": 0,
+    "stdout": "",
+    "stderr": "Cloning into '/private/tmp/tablekeeper-review-s3-release-20261006T0813Z'...\ndone.\n"
+  },
+  {
+    "argv": [
+      "git",
+      "-C",
+      "/private/tmp/tablekeeper-review-s3-release-20261006T0813Z",
+      "checkout",
+      "--detach",
+      "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3"
+    ],
+    "start_utc": "2026-10-06T08:12:47.169505+00:00",
+    "end_utc": "2026-10-06T08:12:47.214044+00:00",
+    "exit": 0,
+    "stdout": "",
+    "stderr": "HEAD is now at 335f167 Format unrestricted Stage3 fixture integers without global guard changes\n"
+  },
+  {
+    "argv": [
+      "git",
+      "-C",
+      "/private/tmp/tablekeeper-review-s3-release-20261006T0813Z",
+      "rev-parse",
+      "HEAD"
+    ],
+    "start_utc": "2026-10-06T08:12:47.214063+00:00",
+    "end_utc": "2026-10-06T08:12:47.227398+00:00",
+    "exit": 0,
+    "stdout": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "-C",
+      "/private/tmp/tablekeeper-review-s3-release-20261006T0813Z",
+      "status",
+      "--porcelain"
+    ],
+    "start_utc": "2026-10-06T08:12:47.227429+00:00",
+    "end_utc": "2026-10-06T08:12:47.248174+00:00",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "-C",
+      "/private/tmp/tablekeeper-review-s3-release-20261006T0813Z",
+      "diff",
+      "--exit-code",
+      "b3df39340cee6f738ac79a12dd1347fc38e969e9",
+      "HEAD",
+      "--",
+      "stage-1"
+    ],
+    "start_utc": "2026-10-06T08:12:47.248211+00:00",
+    "end_utc": "2026-10-06T08:12:47.259932+00:00",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "-C",
+      "/private/tmp/tablekeeper-review-s3-release-20261006T0813Z",
+      "diff",
+      "--exit-code",
+      "108bcd4c48fa4fb4d7dedf286e94c8e4937f7f10",
+      "HEAD",
+      "--",
+      "stage-2"
+    ],
+    "start_utc": "2026-10-06T08:12:47.259958+00:00",
+    "end_utc": "2026-10-06T08:12:47.270274+00:00",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "-C",
+      "/private/tmp/tablekeeper-review-s3-release-20261006T0813Z",
+      "diff",
+      "--exit-code",
+      "HEAD:stage-2/static",
+      "HEAD:stage-3/static"
+    ],
+    "start_utc": "2026-10-06T08:12:47.270296+00:00",
+    "end_utc": "2026-10-06T08:12:47.280406+00:00",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+]

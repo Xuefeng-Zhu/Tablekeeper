@@ -1,0 +1,16 @@
+test_actual_legacy_stage1_stage2_exports_and_adoption (__main__.Stage3Tests.test_actual_legacy_stage1_stage2_exports_and_adoption) ... ok
+test_anchor_revision_series_counters_and_native_import (__main__.Stage3Tests.test_anchor_revision_series_counters_and_native_import) ... ok
+test_availability_unknown_restaurant_and_valid_control (__main__.Stage3Tests.test_availability_unknown_restaurant_and_valid_control) ... ok
+test_calendar_dst_bounds_and_policy0_large_native (__main__.Stage3Tests.test_calendar_dst_bounds_and_policy0_large_native) ... ok
+test_concurrent_expected_revision_and_series_replays (__main__.Stage3Tests.test_concurrent_expected_revision_and_series_replays) ... ok
+test_first_index_failure_rollback_and_failed_key (__main__.Stage3Tests.test_first_index_failure_rollback_and_failed_key) ... ok
+test_independent_explanation_rules (__main__.Stage3Tests.test_independent_explanation_rules) ... ok
+test_mixed_multiseries_noop_dedup_and_counter_snapshot (__main__.Stage3Tests.test_mixed_multiseries_noop_dedup_and_counter_snapshot) ... ok
+test_noop_oldterms_revisions_histories (__main__.Stage3Tests.test_noop_oldterms_revisions_histories) ... ok
+test_policy_order_validation_receipts (__main__.Stage3Tests.test_policy_order_validation_receipts) ... ok
+test_unbounded_fixture_integer_json_roundtrip (__main__.Stage3Tests.test_unbounded_fixture_integer_json_roundtrip) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 2.200s
+
+OK

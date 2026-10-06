@@ -1,3 +1,5 @@
 # Current-run factory presentation
 
 The editable PPTX and PDF are a dated historical snapshot prepared before later Stage 2 acceptance. Original slides correctly preserve their then-pending gate, token measurement and b1/382998fe live-demo provenance. Subsequent independent Stage 2 acceptance at `108bcd4`, verdict `95e67bf5-cad5-44a1-8a77-5684ab15f6b5`, is recorded in the root README and Reviewer release evidence. The supervisor stopped at 07:01:51Z at its cumulative overall time cap; Stages 3 and 4 were absent. The later authorized continuation was running at the 07:28:22Z observation; see root docs; no final submission is claimed. QA records seven individually inspected rendered pages and a passing overflow test. Participant authorship/review remains required.
+
+Current status update: Stage 3 `335f167` was independently accepted at 08:18:43Z. Stage 4 remains planning only; the runtime stopped at the 08:24:29Z observation after the PM reached its 769-turn cap; turn admission blocked a queued handoff. This media remains unchanged historical footage/slides, with older b1 live-demo provenance. No new Render release or final submission is claimed.

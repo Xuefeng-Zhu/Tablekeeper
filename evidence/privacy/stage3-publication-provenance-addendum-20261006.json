@@ -1,0 +1,53 @@
+{
+  "recorded_at_utc": "2026-10-06T09:14:13.550620+00:00",
+  "result": "PASS",
+  "scope": "Focused addendum for changed artifact provenance and final room/receipt/download bindings; full transcript not rescanned. Publication describes dated08:24 stopped snapshot; any later separately authorized continuation is outside this audit.",
+  "prior_audit": {
+    "path": "stage3-publication-privacy-truth-20261006.json",
+    "sha256": "80a09ea89c14df5d3bcd475a86e1b0eb73588e1221714a6753404093861f6d29"
+  },
+  "checks": {
+    "current_factory_candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3",
+    "previous_candidate_preserved": "108bcd4c48fa4fb4d7dedf286e94c8e4937f7f10",
+    "accepted_history_ancestor_of_import_merge": "aff2ae69b6465f95752d16d2c36bd2299fa1538f",
+    "application_files_byte_equal": 58,
+    "stage4_source_paths_not_imported": true,
+    "root_room_exact_download_sha256": "9ed8c743811cbc010ab2a6370b8cb12bee199528062b1542288a51d04efc650d",
+    "root_room_bytes": 13209930,
+    "message_count_bound_to_independent_receipt": 8743,
+    "all_previous_ids_retained_per_independent_receipt": 7018,
+    "new_ids_per_independent_receipt": 1725,
+    "incomplete_first_attempt_retained_and_ineligible": true,
+    "separate_room_privacy_receipt_status": "PASS",
+    "privacy_receipt_hash_matches_provenance": true,
+    "download_metadata_unchanged_since_prior_audit": true,
+    "unique_current_root_room_copy_entry": true,
+    "prior_copy_explicitly_superseded_and_preserved": true,
+    "metadata_privacy_scan": "PASS; no actual secret values/auth state/nonce found in provenance or receipts",
+    "claim_scope": "Stopped snapshot; separate finite Stage3 acceptance; no Stage4 acceptance/deployment/final-submission claim"
+  },
+  "inputs": [
+    {
+      "path": "evidence/artifact-provenance.json",
+      "bytes": 55566,
+      "sha256": "7e5aa4191af0acc5f0c1db123b8c4215368130e651c289cda747201aff63d1ab"
+    },
+    {
+      "path": "evidence/room-download-20261006T090230Z.json",
+      "bytes": 1296,
+      "sha256": "4d5a36d51c8f94f30b2cf387e4ab72fd112fc8fb6e06e14d72d46848f1de6e6f"
+    },
+    {
+      "path": "evidence/privacy/room-privacy-receipt-20261006T090230Z.json",
+      "bytes": 4441,
+      "sha256": "cf424c6a4b007c0d9c76e5aa49a4b33df643bf2cc902585afd2422c04c5509ae"
+    },
+    {
+      "path": "room.json",
+      "bytes": 13209930,
+      "sha256": "9ed8c743811cbc010ab2a6370b8cb12bee199528062b1542288a51d04efc650d"
+    }
+  ],
+  "limitations": "Raw room privacy and ID completeness relied on separate SHA-bound PASS receipt; hash comparison adds byte identity and does not independently repeat content scan",
+  "mutations": "Only this addendum receipt written in audit folder"
+}

@@ -4,7 +4,7 @@
 
 Tablekeeper is a restaurant reservation service produced by a seven-seat BAND factory. The track is **Tablekeeper**. “The Build Guild” is the title used by the current factory video; the participant must confirm the registered team name and authorship details before using this as a final entry.
 
-This branch preserves the original local factory Git history and candidate `108bcd4c48fa4fb4d7dedf286e94c8e4937f7f10`. Stage 1 was independently accepted at `b3df39340cee6f738ac79a12dd1347fc38e969e9`. Stage 2 was independently accepted at `108bcd4c48fa4fb4d7dedf286e94c8e4937f7f10` by Reviewer verdict `95e67bf5-cad5-44a1-8a77-5684ab15f6b5`. The supervisor stopped at `2026-10-06T07:01:51.206225Z` after the cumulative overall time cap was exhausted. Stages 3 and 4 are not included or claimed complete.
+This branch preserves the original local factory Git history through independently accepted Stage 3 candidate `335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3`. Stage 1 was independently accepted at `b3df39340cee6f738ac79a12dd1347fc38e969e9`. Stage 2 was independently accepted at `108bcd4c48fa4fb4d7dedf286e94c8e4937f7f10` by Reviewer verdict `95e67bf5-cad5-44a1-8a77-5684ab15f6b5`. The supervisor stopped at `2026-10-06T07:01:51.206225Z` after the cumulative overall time cap was exhausted. Stage 3 is included and independently accepted as documented below; Stage 4 remains planning only.
 
 The generating run was **local development practice**, not a judged dark-factory execution. Human scheduling and token-budget amendments, transport corrections and administrative restarts occurred. These are disclosed in [FACTORY.md](FACTORY.md); this practice run cannot establish the guide's “only the dispatched task as human input” autonomy requirement.
 
@@ -23,9 +23,13 @@ docker run --rm -e PORT=8080 -p 8080:8080 tablekeeper-stage1
 # Stop the previous container before using the same host port.
 docker build -t tablekeeper-stage2 stage-2
 docker run --rm -e PORT=8080 -p 8080:8080 tablekeeper-stage2
+
+# Stop the previous container before using the same host port.
+docker build -t tablekeeper-stage3 stage-3
+docker run --rm -e PORT=8080 -p 8080:8080 tablekeeper-stage3
 ```
 
-Both stages bind `0.0.0.0:$PORT`, default to port 8080 and provide `GET /health`. Read each stage's `RUN.md`. These original services start with empty state; their test endpoints support controlled local fixtures. For the seeded demo instead, use `docker build -t tablekeeper-demo demo` and run that image. The demo adapter is separate from the stage folders and does not change their factory-authored bytes.
+All three published stages bind `0.0.0.0:$PORT`, default to port 8080 and provide `GET /health`. Read each stage's `RUN.md`. These original services start with empty state; their test endpoints support controlled local fixtures. For the seeded demo instead, use `docker build -t tablekeeper-demo demo` and run that image. The demo adapter is separate from the stage folders and does not change their factory-authored bytes.
 
 ## Read the repository
 
@@ -34,9 +38,9 @@ Both stages bind `0.0.0.0:$PORT`, default to port 8080 and provide `GET /health`
 | [FACTORY.md](FACTORY.md) and [factory/](factory) | Roles, bundled reusable toolkit, setup, failure handling, measured counters and human intervention disclosure |
 | [mandates](mandates) and [protocols](protocols) | Seven generic Codex mandates and reusable collaboration, Git/review and evidence protocols |
 | [WORKING.md](WORKING.md), [ARCHITECTURE.md](ARCHITECTURE.md), [DESIGN.md](DESIGN.md) | Factory-authored requirement map, decisions and interaction plan |
-| [stage-1](stage-1), [stage-2](stage-2) | Separate buildable services with Dockerfile, RUN.md and source |
+| [stage-1](stage-1), [stage-2](stage-2), [stage-3](stage-3) | Separate buildable services with Dockerfile, RUN.md and source |
 | [tests](tests) | Factory-authored additional owner checks; official supplied suites remain in the pinned challenge package |
-| [evidence/local-sol](evidence/local-sol) | Selected QA results, retained Reviewer rejection, Frontend repair and fresh independent Stage 2 acceptance |
+| [evidence/local-sol](evidence/local-sol) | Selected QA results, retained failures, repairs and independent Stage 2/3 acceptance |
 | [evidence/render](evidence/render) | Separate deployed snapshot provenance and observed live checks |
 | [evidence/factory-runtime](evidence/factory-runtime) | Reviewed local transport corrections and their unit-test records |
 | [evidence/artifact-provenance.json](evidence/artifact-provenance.json) | Exact copied source paths and SHA-256 records |
@@ -68,3 +72,11 @@ The participant explicitly authorized **“Extend 8 hours and resume.”** The a
 <!-- END_CONTINUATION_STATUS -->
 
 At `2026-10-06T07:33:57Z`, the [live continuation proof](evidence/factory-runtime/live-continuation-summary.json) recorded acknowledged real Stage 3 architecture work (`arch-s3-001`), all seven SDK contexts running and one active Architect turn. The original Reviewer thread produced a new complete Stage 2 acceptance handoff; the interrupted old turn and blocked claim remain preserved. The ledger then showed 130,924,288 local reported tokens used and 169,075,712 remaining within the unchanged 300-million total. This establishes resumed work, not completed Stage 3 or Stage 4.
+
+<!-- STAGE3_CURRENT_STATUS -->
+**Stage 3 independently accepted:** exact candidate `335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3`, recorded `2026-10-06T08:18:43.966960Z`. Reviewer verdict `4b78e06c-4920-4c97-8e65-c6402135dbf7` accepts BUILD-S3; `160d0a65-e132-420c-b0bc-192cc87a0392` accepts the truthful finite QA-S3-RUN evidence. Unfiltered supplied isolated checks passed 120 Stage 1, 25 Stage 2 and 7 Stage 3 checks, with finite independent actual API, browser and migration checks. Retained evidence includes initial backend failures, integer repair failures, QA driver corrections and the Reviewer's missing-helper first attempt; acceptance does not erase these records. See [Stage 3 release record](evidence/local-sol/stage-3/reviewer-release-335/record.json) and [selection/omission summary](evidence/local-sol/stage-3/selection-summary.json). Private migration bundles, native state and authentication/session material are omitted.
+
+At the `2026-10-06T08:24:29Z` stop observation, the runtime reported **“handoff model claim did not complete.”** The PM had reached its cumulative 769/769 per-seat turn cap. The runtime claimed a queued Stage 3 release handoff before turn reservation; admission then denied a new PM turn and blocked the unacknowledged claim. No PM770 model turn was admitted. This admission-order explanation is supported by the ledger and sealed source; no underlying exception traceback was captured. The completed independent Stage 3 verdict remains valid. See [stop diagnosis](evidence/local-sol/stage-3/pm-turn-limit-stop.json). The local counter was 166,587,058 reported tokens, leaving 133,412,942 within the 300-million total allowance; USD cost remains unavailable. Stage 4 is planning only at `d0b3ba287222f11cc00f9d07b19ad631a077b6ed`, without implemented service or independent Stage 4 acceptance. No new Render deployment or final hackathon submission occurred. Existing video and presentation remain historical pre-acceptance snapshots.
+<!-- END_STAGE3_CURRENT_STATUS -->
+
+The publisher ran fresh clean-container supplied isolated checks at `2026-10-06T08:59:31Z`–`09:00:26Z`: 120/120 inherited Stage 1, 25/25 Stage 2 and 7/7 Stage 3, zero failures/errors/skips. [Publication check](evidence/publication-check-stage-3/provenance.json) binds unchanged application paths to accepted candidate `335f167`. The intentional next-stage probe is retained and does not accept Stage 4. The refreshed genuine BAND full-room console download at `2026-10-06T09:02:30.572Z` contains 8,743 messages and retains all 7,018 earlier IDs. An initial 4,400-message download omitted earlier history and is recorded as incomplete; only the verified retry replaces root `room.json`. The export describes this stopped snapshot, rather than a future final run. [Download provenance](evidence/room-download-20261006T090230Z.json) and its privacy receipt record the exact scope.

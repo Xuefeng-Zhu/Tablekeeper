@@ -1,0 +1,240 @@
+{
+  "work_item": "QA-S3-RUN",
+  "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3",
+  "responsible": "@frankzhu94/factory-qa",
+  "browser": "153.0.8010.12",
+  "layer": "actual Chromium officialdf-harness-runner/internalnetwork andrealpackagedold1old2new APIs",
+  "results": [
+    {
+      "case": "B-actual-Stage1ANDStage2-upgrade",
+      "outcome": "PASS",
+      "detail": [
+        {
+          "source": "http://qa-s3-old1:8080",
+          "schema": 1,
+          "retained_exact_method_path_body_key_caller": true,
+          "original_response_fields_absent": true,
+          "same_url_no_reload_login_formreset": true,
+          "retry_focus_retained": true,
+          "currentcancelledlookup": true,
+          "newadoption": true
+        },
+        {
+          "source": "http://qa-s3-old2:8080",
+          "schema": 2,
+          "retained_exact_method_path_body_key_caller": true,
+          "original_response_fields_absent": true,
+          "same_url_no_reload_login_formreset": true,
+          "retry_focus_retained": true,
+          "currentcancelledlookup": true,
+          "newadoption": true
+        }
+      ],
+      "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3",
+      "utc_start": "2026-10-06T08:03:40.593541+00:00",
+      "utc_end": "2026-10-06T08:03:44.792210+00:00"
+    },
+    {
+      "case": "B-same-scope409focus",
+      "outcome": "FAIL",
+      "detail": "",
+      "exception": "AssertionError",
+      "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3",
+      "utc_start": "2026-10-06T08:03:44.792744+00:00",
+      "utc_end": "2026-10-06T08:03:47.422218+00:00"
+    },
+    {
+      "case": "B-inherited-singlepair-loss-exactrecovery",
+      "outcome": "PASS",
+      "detail": [
+        {
+          "pair": false,
+          "commit": false,
+          "retry_identity_equal": true,
+          "edit_revert_new_key": true
+        },
+        {
+          "pair": false,
+          "commit": true,
+          "retry_identity_equal": true,
+          "edit_revert_new_key": true
+        },
+        {
+          "pair": true,
+          "commit": false,
+          "retry_identity_equal": true,
+          "edit_revert_new_key": true
+        },
+        {
+          "pair": true,
+          "commit": true,
+          "retry_identity_equal": true,
+          "edit_revert_new_key": true
+        }
+      ],
+      "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3",
+      "utc_start": "2026-10-06T08:03:47.450642+00:00",
+      "utc_end": "2026-10-06T08:03:55.587502+00:00"
+    },
+    {
+      "case": "B-inherited-delayed-search-detail",
+      "outcome": "PASS",
+      "detail": [
+        {
+          "held": "availability",
+          "late_failure": false,
+          "B_unchanged": true
+        },
+        {
+          "held": "availability",
+          "late_failure": true,
+          "B_unchanged": true
+        },
+        {
+          "held": "restaurants/R",
+          "late_failure": false,
+          "B_unchanged": true
+        },
+        {
+          "held": "restaurants/R",
+          "late_failure": true,
+          "B_unchanged": true
+        }
+      ],
+      "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3",
+      "utc_start": "2026-10-06T08:03:55.587575+00:00",
+      "utc_end": "2026-10-06T08:04:02.906923+00:00"
+    },
+    {
+      "case": "B-inherited-stale-POST",
+      "outcome": "PASS",
+      "detail": "late real POST success,abort,rejection completion/finally/focus did not affectB",
+      "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3",
+      "utc_start": "2026-10-06T08:04:02.907267+00:00",
+      "utc_end": "2026-10-06T08:04:09.842179+00:00"
+    },
+    {
+      "case": "B-inherited-routes-grid",
+      "outcome": "PASS",
+      "detail": "HTML routes,every-route real auth,party5 singles unavailable/pairs available,signed-out selection blocked;desktop/mobile no overflow",
+      "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3",
+      "utc_start": "2026-10-06T08:04:09.842283+00:00",
+      "utc_end": "2026-10-06T08:04:14.928625+00:00"
+    }
+  ],
+  "traffic_redacted": [
+    {
+      "method": "POST",
+      "url": "http://qa-s3-app:8080/reservations",
+      "body": "{\"restaurant_id\":\"R\",\"table_id\":\"A\",\"starts_at_local\":\"2030-01-03T19:00\",\"party_size\":2}",
+      "key_sha256": "598e2eaedc5f7a0d1d40ee45ee5290dbc1f33ef1631e9e90fcabb64c12fef516",
+      "caller_sha256": "2990563e1ab17c7d82b67798fb9017e2caac0e25c75cb051cdeb538e29e156bf"
+    },
+    {
+      "method": "POST",
+      "url": "http://qa-s3-app:8080/reservations",
+      "body": "{\"restaurant_id\":\"R\",\"table_id\":\"A\",\"starts_at_local\":\"2030-01-03T19:00\",\"party_size\":2}",
+      "key_sha256": "598e2eaedc5f7a0d1d40ee45ee5290dbc1f33ef1631e9e90fcabb64c12fef516",
+      "caller_sha256": "2990563e1ab17c7d82b67798fb9017e2caac0e25c75cb051cdeb538e29e156bf"
+    },
+    {
+      "method": "POST",
+      "url": "http://qa-s3-app:8080/reservations",
+      "body": "{\"restaurant_id\":\"R\",\"table_ids\":[\"B\",\"A\"],\"starts_at_local\":\"2030-01-03T19:00\",\"party_size\":2}",
+      "key_sha256": "9b2675ef4edc8f5f247ab0bc97930b89817601e21b526faa3225fec80dfc94d4",
+      "caller_sha256": "54f3ef32b4e63ef6b17939fa46d47ccf45d2f37b6c3eea0d061d62085901cc5f"
+    },
+    {
+      "method": "POST",
+      "url": "http://qa-s3-app:8080/reservations",
+      "body": "{\"restaurant_id\":\"R\",\"table_ids\":[\"B\",\"A\"],\"starts_at_local\":\"2030-01-03T19:00\",\"party_size\":2}",
+      "key_sha256": "9b2675ef4edc8f5f247ab0bc97930b89817601e21b526faa3225fec80dfc94d4",
+      "caller_sha256": "54f3ef32b4e63ef6b17939fa46d47ccf45d2f37b6c3eea0d061d62085901cc5f"
+    },
+    {
+      "method": "POST",
+      "url": "http://qa-s3-app:8080/reservations",
+      "body": "{\"restaurant_id\":\"R\",\"table_id\":\"A\",\"starts_at_local\":\"2030-01-03T19:00\",\"party_size\":2}",
+      "key_sha256": "6498caf69ff99e1fe0d1d2ec758eab7a5893fc639530b753dcf08e356cbcdd2d",
+      "caller_sha256": "0003ac960c7fbb5b28e07298ccb7ee8602a725b6ab2b0088a2dd40b33c3c26b6"
+    },
+    {
+      "method": "POST",
+      "url": "http://qa-s3-app:8080/reservations",
+      "body": "{\"restaurant_id\":\"R\",\"table_id\":\"A\",\"starts_at_local\":\"2030-01-03T19:00\",\"party_size\":2}",
+      "key_sha256": "6498caf69ff99e1fe0d1d2ec758eab7a5893fc639530b753dcf08e356cbcdd2d",
+      "caller_sha256": "0003ac960c7fbb5b28e07298ccb7ee8602a725b6ab2b0088a2dd40b33c3c26b6"
+    },
+    {
+      "method": "POST",
+      "url": "http://qa-s3-app:8080/reservations",
+      "body": "{\"restaurant_id\":\"R\",\"table_id\":\"A\",\"starts_at_local\":\"2030-01-03T19:00\",\"party_size\":2}",
+      "key_sha256": "0d4983a31c3c921b7dab60cfd8e439d6b66a9f2a5532edfa1f0ae8b98604d347",
+      "caller_sha256": "0003ac960c7fbb5b28e07298ccb7ee8602a725b6ab2b0088a2dd40b33c3c26b6"
+    },
+    {
+      "method": "POST",
+      "url": "http://qa-s3-app:8080/reservations",
+      "body": "{\"restaurant_id\":\"R\",\"table_id\":\"A\",\"starts_at_local\":\"2030-01-03T19:00\",\"party_size\":2}",
+      "key_sha256": "81e6f005461b6c9249c07e69421548278a5a99abe23be4be55e9a6d4c61aeedf",
+      "caller_sha256": "16865e99f028a3c72ae85869f742e9bd4e0fbe95bf52548e0a1f6c61ca7f260c"
+    },
+    {
+      "method": "POST",
+      "url": "http://qa-s3-app:8080/reservations",
+      "body": "{\"restaurant_id\":\"R\",\"table_id\":\"A\",\"starts_at_local\":\"2030-01-03T19:00\",\"party_size\":2}",
+      "key_sha256": "81e6f005461b6c9249c07e69421548278a5a99abe23be4be55e9a6d4c61aeedf",
+      "caller_sha256": "16865e99f028a3c72ae85869f742e9bd4e0fbe95bf52548e0a1f6c61ca7f260c"
+    },
+    {
+      "method": "POST",
+      "url": "http://qa-s3-app:8080/reservations",
+      "body": "{\"restaurant_id\":\"R\",\"table_id\":\"A\",\"starts_at_local\":\"2030-01-03T19:00\",\"party_size\":2}",
+      "key_sha256": "855e0be2ffbb42841554b77344c0f57c4bbbc91bbd70095efce8e7af8816c341",
+      "caller_sha256": "16865e99f028a3c72ae85869f742e9bd4e0fbe95bf52548e0a1f6c61ca7f260c"
+    },
+    {
+      "method": "POST",
+      "url": "http://qa-s3-app:8080/reservations",
+      "body": "{\"restaurant_id\":\"R\",\"table_ids\":[\"B\",\"A\"],\"starts_at_local\":\"2030-01-03T19:00\",\"party_size\":2}",
+      "key_sha256": "1f3c99c8279fb4869f893451ab39d35b8bdd750df5f7b4331be50e25d399da08",
+      "caller_sha256": "f699e1b9f311a2665ed22534c668257f34f4dcef309db83bb30587429661d47c"
+    },
+    {
+      "method": "POST",
+      "url": "http://qa-s3-app:8080/reservations",
+      "body": "{\"restaurant_id\":\"R\",\"table_ids\":[\"B\",\"A\"],\"starts_at_local\":\"2030-01-03T19:00\",\"party_size\":2}",
+      "key_sha256": "1f3c99c8279fb4869f893451ab39d35b8bdd750df5f7b4331be50e25d399da08",
+      "caller_sha256": "f699e1b9f311a2665ed22534c668257f34f4dcef309db83bb30587429661d47c"
+    },
+    {
+      "method": "POST",
+      "url": "http://qa-s3-app:8080/reservations",
+      "body": "{\"restaurant_id\":\"R\",\"table_ids\":[\"B\",\"A\"],\"starts_at_local\":\"2030-01-03T19:00\",\"party_size\":2}",
+      "key_sha256": "0be64156335392cf8806792c922dbe13e5371f2aca896f87eff2c51e7f8ee40f",
+      "caller_sha256": "f699e1b9f311a2665ed22534c668257f34f4dcef309db83bb30587429661d47c"
+    },
+    {
+      "method": "POST",
+      "url": "http://qa-s3-app:8080/reservations",
+      "body": "{\"restaurant_id\":\"R\",\"table_ids\":[\"B\",\"A\"],\"starts_at_local\":\"2030-01-03T19:00\",\"party_size\":2}",
+      "key_sha256": "929c7f227011fd186290bdf53cd783efd6fd560dccd6281f423ca9861abd0304",
+      "caller_sha256": "fc81a23849cf69e36f1f0d8153eef3f530f125a34d186f232867a614c21e4a61"
+    },
+    {
+      "method": "POST",
+      "url": "http://qa-s3-app:8080/reservations",
+      "body": "{\"restaurant_id\":\"R\",\"table_ids\":[\"B\",\"A\"],\"starts_at_local\":\"2030-01-03T19:00\",\"party_size\":2}",
+      "key_sha256": "929c7f227011fd186290bdf53cd783efd6fd560dccd6281f423ca9861abd0304",
+      "caller_sha256": "fc81a23849cf69e36f1f0d8153eef3f530f125a34d186f232867a614c21e4a61"
+    },
+    {
+      "method": "POST",
+      "url": "http://qa-s3-app:8080/reservations",
+      "body": "{\"restaurant_id\":\"R\",\"table_ids\":[\"B\",\"A\"],\"starts_at_local\":\"2030-01-03T19:00\",\"party_size\":2}",
+      "key_sha256": "4419755e08352eec727f13a6a458183fb120360b16e2416089c6a4c07373a924",
+      "caller_sha256": "fc81a23849cf69e36f1f0d8153eef3f530f125a34d186f232867a614c21e4a61"
+    }
+  ],
+  "page_errors": []
+}

@@ -1,0 +1,25 @@
+{
+  "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3",
+  "responsible": "@frankzhu94/factory-reviewer",
+  "phase": "prepare",
+  "start_utc": "2026-10-06T08:17:41.988732+00:00",
+  "end_utc": "2026-10-06T08:17:42.549666+00:00",
+  "groups": [
+    "Actual old1 confirmedexport adoption+legacyreceipt+native roundtrip PASS",
+    "Actual old2 confirmedexport adoption+legacyreceipt+native roundtrip PASS",
+    "5001digit validpolicy0 parse/format/availability/create/import/originalreplay; unknownrestaurant404 PASS",
+    "OLDacceptedcutoff still blocks noop/cancel despite newzero; stale winsinvalid/cutoff PASS",
+    "Native historicalseries snapshot captured before later sourcewrite; private bundle retained"
+  ],
+  "api_requests": 48,
+  "api_statuses": {
+    "200": 25,
+    "201": 9,
+    "204": 10,
+    "404": 1,
+    "409": 3
+  },
+  "max_api_seconds": 0.08063730198773555,
+  "result": "PASS",
+  "tokens_logged": false
+}

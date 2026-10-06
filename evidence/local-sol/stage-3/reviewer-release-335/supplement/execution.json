@@ -1,0 +1,193 @@
+[
+  {
+    "argv": [
+      "docker",
+      "network",
+      "create",
+      "--internal",
+      "review-s3-net-0813c"
+    ],
+    "start_utc": "2026-10-06T08:17:39.427452+00:00",
+    "end_utc": "2026-10-06T08:17:39.900654+00:00",
+    "exit": 0,
+    "stdout": "31c19e0b60be4e4cbe15aaa642ff46d952294c239d1c67170e6b98db6aea7b53\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "run",
+      "-d",
+      "--name",
+      "review-s3-source-0813c",
+      "--network",
+      "review-s3-net-0813c",
+      "--cpus",
+      "2",
+      "--memory",
+      "2g",
+      "tablekeeper-review-s3:0813"
+    ],
+    "start_utc": "2026-10-06T08:17:39.901347+00:00",
+    "end_utc": "2026-10-06T08:17:40.400241+00:00",
+    "exit": 0,
+    "stdout": "b65a80af27021e3c907e27171f9c4cf0618923d4a3226b4fe0bf58a90ede9374\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "run",
+      "-d",
+      "--name",
+      "review-s3-dest-0813c",
+      "--network",
+      "review-s3-net-0813c",
+      "--cpus",
+      "2",
+      "--memory",
+      "2g",
+      "tablekeeper-review-s3:0813"
+    ],
+    "start_utc": "2026-10-06T08:17:40.400992+00:00",
+    "end_utc": "2026-10-06T08:17:40.668986+00:00",
+    "exit": 0,
+    "stdout": "6f23be9436bd7fa4a949a36a1600da38ebf440b148ebee542dbb8d4ac28c248b\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "run",
+      "-d",
+      "--name",
+      "review-s3-old1-0813c",
+      "--network",
+      "review-s3-net-0813c",
+      "--cpus",
+      "2",
+      "--memory",
+      "2g",
+      "tablekeeper-review-s3-old1:0813"
+    ],
+    "start_utc": "2026-10-06T08:17:40.669851+00:00",
+    "end_utc": "2026-10-06T08:17:40.939196+00:00",
+    "exit": 0,
+    "stdout": "1ebce8d9468b96c5d4d14c0c28db60beaa4160f276cb6a6d900acdb253073938\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "run",
+      "-d",
+      "--name",
+      "review-s3-old2-0813c",
+      "--network",
+      "review-s3-net-0813c",
+      "--cpus",
+      "2",
+      "--memory",
+      "2g",
+      "tablekeeper-review-s3-old2:0813"
+    ],
+    "start_utc": "2026-10-06T08:17:40.939915+00:00",
+    "end_utc": "2026-10-06T08:17:41.272917+00:00",
+    "exit": 0,
+    "stdout": "56f90216d552961934e2e206cfcfa48ab5885c4cf036c6d55936948da0533b28\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "run",
+      "--rm",
+      "--network",
+      "review-s3-net-0813c",
+      "--cpus",
+      "2",
+      "--memory",
+      "2g",
+      "-v",
+      "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/supplement:/evidence",
+      "--entrypoint",
+      "python",
+      "df-harness-runner",
+      "/evidence/review.py",
+      "prepare"
+    ],
+    "start_utc": "2026-10-06T08:17:41.273541+00:00",
+    "end_utc": "2026-10-06T08:17:42.648499+00:00",
+    "exit": 0,
+    "stdout": "{\"candidate\": \"335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3\", \"responsible\": \"@frankzhu94/factory-reviewer\", \"phase\": \"prepare\", \"start_utc\": \"2026-10-06T08:17:41.988732+00:00\", \"end_utc\": \"2026-10-06T08:17:42.549666+00:00\", \"groups\": [\"Actual old1 confirmedexport adoption+legacyreceipt+native roundtrip PASS\", \"Actual old2 confirmedexport adoption+legacyreceipt+native roundtrip PASS\", \"5001digit validpolicy0 parse/format/availability/create/import/originalreplay; unknownrestaurant404 PASS\", \"OLDacceptedcutoff still blocks noop/cancel despite newzero; stale winsinvalid/cutoff PASS\", \"Native historicalseries snapshot captured before later sourcewrite; private bundle retained\"], \"api_requests\": 48, \"api_statuses\": {\"200\": 25, \"201\": 9, \"204\": 10, \"404\": 1, \"409\": 3}, \"max_api_seconds\": 0.08063730198773555, \"result\": \"PASS\", \"tokens_logged\": false}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "stop",
+      "--time",
+      "2",
+      "review-s3-source-0813c"
+    ],
+    "start_utc": "2026-10-06T08:17:42.649619+00:00",
+    "end_utc": "2026-10-06T08:17:44.866270+00:00",
+    "exit": 0,
+    "stdout": "Flag --time has been deprecated, use --timeout instead\nreview-s3-source-0813c\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "run",
+      "--rm",
+      "--network",
+      "review-s3-net-0813c",
+      "--cpus",
+      "2",
+      "--memory",
+      "2g",
+      "-v",
+      "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/supplement:/evidence",
+      "--entrypoint",
+      "python",
+      "df-harness-runner",
+      "/evidence/review.py",
+      "verify"
+    ],
+    "start_utc": "2026-10-06T08:17:44.867026+00:00",
+    "end_utc": "2026-10-06T08:17:45.232300+00:00",
+    "exit": 0,
+    "stdout": "{\"candidate\": \"335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3\", \"responsible\": \"@frankzhu94/factory-reviewer\", \"phase\": \"verify\", \"start_utc\": \"2026-10-06T08:17:45.105358+00:00\", \"end_utc\": \"2026-10-06T08:17:45.123299+00:00\", \"groups\": [\"Actually stopped native source/destination exact snapshot/historicalanchor1-seriesanchor3-originalreplays PASS\"], \"api_requests\": 4, \"api_statuses\": {\"200\": 3, \"204\": 1}, \"max_api_seconds\": 0.0034634729963727295, \"result\": \"PASS\", \"tokens_logged\": false}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "rm",
+      "-f",
+      "review-s3-source-0813c",
+      "review-s3-dest-0813c",
+      "review-s3-old1-0813c",
+      "review-s3-old2-0813c"
+    ],
+    "start_utc": "2026-10-06T08:17:45.233272+00:00",
+    "end_utc": "2026-10-06T08:17:45.673627+00:00",
+    "exit": 0,
+    "stdout": "review-s3-source-0813c\nreview-s3-dest-0813c\nreview-s3-old1-0813c\nreview-s3-old2-0813c\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "network",
+      "rm",
+      "review-s3-net-0813c"
+    ],
+    "start_utc": "2026-10-06T08:17:45.674410+00:00",
+    "end_utc": "2026-10-06T08:17:45.838918+00:00",
+    "exit": 0,
+    "stdout": "review-s3-net-0813c\n",
+    "stderr": ""
+  }
+]

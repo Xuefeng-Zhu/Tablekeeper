@@ -1,0 +1,64 @@
+{
+  "recordedAt": "2026-10-06T09:04:18.967614+00:00",
+  "sourceDirectory": "/Users/frank/mygit/Tablekeeper/runs/stage3-publication-check-20261006T085931Z",
+  "sourceCandidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3",
+  "applicationPathsMatchCandidate": true,
+  "copiedFiles": [
+    {
+      "path": "evidence/publication-check-stage-3/execution.json",
+      "sha256": "66f5bf610021f6cd76dd0641acadca98f740e5bad62a0a24f7ba16bc3bd3ae57",
+      "bytes": 835
+    },
+    {
+      "path": "evidence/publication-check-stage-3/harness-console.log",
+      "sha256": "4b08b90307eff5585cc8dc0ec7824c31217d349f2c0063c37cf92bf7114130c5",
+      "bytes": 1146
+    },
+    {
+      "path": "evidence/publication-check-stage-3/official/report.json",
+      "sha256": "61ad13470ec54628f16e3efb46d08029f737e8fe5a266552bd7bd3383a0225f8",
+      "bytes": 2588
+    },
+    {
+      "path": "evidence/publication-check-stage-3/official/stage-1.counts.json",
+      "sha256": "b18fabdbadab8f1094c6b47d09dd89a3e3215cb6c471340343c5f8787e30b77b",
+      "bytes": 499
+    },
+    {
+      "path": "evidence/publication-check-stage-3/official/stage-1.log",
+      "sha256": "6c94f22c25b22b0cd9686f6ea643bf9295109915e5a52a7e6382775091601989",
+      "bytes": 1406
+    },
+    {
+      "path": "evidence/publication-check-stage-3/official/stage-2.counts.json",
+      "sha256": "5e7ced47a9492a568aec12049d401867a868110520ced788cfc9976f400e4b0a",
+      "bytes": 218
+    },
+    {
+      "path": "evidence/publication-check-stage-3/official/stage-2.log",
+      "sha256": "201744bd667e4fc9fb2cd29ae632d5721f27c69280084c6e82d7c6b6e73ee345",
+      "bytes": 1457
+    },
+    {
+      "path": "evidence/publication-check-stage-3/official/stage-3.counts.json",
+      "sha256": "0690b4b540761c4ee3ae249853e6a8a3bdc4210f686645f4612e3c336d716713",
+      "bytes": 165
+    },
+    {
+      "path": "evidence/publication-check-stage-3/official/stage-3.log",
+      "sha256": "5af6ca47bb21909f79c1f90af9ff3177a6ef2f9e1d2db1db4488cda3dcdc7739",
+      "bytes": 1455
+    },
+    {
+      "path": "evidence/publication-check-stage-3/official/stage-4.counts.json",
+      "sha256": "83c208cdfc9473aef80d8f0f43c9a17b72cdf2e44f9fffd4984e299d64c0f1b5",
+      "bytes": 165
+    },
+    {
+      "path": "evidence/publication-check-stage-3/official/stage-4.log",
+      "sha256": "72c4947fc56851c223bac967c0e3ca2ea6e90bfc76d730a69f545d386463c6a0",
+      "bytes": 3594
+    }
+  ],
+  "scope": "Fresh operator supplied isolated harness; independent factory acceptance separate; intentional next-stage probe retains failures and is not Stage4 acceptance"
+}

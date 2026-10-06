@@ -1,7 +1,7 @@
 {
   "assembled_for": "https://github.com/Xuefeng-Zhu/Tablekeeper",
   "copy_scope": "Explicit selected nonsecret current-run artifacts; original raw absolute source paths retained for audit. No old run evidence, private state exports, auth, runtime journals, .git copies or capture intermediates.",
-  "factory_candidate": "108bcd4c48fa4fb4d7dedf286e94c8e4937f7f10",
+  "factory_candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3",
   "files": [
     {
       "copied_unchanged": true,
@@ -382,12 +382,6 @@
       "source_sha256": "52b05613cebd2e18005d43fb0cb0c2d0cd53184cd7ac96ece7209c84982c30f4"
     },
     {
-      "destination": "room.json",
-      "source_path": "/Users/frank/Downloads/Tablekeeper-Local-Sol-October-5 (1).json",
-      "source_sha256": "f79f7f9937325f9689c3e0cf55f450887751706b5cee53dac59afeb58787a132",
-      "copied_unchanged": true
-    },
-    {
       "copied_unchanged": true,
       "destination": "factory/factorykit/local_terminal_reconciliation.py",
       "source_path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-continuation-source-20261006/factorykit/local_terminal_reconciliation.py",
@@ -440,6 +434,469 @@
       "destination": "evidence/factory-runtime/local-8h-unit-test-result.json",
       "source_path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-20261005/readiness/local-8h-unit-test-result.json",
       "source_sha256": "c9738939af473f8a731f7e4945835c6924859df895f1158a7abc16863fd55887"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/backend-final-335/candidate-record.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s3-final-20261006T0755Z/candidate-record.json",
+      "source_sha256": "f0c7ed3fee1ad4367252d16da2f2a89e7273d176943ba14059532707a136e74b"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/backend-final-335/candidate-checks.txt",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s3-final-20261006T0755Z/candidate-checks.txt",
+      "source_sha256": "b15b39e50648265207c2db4a835e10fb9a0b55f5ba3c548ebefcce1c64073714"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/backend-final-335/commands.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s3-final-20261006T0755Z/commands.json",
+      "source_sha256": "11ae56eda17d8c81f8c6cd61f3806f13d48da96d9968d61334af69865cd5b37e"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/backend-final-335/provenance.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s3-final-20261006T0755Z/provenance.json",
+      "source_sha256": "541cd6757a09ffcd3770dff478fbb3242ffaad0a9dbc7f09c1f1b67a897c9453"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/backend-final-335/repair-notes.txt",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s3-final-20261006T0755Z/repair-notes.txt",
+      "source_sha256": "ae5ac371858e0af02f3dd006818cfdb18b4027ab430e5e67a8cc26c5da1a9ad6"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/backend-final-335/check-candidate.py",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s3-final-20261006T0755Z/check-candidate.py",
+      "source_sha256": "f0210e53378aa8847e28108f3363bba870923236f1bc5860c1d82baf56f2946e"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/backend-final-335/browser-record.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s3-final-20261006T0755Z/browser-record.json",
+      "source_sha256": "779508fd746a0941091f0e44fcd77163d2b954bd703c1d4822279b986fb86f08"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/backend-final-335/browser-checks.txt",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s3-final-20261006T0755Z/browser-checks.txt",
+      "source_sha256": "8e5af8b48970362eb12ca8158d1af7ff16bd95085867f2616d88768c8dc96eed"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/backend-final-335/browser-upgrade-s1.png",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s3-final-20261006T0755Z/browser-upgrade-s1.png",
+      "source_sha256": "11521d4e4032bd17cd8df7352b1302818d8acf70281d6dc5fbacd8006ebebb18"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/backend-final-335/browser-upgrade-s2.png",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s3-final-20261006T0755Z/browser-upgrade-s2.png",
+      "source_sha256": "a3d8c50260f2a699ed05522547fde12cb7aef9dfaa7fc1a8e675d07c00777534"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/backend-final-335/official/report.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s3-final-20261006T0755Z/official/report.json",
+      "source_sha256": "89b3591fb359876d63335e518fdb92eb820f718bed45a95d01df03058c4a9137"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/backend-final-335/official/stage-1.counts.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s3-final-20261006T0755Z/official/stage-1.counts.json",
+      "source_sha256": "b18fabdbadab8f1094c6b47d09dd89a3e3215cb6c471340343c5f8787e30b77b"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/backend-final-335/official/stage-1.log",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s3-final-20261006T0755Z/official/stage-1.log",
+      "source_sha256": "dd79be7ea8b9477c86ddcdc705bd6d865942f891e405b84fcf0ddc132c3daf1e"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/backend-final-335/official/stage-2.counts.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s3-final-20261006T0755Z/official/stage-2.counts.json",
+      "source_sha256": "5e7ced47a9492a568aec12049d401867a868110520ced788cfc9976f400e4b0a"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/backend-final-335/official/stage-2.log",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s3-final-20261006T0755Z/official/stage-2.log",
+      "source_sha256": "f3e9cc75c394fe2275f3b0bedb03d2a3d255482b3c85fe94c95456e64929c698"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/backend-final-335/official/stage-3.counts.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s3-final-20261006T0755Z/official/stage-3.counts.json",
+      "source_sha256": "0690b4b540761c4ee3ae249853e6a8a3bdc4210f686645f4612e3c336d716713"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/backend-final-335/official/stage-3.log",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s3-final-20261006T0755Z/official/stage-3.log",
+      "source_sha256": "a9bea2ecebbb7a9ce043bbee1c8d976db7dee3da907ccd69ba11ccc404b828a7"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/qa-335/record.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/record.json",
+      "source_sha256": "7a5a93125851253794ccdc7caf5c9a0ca3de330ce7b534c626a492bb933077e0"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/qa-335/provenance.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/provenance.json",
+      "source_sha256": "e5b10e7c855af2e439adf0ca30fb4e509ab733b2c9519db74fd7f997cbf9b6b4"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/qa-335/manifest.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/manifest.json",
+      "source_sha256": "16f9f64fc3efb4feedf01f12651c677d416aaac946ff808441f4c784cae3b722"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/qa-335/coverage.txt",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/coverage.txt",
+      "source_sha256": "3aa8cef81fd50ff2855a1b347b2392b041f7d90abe8d249eeb5a18b0caa5ea2f"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/qa-335/input-map.txt",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/input-map.txt",
+      "source_sha256": "20a8175eccbd65b2d8284f4c08396773d492897d21a1fea6ae733d1992cbe203"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/qa-335/cleanup.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/cleanup.json",
+      "source_sha256": "69fc456172a7988f46c851093f1c71409615cb1bce1cd22efbb40b76c541b208"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/qa-335/api.txt",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/api.txt",
+      "source_sha256": "0f665d59dd9cdf8cd5c49919c16b49163175d5ede64436c0f11dd736f2f9c687"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/qa-335/api2.txt",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/api2.txt",
+      "source_sha256": "0a1c6d75ea5e09c562f70be7616ccb563bee23117b93a1be4b3a99b521e65636"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/qa-335/api3.txt",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/api3.txt",
+      "source_sha256": "e5214112e90dcd28df9632ff3e8a3a9ae6d4ad8bdd2f951adf93d5abed90826b"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/qa-335/browser.txt",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/browser.txt",
+      "source_sha256": "5e0adf63a1a0e9e330e066d11bd97568b3ccb9909bead5f7cf085b40d609ea14"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/qa-335/browser-run1/report.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/browser-run1/report.json",
+      "source_sha256": "d3634df1d5a2719a2c29ebf67974878c0c17cd661d026b4f2e14f91ae787c5ca"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/qa-335/focus.txt",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/focus.txt",
+      "source_sha256": "b98d384ef98e79d4bdbcf2412c50f74b36b01dd281cc41935cbae755d9175662"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/qa-335/focus-run/report.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/focus-run/report.json",
+      "source_sha256": "3c17662f8f39de322f7b17df13dc3c6cc6a909129ad51ddeec08bc51a95f099a"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/qa-335/focus_control.txt",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/focus_control.txt",
+      "source_sha256": "a135a7c063b1457cf947b313a127ac96431825f60c41a7871bc2eb84d43fb317"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/qa-335/focus-control-run/report.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/focus-control-run/report.json",
+      "source_sha256": "e8486215e4ea2c36ee0e225b203729736d806772efbbacc5e8e589309175251e"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/qa-335/relations.txt",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/relations.txt",
+      "source_sha256": "39bbad80e02e983d3506eed0dc271b68bce4e538aa1046e7e91239a937e96130"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/qa-335/supplement.txt",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/supplement.txt",
+      "source_sha256": "cc72b0b11bb8942f4ec977a162e6b833a6b5dbb430fdf12e7ca64ea69643a2ab"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/qa-335/native_source.txt",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/native_source.txt",
+      "source_sha256": "209e211be5322489f76752258270dd1b3516026f023d9c9b136c27d2d9756cbc"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/qa-335/official/report.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/official/report.json",
+      "source_sha256": "9298f709e7726cfd589fa7103fed401f66f732137c733e3a515bf3a891cdb02e"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/qa-335/official/stage-1.counts.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/official/stage-1.counts.json",
+      "source_sha256": "b18fabdbadab8f1094c6b47d09dd89a3e3215cb6c471340343c5f8787e30b77b"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/qa-335/official/stage-1.log",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/official/stage-1.log",
+      "source_sha256": "8dccfc31a36cd55c9fbd3fffbe522e66afadfd8c98112936d1f35aae5a425451"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/qa-335/official/stage-2.counts.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/official/stage-2.counts.json",
+      "source_sha256": "5e7ced47a9492a568aec12049d401867a868110520ced788cfc9976f400e4b0a"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/qa-335/official/stage-2.log",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/official/stage-2.log",
+      "source_sha256": "f025f49071f55f6c85949d47b468534939d5fc635cdffd29959416637b6406c1"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/qa-335/official/stage-3.counts.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/official/stage-3.counts.json",
+      "source_sha256": "0690b4b540761c4ee3ae249853e6a8a3bdc4210f686645f4612e3c336d716713"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/qa-335/official/stage-3.log",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/official/stage-3.log",
+      "source_sha256": "f0d4e5c5aaaa8827a11e7ae925353ecac91d762d46826bbf65f8a7887a32ed73"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/reviewer-release-335/record.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/record.json",
+      "source_sha256": "3df470ab46282825971f4318b84be0713209c25d3344b9c4543b6ca97afd1103"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/reviewer-release-335/setup.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/setup.json",
+      "source_sha256": "7fdf9fb4780cf3ab634dc4193cd79e3deb5892e3f506bf719b12e4b5d186fc5f"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/reviewer-release-335/packaging.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/packaging.json",
+      "source_sha256": "b5369dbad7d4d045a552b9fc1f046cdd8942153a815b450f386c26457afa4c05"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/reviewer-release-335/execution.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/execution.json",
+      "source_sha256": "686193aebc676e59dd79c3284e734bbbdef3122505971985e9d4b1938f1dc57d"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/reviewer-release-335/browser.txt",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/browser.txt",
+      "source_sha256": "16f28f7a41394dfb6e673d4636a21c36b3c470c592115a6fa9fff53bc3b61321"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/reviewer-release-335/browser-run/partial.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/browser-run/partial.json",
+      "source_sha256": "2853736eae415888f1171d37e941aa146101ffb422761fdc021fbc8364ec3f38"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/reviewer-release-335/execute.py",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/execute.py",
+      "source_sha256": "47546134179e4c0c34ef8d3de43adc6998f7b37fa2b630aa17d13732f3b597e9"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/reviewer-release-335/attempt2/execution.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/attempt2/execution.json",
+      "source_sha256": "2dd361089b91ba61362671f13494dfc711a9b87ece8db6e721cc53c5535c6927"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/reviewer-release-335/attempt2/browser.txt",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/attempt2/browser.txt",
+      "source_sha256": "43b03125bf4a7f79159ecf734ecfb3c09111b2dbabd56db8683668cef81638e5"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/reviewer-release-335/attempt2/browser-run/report.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/attempt2/browser-run/report.json",
+      "source_sha256": "ac339a11a541ed9aed25b6b68b20300ecaf3f0c4b271b5ea86f45d0969c15091"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/reviewer-release-335/attempt2/browser-run/phase.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/attempt2/browser-run/phase.json",
+      "source_sha256": "ac387767aac6f99dbd1f348e33e722b53d352227b6b77e638686f59a615d4015"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/reviewer-release-335/attempt2/execute.py",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/attempt2/execute.py",
+      "source_sha256": "ebf68ffaa84085d58e228a524dc1c0d347e30a3e2ccd0177fbef634c8f92d02e"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/reviewer-release-335/attempt2/browser-run/375-True-conflict-current.png",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/attempt2/browser-run/375-True-conflict-current.png",
+      "source_sha256": "1bffe83d6f192b171ea11a7539a6facd816c81f6b833c6303bce7f9532658b37"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/reviewer-release-335/supplement/execution.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/supplement/execution.json",
+      "source_sha256": "2a3fe070f27c9a26ad88136a7fa1dd8d69557947d5c865486b4014ef708c6370"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/reviewer-release-335/supplement/prepare-report.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/supplement/prepare-report.json",
+      "source_sha256": "ca5d58a570116eb3c49b9ddd7eb3889edb8518d587c45259c5d63c742c5f3d16"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/reviewer-release-335/supplement/verify-report.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/supplement/verify-report.json",
+      "source_sha256": "d0d3d004b671ea621ca14d9ed220fc7740fcb245207505ff9c3b372b528daead"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/reviewer-release-335/supplement/execute.py",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/supplement/execute.py",
+      "source_sha256": "dd515c3f88f84da38a3c78e460e1cb951a09da9e793eb3769be9f90f4f9f05ab"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/reviewer-release-335/official/report.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/official/report.json",
+      "source_sha256": "78d4ddc43e1737bfabb154dfb54e6008584deab3a5381464f2215b15a41f7a13"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/reviewer-release-335/official/stage-1.counts.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/official/stage-1.counts.json",
+      "source_sha256": "b18fabdbadab8f1094c6b47d09dd89a3e3215cb6c471340343c5f8787e30b77b"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/reviewer-release-335/official/stage-1.log",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/official/stage-1.log",
+      "source_sha256": "aabf1d4850a5c63b46d86888d694ddd4b98796e724859f04c83bc3dd1b04d393"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/reviewer-release-335/official/stage-2.counts.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/official/stage-2.counts.json",
+      "source_sha256": "5e7ced47a9492a568aec12049d401867a868110520ced788cfc9976f400e4b0a"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/reviewer-release-335/official/stage-2.log",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/official/stage-2.log",
+      "source_sha256": "32f605a9aa36a083aa2106c4aaa4d6b3e22fe08318161acf8f96944a22f2b394"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/reviewer-release-335/official/stage-3.counts.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/official/stage-3.counts.json",
+      "source_sha256": "0690b4b540761c4ee3ae249853e6a8a3bdc4210f686645f4612e3c336d716713"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/reviewer-release-335/official/stage-3.log",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/official/stage-3.log",
+      "source_sha256": "34d3dba8ace8952c084cca93189c40f7e466e8b9ee55f9823233b1a72eddb32a"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/failed-backend-initial/candidate-record.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s3-20261006T0741Z/candidate-record.json",
+      "source_sha256": "27a9e6aaf83d749efb16453c4a836f8e717e205b96f8b226226e78e9512f9f0a"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/failed-backend-initial/official/report.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s3-20261006T0741Z/official/report.json",
+      "source_sha256": "dbd8cf151cd1ba40c0c620e94d36daeb763e86ce70a57f3ba19867fbc018951b"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/failed-backend-initial/official/stage-1.counts.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s3-20261006T0741Z/official/stage-1.counts.json",
+      "source_sha256": "0ced3a654c1cbfcd5d937d5b559bb57b983cf9fa4e164004f250dd97795a6a68"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/failed-backend-initial/official/stage-3.counts.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s3-20261006T0741Z/official/stage-3.counts.json",
+      "source_sha256": "0690b4b540761c4ee3ae249853e6a8a3bdc4210f686645f4612e3c336d716713"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/failed-backend-initial/official/stage-3.log",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s3-20261006T0741Z/official/stage-3.log",
+      "source_sha256": "d4ded3fb667431ef9861a09c9c4b0e5edc59f5b16a65eb5bb6db9c50d28dbaf6"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/failed-backend-integer/candidate-record.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s3-fixed-20261006T0750Z/candidate-record.json",
+      "source_sha256": "3babe7fee7f0b7671d69e3d2c9eb132f6b0a6791d3238c11782d983fa2113f61"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/failed-backend-integer/formatter-repair-host.txt",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s3-fixed-20261006T0750Z/formatter-repair-host.txt",
+      "source_sha256": "6e70acf1ef2e9be28424b6b2e983a584a77a84027b119b5f3c59b919fe4dc13a"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/failed-backend-integer/formatter-host-green.txt",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s3-fixed-20261006T0750Z/formatter-host-green.txt",
+      "source_sha256": "9c99d22d055947f3e961fa68c99990f2233fcfaad7c7b290ebeec16d7ea8e70e"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/failed-backend-integer/large-integer-probe.py",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s3-fixed-20261006T0750Z/large-integer-probe.py",
+      "source_sha256": "c3f00319a4deb0927ff1a32d935ebf5a227afeecfc7d7b08b70038de990e4c43"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/local-sol/stage-3/failed-backend-integer/large-integer-probe.txt",
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s3-fixed-20261006T0750Z/large-integer-probe.txt",
+      "source_sha256": "145e9fa129309278d461b9840196b770f6922fa1fb135b560d9e390524a470af"
+    },
+    {
+      "destination": "room.json",
+      "source_path": "/Users/frank/Downloads/Tablekeeper-Local-Sol-October-5 (1).json",
+      "source_sha256": "9ed8c743811cbc010ab2a6370b8cb12bee199528062b1542288a51d04efc650d",
+      "copied_unchanged": true,
+      "snapshot": "Stopped factory after independent Stage3 acceptance and PM turn-limit stop"
     }
   ],
   "render_candidate": "b1f7ef64db7f0dce0b3f3a913a3af280c96d70b9",
@@ -463,5 +920,56 @@
     "sealed_manifest_sha256": "f5a942cd381d323fff83b553d0de08d0882cdf8fc847a83be3d4f247e80fc14e",
     "observed_running_at_utc": "2026-10-06T07:28:22.092004+00:00",
     "scope": "Reviewed local practice terminal reconciliation, exact +28800 clock extension; original failed turn remains interrupted/non-replayable"
-  }
+  },
+  "stage_3_independent_acceptance": {
+    "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3",
+    "verdict_event_id": "4b78e06c-4920-4c97-8e65-c6402135dbf7",
+    "qa_verdict_event_id": "160d0a65-e132-420c-b0bc-192cc87a0392",
+    "selection": "evidence/local-sol/stage-3/selection-summary.json",
+    "record": "evidence/local-sol/stage-3/reviewer-release-335/record.json"
+  },
+  "application_revision": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3",
+  "stage3_publication_check": {
+    "provenance": "evidence/publication-check-stage-3/provenance.json",
+    "report": "evidence/publication-check-stage-3/official/report.json",
+    "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3",
+    "scope": "Fresh supplied isolated Stage1/2/3 counts120/25/7; independent factory release accepted separately"
+  },
+  "current_runtime_stop": {
+    "record": "evidence/local-sol/stage-3/pm-turn-limit-stop.json",
+    "reason": "PM cumulative per-seat turn cap769 denied admission after durable handoff claim",
+    "originalLedgerReason": "handoff model claim did not complete; preserve before retry",
+    "sourceSha256": "766696a22429a4db3b7eba466c3e7e71560d290a980aee64ec67bb18b354879a",
+    "stage4": "architecture planning only; no completed implementation"
+  },
+  "stage3_room_refresh": {
+    "record": "evidence/room-download-20261006T090230Z.json",
+    "sha256": "9ed8c743811cbc010ab2a6370b8cb12bee199528062b1542288a51d04efc650d",
+    "messages": 8743,
+    "scope": "Actual complete second console download of the stopped factory snapshot; exact audited bytes now copied unchanged to root room.json",
+    "privacyReceipt": "evidence/privacy/room-privacy-receipt-20261006T090230Z.json",
+    "privacyReceiptSha256": "cf424c6a4b007c0d9c76e5aa49a4b33df643bf2cc902585afd2422c04c5509ae"
+  },
+  "previous_factory_candidate": "108bcd4c48fa4fb4d7dedf286e94c8e4937f7f10",
+  "stage3_history_import": {
+    "acceptedOriginalCommit": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3",
+    "mergeCommit": "aff2ae69b6465f95752d16d2c36bd2299fa1538f",
+    "historyPreserved": true,
+    "applicationPathsByteEqual": true,
+    "stage4ArchitectureNotImported": true
+  },
+  "superseded_file_copies": [
+    {
+      "destination": "room.json",
+      "record_type": "historical_superseded_snapshot",
+      "original_copy_record": {
+        "destination": "room.json",
+        "source_path": "/Users/frank/Downloads/Tablekeeper-Local-Sol-October-5 (1).json",
+        "source_sha256": "f79f7f9937325f9689c3e0cf55f450887751706b5cee53dac59afeb58787a132",
+        "copied_unchanged": true
+      },
+      "superseded_by_sha256": "9ed8c743811cbc010ab2a6370b8cb12bee199528062b1542288a51d04efc650d",
+      "current_destination_matches_this_historical_copy": false
+    }
+  ]
 }

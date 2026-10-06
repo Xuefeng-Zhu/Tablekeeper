@@ -1,0 +1,19 @@
+Traceback (most recent call last):
+  File "/review.py", line 197, in <module>
+    asyncio.run(main())
+  File "/usr/local/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/review.py", line 192, in main
+    await browser_extra(b);await upgrade(b,1);await upgrade(b,2);await s3_cases(b)
+    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/review.py", line 65, in browser_extra
+    ctx,page=await page_setup(browser);held=asyncio.Event();release=asyncio.Event()
+                   ^^^^^^^^^^
+NameError: name 'page_setup' is not defined

@@ -1,0 +1,115 @@
+{
+  "recorded_at_utc": "2026-10-06T09:01:02.627917+00:00",
+  "accepted_stage": 3,
+  "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3",
+  "reviewer_recorded_utc": "2026-10-06T08:18:43.966960Z",
+  "build_verdict_event": "4b78e06c-4920-4c97-8e65-c6402135dbf7",
+  "qa_verdict_event": "160d0a65-e132-420c-b0bc-192cc87a0392",
+  "supplied_isolated_counts": {
+    "stage_1": 120,
+    "stage_2": 25,
+    "stage_3": 7
+  },
+  "reviewer_scope": "Finite actual API/browser/old1-old2/native-source-stopped migration; 11focus cases +9browser/API groups +52 supplement HTTP; 259 helper logged requests, zero5xx; original driver failures and finite limits retained",
+  "runtime_status": "stopped",
+  "runtime_owner_updated_at": "2026-10-06T08:24:29.837379+00:00",
+  "reported_stop_reason": "handoff model claim did not complete; preserve before retry",
+  "stop_diagnosis": "Root diagnosis pending; no inferred replay or new execution claimed",
+  "local_reported_tokens_used": 166587058,
+  "remaining_tokens": 133412942,
+  "authorized_local_total_allowance": 300000000,
+  "cumulative_token_cap": 656587855,
+  "usd_cost": "unavailable",
+  "stage_4": {
+    "state": "planning-only",
+    "candidate": "d0b3ba287222f11cc00f9d07b19ad631a077b6ed",
+    "accepted": false
+  },
+  "deployment": "No new Render deployment; live b1/382998fe remains separate",
+  "final_submission": false,
+  "selected_files": 76,
+  "additional_omitted_auth_shapes": [
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s3-final-20261006T0755Z/browser-upgrade.py",
+      "source_sha256": "9fd82f5e377282568806901e3fc3d595af494735579f1cd3f8d65aaf53711692",
+      "reason": "auth-value-shaped literal/output; excluded without exposing values"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/api.py",
+      "source_sha256": "9d322fc8b84602352667544bc67dbd2bed0f95dd7d1f4e51e653036696639519",
+      "reason": "auth-value-shaped literal/output; excluded without exposing values"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/api2.py",
+      "source_sha256": "672a7fe59b0dd5a7635b2dfd540763df009c19c7f31af3b9ab2f69ccc25e2e33",
+      "reason": "auth-value-shaped literal/output; excluded without exposing values"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/api3.py",
+      "source_sha256": "87f25e10c2ed2ef6247e4b0035b2e66b3d621a64582ffd7f1cc90db05ec4e66a",
+      "reason": "auth-value-shaped literal/output; excluded without exposing values"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/helpers_source.py",
+      "source_sha256": "5636cabdb1adf1340a43e110afa9737317278b4d13d4383e4820db62dff2bd0f",
+      "reason": "auth-value-shaped literal/output; excluded without exposing values"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/browser.py",
+      "source_sha256": "4bddc9cbc2f252ecdfecde7313e69e86db055f7d6832e7dba25bd1e714e6ba70",
+      "reason": "auth-value-shaped literal/output; excluded without exposing values"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/focus.py",
+      "source_sha256": "82fd0207d4667dabec9141334bb994134fa17a6a245ca7bd726b62e5eaee0845",
+      "reason": "auth-value-shaped literal/output; excluded without exposing values"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/focus_control.py",
+      "source_sha256": "db4c6c2b3311abc45ec760a57951f518f39d028ac73226ed7aa5c631b7b818d0",
+      "reason": "auth-value-shaped literal/output; excluded without exposing values"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/relations.py",
+      "source_sha256": "0bb3cb7f608d77d126656969f233944068d44152a014624bffa77d72233a65d5",
+      "reason": "auth-value-shaped literal/output; excluded without exposing values"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/supplement.py",
+      "source_sha256": "b6022d1242c4e258e8778b44f61b49ea440c91756d8ffbe8c5a452f631c85a65",
+      "reason": "auth-value-shaped literal/output; excluded without exposing values"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/native_source.py",
+      "source_sha256": "d9e6f7a4cd05ed14d9da0fd9d682c401fc3ee917e63ff7de7ef823b52864b9d1",
+      "reason": "auth-value-shaped literal/output; excluded without exposing values"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/review.py",
+      "source_sha256": "9e32463607c0aa25a76e88aa276c56fae57a74589de37f3de43250f5088da9f9",
+      "reason": "auth-value-shaped literal/output; excluded without exposing values"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/attempt2/review.py",
+      "source_sha256": "a6d7bd24df2eda356e82cf26456c2d0422faf7e5c1da896eac9cf6cd4cb7464a",
+      "reason": "auth-value-shaped literal/output; excluded without exposing values"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/supplement/review.py",
+      "source_sha256": "8721b752320969f0905d02ecc50c945a64c7e4a46645dcaaebaffed2672cd556",
+      "reason": "auth-value-shaped literal/output; excluded without exposing values"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s3-20261006T0741Z/official/stage-1.log",
+      "source_sha256": "470b6e2dccacd9cd9659379cc0ae5ce4415c1b155cc686513f5bc6c2a4dc98c5",
+      "reason": "auth-value-shaped literal/output; excluded without exposing values"
+    }
+  ],
+  "omissions": [
+    "All private-bundle.json and native state/migration/export snapshots; session/auth credentials and cookies",
+    "Packaged source clones and raw full callback transcripts; original private operator snapshots",
+    "All stage-4.log files because failed next-stage probes include auth-value-shaped fixture output; no Stage4 acceptance claimed",
+    "Unselected screenshot matrices and redundant build intermediates; reports retain original absolute source references"
+  ],
+  "privacy": "Selected text credential/auth-value shape scan clear; 3 representative screenshots individually inspected; root final privacy review remains separate"
+}

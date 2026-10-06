@@ -1,0 +1,873 @@
+{
+  "work_item": "QA-S3-RUN",
+  "state": "REVIEW",
+  "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3",
+  "starting_revision": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3",
+  "responsible": "@frankzhu94/factory-qa",
+  "utc_written": "2026-10-06T08:09:24.283324+00:00",
+  "verified_sources": "provenance.json all7source digests/allapplicablesections",
+  "commands": [
+    {
+      "attempt": "api",
+      "commands": [
+        "docker create --name qa-s3-api --network qa-s3-net-0800 --entrypoint python df-harness-runner /api.py",
+        "docker cp /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/api.py qa-s3-api:/api.py",
+        "docker cp /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/helpers.py qa-s3-api:/helpers.py",
+        "docker start -a qa-s3-api > /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/api.txt 2>&1"
+      ],
+      "observed_exit": 1
+    },
+    {
+      "attempt": "api2",
+      "commands": [
+        "docker create --name qa-s3-api2 --network qa-s3-net-0800 -e PYTHONINTMAXSTRDIGITS=0 --entrypoint python df-harness-runner /api.py",
+        "docker cp /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/api2.py qa-s3-api2:/api.py",
+        "docker cp /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/helpers2.py qa-s3-api2:/helpers2.py",
+        "docker start -a qa-s3-api2 > /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/api2.txt 2>&1"
+      ],
+      "observed_exit": 1
+    },
+    {
+      "attempt": "api3",
+      "commands": [
+        "docker create --name qa-s3-api3 --network qa-s3-net-0800 --entrypoint python df-harness-runner /api.py",
+        "docker cp /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/api3.py qa-s3-api3:/api.py",
+        "docker cp /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/helpers2.py qa-s3-api3:/helpers2.py",
+        "docker start -a qa-s3-api3 > /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/api3.txt 2>&1"
+      ],
+      "observed_exit": 0
+    },
+    {
+      "attempt": "native_source",
+      "commands": [
+        "docker create --name qa-s3-native-client --network qa-s3-net-0800 --entrypoint python df-harness-runner /api.py",
+        "docker cp /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/native_source.py qa-s3-native-client:/api.py",
+        "docker cp /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/helpers_source.py qa-s3-native-client:/helpers_source.py",
+        "docker start -a qa-s3-native-client > /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/native_source.txt 2>&1"
+      ],
+      "observed_exit": 0
+    },
+    {
+      "attempt": "supplement",
+      "commands": [
+        "docker create --name qa-s3-supplement --network qa-s3-net-0800 --entrypoint python df-harness-runner /api.py",
+        "docker cp /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/supplement.py qa-s3-supplement:/api.py",
+        "docker cp /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/helpers2.py qa-s3-supplement:/helpers2.py",
+        "docker start -a qa-s3-supplement > /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/supplement.txt 2>&1"
+      ],
+      "observed_exit": 0
+    },
+    {
+      "attempt": "relations",
+      "commands": [
+        "docker create --name qa-s3-relations --network qa-s3-net-0800 --entrypoint python df-harness-runner /api.py",
+        "docker cp /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/relations.py qa-s3-relations:/api.py",
+        "docker cp /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/helpers2.py qa-s3-relations:/helpers2.py",
+        "docker start -a qa-s3-relations > /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/relations.txt 2>&1"
+      ],
+      "observed_exit": 0
+    },
+    {
+      "attempt": "browser",
+      "commands": [
+        "docker create --name qa-s3-browser --network qa-s3-net-0800 --entrypoint python df-harness-runner /browser.py",
+        "docker cp /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/browser.py qa-s3-browser:/browser.py",
+        "docker start -a qa-s3-browser > /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/browser.txt 2>&1"
+      ],
+      "observed_exit": 1
+    },
+    {
+      "attempt": "focus",
+      "commands": [
+        "docker create --name qa-s3-focus --network qa-s3-net-0800 --entrypoint python df-harness-runner /focus.py",
+        "docker cp /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/focus.py qa-s3-focus:/focus.py",
+        "docker start -a qa-s3-focus > /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/focus.txt 2>&1"
+      ],
+      "observed_exit": 0
+    },
+    {
+      "attempt": "focus_control",
+      "commands": [
+        "docker create --name qa-s3-focus-control --network qa-s3-net-0800 --entrypoint python df-harness-runner /focus_control.py",
+        "docker cp /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/focus_control.py qa-s3-focus-control:/focus_control.py",
+        "docker start -a qa-s3-focus-control > /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/focus_control.txt 2>&1"
+      ],
+      "observed_exit": 0
+    },
+    {
+      "attempt": "official",
+      "commands": [
+        "/Users/frank/mygit/Tablekeeper/runs/harness-venv/bin/python -m harness run --track tablekeeper --repo /private/tmp/tablekeeper-qa-s3-335f16-20261006T0800Z --stage 3 --mode isolated --out /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/official > /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/official.txt 2>&1"
+      ],
+      "cwd": "/Users/frank/mygit/Tablekeeper/challenge",
+      "observed_exit": 0
+    },
+    {
+      "attempt": "native-source-stop",
+      "commands": [
+        "docker stop --time 2 qa-s3-exportsource"
+      ],
+      "observed_exit": 0,
+      "observed_client_marker": "SOURCE_READY_FOR_STOP;client independently saw stopped HTTP beforeimport"
+    }
+  ],
+  "api_unique_groups_PASS": 18,
+  "api_group_attempts": 22,
+  "logged_api_requests_all_attempts": 907,
+  "logged_api_fiveXX": 0,
+  "logged_api_max_seconds": 0.20146096700045746,
+  "api_unique_outcomes": {
+    "P-policy-order": {
+      "log": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/api.txt",
+      "case": "P-policy-order",
+      "outcome": "PASS",
+      "detail": "literal0/4/2/2/3,publicationlog/replay/failureversion,immutablebookinghistory/detail,permissions",
+      "utc_start": "2026-10-06T08:02:07.716279+00:00",
+      "utc_end": "2026-10-06T08:02:08.021840+00:00",
+      "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3"
+    },
+    "P-policy-boundaries": {
+      "log": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/api.txt",
+      "case": "P-policy-boundaries",
+      "outcome": "PASS",
+      "detail": {
+        "valid_extremes": 8,
+        "isolated_invalids": 22,
+        "state_unchanged": true
+      },
+      "utc_start": "2026-10-06T08:02:08.021867+00:00",
+      "utc_end": "2026-10-06T08:02:08.312983+00:00",
+      "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3"
+    },
+    "H-noop-stale-history": {
+      "log": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/api.txt",
+      "case": "H-noop-stale-history",
+      "outcome": "PASS",
+      "detail": "canonicalnoop oldterms/end/history/revision;realchange newpolicy;stalepriority/invalidranges;cancelterminalrepeat/originalreceipt;oldcutoff",
+      "utc_start": "2026-10-06T08:02:08.313025+00:00",
+      "utc_end": "2026-10-06T08:02:08.686991+00:00",
+      "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3"
+    },
+    "E-explanations-privacy": {
+      "log": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/api3.txt",
+      "case": "E-explanations-privacy",
+      "outcome": "PASS",
+      "detail": "fourindependentruletruths/order/IDs/privacyexceptions;newdurationoverlapvsoldacceptedend;explainquery/absence/closed",
+      "utc_start": "2026-10-06T08:03:18.794777+00:00",
+      "utc_end": "2026-10-06T08:03:19.182194+00:00",
+      "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3"
+    },
+    "S-amended-anchor": {
+      "log": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/api.txt",
+      "case": "S-amended-anchor",
+      "outcome": "PASS",
+      "detail": "amendedanchorrev3/receipt1/oldterms/history unchanged;datepolicies/generatedrevision1/adoptioncounteronce/privacy",
+      "utc_start": "2026-10-06T08:02:08.895170+00:00",
+      "utc_end": "2026-10-06T08:02:09.150205+00:00",
+      "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3"
+    },
+    "S-bounds-calendar": {
+      "log": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/api.txt",
+      "case": "S-bounds-calendar",
+      "outcome": "PASS",
+      "detail": "count2/12interval1/4 andadjacentinvalid/types;NYlocalweeks literaloffsets;calendaroverflowatomic",
+      "utc_start": "2026-10-06T08:02:09.150237+00:00",
+      "utc_end": "2026-10-06T08:02:09.962329+00:00",
+      "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3"
+    },
+    "S-first-failure-rollback": {
+      "log": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/api2.txt",
+      "case": "S-first-failure-rollback",
+      "outcome": "PASS",
+      "detail": "firstindexcapacity beforelateroverlap;firstindexoverlap beforelatergrid;gapentireadoptionrollback/failedkeyreuse",
+      "utc_start": "2026-10-06T08:02:33.026835+00:00",
+      "utc_end": "2026-10-06T08:02:33.555200+00:00",
+      "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3"
+    },
+    "M-collective-series-counters": {
+      "log": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/api.txt",
+      "case": "M-collective-series-counters",
+      "outcome": "PASS",
+      "detail": "twoREALsame-series/NOOPother/REALthird countersdedup,flags/history/revision;noopbatch onlyreceipt;latefailureatomic;cancelsticky/nosiblingcancel;replayoriginal",
+      "utc_start": "2026-10-06T08:02:10.128349+00:00",
+      "utc_end": "2026-10-06T08:02:10.305852+00:00",
+      "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3"
+    },
+    "R-revision-adoption50": {
+      "log": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/api.txt",
+      "case": "R-revision-adoption50",
+      "outcome": "PASS",
+      "detail": "50differentrealPATCHsameexpectedrevision one20049stale;50sameadoption1x20149x200;50distinctadoption1x20149already;oneeffect",
+      "utc_start": "2026-10-06T08:02:10.305886+00:00",
+      "utc_end": "2026-10-06T08:02:10.820636+00:00",
+      "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3"
+    },
+    "I-native-historical-state": {
+      "log": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/api.txt",
+      "case": "I-native-historical-state",
+      "outcome": "PASS",
+      "detail": "nativeoldterms/amendedanchorseries-originalrev3/livechanged/cancelled/history/counters preserved;fourcorruptionrollbacks;policy0unrestrictedtermsroundtrip",
+      "utc_start": "2026-10-06T08:02:10.820664+00:00",
+      "utc_end": "2026-10-06T08:02:11.183681+00:00",
+      "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3"
+    },
+    "I-actual-Stage1-Stage2-exports": {
+      "log": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/api.txt",
+      "case": "I-actual-Stage1-Stage2-exports",
+      "outcome": "PASS",
+      "detail": [
+        {
+          "actualsource": "http://qa-s3-old1:8080",
+          "pair": false,
+          "currentcancelledoriginalreceipt": true,
+          "adoptionworks": true
+        },
+        {
+          "actualsource": "http://qa-s3-old2:8080",
+          "pair": true,
+          "currentcancelledoriginalreceipt": true,
+          "adoptionworks": true
+        }
+      ],
+      "utc_start": "2026-10-06T08:02:11.183717+00:00",
+      "utc_end": "2026-10-06T08:02:12.000885+00:00",
+      "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3"
+    },
+    "X-unknown-5001digit-regressions": {
+      "log": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/api2.txt",
+      "case": "X-unknown-5001digit-regressions",
+      "outcome": "PASS",
+      "detail": "unknownresources structured404/connectedservice and5001digit policy0actualHTTP terms/export/import",
+      "utc_start": "2026-10-06T08:02:33.555235+00:00",
+      "utc_end": "2026-10-06T08:02:33.885504+00:00",
+      "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3"
+    },
+    "I-native-stopped-source-receiptcorruption": {
+      "log": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/native_source.txt",
+      "case": "I-native-stopped-source-receiptcorruption",
+      "outcome": "PASS",
+      "detail": {
+        "source_observed_stopped_before_import": true,
+        "originalanchor_receipt_revision": 1,
+        "originalseries_anchor_revision": 3,
+        "current_anchor_revision": 4,
+        "snapshot_immutable_afterwrite": true,
+        "corruptions": [
+          "receiptterm",
+          "afterterminal",
+          "duplicateindex",
+          "nohistory-nobootstrap"
+        ]
+      },
+      "utc_start": "2026-10-06T08:04:08.488071+00:00",
+      "utc_end": "2026-10-06T08:04:13.803501+00:00",
+      "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3"
+    },
+    "H-combined-transition-ledger": {
+      "log": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/supplement.txt",
+      "case": "H-combined-transition-ledger",
+      "outcome": "PASS",
+      "detail": "allselectiontransitions canonicalfullpairlists/singlefield;minimalchangeorder/seq/time/revision/terms,no-op,terminalcancel/stalebeforecancelled",
+      "utc_start": "2026-10-06T08:06:27.446146+00:00",
+      "utc_end": "2026-10-06T08:06:27.721024+00:00",
+      "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3"
+    },
+    "H-accepted-cutoff-controls": {
+      "log": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/supplement.txt",
+      "case": "H-accepted-cutoff-controls",
+      "outcome": "PASS",
+      "detail": "now+2days controlsold7day cutoffblocks despitepublished0;old0allows despitepublished7days;farfromequality",
+      "utc_start": "2026-10-06T08:06:27.723958+00:00",
+      "utc_end": "2026-10-06T08:06:28.094408+00:00",
+      "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3"
+    },
+    "X-unknown-availability-regression": {
+      "log": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/supplement.txt",
+      "case": "X-unknown-availability-regression",
+      "outcome": "PASS",
+      "detail": "actualpreviousdisconnectpath structured404with/withoutexplain,service remainshealthy",
+      "utc_start": "2026-10-06T08:06:28.094445+00:00",
+      "utc_end": "2026-10-06T08:06:28.242762+00:00",
+      "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3"
+    },
+    "S-H-overlapping-error-independent-controls": {
+      "log": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/relations.txt",
+      "case": "S-H-overlapping-error-independent-controls",
+      "outcome": "PASS",
+      "detail": "oldnow-offgridcanonicalnoop retained;realpartychange revalidatesgrid;literalindex1capacity/index2onlyoverlap priority,isolatedlatercontrol,failedkeyreusablethroughbothfailures",
+      "utc_start": "2026-10-06T08:07:15.018719+00:00",
+      "utc_end": "2026-10-06T08:07:15.611308+00:00",
+      "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3"
+    },
+    "R-policy-publication50": {
+      "log": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/relations.txt",
+      "case": "R-policy-publication50",
+      "outcome": "PASS",
+      "detail": [
+        {
+          "clients": 50,
+          "duplicate": true,
+          "publication_count": 1,
+          "max_seconds": 0.016414682992035523
+        },
+        {
+          "clients": 50,
+          "duplicate": false,
+          "publication_count": 50,
+          "max_seconds": 0.0352556250145426
+        }
+      ],
+      "utc_start": "2026-10-06T08:07:15.611395+00:00",
+      "utc_end": "2026-10-06T08:07:16.074410+00:00",
+      "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3"
+    }
+  },
+  "api_attempt_results": {
+    "api": [
+      {
+        "case": "P-policy-order",
+        "outcome": "PASS",
+        "detail": "literal0/4/2/2/3,publicationlog/replay/failureversion,immutablebookinghistory/detail,permissions",
+        "utc_start": "2026-10-06T08:02:07.716279+00:00",
+        "utc_end": "2026-10-06T08:02:08.021840+00:00",
+        "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3"
+      },
+      {
+        "case": "P-policy-boundaries",
+        "outcome": "PASS",
+        "detail": {
+          "valid_extremes": 8,
+          "isolated_invalids": 22,
+          "state_unchanged": true
+        },
+        "utc_start": "2026-10-06T08:02:08.021867+00:00",
+        "utc_end": "2026-10-06T08:02:08.312983+00:00",
+        "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3"
+      },
+      {
+        "case": "H-noop-stale-history",
+        "outcome": "PASS",
+        "detail": "canonicalnoop oldterms/end/history/revision;realchange newpolicy;stalepriority/invalidranges;cancelterminalrepeat/originalreceipt;oldcutoff",
+        "utc_start": "2026-10-06T08:02:08.313025+00:00",
+        "utc_end": "2026-10-06T08:02:08.686991+00:00",
+        "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3"
+      },
+      {
+        "case": "E-explanations-privacy",
+        "outcome": "FAIL",
+        "detail": "",
+        "exception": "AssertionError",
+        "utc_start": "2026-10-06T08:02:08.687031+00:00",
+        "utc_end": "2026-10-06T08:02:08.895123+00:00",
+        "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3"
+      },
+      {
+        "case": "S-amended-anchor",
+        "outcome": "PASS",
+        "detail": "amendedanchorrev3/receipt1/oldterms/history unchanged;datepolicies/generatedrevision1/adoptioncounteronce/privacy",
+        "utc_start": "2026-10-06T08:02:08.895170+00:00",
+        "utc_end": "2026-10-06T08:02:09.150205+00:00",
+        "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3"
+      },
+      {
+        "case": "S-bounds-calendar",
+        "outcome": "PASS",
+        "detail": "count2/12interval1/4 andadjacentinvalid/types;NYlocalweeks literaloffsets;calendaroverflowatomic",
+        "utc_start": "2026-10-06T08:02:09.150237+00:00",
+        "utc_end": "2026-10-06T08:02:09.962329+00:00",
+        "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3"
+      },
+      {
+        "case": "S-first-failure-rollback",
+        "outcome": "FAIL",
+        "detail": "POST /restaurants/R/policies: expected201/None observed409/idempotency_key_reuse",
+        "exception": "AssertionError",
+        "utc_start": "2026-10-06T08:02:09.962364+00:00",
+        "utc_end": "2026-10-06T08:02:10.128322+00:00",
+        "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3"
+      },
+      {
+        "case": "M-collective-series-counters",
+        "outcome": "PASS",
+        "detail": "twoREALsame-series/NOOPother/REALthird countersdedup,flags/history/revision;noopbatch onlyreceipt;latefailureatomic;cancelsticky/nosiblingcancel;replayoriginal",
+        "utc_start": "2026-10-06T08:02:10.128349+00:00",
+        "utc_end": "2026-10-06T08:02:10.305852+00:00",
+        "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3"
+      },
+      {
+        "case": "R-revision-adoption50",
+        "outcome": "PASS",
+        "detail": "50differentrealPATCHsameexpectedrevision one20049stale;50sameadoption1x20149x200;50distinctadoption1x20149already;oneeffect",
+        "utc_start": "2026-10-06T08:02:10.305886+00:00",
+        "utc_end": "2026-10-06T08:02:10.820636+00:00",
+        "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3"
+      },
+      {
+        "case": "I-native-historical-state",
+        "outcome": "PASS",
+        "detail": "nativeoldterms/amendedanchorseries-originalrev3/livechanged/cancelled/history/counters preserved;fourcorruptionrollbacks;policy0unrestrictedtermsroundtrip",
+        "utc_start": "2026-10-06T08:02:10.820664+00:00",
+        "utc_end": "2026-10-06T08:02:11.183681+00:00",
+        "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3"
+      },
+      {
+        "case": "I-actual-Stage1-Stage2-exports",
+        "outcome": "PASS",
+        "detail": [
+          {
+            "actualsource": "http://qa-s3-old1:8080",
+            "pair": false,
+            "currentcancelledoriginalreceipt": true,
+            "adoptionworks": true
+          },
+          {
+            "actualsource": "http://qa-s3-old2:8080",
+            "pair": true,
+            "currentcancelledoriginalreceipt": true,
+            "adoptionworks": true
+          }
+        ],
+        "utc_start": "2026-10-06T08:02:11.183717+00:00",
+        "utc_end": "2026-10-06T08:02:12.000885+00:00",
+        "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3"
+      },
+      {
+        "case": "X-unknown-5001digit-regressions",
+        "outcome": "FAIL",
+        "detail": "Exceeds the limit (4300 digits) for integer string conversion: value has 5001 digits; use sys.set_int_max_str_digits() to increase the limit",
+        "exception": "ValueError",
+        "utc_start": "2026-10-06T08:02:12.000931+00:00",
+        "utc_end": "2026-10-06T08:02:12.273431+00:00",
+        "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3"
+      }
+    ],
+    "api2": [
+      {
+        "case": "E-explanations-privacy",
+        "outcome": "FAIL",
+        "detail": "",
+        "exception": "AssertionError",
+        "traceback": "Traceback (most recent call last):\n  File \"/helpers2.py\", line 36, in case\n    detail=fn(); result={'case':name,'outcome':'PASS','detail':detail}\n           ^^^^\n  File \"/api.py\", line 65, in explanation_privacy\n    create(t,table='B',party=1);e=expect('GET','/availability?restaurant_id=R&date=2030-01-03&party_size=3&explain=true',200)['slots'][2]['explain'];assert e[1]['rules']==[{'rule':'capacity','holds':True},{'rule':'no_overlap','holds':False}];e0=expect('GET','/availability?restaurant_id=R&date=2030-01-03&party_size=3&explain=true',200)['slots'][0]['explain'];assert e0[0]['rules']==[{'rule':'capacity','holds':False},{'rule':'no_overlap','holds':True}]\n                                                                                                                                                                                                                                                                                                                                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+        "utc_start": "2026-10-06T08:02:32.788410+00:00",
+        "utc_end": "2026-10-06T08:02:33.026811+00:00",
+        "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3"
+      },
+      {
+        "case": "S-first-failure-rollback",
+        "outcome": "PASS",
+        "detail": "firstindexcapacity beforelateroverlap;firstindexoverlap beforelatergrid;gapentireadoptionrollback/failedkeyreuse",
+        "utc_start": "2026-10-06T08:02:33.026835+00:00",
+        "utc_end": "2026-10-06T08:02:33.555200+00:00",
+        "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3"
+      },
+      {
+        "case": "X-unknown-5001digit-regressions",
+        "outcome": "PASS",
+        "detail": "unknownresources structured404/connectedservice and5001digit policy0actualHTTP terms/export/import",
+        "utc_start": "2026-10-06T08:02:33.555235+00:00",
+        "utc_end": "2026-10-06T08:02:33.885504+00:00",
+        "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3"
+      }
+    ],
+    "api3": [
+      {
+        "case": "E-explanations-privacy",
+        "outcome": "PASS",
+        "detail": "fourindependentruletruths/order/IDs/privacyexceptions;newdurationoverlapvsoldacceptedend;explainquery/absence/closed",
+        "utc_start": "2026-10-06T08:03:18.794777+00:00",
+        "utc_end": "2026-10-06T08:03:19.182194+00:00",
+        "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3"
+      }
+    ],
+    "native_source": [
+      {
+        "case": "I-native-stopped-source-receiptcorruption",
+        "outcome": "PASS",
+        "detail": {
+          "source_observed_stopped_before_import": true,
+          "originalanchor_receipt_revision": 1,
+          "originalseries_anchor_revision": 3,
+          "current_anchor_revision": 4,
+          "snapshot_immutable_afterwrite": true,
+          "corruptions": [
+            "receiptterm",
+            "afterterminal",
+            "duplicateindex",
+            "nohistory-nobootstrap"
+          ]
+        },
+        "utc_start": "2026-10-06T08:04:08.488071+00:00",
+        "utc_end": "2026-10-06T08:04:13.803501+00:00",
+        "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3"
+      }
+    ],
+    "supplement": [
+      {
+        "case": "H-combined-transition-ledger",
+        "outcome": "PASS",
+        "detail": "allselectiontransitions canonicalfullpairlists/singlefield;minimalchangeorder/seq/time/revision/terms,no-op,terminalcancel/stalebeforecancelled",
+        "utc_start": "2026-10-06T08:06:27.446146+00:00",
+        "utc_end": "2026-10-06T08:06:27.721024+00:00",
+        "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3"
+      },
+      {
+        "case": "H-accepted-cutoff-controls",
+        "outcome": "PASS",
+        "detail": "now+2days controlsold7day cutoffblocks despitepublished0;old0allows despitepublished7days;farfromequality",
+        "utc_start": "2026-10-06T08:06:27.723958+00:00",
+        "utc_end": "2026-10-06T08:06:28.094408+00:00",
+        "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3"
+      },
+      {
+        "case": "X-unknown-availability-regression",
+        "outcome": "PASS",
+        "detail": "actualpreviousdisconnectpath structured404with/withoutexplain,service remainshealthy",
+        "utc_start": "2026-10-06T08:06:28.094445+00:00",
+        "utc_end": "2026-10-06T08:06:28.242762+00:00",
+        "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3"
+      }
+    ],
+    "relations": [
+      {
+        "case": "S-H-overlapping-error-independent-controls",
+        "outcome": "PASS",
+        "detail": "oldnow-offgridcanonicalnoop retained;realpartychange revalidatesgrid;literalindex1capacity/index2onlyoverlap priority,isolatedlatercontrol,failedkeyreusablethroughbothfailures",
+        "utc_start": "2026-10-06T08:07:15.018719+00:00",
+        "utc_end": "2026-10-06T08:07:15.611308+00:00",
+        "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3"
+      },
+      {
+        "case": "R-policy-publication50",
+        "outcome": "PASS",
+        "detail": [
+          {
+            "clients": 50,
+            "duplicate": true,
+            "publication_count": 1,
+            "max_seconds": 0.016414682992035523
+          },
+          {
+            "clients": 50,
+            "duplicate": false,
+            "publication_count": 50,
+            "max_seconds": 0.0352556250145426
+          }
+        ],
+        "utc_start": "2026-10-06T08:07:15.611395+00:00",
+        "utc_end": "2026-10-06T08:07:16.074410+00:00",
+        "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3"
+      }
+    ]
+  },
+  "api_utc_start": "2026-10-06T08:02:07.716279+00:00",
+  "api_utc_end": "2026-10-06T08:07:16.074410+00:00",
+  "browser_required_groups_PASS": 6,
+  "browser_original_results": [
+    {
+      "case": "B-actual-Stage1ANDStage2-upgrade",
+      "outcome": "PASS",
+      "detail": [
+        {
+          "source": "http://qa-s3-old1:8080",
+          "schema": 1,
+          "retained_exact_method_path_body_key_caller": true,
+          "original_response_fields_absent": true,
+          "same_url_no_reload_login_formreset": true,
+          "retry_focus_retained": true,
+          "currentcancelledlookup": true,
+          "newadoption": true
+        },
+        {
+          "source": "http://qa-s3-old2:8080",
+          "schema": 2,
+          "retained_exact_method_path_body_key_caller": true,
+          "original_response_fields_absent": true,
+          "same_url_no_reload_login_formreset": true,
+          "retry_focus_retained": true,
+          "currentcancelledlookup": true,
+          "newadoption": true
+        }
+      ],
+      "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3",
+      "utc_start": "2026-10-06T08:03:40.593541+00:00",
+      "utc_end": "2026-10-06T08:03:44.792210+00:00"
+    },
+    {
+      "case": "B-same-scope409focus",
+      "outcome": "FAIL",
+      "detail": "",
+      "exception": "AssertionError",
+      "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3",
+      "utc_start": "2026-10-06T08:03:44.792744+00:00",
+      "utc_end": "2026-10-06T08:03:47.422218+00:00"
+    },
+    {
+      "case": "B-inherited-singlepair-loss-exactrecovery",
+      "outcome": "PASS",
+      "detail": [
+        {
+          "pair": false,
+          "commit": false,
+          "retry_identity_equal": true,
+          "edit_revert_new_key": true
+        },
+        {
+          "pair": false,
+          "commit": true,
+          "retry_identity_equal": true,
+          "edit_revert_new_key": true
+        },
+        {
+          "pair": true,
+          "commit": false,
+          "retry_identity_equal": true,
+          "edit_revert_new_key": true
+        },
+        {
+          "pair": true,
+          "commit": true,
+          "retry_identity_equal": true,
+          "edit_revert_new_key": true
+        }
+      ],
+      "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3",
+      "utc_start": "2026-10-06T08:03:47.450642+00:00",
+      "utc_end": "2026-10-06T08:03:55.587502+00:00"
+    },
+    {
+      "case": "B-inherited-delayed-search-detail",
+      "outcome": "PASS",
+      "detail": [
+        {
+          "held": "availability",
+          "late_failure": false,
+          "B_unchanged": true
+        },
+        {
+          "held": "availability",
+          "late_failure": true,
+          "B_unchanged": true
+        },
+        {
+          "held": "restaurants/R",
+          "late_failure": false,
+          "B_unchanged": true
+        },
+        {
+          "held": "restaurants/R",
+          "late_failure": true,
+          "B_unchanged": true
+        }
+      ],
+      "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3",
+      "utc_start": "2026-10-06T08:03:55.587575+00:00",
+      "utc_end": "2026-10-06T08:04:02.906923+00:00"
+    },
+    {
+      "case": "B-inherited-stale-POST",
+      "outcome": "PASS",
+      "detail": "late real POST success,abort,rejection completion/finally/focus did not affectB",
+      "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3",
+      "utc_start": "2026-10-06T08:04:02.907267+00:00",
+      "utc_end": "2026-10-06T08:04:09.842179+00:00"
+    },
+    {
+      "case": "B-inherited-routes-grid",
+      "outcome": "PASS",
+      "detail": "HTML routes,every-route real auth,party5 singles unavailable/pairs available,signed-out selection blocked;desktop/mobile no overflow",
+      "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3",
+      "utc_start": "2026-10-06T08:04:09.842283+00:00",
+      "utc_end": "2026-10-06T08:04:14.928625+00:00"
+    }
+  ],
+  "browser_required_focus_results": [
+    {
+      "case": "B-contract-submit-and-refreshed-input-focus",
+      "outcome": "PASS",
+      "detail": [
+        {
+          "pair": false,
+          "submit_focus_retained_after409": true,
+          "reenabled_party_focus_retained_through_refresh": true
+        },
+        {
+          "pair": true,
+          "submit_focus_retained_after409": true,
+          "reenabled_party_focus_retained_through_refresh": true
+        }
+      ],
+      "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3",
+      "utc_start": "2026-10-06T08:05:48.753898+00:00",
+      "utc_end": "2026-10-06T08:05:53.494465+00:00"
+    }
+  ],
+  "browser_phase_diagnostic": [
+    {
+      "case": "B-focus-request-to-refresh-diagnostic",
+      "outcome": "PASS",
+      "detail": [
+        {
+          "pair": false,
+          "before_enter": "booking-party-size",
+          "at_request": "BODY",
+          "response_status": 409,
+          "after_refresh": "BODY",
+          "events": [],
+          "error_text": "That seating option was just booked. Your details are saved\u2014choose another option or try a different party size."
+        },
+        {
+          "pair": true,
+          "before_enter": "booking-party-size",
+          "at_request": "BODY",
+          "response_status": 409,
+          "after_refresh": "BODY",
+          "events": [],
+          "error_text": "That seating option was just booked. Your details are saved\u2014choose another option or try a different party size."
+        }
+      ],
+      "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3",
+      "utc_start": "2026-10-06T08:04:52.006880+00:00",
+      "utc_end": "2026-10-06T08:04:57.945807+00:00"
+    }
+  ],
+  "browser": "Chromium153.0.8010.12 officialdf-harness-runner/internalnetwork actualold1old2newAPI",
+  "browser_page_errors": [],
+  "actual_legacy_upgrade": "PASS both acceptedStage1singleton/schema1 AND Stage2pair/schema2 exports through realoldimages;committedresponse lost/livecancel/export/importbetweenrequests;existingauth/form/methodpathbodykeycaller intact;200exactoriginalJSON withoutrevision/terms;no reload/newlogin;currentcancelledlookup andfreshadoption works",
+  "native_source_independence": "PASS amendedanchorrev3/originalcreatereceipt1/seriesreceiptanchor3/sourcecurrentcancelledrev4;export immutable afterwrite;sourceactuallystopped;peerimport/replays/livehistory/terms/series/counters match;nativehistory/terminal/membership/receipttermcorruption422unchanged",
+  "official": {
+    "checks": {
+      "1": {
+        "collected": 120,
+        "passed": 120,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0,
+        "deselected": 0,
+        "xfailed": 0,
+        "files": {
+          "stage_1/test_health_reset_auth.py": {
+            "passed": 12,
+            "total": 12
+          },
+          "stage_1/test_reservations.py": {
+            "passed": 37,
+            "total": 37
+          },
+          "stage_1/test_restaurants_availability.py": {
+            "passed": 18,
+            "total": 18
+          },
+          "stage_1/test_retries_time_input.py": {
+            "passed": 20,
+            "total": 20
+          },
+          "stage_1/test_sample.py": {
+            "passed": 20,
+            "total": 20
+          },
+          "stage_1/test_seeded_state.py": {
+            "passed": 13,
+            "total": 13
+          }
+        }
+      },
+      "2": {
+        "collected": 25,
+        "passed": 25,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0,
+        "deselected": 0,
+        "xfailed": 0,
+        "files": {
+          "stage_2/test_sample.py": {
+            "passed": 8,
+            "total": 8
+          },
+          "stage_2/test_ui.py": {
+            "passed": 17,
+            "total": 17
+          }
+        }
+      },
+      "3": {
+        "collected": 7,
+        "passed": 7,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0,
+        "deselected": 0,
+        "xfailed": 0,
+        "files": {
+          "stage_3/test_sample.py": {
+            "passed": 7,
+            "total": 7
+          }
+        }
+      }
+    },
+    "utc_start": "2026-10-06T08:00:32.629873+00:00",
+    "utc_end": "2026-10-06T08:01:20.686373+00:00",
+    "local_isolated_harness_not_external_judgment": true
+  },
+  "material_product_defects_established": [],
+  "retained_failures": [
+    {
+      "attempt": "api",
+      "exit": 1,
+      "diagnosis": "Efreecontrol18:00+90min wronglyassumednonoverlap with19:00booking;Sfirstfailure repairpolicy reusedalready-successfulkey causingcorrect409;X5001digitresponsehitclientCPython4300limit. No productrepair."
+    },
+    {
+      "attempt": "api2",
+      "exit": 1,
+      "diagnosis": "Eassertion diagnosis isolatedold18:00overlap. Failedkey correction and testclientonly PYTHONINTMAXSTRDIGITS=0 madeS/Xpass. No service/hostglobalguardchange."
+    },
+    {
+      "attempt": "api3",
+      "exit": 0,
+      "diagnosis": "Econtrol21:30free wasindependenthalf-open validoracle;all4capacity/overlap truthclasses PASS."
+    },
+    {
+      "attempt": "browser",
+      "exit": 1,
+      "diagnosis": "BroadEnter-numberfocus assertion failed: beforeEnterparty, atPOSTBODY, after409refreshBODY. Stage2 design expressly permits disablingfieldsduringfetch. Original assertionretained;diagnosticshowsloss before409refresh. Separatecontractualsubmitfocus andreenabledinputheld-refreshcontrolsPASS; nounsupported input-through-disabling requirement imposed. Reviewer maychallenge disposition."
+    }
+  ],
+  "not_tested": [
+    "Nativebrowserzoom/assistiveaudio/exhaustivecalendar,errorpermutation andconcurrencyinterleaving/resourcepeak profiling.",
+    "ExactdeterministicHTTPcutoff equality; controlled testsusepast/farfromequality/now+2days versus0/7daycutoffs.",
+    "All50mixedrevision/publicreadinterleavings;5fifty-clientraceclasses observed only.",
+    "Decimalfraction/boolunknownfield equality migration combinations beyondrealadjacentlargeintegerlegacyreceipts, allhistoricalcorruptioncross-products.",
+    "No newStage3screensrequired; full newDesigner renderacceptance not claimed. Existing1280/375 screenshotcontrols and nohorizontaloverflow support finite inheritedUI only.",
+    "Cancelledlegacyhistorybootstrap andinternalcounterbaseline are conventions, not reconstructed historical truth or public required baseline. Nativehistory no-bootstrap corruption was observed.",
+    "Enter on a disablednumberinput retainsBODY focus aftersubmission; observed separately, not closed as a promisedparty-focus guarantee. Submit/retryfocus andreenabledinputthrough409refresh testedPASS.",
+    "Mappedhostportlayer not tested by ourmanualinternalnetwork suite; localofficialisolatedharness is separate observedlayer."
+  ],
+  "counter_oracle_scope": "Requiredadoption/batch increments read inportableinternalexport state, notinventedpubliccounterendpoint/baselineclaim. Series/reservationcounters independentlypublic.",
+  "cost": "UNAVAILABLE",
+  "ownership": "Evidenceonly;no trackededit/productrepair/sharedGitmutation;cleanexactdetachedclone;packagedcurrentandrealoldsourcebytechecks inprovenance.",
+  "build_commands": [
+    {
+      "command": "docker build -t qa-s3-335f16 /private/tmp/tablekeeper-qa-s3-335f16-20261006T0800Z/stage-3 > /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/build.txt 2>&1",
+      "exit": 0
+    },
+    {
+      "command": "docker build -t qa-s3-old1 /private/tmp/tablekeeper-qa-s3-335f16-20261006T0800Z/stage-1 > /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/build-old1.txt 2>&1",
+      "exit": 0
+    },
+    {
+      "command": "docker build -t qa-s3-old2 /private/tmp/tablekeeper-qa-s3-335f16-20261006T0800Z/stage-2 > /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/build-old2.txt 2>&1",
+      "exit": 0
+    }
+  ],
+  "environment_commands": [
+    "docker network create --internal qa-s3-net-0800",
+    "docker run -d --name qa-s3-app --network qa-s3-net-0800 --cpus=2 --memory=2g qa-s3-335f16",
+    "docker run -d --name qa-s3-peer --network qa-s3-net-0800 --cpus=2 --memory=2g qa-s3-335f16",
+    "docker run -d --name qa-s3-old1 --network qa-s3-net-0800 --cpus=2 --memory=2g qa-s3-old1",
+    "docker run -d --name qa-s3-old2 --network qa-s3-net-0800 --cpus=2 --memory=2g qa-s3-old2",
+    "docker run -d --name qa-s3-exportsource --network qa-s3-net-0800 --cpus=2 --memory=2g qa-s3-335f16"
+  ],
+  "environment_command_results": "all exit0; images/containeridentity/resources inprovenance.json;actualsource stopped beforeimport andscopedcleanup exit0",
+  "cleanup": "cleanup.json"
+}
