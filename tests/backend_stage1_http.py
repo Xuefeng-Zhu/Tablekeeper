@@ -171,6 +171,60 @@ class HTTPTests(unittest.TestCase):
         self.assertEqual([s for s,b in results].count(201),1)
         self.assertEqual([s for s,b in results].count(409),49)
 
+    def test_unbounded_decimal_query_and_capacity(self):
+        for party, expected in [('4',['A','B','C']), ('1000000000000',[]), ('0000000000004',['A','B','C']), ('9'*5000,[]), ('0'*5000+'4',['A','B','C'])]:
+            with self.subTest(digits=len(party), suffix=party[-5:]):
+                status, body = self.request('GET','/availability?restaurant_id=r&date=2030-01-03&party_size='+party)
+                self.assertEqual(status,200)
+                self.assertEqual(len(body['slots']),8)
+                self.assertTrue(all(row['available_table_ids']==expected for row in body['slots']))
+        for party in ['0','0000000000000','4.0','1e12','%2B4','-4']:
+            self.error(self.request('GET','/availability?restaurant_id=r&date=2030-01-03&party_size='+party),422,'validation_failed')
+        fixture=self.fixture();fixture['restaurants'][0]['tables'][0]['capacity']=1000000000000
+        self.assertEqual(self.request('POST','/_test/reset',fixture)[0],204)
+        self.token=self.request('POST','/auth/login',{'email':'a@b','password':'password1'})[1]['token']
+        status, body=self.request('GET','/availability?restaurant_id=r&date=2030-01-03&party_size=1000000000000')
+        self.assertEqual(status,200)
+        self.assertTrue(all(row['available_table_ids']==['A'] for row in body['slots']))
+        booking=self.booking();booking['party_size']=1000000000000
+        self.assertEqual(self.create(booking,'huge-party')[0],201)
+        status,body=self.request('GET','/availability?restaurant_id=r&date=2030-01-03&party_size=1000000000000')
+        self.assertEqual(status,200)
+        self.assertEqual(next(row for row in body['slots'] if row['starts_at_local'].endswith('19:00'))['available_table_ids'],[])
+
+    def test_four_digit_calendar_and_portability(self):
+        originals=[]
+        for year in ['0001','0099','0999','1000','9999']:
+            date=year+'-01-01'
+            with self.subTest(year=year):
+                status, body=self.request('GET','/availability?restaurant_id=r&date='+date+'&party_size=4')
+                self.assertEqual(status,200)
+                self.assertEqual([row['starts_at_local'] for row in body['slots']],[date+'T'+hour for hour in ['18:00','18:30','19:00','19:30','20:00','20:30','21:00','21:30']])
+                booking=self.booking();booking['starts_at_local']=date+'T19:00'
+                status,record=self.create(booking,'year'+year)
+                self.assertEqual(status,201)
+                self.assertEqual(record['starts_at_local'],date+'T19:00')
+                self.assertEqual(record['starts_at'],date+'T19:00:00+00:00')
+                originals.append((year,booking,record))
+        snapshot=self.request('GET','/_test/export')[1]
+        self.assertEqual(self.request('POST','/_test/import',snapshot,destination=1)[0],204)
+        for year,booking,record in originals:
+            self.assertEqual(self.request('POST','/reservations',booking,self.token,'year'+year,destination=1),(200,record))
+        for date in ['0000-01-01','0099-02-29','10000-01-01']:
+            self.error(self.request('GET','/availability?restaurant_id=r&date='+date+'&party_size=4'),422,'validation_failed')
+
+    def test_large_grid_step_window_bound(self):
+        for step,expected in [(30,8),(300,1),(301,1),(1000000000000,1),(10**100,1)]:
+            with self.subTest(step=step):
+                fixture=self.fixture();fixture['restaurants'][0]['slot_minutes']=step
+                self.assertEqual(self.request('POST','/_test/reset',fixture)[0],204)
+                status,body=self.request('GET','/availability?restaurant_id=r&date=2030-01-03&party_size=4')
+                self.assertEqual(status,200)
+                self.assertEqual(len(body['slots']),expected)
+                self.assertEqual(body['slots'][0]['starts_at_local'],'2030-01-03T18:00')
+        fixture=self.fixture();fixture['restaurants'][0]['slot_minutes']=0
+        self.error(self.request('POST','/_test/reset',fixture),422,'validation_failed')
+
     def test_errors_ownership_and_reuse_precedence(self):
         self.error(self.create({'restaurant_id':False}),400,'malformed_request')
         for value in [0,-1,4.5,'4',True,None]:

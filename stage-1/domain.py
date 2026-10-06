@@ -1,5 +1,6 @@
 """Shared booking planner: local grids, absolute intervals, final-set occupancy."""
 import re
+from decimal import Decimal
 from datetime import datetime, timedelta, timezone
 from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 from values import fail, field, identifier, APIError
@@ -57,7 +58,7 @@ def hours(restaurant, value):
     day = WEEKDAYS[value.weekday()]
     for entry in restaurant['opening_hours']:
         if entry['weekday'] == day:
-            prefix = value.strftime('%Y-%m-%dT')
+            prefix = value.date().isoformat() + 'T'
             return local(prefix + entry['opens']), local(prefix + entry['closes'])
     return None
 
@@ -80,7 +81,6 @@ def plan(state, body, existing=None):
     if 'party_size' not in merged:
         fail()
     raw_party = merged['party_size']
-    from decimal import Decimal
     if isinstance(raw_party, bool) or not isinstance(raw_party, (int, Decimal)) or raw_party < 1 or (isinstance(raw_party, Decimal) and raw_party != raw_party.to_integral_value()):
         fail()
     if raw_party > table['capacity']:
@@ -145,7 +145,12 @@ def availability(state, query):
         fail()
     rid, date, party = (query[k][0] for k in ('restaurant_id', 'date', 'party_size'))
     identifier({'restaurant_id': rid}, 'restaurant_id')
-    if not re.fullmatch(r'[0-9]+', party) or len(party) > 12 or int(party) < 1:
+    if not re.fullmatch(r'[0-9]+', party):
+        fail()
+    # Decimal preserves arbitrary digit lengths without Python's int-string limit.
+    # Construction and comparison are exact and independent of Decimal precision.
+    party = Decimal(party)
+    if party < 1:
         fail()
     naive = local(date + 'T00:00')
     restaurant = find_restaurant(state, rid)
@@ -154,7 +159,7 @@ def availability(state, query):
     if window:
         cursor, close = window
         while cursor < close:
-            text = cursor.strftime('%Y-%m-%dT%H:%M')
+            text = cursor.isoformat(timespec='minutes')
             try:
                 # A synthetic capacity-valid table lets shared planning decide legal instants.
                 table = restaurant['tables'][0] if restaurant['tables'] else None
@@ -169,7 +174,7 @@ def availability(state, query):
                 if legal:
                     available = []
                     for t in restaurant['tables']:
-                        if t['capacity'] >= int(party):
+                        if t['capacity'] >= party:
                             record = {**candidate, 'status': 'confirmed', 'table_id': t['id'], 'restaurant_id': rid}
                             if not any(overlaps(record, other) for other in state['reservations']):
                                 available.append(t['id'])
@@ -177,5 +182,9 @@ def availability(state, query):
             except APIError as error:
                 if error.code not in ('invalid_local_time', 'outside_opening_hours'):
                     raise
-            cursor += timedelta(minutes=restaurant['slot_minutes'])
+            step = restaurant['slot_minutes']
+            remaining_minutes = int((close - cursor).total_seconds() // 60)
+            if step >= remaining_minutes:
+                break
+            cursor += timedelta(minutes=step)
     return {'restaurant_id': rid, 'date': date, 'timezone': restaurant['timezone'], 'slots': slots}
