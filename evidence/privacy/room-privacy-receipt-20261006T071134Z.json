@@ -1,0 +1,127 @@
+{
+  "source_basename": "Tablekeeper-Local-Sol-October-5 (1).json",
+  "sha256": "f79f7f9937325f9689c3e0cf55f450887751706b5cee53dac59afeb58787a132",
+  "bytes": 10274439,
+  "room": {
+    "id": "4084182d-0b85-46d6-a137-f0bd7d44b498",
+    "title": "Tablekeeper \u00b7 Local Sol \u00b7 October 5"
+  },
+  "scope": "full",
+  "exportedAt": "2026-10-06T07:11:34.620Z",
+  "messages": 7018,
+  "added_messages": 556,
+  "previous_messages_changed": 6,
+  "changed_message_ids": [
+    "44edb3b5-f911-4c5b-a9c9-10e3a7c5d186",
+    "c9c7b584-a724-446d-ad53-778672c13d7e",
+    "1c2add32-b8bc-4b78-98e5-5220aaa4d166",
+    "8fdd7825-1ec9-48e4-88dd-9899733930dd",
+    "a9e9c46e-a5bd-4f68-b9e6-e12a3a370380",
+    "b7c828d8-0c8f-407b-96d7-4532aa5da97c"
+  ],
+  "strings_scanned": 90646,
+  "structured_payloads_decoded": 6808,
+  "patterns": [
+    "bearer-token",
+    "api-key",
+    "aws-access-key",
+    "github-token",
+    "url-credentials",
+    "private-key",
+    "github-fine-grained",
+    "aws-session-access",
+    "google-api",
+    "slack-token",
+    "stripe-secret",
+    "jwt",
+    "basic-auth",
+    "band-key",
+    "sensitive-query",
+    "email",
+    "ssn"
+  ],
+  "method": "Every string leaf including metadata and tool output, recursively parsing structured JSON/repr payloads; full export plus comparison with prior audited export. Generic quoted auth/token values scanned separately. Values omitted.",
+  "audited_at_utc": "2026-10-06T07:13:51.924731+00:00",
+  "status": "PASS \u2014 no actual provider/API/GitHub/BAND key, private auth credential or sensitive personal value detected",
+  "strong_credential_matches": 0,
+  "previous_export_sha256": "afe76f7fe500f88dbb21f5a9b0529c5d5e7270db55fe62809aa361d856f096e8",
+  "comparison_note": "All 6462 previously exported message IDs retained, plus 556 added messages. Six existing records differ only in metadata; all content and metadata in the new full export scanned.",
+  "email_scan": {
+    "detector_hits_including_decoded_duplicates": 134,
+    "added_message_hits_including_decoded_duplicates": 6,
+    "domains": [
+      "example.com",
+      "factory.invalid",
+      "factory.local",
+      "local.invalid",
+      "qa.test",
+      "review.test"
+    ],
+    "classification": "All matched email addresses use synthetic test/agent Git identity domains; no private real email domain detected."
+  },
+  "literal_auth_scan": {
+    "unique_values": 13,
+    "unique_values_in_added_messages": 1,
+    "classification": "All 13 distinct literal matches are synthetic fixture passwords, source/UI labels, supplied documentation token placeholders, or deliberate invalid-token test input. The one distinct value in added messages already appeared in the earlier audited fixture source. No values included in this receipt.",
+    "unclassified_values": 0
+  },
+  "added_message_candidate_locations": [
+    {
+      "message_id": "b9bc2e5a-08d0-4605-a5d7-0b4899746dd2",
+      "location": "$.messages[6848].content",
+      "shape": "email",
+      "line": 1,
+      "added_message": true,
+      "length": 15,
+      "fingerprint": "d25354f658256d39"
+    },
+    {
+      "message_id": "b9bc2e5a-08d0-4605-a5d7-0b4899746dd2",
+      "location": "$.messages[6848].content",
+      "shape": "email",
+      "line": 1,
+      "added_message": true,
+      "length": 15,
+      "fingerprint": "d25354f658256d39"
+    },
+    {
+      "message_id": "b9bc2e5a-08d0-4605-a5d7-0b4899746dd2",
+      "location": "$.messages[6848].content",
+      "shape": "email",
+      "line": 1,
+      "added_message": true,
+      "length": 15,
+      "fingerprint": "d25354f658256d39"
+    },
+    {
+      "message_id": "b9bc2e5a-08d0-4605-a5d7-0b4899746dd2",
+      "location": "$.messages[6848].content.decoded.args.command",
+      "shape": "email",
+      "line": 11,
+      "added_message": true,
+      "length": 15,
+      "fingerprint": "d25354f658256d39"
+    },
+    {
+      "message_id": "b9bc2e5a-08d0-4605-a5d7-0b4899746dd2",
+      "location": "$.messages[6848].content.decoded.args.command",
+      "shape": "email",
+      "line": 58,
+      "added_message": true,
+      "length": 15,
+      "fingerprint": "d25354f658256d39"
+    },
+    {
+      "message_id": "b9bc2e5a-08d0-4605-a5d7-0b4899746dd2",
+      "location": "$.messages[6848].content.decoded.args.command",
+      "shape": "email",
+      "line": 104,
+      "added_message": true,
+      "length": 15,
+      "fingerprint": "d25354f658256d39"
+    }
+  ],
+  "file_mutations": "Source downloads and earlier privacy receipt preserved unchanged; only this new sanitized audit receipt and candidate metadata were written.",
+  "publication_gate": "The specified full JSON download can be copied unchanged to root room.json under this audit.",
+  "limitations": "Credential regexes, structured payload decoding and source-context review cannot prove absence of every possible encoded or novel secret. Synthetic application test credentials are distinguished from user/provider credentials."
+}

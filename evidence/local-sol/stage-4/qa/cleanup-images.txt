@@ -1,0 +1,5 @@
+Untagged: qa-s4-image1-1012:latest
+Untagged: qa-s4-image2-1012:latest
+Untagged: qa-s4-image3-1012:latest
+Untagged: qa-s4-image4-1012:latest
+Deleted: sha256:15a3df274643a11db0b1a774ee65c76180725790e946043f69eca3e8dc2dd793

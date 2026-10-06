@@ -1,0 +1,92 @@
+{
+  "absolute_token_cap": 656587855,
+  "active_turn_ids": [
+    "reviewer:171:fdb8e022-4d32-431f-bf13-f3e72b1d604a"
+  ],
+  "active_turn_limit": 1,
+  "all_seven_contexts_running": true,
+  "configuration_sha256": "a0587777fc739bd3a2da733453b54c04cea1413387ab777ae90453820ff95b2c",
+  "deadlines_and_epochs_preserved": true,
+  "evidence": [
+    {
+      "basename": "local-turn-1000-amendment.json",
+      "sha256": "e27171786e6d37ab05fb7186c09b141485359088a3b1305cc23ec9711667b7cc"
+    },
+    {
+      "basename": "local-turn-1000-source-review.json",
+      "sha256": "efa5f8fe29283fb3fae3a87129aa20ccb44cbe449346d020a9572099cad48162"
+    },
+    {
+      "basename": "local-turn-1000-unit-test-result.json",
+      "sha256": "90305416b61feaa3c9fb0fb7e6d4725b8f061b45a92415655f2665b5caabbbd9"
+    },
+    {
+      "basename": "pm-stage3-release-never-admitted-sdk-proof-after-failure.json",
+      "sha256": "24040d7211ee27d9d7cb7b725a3d9c5d4e254796a156f5f10699dbb7674d087d"
+    },
+    {
+      "basename": "local-turn-1000-held-expiry.json",
+      "sha256": "21c532c35928bc447f68d9403a65070a001c1e6bf691190de6d4b1d6c8e0eb98"
+    },
+    {
+      "basename": "local-turn-1000-held-retry-proof.json",
+      "sha256": "9b4eca7ad55b0eaf61ccd082387dae2ce8e34181ccba577aca099b2f248783c8"
+    },
+    {
+      "basename": "local-turn-1000-held-retry-release.json",
+      "sha256": "1f2ba9ab66ea58c9cda1a239811fa57cc7100450cfc9ce6b812be25bafc2fe13"
+    }
+  ],
+  "factory_source_sha256": "595edf4778edc76e2f20bf4456ef2867b7a5bb83e1fc0f1dc2f6eccf1a25262a",
+  "historical_baseline_tokens": 356587855,
+  "ledger_stop_reason": null,
+  "limitations": [
+    "First held startup expired with zero factory admissions and is retained as a failed startup, not successful resumed model work.",
+    "Full judged-readiness freeze remained blocked; supported normal local rehearsal separately sealed its exact source/config and passed normal admission.",
+    "Observed protocol progress and running state do not establish Stage4 implementation or product acceptance."
+  ],
+  "local_consumed_tokens": 167174947,
+  "local_total_allowance_tokens": 300000000,
+  "mode": "local unjudged development rehearsal",
+  "model": "gpt-6.1-sol",
+  "next_real_queue_work": {
+    "active_turn_ids": [
+      "reviewer:171:fdb8e022-4d32-431f-bf13-f3e72b1d604a"
+    ],
+    "note": "Actual authenticated post-resume queue/model activity; protocol acknowledgement and transport completion do not add product acceptance."
+  },
+  "observed_at": "2026-10-06T09:39:21.209550+00:00",
+  "old_terminal_manifest_preserved": true,
+  "original_blocked_pm_journal_preserved": true,
+  "original_dispatch_preserved": true,
+  "overall_deadline_utc": "2026-10-06T15:01:44.700437+00:00",
+  "owner_updated_at": "2026-10-06T09:39:20.928873+00:00",
+  "pid": 13921,
+  "pm770": {
+    "actual_ack_event_id": "fdb8e022-4d32-431f-bf13-f3e72b1d604a",
+    "deferred_journal_status": "completed",
+    "ended_at_utc": "2026-10-06T09:37:39.451489+00:00",
+    "original_codex_thread_preserved": true,
+    "receipt_status": "confirmed",
+    "started_at_utc": "2026-10-06T09:37:22.551618+00:00",
+    "status": "completed",
+    "trigger_event_id": "29f45c31-acb1-447e-9f27-7be641802f84"
+  },
+  "recorded_cumulative_tokens": 523762802,
+  "recorded_turn_counters": {
+    "architect": 109,
+    "backend": 151,
+    "designer": 30,
+    "frontend": 19,
+    "pm": 770,
+    "qa": 117,
+    "reviewer": 171
+  },
+  "remaining_tokens": 132825053,
+  "reviewer160_interrupted_turn_preserved": true,
+  "room_deadline_utc": "2026-10-06T15:07:44.288395+00:00",
+  "sealed_snapshot_manifest_sha256": "04e977d61d03f57cecb51578fb48b76284a1972e23674649287c01b4b405c03e",
+  "status": "RUNNING_ACTUAL_FIRST_ADMISSION_COMPLETED",
+  "turn_cap_after": 1000,
+  "turn_cap_before": 769
+}

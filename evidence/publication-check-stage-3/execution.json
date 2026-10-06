@@ -1,0 +1,24 @@
+{
+  "startedAt": "2026-10-06T08:59:31.222997+00:00",
+  "finishedAt": "2026-10-06T09:00:26.990814+00:00",
+  "command": [
+    "/Users/frank/mygit/Tablekeeper/runs/harness-venv/bin/python",
+    "-m",
+    "harness",
+    "run",
+    "--track",
+    "tablekeeper",
+    "--repo",
+    "/Users/frank/mygit/Tablekeeper/runs/canonical-repo-20261005",
+    "--stage",
+    "3",
+    "--mode",
+    "isolated",
+    "--out",
+    "/Users/frank/mygit/Tablekeeper/runs/stage3-publication-check-20261006T085931Z/official"
+  ],
+  "exitCode": 0,
+  "sourceCandidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3",
+  "packagingRevision": "aff2ae69b6465f95752d16d2c36bd2299fa1538f",
+  "scope": "Fresh operator clean-container supplied isolated checks through Stage3; independent factory product acceptance is separately retained; overshootStage4 is not accepted."
+}

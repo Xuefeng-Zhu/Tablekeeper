@@ -1,0 +1,24 @@
+{
+  "status": "VERIFIED_MEDIA",
+  "duration_seconds": 205.9,
+  "sha256": "6c4741e326a6c019d363b7df49466e692f99fe2823bc09f503b29ba3cb059cd8",
+  "bytes": 8737530,
+  "full_decode": "PASS",
+  "visual_review": {
+    "scene_midpoints_inspected": 12,
+    "fresh_app_scenes_inspected": 4,
+    "result": "PASS \u2014 correct home, Cedar six capacity/pair, actual login gate, Olive two Berlin; no overlays clipping key evidence",
+    "method": "Individually inspected 12 decoded midpoint JPEGs plus four raw fresh screenshots; existing 8 scene encodings preserved",
+    "limit": "Point visual inspection plus full decode; not continuous human playback"
+  },
+  "root_independent_review": {
+    "frames": [
+      "07-search.jpg",
+      "08-auth.jpg",
+      "09-olive.jpg"
+    ],
+    "result": "PASS correct observed restaurant/party/gate"
+  },
+  "scope": "Actual BAND room footage retained; four live app segments replaced by uniquely named genuine still captures; narration synthetic, point sampling rather than full human playback",
+  "source": "repair-provenance.json"
+}

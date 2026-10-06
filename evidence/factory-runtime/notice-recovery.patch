@@ -1,0 +1,16 @@
+--- a/factorykit/runtime.py
++++ b/factorykit/runtime.py
+@@ -1770,7 +1770,12 @@
+                         and not activity.get('membership_gap') and not activity.get('membership_advisory')
+                         and (admission is None or admission.state["state"] == "open")):
+                     try:
+-                        if continuation is not None and not activity['busy']:
++                        if not activity['busy'] and (continuation is not None
++                                or watchdog.due_notice(can_notify=True) is not None):
++                            # A normal restart has live authenticated SDK contexts
++                            # before any new model callback supplies sender tools.
++                            if continuation is None:
++                                admission_owner()
+                             available_tools.update(continuation_notice_tools(
+                                 agents, room, [s['agent_id'] for s in seats], available_tools))
+                         notification = await send_due_notice(watchdog, ledger, available_tools, config["seats"],

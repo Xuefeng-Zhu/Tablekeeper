@@ -1,0 +1,38 @@
+test_actual_legacy_stage1_stage2_exports_and_adoption (backend_stage3_http.Stage3Tests.test_actual_legacy_stage1_stage2_exports_and_adoption) ... ok
+test_anchor_revision_series_counters_and_native_import (backend_stage3_http.Stage3Tests.test_anchor_revision_series_counters_and_native_import) ... ok
+test_availability_unknown_restaurant_and_valid_control (backend_stage3_http.Stage3Tests.test_availability_unknown_restaurant_and_valid_control) ... ok
+test_calendar_dst_bounds_and_policy0_large_native (backend_stage3_http.Stage3Tests.test_calendar_dst_bounds_and_policy0_large_native) ... ok
+test_concurrent_expected_revision_and_series_replays (backend_stage3_http.Stage3Tests.test_concurrent_expected_revision_and_series_replays) ... ok
+test_first_index_failure_rollback_and_failed_key (backend_stage3_http.Stage3Tests.test_first_index_failure_rollback_and_failed_key) ... ok
+test_independent_explanation_rules (backend_stage3_http.Stage3Tests.test_independent_explanation_rules) ... ok
+test_mixed_multiseries_noop_dedup_and_counter_snapshot (backend_stage3_http.Stage3Tests.test_mixed_multiseries_noop_dedup_and_counter_snapshot) ... ok
+test_noop_oldterms_revisions_histories (backend_stage3_http.Stage3Tests.test_noop_oldterms_revisions_histories) ... ok
+test_policy_order_validation_receipts (backend_stage3_http.Stage3Tests.test_policy_order_validation_receipts) ... ok
+test_unbounded_fixture_integer_json_roundtrip (backend_stage3_http.Stage3Tests.test_unbounded_fixture_integer_json_roundtrip) ... ok
+test_concurrent_receipt_and_contention (backend_stage3_inherited.HTTPTests.test_concurrent_receipt_and_contention) ... ok
+test_dst_absolute_closing (backend_stage3_inherited.HTTPTests.test_dst_absolute_closing) ... ok
+test_errors_ownership_and_reuse_precedence (backend_stage3_inherited.HTTPTests.test_errors_ownership_and_reuse_precedence) ... ok
+test_exact_numbers_and_import (backend_stage3_inherited.HTTPTests.test_exact_numbers_and_import) ... ok
+test_folds_and_gap_end (backend_stage3_inherited.HTTPTests.test_folds_and_gap_end) ... ok
+test_four_digit_calendar_and_portability (backend_stage3_inherited.HTTPTests.test_four_digit_calendar_and_portability) ... ok
+test_grid_occupancy_and_cutoff (backend_stage3_inherited.HTTPTests.test_grid_occupancy_and_cutoff) ... ok
+test_large_grid_step_window_bound (backend_stage3_inherited.HTTPTests.test_large_grid_step_window_bound) ... ok
+test_moves_final_layout_rollback (backend_stage3_inherited.HTTPTests.test_moves_final_layout_rollback) ... ok
+test_numeric_equivalence_types_huge_exponents (backend_stage3_inherited.HTTPTests.test_numeric_equivalence_types_huge_exponents) ... ok
+test_offset_calendar_boundaries_and_state (backend_stage3_inherited.HTTPTests.test_offset_calendar_boundaries_and_state) ... ok
+test_positive_offset_minimum_local_date (backend_stage3_inherited.HTTPTests.test_positive_offset_minimum_local_date) ... ok
+test_same_table_time_swap (backend_stage3_inherited.HTTPTests.test_same_table_time_swap) ... ok
+test_unbounded_decimal_query_and_capacity (backend_stage3_inherited.HTTPTests.test_unbounded_decimal_query_and_capacity) ... ok
+test_all_final_layouts_and_rollback (backend_stage2_pairs.PairTests.test_all_final_layouts_and_rollback) ... ok
+test_options_and_second_member (backend_stage2_pairs.PairTests.test_options_and_second_member) ... ok
+test_pair_calendar_capacity_and_moves_replay (backend_stage2_pairs.PairTests.test_pair_calendar_capacity_and_moves_replay) ... ok
+test_pair_races (backend_stage2_pairs.PairTests.test_pair_races) ... ok
+test_pair_receipts_precision_and_import (backend_stage2_pairs.PairTests.test_pair_receipts_precision_and_import) ... ok
+test_seed_status_and_invalid_declaration (backend_stage2_pairs.PairTests.test_seed_status_and_invalid_declaration) ... ok
+test_selection_errors_and_replacement (backend_stage2_pairs.PairTests.test_selection_errors_and_replacement) ... ok
+
+----------------------------------------------------------------------
+Ran 32 tests in 10.179s
+
+OK
+{"work_item": "BUILD-S3", "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3", "responsible": "@frankzhu94/factory-backend", "start_utc": "2026-10-06T07:55:54.069216+00:00", "end_utc": "2026-10-06T07:56:04.248872+00:00", "tests": 32, "failures": 0, "errors": 0, "skipped": 0, "requests": 961, "status_counts": {"204": 106, "200": 476, "201": 167, "409": 133, "422": 64, "404": 9, "403": 1, "401": 1, "400": 4}, "max_request_seconds": 0.10568159499962348, "layer": "four actual packaged offline internal-network services Stage3x2/acceptedStage1/acceptedStage2;2CPU/2GiB each; Python3.12 runner", "result": "PASS"}

@@ -1,0 +1,5 @@
+BUILD-S4; fixed delivery ac1eb4945a2adaeaaf8a62d0817bdbc6a021e566; preserve all prior attempts.
+WIP Boolean expected_revision returned400 rather than required422; repairs.amend_series catches integer APIError and normalizes422. Original focused-host.txt and later original/counterexample/control pass preserved in backend-s4-20261006T0949Z.
+First test-driver NameError was a copied class rename oversight, fixed in test adapter; initial inherited-host.txt retained.
+66f25bd target-image fraction-probe.txt reproduced from/to submicrosecond rounding and lowercaseRFC3339 rejection. New rational tail parsing and case-insensitive syntax preserve original strings; test_explicit_instant_precision_offset_and_boundary_controls checks original, distinct offset and adjacent valid controls plus native roundtrip.
+0c45c22 target-image race oracle failed because20:00 overlapped fixed21:00 booking; implementation correctly could returntable_unavailable before peercommit. ac1eb49 changes test control to19:30, both individually valid proposals. Prior candidate-checks/report retained in backend-s4-final-20261006T1000Z.

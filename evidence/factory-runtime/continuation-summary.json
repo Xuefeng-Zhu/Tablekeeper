@@ -1,0 +1,106 @@
+{
+  "recorded_at_utc": "2026-10-06T07:31:44.600588+00:00",
+  "status": "PASS_RUNNING_SEALED",
+  "observed_running_at_utc": "2026-10-06T07:28:22.092004+00:00",
+  "pid": 76727,
+  "room_id": "4084182d-0b85-46d6-a137-f0bd7d44b498",
+  "same_room": true,
+  "seven_contexts_running": true,
+  "active_turn_count": 1,
+  "authorization": {
+    "additional_seconds": 28800,
+    "source": "Direct user answer in current Codex chat",
+    "user_answer": "Extend 8 hours and resume"
+  },
+  "original_failed_turn_id": "reviewer:160:b065cc30-6e77-4e05-9422-719b3b614dd4",
+  "original_trigger_event_id": "b065cc30-6e77-4e05-9422-719b3b614dd4",
+  "original_ack_event_id": "75ed753b-f1ce-4f8c-a9d5-6167a4388698",
+  "original_claim_disposition": "Interrupted turn and blocked confirmed-ACK journal retained; reviewed exact terminal claim non-replayable. No original task resend or model replay claimed.",
+  "recovery_callback_identity": "Not independently bound to a specific new active turn in this public summary",
+  "timeouts": {
+    "overall_timeout_seconds": {
+      "after": 249139,
+      "before": 220339
+    },
+    "stage_timeout_seconds": {
+      "after": 43200,
+      "before": 14400
+    }
+  },
+  "overall_deadline_utc": "2026-10-06T15:01:44.700437+00:00",
+  "room_stage_deadline_utc": "2026-10-06T15:07:44.288395+00:00",
+  "historical_token_baseline": 356587855,
+  "tokens_preserved_at_amendment": 482684075,
+  "local_tokens_used_at_amendment": 126096220,
+  "remaining_tokens_at_amendment": 173903780,
+  "cumulative_token_cap": 656587855,
+  "authorized_local_total_tokens": 300000000,
+  "tokens_at_running_observation": 484152648,
+  "usd_cost": "unavailable",
+  "source_fingerprint": "ea86bfe452489d5a9f3bb29922c9d3337f7808f8b2870a7f470d84e47f2b443b",
+  "sealed_manifest_sha256": "f5a942cd381d323fff83b553d0de08d0882cdf8fc847a83be3d4f247e80fc14e",
+  "configuration_canonical_sha256": "72ca7d4e07d4efe7419e021f08d85fb266b668b0d36aacf481b62e013c627a05",
+  "runtime_configuration_fingerprint": "f32c90dfd38de47d666b00bdee01ad1da330033f058b61ed3069b7fb2d9c8a0b",
+  "source_errors": [],
+  "unit_test_result": {
+    "captured_result": "Ran 115 tests in 2.009s; OK",
+    "command": [
+      "/Users/frank/mygit/Tablekeeper/factory/.venv/bin/python",
+      "-B",
+      "-m",
+      "unittest",
+      "tests.test_handoff_batching",
+      "tests.test_local_terminal_reconciliation",
+      "tests.test_workflow_runtime",
+      "tests.test_runtime",
+      "tests.test_startup_admission_runtime",
+      "tests.test_runtime_harness_integration",
+      "tests.test_balance_only_workflow",
+      "-q"
+    ],
+    "cwd": "/Users/frank/mygit/Tablekeeper/runs/local-sol-continuation-source-20261006",
+    "evidence_basis": "Actual command result observed earlier in this turn; timestamp records receipt creation, not fabricated test execution time.",
+    "exit_code": 0,
+    "recorded_at": "2026-10-06T07:29:58.841334+00:00",
+    "scope": "Offline factory utility regression tests; live continuation evidence is separate.",
+    "source_files": [
+      {
+        "path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-continuation-source-20261006/factorykit/runtime.py",
+        "sha256": "4e4ff4280b3376623c332fc580bac16030cc582aff5d9620b1993acb912fea5f"
+      },
+      {
+        "path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-continuation-source-20261006/factorykit/handoff_batching.py",
+        "sha256": "9af86052cde2c75613d30364ab7a599228628ad95b86c9db83b1443bae7b88bf"
+      },
+      {
+        "path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-continuation-source-20261006/factorykit/local_terminal_reconciliation.py",
+        "sha256": "71111d046f78ad1a4d999608f420e3f5e4ae18036a5debd0b7ad4089b9a0c866"
+      },
+      {
+        "path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-continuation-source-20261006/tests/test_handoff_batching.py",
+        "sha256": "27ae632486d4b5bc48e511cb5d36dfc1213c5447345e306175a0c216d866836c"
+      },
+      {
+        "path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-continuation-source-20261006/tests/test_local_terminal_reconciliation.py",
+        "sha256": "1975c6b4acd1509c15eb425b26cb3a61b6c473d4714cdbc8853ed50807262739"
+      }
+    ],
+    "status": "PASS"
+  },
+  "source_review": "evidence/factory-runtime/local-8h-source-review.json",
+  "scope": "Post-release actual running seal proof; no successful Stage3/4 or identified recovery-event completion claimed",
+  "source_records": [
+    {
+      "path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-20261005/readiness/local-8h-amendment.json",
+      "sha256": "707a371281605ae10b3eca29cb9b2e780ce628cbd73f05e0cc239634a96c7fe1"
+    },
+    {
+      "path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-20261005/readiness/local-8h-reconciliation.json",
+      "sha256": "90c67c80e91a51e0612c7b186831813e7e59e45dd3bc36d00e502ca2aacf9f32"
+    },
+    {
+      "path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-20261005/readiness/local-8h-running-sealed-proof.json",
+      "sha256": "fc6f31c6791f601b1e0d1baa551196f0353e1f9668b7b9a88a37961bbb7a9f0c"
+    }
+  ]
+}

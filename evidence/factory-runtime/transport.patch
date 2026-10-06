@@ -1,0 +1,177 @@
+--- a/factorykit/handoff_batching.py
++++ b/factorykit/handoff_batching.py
+@@ -193,7 +193,12 @@
+             raise BatchingError('Complete handoff payload digest or size is invalid.')
+         return body
+ 
+-    def observe(self, payload, *, confirmed=None):
++    def observe(self, payload, *, event_room_id, confirmed=None):
++        # The SDK routes WebSocket messages by MessageEvent.room_id. Its nested
++        # payload room is optional; never invent or overwrite a payload field.
++        payload_room = getattr(payload, 'chat_room_id', None)
++        if event_room_id != self.scope['room_id'] or (payload_room is not None and payload_room != event_room_id):
++            raise BatchingError('Inbound handoff envelope or explicit payload room conflicts with its journal scope.')
+         parsed = split_fragment(payload.content)
+         if parsed is None:
+             return BatchDecision('ordinary')
+@@ -201,7 +206,7 @@
+         metadata = getattr(payload, 'metadata', None)
+         mentions = getattr(metadata, 'mentions', None)
+         recipients = sorted(getattr(m, 'id', None) for m in mentions) if mentions and all(isinstance(getattr(m, 'id', None), str) for m in mentions) else []
+-        if ((recipients and recipients != h['recipients']) or payload.chat_room_id != self.scope['room_id'] or not _uuid(payload.id)
++        if ((recipients and recipients != h['recipients']) or not _uuid(payload.id)
+                 or payload.sender_type != 'Agent' or payload.sender_id not in self.scope['participant_ids']
+                 or self.scope['recipient_id'] not in h['recipients']
+                 or not set(h['recipients']) <= set(self.scope['participant_ids'])
+@@ -214,7 +219,7 @@
+         recipients = h['recipients']
+         key = self._key(payload.sender_id, h['delivery'])
+         binding = self._binding(h, prefix, payload.sender_id)
+-        event = dict(id=payload.id, room_id=payload.chat_room_id, sender_id=payload.sender_id,
++        event = dict(id=payload.id, room_id=event_room_id, sender_id=payload.sender_id,
+                      sender_type=payload.sender_type, content=payload.content, batch=key, index=h['index'], recipients=recipients)
+         with self._transaction() as d:
+             if any(b['status'] in ('claimed','blocked') for b in d['batches'].values()):
+--- a/factorykit/runtime.py
++++ b/factorykit/runtime.py
+@@ -638,6 +638,9 @@
+         try:
+             decision = None
+             if self.batching:
++                if (agent_id != self.batching.scope['recipient_id']
++                        or (hasattr(ctx, 'room_id') and ctx.room_id != event.room_id)):
++                    raise GateError("Handoff execution context does not match its routed room and recipient.")
+                 if not self.can_process():
+                     raise GateError("Stopped or expired run cannot process handoff input.")
+                 from .handoff_batching import split_fragment
+@@ -654,7 +657,7 @@
+                         if confirmed is not None or attempt == 50:
+                             break
+                         await asyncio.sleep(0.1)
+-                decision = self.batching.observe(event.payload, confirmed=confirmed)
++                decision = self.batching.observe(event.payload, event_room_id=event.room_id, confirmed=confirmed)
+             if decision and decision.kind == 'skip':
+                 return None  # The journal is durable before SDK mark_processed.
+             inp = await self.default.process(ctx=ctx, event=event, agent_id=agent_id)
+--- a/tests/test_balance_only_workflow.py
++++ b/tests/test_balance_only_workflow.py
+@@ -215,7 +215,7 @@
+             payload=MessageCreatedPayload(id=event_id,content=content,sender_id=PM,sender_type='Agent',
+                 message_type='text',chat_room_id=ROOM,inserted_at='2026-10-05T01:00:00+00:00',
+                 updated_at='2026-10-05T01:00:00+00:00')
+-            journal.observe(payload,confirmed=json.loads(self.watchdog.path.read_text())['events'][event_id])
++            journal.observe(payload,event_room_id=ROOM,confirmed=json.loads(self.watchdog.path.read_text())['events'][event_id])
+         journal.claim(eid(702));self.wrapper.handoff_journal=journal
+         names={s['function']['name'] for s in self.wrapper.get_openai_tool_schemas()}
+         self.assertTrue({'factory_turn_budget','factory_handoff_ack'}<=names)
+--- a/tests/test_handoff_batching.py
++++ b/tests/test_handoff_batching.py
+@@ -60,7 +60,7 @@
+         return HandoffJournal(self.path, ROOM, WORKER, ROSTER, **kwargs)
+ 
+     def observe(self, p, **kwargs):
+-        return self.j.observe(p, confirmed=kwargs.pop('confirmed', authority(p)), **kwargs)
++        return self.j.observe(p, event_room_id=kwargs.pop('event_room_id', ROOM), confirmed=kwargs.pop('confirmed', authority(p)), **kwargs)
+ 
+     def complete(self):
+         parts = fragments([' alpha\n', 'β🙂  \n\n'])
+@@ -178,6 +178,15 @@
+         p=payload(text,101)  # SDK metadata absent is supported via confirmed REST binding.
+         self.assertEqual(self.observe(p).kind,'complete')
+ 
++    def test_optional_payload_room_uses_explicit_verified_envelope_only(self):
++        text=fragments(['one'])[0]
++        p=payload(text,100,chat_room_id=None)
++        for room in (None,OTHER,''):
++            with self.assertRaises(BatchingError):self.observe(p,event_room_id=room)
++        self.assertEqual(self.observe(p,event_room_id=ROOM).kind,'complete')
++        self.assertIsNone(p.chat_room_id)  # Do not rewrite or fabricate wire fields.
++        self.assertEqual(json.loads(self.path.read_text())['events'][p.id]['room_id'],ROOM)
++
+     def test_different_authenticated_senders_cannot_mix_parts(self):
+         parts=fragments(['one','two'])
+         self.observe(payload(parts[0],100))
+@@ -195,7 +204,7 @@
+ 
+     def test_ordinary_human_or_ack_text_is_not_batched(self):
+         for text in ('Please begin the task.', 'HANDOFF-ACK delivery RESULT-1; SHA-256 '+'a'*64+'; sender @[['+PM+']]'):
+-            self.assertEqual(self.j.observe(payload(text,100,sender_type='User')).kind,'ordinary')
++            self.assertEqual(self.j.observe(payload(text,100,sender_type='User'),event_room_id=ROOM).kind,'ordinary')
+ 
+ 
+ class PreprocessorTests(unittest.IsolatedAsyncioTestCase):
+@@ -205,7 +214,7 @@
+         self.workflow=self.root/'workflow.json';self.workflow.write_text(json.dumps({'events':{}}))
+         self.halt=Mock();self.allowed=True
+         self.guard=RoomPreprocessor(ROOM,batching=self.j,halt=self.halt,workflow_path=self.workflow,can_process=lambda:self.allowed)
+-        self.ctx=SimpleNamespace(participants=[{'id':PM,'handle':'owner/pm'},{'id':WORKER,'handle':'owner/worker'}])
++        self.ctx=SimpleNamespace(room_id=ROOM,participants=[{'id':PM,'handle':'owner/pm'},{'id':WORKER,'handle':'owner/worker'}])
+         self.adapter=AsyncMock()
+         self.agent=Agent.__new__(Agent)
+         self.agent._preprocessor=self.guard;self.agent._runtime=SimpleNamespace(agent_id=WORKER);self.agent._adapter=self.adapter
+@@ -240,6 +249,43 @@
+         self.assertTrue(inp.msg.content.endswith(''.join(f'fragment-{i}\n' for i in range(12))))
+         self.assertEqual(inp.msg.id,uid(111));self.assertTrue(inp.is_session_bootstrap)
+         self.assertEqual(inp.contacts_msg,'contacts')
++
++    async def test_actual_sdk_minimal_websocket_payload_without_nested_room(self):
++        from band.platform.link import BandLink
++        parts=fragments(['one','two'])
++        for i,constructor in enumerate((MessageCreatedPayload.model_validate,MessageCreatedPayload.model_construct)):
++            raw=payload(parts[i],120+i).model_dump(exclude={'chat_room_id'})
++            p=constructor(raw) if i==0 else constructor(**raw)
++            self.assertNotIn('chat_room_id',p.model_fields_set)
++            self.assertIsNone(p.chat_room_id)
++            captured=[]
++            link=BandLink.__new__(BandLink);link._queue_event=captured.append
++            await link._on_message_created(ROOM,p)
++            self.confirm(p)
++            await self.agent._on_execute(self.ctx,captured[0])
++            self.assertIs(captured[0].payload,p)
++        self.adapter.on_event.assert_awaited_once()
++        self.assertEqual(self.adapter.on_event.await_args.args[0].msg.id,uid(121))
++        retained=json.loads(self.path.read_text())
++        self.assertEqual({e['room_id'] for e in retained['events'].values()},{ROOM})
++        self.halt.assert_not_called()
++
++    async def test_explicit_payload_room_conflict_halts_without_hydration(self):
++        p=payload(fragments(['a'])[0],100,chat_room_id=OTHER)
++        with self.assertRaises(BatchingError):await self.send(p)
++        self.halt.assert_called_once();self.guard.default.process.assert_not_called()
++        self.assertFalse(json.loads(self.path.read_text())['events'])
++
++    async def test_outer_room_filter_and_context_recipient_crosschecks(self):
++        p=payload(fragments(['a'])[0],100,chat_room_id=None);self.confirm(p)
++        await self.agent._on_execute(self.ctx,MessageEvent(room_id=OTHER,payload=p))
++        self.halt.assert_not_called();self.guard.default.process.assert_not_called()
++        self.ctx.room_id=OTHER
++        with self.assertRaises(GateError):await self.agent._on_execute(self.ctx,MessageEvent(room_id=ROOM,payload=p))
++        self.ctx.room_id=ROOM
++        with self.assertRaises(GateError):await self.guard.process(self.ctx,MessageEvent(room_id=ROOM,payload=p),OTHER)
++        self.assertEqual(self.halt.call_count,2)
++        self.assertFalse(json.loads(self.path.read_text())['events'])
+ 
+     async def test_partial_persist_failure_halts_before_successful_callback(self):
+         p=payload(fragments(['a','b'])[0],100)
+--- a/tests/test_operational_tools.py
++++ b/tests/test_operational_tools.py
+@@ -123,7 +123,7 @@
+         self.watchdog.observe_outbound(event_id,PM,[ACTOR],content)
+         payload = MessageCreatedPayload(id=event_id,content=content,sender_id=PM,sender_type='Agent',
+             message_type='text',chat_room_id=ROOM,inserted_at='2026-10-05T01:00:00+00:00',updated_at='2026-10-05T01:00:00+00:00')
+-        self.journal.observe(payload,confirmed=json.loads(self.watchdog.path.read_text())['events'][event_id])
++        self.journal.observe(payload,event_room_id=ROOM,confirmed=json.loads(self.watchdog.path.read_text())['events'][event_id])
+         self.journal.claim(event_id)
+ 
+     def test_actual_codex_dynamic_schema_and_mcp_names(self):
+--- a/tests/test_workflow_runtime.py
++++ b/tests/test_workflow_runtime.py
+@@ -200,7 +200,7 @@
+             self.watchdog.observe_outbound(event_id, BACKEND, [PM], content)
+             payload = MessageCreatedPayload(id=event_id, content=content, sender_id=BACKEND, sender_type='Agent',
+                 message_type='text', chat_room_id=ROOM, inserted_at='2026-10-05T01:00:00+00:00', updated_at='2026-10-05T01:00:00+00:00')
+-            journal.observe(payload, confirmed=json.loads(self.watchdog.path.read_text())['events'][event_id])
++            journal.observe(payload, event_room_id=ROOM, confirmed=json.loads(self.watchdog.path.read_text())['events'][event_id])
+         if complete and claim:
+             journal.claim(eid(702))
+         guard = self.wrapper(PM, 'structured-ack')

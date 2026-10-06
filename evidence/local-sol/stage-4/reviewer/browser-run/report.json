@@ -1,0 +1,531 @@
+{
+  "candidate": "ac1eb4945a2adaeaaf8a62d0817bdbc6a021e566",
+  "browser": "153.0.8010.12",
+  "focus": [
+    {
+      "name": "1280-False-conflict-current",
+      "viewport": [
+        1280,
+        900
+      ],
+      "pair": false,
+      "state": "conflict",
+      "control": null,
+      "before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 79
+      },
+      "pending": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 79
+      },
+      "control_before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 79
+      },
+      "after": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 116
+      },
+      "actual_server_status": [
+        409
+      ],
+      "outcome": "PASS recovery focus",
+      "utc": "2026-10-06T10:30:32.780001+00:00"
+    },
+    {
+      "name": "1280-False-uncertain-current",
+      "viewport": [
+        1280,
+        900
+      ],
+      "pair": false,
+      "state": "uncertain",
+      "control": null,
+      "before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 79
+      },
+      "pending": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 79
+      },
+      "control_before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 79
+      },
+      "after": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 116
+      },
+      "actual_server_status": [
+        201
+      ],
+      "outcome": "PASS recovery focus",
+      "utc": "2026-10-06T10:30:34.105173+00:00"
+    },
+    {
+      "name": "1280-True-conflict-current",
+      "viewport": [
+        1280,
+        900
+      ],
+      "pair": true,
+      "state": "conflict",
+      "control": null,
+      "before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 79
+      },
+      "pending": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 79
+      },
+      "control_before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 79
+      },
+      "after": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 140
+      },
+      "actual_server_status": [
+        409
+      ],
+      "outcome": "PASS recovery focus",
+      "utc": "2026-10-06T10:30:35.423431+00:00"
+    },
+    {
+      "name": "1280-True-uncertain-current",
+      "viewport": [
+        1280,
+        900
+      ],
+      "pair": true,
+      "state": "uncertain",
+      "control": null,
+      "before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 79
+      },
+      "pending": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 79
+      },
+      "control_before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 79
+      },
+      "after": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 140
+      },
+      "actual_server_status": [
+        201
+      ],
+      "outcome": "PASS recovery focus",
+      "utc": "2026-10-06T10:30:36.721682+00:00"
+    },
+    {
+      "name": "375-False-conflict-current",
+      "viewport": [
+        375,
+        812
+      ],
+      "pair": false,
+      "state": "conflict",
+      "control": null,
+      "before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5392
+      },
+      "pending": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5398
+      },
+      "control_before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5398
+      },
+      "after": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 4979
+      },
+      "actual_server_status": [
+        409
+      ],
+      "outcome": "PASS recovery focus",
+      "utc": "2026-10-06T10:30:38.005804+00:00"
+    },
+    {
+      "name": "375-False-uncertain-current",
+      "viewport": [
+        375,
+        812
+      ],
+      "pair": false,
+      "state": "uncertain",
+      "control": null,
+      "before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5392
+      },
+      "pending": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5398
+      },
+      "control_before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5398
+      },
+      "after": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5496
+      },
+      "actual_server_status": [
+        201
+      ],
+      "outcome": "PASS recovery focus",
+      "utc": "2026-10-06T10:30:39.220107+00:00"
+    },
+    {
+      "name": "375-True-conflict-current",
+      "viewport": [
+        375,
+        812
+      ],
+      "pair": true,
+      "state": "conflict",
+      "control": null,
+      "before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5392
+      },
+      "pending": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5398
+      },
+      "control_before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5398
+      },
+      "after": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 4979
+      },
+      "actual_server_status": [
+        409
+      ],
+      "outcome": "PASS recovery focus",
+      "utc": "2026-10-06T10:30:40.591143+00:00"
+    },
+    {
+      "name": "375-True-uncertain-current",
+      "viewport": [
+        375,
+        812
+      ],
+      "pair": true,
+      "state": "uncertain",
+      "control": null,
+      "before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5392
+      },
+      "pending": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5398
+      },
+      "control_before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5398
+      },
+      "after": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5496
+      },
+      "actual_server_status": [
+        201
+      ],
+      "outcome": "PASS recovery focus",
+      "utc": "2026-10-06T10:30:41.855670+00:00"
+    },
+    {
+      "name": "375-True-conflict-first-free-pair",
+      "viewport": [
+        375,
+        812
+      ],
+      "pair": true,
+      "state": "conflict",
+      "control": "first-free-pair",
+      "before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5392
+      },
+      "pending": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5398
+      },
+      "control_before": {
+        "tag": "BUTTON",
+        "testid": "slot-b+a-21:30",
+        "y": 5398
+      },
+      "after": {
+        "tag": "BUTTON",
+        "testid": "slot-b+a-21:30",
+        "y": 4880
+      },
+      "actual_server_status": [
+        409
+      ],
+      "outcome": "PASS guarded focus",
+      "utc": "2026-10-06T10:30:43.243660+00:00"
+    },
+    {
+      "name": "375-True-conflict-user-moved",
+      "viewport": [
+        375,
+        812
+      ],
+      "pair": true,
+      "state": "conflict",
+      "control": "user-moved",
+      "before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5392
+      },
+      "pending": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5398
+      },
+      "control_before": {
+        "tag": "INPUT",
+        "testid": "party-size-input",
+        "y": 285
+      },
+      "after": {
+        "tag": "INPUT",
+        "testid": "party-size-input",
+        "y": 285
+      },
+      "actual_server_status": [
+        409
+      ],
+      "outcome": "PASS guarded focus",
+      "utc": "2026-10-06T10:30:44.574729+00:00"
+    },
+    {
+      "name": "375-True-conflict-new-form",
+      "viewport": [
+        375,
+        812
+      ],
+      "pair": true,
+      "state": "conflict",
+      "control": "new-form",
+      "before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5392
+      },
+      "pending": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5398
+      },
+      "control_before": {
+        "tag": "INPUT",
+        "testid": "booking-party-size",
+        "y": 5392
+      },
+      "after": {
+        "tag": "INPUT",
+        "testid": "booking-party-size",
+        "y": 5392
+      },
+      "actual_server_status": [
+        409
+      ],
+      "outcome": "PASS guarded focus",
+      "utc": "2026-10-06T10:30:46.208787+00:00"
+    }
+  ],
+  "groups": [
+    "Browser late detail/error/finally Bauthority PASS",
+    "Browser lost success replay/exact retry/editrevert new identity PASS",
+    "Browser actual accepted Stage1 export/auth/form/bodykey/legacyreceipt/currentcancelled PASS",
+    "Browser actual accepted Stage1 export/auth/form/bodykey/legacyreceipt/currentcancelled PASS",
+    "Browser actual accepted Stage1 export/auth/form/bodykey/legacyreceipt/currentcancelled PASS",
+    "Current repairedCorner lookup/grid versus immutableAlcove receipt/exactreplay/focus/375px PASS"
+  ],
+  "stats": [
+    {
+      "path": "/_test/reset",
+      "status": 204,
+      "seconds": 0.06690313000581227
+    },
+    {
+      "path": "/auth/login",
+      "status": 200,
+      "seconds": 0.0751866259961389
+    },
+    {
+      "path": "/_test/reset",
+      "status": 204,
+      "seconds": 0.0669680930004688
+    },
+    {
+      "path": "/auth/login",
+      "status": 200,
+      "seconds": 0.07455804300843738
+    },
+    {
+      "path": "/_test/reset",
+      "status": 204,
+      "seconds": 0.06675516199902631
+    },
+    {
+      "path": "/auth/login",
+      "status": 200,
+      "seconds": 0.07520471099996939
+    },
+    {
+      "path": "/_test/reset",
+      "status": 204,
+      "seconds": 0.07818686199607328
+    },
+    {
+      "path": "/auth/login",
+      "status": 200,
+      "seconds": 0.07794063800247386
+    },
+    {
+      "path": "/reservations/E868D6E644/cancel",
+      "status": 200,
+      "seconds": 0.001411550008924678
+    },
+    {
+      "path": "/_test/export",
+      "status": 200,
+      "seconds": 0.0011010719899786636
+    },
+    {
+      "path": "/_test/import",
+      "status": 204,
+      "seconds": 0.011923398997168988
+    },
+    {
+      "path": "/_test/reset",
+      "status": 204,
+      "seconds": 0.07477880700025707
+    },
+    {
+      "path": "/auth/login",
+      "status": 200,
+      "seconds": 0.07438482400903013
+    },
+    {
+      "path": "/reservations/EB50260360/cancel",
+      "status": 200,
+      "seconds": 0.04145181299827527
+    },
+    {
+      "path": "/_test/export",
+      "status": 200,
+      "seconds": 0.0009252689924323931
+    },
+    {
+      "path": "/_test/import",
+      "status": 204,
+      "seconds": 0.002146180995623581
+    },
+    {
+      "path": "/_test/reset",
+      "status": 204,
+      "seconds": 0.07238569400215056
+    },
+    {
+      "path": "/auth/login",
+      "status": 200,
+      "seconds": 0.07383737199415918
+    },
+    {
+      "path": "/reservations/FF731452AE/cancel",
+      "status": 200,
+      "seconds": 0.0416270749992691
+    },
+    {
+      "path": "/_test/export",
+      "status": 200,
+      "seconds": 0.0012315379863139242
+    },
+    {
+      "path": "/_test/import",
+      "status": 204,
+      "seconds": 0.00995251999120228
+    },
+    {
+      "path": "/_test/reset",
+      "status": 204,
+      "seconds": 0.07235123400459997
+    },
+    {
+      "path": "/auth/login",
+      "status": 200,
+      "seconds": 0.07331267101108097
+    },
+    {
+      "path": "/_test/reset",
+      "status": 204,
+      "seconds": 0.06773551799415145
+    },
+    {
+      "path": "/restaurants/r/replans",
+      "status": 201,
+      "seconds": 0.04208831299911253
+    },
+    {
+      "path": "/restaurants/r/replans/plan_6233c9ae3c41642e1afe2c1f0769abbf/apply",
+      "status": 201,
+      "seconds": 0.04170574599993415
+    }
+  ]
+}

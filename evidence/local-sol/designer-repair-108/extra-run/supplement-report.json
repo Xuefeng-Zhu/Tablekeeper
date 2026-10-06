@@ -1,0 +1,413 @@
+{
+  "work_item": "RENDER-S2-REPAIR1",
+  "candidate": "108bcd4c48fa4fb4d7dedf286e94c8e4937f7f10",
+  "responsible": "@frankzhu94/factory-designer",
+  "utc_start": "2026-10-06T06:44:01.706970+00:00",
+  "utc_end": "2026-10-06T06:44:07.067817+00:00",
+  "browser": "153.0.8010.12",
+  "status": "PASS finite extra feedback presentation",
+  "snapshots": [
+    {
+      "state": "capacity-refused",
+      "utc": "2026-10-06T06:44:03.448548+00:00",
+      "viewport": [
+        1280,
+        900
+      ],
+      "screenshot": "capacity-refused-1280.png",
+      "observed": {
+        "width": 1280,
+        "height": 900,
+        "documentWidth": 1280,
+        "clientWidth": 1280,
+        "focus": "booking-submit",
+        "scrollY": 92,
+        "text": "Skip to content\nTablekeeper\nFind a table\nFind my reservation\nDiner Ada\nLog out\n\nAN EVENING WORTH KEEPING\n\nA table for your next good evening.\n\nChoose a restaurant, date and party size. Times are local to the restaurant.\n\nRestaurant\nOrchard Dining Room\nHarbour Kitchen\nDate\nParty size\nFind a table\n\nCHOOSE YOUR SEATING\n\nOrchard Dining Room\n\n2030-01-03 \u00b7 2 guests \u00b7 Europe/Berlin\n\n18:00\nTable Window alcove\nUp to 2 guests\nAVAILABLE\nTable Garden bench\nUp to 4 guests\nAVAILABLE\nTable Quiet corner\nUp to 2 guests\nAVAILABLE\nTables Garden bench & Window alcove\nTogether \u00b7 Up to 6 guests\nAVAILABLE\nTables Garden bench & Quiet corner\nTogether \u00b7 Up to 6 guests\nAVAILABLE\n18:30\nTable Window alcove\nUp to 2 guests\nAVAILABLE\nTable Garden bench\nUp to 4 guests\nAVAILABLE\nTable Quiet corner\nUp to 2 guests\nAVAILABLE\nTables Garden bench & Window alcove\nTogether \u00b7 Up to 6 guests\nAVAILABLE\nTables Garden bench & Quiet corner\nTogether \u00b7 Up to 6 guests\nAVAILABLE\n19:00\nTable Window alcove\nUp to 2 guests\nAVAILABLE\nTable Garden bench\nUp to 4 guests\nAVAILABLE\nTable Quiet corner\nUp to 2 guests\nAVAILABLE\nTables Garden bench & Window alcove\nTogether \u00b7 Up to 6 guests\nSELECTED \u00b7 AVAILABLE\nTables Garden bench & Quiet corner\nTogether \u00b7 Up to 6 guests\nAVAILABLE\n19:30\nTable Window alcove\nUp to 2 guests\nAVAILABLE\nTable Garden bench\nUp to 4 guests\nAVAILABLE\nTable Quiet corner\nUp to 2 guests\nAVAILABLE\nTables Garden bench & Window alcove\nTogether \u00b7 Up to 6 guests\nAVAILABLE\nTables Garden bench & Quiet corner\nTogether \u00b7 Up to 6 guests\nAVAILABLE\n\nA SEAT IS WAITING\n\nYour table\n\nOrchard Dining Room \u00b7 Garden bench & Window alcove \u00b7 2030-01-03 \u00b7 19:00\n\nTimes in Europe/Berlin\n\nParty size\n\nChanging details starts a new reservation. If the previous result is uncertain, retry those details first to avoid a second booking.\n\nWe couldn't make this reservation. party exceeds capacity\nTry reservation again\nTablekeeper\nA good evening starts at the table.",
+        "labels": [
+          {
+            "testid": "restaurant-select",
+            "type": "select-one",
+            "label": "Restaurant"
+          },
+          {
+            "testid": "date-input",
+            "type": "date",
+            "label": "Date"
+          },
+          {
+            "testid": "party-size-input",
+            "type": "number",
+            "label": "Party size"
+          },
+          {
+            "testid": "booking-party-size",
+            "type": "number",
+            "label": "Party size"
+          }
+        ],
+        "feedback": [
+          {
+            "role": "status",
+            "text": ""
+          },
+          {
+            "role": "alert",
+            "text": "We couldn't make this reservation. party exceeds capacity"
+          }
+        ],
+        "clipped": []
+      }
+    },
+    {
+      "state": "capacity-refused",
+      "utc": "2026-10-06T06:44:03.524668+00:00",
+      "viewport": [
+        375,
+        812
+      ],
+      "screenshot": "capacity-refused-375.png",
+      "observed": {
+        "width": 375,
+        "height": 812,
+        "documentWidth": 375,
+        "clientWidth": 375,
+        "focus": "booking-submit",
+        "scrollY": 92,
+        "text": "Skip to content\nTablekeeper\nFind a table\nFind my reservation\nDiner Ada\nLog out\n\nAN EVENING WORTH KEEPING\n\nA table for your next good evening.\n\nChoose a restaurant, date and party size. Times are local to the restaurant.\n\nRestaurant\nOrchard Dining Room\nHarbour Kitchen\nDate\nParty size\nFind a table\n\nCHOOSE YOUR SEATING\n\nOrchard Dining Room\n\n2030-01-03 \u00b7 2 guests \u00b7 Europe/Berlin\n\n18:00\nTable Window alcove\nUp to 2 guests\nAVAILABLE\nTable Garden bench\nUp to 4 guests\nAVAILABLE\nTable Quiet corner\nUp to 2 guests\nAVAILABLE\nTables Garden bench & Window alcove\nTogether \u00b7 Up to 6 guests\nAVAILABLE\nTables Garden bench & Quiet corner\nTogether \u00b7 Up to 6 guests\nAVAILABLE\n18:30\nTable Window alcove\nUp to 2 guests\nAVAILABLE\nTable Garden bench\nUp to 4 guests\nAVAILABLE\nTable Quiet corner\nUp to 2 guests\nAVAILABLE\nTables Garden bench & Window alcove\nTogether \u00b7 Up to 6 guests\nAVAILABLE\nTables Garden bench & Quiet corner\nTogether \u00b7 Up to 6 guests\nAVAILABLE\n19:00\nTable Window alcove\nUp to 2 guests\nAVAILABLE\nTable Garden bench\nUp to 4 guests\nAVAILABLE\nTable Quiet corner\nUp to 2 guests\nAVAILABLE\nTables Garden bench & Window alcove\nTogether \u00b7 Up to 6 guests\nSELECTED \u00b7 AVAILABLE\nTables Garden bench & Quiet corner\nTogether \u00b7 Up to 6 guests\nAVAILABLE\n19:30\nTable Window alcove\nUp to 2 guests\nAVAILABLE\nTable Garden bench\nUp to 4 guests\nAVAILABLE\nTable Quiet corner\nUp to 2 guests\nAVAILABLE\nTables Garden bench & Window alcove\nTogether \u00b7 Up to 6 guests\nAVAILABLE\nTables Garden bench & Quiet corner\nTogether \u00b7 Up to 6 guests\nAVAILABLE\n\nA SEAT IS WAITING\n\nYour table\n\nOrchard Dining Room \u00b7 Garden bench & Window alcove \u00b7 2030-01-03 \u00b7 19:00\n\nTimes in Europe/Berlin\n\nParty size\n\nChanging details starts a new reservation. If the previous result is uncertain, retry those details first to avoid a second booking.\n\nWe couldn't make this reservation. party exceeds capacity\nTry reservation again\nTablekeeper\nA good evening starts at the table.",
+        "labels": [
+          {
+            "testid": "restaurant-select",
+            "type": "select-one",
+            "label": "Restaurant"
+          },
+          {
+            "testid": "date-input",
+            "type": "date",
+            "label": "Date"
+          },
+          {
+            "testid": "party-size-input",
+            "type": "number",
+            "label": "Party size"
+          },
+          {
+            "testid": "booking-party-size",
+            "type": "number",
+            "label": "Party size"
+          }
+        ],
+        "feedback": [
+          {
+            "role": "status",
+            "text": ""
+          },
+          {
+            "role": "alert",
+            "text": "We couldn't make this reservation. party exceeds capacity"
+          }
+        ],
+        "clipped": []
+      }
+    },
+    {
+      "state": "lookup-loading",
+      "utc": "2026-10-06T06:44:04.965508+00:00",
+      "viewport": [
+        1280,
+        900
+      ],
+      "screenshot": "lookup-loading-1280.png",
+      "observed": {
+        "width": 1280,
+        "height": 900,
+        "documentWidth": 1280,
+        "clientWidth": 1280,
+        "focus": "lookup-submit",
+        "scrollY": 0,
+        "text": "Skip to content\nTablekeeper\nFind a table\nFind my reservation\nDiner Ada\nLog out\n\nYOUR PLANS, IN ONE PLACE\n\nFind your reservation.\n\nUse your booking reference to check the latest details or cancel your table.\n\nReservation reference\nFind reservation\n\nFinding reservation\u2026\n\nTablekeeper\nA good evening starts at the table.",
+        "labels": [
+          {
+            "testid": "lookup-reference-input",
+            "type": "text",
+            "label": "Reservation reference"
+          }
+        ],
+        "feedback": [
+          {
+            "role": "status",
+            "text": "Finding reservation\u2026"
+          }
+        ],
+        "clipped": []
+      }
+    },
+    {
+      "state": "lookup-loading",
+      "utc": "2026-10-06T06:44:05.031088+00:00",
+      "viewport": [
+        375,
+        812
+      ],
+      "screenshot": "lookup-loading-375.png",
+      "observed": {
+        "width": 375,
+        "height": 812,
+        "documentWidth": 375,
+        "clientWidth": 375,
+        "focus": "lookup-submit",
+        "scrollY": 0,
+        "text": "Skip to content\nTablekeeper\nFind a table\nFind my reservation\nDiner Ada\nLog out\n\nYOUR PLANS, IN ONE PLACE\n\nFind your reservation.\n\nUse your booking reference to check the latest details or cancel your table.\n\nReservation reference\nFind reservation\n\nFinding reservation\u2026\n\nTablekeeper\nA good evening starts at the table.",
+        "labels": [
+          {
+            "testid": "lookup-reference-input",
+            "type": "text",
+            "label": "Reservation reference"
+          }
+        ],
+        "feedback": [
+          {
+            "role": "status",
+            "text": "Finding reservation\u2026"
+          }
+        ],
+        "clipped": []
+      }
+    },
+    {
+      "state": "cancel-unknown-last-known",
+      "utc": "2026-10-06T06:44:05.299166+00:00",
+      "viewport": [
+        1280,
+        900
+      ],
+      "screenshot": "cancel-unknown-last-known-1280.png",
+      "observed": {
+        "width": 1280,
+        "height": 900,
+        "documentWidth": 1280,
+        "clientWidth": 1280,
+        "focus": "BODY",
+        "scrollY": 0,
+        "text": "Skip to content\nTablekeeper\nFind a table\nFind my reservation\nDiner Ada\nLog out\n\nYOUR PLANS, IN ONE PLACE\n\nFind your reservation.\n\nUse your booking reference to check the latest details or cancel your table.\n\nReservation reference\nFind reservation\n\nCURRENT RESERVATION\n\nOrchard Dining Room\n2E45AF430C\nStatus\nconfirmed\nTables\nWindow alcove\nWhen\n2030-01-03 \u00b7 19:00 \u00b7 Europe/Berlin\nParty\n2 guests\nWe couldn't confirm whether cancellation completed. Look up the reference again to check its current status. The status shown is the last checked result.\nCancel reservation\nTablekeeper\nA good evening starts at the table.",
+        "labels": [
+          {
+            "testid": "lookup-reference-input",
+            "type": "text",
+            "label": "Reservation reference"
+          }
+        ],
+        "feedback": [
+          {
+            "role": "alert",
+            "text": "We couldn't confirm whether cancellation completed. Look up the reference again to check its current status. The status shown is the last checked result."
+          }
+        ],
+        "clipped": []
+      }
+    },
+    {
+      "state": "cancel-unknown-last-known",
+      "utc": "2026-10-06T06:44:05.382007+00:00",
+      "viewport": [
+        375,
+        812
+      ],
+      "screenshot": "cancel-unknown-last-known-375.png",
+      "observed": {
+        "width": 375,
+        "height": 812,
+        "documentWidth": 375,
+        "clientWidth": 375,
+        "focus": "BODY",
+        "scrollY": 0,
+        "text": "Skip to content\nTablekeeper\nFind a table\nFind my reservation\nDiner Ada\nLog out\n\nYOUR PLANS, IN ONE PLACE\n\nFind your reservation.\n\nUse your booking reference to check the latest details or cancel your table.\n\nReservation reference\nFind reservation\n\nCURRENT RESERVATION\n\nOrchard Dining Room\n2E45AF430C\nStatus\nconfirmed\nTables\nWindow alcove\nWhen\n2030-01-03 \u00b7 19:00 \u00b7 Europe/Berlin\nParty\n2 guests\nWe couldn't confirm whether cancellation completed. Look up the reference again to check its current status. The status shown is the last checked result.\nCancel reservation\nTablekeeper\nA good evening starts at the table.",
+        "labels": [
+          {
+            "testid": "lookup-reference-input",
+            "type": "text",
+            "label": "Reservation reference"
+          }
+        ],
+        "feedback": [
+          {
+            "role": "alert",
+            "text": "We couldn't confirm whether cancellation completed. Look up the reference again to check its current status. The status shown is the last checked result."
+          }
+        ],
+        "clipped": []
+      }
+    },
+    {
+      "state": "cancel-unknown-resolved",
+      "utc": "2026-10-06T06:44:05.589177+00:00",
+      "viewport": [
+        1280,
+        900
+      ],
+      "screenshot": "cancel-unknown-resolved-1280.png",
+      "observed": {
+        "width": 1280,
+        "height": 900,
+        "documentWidth": 1280,
+        "clientWidth": 1280,
+        "focus": "lookup-submit",
+        "scrollY": 0,
+        "text": "Skip to content\nTablekeeper\nFind a table\nFind my reservation\nDiner Ada\nLog out\n\nYOUR PLANS, IN ONE PLACE\n\nFind your reservation.\n\nUse your booking reference to check the latest details or cancel your table.\n\nReservation reference\nFind reservation\n\nCURRENT RESERVATION\n\nOrchard Dining Room\n2E45AF430C\nStatus\ncancelled\nTables\nWindow alcove\nWhen\n2030-01-03 \u00b7 19:00 \u00b7 Europe/Berlin\nParty\n2 guests\n\nReservation cancelled\n\nTablekeeper\nA good evening starts at the table.",
+        "labels": [
+          {
+            "testid": "lookup-reference-input",
+            "type": "text",
+            "label": "Reservation reference"
+          }
+        ],
+        "feedback": [
+          {
+            "role": "status",
+            "text": "Reservation cancelled"
+          }
+        ],
+        "clipped": []
+      }
+    },
+    {
+      "state": "cancel-unknown-resolved",
+      "utc": "2026-10-06T06:44:05.646814+00:00",
+      "viewport": [
+        375,
+        812
+      ],
+      "screenshot": "cancel-unknown-resolved-375.png",
+      "observed": {
+        "width": 375,
+        "height": 812,
+        "documentWidth": 375,
+        "clientWidth": 375,
+        "focus": "lookup-submit",
+        "scrollY": 0,
+        "text": "Skip to content\nTablekeeper\nFind a table\nFind my reservation\nDiner Ada\nLog out\n\nYOUR PLANS, IN ONE PLACE\n\nFind your reservation.\n\nUse your booking reference to check the latest details or cancel your table.\n\nReservation reference\nFind reservation\n\nCURRENT RESERVATION\n\nOrchard Dining Room\n2E45AF430C\nStatus\ncancelled\nTables\nWindow alcove\nWhen\n2030-01-03 \u00b7 19:00 \u00b7 Europe/Berlin\nParty\n2 guests\n\nReservation cancelled\n\nTablekeeper\nA good evening starts at the table.",
+        "labels": [
+          {
+            "testid": "lookup-reference-input",
+            "type": "text",
+            "label": "Reservation reference"
+          }
+        ],
+        "feedback": [
+          {
+            "role": "status",
+            "text": "Reservation cancelled"
+          }
+        ],
+        "clipped": []
+      }
+    },
+    {
+      "state": "search-error",
+      "utc": "2026-10-06T06:44:06.969800+00:00",
+      "viewport": [
+        1280,
+        900
+      ],
+      "screenshot": "search-error-1280.png",
+      "observed": {
+        "width": 1280,
+        "height": 900,
+        "documentWidth": 1280,
+        "clientWidth": 1280,
+        "focus": "search-button",
+        "scrollY": 0,
+        "text": "Skip to content\nTablekeeper\nFind a table\nFind my reservation\nDiner Ada\nLog out\n\nAN EVENING WORTH KEEPING\n\nA table for your next good evening.\n\nChoose a restaurant, date and party size. Times are local to the restaurant.\n\nRestaurant\nOrchard Dining Room\nHarbour Kitchen\nDate\nParty size\nFind a table\nWe couldn't load availability. Try your search again. Failed to fetch\nTablekeeper\nA good evening starts at the table.",
+        "labels": [
+          {
+            "testid": "restaurant-select",
+            "type": "select-one",
+            "label": "Restaurant"
+          },
+          {
+            "testid": "date-input",
+            "type": "date",
+            "label": "Date"
+          },
+          {
+            "testid": "party-size-input",
+            "type": "number",
+            "label": "Party size"
+          }
+        ],
+        "feedback": [
+          {
+            "role": "status",
+            "text": ""
+          },
+          {
+            "role": "alert",
+            "text": "We couldn't load availability. Try your search again. Failed to fetch"
+          }
+        ],
+        "clipped": []
+      }
+    },
+    {
+      "state": "search-error",
+      "utc": "2026-10-06T06:44:07.028178+00:00",
+      "viewport": [
+        375,
+        812
+      ],
+      "screenshot": "search-error-375.png",
+      "observed": {
+        "width": 375,
+        "height": 812,
+        "documentWidth": 375,
+        "clientWidth": 375,
+        "focus": "search-button",
+        "scrollY": 0,
+        "text": "Skip to content\nTablekeeper\nFind a table\nFind my reservation\nDiner Ada\nLog out\n\nAN EVENING WORTH KEEPING\n\nA table for your next good evening.\n\nChoose a restaurant, date and party size. Times are local to the restaurant.\n\nRestaurant\nOrchard Dining Room\nHarbour Kitchen\nDate\nParty size\nFind a table\nWe couldn't load availability. Try your search again. Failed to fetch\nTablekeeper\nA good evening starts at the table.",
+        "labels": [
+          {
+            "testid": "restaurant-select",
+            "type": "select-one",
+            "label": "Restaurant"
+          },
+          {
+            "testid": "date-input",
+            "type": "date",
+            "label": "Date"
+          },
+          {
+            "testid": "party-size-input",
+            "type": "number",
+            "label": "Party size"
+          }
+        ],
+        "feedback": [
+          {
+            "role": "status",
+            "text": ""
+          },
+          {
+            "role": "alert",
+            "text": "We couldn't load availability. Try your search again. Failed to fetch"
+          }
+        ],
+        "clipped": []
+      }
+    }
+  ],
+  "contrast": [
+    {
+      "text": "We couldn't make this reservation. party exceeds capacity",
+      "fg": "rgb(141, 52, 36)",
+      "bg": "rgb(250, 237, 230)",
+      "border": "rgb(141, 52, 36)",
+      "outline": "rgb(141, 52, 36)",
+      "outlineWidth": "3px",
+      "outlineOffset": "0px",
+      "shadow": "none",
+      "testid": "booking-error",
+      "ratio": 6.91567253144574,
+      "state": "capacity-refused"
+    }
+  ],
+  "observed": "Actual422 capacity; held actuallookup; realcancel commits then response dropped,lastknown confirmed plus explicit uncertainty,lookup resolves cancelled; actual availability transportfailure"
+}

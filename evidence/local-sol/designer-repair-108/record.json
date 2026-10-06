@@ -1,0 +1,79 @@
+{
+  "work_item": "RENDER-S2-REPAIR1",
+  "state": "REVIEW evidence proposed",
+  "responsible": "@frankzhu94/factory-designer",
+  "candidate": "108bcd4c48fa4fb4d7dedf286e94c8e4937f7f10",
+  "starting_revision": "108bcd4c48fa4fb4d7dedf286e94c8e4937f7f10",
+  "recorded_utc": "2026-10-06T06:47:22.344439+00:00",
+  "sources": [
+    {
+      "path": "/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-1.md",
+      "sections": "all inherited clauses",
+      "sha256": "9460189eac83802ce158f16ee90989af728a489b32a6147e2dc8e320f383055f"
+    },
+    {
+      "path": "/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-2.md",
+      "sections": "all clauses",
+      "sha256": "b1aa1b4affad456ff26f208a378eb2f6884153fc6ef667ab37b888fcda96c5dc"
+    },
+    {
+      "path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/DESIGN.md",
+      "sections": "all journeys, states, responsive and focus criteria",
+      "sha256": "677188d1b6f6da7f34a3fc810259970e013d153517a078b27cc0bb8716ba433f"
+    },
+    {
+      "path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/ARCHITECTURE.md",
+      "sections": "all inherited mechanisms and Stage2",
+      "sha256": "3ab218e821038f8468d8a8a835b250da31c7c59e1691c55d2c607186a277ace3"
+    },
+    {
+      "path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/WORKING.md",
+      "sections": "T12-T30 and inherited map",
+      "sha256": "41bb75489355d279a7f6593eb6799bb627b19f9d90a9446d750be3a5543f5cc3"
+    }
+  ],
+  "authoritative_reports": [
+    {
+      "path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/render-s2-repair1-20261006T0637Z/focus3-run/focus-report.json",
+      "sha256": "849f32fde3b700f7636997c236152ccdfb45818263b5d9256b201127a8cf6a7b",
+      "utc_start": "2026-10-06T06:41:28.627880+00:00",
+      "utc_end": "2026-10-06T06:42:33.964234+00:00"
+    },
+    {
+      "path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/render-s2-repair1-20261006T0637Z/first-run/focus-report.json",
+      "sha256": "bca286df6690ac44193da39cd1487a45884f6e346e79ad0a465e5d3a1b23915b",
+      "utc_start": "2026-10-06T06:43:33.537778+00:00",
+      "utc_end": "2026-10-06T06:43:43.079560+00:00"
+    },
+    {
+      "path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/render-s2-repair1-20261006T0637Z/core2-run/browser-report.json",
+      "sha256": "22b30c823dccf23c229e438a1895dfe8616473eaa0efb27cc23cae227d37988d",
+      "utc_start": "2026-10-06T06:42:42.415818+00:00",
+      "utc_end": "2026-10-06T06:43:12.159819+00:00"
+    },
+    {
+      "path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/render-s2-repair1-20261006T0637Z/extra-run/supplement-report.json",
+      "sha256": "8c4ab9a831227720aa453ebc80c720f04f3479daa352dcef2d28718b28c82e7e",
+      "utc_start": "2026-10-06T06:44:01.706970+00:00",
+      "utc_end": "2026-10-06T06:44:07.067817+00:00"
+    }
+  ],
+  "assessment": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/render-s2-repair1-20261006T0637Z/assessment.md",
+  "execution": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/render-s2-repair1-20261006T0637Z/execution.json",
+  "static_check": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/render-s2-repair1-20261006T0637Z/packaged-static-check.json",
+  "result": "PASS finite rendered scope; R-F1 resolved in48 observed focus cases; independent acceptance pending",
+  "excluded_runs": [
+    "focus-run",
+    "focus2-interrupted",
+    "core-interrupted",
+    "focus2-run",
+    "core-run"
+  ],
+  "room_events": [
+    "a9e9c46e-a5bd-4f68-b9e6-e12a3a370380",
+    "14fa0104-5c1e-4cbb-bf2e-855ec123e799",
+    "8a42c1ee-ea07-4a98-9a75-aaed64ea569d"
+  ],
+  "cost": "UNAVAILABLE",
+  "cleanup": "scoped nine containers and internal network removed; clean fixed clone/evidence retained"
+}

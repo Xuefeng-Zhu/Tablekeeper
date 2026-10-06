@@ -1,0 +1,65 @@
+{
+  "recorded_utc": "2026-10-06T10:50:19.404902+00:00",
+  "scope": "Selected read-only local board/workflow observations; no fresh SDK operation. Historical Reviewer record owner_sync_pending flag superseded by later delivery record and these observed board fields.",
+  "accepted_candidate": "ac1eb4945a2adaeaaf8a62d0817bdbc6a021e566",
+  "sources": [
+    {
+      "path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-20261005/runtime/task-board-4084182d-0b85-46d6-a137-f0bd7d44b498.json",
+      "sha256": "e09d6cd9d19fcff04fd7491c9dbb0ccb99f2ca3ca8826b7e340e4dc05cf818cf"
+    },
+    {
+      "path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-20261005/runtime/workflow-4084182d-0b85-46d6-a137-f0bd7d44b498.json",
+      "sha256": "4df5c6e53d44e17d8a0368ad2c0886a48a1a41e3cb61b78312c2f582d89c9f78"
+    }
+  ],
+  "work_items": {
+    "BUILD-S4": {
+      "version": 6,
+      "state": "ACCEPTED",
+      "candidate": "ac1eb4945a2adaeaaf8a62d0817bdbc6a021e566",
+      "owner_status": "completed",
+      "overall_status": "completed",
+      "pending": null,
+      "verdict_event": "b621b20a-b654-40b3-8dab-ad2153a2c65d"
+    },
+    "QA-S4-RUN": {
+      "version": 6,
+      "state": "ACCEPTED",
+      "candidate": "ac1eb4945a2adaeaaf8a62d0817bdbc6a021e566",
+      "owner_status": "completed",
+      "overall_status": "completed",
+      "pending": null,
+      "verdict_event": "95ff26a6-23d0-4257-992c-eeb13d3538cd"
+    }
+  },
+  "reviewer_delivery": {
+    "acknowledged": true,
+    "acks": {
+      "7d26ccf7-2921-4b38-9e16-ca8ebfa2a448": "2ff66d98-59f1-4f88-8e3c-f61b2f542d3a"
+    },
+    "complete": true,
+    "digest": "ec7bc03a16d5cea1869d8f9dac5d3f54b8a6dbf8a5122fae218864a81fd7a05b",
+    "first_at": 1791283021.596755,
+    "incident_id": "turn:reviewer:174:c04f172e-9379-46d3-9160-ce2cfc1c50ed",
+    "parts": {
+      "1": {
+        "event_id": "5e531a10-a5bd-4e61-9330-3898d1a45e71",
+        "sha256": "650c36eab5488d00698879a188a24961bc057df7b857b2f07211a28d81758000"
+      },
+      "2": {
+        "event_id": "74bc4637-9b9c-47cf-bca8-ab786c53f9ff",
+        "sha256": "721f5317d8a6daf16b0b8f79aac358e4feeb6797ae2c6ad034e5a510014726fd"
+      }
+    },
+    "recipient_ids": [
+      "7d26ccf7-2921-4b38-9e16-ca8ebfa2a448"
+    ],
+    "sender_id": "02e4a78d-7d9d-4c77-bf32-b3810a9cfacb",
+    "total": 2
+  },
+  "all_board_items_accepted": true,
+  "active_workflow_turn_count": 0,
+  "limitations": [
+    "Local observed task completion does not prove external judging or later operator shutdown. Existing budgets/deadlines and historical interruptions remain unchanged."
+  ]
+}

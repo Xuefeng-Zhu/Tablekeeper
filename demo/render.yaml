@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: tablekeeper-stage2-demo
+    runtime: docker
+    plan: free
+    region: oregon
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /health
+    autoDeployTrigger: off

@@ -1,0 +1,25 @@
+{
+  "downloadedAt": "2026-10-06T09:02:30.572Z",
+  "sourcePath": "/Users/frank/Downloads/Tablekeeper-Local-Sol-October-5 (1).json",
+  "sourceSha256": "9ed8c743811cbc010ab2a6370b8cb12bee199528062b1542288a51d04efc650d",
+  "sourceBytes": 13209930,
+  "scope": "full",
+  "roomId": "4084182d-0b85-46d6-a137-f0bd7d44b498",
+  "messageCount": 8743,
+  "firstMessageAt": "2026-10-06T03:01:45.078Z",
+  "lastMessageAt": "2026-10-06T08:24:28.754Z",
+  "previousPublishedMessageCount": 7018,
+  "previousPublishedSha256": "f79f7f9937325f9689c3e0cf55f450887751706b5cee53dac59afeb58787a132",
+  "missingPreviousIds": 0,
+  "newIds": 1725,
+  "downloadMethod": "Actual BAND conversation Download > Download full room transcript, unchanged console output; no paged API substitute",
+  "incompleteFirstAttempt": {
+    "exportedAt": "2026-10-06T09:00:17.800Z",
+    "sha256": "0e805a4eedf59577c4c3a271ba0bfa0e0e2c9828acd40a51f0396627c909b35d",
+    "messageCount": 4400,
+    "missingEarlierIds": 4343,
+    "action": "Retained private local unchanged download; never used as root room.json; retried actual UI"
+  },
+  "privacyReceipt": "evidence/privacy/room-privacy-receipt-20261006T090230Z.json",
+  "claimLimit": "Genuine full export of this stopped snapshot; no future Stage4 completion or final external judging claimed."
+}

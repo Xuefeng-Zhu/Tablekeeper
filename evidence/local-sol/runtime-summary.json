@@ -1,0 +1,110 @@
+{
+  "budgets": {
+    "ack_timeout_seconds": 120,
+    "api_billing_allowed": false,
+    "approved": true,
+    "billing_mode": "subscription_only",
+    "max_active_seats": 1,
+    "max_repairs": 3,
+    "max_total_tokens": 656587855,
+    "max_turns_per_seat": 769,
+    "overall_timeout_seconds": 220339,
+    "paid_provisioning_allowed": false,
+    "spend_cap_usd": null,
+    "stage_timeout_seconds": 14400,
+    "turn_timeout_seconds": 1200
+  },
+  "dependencies": {
+    "PyYAML": "6.0.3",
+    "Python": ">=3.12",
+    "band-sdk[codex,claude-sdk,opencode]": "4.0.0",
+    "psutil": "7.2.2"
+  },
+  "harness": "Codex",
+  "historical_baseline_tokens": 356587855,
+  "local_allowance_total_tokens": 300000000,
+  "model": "gpt-6.1-sol",
+  "permissions": {
+    "allow_local_binding": true,
+    "allowed_domains": [
+      "registry.npmjs.org",
+      "pypi.org",
+      "files.pythonhosted.org",
+      "localhost",
+      "127.0.0.1",
+      "auth.docker.io",
+      "github.com"
+    ],
+    "docker_socket": "operator-specific absolute socket; omitted from publication",
+    "profile_name": "factory-seats"
+  },
+  "room_id": "4084182d-0b85-46d6-a137-f0bd7d44b498",
+  "scope": "Current local development practice; not a judged autonomous run. Sanitized operational summary, never an executable configuration or auth proof.",
+  "seats": [
+    {
+      "agent_id": "7d26ccf7-2921-4b38-9e16-ca8ebfa2a448",
+      "display_name": "Factory PM",
+      "handle": "frankzhu94/factory-pm",
+      "harness": "Codex",
+      "id": "pm",
+      "model": "gpt-6.1-sol",
+      "reasoning_effort": "low"
+    },
+    {
+      "agent_id": "974df2f1-b5e8-4873-a1ce-93658e0404a4",
+      "display_name": "Factory Architect",
+      "handle": "frankzhu94/factory-architect",
+      "harness": "Codex",
+      "id": "architect",
+      "model": "gpt-6.1-sol",
+      "reasoning_effort": "medium"
+    },
+    {
+      "agent_id": "a6ee2e58-62bd-4ba9-b573-f164bb3e41d2",
+      "display_name": "Factory Designer",
+      "handle": "frankzhu94/factory-designer",
+      "harness": "Codex",
+      "id": "designer",
+      "model": "gpt-6.1-sol",
+      "reasoning_effort": "low"
+    },
+    {
+      "agent_id": "b2f43e4e-7727-44bb-9154-6cdc2b781749",
+      "display_name": "Factory Backend",
+      "handle": "frankzhu94/factory-backend",
+      "harness": "Codex",
+      "id": "backend",
+      "model": "gpt-6.1-sol",
+      "reasoning_effort": "medium"
+    },
+    {
+      "agent_id": "5ba8923d-b3d9-4b56-818f-3bef60ea617d",
+      "display_name": "Factory Frontend",
+      "handle": "frankzhu94/factory-frontend",
+      "harness": "Codex",
+      "id": "frontend",
+      "model": "gpt-6.1-sol",
+      "reasoning_effort": "medium"
+    },
+    {
+      "agent_id": "8e450576-69cd-416c-bc2a-a3a771f020d3",
+      "display_name": "Factory QA",
+      "handle": "frankzhu94/factory-qa",
+      "harness": "Codex",
+      "id": "qa",
+      "model": "gpt-6.1-sol",
+      "reasoning_effort": "medium"
+    },
+    {
+      "agent_id": "02e4a78d-7d9d-4c77-bf32-b3810a9cfacb",
+      "display_name": "Factory Reviewer",
+      "handle": "frankzhu94/factory-reviewer",
+      "harness": "Codex",
+      "id": "reviewer",
+      "model": "gpt-6.1-sol",
+      "reasoning_effort": "medium"
+    }
+  ],
+  "secrets": "Credentials and auth files remain outside the repository; credential paths, owner tokens, auth responses and runtime journals omitted.",
+  "source_snapshot_manifest_sha256": "ca806b7fde74dbc6a6bedd7cd000ae524f07e8471a3631e72bc1ddfd77dc0ba9"
+}

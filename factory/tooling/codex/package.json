@@ -1,0 +1,7 @@
+{
+  "name": "factory-codex-runtime",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Pinned local Codex CLI for the seven-seat BAND factory",
+  "dependencies": { "@openai/codex": "0.160.0" }
+}

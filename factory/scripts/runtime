@@ -1,0 +1,5 @@
+#!/bin/sh
+set -eu
+FACTORY_ROOT=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
+export PYTHONPATH="$FACTORY_ROOT${PYTHONPATH:+:$PYTHONPATH}"
+exec "$FACTORY_ROOT/.venv/bin/python" -m factorykit.runtime "$@"

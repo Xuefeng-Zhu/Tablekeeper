@@ -1,0 +1,393 @@
+{
+  "start_utc": "2026-10-06T08:14:38.225498+00:00",
+  "end_utc": "2026-10-06T08:15:01.420118+00:00",
+  "focus_cases": [
+    {
+      "name": "1280-False-conflict-current",
+      "viewport": [
+        1280,
+        900
+      ],
+      "pair": false,
+      "state": "conflict",
+      "control": null,
+      "before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 79
+      },
+      "pending": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 79
+      },
+      "control_before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 79
+      },
+      "after": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 116
+      },
+      "actual_server_status": [
+        409
+      ],
+      "outcome": "PASS recovery focus",
+      "utc": "2026-10-06T08:14:42.624946+00:00"
+    },
+    {
+      "name": "1280-False-uncertain-current",
+      "viewport": [
+        1280,
+        900
+      ],
+      "pair": false,
+      "state": "uncertain",
+      "control": null,
+      "before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 79
+      },
+      "pending": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 79
+      },
+      "control_before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 79
+      },
+      "after": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 116
+      },
+      "actual_server_status": [
+        201
+      ],
+      "outcome": "PASS recovery focus",
+      "utc": "2026-10-06T08:14:45.054453+00:00"
+    },
+    {
+      "name": "1280-True-conflict-current",
+      "viewport": [
+        1280,
+        900
+      ],
+      "pair": true,
+      "state": "conflict",
+      "control": null,
+      "before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 79
+      },
+      "pending": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 79
+      },
+      "control_before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 79
+      },
+      "after": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 140
+      },
+      "actual_server_status": [
+        409
+      ],
+      "outcome": "PASS recovery focus",
+      "utc": "2026-10-06T08:14:47.361196+00:00"
+    },
+    {
+      "name": "1280-True-uncertain-current",
+      "viewport": [
+        1280,
+        900
+      ],
+      "pair": true,
+      "state": "uncertain",
+      "control": null,
+      "before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 79
+      },
+      "pending": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 79
+      },
+      "control_before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 79
+      },
+      "after": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 140
+      },
+      "actual_server_status": [
+        201
+      ],
+      "outcome": "PASS recovery focus",
+      "utc": "2026-10-06T08:14:49.190780+00:00"
+    },
+    {
+      "name": "375-False-conflict-current",
+      "viewport": [
+        375,
+        812
+      ],
+      "pair": false,
+      "state": "conflict",
+      "control": null,
+      "before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5392
+      },
+      "pending": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5398
+      },
+      "control_before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5398
+      },
+      "after": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 4979
+      },
+      "actual_server_status": [
+        409
+      ],
+      "outcome": "PASS recovery focus",
+      "utc": "2026-10-06T08:14:50.890422+00:00"
+    },
+    {
+      "name": "375-False-uncertain-current",
+      "viewport": [
+        375,
+        812
+      ],
+      "pair": false,
+      "state": "uncertain",
+      "control": null,
+      "before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5392
+      },
+      "pending": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5398
+      },
+      "control_before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5398
+      },
+      "after": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5496
+      },
+      "actual_server_status": [
+        201
+      ],
+      "outcome": "PASS recovery focus",
+      "utc": "2026-10-06T08:14:52.371005+00:00"
+    },
+    {
+      "name": "375-True-conflict-current",
+      "viewport": [
+        375,
+        812
+      ],
+      "pair": true,
+      "state": "conflict",
+      "control": null,
+      "before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5392
+      },
+      "pending": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5398
+      },
+      "control_before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5398
+      },
+      "after": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 4979
+      },
+      "actual_server_status": [
+        409
+      ],
+      "outcome": "PASS recovery focus",
+      "utc": "2026-10-06T08:14:54.276940+00:00"
+    },
+    {
+      "name": "375-True-uncertain-current",
+      "viewport": [
+        375,
+        812
+      ],
+      "pair": true,
+      "state": "uncertain",
+      "control": null,
+      "before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5392
+      },
+      "pending": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5398
+      },
+      "control_before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5398
+      },
+      "after": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5496
+      },
+      "actual_server_status": [
+        201
+      ],
+      "outcome": "PASS recovery focus",
+      "utc": "2026-10-06T08:14:55.903816+00:00"
+    },
+    {
+      "name": "375-True-conflict-first-free-pair",
+      "viewport": [
+        375,
+        812
+      ],
+      "pair": true,
+      "state": "conflict",
+      "control": "first-free-pair",
+      "before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5392
+      },
+      "pending": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5398
+      },
+      "control_before": {
+        "tag": "BUTTON",
+        "testid": "slot-b+a-21:30",
+        "y": 5398
+      },
+      "after": {
+        "tag": "BUTTON",
+        "testid": "slot-b+a-21:30",
+        "y": 4880
+      },
+      "actual_server_status": [
+        409
+      ],
+      "outcome": "PASS guarded focus",
+      "utc": "2026-10-06T08:14:57.769710+00:00"
+    },
+    {
+      "name": "375-True-success-user-moved",
+      "viewport": [
+        375,
+        812
+      ],
+      "pair": true,
+      "state": "success",
+      "control": "user-moved",
+      "before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5392
+      },
+      "pending": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5398
+      },
+      "control_before": {
+        "tag": "INPUT",
+        "testid": "party-size-input",
+        "y": 285
+      },
+      "after": {
+        "tag": "INPUT",
+        "testid": "party-size-input",
+        "y": 285
+      },
+      "actual_server_status": [
+        201
+      ],
+      "outcome": "PASS guarded focus",
+      "utc": "2026-10-06T08:14:59.267818+00:00"
+    },
+    {
+      "name": "375-True-success-new-form",
+      "viewport": [
+        375,
+        812
+      ],
+      "pair": true,
+      "state": "success",
+      "control": "new-form",
+      "before": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5392
+      },
+      "pending": {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5398
+      },
+      "control_before": {
+        "tag": "INPUT",
+        "testid": "booking-party-size",
+        "y": 5392
+      },
+      "after": {
+        "tag": "INPUT",
+        "testid": "booking-party-size",
+        "y": 5392
+      },
+      "actual_server_status": [
+        201
+      ],
+      "outcome": "PASS guarded focus",
+      "utc": "2026-10-06T08:15:01.388378+00:00"
+    }
+  ],
+  "groups": [],
+  "api_observations": []
+}

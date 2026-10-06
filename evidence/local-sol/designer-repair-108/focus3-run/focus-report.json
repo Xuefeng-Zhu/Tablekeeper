@@ -1,0 +1,3884 @@
+{
+  "work_item": "RENDER-S2-REPAIR1",
+  "candidate": "108bcd4c48fa4fb4d7dedf286e94c8e4937f7f10",
+  "responsible": "@frankzhu94/factory-designer",
+  "utc_start": "2026-10-06T06:41:28.627880+00:00",
+  "utc_end": "2026-10-06T06:42:33.964234+00:00",
+  "browser": "153.0.8010.12",
+  "expected_cases": 42,
+  "records": [
+    {
+      "case": "1280-False-success-current",
+      "result": "PASS",
+      "before": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 79,
+        "rect": {
+          "top": 761.375,
+          "bottom": 809.375,
+          "left": 859.65625,
+          "right": 1175
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "pending": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 79,
+        "rect": {
+          "top": 807.375,
+          "bottom": 855.375,
+          "left": 859.65625,
+          "right": 1175
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "control_before": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 79,
+        "rect": {
+          "top": 807.375,
+          "bottom": 855.375,
+          "left": 859.65625,
+          "right": 1175
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "after": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 306,
+        "rect": {
+          "top": 844.375,
+          "bottom": 892.375,
+          "left": 859.65625,
+          "right": 1175
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "styles": {
+        "foreground": "rgb(40, 83, 64)",
+        "background": "rgb(234, 242, 232)",
+        "border": "rgb(127, 136, 120)",
+        "borderStyle": "dashed",
+        "label": "Confirming your reservation\u2026",
+        "disabled": false,
+        "ariaDisabled": "true",
+        "contrast": 7.646939688991341
+      },
+      "actual_status": 201,
+      "post_count_pending": 1,
+      "duplicate_enter_space_suppressed": true,
+      "exact_retry": null,
+      "same_focused_seating_node": null,
+      "utc": "2026-10-06T06:41:31.906373+00:00"
+    },
+    {
+      "case": "1280-False-conflict-current",
+      "result": "PASS",
+      "before": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 79,
+        "rect": {
+          "top": 761.375,
+          "bottom": 809.375,
+          "left": 859.65625,
+          "right": 1175
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "pending": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 79,
+        "rect": {
+          "top": 807.375,
+          "bottom": 855.375,
+          "left": 859.65625,
+          "right": 1175
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "control_before": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 79,
+        "rect": {
+          "top": 807.375,
+          "bottom": 855.375,
+          "left": 859.65625,
+          "right": 1175
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "after": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 140,
+        "rect": {
+          "top": 844.375,
+          "bottom": 892.375,
+          "left": 859.65625,
+          "right": 1175
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "styles": {
+        "foreground": "rgb(40, 83, 64)",
+        "background": "rgb(234, 242, 232)",
+        "border": "rgb(127, 136, 120)",
+        "borderStyle": "dashed",
+        "label": "Confirming your reservation\u2026",
+        "disabled": false,
+        "ariaDisabled": "true",
+        "contrast": 7.646939688991341
+      },
+      "actual_status": 409,
+      "post_count_pending": 1,
+      "duplicate_enter_space_suppressed": true,
+      "exact_retry": null,
+      "same_focused_seating_node": null,
+      "utc": "2026-10-06T06:41:33.291523+00:00"
+    },
+    {
+      "case": "1280-False-uncertain-current",
+      "result": "PASS",
+      "before": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 79,
+        "rect": {
+          "top": 761.375,
+          "bottom": 809.375,
+          "left": 859.65625,
+          "right": 1175
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "pending": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 79,
+        "rect": {
+          "top": 807.375,
+          "bottom": 855.375,
+          "left": 859.65625,
+          "right": 1175
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "control_before": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 79,
+        "rect": {
+          "top": 807.375,
+          "bottom": 855.375,
+          "left": 859.65625,
+          "right": 1175
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "after": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 140,
+        "rect": {
+          "top": 844.375,
+          "bottom": 892.375,
+          "left": 859.65625,
+          "right": 1175
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "styles": {
+        "foreground": "rgb(40, 83, 64)",
+        "background": "rgb(234, 242, 232)",
+        "border": "rgb(127, 136, 120)",
+        "borderStyle": "dashed",
+        "label": "Confirming your reservation\u2026",
+        "disabled": false,
+        "ariaDisabled": "true",
+        "contrast": 7.646939688991341
+      },
+      "actual_status": 201,
+      "post_count_pending": 1,
+      "duplicate_enter_space_suppressed": true,
+      "exact_retry": true,
+      "same_focused_seating_node": null,
+      "utc": "2026-10-06T06:41:34.588136+00:00"
+    },
+    {
+      "case": "1280-True-success-current",
+      "result": "PASS",
+      "before": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 79,
+        "rect": {
+          "top": 761.375,
+          "bottom": 809.375,
+          "left": 859.65625,
+          "right": 1175
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "pending": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 79,
+        "rect": {
+          "top": 807.375,
+          "bottom": 855.375,
+          "left": 859.65625,
+          "right": 1175
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "control_before": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 79,
+        "rect": {
+          "top": 807.375,
+          "bottom": 855.375,
+          "left": 859.65625,
+          "right": 1175
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "after": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 330,
+        "rect": {
+          "top": 844.375,
+          "bottom": 892.375,
+          "left": 859.65625,
+          "right": 1175
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "styles": {
+        "foreground": "rgb(40, 83, 64)",
+        "background": "rgb(234, 242, 232)",
+        "border": "rgb(127, 136, 120)",
+        "borderStyle": "dashed",
+        "label": "Confirming your reservation\u2026",
+        "disabled": false,
+        "ariaDisabled": "true",
+        "contrast": 7.646939688991341
+      },
+      "actual_status": 201,
+      "post_count_pending": 1,
+      "duplicate_enter_space_suppressed": true,
+      "exact_retry": null,
+      "same_focused_seating_node": null,
+      "utc": "2026-10-06T06:41:35.942830+00:00"
+    },
+    {
+      "case": "1280-True-conflict-current",
+      "result": "PASS",
+      "before": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 79,
+        "rect": {
+          "top": 761.375,
+          "bottom": 809.375,
+          "left": 859.65625,
+          "right": 1175
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "pending": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 79,
+        "rect": {
+          "top": 807.375,
+          "bottom": 855.375,
+          "left": 859.65625,
+          "right": 1175
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "control_before": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 79,
+        "rect": {
+          "top": 807.375,
+          "bottom": 855.375,
+          "left": 859.65625,
+          "right": 1175
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "after": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 140,
+        "rect": {
+          "top": 844.375,
+          "bottom": 892.375,
+          "left": 859.65625,
+          "right": 1175
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "styles": {
+        "foreground": "rgb(40, 83, 64)",
+        "background": "rgb(234, 242, 232)",
+        "border": "rgb(127, 136, 120)",
+        "borderStyle": "dashed",
+        "label": "Confirming your reservation\u2026",
+        "disabled": false,
+        "ariaDisabled": "true",
+        "contrast": 7.646939688991341
+      },
+      "actual_status": 409,
+      "post_count_pending": 1,
+      "duplicate_enter_space_suppressed": true,
+      "exact_retry": null,
+      "same_focused_seating_node": null,
+      "utc": "2026-10-06T06:41:37.391765+00:00"
+    },
+    {
+      "case": "1280-True-uncertain-current",
+      "result": "PASS",
+      "before": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 79,
+        "rect": {
+          "top": 761.375,
+          "bottom": 809.375,
+          "left": 859.65625,
+          "right": 1175
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "pending": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 79,
+        "rect": {
+          "top": 807.375,
+          "bottom": 855.375,
+          "left": 859.65625,
+          "right": 1175
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "control_before": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 79,
+        "rect": {
+          "top": 807.375,
+          "bottom": 855.375,
+          "left": 859.65625,
+          "right": 1175
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "after": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 140,
+        "rect": {
+          "top": 844.375,
+          "bottom": 892.375,
+          "left": 859.65625,
+          "right": 1175
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "styles": {
+        "foreground": "rgb(40, 83, 64)",
+        "background": "rgb(234, 242, 232)",
+        "border": "rgb(127, 136, 120)",
+        "borderStyle": "dashed",
+        "label": "Confirming your reservation\u2026",
+        "disabled": false,
+        "ariaDisabled": "true",
+        "contrast": 7.646939688991341
+      },
+      "actual_status": 201,
+      "post_count_pending": 1,
+      "duplicate_enter_space_suppressed": true,
+      "exact_retry": true,
+      "same_focused_seating_node": null,
+      "utc": "2026-10-06T06:41:38.680960+00:00"
+    },
+    {
+      "case": "375-False-success-current",
+      "result": "PASS",
+      "before": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 5392,
+        "rect": {
+          "top": 716,
+          "bottom": 764,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "pending": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 5398,
+        "rect": {
+          "top": 756,
+          "bottom": 804,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "control_before": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 5398,
+        "rect": {
+          "top": 756,
+          "bottom": 804,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "after": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 5662,
+        "rect": {
+          "top": 756,
+          "bottom": 804,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "styles": {
+        "foreground": "rgb(40, 83, 64)",
+        "background": "rgb(234, 242, 232)",
+        "border": "rgb(127, 136, 120)",
+        "borderStyle": "dashed",
+        "label": "Confirming your reservation\u2026",
+        "disabled": false,
+        "ariaDisabled": "true",
+        "contrast": 7.646939688991341
+      },
+      "actual_status": 201,
+      "post_count_pending": 1,
+      "duplicate_enter_space_suppressed": true,
+      "exact_retry": null,
+      "same_focused_seating_node": null,
+      "utc": "2026-10-06T06:41:39.907485+00:00"
+    },
+    {
+      "case": "375-False-conflict-current",
+      "result": "PASS",
+      "before": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 5392,
+        "rect": {
+          "top": 716,
+          "bottom": 764,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "pending": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 5398,
+        "rect": {
+          "top": 756,
+          "bottom": 804,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "control_before": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 5398,
+        "rect": {
+          "top": 756,
+          "bottom": 804,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "after": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 4979,
+        "rect": {
+          "top": 755.5,
+          "bottom": 803.5,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "styles": {
+        "foreground": "rgb(40, 83, 64)",
+        "background": "rgb(234, 242, 232)",
+        "border": "rgb(127, 136, 120)",
+        "borderStyle": "dashed",
+        "label": "Confirming your reservation\u2026",
+        "disabled": false,
+        "ariaDisabled": "true",
+        "contrast": 7.646939688991341
+      },
+      "actual_status": 409,
+      "post_count_pending": 1,
+      "duplicate_enter_space_suppressed": true,
+      "exact_retry": null,
+      "same_focused_seating_node": null,
+      "utc": "2026-10-06T06:41:41.220734+00:00"
+    },
+    {
+      "case": "375-False-uncertain-current",
+      "result": "PASS",
+      "before": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 5392,
+        "rect": {
+          "top": 716,
+          "bottom": 764,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "pending": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 5398,
+        "rect": {
+          "top": 756,
+          "bottom": 804,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "control_before": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 5398,
+        "rect": {
+          "top": 756,
+          "bottom": 804,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "after": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 5496,
+        "rect": {
+          "top": 756,
+          "bottom": 804,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "styles": {
+        "foreground": "rgb(40, 83, 64)",
+        "background": "rgb(234, 242, 232)",
+        "border": "rgb(127, 136, 120)",
+        "borderStyle": "dashed",
+        "label": "Confirming your reservation\u2026",
+        "disabled": false,
+        "ariaDisabled": "true",
+        "contrast": 7.646939688991341
+      },
+      "actual_status": 201,
+      "post_count_pending": 1,
+      "duplicate_enter_space_suppressed": true,
+      "exact_retry": true,
+      "same_focused_seating_node": null,
+      "utc": "2026-10-06T06:41:42.424900+00:00"
+    },
+    {
+      "case": "375-True-success-current",
+      "result": "PASS",
+      "before": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 5392,
+        "rect": {
+          "top": 716,
+          "bottom": 764,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "pending": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 5398,
+        "rect": {
+          "top": 756,
+          "bottom": 804,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "control_before": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 5398,
+        "rect": {
+          "top": 756,
+          "bottom": 804,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "after": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 5686,
+        "rect": {
+          "top": 756,
+          "bottom": 804,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "styles": {
+        "foreground": "rgb(40, 83, 64)",
+        "background": "rgb(234, 242, 232)",
+        "border": "rgb(127, 136, 120)",
+        "borderStyle": "dashed",
+        "label": "Confirming your reservation\u2026",
+        "disabled": false,
+        "ariaDisabled": "true",
+        "contrast": 7.646939688991341
+      },
+      "actual_status": 201,
+      "post_count_pending": 1,
+      "duplicate_enter_space_suppressed": true,
+      "exact_retry": null,
+      "same_focused_seating_node": null,
+      "utc": "2026-10-06T06:41:43.710654+00:00"
+    },
+    {
+      "case": "375-True-conflict-current",
+      "result": "PASS",
+      "before": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 5392,
+        "rect": {
+          "top": 716,
+          "bottom": 764,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "pending": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 5398,
+        "rect": {
+          "top": 756,
+          "bottom": 804,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "control_before": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 5398,
+        "rect": {
+          "top": 756,
+          "bottom": 804,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "after": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 4979,
+        "rect": {
+          "top": 755.5,
+          "bottom": 803.5,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "styles": {
+        "foreground": "rgb(40, 83, 64)",
+        "background": "rgb(234, 242, 232)",
+        "border": "rgb(127, 136, 120)",
+        "borderStyle": "dashed",
+        "label": "Confirming your reservation\u2026",
+        "disabled": false,
+        "ariaDisabled": "true",
+        "contrast": 7.646939688991341
+      },
+      "actual_status": 409,
+      "post_count_pending": 1,
+      "duplicate_enter_space_suppressed": true,
+      "exact_retry": null,
+      "same_focused_seating_node": null,
+      "utc": "2026-10-06T06:41:45.127221+00:00"
+    },
+    {
+      "case": "375-True-uncertain-current",
+      "result": "PASS",
+      "before": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 5392,
+        "rect": {
+          "top": 716,
+          "bottom": 764,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "pending": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 5398,
+        "rect": {
+          "top": 756,
+          "bottom": 804,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "control_before": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 5398,
+        "rect": {
+          "top": 756,
+          "bottom": 804,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "after": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 5496,
+        "rect": {
+          "top": 756,
+          "bottom": 804,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "styles": {
+        "foreground": "rgb(40, 83, 64)",
+        "background": "rgb(234, 242, 232)",
+        "border": "rgb(127, 136, 120)",
+        "borderStyle": "dashed",
+        "label": "Confirming your reservation\u2026",
+        "disabled": false,
+        "ariaDisabled": "true",
+        "contrast": 7.646939688991341
+      },
+      "actual_status": 201,
+      "post_count_pending": 1,
+      "duplicate_enter_space_suppressed": true,
+      "exact_retry": true,
+      "same_focused_seating_node": null,
+      "utc": "2026-10-06T06:41:46.333829+00:00"
+    },
+    {
+      "case": "1280-True-success-input",
+      "result": "PASS",
+      "before": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 79,
+        "rect": {
+          "top": 761.375,
+          "bottom": 809.375,
+          "left": 859.65625,
+          "right": 1175
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "pending": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 79,
+        "rect": {
+          "top": 807.375,
+          "bottom": 855.375,
+          "left": 859.65625,
+          "right": 1175
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "control_before": {
+        "testid": "party-size-input",
+        "tag": "INPUT",
+        "scrollY": 79,
+        "rect": {
+          "top": 271.265625,
+          "bottom": 319.265625,
+          "left": 840.34375,
+          "right": 1047.203125
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "party-size-input"
+      },
+      "after": {
+        "testid": "party-size-input",
+        "tag": "INPUT",
+        "scrollY": 79,
+        "rect": {
+          "top": 271.265625,
+          "bottom": 319.265625,
+          "left": 840.34375,
+          "right": 1047.203125
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "party-size-input"
+      },
+      "styles": {
+        "foreground": "rgb(40, 83, 64)",
+        "background": "rgb(234, 242, 232)",
+        "border": "rgb(127, 136, 120)",
+        "borderStyle": "dashed",
+        "label": "Confirming your reservation\u2026",
+        "disabled": false,
+        "ariaDisabled": "true",
+        "contrast": 7.646939688991341
+      },
+      "actual_status": 201,
+      "post_count_pending": 1,
+      "duplicate_enter_space_suppressed": true,
+      "exact_retry": null,
+      "same_focused_seating_node": null,
+      "utc": "2026-10-06T06:41:47.578979+00:00"
+    },
+    {
+      "case": "1280-True-conflict-input",
+      "result": "PASS",
+      "before": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 79,
+        "rect": {
+          "top": 761.375,
+          "bottom": 809.375,
+          "left": 859.65625,
+          "right": 1175
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "pending": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 79,
+        "rect": {
+          "top": 807.375,
+          "bottom": 855.375,
+          "left": 859.65625,
+          "right": 1175
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "control_before": {
+        "testid": "party-size-input",
+        "tag": "INPUT",
+        "scrollY": 79,
+        "rect": {
+          "top": 271.265625,
+          "bottom": 319.265625,
+          "left": 840.34375,
+          "right": 1047.203125
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "party-size-input"
+      },
+      "after": {
+        "testid": "party-size-input",
+        "tag": "INPUT",
+        "scrollY": 79,
+        "rect": {
+          "top": 271.265625,
+          "bottom": 319.265625,
+          "left": 840.34375,
+          "right": 1047.203125
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "party-size-input"
+      },
+      "styles": {
+        "foreground": "rgb(40, 83, 64)",
+        "background": "rgb(234, 242, 232)",
+        "border": "rgb(127, 136, 120)",
+        "borderStyle": "dashed",
+        "label": "Confirming your reservation\u2026",
+        "disabled": false,
+        "ariaDisabled": "true",
+        "contrast": 7.646939688991341
+      },
+      "actual_status": 409,
+      "post_count_pending": 1,
+      "duplicate_enter_space_suppressed": true,
+      "exact_retry": null,
+      "same_focused_seating_node": null,
+      "utc": "2026-10-06T06:41:48.921598+00:00"
+    },
+    {
+      "case": "1280-True-uncertain-input",
+      "result": "PASS",
+      "before": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 79,
+        "rect": {
+          "top": 761.375,
+          "bottom": 809.375,
+          "left": 859.65625,
+          "right": 1175
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "pending": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 79,
+        "rect": {
+          "top": 807.375,
+          "bottom": 855.375,
+          "left": 859.65625,
+          "right": 1175
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "control_before": {
+        "testid": "party-size-input",
+        "tag": "INPUT",
+        "scrollY": 79,
+        "rect": {
+          "top": 271.265625,
+          "bottom": 319.265625,
+          "left": 840.34375,
+          "right": 1047.203125
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "party-size-input"
+      },
+      "after": {
+        "testid": "party-size-input",
+        "tag": "INPUT",
+        "scrollY": 79,
+        "rect": {
+          "top": 271.265625,
+          "bottom": 319.265625,
+          "left": 840.34375,
+          "right": 1047.203125
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "party-size-input"
+      },
+      "styles": {
+        "foreground": "rgb(40, 83, 64)",
+        "background": "rgb(234, 242, 232)",
+        "border": "rgb(127, 136, 120)",
+        "borderStyle": "dashed",
+        "label": "Confirming your reservation\u2026",
+        "disabled": false,
+        "ariaDisabled": "true",
+        "contrast": 7.646939688991341
+      },
+      "actual_status": 201,
+      "post_count_pending": 1,
+      "duplicate_enter_space_suppressed": true,
+      "exact_retry": null,
+      "same_focused_seating_node": null,
+      "utc": "2026-10-06T06:41:50.138307+00:00"
+    },
+    {
+      "case": "1280-True-success-seat",
+      "result": "PASS",
+      "before": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 79,
+        "rect": {
+          "top": 761.375,
+          "bottom": 809.375,
+          "left": 859.65625,
+          "right": 1175
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "pending": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 79,
+        "rect": {
+          "top": 807.375,
+          "bottom": 855.375,
+          "left": 859.65625,
+          "right": 1175
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "control_before": {
+        "testid": "slot-garden+corner-21:30",
+        "tag": "BUTTON",
+        "scrollY": 2907,
+        "rect": {
+          "top": 651.875,
+          "bottom": 743.375,
+          "left": 80,
+          "right": 439.328125
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "slot-garden+corner-21:30"
+      },
+      "after": {
+        "testid": "slot-garden+corner-21:30",
+        "tag": "BUTTON",
+        "scrollY": 2907,
+        "rect": {
+          "top": 651.875,
+          "bottom": 743.375,
+          "left": 80,
+          "right": 439.328125
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "slot-garden+corner-21:30"
+      },
+      "styles": {
+        "foreground": "rgb(40, 83, 64)",
+        "background": "rgb(234, 242, 232)",
+        "border": "rgb(127, 136, 120)",
+        "borderStyle": "dashed",
+        "label": "Confirming your reservation\u2026",
+        "disabled": false,
+        "ariaDisabled": "true",
+        "contrast": 7.646939688991341
+      },
+      "actual_status": 201,
+      "post_count_pending": 1,
+      "duplicate_enter_space_suppressed": true,
+      "exact_retry": null,
+      "same_focused_seating_node": true,
+      "utc": "2026-10-06T06:41:51.349310+00:00"
+    },
+    {
+      "case": "1280-True-conflict-seat",
+      "result": "PASS",
+      "before": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 79,
+        "rect": {
+          "top": 761.375,
+          "bottom": 809.375,
+          "left": 859.65625,
+          "right": 1175
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "pending": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 79,
+        "rect": {
+          "top": 807.375,
+          "bottom": 855.375,
+          "left": 859.65625,
+          "right": 1175
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "control_before": {
+        "testid": "slot-garden+corner-21:30",
+        "tag": "BUTTON",
+        "scrollY": 2907,
+        "rect": {
+          "top": 651.875,
+          "bottom": 743.375,
+          "left": 80,
+          "right": 439.328125
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "slot-garden+corner-21:30"
+      },
+      "after": {
+        "testid": "slot-garden+corner-21:30",
+        "tag": "BUTTON",
+        "scrollY": 2389,
+        "rect": {
+          "top": 652.375,
+          "bottom": 743.875,
+          "left": 80,
+          "right": 439.328125
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "slot-garden+corner-21:30"
+      },
+      "styles": {
+        "foreground": "rgb(40, 83, 64)",
+        "background": "rgb(234, 242, 232)",
+        "border": "rgb(127, 136, 120)",
+        "borderStyle": "dashed",
+        "label": "Confirming your reservation\u2026",
+        "disabled": false,
+        "ariaDisabled": "true",
+        "contrast": 7.646939688991341
+      },
+      "actual_status": 409,
+      "post_count_pending": 1,
+      "duplicate_enter_space_suppressed": true,
+      "exact_retry": null,
+      "same_focused_seating_node": true,
+      "utc": "2026-10-06T06:41:52.720368+00:00"
+    },
+    {
+      "case": "1280-True-uncertain-seat",
+      "result": "PASS",
+      "before": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 79,
+        "rect": {
+          "top": 761.375,
+          "bottom": 809.375,
+          "left": 859.65625,
+          "right": 1175
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "pending": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 79,
+        "rect": {
+          "top": 807.375,
+          "bottom": 855.375,
+          "left": 859.65625,
+          "right": 1175
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "control_before": {
+        "testid": "slot-garden+corner-21:30",
+        "tag": "BUTTON",
+        "scrollY": 2907,
+        "rect": {
+          "top": 651.875,
+          "bottom": 743.375,
+          "left": 80,
+          "right": 439.328125
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "slot-garden+corner-21:30"
+      },
+      "after": {
+        "testid": "slot-garden+corner-21:30",
+        "tag": "BUTTON",
+        "scrollY": 2907,
+        "rect": {
+          "top": 651.875,
+          "bottom": 743.375,
+          "left": 80,
+          "right": 439.328125
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "slot-garden+corner-21:30"
+      },
+      "styles": {
+        "foreground": "rgb(40, 83, 64)",
+        "background": "rgb(234, 242, 232)",
+        "border": "rgb(127, 136, 120)",
+        "borderStyle": "dashed",
+        "label": "Confirming your reservation\u2026",
+        "disabled": false,
+        "ariaDisabled": "true",
+        "contrast": 7.646939688991341
+      },
+      "actual_status": 201,
+      "post_count_pending": 1,
+      "duplicate_enter_space_suppressed": true,
+      "exact_retry": null,
+      "same_focused_seating_node": true,
+      "utc": "2026-10-06T06:41:53.935716+00:00"
+    },
+    {
+      "case": "1280-True-success-new-form",
+      "result": "PASS",
+      "before": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 79,
+        "rect": {
+          "top": 761.375,
+          "bottom": 809.375,
+          "left": 859.65625,
+          "right": 1175
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "pending": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 79,
+        "rect": {
+          "top": 807.375,
+          "bottom": 855.375,
+          "left": 859.65625,
+          "right": 1175
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "control_before": {
+        "testid": "booking-party-size",
+        "tag": "INPUT",
+        "scrollY": 79,
+        "rect": {
+          "top": 618.375,
+          "bottom": 666.375,
+          "left": 859.65625,
+          "right": 1175
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-party-size"
+      },
+      "after": {
+        "testid": "booking-party-size",
+        "tag": "INPUT",
+        "scrollY": 79,
+        "rect": {
+          "top": 618.375,
+          "bottom": 666.375,
+          "left": 859.65625,
+          "right": 1175
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-party-size"
+      },
+      "styles": {
+        "foreground": "rgb(40, 83, 64)",
+        "background": "rgb(234, 242, 232)",
+        "border": "rgb(127, 136, 120)",
+        "borderStyle": "dashed",
+        "label": "Confirming your reservation\u2026",
+        "disabled": false,
+        "ariaDisabled": "true",
+        "contrast": 7.646939688991341
+      },
+      "actual_status": 201,
+      "post_count_pending": 1,
+      "duplicate_enter_space_suppressed": true,
+      "exact_retry": null,
+      "same_focused_seating_node": null,
+      "utc": "2026-10-06T06:41:55.304107+00:00"
+    },
+    {
+      "case": "1280-True-conflict-new-form",
+      "result": "PASS",
+      "before": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 79,
+        "rect": {
+          "top": 761.375,
+          "bottom": 809.375,
+          "left": 859.65625,
+          "right": 1175
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "pending": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 79,
+        "rect": {
+          "top": 807.375,
+          "bottom": 855.375,
+          "left": 859.65625,
+          "right": 1175
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "control_before": {
+        "testid": "booking-party-size",
+        "tag": "INPUT",
+        "scrollY": 79,
+        "rect": {
+          "top": 618.375,
+          "bottom": 666.375,
+          "left": 859.65625,
+          "right": 1175
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-party-size"
+      },
+      "after": {
+        "testid": "booking-party-size",
+        "tag": "INPUT",
+        "scrollY": 79,
+        "rect": {
+          "top": 618.375,
+          "bottom": 666.375,
+          "left": 859.65625,
+          "right": 1175
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-party-size"
+      },
+      "styles": {
+        "foreground": "rgb(40, 83, 64)",
+        "background": "rgb(234, 242, 232)",
+        "border": "rgb(127, 136, 120)",
+        "borderStyle": "dashed",
+        "label": "Confirming your reservation\u2026",
+        "disabled": false,
+        "ariaDisabled": "true",
+        "contrast": 7.646939688991341
+      },
+      "actual_status": 409,
+      "post_count_pending": 1,
+      "duplicate_enter_space_suppressed": true,
+      "exact_retry": null,
+      "same_focused_seating_node": null,
+      "utc": "2026-10-06T06:41:56.804650+00:00"
+    },
+    {
+      "case": "1280-True-uncertain-new-form",
+      "result": "PASS",
+      "before": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 79,
+        "rect": {
+          "top": 761.375,
+          "bottom": 809.375,
+          "left": 859.65625,
+          "right": 1175
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "pending": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 79,
+        "rect": {
+          "top": 807.375,
+          "bottom": 855.375,
+          "left": 859.65625,
+          "right": 1175
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "control_before": {
+        "testid": "booking-party-size",
+        "tag": "INPUT",
+        "scrollY": 79,
+        "rect": {
+          "top": 618.375,
+          "bottom": 666.375,
+          "left": 859.65625,
+          "right": 1175
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-party-size"
+      },
+      "after": {
+        "testid": "booking-party-size",
+        "tag": "INPUT",
+        "scrollY": 79,
+        "rect": {
+          "top": 618.375,
+          "bottom": 666.375,
+          "left": 859.65625,
+          "right": 1175
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-party-size"
+      },
+      "styles": {
+        "foreground": "rgb(40, 83, 64)",
+        "background": "rgb(234, 242, 232)",
+        "border": "rgb(127, 136, 120)",
+        "borderStyle": "dashed",
+        "label": "Confirming your reservation\u2026",
+        "disabled": false,
+        "ariaDisabled": "true",
+        "contrast": 7.646939688991341
+      },
+      "actual_status": 201,
+      "post_count_pending": 1,
+      "duplicate_enter_space_suppressed": true,
+      "exact_retry": null,
+      "same_focused_seating_node": null,
+      "utc": "2026-10-06T06:41:58.153212+00:00"
+    },
+    {
+      "case": "1280-True-success-new-search",
+      "result": "PASS",
+      "before": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 79,
+        "rect": {
+          "top": 761.375,
+          "bottom": 809.375,
+          "left": 859.65625,
+          "right": 1175
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "pending": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 79,
+        "rect": {
+          "top": 807.375,
+          "bottom": 855.375,
+          "left": 859.65625,
+          "right": 1175
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "control_before": {
+        "testid": "party-size-input",
+        "tag": "INPUT",
+        "scrollY": 0,
+        "rect": {
+          "top": 350.265625,
+          "bottom": 398.265625,
+          "left": 840.34375,
+          "right": 1047.203125
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "party-size-input"
+      },
+      "after": {
+        "testid": "party-size-input",
+        "tag": "INPUT",
+        "scrollY": 0,
+        "rect": {
+          "top": 350.265625,
+          "bottom": 398.265625,
+          "left": 840.34375,
+          "right": 1047.203125
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "party-size-input"
+      },
+      "styles": {
+        "foreground": "rgb(40, 83, 64)",
+        "background": "rgb(234, 242, 232)",
+        "border": "rgb(127, 136, 120)",
+        "borderStyle": "dashed",
+        "label": "Confirming your reservation\u2026",
+        "disabled": false,
+        "ariaDisabled": "true",
+        "contrast": 7.646939688991341
+      },
+      "actual_status": 201,
+      "post_count_pending": 1,
+      "duplicate_enter_space_suppressed": true,
+      "exact_retry": null,
+      "same_focused_seating_node": null,
+      "utc": "2026-10-06T06:41:59.621730+00:00"
+    },
+    {
+      "case": "1280-True-conflict-new-search",
+      "result": "PASS",
+      "before": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 79,
+        "rect": {
+          "top": 761.375,
+          "bottom": 809.375,
+          "left": 859.65625,
+          "right": 1175
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "pending": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 79,
+        "rect": {
+          "top": 807.375,
+          "bottom": 855.375,
+          "left": 859.65625,
+          "right": 1175
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "control_before": {
+        "testid": "party-size-input",
+        "tag": "INPUT",
+        "scrollY": 0,
+        "rect": {
+          "top": 350.265625,
+          "bottom": 398.265625,
+          "left": 840.34375,
+          "right": 1047.203125
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "party-size-input"
+      },
+      "after": {
+        "testid": "party-size-input",
+        "tag": "INPUT",
+        "scrollY": 0,
+        "rect": {
+          "top": 350.265625,
+          "bottom": 398.265625,
+          "left": 840.34375,
+          "right": 1047.203125
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "party-size-input"
+      },
+      "styles": {
+        "foreground": "rgb(40, 83, 64)",
+        "background": "rgb(234, 242, 232)",
+        "border": "rgb(127, 136, 120)",
+        "borderStyle": "dashed",
+        "label": "Confirming your reservation\u2026",
+        "disabled": false,
+        "ariaDisabled": "true",
+        "contrast": 7.646939688991341
+      },
+      "actual_status": 409,
+      "post_count_pending": 1,
+      "duplicate_enter_space_suppressed": true,
+      "exact_retry": null,
+      "same_focused_seating_node": null,
+      "utc": "2026-10-06T06:42:01.755640+00:00"
+    },
+    {
+      "case": "1280-True-uncertain-new-search",
+      "result": "PASS",
+      "before": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 79,
+        "rect": {
+          "top": 761.375,
+          "bottom": 809.375,
+          "left": 859.65625,
+          "right": 1175
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "pending": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 79,
+        "rect": {
+          "top": 807.375,
+          "bottom": 855.375,
+          "left": 859.65625,
+          "right": 1175
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "control_before": {
+        "testid": "party-size-input",
+        "tag": "INPUT",
+        "scrollY": 0,
+        "rect": {
+          "top": 350.265625,
+          "bottom": 398.265625,
+          "left": 840.34375,
+          "right": 1047.203125
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "party-size-input"
+      },
+      "after": {
+        "testid": "party-size-input",
+        "tag": "INPUT",
+        "scrollY": 0,
+        "rect": {
+          "top": 350.265625,
+          "bottom": 398.265625,
+          "left": 840.34375,
+          "right": 1047.203125
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "party-size-input"
+      },
+      "styles": {
+        "foreground": "rgb(40, 83, 64)",
+        "background": "rgb(234, 242, 232)",
+        "border": "rgb(127, 136, 120)",
+        "borderStyle": "dashed",
+        "label": "Confirming your reservation\u2026",
+        "disabled": false,
+        "ariaDisabled": "true",
+        "contrast": 7.646939688991341
+      },
+      "actual_status": 201,
+      "post_count_pending": 1,
+      "duplicate_enter_space_suppressed": true,
+      "exact_retry": null,
+      "same_focused_seating_node": null,
+      "utc": "2026-10-06T06:42:03.818506+00:00"
+    },
+    {
+      "case": "1280-True-success-logout",
+      "result": "PASS",
+      "before": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 79,
+        "rect": {
+          "top": 761.375,
+          "bottom": 809.375,
+          "left": 859.65625,
+          "right": 1175
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "pending": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 79,
+        "rect": {
+          "top": 807.375,
+          "bottom": 855.375,
+          "left": 859.65625,
+          "right": 1175
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "control_before": {
+        "testid": "party-size-input",
+        "tag": "INPUT",
+        "scrollY": 0,
+        "rect": {
+          "top": 345.265625,
+          "bottom": 393.265625,
+          "left": 840.34375,
+          "right": 1047.203125
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "party-size-input"
+      },
+      "after": {
+        "testid": "party-size-input",
+        "tag": "INPUT",
+        "scrollY": 0,
+        "rect": {
+          "top": 345.265625,
+          "bottom": 393.265625,
+          "left": 840.34375,
+          "right": 1047.203125
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "party-size-input"
+      },
+      "styles": {
+        "foreground": "rgb(40, 83, 64)",
+        "background": "rgb(234, 242, 232)",
+        "border": "rgb(127, 136, 120)",
+        "borderStyle": "dashed",
+        "label": "Confirming your reservation\u2026",
+        "disabled": false,
+        "ariaDisabled": "true",
+        "contrast": 7.646939688991341
+      },
+      "actual_status": 201,
+      "post_count_pending": 1,
+      "duplicate_enter_space_suppressed": true,
+      "exact_retry": null,
+      "same_focused_seating_node": null,
+      "utc": "2026-10-06T06:42:05.565453+00:00"
+    },
+    {
+      "case": "1280-True-conflict-logout",
+      "result": "PASS",
+      "before": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 79,
+        "rect": {
+          "top": 761.375,
+          "bottom": 809.375,
+          "left": 859.65625,
+          "right": 1175
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "pending": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 79,
+        "rect": {
+          "top": 807.375,
+          "bottom": 855.375,
+          "left": 859.65625,
+          "right": 1175
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "control_before": {
+        "testid": "party-size-input",
+        "tag": "INPUT",
+        "scrollY": 0,
+        "rect": {
+          "top": 345.265625,
+          "bottom": 393.265625,
+          "left": 840.34375,
+          "right": 1047.203125
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "party-size-input"
+      },
+      "after": {
+        "testid": "party-size-input",
+        "tag": "INPUT",
+        "scrollY": 0,
+        "rect": {
+          "top": 345.265625,
+          "bottom": 393.265625,
+          "left": 840.34375,
+          "right": 1047.203125
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "party-size-input"
+      },
+      "styles": {
+        "foreground": "rgb(40, 83, 64)",
+        "background": "rgb(234, 242, 232)",
+        "border": "rgb(127, 136, 120)",
+        "borderStyle": "dashed",
+        "label": "Confirming your reservation\u2026",
+        "disabled": false,
+        "ariaDisabled": "true",
+        "contrast": 7.646939688991341
+      },
+      "actual_status": 409,
+      "post_count_pending": 1,
+      "duplicate_enter_space_suppressed": true,
+      "exact_retry": null,
+      "same_focused_seating_node": null,
+      "utc": "2026-10-06T06:42:08.295216+00:00"
+    },
+    {
+      "case": "1280-True-uncertain-logout",
+      "result": "PASS",
+      "before": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 79,
+        "rect": {
+          "top": 761.375,
+          "bottom": 809.375,
+          "left": 859.65625,
+          "right": 1175
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "pending": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 79,
+        "rect": {
+          "top": 807.375,
+          "bottom": 855.375,
+          "left": 859.65625,
+          "right": 1175
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "control_before": {
+        "testid": "party-size-input",
+        "tag": "INPUT",
+        "scrollY": 0,
+        "rect": {
+          "top": 345.265625,
+          "bottom": 393.265625,
+          "left": 840.34375,
+          "right": 1047.203125
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "party-size-input"
+      },
+      "after": {
+        "testid": "party-size-input",
+        "tag": "INPUT",
+        "scrollY": 0,
+        "rect": {
+          "top": 345.265625,
+          "bottom": 393.265625,
+          "left": 840.34375,
+          "right": 1047.203125
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "party-size-input"
+      },
+      "styles": {
+        "foreground": "rgb(40, 83, 64)",
+        "background": "rgb(234, 242, 232)",
+        "border": "rgb(127, 136, 120)",
+        "borderStyle": "dashed",
+        "label": "Confirming your reservation\u2026",
+        "disabled": false,
+        "ariaDisabled": "true",
+        "contrast": 7.646939688991341
+      },
+      "actual_status": 201,
+      "post_count_pending": 1,
+      "duplicate_enter_space_suppressed": true,
+      "exact_retry": null,
+      "same_focused_seating_node": null,
+      "utc": "2026-10-06T06:42:10.087354+00:00"
+    },
+    {
+      "case": "375-True-success-input",
+      "result": "PASS",
+      "before": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 5392,
+        "rect": {
+          "top": 716,
+          "bottom": 764,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "pending": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 5398,
+        "rect": {
+          "top": 756,
+          "bottom": 804,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "control_before": {
+        "testid": "party-size-input",
+        "tag": "INPUT",
+        "scrollY": 285,
+        "rect": {
+          "top": 382.25,
+          "bottom": 430.25,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "party-size-input"
+      },
+      "after": {
+        "testid": "party-size-input",
+        "tag": "INPUT",
+        "scrollY": 285,
+        "rect": {
+          "top": 382.25,
+          "bottom": 430.25,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "party-size-input"
+      },
+      "styles": {
+        "foreground": "rgb(40, 83, 64)",
+        "background": "rgb(234, 242, 232)",
+        "border": "rgb(127, 136, 120)",
+        "borderStyle": "dashed",
+        "label": "Confirming your reservation\u2026",
+        "disabled": false,
+        "ariaDisabled": "true",
+        "contrast": 7.646939688991341
+      },
+      "actual_status": 201,
+      "post_count_pending": 1,
+      "duplicate_enter_space_suppressed": true,
+      "exact_retry": null,
+      "same_focused_seating_node": null,
+      "utc": "2026-10-06T06:42:11.346537+00:00"
+    },
+    {
+      "case": "375-True-conflict-input",
+      "result": "PASS",
+      "before": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 5392,
+        "rect": {
+          "top": 716,
+          "bottom": 764,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "pending": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 5398,
+        "rect": {
+          "top": 756,
+          "bottom": 804,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "control_before": {
+        "testid": "party-size-input",
+        "tag": "INPUT",
+        "scrollY": 285,
+        "rect": {
+          "top": 382.25,
+          "bottom": 430.25,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "party-size-input"
+      },
+      "after": {
+        "testid": "party-size-input",
+        "tag": "INPUT",
+        "scrollY": 285,
+        "rect": {
+          "top": 382.25,
+          "bottom": 430.25,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "party-size-input"
+      },
+      "styles": {
+        "foreground": "rgb(40, 83, 64)",
+        "background": "rgb(234, 242, 232)",
+        "border": "rgb(127, 136, 120)",
+        "borderStyle": "dashed",
+        "label": "Confirming your reservation\u2026",
+        "disabled": false,
+        "ariaDisabled": "true",
+        "contrast": 7.646939688991341
+      },
+      "actual_status": 409,
+      "post_count_pending": 1,
+      "duplicate_enter_space_suppressed": true,
+      "exact_retry": null,
+      "same_focused_seating_node": null,
+      "utc": "2026-10-06T06:42:12.966755+00:00"
+    },
+    {
+      "case": "375-True-uncertain-input",
+      "result": "PASS",
+      "before": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 5392,
+        "rect": {
+          "top": 716,
+          "bottom": 764,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "pending": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 5398,
+        "rect": {
+          "top": 756,
+          "bottom": 804,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "control_before": {
+        "testid": "party-size-input",
+        "tag": "INPUT",
+        "scrollY": 285,
+        "rect": {
+          "top": 382.25,
+          "bottom": 430.25,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "party-size-input"
+      },
+      "after": {
+        "testid": "party-size-input",
+        "tag": "INPUT",
+        "scrollY": 285,
+        "rect": {
+          "top": 382.25,
+          "bottom": 430.25,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "party-size-input"
+      },
+      "styles": {
+        "foreground": "rgb(40, 83, 64)",
+        "background": "rgb(234, 242, 232)",
+        "border": "rgb(127, 136, 120)",
+        "borderStyle": "dashed",
+        "label": "Confirming your reservation\u2026",
+        "disabled": false,
+        "ariaDisabled": "true",
+        "contrast": 7.646939688991341
+      },
+      "actual_status": 201,
+      "post_count_pending": 1,
+      "duplicate_enter_space_suppressed": true,
+      "exact_retry": null,
+      "same_focused_seating_node": null,
+      "utc": "2026-10-06T06:42:14.486064+00:00"
+    },
+    {
+      "case": "375-True-success-seat",
+      "result": "PASS",
+      "before": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 5392,
+        "rect": {
+          "top": 716,
+          "bottom": 764,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "pending": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 5398,
+        "rect": {
+          "top": 756,
+          "bottom": 804,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "control_before": {
+        "testid": "slot-garden+corner-21:30",
+        "tag": "BUTTON",
+        "scrollY": 5398,
+        "rect": {
+          "top": 183.625,
+          "bottom": 275.125,
+          "left": 16,
+          "right": 359
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "slot-garden+corner-21:30"
+      },
+      "after": {
+        "testid": "slot-garden+corner-21:30",
+        "tag": "BUTTON",
+        "scrollY": 5398,
+        "rect": {
+          "top": 183.625,
+          "bottom": 275.125,
+          "left": 16,
+          "right": 359
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "slot-garden+corner-21:30"
+      },
+      "styles": {
+        "foreground": "rgb(40, 83, 64)",
+        "background": "rgb(234, 242, 232)",
+        "border": "rgb(127, 136, 120)",
+        "borderStyle": "dashed",
+        "label": "Confirming your reservation\u2026",
+        "disabled": false,
+        "ariaDisabled": "true",
+        "contrast": 7.646939688991341
+      },
+      "actual_status": 201,
+      "post_count_pending": 1,
+      "duplicate_enter_space_suppressed": true,
+      "exact_retry": null,
+      "same_focused_seating_node": true,
+      "utc": "2026-10-06T06:42:16.004705+00:00"
+    },
+    {
+      "case": "375-True-conflict-seat",
+      "result": "PASS",
+      "before": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 5392,
+        "rect": {
+          "top": 716,
+          "bottom": 764,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "pending": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 5398,
+        "rect": {
+          "top": 756,
+          "bottom": 804,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "control_before": {
+        "testid": "slot-garden+corner-21:30",
+        "tag": "BUTTON",
+        "scrollY": 5398,
+        "rect": {
+          "top": 183.625,
+          "bottom": 275.125,
+          "left": 16,
+          "right": 359
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "slot-garden+corner-21:30"
+      },
+      "after": {
+        "testid": "slot-garden+corner-21:30",
+        "tag": "BUTTON",
+        "scrollY": 4880,
+        "rect": {
+          "top": 184.125,
+          "bottom": 275.625,
+          "left": 16,
+          "right": 359
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "slot-garden+corner-21:30"
+      },
+      "styles": {
+        "foreground": "rgb(40, 83, 64)",
+        "background": "rgb(234, 242, 232)",
+        "border": "rgb(127, 136, 120)",
+        "borderStyle": "dashed",
+        "label": "Confirming your reservation\u2026",
+        "disabled": false,
+        "ariaDisabled": "true",
+        "contrast": 7.646939688991341
+      },
+      "actual_status": 409,
+      "post_count_pending": 1,
+      "duplicate_enter_space_suppressed": true,
+      "exact_retry": null,
+      "same_focused_seating_node": true,
+      "utc": "2026-10-06T06:42:17.548003+00:00"
+    },
+    {
+      "case": "375-True-uncertain-seat",
+      "result": "PASS",
+      "before": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 5392,
+        "rect": {
+          "top": 716,
+          "bottom": 764,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "pending": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 5398,
+        "rect": {
+          "top": 756,
+          "bottom": 804,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "control_before": {
+        "testid": "slot-garden+corner-21:30",
+        "tag": "BUTTON",
+        "scrollY": 5398,
+        "rect": {
+          "top": 183.625,
+          "bottom": 275.125,
+          "left": 16,
+          "right": 359
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "slot-garden+corner-21:30"
+      },
+      "after": {
+        "testid": "slot-garden+corner-21:30",
+        "tag": "BUTTON",
+        "scrollY": 5398,
+        "rect": {
+          "top": 183.625,
+          "bottom": 275.125,
+          "left": 16,
+          "right": 359
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "slot-garden+corner-21:30"
+      },
+      "styles": {
+        "foreground": "rgb(40, 83, 64)",
+        "background": "rgb(234, 242, 232)",
+        "border": "rgb(127, 136, 120)",
+        "borderStyle": "dashed",
+        "label": "Confirming your reservation\u2026",
+        "disabled": false,
+        "ariaDisabled": "true",
+        "contrast": 7.646939688991341
+      },
+      "actual_status": 201,
+      "post_count_pending": 1,
+      "duplicate_enter_space_suppressed": true,
+      "exact_retry": null,
+      "same_focused_seating_node": true,
+      "utc": "2026-10-06T06:42:19.036281+00:00"
+    },
+    {
+      "case": "375-True-success-new-form",
+      "result": "PASS",
+      "before": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 5392,
+        "rect": {
+          "top": 716,
+          "bottom": 764,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "pending": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 5398,
+        "rect": {
+          "top": 756,
+          "bottom": 804,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "control_before": {
+        "testid": "booking-party-size",
+        "tag": "INPUT",
+        "scrollY": 5375,
+        "rect": {
+          "top": 590,
+          "bottom": 638,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-party-size"
+      },
+      "after": {
+        "testid": "booking-party-size",
+        "tag": "INPUT",
+        "scrollY": 5375,
+        "rect": {
+          "top": 590,
+          "bottom": 638,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-party-size"
+      },
+      "styles": {
+        "foreground": "rgb(40, 83, 64)",
+        "background": "rgb(234, 242, 232)",
+        "border": "rgb(127, 136, 120)",
+        "borderStyle": "dashed",
+        "label": "Confirming your reservation\u2026",
+        "disabled": false,
+        "ariaDisabled": "true",
+        "contrast": 7.646939688991341
+      },
+      "actual_status": 201,
+      "post_count_pending": 1,
+      "duplicate_enter_space_suppressed": true,
+      "exact_retry": null,
+      "same_focused_seating_node": null,
+      "utc": "2026-10-06T06:42:20.826263+00:00"
+    },
+    {
+      "case": "375-True-conflict-new-form",
+      "result": "PASS",
+      "before": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 5392,
+        "rect": {
+          "top": 716,
+          "bottom": 764,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "pending": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 5398,
+        "rect": {
+          "top": 756,
+          "bottom": 804,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "control_before": {
+        "testid": "booking-party-size",
+        "tag": "INPUT",
+        "scrollY": 5375,
+        "rect": {
+          "top": 590,
+          "bottom": 638,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-party-size"
+      },
+      "after": {
+        "testid": "booking-party-size",
+        "tag": "INPUT",
+        "scrollY": 5375,
+        "rect": {
+          "top": 590,
+          "bottom": 638,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-party-size"
+      },
+      "styles": {
+        "foreground": "rgb(40, 83, 64)",
+        "background": "rgb(234, 242, 232)",
+        "border": "rgb(127, 136, 120)",
+        "borderStyle": "dashed",
+        "label": "Confirming your reservation\u2026",
+        "disabled": false,
+        "ariaDisabled": "true",
+        "contrast": 7.646939688991341
+      },
+      "actual_status": 409,
+      "post_count_pending": 1,
+      "duplicate_enter_space_suppressed": true,
+      "exact_retry": null,
+      "same_focused_seating_node": null,
+      "utc": "2026-10-06T06:42:22.708545+00:00"
+    },
+    {
+      "case": "375-True-uncertain-new-form",
+      "result": "PASS",
+      "before": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 5392,
+        "rect": {
+          "top": 716,
+          "bottom": 764,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "pending": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 5398,
+        "rect": {
+          "top": 756,
+          "bottom": 804,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "control_before": {
+        "testid": "booking-party-size",
+        "tag": "INPUT",
+        "scrollY": 5375,
+        "rect": {
+          "top": 590,
+          "bottom": 638,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-party-size"
+      },
+      "after": {
+        "testid": "booking-party-size",
+        "tag": "INPUT",
+        "scrollY": 5375,
+        "rect": {
+          "top": 590,
+          "bottom": 638,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-party-size"
+      },
+      "styles": {
+        "foreground": "rgb(40, 83, 64)",
+        "background": "rgb(234, 242, 232)",
+        "border": "rgb(127, 136, 120)",
+        "borderStyle": "dashed",
+        "label": "Confirming your reservation\u2026",
+        "disabled": false,
+        "ariaDisabled": "true",
+        "contrast": 7.646939688991341
+      },
+      "actual_status": 201,
+      "post_count_pending": 1,
+      "duplicate_enter_space_suppressed": true,
+      "exact_retry": null,
+      "same_focused_seating_node": null,
+      "utc": "2026-10-06T06:42:24.402285+00:00"
+    },
+    {
+      "case": "375-True-success-new-search",
+      "result": "PASS",
+      "before": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 5392,
+        "rect": {
+          "top": 716,
+          "bottom": 764,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "pending": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 5398,
+        "rect": {
+          "top": 756,
+          "bottom": 804,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "control_before": {
+        "testid": "party-size-input",
+        "tag": "INPUT",
+        "scrollY": 192,
+        "rect": {
+          "top": 475.25,
+          "bottom": 523.25,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "party-size-input"
+      },
+      "after": {
+        "testid": "party-size-input",
+        "tag": "INPUT",
+        "scrollY": 192,
+        "rect": {
+          "top": 475.25,
+          "bottom": 523.25,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "party-size-input"
+      },
+      "styles": {
+        "foreground": "rgb(40, 83, 64)",
+        "background": "rgb(234, 242, 232)",
+        "border": "rgb(127, 136, 120)",
+        "borderStyle": "dashed",
+        "label": "Confirming your reservation\u2026",
+        "disabled": false,
+        "ariaDisabled": "true",
+        "contrast": 7.646939688991341
+      },
+      "actual_status": 201,
+      "post_count_pending": 1,
+      "duplicate_enter_space_suppressed": true,
+      "exact_retry": null,
+      "same_focused_seating_node": null,
+      "utc": "2026-10-06T06:42:26.236139+00:00"
+    },
+    {
+      "case": "375-True-conflict-new-search",
+      "result": "PASS",
+      "before": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 5392,
+        "rect": {
+          "top": 716,
+          "bottom": 764,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "pending": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 5398,
+        "rect": {
+          "top": 756,
+          "bottom": 804,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "control_before": {
+        "testid": "party-size-input",
+        "tag": "INPUT",
+        "scrollY": 192,
+        "rect": {
+          "top": 475.25,
+          "bottom": 523.25,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "party-size-input"
+      },
+      "after": {
+        "testid": "party-size-input",
+        "tag": "INPUT",
+        "scrollY": 192,
+        "rect": {
+          "top": 475.25,
+          "bottom": 523.25,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "party-size-input"
+      },
+      "styles": {
+        "foreground": "rgb(40, 83, 64)",
+        "background": "rgb(234, 242, 232)",
+        "border": "rgb(127, 136, 120)",
+        "borderStyle": "dashed",
+        "label": "Confirming your reservation\u2026",
+        "disabled": false,
+        "ariaDisabled": "true",
+        "contrast": 7.646939688991341
+      },
+      "actual_status": 409,
+      "post_count_pending": 1,
+      "duplicate_enter_space_suppressed": true,
+      "exact_retry": null,
+      "same_focused_seating_node": null,
+      "utc": "2026-10-06T06:42:27.918543+00:00"
+    },
+    {
+      "case": "375-True-uncertain-new-search",
+      "result": "PASS",
+      "before": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 5392,
+        "rect": {
+          "top": 716,
+          "bottom": 764,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "pending": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 5398,
+        "rect": {
+          "top": 756,
+          "bottom": 804,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "control_before": {
+        "testid": "party-size-input",
+        "tag": "INPUT",
+        "scrollY": 192,
+        "rect": {
+          "top": 475.25,
+          "bottom": 523.25,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "party-size-input"
+      },
+      "after": {
+        "testid": "party-size-input",
+        "tag": "INPUT",
+        "scrollY": 192,
+        "rect": {
+          "top": 475.25,
+          "bottom": 523.25,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "party-size-input"
+      },
+      "styles": {
+        "foreground": "rgb(40, 83, 64)",
+        "background": "rgb(234, 242, 232)",
+        "border": "rgb(127, 136, 120)",
+        "borderStyle": "dashed",
+        "label": "Confirming your reservation\u2026",
+        "disabled": false,
+        "ariaDisabled": "true",
+        "contrast": 7.646939688991341
+      },
+      "actual_status": 201,
+      "post_count_pending": 1,
+      "duplicate_enter_space_suppressed": true,
+      "exact_retry": null,
+      "same_focused_seating_node": null,
+      "utc": "2026-10-06T06:42:29.338264+00:00"
+    },
+    {
+      "case": "375-True-success-logout",
+      "result": "PASS",
+      "before": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 5392,
+        "rect": {
+          "top": 716,
+          "bottom": 764,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "pending": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 5398,
+        "rect": {
+          "top": 756,
+          "bottom": 804,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "control_before": {
+        "testid": "party-size-input",
+        "tag": "INPUT",
+        "scrollY": 0,
+        "rect": {
+          "top": 644.25,
+          "bottom": 692.25,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "party-size-input"
+      },
+      "after": {
+        "testid": "party-size-input",
+        "tag": "INPUT",
+        "scrollY": 0,
+        "rect": {
+          "top": 644.25,
+          "bottom": 692.25,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "party-size-input"
+      },
+      "styles": {
+        "foreground": "rgb(40, 83, 64)",
+        "background": "rgb(234, 242, 232)",
+        "border": "rgb(127, 136, 120)",
+        "borderStyle": "dashed",
+        "label": "Confirming your reservation\u2026",
+        "disabled": false,
+        "ariaDisabled": "true",
+        "contrast": 7.646939688991341
+      },
+      "actual_status": 201,
+      "post_count_pending": 1,
+      "duplicate_enter_space_suppressed": true,
+      "exact_retry": null,
+      "same_focused_seating_node": null,
+      "utc": "2026-10-06T06:42:30.923717+00:00"
+    },
+    {
+      "case": "375-True-conflict-logout",
+      "result": "PASS",
+      "before": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 5392,
+        "rect": {
+          "top": 716,
+          "bottom": 764,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "pending": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 5398,
+        "rect": {
+          "top": 756,
+          "bottom": 804,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "control_before": {
+        "testid": "party-size-input",
+        "tag": "INPUT",
+        "scrollY": 0,
+        "rect": {
+          "top": 692.25,
+          "bottom": 740.25,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "party-size-input"
+      },
+      "after": {
+        "testid": "party-size-input",
+        "tag": "INPUT",
+        "scrollY": 0,
+        "rect": {
+          "top": 644.25,
+          "bottom": 692.25,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "party-size-input"
+      },
+      "styles": {
+        "foreground": "rgb(40, 83, 64)",
+        "background": "rgb(234, 242, 232)",
+        "border": "rgb(127, 136, 120)",
+        "borderStyle": "dashed",
+        "label": "Confirming your reservation\u2026",
+        "disabled": false,
+        "ariaDisabled": "true",
+        "contrast": 7.646939688991341
+      },
+      "actual_status": 409,
+      "post_count_pending": 1,
+      "duplicate_enter_space_suppressed": true,
+      "exact_retry": null,
+      "same_focused_seating_node": null,
+      "utc": "2026-10-06T06:42:32.473179+00:00"
+    },
+    {
+      "case": "375-True-uncertain-logout",
+      "result": "PASS",
+      "before": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 5392,
+        "rect": {
+          "top": 716,
+          "bottom": 764,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "pending": {
+        "testid": "booking-submit",
+        "tag": "BUTTON",
+        "scrollY": 5398,
+        "rect": {
+          "top": 756,
+          "bottom": 804,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "booking-submit"
+      },
+      "control_before": {
+        "testid": "party-size-input",
+        "tag": "INPUT",
+        "scrollY": 0,
+        "rect": {
+          "top": 692.25,
+          "bottom": 740.25,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "party-size-input"
+      },
+      "after": {
+        "testid": "party-size-input",
+        "tag": "INPUT",
+        "scrollY": 0,
+        "rect": {
+          "top": 644.25,
+          "bottom": 692.25,
+          "left": 37,
+          "right": 338
+        },
+        "focusVisible": true,
+        "outline": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(141, 52, 36)",
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 3px",
+        "visible": true,
+        "hit": "party-size-input"
+      },
+      "styles": {
+        "foreground": "rgb(40, 83, 64)",
+        "background": "rgb(234, 242, 232)",
+        "border": "rgb(127, 136, 120)",
+        "borderStyle": "dashed",
+        "label": "Confirming your reservation\u2026",
+        "disabled": false,
+        "ariaDisabled": "true",
+        "contrast": 7.646939688991341
+      },
+      "actual_status": 201,
+      "post_count_pending": 1,
+      "duplicate_enter_space_suppressed": true,
+      "exact_retry": null,
+      "same_focused_seating_node": null,
+      "utc": "2026-10-06T06:42:33.953061+00:00"
+    }
+  ],
+  "failure": null,
+  "page_errors": [],
+  "scope": "Actual Chromium natural keyboard focus,realHTTP held201/409 or droppedcommitted201; exact200 retry; moved live seatingDOM and user/search/form/logout controls",
+  "not_tested": [
+    "All schedules",
+    "Screenreader audio",
+    "Native browserzoom"
+  ],
+  "tokens_logged": false
+}

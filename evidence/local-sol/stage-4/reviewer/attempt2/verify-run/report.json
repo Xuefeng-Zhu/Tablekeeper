@@ -1,0 +1,157 @@
+{
+  "candidate": "ac1eb4945a2adaeaaf8a62d0817bdbc6a021e566",
+  "start_utc": "2026-10-06T10:32:03.266099+00:00",
+  "end_utc": "2026-10-06T10:32:03.352917+00:00",
+  "source_unreachable": true,
+  "groups": [
+    "Stopped actual source pending native snapshot exact roundtrip/historicalcreate/adoption/application/replay",
+    "Stopped actual source applied native snapshot exact roundtrip/historicalcreate/adoption/application/replay",
+    "Stopped actual source latest native snapshot exact roundtrip/historicalcreate/adoption/application/replay",
+    "Invalid scheduled native import422 full exact rollback",
+    "Invalid closure native import422 full exact rollback",
+    "Invalid mutation native import422 full exact rollback",
+    "Invalid snapshot native import422 full exact rollback"
+  ],
+  "stats": [
+    {
+      "path": "/_test/import",
+      "status": 204,
+      "seconds": 0.017582557004061528
+    },
+    {
+      "path": "/_test/export",
+      "status": 200,
+      "seconds": 0.0014575940003851429
+    },
+    {
+      "path": "/reservations",
+      "status": 200,
+      "seconds": 0.0005120330024510622
+    },
+    {
+      "path": "/series",
+      "status": 200,
+      "seconds": 0.0005189500079723075
+    },
+    {
+      "path": "/restaurants/r/replans/plan_6193f516e397942be929af98a87c9972/apply",
+      "status": 201,
+      "seconds": 0.0006814609951106831
+    },
+    {
+      "path": "/_test/export",
+      "status": 200,
+      "seconds": 0.0014344679948408157
+    },
+    {
+      "path": "/_test/import",
+      "status": 204,
+      "seconds": 0.004378074998385273
+    },
+    {
+      "path": "/_test/export",
+      "status": 200,
+      "seconds": 0.0014717209996888414
+    },
+    {
+      "path": "/reservations",
+      "status": 200,
+      "seconds": 0.0004290690121706575
+    },
+    {
+      "path": "/series",
+      "status": 200,
+      "seconds": 0.0005289920081850141
+    },
+    {
+      "path": "/restaurants/r/replans/plan_6193f516e397942be929af98a87c9972/apply",
+      "status": 200,
+      "seconds": 0.0004747810016851872
+    },
+    {
+      "path": "/restaurants/r/replans/plan_6193f516e397942be929af98a87c9972/apply",
+      "status": 409,
+      "seconds": 0.0004471540014492348
+    },
+    {
+      "path": "/_test/import",
+      "status": 204,
+      "seconds": 0.0053893910080660135
+    },
+    {
+      "path": "/_test/export",
+      "status": 200,
+      "seconds": 0.0016792749956948683
+    },
+    {
+      "path": "/reservations",
+      "status": 200,
+      "seconds": 0.0004153180052526295
+    },
+    {
+      "path": "/series",
+      "status": 200,
+      "seconds": 0.0005484519933816046
+    },
+    {
+      "path": "/restaurants/r/replans/plan_6193f516e397942be929af98a87c9972/apply",
+      "status": 200,
+      "seconds": 0.0004548219876596704
+    },
+    {
+      "path": "/restaurants/r/replans/plan_6193f516e397942be929af98a87c9972/apply",
+      "status": 409,
+      "seconds": 0.00037077401066198945
+    },
+    {
+      "path": "/_test/import",
+      "status": 204,
+      "seconds": 0.005262550010229461
+    },
+    {
+      "path": "/_test/export",
+      "status": 200,
+      "seconds": 0.0016626489959890023
+    },
+    {
+      "path": "/_test/import",
+      "status": 422,
+      "seconds": 0.005593195994151756
+    },
+    {
+      "path": "/_test/export",
+      "status": 200,
+      "seconds": 0.0016648160089971498
+    },
+    {
+      "path": "/_test/import",
+      "status": 422,
+      "seconds": 0.003671697006211616
+    },
+    {
+      "path": "/_test/export",
+      "status": 200,
+      "seconds": 0.0016730670031392947
+    },
+    {
+      "path": "/_test/import",
+      "status": 422,
+      "seconds": 0.004389200999867171
+    },
+    {
+      "path": "/_test/export",
+      "status": 200,
+      "seconds": 0.0018189099937444553
+    },
+    {
+      "path": "/_test/import",
+      "status": 422,
+      "seconds": 0.0022591049928450957
+    },
+    {
+      "path": "/_test/export",
+      "status": 200,
+      "seconds": 0.0016616079956293106
+    }
+  ]
+}

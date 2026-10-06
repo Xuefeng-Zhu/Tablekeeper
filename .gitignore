@@ -1,5 +1,11 @@
 .evidence/
+.cache/
 node_modules/
 __pycache__/
-.pytest_cache/
-.DS_Store
+*.pyc
+
+.env*
+.venv/
+factory/config/factory.yaml
+.factory-private/
+factory/tooling/codex/node_modules/

@@ -1,0 +1,71 @@
+{
+  "recorded_at_utc": "2026-10-06T09:31:31.351170+00:00",
+  "status": "EXACT_COPY_PENDING_PUBLICATION",
+  "source_snapshot": "local-sol-turn-source-20261006",
+  "scope": "Audited source/test/helper bytes and real affected tests; amendment and live continuation evidence are separate",
+  "files": [
+    {
+      "published_path": "factory/factorykit/local_deferred_admission.py",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-turn-source-20261006/factorykit/local_deferred_admission.py",
+      "sha256": "d97f94270d5eb47ebf87a28035b17638b62dba801590e6bd2ad9bf3ad25e2e28",
+      "previous_published_sha256": null
+    },
+    {
+      "published_path": "factory/factorykit/local_terminal_reconciliation.py",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-turn-source-20261006/factorykit/local_terminal_reconciliation.py",
+      "sha256": "3f3702fbc6397d45dc90887754d13023e385889ad10fb182a71d4d02fafebedf",
+      "previous_published_sha256": "71111d046f78ad1a4d999608f420e3f5e4ae18036a5debd0b7ad4089b9a0c866"
+    },
+    {
+      "published_path": "factory/factorykit/runtime.py",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-turn-source-20261006/factorykit/runtime.py",
+      "sha256": "03ef67da8dfe418f25764e84e804a8917c1d5bf031ddd3ba84ce1ae849325939",
+      "previous_published_sha256": "4e4ff4280b3376623c332fc580bac16030cc582aff5d9620b1993acb912fea5f"
+    },
+    {
+      "published_path": "factory/tests/test_handoff_batching.py",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-turn-source-20261006/tests/test_handoff_batching.py",
+      "sha256": "6f6da0ebc149d91e062bda5b623ffe85c7ee34f10feb4c2e3544529bdb9bbe0d",
+      "previous_published_sha256": "27ae632486d4b5bc48e511cb5d36dfc1213c5447345e306175a0c216d866836c"
+    },
+    {
+      "published_path": "factory/tests/test_local_deferred_admission.py",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-turn-source-20261006/tests/test_local_deferred_admission.py",
+      "sha256": "847280ca1f4429fb7591b52e116875fecf78134177352ab5a374020d5413502e",
+      "previous_published_sha256": null
+    },
+    {
+      "published_path": "factory/tests/test_local_terminal_reconciliation.py",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-turn-source-20261006/tests/test_local_terminal_reconciliation.py",
+      "sha256": "265bd46a45b8b6b482736e2109ec5f1050145173b45ca131c70f677095cbc99f",
+      "previous_published_sha256": "1975c6b4acd1509c15eb425b26cb3a61b6c473d4714cdbc8853ed50807262739"
+    },
+    {
+      "published_path": "evidence/factory-runtime/administrative-scripts/amend-turn-1000.py",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-20261005/amend-turn-1000.py",
+      "sha256": "78b654f31055f57d73623971e293eba3bae5eb7c2f9e7be8639eadbe6c20d617",
+      "previous_published_sha256": null
+    },
+    {
+      "published_path": "evidence/factory-runtime/administrative-scripts/dispose-pm-pre-admission-once.py",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-20261005/dispose-pm-pre-admission-once.py",
+      "sha256": "b8aed76c132e9303f257363182e303da36aba892592102b74e89a8fa9b3d11c4",
+      "previous_published_sha256": null
+    },
+    {
+      "published_path": "evidence/factory-runtime/turn-1000/local-turn-1000-source-review.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-20261005/readiness/local-turn-1000-source-review.json",
+      "sha256": "efa5f8fe29283fb3fae3a87129aa20ccb44cbe449346d020a9572099cad48162"
+    },
+    {
+      "published_path": "evidence/factory-runtime/turn-1000/local-turn-1000-unit-test-result.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-20261005/readiness/local-turn-1000-unit-test-result.json",
+      "sha256": "90305416b61feaa3c9fb0fb7e6d4725b8f061b45a92415655f2665b5caabbbd9"
+    },
+    {
+      "published_path": "evidence/factory-runtime/turn-1000/local-turn-1000-unit-tests.log",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-20261005/readiness/local-turn-1000-unit-tests.log",
+      "sha256": "c789d9eefa3c9687c87808f59638116e97197a31233e59e63b9c96571713e8ba"
+    }
+  ]
+}

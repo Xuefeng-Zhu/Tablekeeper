@@ -1,0 +1,65 @@
+{
+  "status": "PASS",
+  "audited_at_utc": "2026-10-06T07:42:45.025631+00:00",
+  "scope": "Focused addendum for later live summary and four docs changed after the original 07:35 continuation publication audit. Original audit receipt and its recorded hashes remain untouched.",
+  "original_audit_receipt": {
+    "path": "/Users/frank/mygit/Tablekeeper/runs/artifact-audit-20261005/continuation-publication-privacy-20261006.json",
+    "sha256": "2923ad5e47ae48e921425512a3281336a062135e037c884dc9a8e02f895b79be"
+  },
+  "files_scanned": [
+    {
+      "path": "evidence/factory-runtime/live-continuation-summary.json",
+      "sha256": "f2a635fe9b2bc784a6ea40a386d8a74cb491cbeae3f0cf652f5c2e49bab87445",
+      "bytes": 3614
+    },
+    {
+      "path": "README.md",
+      "sha256": "04c7922112dc29432f8540f8fd24ecf8f0ff5c9f7198dac85b16ea6fbfb80f66",
+      "bytes": 11828
+    },
+    {
+      "path": "FACTORY.md",
+      "sha256": "b4da26da73ef6274eae38741cc763a3b101d0b43044b5ff96fc0ba1436a2f656",
+      "bytes": 16588
+    },
+    {
+      "path": "docs/SUBMISSION-REQUIREMENTS.md",
+      "sha256": "f9223387c274c5027d822dbc0661b6eb3ddd80bbf357f28ffe58dd7827d1f7bc",
+      "bytes": 11656
+    },
+    {
+      "path": "submission/video/README.md",
+      "sha256": "34a39715f961f6da9336c4af4611a48a9f73619901527d8ea3235ed519830419",
+      "bytes": 3025
+    }
+  ],
+  "credential_or_private_personal_value_matches": 0,
+  "exact_safe_stage3_ack_owner_and_new_reviewer_delivery_copies": {
+    "stage3_ack": true,
+    "stage3_owner_item": true,
+    "new_accepted_release_delivery": true
+  },
+  "other_selected_field_mismatches": [],
+  "truthfulness_and_identity_checks": {
+    "raw_receipt_hash": true,
+    "original_model_turn_interrupted": true,
+    "original_failed_incident_open": true,
+    "stage3_running_not_complete": true,
+    "reviewer_new_input_same_recipient_agent": true,
+    "reviewer_new_input_owner_sync_not_watchdog_notice": true,
+    "real_new_stage2_delivery_independent_sdk_present": true,
+    "stage3_doc_token_numbers_match": true,
+    "seven_contexts_one_architect_turn_dated": true
+  },
+  "source_receipt": {
+    "path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-20261005/readiness/local-8h-live-continuation.json",
+    "sha256": "5b49959edc2fae41f093c63c6637cb40aa7508abeb3179f3eb627b146b572e4d"
+  },
+  "manual_prose_review": "Adapted summary scope and dated docs accurately describe Stage3 architecture assignment/ACK and running work, not completed Stage3/4. Media remains a historical pre-acceptance b1/382998fe snapshot. Original Reviewer160 local model attempt and failed open incident remain retained; SDK transport skip is not acceptance.",
+  "source_identity_limit": "Independent SDK observation binds new Reviewer161 input to Frontend owner-sync event7dd90341, and binds new ba24e073 Stage2 delivery to the same authenticated Reviewer agent. This addendum does not independently certify an internal Codex thread ID or identify that callback as a watchdog notice.",
+  "independent_sdk_identity_proof": {
+    "path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-20261005/readiness/post-resume-sdk-observations-20261006T073643Z.json",
+    "sha256": "72e9bc2c21d276ef021e8a00542ab3b7526a288463f5a3c491d778fe6980848b"
+  },
+  "product_git_runtime_or_sealed_evidence_mutations": false
+}

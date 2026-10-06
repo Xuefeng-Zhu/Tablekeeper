@@ -1,0 +1,478 @@
+{
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/__pycache__/api.cpython-314.pyc": {
+    "sha256": "64dd4fb93d888195e7171757431208ea43c7ffd87c98ead126d61378dddc583e",
+    "bytes": 28311
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/__pycache__/common.cpython-312.pyc": {
+    "sha256": "4f79c089263870d9916f5a26cb2d1cf8c5413b213c4c58ac74f3e866fa12d53d",
+    "bytes": 3875
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/__pycache__/common_peer.cpython-312.pyc": {
+    "sha256": "5915bda40e2ea1fa25260db13a6a9ac11ba7b53f99fd790b73bb9ee8ab87ab4c",
+    "bytes": 3885
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/__pycache__/helpers.cpython-312.pyc": {
+    "sha256": "ea86d2709414ba94963e1bbddb1001c60b215f7ec9093f5931cc6f063cd4b463",
+    "bytes": 9023
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/__pycache__/helpers_peer.cpython-312.pyc": {
+    "sha256": "6bbcf42b36e9717c287d325771d30d066a611f1de31f35ef6ed1a902753675df",
+    "bytes": 9029
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/api-attempt1.txt": {
+    "sha256": "ba1af294eeabb4057a50fa0cf969e07c095b6f40a48d00a931fdd9467386cb75",
+    "bytes": 5507
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/api-attempt2.txt": {
+    "sha256": "ac9d14f6c6538da78c85e3f48750b8c24deade5c767cf4086eef212b2318de45",
+    "bytes": 2780
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/api-results-attempt2.json": {
+    "sha256": "d44433d39c56c90503b666a82ae67e05a27500e20283806f49f3c2ef81e9e5fd",
+    "bytes": 129561
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/api-results.json": {
+    "sha256": "a2606a7b6200d9a61ebdab8887f4ecd3e336b9a5e490a47aa615d5a164e54e89",
+    "bytes": 64800
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/api.py": {
+    "sha256": "6739ae53d77e9356748b8bc74eac86db4c5363224a3273b8fbe8a30ef6f87e28",
+    "bytes": 10635
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/api2.py": {
+    "sha256": "20b64a20f159b3b90c5970bf608df1c1c3e11b707f75060358de03b3bab972f0",
+    "bytes": 10570
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/browser/real-upgrade-False-1280.png": {
+    "sha256": "4be16af00eb0abd21858ab5ca1135b4ccc7d25c204a1d870f614995aa50da5bc",
+    "bytes": 237447
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/browser/real-upgrade-False-375.png": {
+    "sha256": "05b54e559318391079824af7fbbf2a7170d5889d1773e537dd17f2cd921b88bd",
+    "bytes": 229169
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/browser/real-upgrade-True-1280.png": {
+    "sha256": "098fa31a9c4a6d29177180a4bb30f1744d089d11d75e1bd0ede9cdb8922ff798",
+    "bytes": 351021
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/browser/real-upgrade-True-375.png": {
+    "sha256": "b4ac4615e520bdb658ada731ce44f49b68b35918fa583502a3b6743159980566",
+    "bytes": 342572
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/browser/recovered-False-False-1280.png": {
+    "sha256": "deac2a0f4a4dda60ec724e54a96832bff5e433f08b93eb981052881cb421dc81",
+    "bytes": 346513
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/browser/recovered-False-False-375.png": {
+    "sha256": "83ca125a4a4d80ac267b7053ac505a226b2407bdba7c80bfa08cc1aed4aa2f1f",
+    "bytes": 339216
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/browser/recovered-False-True-1280.png": {
+    "sha256": "e5a8eb1d95f1b20b933fadf36106ef8981662ce91f1825f69bb05f626561be41",
+    "bytes": 346579
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/browser/recovered-False-True-375.png": {
+    "sha256": "1c627051a91168eb52498c997fafc9f99bce7cdf7118fbbf2b1eb5852d878321",
+    "bytes": 339022
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/browser/recovered-True-False-1280.png": {
+    "sha256": "c2eee73245ad01cff235cc3dffddbfd86749f93a19bba0ca5758a6ee2e82132c",
+    "bytes": 352188
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/browser/recovered-True-False-375.png": {
+    "sha256": "39701cb0e2cea0fe3936714a40f220e6d477da4b1d1a332f8773ffe221e40a29",
+    "bytes": 343416
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/browser/recovered-True-True-1280.png": {
+    "sha256": "39492e6742098b5ac9276b0318ae8b43c08e8c832bbfd85d3ec1e9e3dac16d83",
+    "bytes": 351666
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/browser/recovered-True-True-375.png": {
+    "sha256": "dbec84e0883c61c62ac719ace0463a675c2766baff9b37284a8f41246ee8f8ed",
+    "bytes": 343260
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/browser/repaired-current-vs-original-1280.png": {
+    "sha256": "0d7c32625d51974d0a12a5ac1d054cbb657c9aba1561610495f6330b712654c4",
+    "bytes": 60958
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/browser/repaired-current-vs-original-375.png": {
+    "sha256": "12e655948ee5aabd0fd5975962d30249d637e59125a645e1e3969f3191244d31",
+    "bytes": 56049
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/browser/report.json": {
+    "sha256": "a03c8a14ec21ace0988bcf6572feb7e7631bc422e0c7ae89f53f347a788cdbf9",
+    "bytes": 11454
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/browser-attempt1.txt": {
+    "sha256": "02228bd1722f5bf2d6ddaf1f96d6db3fcc0291ea4b60608f20742d015024a64e",
+    "bytes": 6149
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/browser-attempt2.txt": {
+    "sha256": "6489c74fcdff5b570956cf503123bacd0c852dd3c266402809b97aa06ba9b66a",
+    "bytes": 1047
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/browser-restart-scoped.txt": {
+    "sha256": "84d52c27f8e4c62a887c4fd6740704c7a074fb1bc002518593db35641a90f659",
+    "bytes": 33
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/browser.py": {
+    "sha256": "62e8275460f8b1705f75803822441c8d825474e6bed78218c1fa7c0157142a87",
+    "bytes": 23728
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/browser2/real-upgrade-qa-s4-old1-1280.png": {
+    "sha256": "1c57aadc864cf8a939adc872afcb631cf0e1041c02e12e4c18514db2e07e6c07",
+    "bytes": 238576
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/browser2/real-upgrade-qa-s4-old1-375.png": {
+    "sha256": "4f4958148563566470cf6f85426f7b61e1e1ef2ee808dee2be7d13c95744aedf",
+    "bytes": 230152
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/browser2/real-upgrade-qa-s4-old2-1280.png": {
+    "sha256": "a6d025d612682aea1f00ef3620b3378294a4cf3d54f81acffd4e2d9d1f33944d",
+    "bytes": 351593
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/browser2/real-upgrade-qa-s4-old2-375.png": {
+    "sha256": "cda066a7b213a814d057d6cf271a835bc6445a2fe6f72d974fecdde4621e7e21",
+    "bytes": 342843
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/browser2/real-upgrade-qa-s4-old3-1280.png": {
+    "sha256": "1d5654e2e82a746220fbbb3c37075a3da4dee733debf36d4addbbeacdf531d66",
+    "bytes": 351592
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/browser2/real-upgrade-qa-s4-old3-375.png": {
+    "sha256": "178847691e8625ef13d98631cd49aa76f9641ee4fef82ffa7de81e5d59b649bf",
+    "bytes": 343179
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/browser2/report.json": {
+    "sha256": "241efc8527cba0c48034bba15d9b3959bd0d1c9f0050eecd438ca0c598cd83f9",
+    "bytes": 3907
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/browser2.py": {
+    "sha256": "2f1846b7ae1cba5273372c71409b4dfe506786f7dc61b95413e63fd6d421ac57",
+    "bytes": 23346
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/build-1.txt": {
+    "sha256": "18714772177b458cca760423fbef8740dfc864de2b6d087bff01764cea949631",
+    "bytes": 924
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/build-2.txt": {
+    "sha256": "08fa4c329f79eca38aa788d6c255270fe271ca242cbcc85151b5e2e2e5773d7e",
+    "bytes": 909
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/build-3.txt": {
+    "sha256": "d992aae02de5a83586a12e3e5e11ca51912dff4b339474ac00abb2a0b9fa877f",
+    "bytes": 910
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/build-4.txt": {
+    "sha256": "31b19ba833bfbf4959ed650e53a725b269f74494cff50fd62b59397858c87544",
+    "bytes": 921
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/cleanup-containers.txt": {
+    "sha256": "6c7781b5fb0e48ac89bdaea743dbf69f4f71c0973db32e2e8f8ef6f20f184be4",
+    "bytes": 65
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/cleanup-images.txt": {
+    "sha256": "5a721dc6076e8efb7dcdadf8055ad437db6733f271efd6fb2e3d75b19896390d",
+    "bytes": 221
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/cleanup-network.txt": {
+    "sha256": "808938e369971411a2d827606563fe00a1e03a9257b4453ac2fe7bbf23f03a2a",
+    "bytes": 15
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/commands.json": {
+    "sha256": "6260c1c0b0bfa3781077de1cd5a9a0fc51fe1e8ee95bb1c0eb567b46ef91d60a",
+    "bytes": 11253
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/common.py": {
+    "sha256": "44e2033a45b25ddc051a28a8740f9a1086ed74b76cb54f9feb5a510dbc43bde1",
+    "bytes": 1823
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/common_peer.py": {
+    "sha256": "268650566b77ce0fe669204210582d38a3db1cb26954e4cfe83cedccd2a518a6",
+    "bytes": 1828
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/coverage.txt": {
+    "sha256": "4e7afe0414d7e18ddc4574c02c28bc504e7a0e64c0444292137ac9604ce4d884",
+    "bytes": 4478
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/diagnose-import.py": {
+    "sha256": "c64319b27bf0ef4aa2f3266189a071006f3ee5dee18915e978603ddfc9b80a47",
+    "bytes": 714
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/extended-attempt1.txt": {
+    "sha256": "495fe5ad2a09f57b5b6930dfdc952246617c2e3e8478344c0cdfb60ce784cac0",
+    "bytes": 3272
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/extended-attempt2.txt": {
+    "sha256": "21f25c3f420f061980d2e4ef15f6087622243baa37e3dee017e02d4e0233f21c",
+    "bytes": 1480
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/extended-results-attempt2.json": {
+    "sha256": "61536754e8016c330af0c5a2dcbc4b558759e9d41655f30691de13cde7f33145",
+    "bytes": 22435
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/extended-results.json": {
+    "sha256": "84afaa101c98a93fd4f658d1a35e12306c80087b81f7bb2d091a06e316f972e3",
+    "bytes": 24923
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/extended.py": {
+    "sha256": "c60fd152739a7d8fd7665354659000665c7ed12a21eabc3b191676a538aec403",
+    "bytes": 6473
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/extended2.py": {
+    "sha256": "a44df03253eef9922c1a6d975d5f102ffc02188059bed247372fd8a110b26de3",
+    "bytes": 5577
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/extra-attempt1.txt": {
+    "sha256": "e799fbba191d92013dea30f6124b1e315dbadd79fe79d5cec19b0122b2059cff",
+    "bytes": 3022
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/extra-attempt2.txt": {
+    "sha256": "78f75a66ec86dbfbd10d6b4f53390593d8f612cad2bb4a415775c961eab65724",
+    "bytes": 2703
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/extra-attempt3.txt": {
+    "sha256": "10e8bc621010d953c8c89fadf45e9616f0069387e3365e9a99be065b00f8e07f",
+    "bytes": 1055
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/extra-results-attempt2.json": {
+    "sha256": "df576d7b05a1887f33a894e4485f69d631b4ac2886ac19ef00b677b4b5c8c1e7",
+    "bytes": 9062
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/extra-results-attempt3.json": {
+    "sha256": "6f24753479df058ed3b009e9660ce10daa1c325ad54bad694273cfc7c96aff12",
+    "bytes": 15391
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/extra-results.json": {
+    "sha256": "80f044c7d01257d0873fd12163154a1ec0b737879c0e691be893440358155dca",
+    "bytes": 13996
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/extra.py": {
+    "sha256": "300fc149e778f5958b1a8cbf18206a84c8bf8c5944c5a3468285f07677cf8281",
+    "bytes": 3863
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/extra2.py": {
+    "sha256": "1600641c115c57f35e279dc2c1e7de3ff3214154b9351fe9b0fa18a6bb4ffed0",
+    "bytes": 3881
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/extra3.py": {
+    "sha256": "c8fb3c43d282fb33337a873789c9d1b8388950e621ccf8f8007c605687da4634",
+    "bytes": 3881
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/failed-attempt-disposition.txt": {
+    "sha256": "5d64f53d4944c102ee9271e8c29cbf5d0032b0a036ac3395a031750da210a202",
+    "bytes": 2108
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/final-cleanliness.json": {
+    "sha256": "fd300f261f368821492578d78b5101e58fb175b668bdf3fe8cf86723aba645b9",
+    "bytes": 182
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/helpers.py": {
+    "sha256": "865f1a590febbf5c436d219ba3742bcddabeaa1e5500af66c4b5307261154243",
+    "bytes": 4423
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/helpers_peer.py": {
+    "sha256": "7658e09faa888a66769595a8a569b023cd0f2abf6bdf00d513ddbec667cdd14e",
+    "bytes": 4424
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/history-portable-attempt2.txt": {
+    "sha256": "1b5a3422a0e86523c0ae3772884371e2e8a357acc1d6329181032a7524882793",
+    "bytes": 430
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/history-portable-results-attempt2.json": {
+    "sha256": "50b9f0f24f71723eee4196e98f9df8fc058ba8c8381cb36bd3c9ad41bd078938",
+    "bytes": 9494
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/history-portable-results.json": {
+    "sha256": "488cd446a72c7412fc834092f88402739becac9956d0383bf07157e464c89423",
+    "bytes": 14453
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/history-portable.py": {
+    "sha256": "b811a9c68a8ba5fc4d919d3277bc81886481fb19d986fec66b8969cd95a3bfe8",
+    "bytes": 1991
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/history-portable.txt": {
+    "sha256": "dace4f239bfe50025c05b3e021ffd340197fff0685090fefae43b0548c7d6926",
+    "bytes": 11595
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/history-portable2.py": {
+    "sha256": "63e8d8841b4143e0c0fb913c3563f6f65c9925308244690f7136b2dc328c02bf",
+    "bytes": 2103
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/import-attempt1.txt": {
+    "sha256": "12e38ca3c16d9a6e45c448909f843957ab4d8897d9931fd0fe8a6c981ef16446",
+    "bytes": 2862
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/import-attempt2.txt": {
+    "sha256": "bcd000ab2f3224275df63165bfd1486d16ecbe51ed997a980b9e62a1594d27a4",
+    "bytes": 1330
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/import-diagnosis.txt": {
+    "sha256": "dc986eb17b071d80c4d3e987dcd3b7579017bf1976394207278d17cbc27a0d12",
+    "bytes": 548
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/import-results-attempt2.json": {
+    "sha256": "684df11398e42420f8d9d5279da714a7c0b1f2b3e2e3d24e0128b9668ede8b42",
+    "bytes": 14326
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/import-results.json": {
+    "sha256": "9908c8061a5432fbd656f807a3491f60b38ac52ac53f7a5d6bad24c7e729a0b9",
+    "bytes": 7679
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/imports.py": {
+    "sha256": "8f5c5ee577eeba86eb98c8112495d239b7d6a0d48acba24be1ac72d8a1f9d848",
+    "bytes": 4739
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/imports2.py": {
+    "sha256": "e25cb1960d9353074714ce2acb32956a16e704f850bdee6a37686958beceb6c2",
+    "bytes": 5039
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/input-map.txt": {
+    "sha256": "7b696e378aef6323186baf5986ed2aba210149eaecc5d5cd5e41d8039038f7bd",
+    "bytes": 929
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/legacy-prepare-results.json": {
+    "sha256": "fc654815e725eecc346a6287af502ba71f2df4d081f127d204c6335dc8bff5cc",
+    "bytes": 5578
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/legacy-prepare.py": {
+    "sha256": "87dd66df92b645cac085ac5eb3565b9f841b7e9b18b2458d1256120554866620",
+    "bytes": 1797
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/legacy-prepare.txt": {
+    "sha256": "2c878844d25aca2faf72fee9882f84723f4b02634c8b0ce4ed84149a85f575fa",
+    "bytes": 331
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/legacy1-context-private.json": {
+    "sha256": "c15798a18cc91a887390f926d9ab1f315dcd730f15d32d444ef2f16a863ab9f2",
+    "bytes": 584
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/legacy1-private.json": {
+    "sha256": "b36189d57ea7c86a6845534e7bf344c427b0c0c1d8f043021ce7c2f11d06154f",
+    "bytes": 2759
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/legacy2-context-private.json": {
+    "sha256": "b688286dce5fcd1e3d2da15ee6fd5c4df28b11bf7a9f56dd2327bd03aa8867e2",
+    "bytes": 604
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/legacy2-private.json": {
+    "sha256": "3d9895f2acfebecd87715f04470182720d5ce5699ee397f5343e1239336fe32a",
+    "bytes": 2839
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/legacy3-context-private.json": {
+    "sha256": "6363d2636d9499488dcd384bacf9ce1ae55b4281208b246ef0c98c65cc6661da",
+    "bytes": 5511
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/legacy3-private.json": {
+    "sha256": "c94b4ab9529342b5d422fb6456d573a74f5b27d11f8f92ce46e16d1a25c5d015",
+    "bytes": 21110
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/native-applied-private.json": {
+    "sha256": "41391e682feced4fa35b7e67a1ff631533d7d2a2f3b50283c1faca3a1effd008",
+    "bytes": 26059
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/native-context-private.json": {
+    "sha256": "74ea5b30df2ab82cf2415fb811f6e543bbc3e8bc4e393ca9b6d330fa4ae4577c",
+    "bytes": 5741
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/native-pending-private.json": {
+    "sha256": "0a4742ce8220feacbc4b1c988508b8a18c1992a1a17d913f70c996e1f48b2a03",
+    "bytes": 23678
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/official/report.json": {
+    "sha256": "57b908cbdca6dddfc40ab8730c720751c72b3c5da5cb569fcc11a7314ae29d50",
+    "bytes": 2859
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/official/stage-1.counts.json": {
+    "sha256": "b18fabdbadab8f1094c6b47d09dd89a3e3215cb6c471340343c5f8787e30b77b",
+    "bytes": 499
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/official/stage-1.log": {
+    "sha256": "ef720ba9fbad0df0b59ba04f9f322a5a2823938dcc230116533ca071cc55a97d",
+    "bytes": 1420
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/official/stage-2.counts.json": {
+    "sha256": "5e7ced47a9492a568aec12049d401867a868110520ced788cfc9976f400e4b0a",
+    "bytes": 218
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/official/stage-2.log": {
+    "sha256": "7c09a4d7fe7bccc97e07bc6876f75a41c45111b9890d737dbbd27f4a8eb485ad",
+    "bytes": 1471
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/official/stage-3.counts.json": {
+    "sha256": "0690b4b540761c4ee3ae249853e6a8a3bdc4210f686645f4612e3c336d716713",
+    "bytes": 165
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/official/stage-3.log": {
+    "sha256": "e7667ef74acf578e710fff6ea245e52da653e56ee678f9d90da1843e572db6fa",
+    "bytes": 1469
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/official/stage-4.counts.json": {
+    "sha256": "9634baaeda23ab472e0fe8359c728ccd2fc1c62cf467b7ffdc8c4685446b4089",
+    "bytes": 165
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/official/stage-4.log": {
+    "sha256": "37b8f10ff232e021a3cd77dc62e1a3959d964468ece9e82e3e4acd1012d80f48",
+    "bytes": 1469
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/official-command.txt": {
+    "sha256": "6bcd66069c028017b35b31ed0e8f87a565c8f9e21d4acd783909fb56bf441943",
+    "bytes": 1284
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/provenance.json": {
+    "sha256": "f662529cb2990542ecfed75ff95df7858081abadd79cb065d60a1d04c4b2fb2b",
+    "bytes": 2910
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/record.json": {
+    "sha256": "c969c0ffda726afb9658be479ea277e7e4b8efe86cc39de2f8bb4c79e92d5737",
+    "bytes": 2964
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/relationships-attempt1.txt": {
+    "sha256": "39bd5be453797d83514e9f5d33c6369b9f12625ec924a150dca2a3c6796b2168",
+    "bytes": 5604
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/relationships-attempt2.txt": {
+    "sha256": "2675431306f01d4dc9f668a3c91e7ed94715f75e041079a87937cb4f8ee81773",
+    "bytes": 704
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/relationships-results-attempt2.json": {
+    "sha256": "382f0ab6d667d79a27a592e6ddbff367f6ca2b5cc76db2e865e63f9703d280da",
+    "bytes": 6535
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/relationships-results.json": {
+    "sha256": "b180d311005a153a2c37f0e3f285006912e783aea5977cd3ff8a735bb08221b1",
+    "bytes": 5835
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/relationships.py": {
+    "sha256": "4e04e13e2693d71765fbcd20781d4585f3a7bba93ca5b3a85caee4db1a5d1764",
+    "bytes": 2223
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/relationships2.py": {
+    "sha256": "133bbfab51519971572bd2e143962bcaf8922878abf5469cedac9b83f2008828",
+    "bytes": 2232
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/resource-configuration.txt": {
+    "sha256": "edbcc4db6d8bb0e85d500af5c45960acaa3332239251280d3b5ee2ec78dc5405",
+    "bytes": 250
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/solver-literal-results.json": {
+    "sha256": "aa8c114a54994f751ee14524cecee86e5a0e3b2009f2dbdf341a581b5a4bac9d",
+    "bytes": 66093
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/solver-literal.py": {
+    "sha256": "227ccaee5d611cdde73e43a66a1e7a2edcda74ef3dbeeed6ba43e0e40240acc3",
+    "bytes": 5083
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/solver-literal.txt": {
+    "sha256": "c0861ac7f86c45a66b36bddc0a6558a219dd43745be5ec19e59273561c4d5782",
+    "bytes": 1065
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/sources.json": {
+    "sha256": "709ce1d443f4ed42cec329da8f9aa9dbffc25aee45992bbe8de75e8fd59c57c3",
+    "bytes": 1192
+  },
+  "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s4-run-20261006T1012Z/stopped-sources.txt": {
+    "sha256": "d2f2676ecf62f93694ddd2351c78b9953ef353a0058f493de83d6734ae64e32a",
+    "bytes": 44
+  }
+}

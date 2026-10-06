@@ -1,0 +1,432 @@
+[
+  {
+    "argv": [
+      "docker",
+      "build",
+      "-t",
+      "tablekeeper-review-s4-1:1026",
+      "/private/tmp/tablekeeper-review-s4-release-20261006T102629Z/stage-1"
+    ],
+    "start_utc": "2026-10-06T10:30:26.218456+00:00",
+    "end_utc": "2026-10-06T10:30:27.126313+00:00",
+    "exit": 0,
+    "stdout": "",
+    "stderr": "#0 building with \"default\" instance using docker driver\n\n#1 [internal] load build definition from Dockerfile\n#1 transferring dockerfile: 346B done\n#1 DONE 0.0s\n\n#2 [internal] load metadata for docker.io/library/python:3.12-slim\n#2 DONE 0.0s\n\n#3 [internal] load .dockerignore\n#3 transferring context: 2B done\n#3 DONE 0.0s\n\n#4 [1/4] FROM docker.io/library/python:3.12-slim\n#4 DONE 0.0s\n\n#5 [internal] load build context\n#5 transferring context: 178B done\n#5 DONE 0.0s\n\n#6 [3/4] WORKDIR /app\n#6 CACHED\n\n#7 [2/4] RUN apt-get update && apt-get install -y --no-install-recommends tzdata && rm -rf /var/lib/apt/lists/*\n#7 CACHED\n\n#8 [4/4] COPY values.py temporal.py domain.py state.py service.py server.py ./\n#8 CACHED\n\n#9 exporting to image\n#9 exporting layers done\n#9 writing image sha256:dbf730160f49215f917ecbe95b67b6d573756bdbdf35b194bd8637007cb63b14 done\n#9 naming to docker.io/library/tablekeeper-review-s4-1:1026 done\n#9 DONE 0.0s\n"
+  },
+  {
+    "argv": [
+      "docker",
+      "build",
+      "-t",
+      "tablekeeper-review-s4-2:1026",
+      "/private/tmp/tablekeeper-review-s4-release-20261006T102629Z/stage-2"
+    ],
+    "start_utc": "2026-10-06T10:30:27.127095+00:00",
+    "end_utc": "2026-10-06T10:30:27.443208+00:00",
+    "exit": 0,
+    "stdout": "",
+    "stderr": "#0 building with \"default\" instance using docker driver\n\n#1 [internal] load build definition from Dockerfile\n#1 transferring dockerfile: 306B done\n#1 DONE 0.0s\n\n#2 [internal] load metadata for docker.io/library/python:3.12-slim\n#2 DONE 0.0s\n\n#3 [internal] load .dockerignore\n#3 transferring context: 2B done\n#3 DONE 0.0s\n\n#4 [1/5] FROM docker.io/library/python:3.12-slim\n#4 DONE 0.0s\n\n#5 [internal] load build context\n#5 transferring context: 646B done\n#5 DONE 0.0s\n\n#6 [3/5] WORKDIR /app\n#6 CACHED\n\n#7 [4/5] COPY . ./\n#7 CACHED\n\n#8 [2/5] RUN apt-get update && apt-get install -y --no-install-recommends tzdata && rm -rf /var/lib/apt/lists/*\n#8 CACHED\n\n#9 [5/5] RUN mkdir -p static\n#9 CACHED\n\n#10 exporting to image\n#10 exporting layers done\n#10 writing image sha256:2f5fc6d8e34bb4fab45ddad1683662a3dde9c59cd360cd6d7b914d84c1f3db19 done\n#10 naming to docker.io/library/tablekeeper-review-s4-2:1026 done\n#10 DONE 0.0s\n"
+  },
+  {
+    "argv": [
+      "docker",
+      "build",
+      "-t",
+      "tablekeeper-review-s4-3:1026",
+      "/private/tmp/tablekeeper-review-s4-release-20261006T102629Z/stage-3"
+    ],
+    "start_utc": "2026-10-06T10:30:27.443911+00:00",
+    "end_utc": "2026-10-06T10:30:27.755303+00:00",
+    "exit": 0,
+    "stdout": "",
+    "stderr": "#0 building with \"default\" instance using docker driver\n\n#1 [internal] load build definition from Dockerfile\n#1 transferring dockerfile: 306B done\n#1 DONE 0.0s\n\n#2 [internal] load metadata for docker.io/library/python:3.12-slim\n#2 DONE 0.0s\n\n#3 [internal] load .dockerignore\n#3 transferring context: 2B done\n#3 DONE 0.0s\n\n#4 [1/5] FROM docker.io/library/python:3.12-slim\n#4 DONE 0.0s\n\n#5 [internal] load build context\n#5 transferring context: 743B done\n#5 DONE 0.0s\n\n#6 [2/5] RUN apt-get update && apt-get install -y --no-install-recommends tzdata && rm -rf /var/lib/apt/lists/*\n#6 CACHED\n\n#7 [4/5] COPY . ./\n#7 CACHED\n\n#8 [3/5] WORKDIR /app\n#8 CACHED\n\n#9 [5/5] RUN mkdir -p static\n#9 CACHED\n\n#10 exporting to image\n#10 exporting layers done\n#10 writing image sha256:fc4408c51d1047f2c2554c5f49be1c60bec72afaa972483f99b07588ab1911e2 done\n#10 naming to docker.io/library/tablekeeper-review-s4-3:1026 done\n#10 DONE 0.0s\n"
+  },
+  {
+    "argv": [
+      "docker",
+      "build",
+      "-t",
+      "tablekeeper-review-s4-4:1026",
+      "/private/tmp/tablekeeper-review-s4-release-20261006T102629Z/stage-4"
+    ],
+    "start_utc": "2026-10-06T10:30:27.756209+00:00",
+    "end_utc": "2026-10-06T10:30:28.162074+00:00",
+    "exit": 0,
+    "stdout": "",
+    "stderr": "#0 building with \"default\" instance using docker driver\n\n#1 [internal] load build definition from Dockerfile\n#1 transferring dockerfile: 306B done\n#1 DONE 0.0s\n\n#2 [internal] load metadata for docker.io/library/python:3.12-slim\n#2 DONE 0.0s\n\n#3 [internal] load .dockerignore\n#3 transferring context: 2B done\n#3 DONE 0.0s\n\n#4 [1/5] FROM docker.io/library/python:3.12-slim\n#4 DONE 0.0s\n\n#5 [internal] load build context\n#5 transferring context: 841B done\n#5 DONE 0.0s\n\n#6 [2/5] RUN apt-get update && apt-get install -y --no-install-recommends tzdata && rm -rf /var/lib/apt/lists/*\n#6 CACHED\n\n#7 [4/5] COPY . ./\n#7 CACHED\n\n#8 [3/5] WORKDIR /app\n#8 CACHED\n\n#9 [5/5] RUN mkdir -p static\n#9 CACHED\n\n#10 exporting to image\n#10 exporting layers done\n#10 writing image sha256:15a3df274643a11db0b1a774ee65c76180725790e946043f69eca3e8dc2dd793 done\n#10 naming to docker.io/library/tablekeeper-review-s4-4:1026 done\n#10 DONE 0.0s\n"
+  },
+  {
+    "argv": [
+      "docker",
+      "network",
+      "create",
+      "--internal",
+      "review-s4-net-1026"
+    ],
+    "start_utc": "2026-10-06T10:30:28.164266+00:00",
+    "end_utc": "2026-10-06T10:30:28.213899+00:00",
+    "exit": 0,
+    "stdout": "8839639b0f280dfb7ce2eba91af876c4035f52f8cbd2385314156e8ab14c32f8\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "run",
+      "-d",
+      "--name",
+      "review-s4-app",
+      "--network",
+      "review-s4-net-1026",
+      "--cpus",
+      "2",
+      "--memory",
+      "2g",
+      "tablekeeper-review-s4-4:1026"
+    ],
+    "start_utc": "2026-10-06T10:30:28.214471+00:00",
+    "end_utc": "2026-10-06T10:30:28.448160+00:00",
+    "exit": 0,
+    "stdout": "addcf4c4c356891ec7dc2b26cb059460c6104f24f02401d7eefd0c27510e2e13\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "run",
+      "-d",
+      "--name",
+      "review-s4-dest",
+      "--network",
+      "review-s4-net-1026",
+      "--cpus",
+      "2",
+      "--memory",
+      "2g",
+      "tablekeeper-review-s4-4:1026"
+    ],
+    "start_utc": "2026-10-06T10:30:28.448894+00:00",
+    "end_utc": "2026-10-06T10:30:28.591946+00:00",
+    "exit": 0,
+    "stdout": "b0cf77443e5f8b90b33da15e05bb1024ecb7052f7cdb63494a23e0b2beb1b036\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "run",
+      "-d",
+      "--name",
+      "review-s4-old1",
+      "--network",
+      "review-s4-net-1026",
+      "--cpus",
+      "2",
+      "--memory",
+      "2g",
+      "tablekeeper-review-s4-1:1026"
+    ],
+    "start_utc": "2026-10-06T10:30:28.592500+00:00",
+    "end_utc": "2026-10-06T10:30:28.748954+00:00",
+    "exit": 0,
+    "stdout": "195cf91cd4f98d354dc88bc91110b40b6ebd06daa86852636bc737783d0e5b11\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "run",
+      "-d",
+      "--name",
+      "review-s4-old2",
+      "--network",
+      "review-s4-net-1026",
+      "--cpus",
+      "2",
+      "--memory",
+      "2g",
+      "tablekeeper-review-s4-2:1026"
+    ],
+    "start_utc": "2026-10-06T10:30:28.749885+00:00",
+    "end_utc": "2026-10-06T10:30:28.914797+00:00",
+    "exit": 0,
+    "stdout": "7c618a290995f8cdcb146ea8430ff66d042e3aa9a38847eeae390f9c8e866d72\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "run",
+      "-d",
+      "--name",
+      "review-s4-old3",
+      "--network",
+      "review-s4-net-1026",
+      "--cpus",
+      "2",
+      "--memory",
+      "2g",
+      "tablekeeper-review-s4-3:1026"
+    ],
+    "start_utc": "2026-10-06T10:30:28.915593+00:00",
+    "end_utc": "2026-10-06T10:30:29.064694+00:00",
+    "exit": 0,
+    "stdout": "dca90a889fee43bd00d4bb67ffd8b839b9fe7f86f93fc47cf433cc51244891cb\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "create",
+      "--name",
+      "review-s4-browser",
+      "--network",
+      "review-s4-net-1026",
+      "--cpus",
+      "2",
+      "--memory",
+      "2g",
+      "--entrypoint",
+      "python",
+      "df-harness-runner",
+      "/review.py"
+    ],
+    "start_utc": "2026-10-06T10:30:29.065538+00:00",
+    "end_utc": "2026-10-06T10:30:29.130691+00:00",
+    "exit": 0,
+    "stdout": "f88889f48e3f824c6502936e64f1ab04f040cdb0a264c0a685d29936b64f0e31\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "cp",
+      "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s4-release-20261006T102629Z/browser.py",
+      "review-s4-browser:/review.py"
+    ],
+    "start_utc": "2026-10-06T10:30:29.131202+00:00",
+    "end_utc": "2026-10-06T10:30:29.161009+00:00",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "start",
+      "-a",
+      "review-s4-browser"
+    ],
+    "start_utc": "2026-10-06T10:30:29.161955+00:00",
+    "end_utc": "2026-10-06T10:30:56.142211+00:00",
+    "exit": 0,
+    "stdout": "{\n  \"focus\": 11,\n  \"groups\": [\n    \"Browser late detail/error/finally Bauthority PASS\",\n    \"Browser lost success replay/exact retry/editrevert new identity PASS\",\n    \"Browser actual accepted Stage1 export/auth/form/bodykey/legacyreceipt/currentcancelled PASS\",\n    \"Browser actual accepted Stage1 export/auth/form/bodykey/legacyreceipt/currentcancelled PASS\",\n    \"Browser actual accepted Stage1 export/auth/form/bodykey/legacyreceipt/currentcancelled PASS\",\n    \"Current repairedCorner lookup/grid versus immutableAlcove receipt/exactreplay/focus/375px PASS\"\n  ]\n}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "cp",
+      "review-s4-browser:/out",
+      "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s4-release-20261006T102629Z/browser-run"
+    ],
+    "start_utc": "2026-10-06T10:30:56.152150+00:00",
+    "end_utc": "2026-10-06T10:30:56.470311+00:00",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "create",
+      "--name",
+      "review-s4-api",
+      "--network",
+      "review-s4-net-1026",
+      "--cpus",
+      "2",
+      "--memory",
+      "2g",
+      "--entrypoint",
+      "python",
+      "df-harness-runner",
+      "/review.py"
+    ],
+    "start_utc": "2026-10-06T10:30:56.470690+00:00",
+    "end_utc": "2026-10-06T10:30:56.538264+00:00",
+    "exit": 0,
+    "stdout": "457e2b62d75af8b5c7de24fd823df0933e6c4f4c208edc41259e06d1c3c217e6\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "cp",
+      "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s4-release-20261006T102629Z/api.py",
+      "review-s4-api:/review.py"
+    ],
+    "start_utc": "2026-10-06T10:30:56.538801+00:00",
+    "end_utc": "2026-10-06T10:30:56.565475+00:00",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "start",
+      "-a",
+      "review-s4-api"
+    ],
+    "start_utc": "2026-10-06T10:30:56.565928+00:00",
+    "end_utc": "2026-10-06T10:31:00.366816+00:00",
+    "exit": 1,
+    "stdout": "REAL_CLOCK_BOUNDARY_WAIT 0.347\n",
+    "stderr": "Traceback (most recent call last):\n  File \"/review.py\", line 81, in <module>\n    result=req('/series/'+s['series_id']+'/amend',{'expected_revision':1,'from_index':0,'local_time':future.strftime('%H:%M')},t,'noop',expected=201);assert result==s;after=export();assert all(after['state'][k]==snapshot['state'][k] for k in ['reservations','histories','restaurant_revisions','series']);req('/reservations/'+b['reference'],{'starts_at_local':b['starts_at_local']},t,method='PATCH',expected=409,code='cancellation_cutoff');req('/series/'+s['series_id']+'/amend',{'expected_revision':1,'from_index':0,'local_time':(future+datetime.timedelta(minutes=1)).strftime('%H:%M')},t,'real',expected=409,code='cancellation_cutoff');assert req('/series/'+s['series_id']+'/amend',{'expected_revision':1,'from_index':0,'local_time':future.strftime('%H:%M')},t,'noop')==s\n                                                                                                                                                                                                                                                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/review.py\", line 11, in req\n    if code:assert v['error']['code']==code,v\n                   ^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: {'error': {'code': 'cutoff_passed', 'message': 'cutoff passed'}}\n"
+  },
+  {
+    "argv": [
+      "docker",
+      "cp",
+      "review-s4-api:/out",
+      "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s4-release-20261006T102629Z/api-run"
+    ],
+    "start_utc": "2026-10-06T10:31:00.368538+00:00",
+    "end_utc": "2026-10-06T10:31:00.396233+00:00",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "inspect",
+      "review-s4-app",
+      "review-s4-dest",
+      "review-s4-old1",
+      "review-s4-old2",
+      "review-s4-old3",
+      "review-s4-browser",
+      "review-s4-api",
+      "--format",
+      "{{.Name}} image={{.Image}} cpu={{.HostConfig.NanoCpus}} memory={{.HostConfig.Memory}} start={{.State.StartedAt}} end={{.State.FinishedAt}} exit={{.State.ExitCode}}"
+    ],
+    "start_utc": "2026-10-06T10:31:00.396841+00:00",
+    "end_utc": "2026-10-06T10:31:00.425746+00:00",
+    "exit": 0,
+    "stdout": "/review-s4-app image=sha256:15a3df274643a11db0b1a774ee65c76180725790e946043f69eca3e8dc2dd793 cpu=2000000000 memory=2147483648 start=2026-10-06T10:30:28.324834434Z end=0001-01-01T00:00:00Z exit=0\n/review-s4-dest image=sha256:15a3df274643a11db0b1a774ee65c76180725790e946043f69eca3e8dc2dd793 cpu=2000000000 memory=2147483648 start=2026-10-06T10:30:28.520910108Z end=0001-01-01T00:00:00Z exit=0\n/review-s4-old1 image=sha256:dbf730160f49215f917ecbe95b67b6d573756bdbdf35b194bd8637007cb63b14 cpu=2000000000 memory=2147483648 start=2026-10-06T10:30:28.662535167Z end=0001-01-01T00:00:00Z exit=0\n/review-s4-old2 image=sha256:2f5fc6d8e34bb4fab45ddad1683662a3dde9c59cd360cd6d7b914d84c1f3db19 cpu=2000000000 memory=2147483648 start=2026-10-06T10:30:28.829173057Z end=0001-01-01T00:00:00Z exit=0\n/review-s4-old3 image=sha256:fc4408c51d1047f2c2554c5f49be1c60bec72afaa972483f99b07588ab1911e2 cpu=2000000000 memory=2147483648 start=2026-10-06T10:30:28.989452743Z end=0001-01-01T00:00:00Z exit=0\n/review-s4-browser image=sha256:da249723d954671d7e57ac5b3b55ced42a7f34430edf45116da52a4ea94963cd cpu=2000000000 memory=2147483648 start=2026-10-06T10:30:29.193477766Z end=2026-10-06T10:30:55.963466941Z exit=0\n/review-s4-api image=sha256:da249723d954671d7e57ac5b3b55ced42a7f34430edf45116da52a4ea94963cd cpu=2000000000 memory=2147483648 start=2026-10-06T10:30:56.617860879Z end=2026-10-06T10:31:00.226612908Z exit=1\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "network",
+      "inspect",
+      "review-s4-net-1026",
+      "--format",
+      "internal={{.Internal}}"
+    ],
+    "start_utc": "2026-10-06T10:31:00.426179+00:00",
+    "end_utc": "2026-10-06T10:31:00.449254+00:00",
+    "exit": 0,
+    "stdout": "internal=true\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "stop",
+      "--time",
+      "2",
+      "review-s4-app"
+    ],
+    "start_utc": "2026-10-06T10:31:00.449647+00:00",
+    "end_utc": "2026-10-06T10:31:02.593691+00:00",
+    "exit": 0,
+    "stdout": "Flag --time has been deprecated, use --timeout instead\nreview-s4-app\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "create",
+      "--name",
+      "review-s4-verify",
+      "--network",
+      "review-s4-net-1026",
+      "--cpus",
+      "2",
+      "--memory",
+      "2g",
+      "--entrypoint",
+      "python",
+      "df-harness-runner",
+      "/verify.py"
+    ],
+    "start_utc": "2026-10-06T10:31:02.594191+00:00",
+    "end_utc": "2026-10-06T10:31:02.691366+00:00",
+    "exit": 0,
+    "stdout": "49945ac9528326a65129a3645c0ea8c66e46aacc505185979ac98ec4ca712aac\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "cp",
+      "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s4-release-20261006T102629Z/verify.py",
+      "review-s4-verify:/verify.py"
+    ],
+    "start_utc": "2026-10-06T10:31:02.691984+00:00",
+    "end_utc": "2026-10-06T10:31:02.716718+00:00",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "cp",
+      "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s4-release-20261006T102629Z/api-run/private-bundle.json",
+      "review-s4-verify:/bundle.json"
+    ],
+    "start_utc": "2026-10-06T10:31:02.717394+00:00",
+    "end_utc": "2026-10-06T10:31:02.740020+00:00",
+    "exit": 1,
+    "stdout": "",
+    "stderr": "lstat /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s4-release-20261006T102629Z/api-run/private-bundle.json: no such file or directory\n"
+  },
+  {
+    "argv": [
+      "docker",
+      "rm",
+      "-f",
+      "review-s4-app",
+      "review-s4-dest",
+      "review-s4-old1",
+      "review-s4-old2",
+      "review-s4-old3",
+      "review-s4-browser",
+      "review-s4-api",
+      "review-s4-verify"
+    ],
+    "start_utc": "2026-10-06T10:31:02.740835+00:00",
+    "end_utc": "2026-10-06T10:31:03.032352+00:00",
+    "exit": 0,
+    "stdout": "review-s4-app\nreview-s4-dest\nreview-s4-old1\nreview-s4-old2\nreview-s4-old3\nreview-s4-browser\nreview-s4-api\nreview-s4-verify\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "network",
+      "rm",
+      "review-s4-net-1026"
+    ],
+    "start_utc": "2026-10-06T10:31:03.032781+00:00",
+    "end_utc": "2026-10-06T10:31:03.109903+00:00",
+    "exit": 0,
+    "stdout": "review-s4-net-1026\n",
+    "stderr": ""
+  }
+]

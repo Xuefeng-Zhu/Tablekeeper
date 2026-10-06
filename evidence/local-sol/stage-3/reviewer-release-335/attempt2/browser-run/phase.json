@@ -1,0 +1,54 @@
+[
+  {
+    "pair": false,
+    "before": {
+      "tag": "INPUT",
+      "testid": "booking-party-size",
+      "y": 5392
+    },
+    "pending": {
+      "tag": "BODY",
+      "testid": null,
+      "y": 5392
+    },
+    "after": {
+      "tag": "BODY",
+      "testid": null,
+      "y": 4874
+    },
+    "tab_recovery": [
+      {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5152
+      }
+    ],
+    "disposition": "Native disabledinput BODY phase retained as observation; Tab reaches enabled submit; submitfocus requirement checked separately"
+  },
+  {
+    "pair": true,
+    "before": {
+      "tag": "INPUT",
+      "testid": "booking-party-size",
+      "y": 5392
+    },
+    "pending": {
+      "tag": "BODY",
+      "testid": null,
+      "y": 5392
+    },
+    "after": {
+      "tag": "BODY",
+      "testid": null,
+      "y": 4874
+    },
+    "tab_recovery": [
+      {
+        "tag": "BUTTON",
+        "testid": "booking-submit",
+        "y": 5152
+      }
+    ],
+    "disposition": "Native disabledinput BODY phase retained as observation; Tab reaches enabled submit; submitfocus requirement checked separately"
+  }
+]

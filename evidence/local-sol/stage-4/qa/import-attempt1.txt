@@ -1,0 +1,24 @@
+Traceback (most recent call last):
+  File "/evidence/helpers_peer.py", line 36, in case
+    detail=fn(); result={'case':name,'outcome':'PASS','detail':detail}
+           ^^^^
+  File "/evidence/imports.py", line 11, in native_pending
+    assert records(t,DEST)==s['state']['reservations'];assert series(t,c['series']['series_id'],DEST)==c['series']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+{"case": "I-stopped-native-pending", "outcome": "FAIL", "detail": "", "exception": "AssertionError", "utc_start": "2026-10-06T10:16:45.343641+00:00", "utc_end": "2026-10-06T10:16:45.416075+00:00", "candidate": "ac1eb4945a2adaeaaf8a62d0817bdbc6a021e566"}
+Traceback (most recent call last):
+  File "/evidence/helpers_peer.py", line 36, in case
+    detail=fn(); result={'case':name,'outcome':'PASS','detail':detail}
+           ^^^^
+  File "/evidence/imports.py", line 19, in native_applied
+    s=read('native-applied-private.json');c=read('native-context-private.json');put(s);t=c['token'];m=c['manager'];p=c['pending'];assert records(t,DEST)==s['state']['reservations'];got=expect('POST','/restaurants/R/replans/'+p['plan_id']+'/apply',200,body={},token=m,key='a',base=DEST);assert got==c['applied'];expect('POST','/restaurants/R/replans/'+p['plan_id']+'/apply',409,'plan_already_applied',body={},token=m,key='new',base=DEST)
+                                                                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+{"case": "I-stopped-native-applied-corruption", "outcome": "FAIL", "detail": "", "exception": "AssertionError", "utc_start": "2026-10-06T10:16:45.416106+00:00", "utc_end": "2026-10-06T10:16:45.422840+00:00", "candidate": "ac1eb4945a2adaeaaf8a62d0817bdbc6a021e566"}
+{"case": "I-real-stopped-Stage1-2-3-and-original-schedule", "outcome": "PASS", "detail": [{"schema": 1, "stopped_source": true, "originalreceipt": true, "scheduled_dates_from_adoption_receipt": false}, {"schema": 2, "stopped_source": true, "originalreceipt": true, "scheduled_dates_from_adoption_receipt": false}, {"schema": 3, "stopped_source": true, "originalreceipt": true, "scheduled_dates_from_adoption_receipt": true}], "utc_start": "2026-10-06T10:16:45.422852+00:00", "utc_end": "2026-10-06T10:16:45.558226+00:00", "candidate": "ac1eb4945a2adaeaaf8a62d0817bdbc6a021e566"}
+Traceback (most recent call last):
+  File "/evidence/imports.py", line 43, in <module>
+    Path('/evidence/import-results.json').write_text(json.dumps({'candidate':REV,'results':results,'observations':observations},indent=2));assert all(x['outcome']=='PASS' for x in results)
+                                                                                                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

@@ -1,0 +1,48 @@
+{
+  "work_item": "UI-S2",
+  "candidate": "108bcd4c48fa4fb4d7dedf286e94c8e4937f7f10",
+  "responsible": "@frankzhu94/factory-frontend",
+  "layer": "actual Chromium + actual packaged API, internal Docker network; route holds/aborts forward real response bytes",
+  "started_utc": "2026-10-06T06:23:11.100679+00:00",
+  "ended_utc": "2026-10-06T06:23:29.807987+00:00",
+  "browser": "153.0.8010.12",
+  "results": [
+    {
+      "case": "routes-auth",
+      "result": "PASS"
+    },
+    {
+      "case": "pair-replay-lookup-cancel-keyboard",
+      "result": "PASS"
+    },
+    {
+      "case": "single-pair-lost-commit-exact-retry-edit-revert",
+      "result": "PASS"
+    },
+    {
+      "case": "single-pair-conflict-preservation",
+      "result": "PASS"
+    },
+    {
+      "case": "latest-detail-availability-success-error",
+      "result": "PASS"
+    },
+    {
+      "case": "stale-post-success-uncertain",
+      "result": "PASS"
+    },
+    {
+      "case": "actual-stage1-browser-import-retry-original-vs-current",
+      "result": "PASS"
+    },
+    {
+      "case": "full-empty-calendar-bounds",
+      "result": "PASS"
+    }
+  ],
+  "page_errors": [],
+  "cost": "UNAVAILABLE",
+  "limitations": [
+    "Finite owner cases; independent QA/Designer/Reviewer acceptance pending. No exhaustive schedule or continuous resource profile."
+  ]
+}

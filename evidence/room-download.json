@@ -1,0 +1,13 @@
+{
+  "status": "GENUINE_FULL_ROOM_DOWNLOAD",
+  "room_id": "4084182d-0b85-46d6-a137-f0bd7d44b498",
+  "source": "Authenticated BAND console Conversation options > Download > Download full room transcript",
+  "scope": "full",
+  "events": 6462,
+  "exported_at": "2026-10-06T06:38:57.986Z",
+  "bytes": 9353740,
+  "sha256": "afe76f7fe500f88dbb21f5a9b0529c5d5e7270db55fe62809aa361d856f096e8",
+  "unchanged": true,
+  "privacy_review": "PASS",
+  "run_status": "in progress at export; refresh after completion for a final judged run export"
+}

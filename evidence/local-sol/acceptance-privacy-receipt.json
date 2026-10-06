@@ -1,0 +1,24 @@
+{
+  "checked_at_utc": "2026-10-06T07:12:16.805482+00:00",
+  "scope": "14 newly copied selected evidence files and generated sanitized stop summary",
+  "credential_shape_scan_matches": 0,
+  "json_sensitive_named_fields": 0,
+  "copies_unchanged": true,
+  "source_files": [
+    "evidence/local-sol/reviewer-release-108/record.json",
+    "evidence/local-sol/reviewer-release-108/official/report.json",
+    "evidence/local-sol/reviewer-release-108/browser-run/report.json",
+    "evidence/local-sol/reviewer-release-108/execution.json",
+    "evidence/local-sol/reviewer-release-108/api-original/run/report.json",
+    "evidence/local-sol/reviewer-release-108/api-original/execution.json",
+    "evidence/local-sol/reviewer-release-108/packaged-static.json",
+    "evidence/local-sol/designer-repair-108/record.json",
+    "evidence/local-sol/designer-repair-108/assessment.md",
+    "evidence/local-sol/designer-repair-108/focus3-run/focus-report.json",
+    "evidence/local-sol/designer-repair-108/first-run/focus-report.json",
+    "evidence/local-sol/designer-repair-108/core2-run/browser-report.json",
+    "evidence/local-sol/designer-repair-108/extra-run/supplement-report.json",
+    "evidence/local-sol/designer-repair-108/packaged-static-check.json"
+  ],
+  "limitations": "Scoped credential-shape and JSON field review, not full room/history review. Source paths and synthetic test observations remain unchanged."
+}

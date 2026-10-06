@@ -1,0 +1,11 @@
+$ docker run --rm --network df-run-3e71cc8da9b44f0b847b316f31569785 -v /Users/frank/mygit/Tablekeeper/challenge:/work:ro -v /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/official:/out -e PYTHONDONTWRITEBYTECODE=1 -e PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 -e COLUMNS=200 -w /work df-harness-runner python -m pytest tablekeeper/test/stage_3 --base-url http://df-svc-b2534e86eb8d:8080 -p harness.plugin --rootdir tablekeeper/test -q --previous-base-url http://df-svc-2b749fc79c05:8080 --harness-summary /out/stage-3.counts.json
+
+.......                                                                                                                                                                                          [100%]
+=========================================================================================== warnings summary ===========================================================================================
+../usr/local/lib/python3.12/site-packages/_pytest/cacheprovider.py:469
+  /usr/local/lib/python3.12/site-packages/_pytest/cacheprovider.py:469: PytestCacheWarning: could not create cache path /work/tablekeeper/test/.pytest_cache/v/cache/nodeids: [Errno 30] Read-only file system: '/work/tablekeeper/test/pytest-cache-files-ma7d72p1'
+    config.cache.set("cache/nodeids", sorted(self.cached_nodeids))
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+7 passed, 1 warning in 1.34s
+

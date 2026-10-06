@@ -1,0 +1,107 @@
+{
+  "revision": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3",
+  "track": "tablekeeper",
+  "stages": {
+    "1": "pass",
+    "2": "pass",
+    "3": "pass"
+  },
+  "highest_contiguous": 3,
+  "started_at": "2026-10-06T07:55:51.235551+00:00",
+  "finished_at": "2026-10-06T07:56:40.354041+00:00",
+  "schema_version": 2,
+  "run_id": "4d6663e71b56425e889a0c919a3d6180",
+  "mode": "isolated",
+  "provenance": "working-tree",
+  "state": "completed",
+  "pytest_args": [],
+  "suite_digest": "7e85d007a912b44e94c2890b5dccc4dcd416832b6aba35d729844de8c0aa1956",
+  "checks": {
+    "1": {
+      "collected": 120,
+      "passed": 120,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "deselected": 0,
+      "xfailed": 0,
+      "files": {
+        "stage_1/test_health_reset_auth.py": {
+          "passed": 12,
+          "total": 12
+        },
+        "stage_1/test_reservations.py": {
+          "passed": 37,
+          "total": 37
+        },
+        "stage_1/test_restaurants_availability.py": {
+          "passed": 18,
+          "total": 18
+        },
+        "stage_1/test_retries_time_input.py": {
+          "passed": 20,
+          "total": 20
+        },
+        "stage_1/test_sample.py": {
+          "passed": 20,
+          "total": 20
+        },
+        "stage_1/test_seeded_state.py": {
+          "passed": 13,
+          "total": 13
+        }
+      }
+    },
+    "2": {
+      "collected": 25,
+      "passed": 25,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "deselected": 0,
+      "xfailed": 0,
+      "files": {
+        "stage_2/test_sample.py": {
+          "passed": 8,
+          "total": 8
+        },
+        "stage_2/test_ui.py": {
+          "passed": 17,
+          "total": 17
+        }
+      }
+    },
+    "3": {
+      "collected": 7,
+      "passed": 7,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "deselected": 0,
+      "xfailed": 0,
+      "files": {
+        "stage_3/test_sample.py": {
+          "passed": 7,
+          "total": 7
+        }
+      }
+    }
+  },
+  "overshoot": null,
+  "claimed_stage": "3",
+  "share": 1.0,
+  "upgrade_sources": {
+    "2": {
+      "folder": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/stage-1",
+      "revision": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3"
+    },
+    "3": {
+      "folder": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/stage-2",
+      "revision": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3"
+    },
+    "4": {
+      "folder": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/stage-3",
+      "revision": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3"
+    }
+  }
+}

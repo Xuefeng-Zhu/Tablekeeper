@@ -1,0 +1,14 @@
+REAL_CLOCK_BOUNDARY_WAIT 23.923
+{
+  "groups": [
+    "Forced opposite seed/reference order literal rank vector(3,4,5), all3 moved, preview/apply/history/stale/original replay",
+    "24 actual API independent Cartesian samples + full stored interval fixed-booking conflict outside closure",
+    "Accepted policy0 capacities preserve surplus choiceC while currentpolicy choosesB; unmoved policy1 exact",
+    "LowercaseRFC3339 exact rational tail adjacency/positive submicrosecond overlap and native exports",
+    "50 unique-key atomic apply, closurecreate/explain independent false rules, exact restaurantcounter2",
+    "REAL elapsed cutoff0 all-no-op series201/businessunchanged vs individualnoopPATCH409 and realseries409; replay200",
+    "Native3siblingsrepair/seriesamend prepared: immutable receipts histories, pending/applied/latest snapshots for stopped-source validation"
+  ],
+  "requests": 180,
+  "max_seconds": 0.09264300799986813
+}

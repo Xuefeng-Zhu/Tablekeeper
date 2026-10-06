@@ -1,0 +1,201 @@
+1
+00:00:00,000 --> 00:00:06,688
+This is The Build Guild, a BAND software factory with clear ownership,
+complete handoffs, and independent review.
+
+2
+00:00:06,688 --> 00:00:08,656
+Our produced application is Tablekeeper.
+
+3
+00:00:08,656 --> 00:00:14,557
+This video shows the separate Local Sol practice run and its deployed
+Stage Two snapshot.
+
+4
+00:00:15,207 --> 00:00:17,999
+The factory configures seven distinct roles.
+
+5
+00:00:17,999 --> 00:00:19,860
+PM coordinates the work.
+
+6
+00:00:19,860 --> 00:00:24,047
+Architect and Designer shape the technical plan and experience.
+
+7
+00:00:24,047 --> 00:00:26,839
+Backend and Frontend implement attributable changes.
+
+8
+00:00:26,839 --> 00:00:31,027
+QA checks the candidate, while Reviewer independently decides acceptance.
+
+9
+00:00:31,027 --> 00:00:34,284
+One active writer lease limits conflicting changes.
+
+10
+00:00:34,284 --> 00:00:39,867
+A complete handoff carries requirements, source digests, evidence, and the
+next owner.
+
+11
+00:00:40,517 --> 00:00:43,725
+Here is the actual Tablekeeper Local Sol room.
+
+12
+00:00:43,725 --> 00:00:48,537
+PM sends the frozen candidate and full review context to Factory Reviewer.
+
+13
+00:00:48,537 --> 00:00:52,947
+The message includes source hashes, existing failed evidence, and bounded
+instructions.
+
+14
+00:00:52,947 --> 00:00:54,952
+Reviewer acknowledges that specific handoff.
+
+15
+00:00:54,952 --> 00:00:58,962
+The receipt confirms delivery; it does not accept the product.
+
+16
+00:00:58,962 --> 00:01:03,373
+We are reading existing room history, without sending a new task.
+
+17
+00:01:04,023 --> 00:01:13,351
+Independent review rejects this candidate because keyboard focus can fall
+back to the page body after booking recovery, including conflict and
+uncertain-response cases.
+
+18
+00:01:13,351 --> 00:01:17,812
+The reviewer records reproducible failures and requests a bounded Frontend
+repair.
+
+19
+00:01:17,812 --> 00:01:23,084
+Passing other checks does not erase this defect or establish Stage Two
+acceptance.
+
+20
+00:01:23,734 --> 00:01:27,934
+Frontend and Designer acknowledge the finding and preserve the failed
+evidence.
+
+21
+00:01:27,934 --> 00:01:31,370
+Frontend waits for PM to authorize a repair lease.
+
+22
+00:01:31,370 --> 00:01:36,715
+The recorded deployment still uses the rejected snapshot; a later repair
+requires fresh review.
+
+23
+00:01:37,365 --> 00:01:39,871
+Now we open the real deployed website.
+
+24
+00:01:39,871 --> 00:01:46,315
+The visible demo notice explains that its restaurants are fictional and
+that accounts and reservations reset on restart.
+
+25
+00:01:46,315 --> 00:01:49,179
+This is a demonstration service with ephemeral storage.
+
+26
+00:01:49,829 --> 00:01:55,755
+We choose Cedar and Coast, a future date, and six guests, then search live
+availability.
+
+27
+00:01:55,755 --> 00:01:59,311
+Individual tables that cannot fit the party are unavailable.
+
+28
+00:01:59,311 --> 00:02:04,842
+The Family table and the declared Garden and Corner combination can
+accommodate six guests.
+
+29
+00:02:04,842 --> 00:02:06,817
+Available options are clearly distinguished.
+
+30
+00:02:07,467 --> 00:02:11,889
+Selecting the table pair while signed out produces the actual login gate.
+
+31
+00:02:11,889 --> 00:02:15,206
+This recording demonstrates public search and that access boundary.
+
+32
+00:02:15,206 --> 00:02:19,997
+It does not claim to show a completed booking, private lookup, or
+cancellation.
+
+33
+00:02:20,647 --> 00:02:23,580
+We switch to Olive House and two guests.
+
+34
+00:02:23,580 --> 00:02:29,080
+The live results show the restaurant’s Berlin timezone and both single-
+table and declared combination options.
+
+35
+00:02:29,080 --> 00:02:32,747
+The search follows the selected venue, date, and party size.
+
+36
+00:02:33,397 --> 00:02:41,790
+The deployed source is the commit shown on screen from the separate Local
+Sol practice run, rather than Run Six.
+
+37
+00:02:41,790 --> 00:02:46,407
+Practice included participant-approved scheduling and budget changes, with
+an administrative restart.
+
+38
+00:02:46,407 --> 00:02:48,505
+The keyboard-focus defect remains disclosed.
+
+39
+00:02:48,505 --> 00:02:53,541
+This demo does not establish final factory acceptance or persistent
+reservation storage.
+
+40
+00:02:54,191 --> 00:03:00,394
+At eleven twenty-three PM Pacific on October fifth, elapsed time was about
+three hours fifteen minutes.
+
+41
+00:03:00,394 --> 00:03:06,210
+The local run had reported about one hundred four million additional
+tokens, including cached input.
+
+42
+00:03:06,210 --> 00:03:08,148
+These are reported usage counters.
+
+43
+00:03:08,148 --> 00:03:13,576
+Dollar cost and subscription-quota conversion are unavailable, and the run
+was still in progress.
+
+44
+00:03:14,226 --> 00:03:21,407
+The factory lesson is simple: make ownership and communication explicit,
+retain failed evidence, and keep acceptance independent.
+
+45
+00:03:21,407 --> 00:03:25,209
+Explore the produced Tablekeeper demo at the link shown.

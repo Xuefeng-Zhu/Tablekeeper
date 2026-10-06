@@ -1,0 +1,1 @@
+{"work_item": "BUILD-S3", "candidate": "abcf6df2cdc86f3295460b47044aed7ee9fc5f00", "start_utc": "2026-10-06T07:54:07.478079+00:00", "end_utc": "2026-10-06T07:54:07.661800+00:00", "capacity_decimal_digits": 5001, "expected_status": 200, "observed_status": 400, "result": "FAIL", "error": {"code": "malformed_request", "message": "Invalid request"}}

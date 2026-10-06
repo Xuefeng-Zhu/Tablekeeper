@@ -1,0 +1,38 @@
+{
+  "checked_at_utc": "2026-10-06T06:42:23.246683+00:00",
+  "files": {
+    "pptx": {
+      "path": "/Users/frank/mygit/Tablekeeper/submission/local-sol-20261005/output/Tablekeeper-Local-Sol-Factory.pptx",
+      "bytes": 208269,
+      "sha256": "3f0d92c43c385f1fc1e7fa83a3f1ab8b9770b50abbb6d7d158e0e57064fa1e9d"
+    },
+    "pdf": {
+      "path": "/Users/frank/mygit/Tablekeeper/submission/local-sol-20261005/output/Tablekeeper-Local-Sol-Factory.pdf",
+      "bytes": 382856,
+      "sha256": "c106391a4062773b3011105d896aab549f60d58b48757c8a952eb8057539c246"
+    }
+  },
+  "slides": 7,
+  "editable_presentation": true,
+  "native_seat_table": true,
+  "finalization": "PASS",
+  "finalization_receipt": "/Users/frank/mygit/Tablekeeper/submission/local-sol-20261005/build/finalization.json",
+  "pdf_conversion": "PASS bundled LibreOffice",
+  "pdf_page_count": 7,
+  "visual_review": {
+    "rendered_pages": 7,
+    "individually_inspected": true,
+    "clipping_or_overlap_found": false
+  },
+  "overflow_test": {
+    "exit_code": 0,
+    "result": "Test passed. No overflow detected."
+  },
+  "claim_boundaries": [
+    "Local practice run with explicit human amendments; no judged autonomy claim",
+    "Stage 1 accepted b3df393; Stage 2 candidate 108bcd4 pending final Reviewer acceptance",
+    "Live deployment sourced from b1f7ef6 via deployment commit 382998f with ephemeral sample adapter",
+    "Dated 104037922 local-run tokens at 2026-10-06T06:23:11Z; USD unavailable",
+    "Final full BAND export and participant author review remain pending"
+  ]
+}

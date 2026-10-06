@@ -1,0 +1,103 @@
+{
+  "status": "PASS",
+  "audited_at": "2026-10-06T09:08:42.376094+00:00",
+  "scope": "Publication privacy and monotonic message-ID completeness audit of genuine full BAND console export; in-progress snapshot, not final run outcome.",
+  "source_basename": "Tablekeeper-Local-Sol-October-5 (1).json",
+  "sha256": "9ed8c743811cbc010ab2a6370b8cb12bee199528062b1542288a51d04efc650d",
+  "bytes": 13209930,
+  "room_id": "4084182d-0b85-46d6-a137-f0bd7d44b498",
+  "exportedAt": "2026-10-06T09:02:30.572Z",
+  "console_scope": "full",
+  "console_filters": {
+    "participants": [],
+    "types": [
+      "text",
+      "thought",
+      "memory",
+      "participant",
+      "system"
+    ]
+  },
+  "messages": 8743,
+  "unique_message_ids": 8743,
+  "completeness": {
+    "prior_published_export_sha256": "f79f7f9937325f9689c3e0cf55f450887751706b5cee53dac59afeb58787a132",
+    "prior_exportedAt": "2026-10-06T07:11:34.620Z",
+    "prior_messages": 7018,
+    "prior_ids_retained": 7018,
+    "missing_prior_ids": 0,
+    "added_messages": 1725,
+    "previous_messages_changed": 6,
+    "core_content_or_identity_changes": 0,
+    "changed_fields": {
+      "metadata": 6
+    },
+    "result": "PASS"
+  },
+  "rejected_first_console_retry": {
+    "retained_raw_basename": "room-full-console-20261006T090017Z.json",
+    "sha256": "0e805a4eedf59577c4c3a271ba0bfa0e0e2c9828acd40a51f0396627c909b35d",
+    "exportedAt": "2026-10-06T09:00:17.800Z",
+    "messages": 4400,
+    "missing_prior_published_ids": 4343,
+    "publication_eligible": false,
+    "disposition": "Preserved unchanged as incomplete first UI download; successful second genuine UI download is the audited source."
+  },
+  "privacy": {
+    "strings_scanned": 113024,
+    "structured_payloads_decoded": 8417,
+    "method": "Scan every JSON string leaf including metadata, tool payloads, outputs and source text; recursively decode supported embedded JSON and Python literal payloads, then scan decoded string leaves. Review auth-shaped source literals by context and prior audited synthetic fingerprints without emitting values. Additional structural credential-field and personal-data-label/phone-shape scans were empty.",
+    "pattern_classes": [
+      "provider/API tokens",
+      "GitHub tokens",
+      "AWS access keys",
+      "Google API keys",
+      "Slack tokens",
+      "Stripe live secrets",
+      "private-key headers",
+      "JWTs",
+      "URL credentials",
+      "Bearer and Basic credentials",
+      "sensitive query parameters",
+      "quoted password/secret/auth values",
+      "credential environment assignments",
+      "email",
+      "SSN",
+      "phone shape",
+      "private personal-data labels"
+    ],
+    "strong_credential_matches": 0,
+    "nonfixture_email_matches": 0,
+    "ssn_or_phone_matches": 0,
+    "private_personal_data_label_matches": 0,
+    "email_matches": 156,
+    "email_domains": {
+      "example.com": 64,
+      "local.invalid": 6,
+      "factory.local": 12,
+      "qa.test": 56,
+      "review.test": 8,
+      "factory.invalid": 10
+    },
+    "email_classification": "All observed addresses use synthetic fixture domains.",
+    "literal_auth_matches": 152,
+    "literal_auth_unique_values": 16,
+    "literal_auth_classifications": {
+      "previously_audited_synthetic_fixture_or_source_label": 143,
+      "placeholder": 2,
+      "dynamic_auth_source_expression": 1,
+      "bearer_scheme_label_without_credential": 6
+    },
+    "unclassified_literal_auth_matches": 0,
+    "credential_environment_assignment_matches": 0,
+    "actual_secret_or_sensitive_personal_value_findings": 0,
+    "result": "PASS"
+  },
+  "publication_gate": "This exact SHA-bound full console JSON may replace the prior room.json unchanged. The earlier incomplete console download must not replace room.json.",
+  "limitations": [
+    "Pattern scanning, recursive structured decoding and bounded contextual review cannot prove absence of every novel or encoded secret.",
+    "ID retention and content comparisons establish monotonic completeness relative to the prior published console snapshot; no independent API-total assertion is made.",
+    "Export is a timestamped in-progress room snapshot and does not establish final Stage 4 or whole-run acceptance."
+  ],
+  "mutation_scope": "Only this new audit receipt was written under the audit directory. Canonical repository, raw exports, factory source, product and runtime were not modified; no BAND messages or service API mutations were made."
+}

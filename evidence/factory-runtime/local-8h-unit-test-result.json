@@ -1,0 +1,45 @@
+{
+  "captured_result": "Ran 115 tests in 2.009s; OK",
+  "command": [
+    "/Users/frank/mygit/Tablekeeper/factory/.venv/bin/python",
+    "-B",
+    "-m",
+    "unittest",
+    "tests.test_handoff_batching",
+    "tests.test_local_terminal_reconciliation",
+    "tests.test_workflow_runtime",
+    "tests.test_runtime",
+    "tests.test_startup_admission_runtime",
+    "tests.test_runtime_harness_integration",
+    "tests.test_balance_only_workflow",
+    "-q"
+  ],
+  "cwd": "/Users/frank/mygit/Tablekeeper/runs/local-sol-continuation-source-20261006",
+  "evidence_basis": "Actual command result observed earlier in this turn; timestamp records receipt creation, not fabricated test execution time.",
+  "exit_code": 0,
+  "recorded_at": "2026-10-06T07:29:58.841334+00:00",
+  "scope": "Offline factory utility regression tests; live continuation evidence is separate.",
+  "source_files": [
+    {
+      "path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-continuation-source-20261006/factorykit/runtime.py",
+      "sha256": "4e4ff4280b3376623c332fc580bac16030cc582aff5d9620b1993acb912fea5f"
+    },
+    {
+      "path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-continuation-source-20261006/factorykit/handoff_batching.py",
+      "sha256": "9af86052cde2c75613d30364ab7a599228628ad95b86c9db83b1443bae7b88bf"
+    },
+    {
+      "path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-continuation-source-20261006/factorykit/local_terminal_reconciliation.py",
+      "sha256": "71111d046f78ad1a4d999608f420e3f5e4ae18036a5debd0b7ad4089b9a0c866"
+    },
+    {
+      "path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-continuation-source-20261006/tests/test_handoff_batching.py",
+      "sha256": "27ae632486d4b5bc48e511cb5d36dfc1213c5447345e306175a0c216d866836c"
+    },
+    {
+      "path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-continuation-source-20261006/tests/test_local_terminal_reconciliation.py",
+      "sha256": "1975c6b4acd1509c15eb425b26cb3a61b6c473d4714cdbc8853ed50807262739"
+    }
+  ],
+  "status": "PASS"
+}

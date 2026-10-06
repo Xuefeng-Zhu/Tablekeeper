@@ -1,0 +1,16 @@
+{
+  "downloadedAt": "2026-10-06T07:11:34.620Z",
+  "roomId": "4084182d-0b85-46d6-a137-f0bd7d44b498",
+  "roomName": "Tablekeeper \u00b7 Local Sol \u00b7 October 5",
+  "method": "BAND console Conversation options > Download > Download full room transcript",
+  "scope": "full",
+  "messages": 7018,
+  "bytes": 10274439,
+  "sha256": "f79f7f9937325f9689c3e0cf55f450887751706b5cee53dac59afeb58787a132",
+  "sourceFileName": "Tablekeeper-Local-Sol-October-5 (1).json",
+  "copiedUnchanged": true,
+  "captureState": "Factory stopped at time cap; snapshot after independent Stage 2 release acceptance, before newly authorized continuation",
+  "previousSnapshotReceipt": "evidence/room-download.json",
+  "privacyReceipt": "evidence/privacy/room-privacy-receipt-20261006T071134Z.json",
+  "limits": "This snapshot predates the authorized eight-hour continuation; refresh after further stage work."
+}

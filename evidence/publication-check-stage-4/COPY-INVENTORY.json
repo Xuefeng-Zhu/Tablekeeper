@@ -1,0 +1,23 @@
+{
+  "scope": "Exact selected safe supplied publication-check evidence only; clone .git, source copies and credentials excluded",
+  "files": {
+    "execution.json": "d354f362032481d7dc9d88e775341bc0d8f71dfb8764e19693ef7eea4ad1ea07",
+    "candidate-snapshot.json": "1cedd7e75a9642e98f5406338cd632c89cf927e7f55e9c180fb80b1eb580d07c",
+    "docker-resources-validated.json": "7cac3993872edeb727730e42980f4e392619d5f87187796a1c4c6f1a068dee75",
+    "publication-check-receipt.json": "3c515267be6a39a0d7e580456babf9ab61012fdf81811ffc1b8878b523fb7eb5",
+    "harness-console.log": "47b087c189f60fc1fa4564ad9ba7f2e72dac9c609a5a94005324e93cac78a95a",
+    "official/report.json": "dd61311bc8e80f8fdacf07798db559eff9318f5edcbcfda6495667e961d194d6",
+    "official/stage-3.counts.json": "0690b4b540761c4ee3ae249853e6a8a3bdc4210f686645f4612e3c336d716713",
+    "official/stage-2.counts.json": "5e7ced47a9492a568aec12049d401867a868110520ced788cfc9976f400e4b0a",
+    "official/stage-4.counts.json": "9634baaeda23ab472e0fe8359c728ccd2fc1c62cf467b7ffdc8c4685446b4089",
+    "official/stage-1.counts.json": "b18fabdbadab8f1094c6b47d09dd89a3e3215cb6c471340343c5f8787e30b77b",
+    "official/stage-1.log": "b50711f40d040ab76bf66587b49cbb07213eedd777ca00b2513108f901907964",
+    "official/stage-2.log": "c934a621b3930d4947a472565483c983390869565312a9ace57715c4a27f7337",
+    "official/stage-3.log": "f7a957d8eca4363238f99691f444d32d66fb5478d8b7b0e6c1e1a65b134be0fc",
+    "official/stage-4.log": "d47d71041421f60128199eddcbbb7a1dff526a0e897d853699ff2201a30c677c",
+    "docker-resources.json": "acf82a4f73b7c4f368ccb42088e179656e46997b64027fb99b8677560d0ec1fc"
+  },
+  "privacy_pattern_candidates": 0,
+  "supplied_check_independent_acceptance_distinction": true,
+  "resource_classification_note": "Raw inspected values retained unchanged. Use docker-resources-validated.json for service classification with the actual pinned df-svc prefix; its documented correction preserves original observation values."
+}

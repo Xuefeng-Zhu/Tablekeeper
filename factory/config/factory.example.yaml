@@ -1,0 +1,151 @@
+schema_version: 1
+paths:
+  challenge: /absolute/path/to/workspace/challenge
+  factory: /absolute/path/to/workspace/factory
+  rehearsal: /absolute/path/to/workspace/rehearsal/toy-result
+  runs: /absolute/path/to/workspace/runs
+  result: /absolute/path/to/workspace/result
+runtime:
+  # Use runtime-select to prepare an isolated codex, claude-code or opencode profile.
+  harness: codex
+  codex_command: /absolute/path/to/workspace/factory/scripts/codex-local
+  python: /absolute/path/to/workspace/factory/.venv/bin/python
+  harness_python: /absolute/path/to/workspace/runs/harness-venv/bin/python
+  browser_path: /absolute/path/to/workspace/runs/browsers
+  sandbox: workspace-write
+  approval_policy: never
+  approval_mode: auto_decline
+  model: gpt-6.1-sol
+  version: 0.160.0
+  sdk_version: 4.0.0
+  allow_network: false
+  # Example: one 2 GiB service plus 1 GiB daemon/harness headroom.
+  # Set these for the complete intended workload before refreshing readiness.
+  docker_resources:
+    min_cpus: 2
+    min_memory_mib: 3072
+band:
+  rest_url: https://app.band.ai
+  ws_url: wss://app.band.ai/api/v1/socket/websocket
+  rehearsal_room_id: null
+  judged_room_id: null
+  credentials_file: /absolute/private/path/agent_config.yaml
+budgets:
+  max_active_seats: 1
+  max_repairs: 2
+  turn_timeout_seconds: 180
+  stage_timeout_seconds: 1800
+  overall_timeout_seconds: 7200
+  max_turns_per_seat: 20
+  max_total_tokens: 100000
+  approved: false
+  spend_cap_usd: null
+  ack_timeout_seconds: 60
+launch:
+  mode: all
+  practice_mode: false
+  registration_verified: false
+  submission_open_verified: false
+# Fresh sessions require a reviewed, finite runnable-checkpoint policy. Replace
+# the executable below with a real smoke check before enabling this block. It
+# runs in the assigned clean candidate checkout and must prove runnable behavior.
+# progress:
+#   milestones:
+#   - id: first-runnable
+#     max_turns: 20
+#     max_seconds: 1800
+#     command: [/absolute/path/to/reviewed-smoke-check]
+#     timeout_seconds: 120
+#     max_attempts: 2
+seats:
+- id: pm
+  display_name: Factory PM
+  handle: null
+  agent_id: null
+  mandate: /absolute/path/to/workspace/factory/mandates/factory-pm.md
+  harness: Codex
+  model: gpt-6.1-sol
+  reasoning_effort: medium
+  git_name: Factory PM
+  git_email: pm@factory.invalid
+  registration_verified: false
+  cli_version: 0.160.0
+  sdk_version: 4.0.0
+- id: architect
+  display_name: Factory Architect
+  handle: null
+  agent_id: null
+  mandate: /absolute/path/to/workspace/factory/mandates/factory-architect.md
+  harness: Codex
+  model: gpt-6.1-sol
+  reasoning_effort: high
+  git_name: Factory Architect
+  git_email: architect@factory.invalid
+  registration_verified: false
+  cli_version: 0.160.0
+  sdk_version: 4.0.0
+- id: designer
+  display_name: Factory Designer
+  handle: null
+  agent_id: null
+  mandate: /absolute/path/to/workspace/factory/mandates/factory-designer.md
+  harness: Codex
+  model: gpt-6.1-sol
+  reasoning_effort: medium
+  git_name: Factory Designer
+  git_email: designer@factory.invalid
+  registration_verified: false
+  cli_version: 0.160.0
+  sdk_version: 4.0.0
+- id: backend
+  display_name: Factory Backend
+  handle: null
+  agent_id: null
+  mandate: /absolute/path/to/workspace/factory/mandates/factory-backend.md
+  harness: Codex
+  model: gpt-6.1-sol
+  reasoning_effort: medium
+  git_name: Factory Backend
+  git_email: backend@factory.invalid
+  registration_verified: false
+  cli_version: 0.160.0
+  sdk_version: 4.0.0
+- id: frontend
+  display_name: Factory Frontend
+  handle: null
+  agent_id: null
+  mandate: /absolute/path/to/workspace/factory/mandates/factory-frontend.md
+  harness: Codex
+  model: gpt-6.1-sol
+  reasoning_effort: medium
+  git_name: Factory Frontend
+  git_email: frontend@factory.invalid
+  registration_verified: false
+  cli_version: 0.160.0
+  sdk_version: 4.0.0
+- id: qa
+  display_name: Factory QA
+  handle: null
+  agent_id: null
+  mandate: /absolute/path/to/workspace/factory/mandates/factory-qa.md
+  harness: Codex
+  model: gpt-6.1-sol
+  reasoning_effort: high
+  git_name: Factory QA
+  git_email: qa@factory.invalid
+  registration_verified: false
+  cli_version: 0.160.0
+  sdk_version: 4.0.0
+- id: reviewer
+  display_name: Factory Reviewer
+  handle: null
+  agent_id: null
+  mandate: /absolute/path/to/workspace/factory/mandates/factory-reviewer.md
+  harness: Codex
+  model: gpt-6.1-sol
+  reasoning_effort: high
+  git_name: Factory Reviewer
+  git_email: reviewer@factory.invalid
+  registration_verified: false
+  cli_version: 0.160.0
+  sdk_version: 4.0.0

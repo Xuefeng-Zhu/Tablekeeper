@@ -1,0 +1,26 @@
+{
+  "work_item": "BUILD-S3",
+  "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3",
+  "responsible": "@frankzhu94/factory-backend",
+  "start_utc": "2026-10-06T07:55:54.069216+00:00",
+  "end_utc": "2026-10-06T07:56:04.248872+00:00",
+  "tests": 32,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "requests": 961,
+  "status_counts": {
+    "204": 106,
+    "200": 476,
+    "201": 167,
+    "409": 133,
+    "422": 64,
+    "404": 9,
+    "403": 1,
+    "401": 1,
+    "400": 4
+  },
+  "max_request_seconds": 0.10568159499962348,
+  "layer": "four actual packaged offline internal-network services Stage3x2/acceptedStage1/acceptedStage2;2CPU/2GiB each; Python3.12 runner",
+  "result": "PASS"
+}

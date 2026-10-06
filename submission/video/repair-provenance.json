@@ -1,0 +1,121 @@
+{
+  "generated_at_utc": "2026-10-06T06:46:30.292964+00:00",
+  "original_video": "/Users/frank/mygit/Tablekeeper/submission/build-guild-demo/output/The-Build-Guild-Tablekeeper-Demo.mp4",
+  "original_sha256": "4f0bd9a32e4fbf3ed14d4f8a57220e3ead128de0610b4b59f9a21d953704e89f",
+  "original_unchanged": true,
+  "repair_reason": "Raw capture filename collisions overwrote app scenes; replacement uses uniquely named fresh live screenshots.",
+  "live_source": "https://tablekeeper-stage2.onrender.com",
+  "preserved_narration_sha256": "41604de9342c46b4ebd50ae035b38b21b0af5a44b22efe3905a57d2bedcf00fa",
+  "srt_unchanged": true,
+  "transcript_unchanged": true,
+  "scenes": [
+    {
+      "scene": "01-title",
+      "action": "preserved encoded scene byte for byte",
+      "source": "/Users/frank/mygit/Tablekeeper/submission/build-guild-demo/build/01-title.mp4",
+      "sha256": "2d1bc3622237d435465e3326967fd1d411137d82fa90ce6778d1104345e3943e"
+    },
+    {
+      "scene": "02-design",
+      "action": "preserved encoded scene byte for byte",
+      "source": "/Users/frank/mygit/Tablekeeper/submission/build-guild-demo/build/02-design.mp4",
+      "sha256": "76deeccb3c3425c2c2a5a5029f91e59052f82504b7a5510e3a12dc3966b53562"
+    },
+    {
+      "scene": "03-room",
+      "action": "preserved encoded scene byte for byte",
+      "source": "/Users/frank/mygit/Tablekeeper/submission/build-guild-demo/build/03-room.mp4",
+      "sha256": "ab50140e1de55182fcfb7ffe8bcfde39b63e50f34563e2e9ed89a717ff85d6bf"
+    },
+    {
+      "scene": "04-rejection",
+      "action": "preserved encoded scene byte for byte",
+      "source": "/Users/frank/mygit/Tablekeeper/submission/build-guild-demo/build/04-rejection.mp4",
+      "sha256": "3d445231f0815f57d4e9cabb632664dbe6c5ccb54761006ed4fd3c06588c6e0d"
+    },
+    {
+      "scene": "05-owner",
+      "action": "preserved encoded scene byte for byte",
+      "source": "/Users/frank/mygit/Tablekeeper/submission/build-guild-demo/build/05-owner.mp4",
+      "sha256": "8471d1eece4384851d198c23a0da81bddf68718522426cf1101f2b5b94e031db"
+    },
+    {
+      "scene": "06-home",
+      "action": "replace overwritten app footage with fresh actual live screenshot",
+      "frame": "/Users/frank/mygit/Tablekeeper/runs/artifact-audit-20261005/fresh-app/home.jpg",
+      "frame_sha256": "9a8d7698d2ebcadc08170221d59a7b710e054275d52ec9e2b7b30990d99693c5",
+      "overlay_sha256": "473ffd665f8a378c8d307988a0b7e50c07a089226bfb56f60c298a630037a6ba",
+      "duration": 12.466667,
+      "output_sha256": "d6dc76ae568c205c939432d7294c31b9bd42902c60e235cfe1791227e96121c6"
+    },
+    {
+      "scene": "07-search",
+      "action": "replace overwritten app footage with fresh actual live screenshot",
+      "frame": "/Users/frank/mygit/Tablekeeper/runs/artifact-audit-20261005/fresh-app/cedar-six-results.jpg",
+      "frame_sha256": "35816b67e57094de77a0a7821bbe65088387a09bb51d429226d2d2383a0336ea",
+      "overlay_sha256": "1d981aa60e7ba6f070d47cdb1c4b6b607de280577f594d7c678aa958435d7ee9",
+      "duration": 17.633333,
+      "output_sha256": "902b28060ff6b4097b4a401cc28539a996f4059f0f27929c301c4826317e10a5"
+    },
+    {
+      "scene": "08-auth",
+      "action": "replace overwritten app footage with fresh actual live screenshot",
+      "frame": "/Users/frank/mygit/Tablekeeper/runs/artifact-audit-20261005/fresh-app/cedar-pair-login-gate.jpg",
+      "frame_sha256": "a9f19cd10f912424a7c8406607b73dfa039ba733bb53acc617e0e2297a232481",
+      "overlay_sha256": "9f5953a955b0d4b29c2cbdaed315f9649860a85c006f7ef4b230ed1ec8ed0a70",
+      "duration": 13.166667,
+      "output_sha256": "2c375a2fd9d385b2cb61c05e6a8dd34e14f3c8be0de8e91a6d3a563c43e9ab51"
+    },
+    {
+      "scene": "09-olive",
+      "action": "replace overwritten app footage with fresh actual live screenshot",
+      "frame": "/Users/frank/mygit/Tablekeeper/runs/artifact-audit-20261005/fresh-app/olive-two-results.jpg",
+      "frame_sha256": "c6887d713d0b079e48b9eaa5c1343799fef103c00596806014c38c23450fd622",
+      "overlay_sha256": "b76366f0aaac3a06b091cf0dab39dd5dddd98e1fd6ec15bcf4eaa748a25fe782",
+      "duration": 12.766667,
+      "output_sha256": "5e64a697d595ecb3703187d199309be3cbdce41aa7d7f7fb2a2d045332def85d"
+    },
+    {
+      "scene": "10-scope",
+      "action": "preserved encoded scene byte for byte",
+      "source": "/Users/frank/mygit/Tablekeeper/submission/build-guild-demo/build/10-scope.mp4",
+      "sha256": "6b7968b9ec48163b5ff9e063a805d3a4a94ea5bcd7c686c048986df815c0cb60"
+    },
+    {
+      "scene": "11-cost",
+      "action": "preserved encoded scene byte for byte",
+      "source": "/Users/frank/mygit/Tablekeeper/submission/build-guild-demo/build/11-cost.mp4",
+      "sha256": "a00352fb490d539cb0862fcef3a4df0e112ed1168464c06f5d520b1bd73765d0"
+    },
+    {
+      "scene": "12-closing",
+      "action": "preserved encoded scene byte for byte",
+      "source": "/Users/frank/mygit/Tablekeeper/submission/build-guild-demo/build/12-closing.mp4",
+      "sha256": "b3b1f33e6bcded5565c8fa03626303fe82655d45197d2b0e589ccbea3090459e"
+    }
+  ],
+  "output": "/Users/frank/mygit/Tablekeeper/runs/artifact-audit-20261005/repaired-video/The-Build-Guild-Tablekeeper-Demo.mp4",
+  "output_sha256": "6c4741e326a6c019d363b7df49466e692f99fe2823bc09f503b29ba3cb059cd8",
+  "bytes": 8737530,
+  "duration_seconds": 205.9,
+  "full_decode": "PASS",
+  "visual_review": {
+    "scene_midpoints_inspected": 12,
+    "fresh_app_scenes_inspected": 4,
+    "result": "PASS \u2014 correct home, Cedar six capacity/pair, actual login gate, Olive two Berlin; no overlays clipping key evidence",
+    "method": "Individually inspected 12 decoded midpoint JPEGs plus four raw fresh screenshots; existing 8 scene encodings preserved",
+    "limit": "Point visual inspection plus full decode; not continuous human playback"
+  },
+  "fresh_capture_provenance": {
+    "path": "/Users/frank/mygit/Tablekeeper/runs/artifact-audit-20261005/fresh-app/capture-provenance.json",
+    "sha256": "e3428d032e4c3c613c97695b692abe9f83165ef6cec930a16019697801ee1be9",
+    "recorded_at": "2026-10-06T06:45:55.166Z"
+  },
+  "live_client_provenance": {
+    "path": "/Users/frank/mygit/Tablekeeper/runs/artifact-audit-20261005/live-deployment-provenance-20261006.json",
+    "sha256": "1bcdc2430f05a09678b3e0605ba94ab2ce21c8108d5a881754ffe0ff2c947303",
+    "public_main": "382998fe143268754ade2ed2702090df3f71ef56",
+    "product_source": "b1f7ef64db7f0dce0b3f3a913a3af280c96d70b9",
+    "basis": "All nine live client assets match public main; search/booking/style match b1f7 and differ from 108bcd4. Server binary release was not independently queried."
+  }
+}

@@ -1,0 +1,170 @@
+[
+  {
+    "argv": [
+      "docker",
+      "build",
+      "-t",
+      "tablekeeper-review-api-s2:0657",
+      "/private/tmp/tablekeeper-review-api-s2-20261006T0657Z/stage-2"
+    ],
+    "start_utc": "2026-10-06T06:56:41.613683+00:00",
+    "end_utc": "2026-10-06T06:56:43.175758+00:00",
+    "exit": 0,
+    "stdout": "",
+    "stderr": "#0 building with \"default\" instance using docker driver\n\n#1 [internal] load build definition from Dockerfile\n#1 transferring dockerfile: 306B done\n#1 DONE 0.0s\n\n#2 [internal] load metadata for docker.io/library/python:3.12-slim\n#2 DONE 0.0s\n\n#3 [internal] load .dockerignore\n#3 transferring context: 2B done\n#3 DONE 0.0s\n\n#4 [1/5] FROM docker.io/library/python:3.12-slim\n#4 DONE 0.0s\n\n#5 [internal] load build context\n#5 transferring context: 55.80kB done\n#5 DONE 0.0s\n\n#6 [2/5] RUN apt-get update && apt-get install -y --no-install-recommends tzdata && rm -rf /var/lib/apt/lists/*\n#6 CACHED\n\n#7 [3/5] WORKDIR /app\n#7 CACHED\n\n#8 [4/5] COPY . ./\n#8 DONE 0.1s\n\n#9 [5/5] RUN mkdir -p static\n#9 DONE 0.2s\n\n#10 exporting to image\n#10 exporting layers 0.1s done\n#10 writing image sha256:61533f6523bdc8a47fcc5974b1d913daf64dfdb7c122032bcf422cdc93731ce1 done\n#10 naming to docker.io/library/tablekeeper-review-api-s2:0657 done\n#10 DONE 0.1s\n"
+  },
+  {
+    "argv": [
+      "docker",
+      "network",
+      "create",
+      "--internal",
+      "review-api-s2-net-0657"
+    ],
+    "start_utc": "2026-10-06T06:56:43.177192+00:00",
+    "end_utc": "2026-10-06T06:56:43.218087+00:00",
+    "exit": 0,
+    "stdout": "47476b2b9bb2a3c57787dc09aa094c722f2e50dc175188c69b4b0f9304668fb7\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "run",
+      "-d",
+      "--name",
+      "review-api-s2-app-0657",
+      "--network",
+      "review-api-s2-net-0657",
+      "--cpus",
+      "2",
+      "--memory",
+      "2g",
+      "tablekeeper-review-api-s2:0657"
+    ],
+    "start_utc": "2026-10-06T06:56:43.218690+00:00",
+    "end_utc": "2026-10-06T06:56:43.439915+00:00",
+    "exit": 0,
+    "stdout": "45637b33d86fbee55167f806ca91e26d7f83fd23e0d1e19da8803e647509c369\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "create",
+      "--name",
+      "review-api-s2-runner-0657",
+      "--network",
+      "review-api-s2-net-0657",
+      "--cpus",
+      "2",
+      "--memory",
+      "2g",
+      "--entrypoint",
+      "python",
+      "df-harness-runner",
+      "/review.py"
+    ],
+    "start_utc": "2026-10-06T06:56:43.440762+00:00",
+    "end_utc": "2026-10-06T06:56:43.524351+00:00",
+    "exit": 0,
+    "stdout": "848e60ba933e87de229ab9801810ccac635c3a0543f2415b848d14845602b617\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "cp",
+      "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s2-release-20261006T0653Z/api-original/review.py",
+      "review-api-s2-runner-0657:/review.py"
+    ],
+    "start_utc": "2026-10-06T06:56:43.524789+00:00",
+    "end_utc": "2026-10-06T06:56:43.553893+00:00",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "start",
+      "-a",
+      "review-api-s2-runner-0657"
+    ],
+    "start_utc": "2026-10-06T06:56:43.554226+00:00",
+    "end_utc": "2026-10-06T06:56:54.921832+00:00",
+    "exit": 0,
+    "stdout": "{\"candidate\": \"26a041dbaf74169830146cb3d953c16ee8945f96\", \"responsible\": \"@frankzhu94/factory-reviewer\", \"start_utc\": \"2026-10-06T06:56:43.837651+00:00\", \"end_utc\": \"2026-10-06T06:56:54.703933+00:00\", \"groups\": [\"API literal cancelled/second-member/adjacency options PASS\", \"API ordered receipts/precision/original cancel replay/import rollback PASS\", \"API25final-set layouts/rollback/failed-key reuse PASS\", \"API later nonoccupancy error before earlier overlap PASS\", \"API50duplicate+50mixed-member contention PASS\", \"API literal max/min year and DST pair duration PASS\"], \"api_requests\": 320, \"api_statuses\": {\"422\": 2, \"200\": 134, \"201\": 83, \"204\": 35, \"409\": 66}, \"max_api_seconds\": 0.09340951999183744, \"result\": \"PASS exact original API slice\", \"layer\": \"Packaged original API image; actual HTTP from Docker runner on internal network\"}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "cp",
+      "review-api-s2-runner-0657:/out",
+      "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s2-release-20261006T0653Z/api-original/run"
+    ],
+    "start_utc": "2026-10-06T06:56:54.923045+00:00",
+    "end_utc": "2026-10-06T06:56:55.125881+00:00",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "inspect",
+      "review-api-s2-app-0657",
+      "review-api-s2-runner-0657",
+      "--format",
+      "{{.Name}} image={{.Image}} cpu={{.HostConfig.NanoCpus}} memory={{.HostConfig.Memory}} start={{.State.StartedAt}} end={{.State.FinishedAt}} exit={{.State.ExitCode}}"
+    ],
+    "start_utc": "2026-10-06T06:56:55.126393+00:00",
+    "end_utc": "2026-10-06T06:56:55.152445+00:00",
+    "exit": 0,
+    "stdout": "/review-api-s2-app-0657 image=sha256:61533f6523bdc8a47fcc5974b1d913daf64dfdb7c122032bcf422cdc93731ce1 cpu=2000000000 memory=2147483648 start=2026-10-06T06:56:43.326811821Z end=0001-01-01T00:00:00Z exit=0\n/review-api-s2-runner-0657 image=sha256:da249723d954671d7e57ac5b3b55ced42a7f34430edf45116da52a4ea94963cd cpu=2000000000 memory=2147483648 start=2026-10-06T06:56:43.602110241Z end=2026-10-06T06:56:54.761909456Z exit=0\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "network",
+      "inspect",
+      "review-api-s2-net-0657",
+      "--format",
+      "internal={{.Internal}}"
+    ],
+    "start_utc": "2026-10-06T06:56:55.152755+00:00",
+    "end_utc": "2026-10-06T06:56:55.177561+00:00",
+    "exit": 0,
+    "stdout": "internal=true\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "rm",
+      "-f",
+      "review-api-s2-runner-0657",
+      "review-api-s2-app-0657"
+    ],
+    "start_utc": "2026-10-06T06:56:55.177868+00:00",
+    "end_utc": "2026-10-06T06:56:55.307798+00:00",
+    "exit": 0,
+    "stdout": "review-api-s2-runner-0657\nreview-api-s2-app-0657\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "network",
+      "rm",
+      "review-api-s2-net-0657"
+    ],
+    "start_utc": "2026-10-06T06:56:55.308194+00:00",
+    "end_utc": "2026-10-06T06:56:55.397554+00:00",
+    "exit": 0,
+    "stdout": "review-api-s2-net-0657\n",
+    "stderr": ""
+  }
+]

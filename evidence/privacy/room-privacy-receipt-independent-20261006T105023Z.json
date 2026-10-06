@@ -1,0 +1,71 @@
+{
+  "status": "PASS",
+  "audited_at": "2026-10-06T10:54:04.401459+00:00",
+  "scope": "Independent publication privacy audit of unchanged genuine full BAND console export; completed Stage4 appears in timestamped room snapshot, which does not imply operator shutdown or external judging.",
+  "source_basename": "Tablekeeper-Local-Sol-October-5 (3).json",
+  "sha256": "7e1a4fea5f38e201bc5418320557a57933bdc98998b2274aa0029bfcc3995526",
+  "bytes": 15045743,
+  "room_id": "4084182d-0b85-46d6-a137-f0bd7d44b498",
+  "exportedAt": "2026-10-06T10:50:23.264Z",
+  "console_scope": "full",
+  "console_filters": {
+    "participants": [],
+    "types": [
+      "text",
+      "thought",
+      "memory",
+      "participant",
+      "system"
+    ]
+  },
+  "messages": 10138,
+  "unique_message_ids": 10138,
+  "completeness": {
+    "prior_export_sha256": "9ed8c743811cbc010ab2a6370b8cb12bee199528062b1542288a51d04efc650d",
+    "prior_exportedAt": "2026-10-06T09:02:30.572Z",
+    "prior_messages": 8743,
+    "prior_ids_retained": 8743,
+    "missing_prior_ids": 0,
+    "added_messages": 1395,
+    "previous_messages_changed": 5,
+    "core_content_or_identity_changes": 0,
+    "changed_fields": {
+      "metadata": 5
+    },
+    "result": "PASS"
+  },
+  "privacy": {
+    "strings_scanned": 129926,
+    "structured_payloads_decoded": 9623,
+    "method": "Every original JSON string leaf including metadata/tool inputs/outputs, recursively decoded JSON/Python literal string leaves, credential/provider/GitHub/BAND/auth/PII shapes and structural auth source review. Independently broader phone/personal-label/auth-literal scan also performed. SHA-only candidate records retained privately. Source expressions, scheme labels and previously audited synthetic fixture fingerprints classified without emitting values.",
+    "strong_credential_or_sensitive_personal_findings": 0,
+    "nonfixture_email_matches": 0,
+    "email_domains": {
+      "example.com": 66,
+      "local.invalid": 6,
+      "factory.local": 12,
+      "qa.test": 56,
+      "review.test": 14,
+      "factory.invalid": 12
+    },
+    "literal_auth_matches": 164,
+    "literal_auth_unique_values": 16,
+    "literal_auth_classifications": {
+      "previously_audited_synthetic_fixture_or_source_label": 153,
+      "dynamic_auth_source_expression": 1,
+      "bearer_scheme_label_without_credential": 8,
+      "placeholder": 2
+    },
+    "unclassified_literal_auth_matches": 0,
+    "actual_credential_environment_assignments": 0,
+    "actual_secret_or_sensitive_personal_value_findings": 0,
+    "result": "PASS"
+  },
+  "publication_gate": "This exact SHA-bound full JSON may be published unchanged. The preserved incomplete first5500-message UI attempt must not replace it.",
+  "limitations": [
+    "Pattern scanning and recursive decoding cannot prove absence of every novel or deliberately encoded secret.",
+    "All prior8743 message IDs retained and core content unchanged; no independent server-total assertion is made.",
+    "This room audit does not itself assert product acceptance, final factory shutdown or external judging."
+  ],
+  "mutation_scope": "Only independent audit receipts/candidates under private audit folder and a sanitized receipt copy under canonical evidence/privacy; raw exports, rootroom, product, runtime, SDK and Git not modified."
+}

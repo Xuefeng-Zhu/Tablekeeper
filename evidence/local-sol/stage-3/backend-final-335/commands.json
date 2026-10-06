@@ -1,0 +1,13 @@
+{
+  "build": "docker build -t tablekeeper-backend-s3:335f167 stage-3",
+  "owner_http": "docker run --rm --network backend-s3-final-0755 --cpus=2 --memory=2g -v /Users/frank/mygit/Tablekeeper/result-local-sol-20261005:/repo:ro -v /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s3-final-20261006T0755Z:/evidence -w /work -e PYTHONDONTWRITEBYTECODE=1 df-harness-runner python /evidence/check-candidate.py",
+  "browser": "docker run --rm --network backend-s3-final-0755 --cpus=2 --memory=2g -v /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s3-final-20261006T0755Z:/evidence -w /work -e PYTHONDONTWRITEBYTECODE=1 df-harness-runner python /evidence/browser-upgrade.py",
+  "official": "building /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/stage-3 ...\n  stage 1: pass  (log: /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s3-final-20261006T0755Z/official/stage-1.log)\nbuilding upgrade source /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/stage-1 ...\n  stage 2: pass  (log: /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s3-final-20261006T0755Z/official/stage-2.log)\nbuilding upgrade source /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/stage-2 ...\n  stage 3: pass  (log: /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s3-final-20261006T0755Z/official/stage-3.log)\n  stage 4: fail  (log: /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s3-final-20261006T0755Z/official/stage-4.log)\nhighest contiguous stage: 3\nclaimed stage: 3 on the shipped checks\nreport: /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s3-final-20261006T0755Z/official/report.json\nNOTE: this run only includes a portion of the full tests that are applied before judging; this is meant to provide directional feedback, and ultimately you may not pass the stage with the full set of tests.\n",
+  "observed_exits": {
+    "build": 0,
+    "owner_http": 0,
+    "browser": 0,
+    "official": 0
+  },
+  "resources": "Four actual service containers on internal network, each2CPU/2GiB; image source tags legacy1/legacy2 built from accepted deliverables; final Stage3 image335f167."
+}

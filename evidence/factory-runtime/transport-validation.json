@@ -1,0 +1,72 @@
+{
+  "added_test_support_files": [
+    {
+      "path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-transport-source-20261005/config/factory.example.yaml",
+      "sha256": "359f86cacf73ee11f50292b6b6fe0faf536ce819cc6df90bfb3b90631c1fa44d"
+    },
+    {
+      "path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-transport-source-20261005/tests/test_toolkit.py",
+      "sha256": "1c50a8db7621a211ddc4b85edd5b8423218e973b45905eacd1511551d4bddd2b"
+    }
+  ],
+  "baseline": {
+    "path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-transport-source-20261005/transport-baseline.json",
+    "sha256": "85b7dde21b0055be668f783208375f3ed623b481dd7f8c5b369766f3c298462f"
+  },
+  "change_scope": "Apply verified event room envelope, reject explicit payload room conflicts, bind recipient/context, never mutate wire payload. Preserve current version2 journal/receipt recovery code. No diagnostics or other upstream refactors.",
+  "changed_files": [
+    {
+      "after_sha256": "9fc052c6aa727bdd110d47266291be8f013e30b136015c8ddf9696a2a7799c8d",
+      "before_sha256": "96139efdcc9567d5fd1996144c1866b42e2a6cf03c86cb278e6db3393de0729a",
+      "path": "factorykit/handoff_batching.py"
+    },
+    {
+      "after_sha256": "92759f8562048c7c64b008eae420cff26db9272f70257c053ed0028ce29e9301",
+      "before_sha256": "94573373dcbcf4f92b45f6db6c0024304f9ba807af4a197dc21c28e5e3c2a1bc",
+      "path": "factorykit/runtime.py"
+    },
+    {
+      "after_sha256": "7daf458c4626e65f980a8d4f9d1cd22562343856e54d50cde41ccbaa4dd00365",
+      "before_sha256": "7a1a3579c45c8438c1c2e03c70fa49d7ca76f3b3a1cdd33cf648ad2d80b01705",
+      "path": "tests/test_balance_only_workflow.py"
+    },
+    {
+      "after_sha256": "26bd9a14d51d8fd465723a0e7e054678015fa857c3eb478aeff36ad3bbdb1ff5",
+      "before_sha256": "d11098c5860aa981f38db1ceb69bd9da50e534cc56ed3e6d1f75e806311f6c33",
+      "path": "tests/test_handoff_batching.py"
+    },
+    {
+      "after_sha256": "664b508411991a75628030193745504ed4bfd2be142c787cbaf6cfff67e8b116",
+      "before_sha256": "1267af738a13e43c871e465da6e45960150bc1d432d88edff6821f757549560b",
+      "path": "tests/test_operational_tools.py"
+    },
+    {
+      "after_sha256": "a22fca7185fd2ad6ccf292ebbd5baa5f6f2b8ba0398f1bbb7393de4bf374eca1",
+      "before_sha256": "fafbd97a03d53e99ff0fd28097e68b3864e52973b48567a2ab6e3d1dbd5d9c4b",
+      "path": "tests/test_workflow_runtime.py"
+    }
+  ],
+  "created_at": "2026-10-06T03:12:20.981316+00:00",
+  "limitations": [
+    "No live model/room dispatch, restart, permission/auth checks or product acceptance performed.",
+    "Original main, old snapshots, running configuration, journals, accounting, result checkout and messages untouched.",
+    "Rebinding configuration/readiness and controlled same-room startup remain operator actions."
+  ],
+  "patch": {
+    "path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-transport-source-20261005/transport.patch",
+    "sha256": "a1b6a8fb166d4a62cab2bdc5dbc7b749b68db9f6778a61eafcf56c4a76651933"
+  },
+  "schema_version": 1,
+  "source_fingerprint_with_local_scoped_mandates": "a9b1ab9dc88cd196a3eafe89c50c16a08ecbc98c2eb3923f0037a12e755569de",
+  "source_root": "/Users/frank/mygit/Tablekeeper/runs/local-sol-transport-source-20261005",
+  "status": "PASS_SCOPED_TRANSPORT_UTILITY_TESTS",
+  "tests": {
+    "count": 117,
+    "exit_code": 0,
+    "path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-transport-source-20261005/transport-tests.json",
+    "scope": "Offline utility tests and actual BAND SDK fixture seams, fake inference/transport only",
+    "sha256": "9f90044b25ac0b063ff2d8b34d0257b17d5d44141d1203b55260f57a78ad7bed"
+  },
+  "unchanged_original_sources_verified": true,
+  "upstream_reference": "66fa48df0d684560d1ec0b38d3b049804a50e4a2"
+}

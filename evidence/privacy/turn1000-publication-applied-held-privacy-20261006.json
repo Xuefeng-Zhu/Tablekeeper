@@ -1,0 +1,58 @@
+{
+  "recorded_at_utc": "2026-10-06T09:37:54.303606+00:00",
+  "status": "PASS",
+  "scope": "Focused addendum for actual applied and first held-expiry summaries plus whole copied toolkit inventory; no later model-running claim audited",
+  "prior_source_privacy": {
+    "path": "turn1000-publication-source-privacy-20261006.json",
+    "sha256": "9abb1eaabe1a9f3ffac2ea15a0d87edefcb20c5bcdf18b75a74c52732c7f49e7"
+  },
+  "privacy": "No actual secret, owner token/nonce, private auth/config payload or private personal value in three added files",
+  "truth_checks": {
+    "applied_summary_fields_exact_original_receipt": true,
+    "actual_applied_status": "APPLIED_NOT_LAUNCHED",
+    "actual_cap_delta": "769 to1000",
+    "counters_tokens_epochs_preserved_at_amendment": true,
+    "local_token_arithmetic_exact": true,
+    "held_expiry_summary_fields_exact_original_receipt": true,
+    "held_first_attempt_status": "STOPPED_ZERO_ADMISSIONS_HOLD_EXPIRED",
+    "first_attempt_factory_admissions": 0,
+    "release_attempt_actual": "blocked: exact live owned supervisor unavailable",
+    "running_or_model_completion_claim": "None established by these snapshots",
+    "source_inputs_exact_T": 68,
+    "test_files_exact_T": 11,
+    "source_copy_destination_duplicates": false
+  },
+  "inputs": [
+    {
+      "path": "evidence/factory-runtime/turn-1000/applied-summary.json",
+      "sha256": "4acbd9d18a5bc7a635187a0f16e9cff7c267bab99f958f8e04f5c7be0dd06045",
+      "bytes": 1453
+    },
+    {
+      "path": "evidence/factory-runtime/turn-1000/held-expiry-summary.json",
+      "sha256": "0aa228860aecb65b4f71c316492dd4b54a092283145435e3325a925399b15e39",
+      "bytes": 694
+    },
+    {
+      "path": "evidence/factory-runtime/turn-1000/published-source-inventory.json",
+      "sha256": "561057013a278d774072d0b27fbbc50c07c73d47bc03cc9f970cdea27253f33d",
+      "bytes": 8583
+    }
+  ],
+  "private_source_receipt_hashes": [
+    {
+      "basename": "local-turn-1000-amendment.json",
+      "sha256": "e27171786e6d37ab05fb7186c09b141485359088a3b1305cc23ec9711667b7cc"
+    },
+    {
+      "basename": "local-turn-1000-held-expiry.json",
+      "sha256": "21c532c35928bc447f68d9403a65070a001c1e6bf691190de6d4b1d6c8e0eb98"
+    },
+    {
+      "basename": "local-turn-1000-release.json",
+      "sha256": "6785dd104f7b0fbea2795739493cc56dcacec930e06f6307993ff808f1a96857"
+    }
+  ],
+  "limitations": "Actual normal startup retry and later live/release/model outcomes remain separate; these are timestamped snapshots, not current final outcome",
+  "mutation_scope": "Only audit addendum written; no Git/source/product/runtime/SDK mutations"
+}

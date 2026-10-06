@@ -1,0 +1,60 @@
+{
+  "work_item": "QA-S3-RUN",
+  "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3",
+  "responsible": "@frankzhu94/factory-qa",
+  "utc_start": "2026-10-06T08:09:46.890241+00:00",
+  "commands": [
+    {
+      "argv": [
+        "docker",
+        "stop",
+        "--timeout",
+        "2",
+        "qa-s3-app",
+        "qa-s3-peer",
+        "qa-s3-old1",
+        "qa-s3-old2"
+      ],
+      "exit": 0,
+      "stdout": "qa-s3-app\nqa-s3-peer\nqa-s3-old1\nqa-s3-old2\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "docker",
+        "rm",
+        "qa-s3-app",
+        "qa-s3-peer",
+        "qa-s3-old1",
+        "qa-s3-old2",
+        "qa-s3-exportsource",
+        "qa-s3-api",
+        "qa-s3-api2",
+        "qa-s3-api3",
+        "qa-s3-browser",
+        "qa-s3-focus",
+        "qa-s3-focus-control",
+        "qa-s3-native-client",
+        "qa-s3-supplement",
+        "qa-s3-relations"
+      ],
+      "exit": 0,
+      "stdout": "qa-s3-app\nqa-s3-peer\nqa-s3-old1\nqa-s3-old2\nqa-s3-exportsource\nqa-s3-api\nqa-s3-api2\nqa-s3-api3\nqa-s3-browser\nqa-s3-focus\nqa-s3-focus-control\nqa-s3-native-client\nqa-s3-supplement\nqa-s3-relations\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "docker",
+        "network",
+        "rm",
+        "qa-s3-net-0800"
+      ],
+      "exit": 0,
+      "stdout": "qa-s3-net-0800\n",
+      "stderr": ""
+    }
+  ],
+  "utc_end": "2026-10-06T08:09:50.828661+00:00",
+  "workspace_clean": true,
+  "clone_clean": true
+}

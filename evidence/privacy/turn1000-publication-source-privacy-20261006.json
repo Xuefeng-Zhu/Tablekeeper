@@ -1,0 +1,83 @@
+{
+  "recorded_at_utc": "2026-10-06T09:32:45.409122+00:00",
+  "status": "PASS",
+  "scope": "Focused publication scan of copied turn1000 patch/tests/operator helpers/source review/test outputs; amendment/live execution excluded until actual receipts exist",
+  "files_scanned": 12,
+  "exact_copies_verified": 11,
+  "privacy": {
+    "actual_credentials_or_private_personal_values": 0,
+    "official_and_broader_credential_shapes": "PASS",
+    "candidate_classification": "One quoted API-key-shaped value is synthetic patched unittest credentials in factory/tests/test_handoff_batching.py:413; no real key",
+    "owner_auth_nonce_material": "Absent in selected copies"
+  },
+  "truthfulness": {
+    "source_review": "Offline/source-only review with root/SDK gates separate",
+    "tests": "140 offline utility tests PASS; no live product/service acceptance implied",
+    "exact_source_and_tests": "Six reviewed source/test files and two helpers byte-identical source; audited review and140-test receipt/log also exact",
+    "execution_status": "No applied/running assertion derived from these files",
+    "historical_scope": "Published Stage3 snapshot and old failed proof remain separate"
+  },
+  "inputs": [
+    {
+      "path": "factory/factorykit/local_deferred_admission.py",
+      "sha256": "d97f94270d5eb47ebf87a28035b17638b62dba801590e6bd2ad9bf3ad25e2e28",
+      "bytes": 7794
+    },
+    {
+      "path": "factory/factorykit/local_terminal_reconciliation.py",
+      "sha256": "3f3702fbc6397d45dc90887754d13023e385889ad10fb182a71d4d02fafebedf",
+      "bytes": 6221
+    },
+    {
+      "path": "factory/factorykit/runtime.py",
+      "sha256": "03ef67da8dfe418f25764e84e804a8917c1d5bf031ddd3ba84ce1ae849325939",
+      "bytes": 114548
+    },
+    {
+      "path": "factory/tests/test_handoff_batching.py",
+      "sha256": "6f6da0ebc149d91e062bda5b623ffe85c7ee34f10feb4c2e3544529bdb9bbe0d",
+      "bytes": 28940
+    },
+    {
+      "path": "factory/tests/test_local_deferred_admission.py",
+      "sha256": "847280ca1f4429fb7591b52e116875fecf78134177352ab5a374020d5413502e",
+      "bytes": 9202
+    },
+    {
+      "path": "factory/tests/test_local_terminal_reconciliation.py",
+      "sha256": "265bd46a45b8b6b482736e2109ec5f1050145173b45ca131c70f677095cbc99f",
+      "bytes": 6861
+    },
+    {
+      "path": "evidence/factory-runtime/administrative-scripts/amend-turn-1000.py",
+      "sha256": "78b654f31055f57d73623971e293eba3bae5eb7c2f9e7be8639eadbe6c20d617",
+      "bytes": 14388
+    },
+    {
+      "path": "evidence/factory-runtime/administrative-scripts/dispose-pm-pre-admission-once.py",
+      "sha256": "b8aed76c132e9303f257363182e303da36aba892592102b74e89a8fa9b3d11c4",
+      "bytes": 6015
+    },
+    {
+      "path": "evidence/factory-runtime/turn-1000/local-turn-1000-source-review.json",
+      "sha256": "efa5f8fe29283fb3fae3a87129aa20ccb44cbe449346d020a9572099cad48162",
+      "bytes": 10706
+    },
+    {
+      "path": "evidence/factory-runtime/turn-1000/local-turn-1000-unit-test-result.json",
+      "sha256": "90305416b61feaa3c9fb0fb7e6d4725b8f061b45a92415655f2665b5caabbbd9",
+      "bytes": 1771
+    },
+    {
+      "path": "evidence/factory-runtime/turn-1000/local-turn-1000-unit-tests.log",
+      "sha256": "c789d9eefa3c9687c87808f59638116e97197a31233e59e63b9c96571713e8ba",
+      "bytes": 99
+    },
+    {
+      "path": "evidence/factory-runtime/turn-1000/published-source-copies.json",
+      "sha256": "fab89c295cebbbd13d14d56de545e4e7b49aafa0c7ce7ed99877aafb38d3b492",
+      "bytes": 4203
+    }
+  ],
+  "mutations": "Only audit receipt written; no source/product/Git/runtime/SDK changes"
+}

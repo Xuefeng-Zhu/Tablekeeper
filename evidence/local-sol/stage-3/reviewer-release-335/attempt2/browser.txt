@@ -1,0 +1,2 @@
+{"start_utc": "2026-10-06T08:15:46.953104+00:00", "end_utc": "2026-10-06T08:16:23.609910+00:00", "api_requests": 207, "api_statuses": {"422": 5, "200": 109, "201": 22, "204": 16, "404": 2, "409": 53}, "max_api_seconds": 0.17830888400203548, "result": "PASS finite independent scopes"}
+focus 11 groups 9

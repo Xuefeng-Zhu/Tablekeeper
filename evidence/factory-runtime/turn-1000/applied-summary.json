@@ -1,0 +1,29 @@
+{
+  "status": "APPLIED_NOT_LAUNCHED",
+  "at": "2026-10-06T09:32:07.397554+00:00",
+  "configuration_sha256": "a0587777fc739bd3a2da733453b54c04cea1413387ab777ae90453820ff95b2c",
+  "factory_source_sha256": "595edf4778edc76e2f20bf4456ef2867b7a5bb83e1fc0f1dc2f6eccf1a25262a",
+  "absolute_token_cap": 656587855,
+  "local_total_allowance": 300000000,
+  "recorded_tokens_preserved": 523174913,
+  "remaining_tokens": 133412942,
+  "turn_counters_preserved": {
+    "architect": 109,
+    "backend": 151,
+    "designer": 30,
+    "frontend": 19,
+    "pm": 769,
+    "qa": 117,
+    "reviewer": 170
+  },
+  "overall_deadline": 1791298904.700437,
+  "room_deadline": 1791299264.288395,
+  "sole_ledger_delta": "Exact causal handoff pre-model budget-denial halt -> null; every other field preserved",
+  "scope": "No old model replay, ACK synthesis, acceptance claim, counter/clock reset or human redispatch; normal same-room queue must perform actual first callback/ACK.",
+  "source_receipt_sha256": "e27171786e6d37ab05fb7186c09b141485359088a3b1305cc23ec9711667b7cc",
+  "turn_cap_before": 769,
+  "turn_cap_after": 1000,
+  "local_reported_tokens_used": 166587058,
+  "original_pm_blocked_journal_sha256": "9b85aa7476ea8c4b0ea3b67566a0a00bc6ac178532a129ded4e2879c0ab1d77a",
+  "verification_scope": "Actual same-run allowance application only. Running continuation, fresh judged/pristine admission, model completion and Stage 4 acceptance are not established by this receipt."
+}

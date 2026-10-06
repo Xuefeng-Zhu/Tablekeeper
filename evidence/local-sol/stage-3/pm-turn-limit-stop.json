@@ -1,0 +1,137 @@
+{
+  "recorded_at_utc": "2026-10-06T09:04:54.828151+00:00",
+  "scope": "Read-only local runtime diagnosis; no replay, restart, budget amendment or SDK mutation performed",
+  "room_id": "4084182d-0b85-46d6-a137-f0bd7d44b498",
+  "owner_observed": {
+    "status": "stopped",
+    "started_at": "2026-10-06T07:26:44.687136+00:00",
+    "updated_at": "2026-10-06T08:24:29.837379+00:00",
+    "source_manifest_sha256": "f5a942cd381d323fff83b553d0de08d0882cdf8fc847a83be3d4f247e80fc14e"
+  },
+  "ledger_observed": {
+    "stopped_reason": "handoff model claim did not complete; preserve before retry",
+    "turns": {
+      "architect": 109,
+      "backend": 151,
+      "designer": 30,
+      "frontend": 19,
+      "pm": 769,
+      "qa": 117,
+      "reviewer": 170
+    },
+    "pm_turn_cap": 769,
+    "tokens_used_cumulative": 523174913,
+    "tokens_cap_cumulative": 656587855,
+    "tokens_remaining": 133412942,
+    "overall_seconds_remaining_at_owner_stop": 23834.86305809021,
+    "room_seconds_remaining_at_owner_stop": 24194.45101594925
+  },
+  "handoff_observed": {
+    "batch_key": "02e4a78d-7d9d-4c77-bf32-b3810a9cfacb:s3-release-review-accepted-001",
+    "binding": {
+      "delivery": "s3-release-review-accepted-001",
+      "digest": "be523244ffaa3e8bd1f52ed7cd17a6d1857bab4d76f477c58b2f1046f79cf3e1",
+      "prefix": "BUILD-S3 ",
+      "recipients": [
+        "7d26ccf7-2921-4b38-9e16-ca8ebfa2a448"
+      ],
+      "sender_id": "02e4a78d-7d9d-4c77-bf32-b3810a9cfacb",
+      "total": 2
+    },
+    "trigger_event_id": "29f45c31-acb1-447e-9f27-7be641802f84",
+    "part_event_ids": [
+      "bb0f176f-c7d7-4c40-9cc1-79a068e93035",
+      "29f45c31-acb1-447e-9f27-7be641802f84"
+    ],
+    "status": "blocked",
+    "receipt_status": "unsent",
+    "receipt_event_id": null,
+    "ack_required": true
+  },
+  "completed_turns_observed": [
+    {
+      "turn_id": "pm:769:160d0a65-e132-420c-b0bc-192cc87a0392",
+      "status": "completed",
+      "trigger_event_id": "160d0a65-e132-420c-b0bc-192cc87a0392",
+      "started_at_utc": "2026-10-06T08:24:18.657146+00:00",
+      "ended_at_utc": "2026-10-06T08:24:23.371541+00:00"
+    },
+    {
+      "turn_id": "reviewer:168:4258ed0e-cbef-4e07-a814-90de3e1231df",
+      "status": "completed",
+      "trigger_event_id": "4258ed0e-cbef-4e07-a814-90de3e1231df",
+      "started_at_utc": "2026-10-06T08:12:25.920182+00:00",
+      "ended_at_utc": "2026-10-06T08:20:13.258493+00:00"
+    },
+    {
+      "turn_id": "reviewer:170:9b8723e9-710e-4fed-8253-8649a8028331",
+      "status": "completed",
+      "trigger_event_id": "9b8723e9-710e-4fed-8253-8649a8028331",
+      "started_at_utc": "2026-10-06T08:24:23.389159+00:00",
+      "ended_at_utc": "2026-10-06T08:24:28.733754+00:00"
+    }
+  ],
+  "absence_checks": {
+    "pm_770_workflow_turn": false,
+    "blocked_trigger_model_turn": false
+  },
+  "diagnosis": {
+    "result": "PM_TURN_LIMIT_CAUSAL",
+    "observed_stop_reason_is_generic_finalizer": true,
+    "source_inferred_sequence": [
+      "Batch claimed before turn reservation (runtime.py:1639)",
+      "PM reservation denied at cap769 (runtime.py:714-715 and1645)",
+      "Continuation admission branch raises CancelledError: Factory turn allowance is closed (runtime.py:1648)",
+      "No model turn created; finalizer blocks claim and records generic stop (runtime.py:1717-1724)"
+    ],
+    "exception_evidence": "Inferred from sealed source and observed state; not a captured traceback",
+    "supervisor_log_bytes": 0,
+    "verdict_preserved": "The stopped PM transport claim does not invalidate the already emitted Reviewer Stage3 verdict; separate acceptance evidence remains required",
+    "old_failed_model_attempts": "Not reclassified as completed",
+    "authorization": "No amendment or continuation assumed"
+  },
+  "input_hashes": [
+    {
+      "path": "runtime/owner.json",
+      "sha256": "8c8fe9d8cfad9b82fcac8742fba429a33175271a188ecc6d777e9b78d64b0da6",
+      "bytes": 53770
+    },
+    {
+      "path": "runtime/budget-subscription.json",
+      "sha256": "1e5e3d3c374c1ae0214aea649761e95b535e079b809e8cca0f872260e7973ebc",
+      "bytes": 12153
+    },
+    {
+      "path": "runtime/handoffs-4084182d-0b85-46d6-a137-f0bd7d44b498-pm.json",
+      "sha256": "9b85aa7476ea8c4b0ea3b67566a0a00bc6ac178532a129ded4e2879c0ab1d77a",
+      "bytes": 286828
+    },
+    {
+      "path": "runtime/workflow-4084182d-0b85-46d6-a137-f0bd7d44b498.json",
+      "sha256": "811993e5e05fa2c2444001accda33f6381f43d8b0ecbb96358b4122ecda2fc52",
+      "bytes": 229637
+    },
+    {
+      "path": "factory.yaml",
+      "sha256": "eec0320c3cc2b335438ef671fe192c39a0800a5dfa3dddf102605d5cf31acbfc",
+      "bytes": 7942
+    },
+    {
+      "path": "runtime/supervisor.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    }
+  ],
+  "sealed_source_hashes": [
+    {
+      "path": "factorykit/runtime.py",
+      "sha256": "4e4ff4280b3376623c332fc580bac16030cc582aff5d9620b1993acb912fea5f",
+      "matches_continuation_source": true
+    },
+    {
+      "path": "factorykit/handoff_batching.py",
+      "sha256": "9af86052cde2c75613d30364ab7a599228628ad95b86c9db83b1443bae7b88bf",
+      "matches_continuation_source": true
+    }
+  ]
+}

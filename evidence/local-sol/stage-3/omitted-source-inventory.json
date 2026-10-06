@@ -1,0 +1,792 @@
+{
+  "generated_at_utc": "2026-10-06T09:01:36.318226+00:00",
+  "scope": "Hashes/paths only; omitted source contents not published",
+  "files": [
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s3-final-20261006T0755Z/delivery.json",
+      "source_sha256": "dca81e1ff4695fed1f1bdd356af8545b77a4e9a0b61cf604f547b4de253cd63b",
+      "bytes": 407,
+      "reason": "Unselected redundant/raw intermediate"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s3-final-20261006T0755Z/official-command.txt",
+      "source_sha256": "9687166329bd74842817f79f70c6c6f32af4ac23a28a20c9c0c22f4d09f2984b",
+      "bytes": 1242,
+      "reason": "Unselected redundant/raw intermediate"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s3-final-20261006T0755Z/browser-upgrade.py",
+      "source_sha256": "9fd82f5e377282568806901e3fc3d595af494735579f1cd3f8d65aaf53711692",
+      "bytes": 5377,
+      "reason": "Unselected redundant/raw intermediate"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s3-final-20261006T0755Z/build.txt",
+      "source_sha256": "83fa89b1f9702c7d4e0092e006b17c87f235c5cc9629104be4d52eb30ba39ed0",
+      "bytes": 933,
+      "reason": "Unselected redundant/raw intermediate"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s3-final-20261006T0755Z/handoff.txt",
+      "source_sha256": "dcfee73b8ad3abe97cdbc8df20f712cd2dfc8435fee4f2675522d0469b2baa9a",
+      "bytes": 11362,
+      "reason": "Unselected redundant/raw intermediate"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s3-final-20261006T0755Z/official/stage-4.counts.json",
+      "source_sha256": "83c208cdfc9473aef80d8f0f43c9a17b72cdf2e44f9fffd4984e299d64c0f1b5",
+      "bytes": 165,
+      "reason": "Unselected redundant/raw intermediate"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s3-final-20261006T0755Z/official/stage-4.log",
+      "source_sha256": "d6c76214fdb6dd06f9fc00c56b4f9eade02addf795afacb7651ab5d9f34ea894",
+      "bytes": 3615,
+      "reason": "Failed next-stage probe includes auth-value-shaped output; excluded"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/official.txt",
+      "source_sha256": "433e96ea5848327ef851d32671dfd47e447fed612bc4f20ae69ba999b1bbbbd4",
+      "bytes": 1195,
+      "reason": "Unselected redundant/raw intermediate"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/helpers_source.py",
+      "source_sha256": "5636cabdb1adf1340a43e110afa9737317278b4d13d4383e4820db62dff2bd0f",
+      "bytes": 4439,
+      "reason": "Unselected redundant/raw intermediate"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/relations.py",
+      "source_sha256": "0bb3cb7f608d77d126656969f233944068d44152a014624bffa77d72233a65d5",
+      "bytes": 24542,
+      "reason": "Unselected redundant/raw intermediate"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/build.txt",
+      "source_sha256": "3a6aec15b7b3ab4972906063696e13e1326340238d085897b27919c4487f2579",
+      "bytes": 930,
+      "reason": "Unselected redundant/raw intermediate"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/focus_control.py",
+      "source_sha256": "db4c6c2b3311abc45ec760a57951f518f39d028ac73226ed7aa5c631b7b818d0",
+      "bytes": 23099,
+      "reason": "Unselected redundant/raw intermediate"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/browser.py",
+      "source_sha256": "4bddc9cbc2f252ecdfecde7313e69e86db055f7d6832e7dba25bd1e714e6ba70",
+      "bytes": 21957,
+      "reason": "Unselected redundant/raw intermediate"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/api.py",
+      "source_sha256": "9d322fc8b84602352667544bc67dbd2bed0f95dd7d1f4e51e653036696639519",
+      "bytes": 22590,
+      "reason": "Unselected redundant/raw intermediate"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/build-old1.txt",
+      "source_sha256": "6727a0ae2bac471c62b707436c800d0905a7433052619a866b232df97ec4eb23",
+      "bytes": 917,
+      "reason": "Unselected redundant/raw intermediate"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/build-old2.txt",
+      "source_sha256": "3cc77650d1f2ef10b1cb9f289dd8e19594c9388d55e3d64280f5fdd33676934b",
+      "bytes": 902,
+      "reason": "Unselected redundant/raw intermediate"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/native_source.py",
+      "source_sha256": "d9e6f7a4cd05ed14d9da0fd9d682c401fc3ee917e63ff7de7ef823b52864b9d1",
+      "bytes": 24561,
+      "reason": "Unselected redundant/raw intermediate"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/api2.py",
+      "source_sha256": "672a7fe59b0dd5a7635b2dfd540763df009c19c7f31af3b9ab2f69ccc25e2e33",
+      "bytes": 22196,
+      "reason": "Unselected redundant/raw intermediate"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/helpers2.py",
+      "source_sha256": "7b5aedf03b8b638416ef35c7b4afa346d6877eb5ae8d9e8e753650da9e1460e9",
+      "bytes": 4430,
+      "reason": "Unselected redundant/raw intermediate"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/supplement.py",
+      "source_sha256": "b6022d1242c4e258e8778b44f61b49ea440c91756d8ffbe8c5a452f631c85a65",
+      "bytes": 25242,
+      "reason": "Unselected redundant/raw intermediate"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/helpers.py",
+      "source_sha256": "b6c051f957a6edc6428ead89c1c9a7596aed2eafce2386e2784b2a1b84d68c38",
+      "bytes": 4384,
+      "reason": "Unselected redundant/raw intermediate"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/api3.py",
+      "source_sha256": "87f25e10c2ed2ef6247e4b0035b2e66b3d621a64582ffd7f1cc90db05ec4e66a",
+      "bytes": 22086,
+      "reason": "Unselected redundant/raw intermediate"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/focus.py",
+      "source_sha256": "82fd0207d4667dabec9141334bb994134fa17a6a245ca7bd726b62e5eaee0845",
+      "bytes": 23452,
+      "reason": "Unselected redundant/raw intermediate"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/focus-run/focus-diagnostic-True-1280.png",
+      "source_sha256": "0c34df3e41c46f6304fb36380f75d6cbb225a8c964573ece2feb516d75175b39",
+      "bytes": 302686,
+      "reason": "Unselected screenshot matrix; representative captures included"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/focus-run/focus-diagnostic-False-1280.png",
+      "source_sha256": "553b08c417b4996e13c97d2363fd0461790ccc10db7b6afd99e62d2f58cf41ef",
+      "bytes": 302164,
+      "reason": "Unselected screenshot matrix; representative captures included"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/focus-run/focus-diagnostic-False-375.png",
+      "source_sha256": "43d052ff64e7a759851c6c0f5eb3361748a45fdeaba963d23dd8f62746456a6d",
+      "bytes": 291166,
+      "reason": "Unselected screenshot matrix; representative captures included"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/focus-run/focus-diagnostic-True-375.png",
+      "source_sha256": "979e2254fbf48d2d318dee88121934203264aedfe1d4a585ea2a9d9bde5b5068",
+      "bytes": 291616,
+      "reason": "Unselected screenshot matrix; representative captures included"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/packaged-stage-1/service.py",
+      "source_sha256": "24cca216df6c8a82db35587ba5af607e6bfe74e81ae4a6b086cf8f6339da7769",
+      "bytes": 8519,
+      "reason": "Redundant packaged source copy excluded"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/packaged-stage-1/temporal.py",
+      "source_sha256": "db46eae7b47ce72cfc8e95ccaea45958cd59fc3b556e3227e5f9035b8cf6c439",
+      "bytes": 2138,
+      "reason": "Redundant packaged source copy excluded"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/packaged-stage-1/server.py",
+      "source_sha256": "efe955d86c931b67beef4367acbaf012ea434867d8419e585ee06f0679ca9b03",
+      "bytes": 1864,
+      "reason": "Redundant packaged source copy excluded"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/packaged-stage-1/values.py",
+      "source_sha256": "7e35fc23a6474e6ac1737bd1948fa9f70e492820608163e1201a0d6f0a20e096",
+      "bytes": 4089,
+      "reason": "Redundant packaged source copy excluded"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/packaged-stage-1/domain.py",
+      "source_sha256": "c0c0df86b5ea88d9e48be4ea2ce4c57d2246dc7a4e772e58b724ca93be9c28fd",
+      "bytes": 7173,
+      "reason": "Redundant packaged source copy excluded"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/packaged-stage-1/state.py",
+      "source_sha256": "0dbc2955f174d14589e3fedb0102c96d5ecfbecf5e1dede472a86e09c311261f",
+      "bytes": 8773,
+      "reason": "Redundant packaged source copy excluded"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/browser-run1/recovered-False-False-375.png",
+      "source_sha256": "75afb36283a105b3959117f2605c049d49fe03eba16cf0a2331a872c823dbe67",
+      "bytes": 339748,
+      "reason": "Unselected screenshot matrix; representative captures included"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/browser-run1/party-five-1280.png",
+      "source_sha256": "3c33b4c2c96cea157e35c866dd7073d12be7b051c198e3f3c1bffa7339b18706",
+      "bytes": 305082,
+      "reason": "Unselected screenshot matrix; representative captures included"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/browser-run1/real-upgrade-True-1280.png",
+      "source_sha256": "97bdf6fc0362e50c80d6725b189423bac49317a9b4879c2cba1bceee7e5257c0",
+      "bytes": 351265,
+      "reason": "Unselected screenshot matrix; representative captures included"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/browser-run1/recovered-False-False-1280.png",
+      "source_sha256": "21f577851ebfd6f48355dc00c8d3c4738c665eef6694bd242f64785b98a64587",
+      "bytes": 347115,
+      "reason": "Unselected screenshot matrix; representative captures included"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/browser-run1/real-upgrade-True-375.png",
+      "source_sha256": "53002700afc8c9367a7b413a90be5c76663820bceaf70fbc1706101dfbbb9ad0",
+      "bytes": 342743,
+      "reason": "Unselected screenshot matrix; representative captures included"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/browser-run1/recovered-False-True-375.png",
+      "source_sha256": "412adff2bb3eb20678b9701c8bef25713a8e8dcd16b8976ba5beba1938a59701",
+      "bytes": 339332,
+      "reason": "Unselected screenshot matrix; representative captures included"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/browser-run1/recovered-True-False-1280.png",
+      "source_sha256": "7a719c8f61617772d6a05e35fbf3e3f5a16867afc951786707b2c1f0c3aeb77b",
+      "bytes": 352112,
+      "reason": "Unselected screenshot matrix; representative captures included"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/browser-run1/real-upgrade-False-375.png",
+      "source_sha256": "1280ca5d5aa666022567105ee8fcb03843fe19bd7e7ce7f38693e161194d64e7",
+      "bytes": 229415,
+      "reason": "Unselected screenshot matrix; representative captures included"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/browser-run1/recovered-False-True-1280.png",
+      "source_sha256": "06374532f9f134f6f483280696725a1c864cc1461787f62fa77d04cc6964b5d5",
+      "bytes": 346600,
+      "reason": "Unselected screenshot matrix; representative captures included"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/browser-run1/real-upgrade-False-1280.png",
+      "source_sha256": "f11a366b6f9dec5deba1cc6f3c79aaf837074aa7f8375f1f3516594a95f5cad6",
+      "bytes": 237794,
+      "reason": "Unselected screenshot matrix; representative captures included"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/browser-run1/recovered-True-False-375.png",
+      "source_sha256": "5ba25edc95725b26aa3e72ce7e790d33f62c1de2128e8f698881292cb8971f8d",
+      "bytes": 343702,
+      "reason": "Unselected screenshot matrix; representative captures included"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/browser-run1/recovered-True-True-1280.png",
+      "source_sha256": "6787f28286030bff70e6e99dcec1a9bba1937fef3ee30b9f8ca5172d083a6c92",
+      "bytes": 351981,
+      "reason": "Unselected screenshot matrix; representative captures included"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/browser-run1/recovered-True-True-375.png",
+      "source_sha256": "3e2a408c1de4fa55a394a4519d44f3f20ae994f387f0c6bb7068b9404bc8fab7",
+      "bytes": 343583,
+      "reason": "Unselected screenshot matrix; representative captures included"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/browser-run1/party-five-375.png",
+      "source_sha256": "8c519a8534e8150d7cc3e277e680c8371add1e598ae7f11ab3228a431abd66a1",
+      "bytes": 294255,
+      "reason": "Unselected screenshot matrix; representative captures included"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/official/stage-4.counts.json",
+      "source_sha256": "83c208cdfc9473aef80d8f0f43c9a17b72cdf2e44f9fffd4984e299d64c0f1b5",
+      "bytes": 165,
+      "reason": "Unselected redundant/raw intermediate"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/official/stage-4.log",
+      "source_sha256": "4e0a0c2c2615a8e495c9b9ee3d443cd4b07b43964936b22b78607c18fd2c0eb7",
+      "bytes": 3608,
+      "reason": "Failed next-stage probe includes auth-value-shaped output; excluded"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/packaged-stage-2/service.py",
+      "source_sha256": "46903d2fd358e2b2c16cd3100d0308004703d6d2dd6adcfa753d9eef0c20dddd",
+      "bytes": 8555,
+      "reason": "Redundant packaged source copy excluded"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/packaged-stage-2/temporal.py",
+      "source_sha256": "db46eae7b47ce72cfc8e95ccaea45958cd59fc3b556e3227e5f9035b8cf6c439",
+      "bytes": 2138,
+      "reason": "Redundant packaged source copy excluded"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/packaged-stage-2/server.py",
+      "source_sha256": "9790bb3353a3059c7730554abc595198bf8ba6633af96ff3e9e13d9ef4ce029a",
+      "bytes": 3218,
+      "reason": "Redundant packaged source copy excluded"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/packaged-stage-2/values.py",
+      "source_sha256": "7e35fc23a6474e6ac1737bd1948fa9f70e492820608163e1201a0d6f0a20e096",
+      "bytes": 4089,
+      "reason": "Redundant packaged source copy excluded"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/packaged-stage-2/domain.py",
+      "source_sha256": "9368dd0d4e479d30b8e17120462ffcd63bbb4490f4d6fa060763f231e12ba62d",
+      "bytes": 8956,
+      "reason": "Redundant packaged source copy excluded"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/packaged-stage-2/Dockerfile",
+      "source_sha256": "a9e5d5953574a0169c432e0ec25626abc365cfd5c4f6c6c95f3d315c2344248c",
+      "bytes": 267,
+      "reason": "Redundant packaged source copy excluded"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/packaged-stage-2/legacy_state.py",
+      "source_sha256": "b1094a3ffad1e8f06d858d65aa6fd6cc8fedb16e399836385ca7ea8753f3fec7",
+      "bytes": 8956,
+      "reason": "Redundant packaged source copy excluded"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/packaged-stage-2/RUN.md",
+      "source_sha256": "c2f99469f4dd4083c4916b60db34c090fb09a393bb3678195ba4f379114b7ffd",
+      "bytes": 2004,
+      "reason": "Redundant packaged source copy excluded"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/packaged-stage-2/state.py",
+      "source_sha256": "198c9349fee00508fbd47f15f4e85b6304a38bdec8760d4738cefd7fd4c2e1ae",
+      "bytes": 10342,
+      "reason": "Redundant packaged source copy excluded"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/packaged-stage-2/legacy_domain.py",
+      "source_sha256": "c0c0df86b5ea88d9e48be4ea2ce4c57d2246dc7a4e772e58b724ca93be9c28fd",
+      "bytes": 7173,
+      "reason": "Redundant packaged source copy excluded"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/packaged-stage-3/stage2_state.py",
+      "source_sha256": "198c9349fee00508fbd47f15f4e85b6304a38bdec8760d4738cefd7fd4c2e1ae",
+      "bytes": 10342,
+      "reason": "Redundant packaged source copy excluded"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/packaged-stage-3/service.py",
+      "source_sha256": "a5dec56628795f9bf773b9e9d54756bc3461bae0edf66e09f2c3f52eab1be6fa",
+      "bytes": 13771,
+      "reason": "Redundant packaged source copy excluded"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/packaged-stage-3/temporal.py",
+      "source_sha256": "db46eae7b47ce72cfc8e95ccaea45958cd59fc3b556e3227e5f9035b8cf6c439",
+      "bytes": 2138,
+      "reason": "Redundant packaged source copy excluded"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/packaged-stage-3/server.py",
+      "source_sha256": "9790bb3353a3059c7730554abc595198bf8ba6633af96ff3e9e13d9ef4ce029a",
+      "bytes": 3218,
+      "reason": "Redundant packaged source copy excluded"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/packaged-stage-3/values.py",
+      "source_sha256": "7e35fc23a6474e6ac1737bd1948fa9f70e492820608163e1201a0d6f0a20e096",
+      "bytes": 4089,
+      "reason": "Redundant packaged source copy excluded"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/packaged-stage-3/domain.py",
+      "source_sha256": "9368dd0d4e479d30b8e17120462ffcd63bbb4490f4d6fa060763f231e12ba62d",
+      "bytes": 8956,
+      "reason": "Redundant packaged source copy excluded"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/packaged-stage-3/Dockerfile",
+      "source_sha256": "a9e5d5953574a0169c432e0ec25626abc365cfd5c4f6c6c95f3d315c2344248c",
+      "bytes": 267,
+      "reason": "Redundant packaged source copy excluded"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/packaged-stage-3/legacy_state.py",
+      "source_sha256": "b1094a3ffad1e8f06d858d65aa6fd6cc8fedb16e399836385ca7ea8753f3fec7",
+      "bytes": 8956,
+      "reason": "Redundant packaged source copy excluded"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/packaged-stage-3/ledger.py",
+      "source_sha256": "b4ea46056198ede463ea917ec27faec5572fb4301ccad20dfe90452b794984b2",
+      "bytes": 3133,
+      "reason": "Redundant packaged source copy excluded"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/packaged-stage-3/agreements.py",
+      "source_sha256": "3d2554c15947c2d79d48063a78cf08eeeb080af3e40befa0e1380a37a4090ded",
+      "bytes": 5382,
+      "reason": "Redundant packaged source copy excluded"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/packaged-stage-3/RUN.md",
+      "source_sha256": "d4dc15bdacfa58d43c9fd42b2ed8aa40d31da6cfd4bf58004711bd1115b6124e",
+      "bytes": 2531,
+      "reason": "Redundant packaged source copy excluded"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/packaged-stage-3/state.py",
+      "source_sha256": "2191680d0f59d4dc8e27edf38441104f54bb64db79d7f84bbef782c95b04dc9f",
+      "bytes": 16172,
+      "reason": "Redundant packaged source copy excluded"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/packaged-stage-3/legacy_domain.py",
+      "source_sha256": "c0c0df86b5ea88d9e48be4ea2ce4c57d2246dc7a4e772e58b724ca93be9c28fd",
+      "bytes": 7173,
+      "reason": "Redundant packaged source copy excluded"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/packaged-stage-3/static/lookup.js",
+      "source_sha256": "2f5f42087df0a38623fcf4f5399e1acb7a45aef88a0d7ccd41ee831efcb24e52",
+      "bytes": 3744,
+      "reason": "Redundant packaged source copy excluded"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/packaged-stage-3/static/booking.js",
+      "source_sha256": "06daf7764d775ed058a276e6a77eed22870ece122cd8e5023fbc104c9f93e6a6",
+      "bytes": 5438,
+      "reason": "Redundant packaged source copy excluded"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/packaged-stage-3/static/index.html",
+      "source_sha256": "27d191e7e5c1461ff8c7a8cc2193a34b1095ab8ca87c699336af76331fd3a6f0",
+      "bytes": 673,
+      "reason": "Redundant packaged source copy excluded"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/packaged-stage-3/static/auth.js",
+      "source_sha256": "4c07dcbe95f2e008b66bf343f4e880cd134512dea59a2005f0e2a467fdb5745b",
+      "bytes": 3617,
+      "reason": "Redundant packaged source copy excluded"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/packaged-stage-3/static/dom.js",
+      "source_sha256": "4bb2c46674ab4fd87e161c17c350d865d20269596d14bff2fdae723e9ae48e40",
+      "bytes": 1079,
+      "reason": "Redundant packaged source copy excluded"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/packaged-stage-3/static/style.css",
+      "source_sha256": "3c82d6173ec7e1b11fd98a93c9f625f49084c2e45c5761a03eff5d691a611e61",
+      "bytes": 5455,
+      "reason": "Redundant packaged source copy excluded"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/packaged-stage-3/static/api.js",
+      "source_sha256": "9a57a1e8c48b6e9df9cca7a199f8690b4cc716cfccb917d8ef23409e8a0eed8e",
+      "bytes": 1197,
+      "reason": "Redundant packaged source copy excluded"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/packaged-stage-3/static/search.js",
+      "source_sha256": "826f0d993d2419c2d0d7d0d8c3b3c5a320bb512d9c948b194ed46def318c9b53",
+      "bytes": 8546,
+      "reason": "Redundant packaged source copy excluded"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/packaged-stage-3/static/app.js",
+      "source_sha256": "ce9795c065d509b88a46dedc5896a4bee1a228fa93617d06bef859b23b1ab58e",
+      "bytes": 478,
+      "reason": "Redundant packaged source copy excluded"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/packaged-stage-2/static/lookup.js",
+      "source_sha256": "2f5f42087df0a38623fcf4f5399e1acb7a45aef88a0d7ccd41ee831efcb24e52",
+      "bytes": 3744,
+      "reason": "Redundant packaged source copy excluded"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/packaged-stage-2/static/booking.js",
+      "source_sha256": "06daf7764d775ed058a276e6a77eed22870ece122cd8e5023fbc104c9f93e6a6",
+      "bytes": 5438,
+      "reason": "Redundant packaged source copy excluded"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/packaged-stage-2/static/index.html",
+      "source_sha256": "27d191e7e5c1461ff8c7a8cc2193a34b1095ab8ca87c699336af76331fd3a6f0",
+      "bytes": 673,
+      "reason": "Redundant packaged source copy excluded"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/packaged-stage-2/static/auth.js",
+      "source_sha256": "4c07dcbe95f2e008b66bf343f4e880cd134512dea59a2005f0e2a467fdb5745b",
+      "bytes": 3617,
+      "reason": "Redundant packaged source copy excluded"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/packaged-stage-2/static/dom.js",
+      "source_sha256": "4bb2c46674ab4fd87e161c17c350d865d20269596d14bff2fdae723e9ae48e40",
+      "bytes": 1079,
+      "reason": "Redundant packaged source copy excluded"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/packaged-stage-2/static/style.css",
+      "source_sha256": "3c82d6173ec7e1b11fd98a93c9f625f49084c2e45c5761a03eff5d691a611e61",
+      "bytes": 5455,
+      "reason": "Redundant packaged source copy excluded"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/packaged-stage-2/static/api.js",
+      "source_sha256": "9a57a1e8c48b6e9df9cca7a199f8690b4cc716cfccb917d8ef23409e8a0eed8e",
+      "bytes": 1197,
+      "reason": "Redundant packaged source copy excluded"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/packaged-stage-2/static/search.js",
+      "source_sha256": "826f0d993d2419c2d0d7d0d8c3b3c5a320bb512d9c948b194ed46def318c9b53",
+      "bytes": 8546,
+      "reason": "Redundant packaged source copy excluded"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/qa-s3-run-20261006T0800Z/packaged-stage-2/static/app.js",
+      "source_sha256": "ce9795c065d509b88a46dedc5896a4bee1a228fa93617d06bef859b23b1ab58e",
+      "bytes": 478,
+      "reason": "Redundant packaged source copy excluded"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/delivery.json",
+      "source_sha256": "8c44843821d602ac11ea8cd19903b6a08fdb0b39862c53e13144e28e3799e505",
+      "bytes": 449,
+      "reason": "Unselected redundant/raw intermediate"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/build.txt",
+      "source_sha256": "88cf118c34cb87ccce48cea43eba94de2d11e08263b908e1492ef6fe424300b2",
+      "bytes": 925,
+      "reason": "Unselected redundant/raw intermediate"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/review.py",
+      "source_sha256": "9e32463607c0aa25a76e88aa276c56fae57a74589de37f3de43250f5088da9f9",
+      "bytes": 22950,
+      "reason": "Unselected redundant/raw intermediate"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/build-old.txt",
+      "source_sha256": "3744969e8cb36b59f309578a0ecce509a96514503bb32ec956fef3a79880a5bd",
+      "bytes": 935,
+      "reason": "Unselected redundant/raw intermediate"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/build-old2.txt",
+      "source_sha256": "fc5732afbb27ef4f8eb83625f8fa6b7bec271866168b877a1d5594535323f863",
+      "bytes": 920,
+      "reason": "Unselected redundant/raw intermediate"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/handoff.txt",
+      "source_sha256": "be523244ffaa3e8bd1f52ed7cd17a6d1857bab4d76f477c58b2f1046f79cf3e1",
+      "bytes": 10623,
+      "reason": "Unselected redundant/raw intermediate"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/attempt2/build.txt",
+      "source_sha256": "82d5d0ed03628c01076656861a3af488f4bfdcf496e9093416910a7ab184d331",
+      "bytes": 967,
+      "reason": "Unselected redundant/raw intermediate"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/attempt2/review.py",
+      "source_sha256": "a6d7bd24df2eda356e82cf26456c2d0422faf7e5c1da896eac9cf6cd4cb7464a",
+      "bytes": 25302,
+      "reason": "Unselected redundant/raw intermediate"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/attempt2/build-old.txt",
+      "source_sha256": "32d5988a35a07fedb70ed9ad8c75a46272b9e2a6e596a5292ac071ff6b03d8f7",
+      "bytes": 935,
+      "reason": "Unselected redundant/raw intermediate"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/attempt2/build-old2.txt",
+      "source_sha256": "f0804a60b84e8934ade935c2c77a70ef00c57a1d115577cca920c39c7833d15e",
+      "bytes": 920,
+      "reason": "Unselected redundant/raw intermediate"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/__pycache__/review.cpython-314.pyc",
+      "source_sha256": "492e62cf8caf4d334e52a93d65f56b172445c37d83f36444b36bbe0ddff954fc",
+      "bytes": 60311,
+      "reason": "Unselected redundant/raw intermediate"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/browser-run/375-False-conflict-current.png",
+      "source_sha256": "55c917eb140af43e51d82d9370ae47adb847237c9ee42ad21cbe776eac831bae",
+      "bytes": 48562,
+      "reason": "Unselected screenshot matrix; representative captures included"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/browser-run/1280-False-conflict-current.png",
+      "source_sha256": "fdd6366a6bf1a136c008ac8f5ae51fab78ba1329bece6fa2b7163e053c059727",
+      "bytes": 112015,
+      "reason": "Unselected screenshot matrix; representative captures included"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/browser-run/1280-True-conflict-current.png",
+      "source_sha256": "189a15ec111f77161e1f1ad35bdd7c1dfb5d8bee3918ae3df5e3e15492a6f844",
+      "bytes": 115197,
+      "reason": "Unselected screenshot matrix; representative captures included"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/browser-run/375-False-uncertain-current.png",
+      "source_sha256": "020748426769dbba197937437d7ab33fa7fd106c8c775a7f6a27e92b07920905",
+      "bytes": 49807,
+      "reason": "Unselected screenshot matrix; representative captures included"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/browser-run/375-True-conflict-first-free-pair.png",
+      "source_sha256": "9cc9c215e3b60da44bd99d2d9d7a72582cf07c6ebdbb1e322d08cc401e4270ad",
+      "bytes": 49633,
+      "reason": "Unselected screenshot matrix; representative captures included"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/browser-run/375-True-success-new-form.png",
+      "source_sha256": "cfb21cb65f68cdd19564aa053fbf16266ad2c37ba1a145bed975b7a60cd217b6",
+      "bytes": 43922,
+      "reason": "Unselected screenshot matrix; representative captures included"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/browser-run/375-True-uncertain-current.png",
+      "source_sha256": "a3f4d7ae896ddf5848166ce8f3c874e0394e441ed05161758dbc5be7db0fed60",
+      "bytes": 50742,
+      "reason": "Unselected screenshot matrix; representative captures included"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/browser-run/1280-False-uncertain-current.png",
+      "source_sha256": "9d86100ed3baec08b573967c597791b7bdf18d480a162c81b2ffa2de769f8558",
+      "bytes": 110269,
+      "reason": "Unselected screenshot matrix; representative captures included"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/browser-run/1280-True-uncertain-current.png",
+      "source_sha256": "61b9829a8b203234cbce3318dc90f4a41d5787ef0f3a608de80cbe517fe457b1",
+      "bytes": 112796,
+      "reason": "Unselected screenshot matrix; representative captures included"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/browser-run/375-True-conflict-current.png",
+      "source_sha256": "1bffe83d6f192b171ea11a7539a6facd816c81f6b833c6303bce7f9532658b37",
+      "bytes": 49477,
+      "reason": "Unselected screenshot matrix; representative captures included"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/browser-run/375-True-success-user-moved.png",
+      "source_sha256": "cd3598199cc4ac9a17615c1d12c08e79184d8cebde327ecb59891c25aa9889f2",
+      "bytes": 38945,
+      "reason": "Unselected screenshot matrix; representative captures included"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/official/stage-4.counts.json",
+      "source_sha256": "83c208cdfc9473aef80d8f0f43c9a17b72cdf2e44f9fffd4984e299d64c0f1b5",
+      "bytes": 165,
+      "reason": "Unselected redundant/raw intermediate"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/official/stage-4.log",
+      "source_sha256": "2eb123a40a12952c2751ca54195a437a89ab71fa0b265a9a62ab007d09ea6bb7",
+      "bytes": 3618,
+      "reason": "Failed next-stage probe includes auth-value-shaped output; excluded"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/supplement/private-bundle.json",
+      "source_sha256": "0ecd1972f84b628f3672998d4e91a799360f70525315970de557e81117a63667",
+      "bytes": 18488,
+      "reason": "Private state/migration snapshot excluded"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/supplement/review.py",
+      "source_sha256": "8721b752320969f0905d02ecc50c945a64c7e4a46645dcaaebaffed2672cd556",
+      "bytes": 7096,
+      "reason": "Unselected redundant/raw intermediate"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/attempt2/__pycache__/review.cpython-314.pyc",
+      "source_sha256": "66afc1d79175eb81316f5548e0c8cd99b31fec53f2a286191a9398406bbcc614",
+      "bytes": 67137,
+      "reason": "Unselected redundant/raw intermediate"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/attempt2/browser-run/enter-party-phase-True.png",
+      "source_sha256": "0b40a9bfcba799e66e7ebf5f0d2dc74682fff7eae6e33a409340c716bee82596",
+      "bytes": 41966,
+      "reason": "Unselected screenshot matrix; representative captures included"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/attempt2/browser-run/enter-party-phase-False.png",
+      "source_sha256": "49e5dac884cef9fae399384ce8cdcb3fc9fae46c0b3a959f7ca2b9b97f4b379d",
+      "bytes": 41054,
+      "reason": "Unselected screenshot matrix; representative captures included"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/attempt2/browser-run/375-False-conflict-current.png",
+      "source_sha256": "55c917eb140af43e51d82d9370ae47adb847237c9ee42ad21cbe776eac831bae",
+      "bytes": 48562,
+      "reason": "Unselected screenshot matrix; representative captures included"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/attempt2/browser-run/1280-False-conflict-current.png",
+      "source_sha256": "fdd6366a6bf1a136c008ac8f5ae51fab78ba1329bece6fa2b7163e053c059727",
+      "bytes": 112015,
+      "reason": "Unselected screenshot matrix; representative captures included"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/attempt2/browser-run/1280-True-conflict-current.png",
+      "source_sha256": "bf3a547c63aca7b1d5c64f23f39d1575d01eab65c4b079c6ed8f55e441ab66c0",
+      "bytes": 115199,
+      "reason": "Unselected screenshot matrix; representative captures included"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/attempt2/browser-run/375-False-uncertain-current.png",
+      "source_sha256": "020748426769dbba197937437d7ab33fa7fd106c8c775a7f6a27e92b07920905",
+      "bytes": 49807,
+      "reason": "Unselected screenshot matrix; representative captures included"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/attempt2/browser-run/actual-upgrade-cancelled-2.png",
+      "source_sha256": "2f44dcd3e6c68cbd53fbecb45b5fa4e82f480be02f0fdec419509824ee6c1fd3",
+      "bytes": 55952,
+      "reason": "Unselected screenshot matrix; representative captures included"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/attempt2/browser-run/actual-upgrade-cancelled-1.png",
+      "source_sha256": "85cd918331d90eaf4630dab9f8482f138d3f52ec2dd5822a8950d4020b23623b",
+      "bytes": 56888,
+      "reason": "Unselected screenshot matrix; representative captures included"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/attempt2/browser-run/375-True-conflict-first-free-pair.png",
+      "source_sha256": "1d7c1891bb658a05c785410ed1e13974ee552469e2a80e0d6f0ff201c7543c1a",
+      "bytes": 49634,
+      "reason": "Unselected screenshot matrix; representative captures included"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/attempt2/browser-run/375-True-success-new-form.png",
+      "source_sha256": "cfb21cb65f68cdd19564aa053fbf16266ad2c37ba1a145bed975b7a60cd217b6",
+      "bytes": 43922,
+      "reason": "Unselected screenshot matrix; representative captures included"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/attempt2/browser-run/375-True-uncertain-current.png",
+      "source_sha256": "a3f4d7ae896ddf5848166ce8f3c874e0394e441ed05161758dbc5be7db0fed60",
+      "bytes": 50742,
+      "reason": "Unselected screenshot matrix; representative captures included"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/attempt2/browser-run/1280-False-uncertain-current.png",
+      "source_sha256": "9d86100ed3baec08b573967c597791b7bdf18d480a162c81b2ffa2de769f8558",
+      "bytes": 110269,
+      "reason": "Unselected screenshot matrix; representative captures included"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/attempt2/browser-run/1280-True-uncertain-current.png",
+      "source_sha256": "e82c76d2b5669e55dcdd00dce9c9c74a92c2fcfb19bb74a878097dc8f1459a98",
+      "bytes": 112782,
+      "reason": "Unselected screenshot matrix; representative captures included"
+    },
+    {
+      "source_path": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/attempt2/browser-run/375-True-success-user-moved.png",
+      "source_sha256": "cd3598199cc4ac9a17615c1d12c08e79184d8cebde327ecb59891c25aa9889f2",
+      "bytes": 38945,
+      "reason": "Unselected screenshot matrix; representative captures included"
+    }
+  ]
+}

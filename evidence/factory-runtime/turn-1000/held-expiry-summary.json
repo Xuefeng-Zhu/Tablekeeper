@@ -1,0 +1,17 @@
+{
+  "at": "2026-10-06T09:35:56.257565+00:00",
+  "status": "STOPPED_ZERO_ADMISSIONS_HOLD_EXPIRED",
+  "first_pid": 13755,
+  "factory_admissions": 0,
+  "pm_turns_preserved": 769,
+  "tokens_preserved": 523174913,
+  "ledger_halt": null,
+  "source_or_profile_blocker": false,
+  "next_scope": "Normal held restart with unchanged config/source; immediate sealed7-context proof and release in same operator sequence. No model retry, budget or epoch reset.",
+  "source_receipt_sha256": "21c532c35928bc447f68d9403a65070a001c1e6bf691190de6d4b1d6c8e0eb98",
+  "release_attempt": {
+    "status": "blocked",
+    "error_type": "GateError",
+    "detail": "Release requires the exact live owned supervisor"
+  }
+}

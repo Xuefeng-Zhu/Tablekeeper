@@ -1,0 +1,264 @@
+[
+  {
+    "argv": [
+      "docker",
+      "build",
+      "-t",
+      "tablekeeper-review-s3:0813",
+      "/private/tmp/tablekeeper-review-s3-release-20261006T0813Z/stage-3"
+    ],
+    "start_utc": "2026-10-06T08:14:33.910002+00:00",
+    "end_utc": "2026-10-06T08:14:35.587823+00:00",
+    "exit": 0,
+    "stdout": "",
+    "stderr": "#0 building with \"default\" instance using docker driver\n\n#1 [internal] load build definition from Dockerfile\n#1 transferring dockerfile: 306B 0.0s done\n#1 DONE 0.1s\n\n#2 [internal] load metadata for docker.io/library/python:3.12-slim\n#2 DONE 0.0s\n\n#3 [internal] load .dockerignore\n#3 transferring context: 2B done\n#3 DONE 0.0s\n\n#4 [1/5] FROM docker.io/library/python:3.12-slim\n#4 DONE 0.0s\n\n#5 [internal] load build context\n#5 transferring context: 743B done\n#5 DONE 0.0s\n\n#6 [2/5] RUN apt-get update && apt-get install -y --no-install-recommends tzdata && rm -rf /var/lib/apt/lists/*\n#6 CACHED\n\n#7 [3/5] WORKDIR /app\n#7 CACHED\n\n#8 [4/5] COPY . ./\n#8 CACHED\n\n#9 [5/5] RUN mkdir -p static\n#9 CACHED\n\n#10 exporting to image\n#10 exporting layers done\n#10 writing image sha256:fc4408c51d1047f2c2554c5f49be1c60bec72afaa972483f99b07588ab1911e2 done\n#10 naming to docker.io/library/tablekeeper-review-s3:0813 0.0s done\n#10 DONE 0.0s\n"
+  },
+  {
+    "argv": [
+      "docker",
+      "build",
+      "-t",
+      "tablekeeper-review-s3-old1:0813",
+      "/private/tmp/tablekeeper-review-s3-release-20261006T0813Z/stage-1"
+    ],
+    "start_utc": "2026-10-06T08:14:35.589106+00:00",
+    "end_utc": "2026-10-06T08:14:36.022384+00:00",
+    "exit": 0,
+    "stdout": "",
+    "stderr": "#0 building with \"default\" instance using docker driver\n\n#1 [internal] load build definition from Dockerfile\n#1 transferring dockerfile: 346B done\n#1 DONE 0.0s\n\n#2 [internal] load metadata for docker.io/library/python:3.12-slim\n#2 DONE 0.0s\n\n#3 [internal] load .dockerignore\n#3 transferring context: 2B done\n#3 DONE 0.0s\n\n#4 [1/4] FROM docker.io/library/python:3.12-slim\n#4 DONE 0.0s\n\n#5 [internal] load build context\n#5 transferring context: 178B done\n#5 DONE 0.0s\n\n#6 [3/4] WORKDIR /app\n#6 CACHED\n\n#7 [2/4] RUN apt-get update && apt-get install -y --no-install-recommends tzdata && rm -rf /var/lib/apt/lists/*\n#7 CACHED\n\n#8 [4/4] COPY values.py temporal.py domain.py state.py service.py server.py ./\n#8 CACHED\n\n#9 exporting to image\n#9 exporting layers done\n#9 writing image sha256:dbf730160f49215f917ecbe95b67b6d573756bdbdf35b194bd8637007cb63b14 done\n#9 naming to docker.io/library/tablekeeper-review-s3-old1:0813 done\n#9 DONE 0.0s\n"
+  },
+  {
+    "argv": [
+      "docker",
+      "build",
+      "-t",
+      "tablekeeper-review-s3-old2:0813",
+      "/private/tmp/tablekeeper-review-s3-release-20261006T0813Z/stage-2"
+    ],
+    "start_utc": "2026-10-06T08:14:36.023361+00:00",
+    "end_utc": "2026-10-06T08:14:36.488717+00:00",
+    "exit": 0,
+    "stdout": "",
+    "stderr": "#0 building with \"default\" instance using docker driver\n\n#1 [internal] load build definition from Dockerfile\n#1 transferring dockerfile: 306B done\n#1 DONE 0.1s\n\n#2 [internal] load metadata for docker.io/library/python:3.12-slim\n#2 DONE 0.0s\n\n#3 [internal] load .dockerignore\n#3 transferring context: 2B done\n#3 DONE 0.0s\n\n#4 [1/5] FROM docker.io/library/python:3.12-slim\n#4 DONE 0.0s\n\n#5 [internal] load build context\n#5 transferring context: 646B done\n#5 DONE 0.0s\n\n#6 [2/5] RUN apt-get update && apt-get install -y --no-install-recommends tzdata && rm -rf /var/lib/apt/lists/*\n#6 CACHED\n\n#7 [3/5] WORKDIR /app\n#7 CACHED\n\n#8 [4/5] COPY . ./\n#8 CACHED\n\n#9 [5/5] RUN mkdir -p static\n#9 CACHED\n\n#10 exporting to image\n#10 exporting layers done\n#10 writing image sha256:2f5fc6d8e34bb4fab45ddad1683662a3dde9c59cd360cd6d7b914d84c1f3db19 done\n#10 naming to docker.io/library/tablekeeper-review-s3-old2:0813 done\n#10 DONE 0.0s\n"
+  },
+  {
+    "argv": [
+      "docker",
+      "network",
+      "create",
+      "--internal",
+      "review-s3-net-0813"
+    ],
+    "start_utc": "2026-10-06T08:14:36.489404+00:00",
+    "end_utc": "2026-10-06T08:14:36.565456+00:00",
+    "exit": 0,
+    "stdout": "75d6805d466e4ef755e488e2f480f7c826ae39af4c5e942ce8433842148ce58f\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "run",
+      "-d",
+      "--name",
+      "review-s3-app-0813",
+      "--network",
+      "review-s3-net-0813",
+      "--cpus",
+      "2",
+      "--memory",
+      "2g",
+      "tablekeeper-review-s3:0813"
+    ],
+    "start_utc": "2026-10-06T08:14:36.566019+00:00",
+    "end_utc": "2026-10-06T08:14:36.865003+00:00",
+    "exit": 0,
+    "stdout": "22e6fe602a84fac903a63dbe4191fcca70f823d9dfd9074766fa0d70856343af\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "run",
+      "-d",
+      "--name",
+      "review-s3-old1-0813",
+      "--network",
+      "review-s3-net-0813",
+      "--cpus",
+      "2",
+      "--memory",
+      "2g",
+      "tablekeeper-review-s3-old1:0813"
+    ],
+    "start_utc": "2026-10-06T08:14:36.865415+00:00",
+    "end_utc": "2026-10-06T08:14:37.229003+00:00",
+    "exit": 0,
+    "stdout": "e9110149b80232f53f5ec5f064605a17fd83ad1fa61a89e9bd21471e94b414d0\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "run",
+      "-d",
+      "--name",
+      "review-s3-old2-0813",
+      "--network",
+      "review-s3-net-0813",
+      "--cpus",
+      "2",
+      "--memory",
+      "2g",
+      "tablekeeper-review-s3-old2:0813"
+    ],
+    "start_utc": "2026-10-06T08:14:37.229446+00:00",
+    "end_utc": "2026-10-06T08:14:37.443532+00:00",
+    "exit": 0,
+    "stdout": "2b11e2dfd09648ab46ed262481453541d3d9c35bc5b958225bdd58fbdcb42c77\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "run",
+      "-d",
+      "--name",
+      "review-s3-dest-0813",
+      "--network",
+      "review-s3-net-0813",
+      "--cpus",
+      "2",
+      "--memory",
+      "2g",
+      "tablekeeper-review-s3:0813"
+    ],
+    "start_utc": "2026-10-06T08:14:37.444068+00:00",
+    "end_utc": "2026-10-06T08:14:37.648122+00:00",
+    "exit": 0,
+    "stdout": "02fc7d160be822226eac69262ef6779a5ca0f210dd9a1c8ab598e390bafc5061\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "create",
+      "--name",
+      "review-s3-browser-0813",
+      "--network",
+      "review-s3-net-0813",
+      "--cpus",
+      "2",
+      "--memory",
+      "2g",
+      "--entrypoint",
+      "python",
+      "df-harness-runner",
+      "/review.py"
+    ],
+    "start_utc": "2026-10-06T08:14:37.648729+00:00",
+    "end_utc": "2026-10-06T08:14:37.727934+00:00",
+    "exit": 0,
+    "stdout": "81a045b4811f42207013c853b00ebe68fdbabc13ed79fb23ed9a9a5d7f697a14\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "cp",
+      "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/review.py",
+      "review-s3-browser-0813:/review.py"
+    ],
+    "start_utc": "2026-10-06T08:14:37.728430+00:00",
+    "end_utc": "2026-10-06T08:14:37.775125+00:00",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "start",
+      "-a",
+      "review-s3-browser-0813"
+    ],
+    "start_utc": "2026-10-06T08:14:37.776084+00:00",
+    "end_utc": "2026-10-06T08:15:02.189029+00:00",
+    "exit": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"/review.py\", line 197, in <module>\n    asyncio.run(main())\n  File \"/usr/local/lib/python3.12/asyncio/runners.py\", line 195, in run\n    return runner.run(main)\n           ^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/asyncio/runners.py\", line 118, in run\n    return self._loop.run_until_complete(task)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/asyncio/base_events.py\", line 691, in run_until_complete\n    return future.result()\n           ^^^^^^^^^^^^^^^\n  File \"/review.py\", line 192, in main\n    await browser_extra(b);await upgrade(b,1);await upgrade(b,2);await s3_cases(b)\n    ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/review.py\", line 65, in browser_extra\n    ctx,page=await page_setup(browser);held=asyncio.Event();release=asyncio.Event()\n                   ^^^^^^^^^^\nNameError: name 'page_setup' is not defined\n"
+  },
+  {
+    "argv": [
+      "docker",
+      "cp",
+      "review-s3-browser-0813:/out",
+      "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/browser-run"
+    ],
+    "start_utc": "2026-10-06T08:15:02.237704+00:00",
+    "end_utc": "2026-10-06T08:15:03.096000+00:00",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "inspect",
+      "review-s3-app-0813",
+      "review-s3-browser-0813",
+      "--format",
+      "{{.Name}} image={{.Image}} cpu={{.HostConfig.NanoCpus}} memory={{.HostConfig.Memory}} start={{.State.StartedAt}} end={{.State.FinishedAt}} exit={{.State.ExitCode}}"
+    ],
+    "start_utc": "2026-10-06T08:15:03.102738+00:00",
+    "end_utc": "2026-10-06T08:15:03.578477+00:00",
+    "exit": 0,
+    "stdout": "/review-s3-app-0813 image=sha256:fc4408c51d1047f2c2554c5f49be1c60bec72afaa972483f99b07588ab1911e2 cpu=2000000000 memory=2147483648 start=2026-10-06T08:14:36.712539897Z end=0001-01-01T00:00:00Z exit=0\n/review-s3-browser-0813 image=sha256:da249723d954671d7e57ac5b3b55ced42a7f34430edf45116da52a4ea94963cd cpu=2000000000 memory=2147483648 start=2026-10-06T08:14:37.835536654Z end=2026-10-06T08:15:01.599646723Z exit=1\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "network",
+      "inspect",
+      "review-s3-net-0813",
+      "--format",
+      "internal={{.Internal}}"
+    ],
+    "start_utc": "2026-10-06T08:15:03.579008+00:00",
+    "end_utc": "2026-10-06T08:15:03.678114+00:00",
+    "exit": 0,
+    "stdout": "internal=true\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "rm",
+      "-f",
+      "review-s3-browser-0813",
+      "review-s3-app-0813",
+      "review-s3-old1-0813",
+      "review-s3-old2-0813",
+      "review-s3-dest-0813"
+    ],
+    "start_utc": "2026-10-06T08:15:03.678501+00:00",
+    "end_utc": "2026-10-06T08:15:04.774822+00:00",
+    "exit": 0,
+    "stdout": "review-s3-browser-0813\nreview-s3-app-0813\nreview-s3-old1-0813\nreview-s3-old2-0813\nreview-s3-dest-0813\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "network",
+      "rm",
+      "review-s3-net-0813"
+    ],
+    "start_utc": "2026-10-06T08:15:04.776288+00:00",
+    "end_utc": "2026-10-06T08:15:05.300032+00:00",
+    "exit": 0,
+    "stdout": "review-s3-net-0813\n",
+    "stderr": ""
+  }
+]

@@ -1,0 +1,57 @@
+{
+  "work_item": "BUILD-S3",
+  "responsible": "@frankzhu94/factory-backend",
+  "recorded_utc": "2026-10-06T07:57:40.086823+00:00",
+  "starting_revision": "c7258240675a938ebc884506dbb04159288ef787",
+  "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3",
+  "clean": true,
+  "prior_deliverable_byte_comparisons": {
+    "stage-1": 8,
+    "stage-2": 19
+  },
+  "static_assets_unchanged": true,
+  "manifest": {
+    "stage-3/stage2_state.py": "198c9349fee00508fbd47f15f4e85b6304a38bdec8760d4738cefd7fd4c2e1ae",
+    "stage-3/service.py": "a5dec56628795f9bf773b9e9d54756bc3461bae0edf66e09f2c3f52eab1be6fa",
+    "stage-3/temporal.py": "db46eae7b47ce72cfc8e95ccaea45958cd59fc3b556e3227e5f9035b8cf6c439",
+    "stage-3/server.py": "9790bb3353a3059c7730554abc595198bf8ba6633af96ff3e9e13d9ef4ce029a",
+    "stage-3/values.py": "7e35fc23a6474e6ac1737bd1948fa9f70e492820608163e1201a0d6f0a20e096",
+    "stage-3/domain.py": "9368dd0d4e479d30b8e17120462ffcd63bbb4490f4d6fa060763f231e12ba62d",
+    "stage-3/Dockerfile": "a9e5d5953574a0169c432e0ec25626abc365cfd5c4f6c6c95f3d315c2344248c",
+    "stage-3/legacy_state.py": "b1094a3ffad1e8f06d858d65aa6fd6cc8fedb16e399836385ca7ea8753f3fec7",
+    "stage-3/ledger.py": "b4ea46056198ede463ea917ec27faec5572fb4301ccad20dfe90452b794984b2",
+    "stage-3/agreements.py": "3d2554c15947c2d79d48063a78cf08eeeb080af3e40befa0e1380a37a4090ded",
+    "stage-3/RUN.md": "d4dc15bdacfa58d43c9fd42b2ed8aa40d31da6cfd4bf58004711bd1115b6124e",
+    "stage-3/state.py": "2191680d0f59d4dc8e27edf38441104f54bb64db79d7f84bbef782c95b04dc9f",
+    "stage-3/legacy_domain.py": "c0c0df86b5ea88d9e48be4ea2ce4c57d2246dc7a4e772e58b724ca93be9c28fd",
+    "stage-3/static/lookup.js": "2f5f42087df0a38623fcf4f5399e1acb7a45aef88a0d7ccd41ee831efcb24e52",
+    "stage-3/static/booking.js": "06daf7764d775ed058a276e6a77eed22870ece122cd8e5023fbc104c9f93e6a6",
+    "stage-3/static/index.html": "27d191e7e5c1461ff8c7a8cc2193a34b1095ab8ca87c699336af76331fd3a6f0",
+    "stage-3/static/auth.js": "4c07dcbe95f2e008b66bf343f4e880cd134512dea59a2005f0e2a467fdb5745b",
+    "stage-3/static/dom.js": "4bb2c46674ab4fd87e161c17c350d865d20269596d14bff2fdae723e9ae48e40",
+    "stage-3/static/style.css": "3c82d6173ec7e1b11fd98a93c9f625f49084c2e45c5761a03eff5d691a611e61",
+    "stage-3/static/api.js": "9a57a1e8c48b6e9df9cca7a199f8690b4cc716cfccb917d8ef23409e8a0eed8e",
+    "stage-3/static/search.js": "826f0d993d2419c2d0d7d0d8c3b3c5a320bb512d9c948b194ed46def318c9b53",
+    "stage-3/static/app.js": "ce9795c065d509b88a46dedc5896a4bee1a228fa93617d06bef859b23b1ab58e",
+    "tests/backend_stage3_inherited.py": "55eb4932a4743a4ee194b6a7a8cbf98bdf0cb84bbdec930475031df116197b0c",
+    "tests/backend_stage3_http.py": "5a04615a336575be3ba1553dd4a38258cba9ba1aa9e2d6d46b1d7afd544ed955"
+  },
+  "implementation_commits": [
+    "4764ae5ad412a314f4332b0c81e61ab86aad0209",
+    "abcf6df2cdc86f3295460b47044aed7ee9fc5f00",
+    "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3"
+  ],
+  "authors": [
+    "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3 Factory Backend <backend@factory.invalid>",
+    "abcf6df2cdc86f3295460b47044aed7ee9fc5f00 Factory Backend <backend@factory.invalid>",
+    "4764ae5ad412a314f4332b0c81e61ab86aad0209 Factory Backend <backend@factory.invalid>"
+  ],
+  "assignment_event": "6237898c-19a1-4ccc-b5dd-02d9c384b961",
+  "receipt_event": "d7d974c8-b8ef-47ab-a8a0-739910fa8689",
+  "failed_evidence": [
+    "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s3-20261006T0741Z",
+    "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/backend-s3-fixed-20261006T0750Z"
+  ],
+  "measured_cost": "UNAVAILABLE",
+  "independent_acceptance": "PENDING"
+}

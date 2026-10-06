@@ -1,0 +1,194 @@
+{
+  "candidate": "ac1eb4945a2adaeaaf8a62d0817bdbc6a021e566",
+  "start_utc": "2026-10-06T10:33:09.552078+00:00",
+  "end_utc": "2026-10-06T10:33:09.804577+00:00",
+  "old3_source_unreachable": true,
+  "groups": [
+    "Actual STOPPED Stage3 export originalscheduleddates vs editedanchor, cancelled/exceptions, stale-beforevalidation, earlieroverlap/laternonoccupancy, policy-invalid no-op/keyreuse",
+    "Actual6tables4pairs6overlappingbookings pigeonholeinfeasible, <5s configured2CPU2GiB/no state",
+    "Crossrestaurant writes and no-op do not stale r plan; first/repeatcancel and closure-onlyapply exact0..4 counters"
+  ],
+  "stats": [
+    {
+      "path": "/_test/import",
+      "status": 204,
+      "seconds": 0.012286953002330847
+    },
+    {
+      "path": "/series/series_7ece2366fc5c734f3ead7fdd999e7659",
+      "status": 200,
+      "seconds": 0.0008446970023214817
+    },
+    {
+      "path": "/series/series_7ece2366fc5c734f3ead7fdd999e7659/amend",
+      "status": 201,
+      "seconds": 0.0009062000026460737
+    },
+    {
+      "path": "/series",
+      "status": 200,
+      "seconds": 0.0007979049987625331
+    },
+    {
+      "path": "/reservations",
+      "status": 201,
+      "seconds": 0.0006028969946783036
+    },
+    {
+      "path": "/restaurants/r/policies",
+      "status": 201,
+      "seconds": 0.0005501870036823675
+    },
+    {
+      "path": "/_test/export",
+      "status": 200,
+      "seconds": 0.0019249870092608035
+    },
+    {
+      "path": "/series/series_7ece2366fc5c734f3ead7fdd999e7659/amend",
+      "status": 422,
+      "seconds": 0.0006029799988027662
+    },
+    {
+      "path": "/_test/export",
+      "status": 200,
+      "seconds": 0.001906653997139074
+    },
+    {
+      "path": "/series/series_7ece2366fc5c734f3ead7fdd999e7659/amend",
+      "status": 409,
+      "seconds": 0.0004032649885630235
+    },
+    {
+      "path": "/_test/export",
+      "status": 200,
+      "seconds": 0.0018335670029046014
+    },
+    {
+      "path": "/series/series_7ece2366fc5c734f3ead7fdd999e7659/amend",
+      "status": 201,
+      "seconds": 0.0005810629954794422
+    },
+    {
+      "path": "/_test/export",
+      "status": 200,
+      "seconds": 0.002070618007564917
+    },
+    {
+      "path": "/_test/export",
+      "status": 200,
+      "seconds": 0.0020174070086795837
+    },
+    {
+      "path": "/_test/export",
+      "status": 200,
+      "seconds": 0.002081660000840202
+    },
+    {
+      "path": "/_test/export",
+      "status": 200,
+      "seconds": 0.0020149490010226145
+    },
+    {
+      "path": "/_test/reset",
+      "status": 204,
+      "seconds": 0.06846672800020315
+    },
+    {
+      "path": "/auth/login",
+      "status": 200,
+      "seconds": 0.034371930989436805
+    },
+    {
+      "path": "/restaurants/r/replans",
+      "status": 409,
+      "seconds": 0.0027318920037942007
+    },
+    {
+      "path": "/_test/export",
+      "status": 200,
+      "seconds": 0.0010932479926850647
+    },
+    {
+      "path": "/_test/export",
+      "status": 200,
+      "seconds": 0.0010212460038019344
+    },
+    {
+      "path": "/_test/reset",
+      "status": 204,
+      "seconds": 0.06428082300408278
+    },
+    {
+      "path": "/auth/login",
+      "status": 200,
+      "seconds": 0.03272724599810317
+    },
+    {
+      "path": "/reservations",
+      "status": 201,
+      "seconds": 0.0008207389910239726
+    },
+    {
+      "path": "/restaurants/r/replans",
+      "status": 201,
+      "seconds": 0.0005548119952436537
+    },
+    {
+      "path": "/reservations",
+      "status": 201,
+      "seconds": 0.0006103979976614937
+    },
+    {
+      "path": "/_test/export",
+      "status": 200,
+      "seconds": 0.0009330339962616563
+    },
+    {
+      "path": "/reservations/679F3AD097",
+      "status": 200,
+      "seconds": 0.00044109900773037225
+    },
+    {
+      "path": "/_test/export",
+      "status": 200,
+      "seconds": 0.0008424059924436733
+    },
+    {
+      "path": "/restaurants/r/replans/plan_25d8b5c0b2faca996f1131da243310c2/apply",
+      "status": 201,
+      "seconds": 0.0004369320085970685
+    },
+    {
+      "path": "/reservations/679F3AD097/cancel",
+      "status": 200,
+      "seconds": 0.00040884799091145396
+    },
+    {
+      "path": "/reservations/679F3AD097/cancel",
+      "status": 200,
+      "seconds": 0.0003494300035526976
+    },
+    {
+      "path": "/_test/export",
+      "status": 200,
+      "seconds": 0.0009977870067814365
+    },
+    {
+      "path": "/restaurants/r/replans",
+      "status": 201,
+      "seconds": 0.000512143989908509
+    },
+    {
+      "path": "/restaurants/r/replans/plan_1294cccb70676c8c233a0d6f54a28cf6/apply",
+      "status": 201,
+      "seconds": 0.0004070150025654584
+    },
+    {
+      "path": "/_test/export",
+      "status": 200,
+      "seconds": 0.0011363749945303425
+    }
+  ],
+  "adverse6_4_6_seconds": 0.0027318920037942007
+}

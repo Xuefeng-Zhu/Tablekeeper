@@ -1,0 +1,254 @@
+{
+  "work_items": [
+    "BUILD-S3",
+    "QA-S3-RUN"
+  ],
+  "decision": "ACCEPTED",
+  "release_scope": "Stage3 and inherited Stage1/Stage2 only; independent exactcandidate release",
+  "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3",
+  "responsible": "@frankzhu94/factory-reviewer",
+  "starting_revision": "c7258240675a938ebc884506dbb04159288ef787",
+  "handoff_event": "4258ed0e-cbef-4e07-a814-90de3e1231df",
+  "receipt_event": "a145ff94-daa9-4dea-b837-694eaa9ebb3f",
+  "recorded_utc": "2026-10-06T08:18:43.966960+00:00",
+  "verified_sources": {
+    "/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-1.md": "9460189eac83802ce158f16ee90989af728a489b32a6147e2dc8e320f383055f",
+    "/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-2.md": "b1aa1b4affad456ff26f208a378eb2f6884153fc6ef667ab37b888fcda96c5dc",
+    "/Users/frank/mygit/Tablekeeper/challenge/tablekeeper/spec/stage-3.md": "36b7ff5294b3992a6fa2894e9b4f2350072912fe10ed212c1f9a8828be1f9abe",
+    "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/ARCHITECTURE.md": "d9073895d6621001434c29064316c6799d578cd2093a849cdffa06d214cfb184",
+    "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/WORKING.md": "06ca0be85a76a9c3db40cb0ae31bad01b6e88f77eff26cd7e6d16c3bdd7b256d",
+    "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/DESIGN.md": "677188d1b6f6da7f34a3fc810259970e013d153517a078b27cc0bb8716ba433f",
+    "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-arch-s3-20261006T0740Z/runnable-targets.txt": "df1509fed6dba7042c90c8beef064398e204bb467d4ec9454d5e9cdfe4a39e8e"
+  },
+  "clone": "/private/tmp/tablekeeper-review-s3-release-20261006T0813Z",
+  "clean_before_after": true,
+  "accepted_earlier_outputs": "stage-1 unchanged fromb3df39340cee6f738ac79a12dd1347fc38e969e9; stage-2 unchanged from108bcd4c48fa4fb4d7dedf286e94c8e4937f7f10; static9 copied files byteequalstage2; packaged20py/static equalclean candidate",
+  "commands": [
+    "From challenge cwd: /Users/frank/mygit/Tablekeeper/runs/harness-venv/bin/python -m harness run --track tablekeeper --repo /private/tmp/tablekeeper-review-s3-release-20261006T0813Z --stage 3 --mode isolated --out /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/official",
+    "python3 /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/execute.py (orchestration0/client1 missing test helper retained; not productfailure)",
+    "python3 /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/attempt2/execute.py (orchestration0/client0 all Dockercommands0)",
+    "python3 /Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/supplement/execute.py (orchestration0; prepare/verify0; source actuallystopped beforeverify; allcleanup0)",
+    "Exact Git cleanSHA/bytecomparison/diffcommands/UTC/exits setup.json; controlled network-none packagingargv packaging.json exit0; final cleanSHA/status observed0"
+  ],
+  "official": {
+    "revision": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3",
+    "track": "tablekeeper",
+    "stages": {
+      "1": "pass",
+      "2": "pass",
+      "3": "pass"
+    },
+    "highest_contiguous": 3,
+    "started_at": "2026-10-06T08:12:47.604732+00:00",
+    "finished_at": "2026-10-06T08:14:06.102038+00:00",
+    "schema_version": 2,
+    "run_id": "9f692e4b61cc4d8a9f84fb4d1062ed1a",
+    "mode": "isolated",
+    "provenance": "working-tree",
+    "state": "completed",
+    "pytest_args": [],
+    "suite_digest": "7e85d007a912b44e94c2890b5dccc4dcd416832b6aba35d729844de8c0aa1956",
+    "checks": {
+      "1": {
+        "collected": 120,
+        "passed": 120,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0,
+        "deselected": 0,
+        "xfailed": 0,
+        "files": {
+          "stage_1/test_health_reset_auth.py": {
+            "passed": 12,
+            "total": 12
+          },
+          "stage_1/test_reservations.py": {
+            "passed": 37,
+            "total": 37
+          },
+          "stage_1/test_restaurants_availability.py": {
+            "passed": 18,
+            "total": 18
+          },
+          "stage_1/test_retries_time_input.py": {
+            "passed": 20,
+            "total": 20
+          },
+          "stage_1/test_sample.py": {
+            "passed": 20,
+            "total": 20
+          },
+          "stage_1/test_seeded_state.py": {
+            "passed": 13,
+            "total": 13
+          }
+        }
+      },
+      "2": {
+        "collected": 25,
+        "passed": 25,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0,
+        "deselected": 0,
+        "xfailed": 0,
+        "files": {
+          "stage_2/test_sample.py": {
+            "passed": 8,
+            "total": 8
+          },
+          "stage_2/test_ui.py": {
+            "passed": 17,
+            "total": 17
+          }
+        }
+      },
+      "3": {
+        "collected": 7,
+        "passed": 7,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0,
+        "deselected": 0,
+        "xfailed": 0,
+        "files": {
+          "stage_3/test_sample.py": {
+            "passed": 7,
+            "total": 7
+          }
+        }
+      }
+    },
+    "overshoot": null,
+    "claimed_stage": "3",
+    "share": 1.0,
+    "upgrade_sources": {
+      "2": {
+        "folder": "/private/tmp/tablekeeper-review-s3-release-20261006T0813Z/stage-1",
+        "revision": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3"
+      },
+      "3": {
+        "folder": "/private/tmp/tablekeeper-review-s3-release-20261006T0813Z/stage-2",
+        "revision": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3"
+      },
+      "4": {
+        "folder": "/private/tmp/tablekeeper-review-s3-release-20261006T0813Z/stage-3",
+        "revision": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3"
+      }
+    }
+  },
+  "official_exit": 0,
+  "official_obligation": "Unfiltered required stages120/25/7 pass; Stage4 overshoot outputFAIL outside requestedscope does not imply Stage4 acceptance",
+  "independent_browser_api": {
+    "report": "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/attempt2/browser-run/report.json",
+    "start_utc": "2026-10-06T08:15:46.953104+00:00",
+    "end_utc": "2026-10-06T08:16:23.609910+00:00",
+    "browser": "153.0.8010.12",
+    "focus_cases": 11,
+    "groups": [
+      "Inherited Enter-number focus phase observed; keyboard Tab reaches recoverysubmit PASS, not fieldfocus preservation",
+      "Browser late detail/error/finally Bauthority PASS",
+      "Browser lost success replay/exact retry/editrevert new identity PASS",
+      "Browser actual accepted Stage1 export/auth/form/bodykey/legacyreceipt/currentcancelled PASS",
+      "Browser actual accepted Stage1 export/auth/form/bodykey/legacyreceipt/currentcancelled PASS",
+      "S3 literal version ordering/immutable booking/history/canonical invalid-policy no-op/stale-before-invalid PASS",
+      "S3 amendedanchor3/originalreceipt1/selectedperdate/mixedrealnoopdedup/replay/nativehistoryseriesreceipt rollback PASS",
+      "S3 firstfailingindex atomic failed-key reuse/native numericprecision versus ordered array receipt PASS",
+      "S3 independent50CAS+50duplicateadoption/owner-hidden historydecision PASS"
+    ],
+    "requests": 207,
+    "statuses": {
+      "422": 5,
+      "200": 109,
+      "201": 22,
+      "204": 16,
+      "404": 2,
+      "409": 53
+    },
+    "max_seconds": 0.17830888400203548,
+    "actual_upgrade_sources": [
+      {
+        "stage": 1,
+        "schema": 1,
+        "selection": "singleton",
+        "real_accepted_service": true
+      },
+      {
+        "stage": 2,
+        "schema": 2,
+        "selection": "pair",
+        "real_accepted_service": true
+      }
+    ],
+    "group_label_clarification": "Driver retained generic Stage1 label for both upgrade passes; code stageparameter/source/schema assertions independently establish actual Stage1ANDStage2 upgrades. Both preserve pendingcaller/form/body/key/noauthreload and legacy originalreceipt against livecancelledlookup."
+  },
+  "independent_supplement": [
+    {
+      "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3",
+      "responsible": "@frankzhu94/factory-reviewer",
+      "phase": "prepare",
+      "start_utc": "2026-10-06T08:17:41.988732+00:00",
+      "end_utc": "2026-10-06T08:17:42.549666+00:00",
+      "groups": [
+        "Actual old1 confirmedexport adoption+legacyreceipt+native roundtrip PASS",
+        "Actual old2 confirmedexport adoption+legacyreceipt+native roundtrip PASS",
+        "5001digit validpolicy0 parse/format/availability/create/import/originalreplay; unknownrestaurant404 PASS",
+        "OLDacceptedcutoff still blocks noop/cancel despite newzero; stale winsinvalid/cutoff PASS",
+        "Native historicalseries snapshot captured before later sourcewrite; private bundle retained"
+      ],
+      "api_requests": 48,
+      "api_statuses": {
+        "200": 25,
+        "201": 9,
+        "204": 10,
+        "404": 1,
+        "409": 3
+      },
+      "max_api_seconds": 0.08063730198773555,
+      "result": "PASS",
+      "tokens_logged": false
+    },
+    {
+      "candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3",
+      "responsible": "@frankzhu94/factory-reviewer",
+      "phase": "verify",
+      "start_utc": "2026-10-06T08:17:45.105358+00:00",
+      "end_utc": "2026-10-06T08:17:45.123299+00:00",
+      "groups": [
+        "Actually stopped native source/destination exact snapshot/historicalanchor1-seriesanchor3-originalreplays PASS"
+      ],
+      "api_requests": 4,
+      "api_statuses": {
+        "200": 3,
+        "204": 1
+      },
+      "max_api_seconds": 0.0034634729963727295,
+      "result": "PASS",
+      "tokens_logged": false
+    }
+  ],
+  "measured_helper_http_summary": {
+    "requests": 259,
+    "fiveXX": 0,
+    "max_seconds": 0.17830888400203548,
+    "scope": "259helper loggedrequests; excludes browsertraffic/failed firstdriver nativecalls; not total service traffic"
+  },
+  "environment": "Packaged Docker Python3.12 services and official df-harness-runner Chromium153.0.8010.12 on internalnetworks; every app/source/peer/runner configured2CPU2GiB. Caps inspected/recorded; peak consumption not measured; allscopedresourcesremoved0. No nativeMacbrowser/externaljudge claim.",
+  "first_attempt": "Retained rootreview.py/execution.json/browser.txt/browser-run/partial.json: clientexit1 NameError missingpage_setup after11focuspasses beforeAPIchecks. Corrected helper in distinctattempt2; no productrepair, no failedoutputoverwritten.",
+  "keyboard_disposition": "Actual single/pair Enter fromnumber beforeINPUT, pendingBODY, completionBODY whilefield disabled; retainedphase.json, not party-focus PASS. In both controls oneTab reachesenabledbooking-submit. Accepted DESIGN expressly permits pendingfielddisable and requires submit/retryfocus; own11submit/retry/user/newform/freepair cases PASS withconnectedvisiblefocus. No unusable keyboardgate observed.",
+  "supporting_evidence": "QA107manifestartifact bytes/SHA verified; source-linked coverage/inputmap/record/provenance reviewed:18unique22attempt907HTTP0fiveXX,5fiftyclasses,6requiredbrowsergroups, realold1old2/native stoppedsource; failed wronginterval/clientguard/usedkey/broadpartyfocus assertions truthfully retained. Owner32groups961HTTP, actualold1old2browser and120/25/7 suite support only. Ownerpriorunknownrestaurant disconnect and5001digit formatter failures retained and independently reverified current404/valid5001digit create/import/replay. No known material defect remains.",
+  "limitations": [
+    "Finite case/environment scope; not exhaustive calendarzones/input/errorpermutations/concurrentpublicreadinterleavings or historycorruption cross-products.",
+    "Nativebrowserzoom/assistiveaudio/continuousresourcepeak/exactHTTPcutoff equality/forcedcollision/Unicodeheaders/longtokenelapsed/mappedhostportmanuallayer NOT_TESTED.",
+    "Cancelledlegacyhistory bootstrap and internalrestaurantcounterbaseline explicit conventions, not reconstructed historical truth/newpublicoracle. Nativehistory neverbootstrap; inherited gap-boundary convention underspecified.",
+    "No new fullDesigner gate/new screens; actual copiedUI inherited375/1280 keyboard/recovery/screenshots observed. No Stage4 acceptance or official externaljudgment."
+  ],
+  "monetary_cost": "UNAVAILABLE",
+  "skill": "webapp-testing /Users/frank/.codex/skills/webapp-testing/SKILL.md",
+  "private_artifact": "supplement/private-bundle.json chmod0600 syntheticcredential/token snapshot retained; never printed or committed; omit from roompayload",
+  "verdict_events": {
+    "BUILD-S3": "4b78e06c-4920-4c97-8e65-c6402135dbf7",
+    "QA-S3-RUN": "160d0a65-e132-420c-b0bc-192cc87a0392"
+  },
+  "board_confirmed": "BothACCEPTED version5 owner_sync_pending=true observed"
+}

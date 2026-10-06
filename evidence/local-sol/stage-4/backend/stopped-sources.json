@@ -1,0 +1,46 @@
+[
+  {
+    "argv": [
+      "docker",
+      "stop",
+      "backend-s4-s1-0956"
+    ],
+    "start_utc": "2026-10-06T10:02:23.359456+00:00",
+    "end_utc": "2026-10-06T10:02:33.658141+00:00",
+    "exit": 0,
+    "stdout": "backend-s4-s1-0956"
+  },
+  {
+    "argv": [
+      "docker",
+      "stop",
+      "backend-s4-s2-0956"
+    ],
+    "start_utc": "2026-10-06T10:02:33.658222+00:00",
+    "end_utc": "2026-10-06T10:02:43.933277+00:00",
+    "exit": 0,
+    "stdout": "backend-s4-s2-0956"
+  },
+  {
+    "argv": [
+      "docker",
+      "stop",
+      "backend-s4-s3-0956"
+    ],
+    "start_utc": "2026-10-06T10:02:43.933291+00:00",
+    "end_utc": "2026-10-06T10:02:54.172968+00:00",
+    "exit": 0,
+    "stdout": "backend-s4-s3-0956"
+  },
+  {
+    "argv": [
+      "docker",
+      "stop",
+      "backend-s4-s4a-1001"
+    ],
+    "start_utc": "2026-10-06T10:02:54.173031+00:00",
+    "end_utc": "2026-10-06T10:03:04.421308+00:00",
+    "exit": 0,
+    "stdout": "backend-s4-s4a-1001"
+  }
+]

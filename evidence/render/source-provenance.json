@@ -1,0 +1,36 @@
+{
+  "candidate": "b1f7ef64db7f0dce0b3f3a913a3af280c96d70b9",
+  "source_subdirectory": "stage-2",
+  "files": {
+    "Dockerfile": "a9e5d5953574a0169c432e0ec25626abc365cfd5c4f6c6c95f3d315c2344248c",
+    "RUN.md": "c2f99469f4dd4083c4916b60db34c090fb09a393bb3678195ba4f379114b7ffd",
+    "domain.py": "9368dd0d4e479d30b8e17120462ffcd63bbb4490f4d6fa060763f231e12ba62d",
+    "legacy_domain.py": "c0c0df86b5ea88d9e48be4ea2ce4c57d2246dc7a4e772e58b724ca93be9c28fd",
+    "legacy_state.py": "b1094a3ffad1e8f06d858d65aa6fd6cc8fedb16e399836385ca7ea8753f3fec7",
+    "server.py": "9790bb3353a3059c7730554abc595198bf8ba6633af96ff3e9e13d9ef4ce029a",
+    "service.py": "46903d2fd358e2b2c16cd3100d0308004703d6d2dd6adcfa753d9eef0c20dddd",
+    "state.py": "198c9349fee00508fbd47f15f4e85b6304a38bdec8760d4738cefd7fd4c2e1ae",
+    "static/api.js": "9a57a1e8c48b6e9df9cca7a199f8690b4cc716cfccb917d8ef23409e8a0eed8e",
+    "static/app.js": "ce9795c065d509b88a46dedc5896a4bee1a228fa93617d06bef859b23b1ab58e",
+    "static/auth.js": "4c07dcbe95f2e008b66bf343f4e880cd134512dea59a2005f0e2a467fdb5745b",
+    "static/booking.js": "5e77f5f571aba9686cb059f14a1f295a5b6f08daf71419c58429df6617862293",
+    "static/dom.js": "4bb2c46674ab4fd87e161c17c350d865d20269596d14bff2fdae723e9ae48e40",
+    "static/index.html": "27d191e7e5c1461ff8c7a8cc2193a34b1095ab8ca87c699336af76331fd3a6f0",
+    "static/lookup.js": "2f5f42087df0a38623fcf4f5399e1acb7a45aef88a0d7ccd41ee831efcb24e52",
+    "static/search.js": "76a20d6c142d7a362f46a96335c88a8826c8c4c491e9a92c002a2b470185df5d",
+    "static/style.css": "fb85b41b2075eed91fe065a51824d2c50a71188bd74f239298a76939de9fb753",
+    "temporal.py": "db46eae7b47ce72cfc8e95ccaea45958cd59fc3b556e3227e5f9035b8cf6c439",
+    "values.py": "7e35fc23a6474e6ac1737bd1948fa9f70e492820608163e1201a0d6f0a20e096"
+  },
+  "changed_original_files": [
+    "Dockerfile",
+    "static/index.html"
+  ],
+  "added_adapter_files": [
+    "deploy.py",
+    "render.yaml",
+    "README.md",
+    ".dockerignore",
+    ".gitignore"
+  ]
+}

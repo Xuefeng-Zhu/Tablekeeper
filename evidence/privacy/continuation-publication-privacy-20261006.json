@@ -1,0 +1,180 @@
+{
+  "status": "PASS",
+  "audited_at_utc": "2026-10-06T07:35:29.547532+00:00",
+  "scope": "New canonical continuation changes only; previously audited full room export intentionally not rescanned. No runtime, source, documents, provenance or Git mutation.",
+  "files_scanned": 17,
+  "files": [
+    {
+      "path": "FACTORY.md",
+      "bytes": 16006,
+      "sha256": "f28d958c6ff70ed94bb16e73c8503d17697fe4a643b8424129bf7ffb4800fcc0"
+    },
+    {
+      "path": "README.md",
+      "bytes": 11246,
+      "sha256": "566004efe9210b0652332930920c4704ef15019f90288551b2ee7b91d35cb736"
+    },
+    {
+      "path": "docs/SUBMISSION-REQUIREMENTS.md",
+      "bytes": 11071,
+      "sha256": "ad7396216cfbc75143eec90631d1482a2f9eaa8fe89a4f8897b63f2c4cd8f90e"
+    },
+    {
+      "path": "evidence/artifact-provenance.json",
+      "bytes": 24948,
+      "sha256": "559b2f4e236235a07f36a9ba14dfecd4342d8a2f8f295781b8dc74f45e71ccab"
+    },
+    {
+      "path": "evidence/factory-runtime/administrative-scripts/README.md",
+      "bytes": 1447,
+      "sha256": "1d3fb610ef1919d036b0fcad09a5ff65a29d27819388e82f09fa3ca1edc3bf4c"
+    },
+    {
+      "path": "evidence/factory-runtime/administrative-scripts/amend-local-8h.py",
+      "bytes": 12830,
+      "sha256": "2a62a573598818c505354c072a6b73b435417db7234c368d51c069cb129962c1"
+    },
+    {
+      "path": "evidence/factory-runtime/administrative-scripts/dispose-reviewer160-once.py",
+      "bytes": 8420,
+      "sha256": "6b6b69bffb0217d13cd9fe4f639b812d27a263129fd45fd435447badc291d4c4"
+    },
+    {
+      "path": "evidence/factory-runtime/continuation-summary.json",
+      "bytes": 5047,
+      "sha256": "3f919c90778fbb99fed26c3e41e32926b861f56b42ead1a256b0b5ecb621fc52"
+    },
+    {
+      "path": "evidence/factory-runtime/local-8h-source-review.json",
+      "bytes": 2021,
+      "sha256": "b7aaf45b69acf94305425d6e3163919d3fadfc9e96123910c28d3596ead1677c"
+    },
+    {
+      "path": "evidence/factory-runtime/local-8h-unit-test-result.json",
+      "bytes": 2015,
+      "sha256": "c9738939af473f8a731f7e4945835c6924859df895f1158a7abc16863fd55887"
+    },
+    {
+      "path": "evidence/factory-runtime/published-continuation-source-inventory.json",
+      "bytes": 8120,
+      "sha256": "9571690ef93ce6b06ce109ddb549943362ca4f6788bc5a8f97d33a954ec11ec4"
+    },
+    {
+      "path": "factory/factorykit/handoff_batching.py",
+      "bytes": 21143,
+      "sha256": "9af86052cde2c75613d30364ab7a599228628ad95b86c9db83b1443bae7b88bf"
+    },
+    {
+      "path": "factory/factorykit/local_terminal_reconciliation.py",
+      "bytes": 5530,
+      "sha256": "71111d046f78ad1a4d999608f420e3f5e4ae18036a5debd0b7ad4089b9a0c866"
+    },
+    {
+      "path": "factory/factorykit/runtime.py",
+      "bytes": 113416,
+      "sha256": "4e4ff4280b3376623c332fc580bac16030cc582aff5d9620b1993acb912fea5f"
+    },
+    {
+      "path": "factory/tests/test_handoff_batching.py",
+      "bytes": 28844,
+      "sha256": "27ae632486d4b5bc48e511cb5d36dfc1213c5447345e306175a0c216d866836c"
+    },
+    {
+      "path": "factory/tests/test_local_terminal_reconciliation.py",
+      "bytes": 4980,
+      "sha256": "1975c6b4acd1509c15eb425b26cb3a61b6c473d4714cdbc8853ed50807262739"
+    },
+    {
+      "path": "submission/presentation/README.md",
+      "bytes": 773,
+      "sha256": "7696f12285459de1318bf2ca6e4b036a987e0fd2d6a3800299acb0459bdea52b"
+    }
+  ],
+  "credential_and_private_personal_value_matches": 0,
+  "source_and_test_copy_checks": [
+    {
+      "path": "factory/factorykit/local_terminal_reconciliation.py",
+      "source_relative_path": "factorykit/local_terminal_reconciliation.py",
+      "sha256": "71111d046f78ad1a4d999608f420e3f5e4ae18036a5debd0b7ad4089b9a0c866",
+      "byte_exact": true
+    },
+    {
+      "path": "factory/factorykit/handoff_batching.py",
+      "source_relative_path": "factorykit/handoff_batching.py",
+      "sha256": "9af86052cde2c75613d30364ab7a599228628ad95b86c9db83b1443bae7b88bf",
+      "byte_exact": true
+    },
+    {
+      "path": "factory/factorykit/runtime.py",
+      "source_relative_path": "factorykit/runtime.py",
+      "sha256": "4e4ff4280b3376623c332fc580bac16030cc582aff5d9620b1993acb912fea5f",
+      "byte_exact": true
+    },
+    {
+      "path": "factory/tests/test_handoff_batching.py",
+      "source_relative_path": "tests/test_handoff_batching.py",
+      "sha256": "27ae632486d4b5bc48e511cb5d36dfc1213c5447345e306175a0c216d866836c",
+      "byte_exact": true
+    },
+    {
+      "path": "factory/tests/test_local_terminal_reconciliation.py",
+      "source_relative_path": "tests/test_local_terminal_reconciliation.py",
+      "sha256": "1975c6b4acd1509c15eb425b26cb3a61b6c473d4714cdbc8853ed50807262739",
+      "byte_exact": true
+    },
+    {
+      "path": "evidence/factory-runtime/administrative-scripts/amend-local-8h.py",
+      "sha256": "2a62a573598818c505354c072a6b73b435417db7234c368d51c069cb129962c1",
+      "byte_exact": true
+    },
+    {
+      "path": "evidence/factory-runtime/administrative-scripts/dispose-reviewer160-once.py",
+      "sha256": "6b6b69bffb0217d13cd9fe4f639b812d27a263129fd45fd435447badc291d4c4",
+      "byte_exact": true
+    }
+  ],
+  "source_record_hash_checks": [
+    {
+      "path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-20261005/readiness/local-8h-amendment.json",
+      "hash_match": true
+    },
+    {
+      "path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-20261005/readiness/local-8h-reconciliation.json",
+      "hash_match": true
+    },
+    {
+      "path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-20261005/readiness/local-8h-running-sealed-proof.json",
+      "hash_match": true
+    }
+  ],
+  "summary_truthfulness_checks": {
+    "observed_running_at_utc": true,
+    "status": true,
+    "pid": true,
+    "configuration_canonical_sha256": true,
+    "runtime_configuration_fingerprint": true,
+    "tokens_at_running_observation": true,
+    "overall_deadline_utc": true,
+    "room_stage_deadline_utc": true,
+    "source_errors": true,
+    "active_turn_count": true,
+    "source_errors_empty": true,
+    "sealed_manifest": true,
+    "no_identified_recovery_callback_claim": true,
+    "seven_contexts_running": true,
+    "authorization": true,
+    "timeouts": true,
+    "tokens_preserved_at_amendment": true,
+    "remaining_tokens_at_amendment": true,
+    "authorized_local_total_tokens": true,
+    "cumulative_token_cap": true,
+    "test_evidence_copy": true,
+    "original_model_turn_interrupted": true,
+    "original_batch_blocked_confirmed_ack": true,
+    "original_batch_exact_hash": true
+  },
+  "claim_limits": "Dated seven-context running observation and clock amendment are supported. Original Reviewer160 model attempt remains interrupted and old batch blocked with confirmed ACK; no identified Reviewer161 callback/recovery-notice completion or Stage3/4 acceptance claimed in public summary. Later SDK transport skip cannot become task acceptance.",
+  "tests": "115 passing utility regressions supported by copied operator evidence; this audit did not rerun tests or claim independent live recovery acceptance.",
+  "privacy_method": "Official credential shapes plus broader private-key/provider/GitHub/BAND/JWT/email/SSN shapes over all changed and untracked files; source and selected JSON evidence reviewed. No secret values output.",
+  "sealed_receipts_preserved": true
+}

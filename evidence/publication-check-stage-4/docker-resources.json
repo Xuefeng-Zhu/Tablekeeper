@@ -1,0 +1,93 @@
+{
+  "scope": "Read-only Docker inspection restricted to this official harness run_id internal network; service limits differ from harness client containers",
+  "samples": [
+    {
+      "name": "/practical_volhard",
+      "nano_cpus": 0,
+      "memory_bytes": 0,
+      "pids_limit": null,
+      "network_mode": "df-run-1229616bd51c42f1a3c372a1942f404f",
+      "observed_at": "2026-10-06T10:49:40.278929+00:00",
+      "container_id": "85f7ced147ba",
+      "network_internal": true
+    },
+    {
+      "name": "/df-svc-6dcf3af2bf71",
+      "nano_cpus": 2000000000,
+      "memory_bytes": 2147483648,
+      "pids_limit": null,
+      "network_mode": "df-run-1229616bd51c42f1a3c372a1942f404f",
+      "observed_at": "2026-10-06T10:49:40.303013+00:00",
+      "container_id": "669716fba905",
+      "network_internal": true
+    },
+    {
+      "name": "/busy_lumiere",
+      "nano_cpus": 0,
+      "memory_bytes": 0,
+      "pids_limit": null,
+      "network_mode": "df-run-1229616bd51c42f1a3c372a1942f404f",
+      "observed_at": "2026-10-06T10:50:04.048536+00:00",
+      "container_id": "24c98d87db91",
+      "network_internal": true
+    },
+    {
+      "name": "/df-svc-77c8478ebab7",
+      "nano_cpus": 2000000000,
+      "memory_bytes": 2147483648,
+      "pids_limit": null,
+      "network_mode": "df-run-1229616bd51c42f1a3c372a1942f404f",
+      "observed_at": "2026-10-06T10:50:04.073294+00:00",
+      "container_id": "fdb762591865",
+      "network_internal": true
+    },
+    {
+      "name": "/df-svc-38ef224161e9",
+      "nano_cpus": 2000000000,
+      "memory_bytes": 2147483648,
+      "pids_limit": null,
+      "network_mode": "df-run-1229616bd51c42f1a3c372a1942f404f",
+      "observed_at": "2026-10-06T10:50:25.138765+00:00",
+      "container_id": "8f92e11cea10",
+      "network_internal": true
+    },
+    {
+      "name": "/competent_bouman",
+      "nano_cpus": 0,
+      "memory_bytes": 0,
+      "pids_limit": null,
+      "network_mode": "df-run-1229616bd51c42f1a3c372a1942f404f",
+      "observed_at": "2026-10-06T10:50:26.724817+00:00",
+      "container_id": "bd54d2432f79",
+      "network_internal": true
+    },
+    {
+      "name": "/epic_colden",
+      "nano_cpus": 0,
+      "memory_bytes": 0,
+      "pids_limit": null,
+      "network_mode": "df-run-1229616bd51c42f1a3c372a1942f404f",
+      "observed_at": "2026-10-06T10:50:29.984464+00:00",
+      "container_id": "131c5520e5e7",
+      "network_internal": true
+    },
+    {
+      "name": "/df-svc-8eb9e8ac772f",
+      "nano_cpus": 2000000000,
+      "memory_bytes": 2147483648,
+      "pids_limit": null,
+      "network_mode": "df-run-1229616bd51c42f1a3c372a1942f404f",
+      "observed_at": "2026-10-06T10:50:30.013000+00:00",
+      "container_id": "5e3af65eb094",
+      "network_internal": true
+    }
+  ],
+  "monitor_error_types": [],
+  "configured_official_limits": {
+    "service_cpu": 2,
+    "service_memory_bytes": 2147483648,
+    "internal_runtime_network": true
+  },
+  "services_observed": 0,
+  "all_observed_service_limits_match": true
+}

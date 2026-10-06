@@ -1,0 +1,264 @@
+[
+  {
+    "argv": [
+      "docker",
+      "build",
+      "-t",
+      "tablekeeper-review-s3:0813",
+      "/private/tmp/tablekeeper-review-s3-release-20261006T0813Z/stage-3"
+    ],
+    "start_utc": "2026-10-06T08:15:39.746124+00:00",
+    "end_utc": "2026-10-06T08:15:42.787910+00:00",
+    "exit": 0,
+    "stdout": "",
+    "stderr": "#0 building with \"default\" instance using docker driver\n\n#1 [internal] load build definition from Dockerfile\n#1 transferring dockerfile: 30B 0.0s\n#1 transferring dockerfile: 306B 0.2s done\n#1 DONE 0.3s\n\n#2 [internal] load metadata for docker.io/library/python:3.12-slim\n#2 DONE 0.0s\n\n#3 [internal] load .dockerignore\n#3 transferring context: 2B done\n#3 DONE 0.0s\n\n#4 [1/5] FROM docker.io/library/python:3.12-slim\n#4 DONE 0.0s\n\n#5 [internal] load build context\n#5 transferring context: 743B 0.0s done\n#5 DONE 0.0s\n\n#6 [3/5] WORKDIR /app\n#6 CACHED\n\n#7 [4/5] COPY . ./\n#7 CACHED\n\n#8 [2/5] RUN apt-get update && apt-get install -y --no-install-recommends tzdata && rm -rf /var/lib/apt/lists/*\n#8 CACHED\n\n#9 [5/5] RUN mkdir -p static\n#9 CACHED\n\n#10 exporting to image\n#10 exporting layers done\n#10 writing image sha256:fc4408c51d1047f2c2554c5f49be1c60bec72afaa972483f99b07588ab1911e2 done\n#10 naming to docker.io/library/tablekeeper-review-s3:0813 0.0s done\n#10 DONE 0.1s\n"
+  },
+  {
+    "argv": [
+      "docker",
+      "build",
+      "-t",
+      "tablekeeper-review-s3-old1:0813",
+      "/private/tmp/tablekeeper-review-s3-release-20261006T0813Z/stage-1"
+    ],
+    "start_utc": "2026-10-06T08:15:42.796446+00:00",
+    "end_utc": "2026-10-06T08:15:43.700144+00:00",
+    "exit": 0,
+    "stdout": "",
+    "stderr": "#0 building with \"default\" instance using docker driver\n\n#1 [internal] load build definition from Dockerfile\n#1 transferring dockerfile: 346B done\n#1 DONE 0.0s\n\n#2 [internal] load metadata for docker.io/library/python:3.12-slim\n#2 DONE 0.0s\n\n#3 [internal] load .dockerignore\n#3 transferring context: 2B done\n#3 DONE 0.0s\n\n#4 [1/4] FROM docker.io/library/python:3.12-slim\n#4 DONE 0.0s\n\n#5 [internal] load build context\n#5 transferring context: 178B done\n#5 DONE 0.0s\n\n#6 [2/4] RUN apt-get update && apt-get install -y --no-install-recommends tzdata && rm -rf /var/lib/apt/lists/*\n#6 CACHED\n\n#7 [3/4] WORKDIR /app\n#7 CACHED\n\n#8 [4/4] COPY values.py temporal.py domain.py state.py service.py server.py ./\n#8 CACHED\n\n#9 exporting to image\n#9 exporting layers done\n#9 writing image sha256:dbf730160f49215f917ecbe95b67b6d573756bdbdf35b194bd8637007cb63b14 done\n#9 naming to docker.io/library/tablekeeper-review-s3-old1:0813 done\n#9 DONE 0.0s\n"
+  },
+  {
+    "argv": [
+      "docker",
+      "build",
+      "-t",
+      "tablekeeper-review-s3-old2:0813",
+      "/private/tmp/tablekeeper-review-s3-release-20261006T0813Z/stage-2"
+    ],
+    "start_utc": "2026-10-06T08:15:43.701470+00:00",
+    "end_utc": "2026-10-06T08:15:44.448311+00:00",
+    "exit": 0,
+    "stdout": "",
+    "stderr": "#0 building with \"default\" instance using docker driver\n\n#1 [internal] load build definition from Dockerfile\n#1 transferring dockerfile: 306B done\n#1 DONE 0.0s\n\n#2 [internal] load metadata for docker.io/library/python:3.12-slim\n#2 DONE 0.0s\n\n#3 [internal] load .dockerignore\n#3 transferring context: 2B done\n#3 DONE 0.0s\n\n#4 [1/5] FROM docker.io/library/python:3.12-slim\n#4 DONE 0.0s\n\n#5 [internal] load build context\n#5 transferring context: 646B done\n#5 DONE 0.0s\n\n#6 [2/5] RUN apt-get update && apt-get install -y --no-install-recommends tzdata && rm -rf /var/lib/apt/lists/*\n#6 CACHED\n\n#7 [3/5] WORKDIR /app\n#7 CACHED\n\n#8 [4/5] COPY . ./\n#8 CACHED\n\n#9 [5/5] RUN mkdir -p static\n#9 CACHED\n\n#10 exporting to image\n#10 exporting layers done\n#10 writing image sha256:2f5fc6d8e34bb4fab45ddad1683662a3dde9c59cd360cd6d7b914d84c1f3db19 done\n#10 naming to docker.io/library/tablekeeper-review-s3-old2:0813 done\n#10 DONE 0.0s\n"
+  },
+  {
+    "argv": [
+      "docker",
+      "network",
+      "create",
+      "--internal",
+      "review-s3-net-0813b"
+    ],
+    "start_utc": "2026-10-06T08:15:44.450247+00:00",
+    "end_utc": "2026-10-06T08:15:44.529523+00:00",
+    "exit": 0,
+    "stdout": "a2493fc96247cf52cc4b577b038764c0fa5592a4361cc90712f1e42390c01c4c\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "run",
+      "-d",
+      "--name",
+      "review-s3-app-0813b",
+      "--network",
+      "review-s3-net-0813b",
+      "--cpus",
+      "2",
+      "--memory",
+      "2g",
+      "tablekeeper-review-s3:0813"
+    ],
+    "start_utc": "2026-10-06T08:15:44.530220+00:00",
+    "end_utc": "2026-10-06T08:15:45.285516+00:00",
+    "exit": 0,
+    "stdout": "6cc3c6cf4292a690ac7260649cb3180c3dc6c3bc3541d8676b00767aee8f2c85\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "run",
+      "-d",
+      "--name",
+      "review-s3-old1-0813b",
+      "--network",
+      "review-s3-net-0813b",
+      "--cpus",
+      "2",
+      "--memory",
+      "2g",
+      "tablekeeper-review-s3-old1:0813"
+    ],
+    "start_utc": "2026-10-06T08:15:45.287065+00:00",
+    "end_utc": "2026-10-06T08:15:45.786393+00:00",
+    "exit": 0,
+    "stdout": "d962de10615be84deae3a347445ef84fb97d9e4c96afeb6b9fea7cb28db26780\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "run",
+      "-d",
+      "--name",
+      "review-s3-old2-0813b",
+      "--network",
+      "review-s3-net-0813b",
+      "--cpus",
+      "2",
+      "--memory",
+      "2g",
+      "tablekeeper-review-s3-old2:0813"
+    ],
+    "start_utc": "2026-10-06T08:15:45.787414+00:00",
+    "end_utc": "2026-10-06T08:15:46.065443+00:00",
+    "exit": 0,
+    "stdout": "20850fc967b449ec5f1a2decf2de3c16e00ad767af6e05a760fc732465ef028e\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "run",
+      "-d",
+      "--name",
+      "review-s3-dest-0813b",
+      "--network",
+      "review-s3-net-0813b",
+      "--cpus",
+      "2",
+      "--memory",
+      "2g",
+      "tablekeeper-review-s3:0813"
+    ],
+    "start_utc": "2026-10-06T08:15:46.066006+00:00",
+    "end_utc": "2026-10-06T08:15:46.328834+00:00",
+    "exit": 0,
+    "stdout": "daa1a8bee3f08c6fd7013733642576a25fe70d14bcc4ff92dede4047001594a8\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "create",
+      "--name",
+      "review-s3-browser-0813b",
+      "--network",
+      "review-s3-net-0813b",
+      "--cpus",
+      "2",
+      "--memory",
+      "2g",
+      "--entrypoint",
+      "python",
+      "df-harness-runner",
+      "/review.py"
+    ],
+    "start_utc": "2026-10-06T08:15:46.330208+00:00",
+    "end_utc": "2026-10-06T08:15:46.450732+00:00",
+    "exit": 0,
+    "stdout": "9a243d33e7c18e7f4cf025e0469b47bf29ee0e1b3faaaaf28c7c2ca3e96dc4c6\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "cp",
+      "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/attempt2/review.py",
+      "review-s3-browser-0813b:/review.py"
+    ],
+    "start_utc": "2026-10-06T08:15:46.451593+00:00",
+    "end_utc": "2026-10-06T08:15:46.532001+00:00",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "start",
+      "-a",
+      "review-s3-browser-0813b"
+    ],
+    "start_utc": "2026-10-06T08:15:46.532692+00:00",
+    "end_utc": "2026-10-06T08:16:23.978401+00:00",
+    "exit": 0,
+    "stdout": "{\"start_utc\": \"2026-10-06T08:15:46.953104+00:00\", \"end_utc\": \"2026-10-06T08:16:23.609910+00:00\", \"api_requests\": 207, \"api_statuses\": {\"422\": 5, \"200\": 109, \"201\": 22, \"204\": 16, \"404\": 2, \"409\": 53}, \"max_api_seconds\": 0.17830888400203548, \"result\": \"PASS finite independent scopes\"}\nfocus 11 groups 9\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "cp",
+      "review-s3-browser-0813b:/out",
+      "/Users/frank/mygit/Tablekeeper/result-local-sol-20261005/.evidence/reviewer-s3-release-20261006T0813Z/attempt2/browser-run"
+    ],
+    "start_utc": "2026-10-06T08:16:23.982915+00:00",
+    "end_utc": "2026-10-06T08:16:24.078549+00:00",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "inspect",
+      "review-s3-app-0813b",
+      "review-s3-browser-0813b",
+      "--format",
+      "{{.Name}} image={{.Image}} cpu={{.HostConfig.NanoCpus}} memory={{.HostConfig.Memory}} start={{.State.StartedAt}} end={{.State.FinishedAt}} exit={{.State.ExitCode}}"
+    ],
+    "start_utc": "2026-10-06T08:16:24.079039+00:00",
+    "end_utc": "2026-10-06T08:16:24.170593+00:00",
+    "exit": 0,
+    "stdout": "/review-s3-app-0813b image=sha256:fc4408c51d1047f2c2554c5f49be1c60bec72afaa972483f99b07588ab1911e2 cpu=2000000000 memory=2147483648 start=2026-10-06T08:15:44.981066139Z end=0001-01-01T00:00:00Z exit=0\n/review-s3-browser-0813b image=sha256:da249723d954671d7e57ac5b3b55ced42a7f34430edf45116da52a4ea94963cd cpu=2000000000 memory=2147483648 start=2026-10-06T08:15:46.62280972Z end=2026-10-06T08:16:23.761201614Z exit=0\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "network",
+      "inspect",
+      "review-s3-net-0813b",
+      "--format",
+      "internal={{.Internal}}"
+    ],
+    "start_utc": "2026-10-06T08:16:24.171046+00:00",
+    "end_utc": "2026-10-06T08:16:24.217733+00:00",
+    "exit": 0,
+    "stdout": "internal=true\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "rm",
+      "-f",
+      "review-s3-browser-0813b",
+      "review-s3-app-0813b",
+      "review-s3-old1-0813b",
+      "review-s3-old2-0813b",
+      "review-s3-dest-0813b"
+    ],
+    "start_utc": "2026-10-06T08:16:24.218454+00:00",
+    "end_utc": "2026-10-06T08:16:24.661912+00:00",
+    "exit": 0,
+    "stdout": "review-s3-browser-0813b\nreview-s3-app-0813b\nreview-s3-old1-0813b\nreview-s3-old2-0813b\nreview-s3-dest-0813b\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "docker",
+      "network",
+      "rm",
+      "review-s3-net-0813b"
+    ],
+    "start_utc": "2026-10-06T08:16:24.662493+00:00",
+    "end_utc": "2026-10-06T08:16:24.754862+00:00",
+    "exit": 0,
+    "stdout": "review-s3-net-0813b\n",
+    "stderr": ""
+  }
+]

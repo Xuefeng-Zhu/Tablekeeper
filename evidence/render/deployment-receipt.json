@@ -1,0 +1,31 @@
+{
+  "status": "LIVE_VERIFIED",
+  "checked_at": "2026-10-06T06:05:26.410426+00:00",
+  "candidate": "b1f7ef64db7f0dce0b3f3a913a3af280c96d70b9",
+  "deployment_commit": "382998fe143268754ade2ed2702090df3f71ef56",
+  "repository": "https://github.com/Xuefeng-Zhu/tablekeeper-stage2",
+  "repository_visibility": "PUBLIC",
+  "service_id": "srv-db28udrtqb8s73chaqmg",
+  "deploy_id": "dep-db28ue3tqb8s73char5g",
+  "dashboard": "https://dashboard.render.com/web/srv-db28udrtqb8s73chaqmg",
+  "url": "https://tablekeeper-stage2.onrender.com",
+  "plan": "free",
+  "region": "oregon",
+  "runtime": "Docker",
+  "health_check": "/health",
+  "auto_deploy": "off",
+  "state_persistence": "ephemeral in-process; startup seeds synthetic restaurants only",
+  "github_app_installed": false,
+  "scope": "Stage 2 deployed independently from continuing local BAND factory; final factory acceptance is separate",
+  "render_deploy_status": "Deploy succeeded | Live",
+  "live_http_receipt": "live-smoke-20261006T060444Z.json",
+  "browser_checks": [
+    "Rendered root and demo disclosure",
+    "Live availability search for six guests displays singleton and Garden & Corner pair seats",
+    "No observed browser console warnings or errors"
+  ],
+  "screenshots": [
+    "render-live.jpg",
+    "live-stage2.jpg"
+  ]
+}

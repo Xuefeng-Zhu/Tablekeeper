@@ -1,0 +1,64 @@
+{"case": "S-old-terms-noop-vs-real-policy", "outcome": "PASS", "detail": "canonical series no-op retains old capacities/grid/terms/history under invalid latest policy; actual real-change capacity error atomic", "utc_start": "2026-10-06T10:18:29.566050+00:00", "utc_end": "2026-10-06T10:18:29.768641+00:00", "candidate": "ac1eb4945a2adaeaaf8a62d0817bdbc6a021e566"}
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/urllib/request.py", line 1357, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "/usr/local/lib/python3.12/http/client.py", line 1386, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/local/lib/python3.12/http/client.py", line 1432, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.12/http/client.py", line 1381, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.12/http/client.py", line 1141, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.12/http/client.py", line 1085, in send
+    self.connect()
+  File "/usr/local/lib/python3.12/http/client.py", line 1051, in connect
+    self.sock = self._create_connection(
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/socket.py", line 841, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/socket.py", line 978, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/evidence/helpers.py", line 36, in case
+    detail=fn(); result={'case':name,'outcome':'PASS','detail':detail}
+           ^^^^
+  File "/evidence/relationships.py", line 12, in precision
+    t=reset(f());m=manager();good={'table_id':'D','from':'2030-01-07T19:00:00Z','to':'2030-01-07T20:30:00Z'};raw=json.dumps(good)[:-1]+',"unused":1.0000000000000000000000000001}';p=expect('POST','/restaurants/R/replans',201,raw=raw,token=m,key='precise');raw2=raw.replace('0000000000000000000000000001','0000000000000000000000000002');expect('POST','/restaurants/R/replans',409,'idempotency_key_reuse',raw=raw2,token=m,key='precise');snap=export();expect('POST','/_test/import',204,body=snap,base=B);assert expect('POST','/restaurants/R/replans',200,raw=raw,token=m,key='precise',base=B)==p;expect('POST','/restaurants/R/replans',409,'idempotency_key_reuse',raw=raw2,token=m,key='precise',base=B)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/evidence/helpers.py", line 28, in expect
+    got,value=req(method,path,**kw)
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/evidence/helpers.py", line 14, in req
+    with urllib.request.urlopen(urllib.request.Request(base+path,data=data,headers=headers,method=method),timeout=10 if path.startswith('/_test/') else 5) as r:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/urllib/request.py", line 215, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/urllib/request.py", line 515, in open
+    response = self._open(req, data)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/urllib/request.py", line 532, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/urllib/request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/urllib/request.py", line 1386, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/urllib/request.py", line 1360, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
+{"case": "I-precise-native-receipt-difference", "outcome": "FAIL", "detail": "<urlopen error [Errno -3] Temporary failure in name resolution>", "exception": "URLError", "utc_start": "2026-10-06T10:18:29.768705+00:00", "utc_end": "2026-10-06T10:18:29.946005+00:00", "candidate": "ac1eb4945a2adaeaaf8a62d0817bdbc6a021e566"}
+Traceback (most recent call last):
+  File "/evidence/relationships.py", line 15, in <module>
+    Path('/evidence/relationships-results.json').write_text(json.dumps({'candidate':REV,'results':results,'observations':observations},indent=2));assert all(x['outcome']=='PASS' for x in results)
+                                                                                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

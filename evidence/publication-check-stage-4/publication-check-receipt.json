@@ -1,0 +1,104 @@
+{
+  "status": "PASS",
+  "checked_at": "2026-10-06T10:51:42.576512+00:00",
+  "source_candidate": "ac1eb4945a2adaeaaf8a62d0817bdbc6a021e566",
+  "challenge_commit": "803560d2a678ace1414465c098eb0ab5380ffade",
+  "official_mode": "isolated",
+  "official_track": "tablekeeper",
+  "selected_stage": 4,
+  "started_at": "2026-10-06T10:49:37.130651+00:00",
+  "finished_at": "2026-10-06T10:50:31.363432+00:00",
+  "exit_code": 0,
+  "official_report_revision": "ac1eb4945a2adaeaaf8a62d0817bdbc6a021e566",
+  "official_report_state": "completed",
+  "highest_contiguous": 4,
+  "claimed_stage": "4",
+  "checks": {
+    "1": {
+      "collected": 120,
+      "passed": 120,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "deselected": 0,
+      "xfailed": 0
+    },
+    "2": {
+      "collected": 25,
+      "passed": 25,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "deselected": 0,
+      "xfailed": 0
+    },
+    "3": {
+      "collected": 7,
+      "passed": 7,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "deselected": 0,
+      "xfailed": 0
+    },
+    "4": {
+      "collected": 6,
+      "passed": 6,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "deselected": 0,
+      "xfailed": 0
+    }
+  },
+  "unchanged_stages_1_to_3": {
+    "stage-1": {
+      "compared_prior_candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3",
+      "git_tree_sha1": "b63d6a003a5de3b53a30366f465154ebde0a9e82",
+      "byte_equal": true
+    },
+    "stage-2": {
+      "compared_prior_candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3",
+      "git_tree_sha1": "ec38ae27410e1aa6c88f239079d65f2cedb51817",
+      "byte_equal": true
+    },
+    "stage-3": {
+      "compared_prior_candidate": "335f1677316e4a9dfe0cff43ec41ff0d9b0b25a3",
+      "git_tree_sha1": "9e621fef7bad0fafad919a9ab50a85b6b470a627",
+      "byte_equal": true
+    }
+  },
+  "exact_clone_clean_before_and_after": true,
+  "tracked_files_verified_byte_unchanged": 96,
+  "resource_limits": {
+    "actual_service_containers_observed": 4,
+    "cpu_per_service": 2,
+    "memory_bytes_per_service": 2147483648,
+    "runtime_network_internal": true,
+    "inspection_scoped_to_official_run_network": true,
+    "harness_client_containers_have_separate_resource_policy": true
+  },
+  "scope": "Fresh supplied official operator check against exact accepted Stage4 candidate; this does not create or substitute for independent QA/Reviewer product acceptance. Factory runtime, SDK, live product, source and limits were not amended, restarted, edited or messaged.",
+  "command_shape": [
+    "harness-python",
+    "-m",
+    "harness",
+    "run",
+    "--track",
+    "tablekeeper",
+    "--repo",
+    "exact-read-only-ac1eb494-clone",
+    "--stage",
+    "4",
+    "--mode",
+    "isolated",
+    "--out",
+    "unique-fresh-evidence"
+  ],
+  "evidence": {
+    "official/report.json": "dd61311bc8e80f8fdacf07798db559eff9318f5edcbcfda6495667e961d194d6",
+    "execution.json": "d354f362032481d7dc9d88e775341bc0d8f71dfb8764e19693ef7eea4ad1ea07",
+    "candidate-snapshot.json": "1cedd7e75a9642e98f5406338cd632c89cf927e7f55e9c180fb80b1eb580d07c",
+    "docker-resources-validated.json": "7cac3993872edeb727730e42980f4e392619d5f87187796a1c4c6f1a068dee75"
+  }
+}
