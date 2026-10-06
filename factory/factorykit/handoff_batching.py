@@ -65,8 +65,9 @@ def _sha(content):
 
 
 class HandoffJournal:
-    def __init__(self, path, room_id, recipient_id, participant_ids, *, workflow=None):
+    def __init__(self, path, room_id, recipient_id, participant_ids, *, workflow=None, terminal_reconciliations=None):
         self.path = Path(path)
+        self.terminal_reconciliations = terminal_reconciliations or {}
         ids = sorted(participant_ids)
         if (not _uuid(room_id) or not _uuid(recipient_id) or recipient_id not in ids
                 or len(set(ids)) != len(ids) or any(not _uuid(x) for x in ids)):
@@ -76,10 +77,21 @@ class HandoffJournal:
         with self._transaction(create=True) as data:
             if workflow is not None:
                 self._reconcile_receipts(data, workflow)
-            if any(b['status'] in ('claimed', 'blocked') for b in data['batches'].values()):
+            self._validate_terminal_reconciliations(data)
+            if any(b['status'] in ('claimed', 'blocked') and not self._terminal(key, b) for key, b in data['batches'].items()):
                 raise BatchingError('Retained handoff execution is ambiguous or failed; automatic replay is blocked.')
             if any(b['receipt_status'] == 'claimed' for b in data['batches'].values()):
                 raise BatchingError('Retained receipt delivery is ambiguous; automatic resend is blocked.')
+
+    def _terminal(self, key, batch):
+        return (key in self.terminal_reconciliations and batch['status'] == 'blocked'
+                and batch['receipt_status'] == 'confirmed'
+                and hashlib.sha256(canonical(batch)).hexdigest() == self.terminal_reconciliations[key])
+
+    def _validate_terminal_reconciliations(self, data):
+        if any(key not in data['batches'] or not self._terminal(key, data['batches'][key])
+               for key in self.terminal_reconciliations):
+            raise BatchingError('Reviewed terminal claim changed; no replay or reset is allowed.')
 
     @contextmanager
     def _transaction(self, create=False):
@@ -222,11 +234,18 @@ class HandoffJournal:
         event = dict(id=payload.id, room_id=event_room_id, sender_id=payload.sender_id,
                      sender_type=payload.sender_type, content=payload.content, batch=key, index=h['index'], recipients=recipients)
         with self._transaction() as d:
-            if any(b['status'] in ('claimed','blocked') for b in d['batches'].values()):
+            self._validate_terminal_reconciliations(d)
+            if any(b['status'] in ('claimed','blocked') and not self._terminal(k, b) for k, b in d['batches'].items()):
                 raise BatchingError('Handoff execution remains ambiguous; no further admission is allowed.')
             old = d['events'].get(payload.id)
             if old is not None and old != event:
                 raise BatchingError('Conflicting repeated BAND event identity.')
+            if key in self.terminal_reconciliations:
+                # No journal mutation, model claim, or receipt resend. A new
+                # transport identity for this old delivery is not accepted.
+                if old != event:
+                    raise BatchingError('Terminal delivery received a new event identity; reconcile explicitly.')
+                return BatchDecision('skip')
             b = d['batches'].setdefault(key, dict(binding=binding, parts={}, status='collecting', trigger_event_id=None,
                                                 ack_required=True, receipt_status='unsent', receipt_event_id=None))
             if b['binding'] != binding:
@@ -294,6 +313,9 @@ class HandoffJournal:
             if e is None:
                 return None
             b = d['batches'][e['batch']]
+            self._validate_terminal_reconciliations(d)
+            if self._terminal(e['batch'], b):
+                return False
             if b['status'] == 'completed':
                 return False
             if b['status'] != 'ready' or b['trigger_event_id'] != event_id:

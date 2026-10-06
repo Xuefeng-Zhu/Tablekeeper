@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "reviewedAt": "2026-10-06T07:23:38.713570+00:00",
+  "reviewer": "Parent Codex agent independent source review",
+  "source_files": [
+    {
+      "path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-continuation-source-20261006/factorykit/local_terminal_reconciliation.py",
+      "sha256": "71111d046f78ad1a4d999608f420e3f5e4ae18036a5debd0b7ad4089b9a0c866"
+    },
+    {
+      "path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-continuation-source-20261006/factorykit/handoff_batching.py",
+      "sha256": "9af86052cde2c75613d30364ab7a599228628ad95b86c9db83b1443bae7b88bf"
+    },
+    {
+      "path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-continuation-source-20261006/factorykit/runtime.py",
+      "sha256": "4e4ff4280b3376623c332fc580bac16030cc582aff5d9620b1993acb912fea5f"
+    },
+    {
+      "path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-20261005/amend-local-8h.py",
+      "sha256": "2a62a573598818c505354c072a6b73b435417db7234c368d51c069cb129962c1"
+    }
+  ],
+  "reviewScope": [
+    "Only exact two clocks increase by 28800 seconds; isolated source path is the only other configuration delta",
+    "Recorded consumption, original epochs, turns, stage candidates, dispatch and failed callback remain preserved",
+    "Only the exact independently observed interrupted Reviewer delivery is suppressed; other unknown or blocked claims stay closed",
+    "SDK original attempt must be recorded as actually failed; ACK existence/content/sender/recipient is separately verified rather than falsely completed",
+    "Existing watchdog uses a new authenticated callback; no original message replay, direct processed mutation, ACK resend, or task redispatch",
+    "Fresh selected effective configuration/authentication and historical capability proofs retain their actual dates and limits"
+  ],
+  "executionLimits": "Review does not certify a successful restart or model recovery; actual SDK disposition, dry-run, capability/freeze checks and live continuation receipt are required."
+}

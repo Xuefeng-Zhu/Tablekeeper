@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "createdAt": "2026-10-06T07:24:14.676181+00:00",
-  "scope": "Local Sol practice artifacts; Stage 2 independently accepted, post-time-cap full room snapshot before approved continuation",
+  "createdAt": "2026-10-06T07:43:29.278018+00:00",
+  "scope": "Local Sol practice artifacts; independent Stage 2 acceptance and authorized running eight-hour factory continuation; Stage 3/4 completion not claimed",
   "applicationRevision": "108bcd4c48fa4fb4d7dedf286e94c8e4937f7f10",
   "inventoryExclusions": [
     ".git",
@@ -27,13 +27,13 @@
     },
     {
       "path": "FACTORY.md",
-      "bytes": 15641,
-      "sha256": "a7d96cf1e446538707a22611451deb0b5364181778472e5ff4aac238b36df4d6"
+      "bytes": 16588,
+      "sha256": "b4da26da73ef6274eae38741cc763a3b101d0b43044b5ff96fc0ba1436a2f656"
     },
     {
       "path": "README.md",
-      "bytes": 11010,
-      "sha256": "ed881c28fd6d2007b09fac21e039b08864e1fa47bb06b9d4b42bb184abec6f5a"
+      "bytes": 11828,
+      "sha256": "04c7922112dc29432f8540f8fd24ecf8f0ff5c9f7198dac85b16ea6fbfb80f66"
     },
     {
       "path": "WORKING.md",
@@ -167,13 +167,48 @@
     },
     {
       "path": "docs/SUBMISSION-REQUIREMENTS.md",
-      "bytes": 10827,
-      "sha256": "45be932b18b496796f136596327a31c5aa33e0ff42150634a27b34fd91747c03"
+      "bytes": 11656,
+      "sha256": "f9223387c274c5027d822dbc0661b6eb3ddd80bbf357f28ffe58dd7827d1f7bc"
     },
     {
       "path": "evidence/artifact-provenance.json",
-      "bytes": 21434,
-      "sha256": "3f8642b29df44eb68c772daec74f436231b8b12b3098777eb16ef8828b239106"
+      "bytes": 24948,
+      "sha256": "559b2f4e236235a07f36a9ba14dfecd4342d8a2f8f295781b8dc74f45e71ccab"
+    },
+    {
+      "path": "evidence/factory-runtime/administrative-scripts/README.md",
+      "bytes": 1447,
+      "sha256": "1d3fb610ef1919d036b0fcad09a5ff65a29d27819388e82f09fa3ca1edc3bf4c"
+    },
+    {
+      "path": "evidence/factory-runtime/administrative-scripts/amend-local-8h.py",
+      "bytes": 12830,
+      "sha256": "2a62a573598818c505354c072a6b73b435417db7234c368d51c069cb129962c1"
+    },
+    {
+      "path": "evidence/factory-runtime/administrative-scripts/dispose-reviewer160-once.py",
+      "bytes": 8420,
+      "sha256": "6b6b69bffb0217d13cd9fe4f639b812d27a263129fd45fd435447badc291d4c4"
+    },
+    {
+      "path": "evidence/factory-runtime/continuation-summary.json",
+      "bytes": 5047,
+      "sha256": "3f919c90778fbb99fed26c3e41e32926b861f56b42ead1a256b0b5ecb621fc52"
+    },
+    {
+      "path": "evidence/factory-runtime/live-continuation-summary.json",
+      "bytes": 3614,
+      "sha256": "f2a635fe9b2bc784a6ea40a386d8a74cb491cbeae3f0cf652f5c2e49bab87445"
+    },
+    {
+      "path": "evidence/factory-runtime/local-8h-source-review.json",
+      "bytes": 2021,
+      "sha256": "b7aaf45b69acf94305425d6e3163919d3fadfc9e96123910c28d3596ead1677c"
+    },
+    {
+      "path": "evidence/factory-runtime/local-8h-unit-test-result.json",
+      "bytes": 2015,
+      "sha256": "c9738939af473f8a731f7e4945835c6924859df895f1158a7abc16863fd55887"
     },
     {
       "path": "evidence/factory-runtime/notice-recovery-validation.json",
@@ -184,6 +219,11 @@
       "path": "evidence/factory-runtime/notice-recovery.patch",
       "bytes": 1110,
       "sha256": "a361b121c2b8f1095240aa1441668cbb5830b4cadb4913374d8985fd7dceacbf"
+    },
+    {
+      "path": "evidence/factory-runtime/published-continuation-source-inventory.json",
+      "bytes": 8120,
+      "sha256": "9571690ef93ce6b06ce109ddb549943362ca4f6788bc5a8f97d33a954ec11ec4"
     },
     {
       "path": "evidence/factory-runtime/published-source-inventory.json",
@@ -334,6 +374,16 @@
       "path": "evidence/privacy/bundled-workingtree-privacy-receipt.json",
       "bytes": 10513,
       "sha256": "621925bc49781aeaac6a43f12570e78b64e415e5dacd7e30dd837661dbb04f66"
+    },
+    {
+      "path": "evidence/privacy/continuation-publication-privacy-20261006.json",
+      "bytes": 7277,
+      "sha256": "2923ad5e47ae48e921425512a3281336a062135e037c884dc9a8e02f895b79be"
+    },
+    {
+      "path": "evidence/privacy/continuation-publication-privacy-addendum-20261006.json",
+      "bytes": 3300,
+      "sha256": "1520fcd7ec8b157db52c774bc423291ddace90ea6c104f7f0fb3556d8f4afd3a"
     },
     {
       "path": "evidence/privacy/git-history-privacy-receipt.json",
@@ -527,8 +577,8 @@
     },
     {
       "path": "factory/factorykit/handoff_batching.py",
-      "bytes": 19742,
-      "sha256": "9fc052c6aa727bdd110d47266291be8f013e30b136015c8ddf9696a2a7799c8d"
+      "bytes": 21143,
+      "sha256": "9af86052cde2c75613d30364ab7a599228628ad95b86c9db83b1443bae7b88bf"
     },
     {
       "path": "factory/factorykit/harness_usage.py",
@@ -539,6 +589,11 @@
       "path": "factory/factorykit/harnesses.py",
       "bytes": 67745,
       "sha256": "767181115a9f64cc21e462fd669e1b4b1f09a50912eee5d07aaaa9d8ab5d5922"
+    },
+    {
+      "path": "factory/factorykit/local_terminal_reconciliation.py",
+      "bytes": 5530,
+      "sha256": "71111d046f78ad1a4d999608f420e3f5e4ae18036a5debd0b7ad4089b9a0c866"
     },
     {
       "path": "factory/factorykit/membership_advisory.py",
@@ -597,8 +652,8 @@
     },
     {
       "path": "factory/factorykit/runtime.py",
-      "bytes": 113157,
-      "sha256": "c20714cd0b53fadc9f5c860b829acb725a254fe0e362581b823d874d8a3b1869"
+      "bytes": 113416,
+      "sha256": "4e4ff4280b3376623c332fc580bac16030cc582aff5d9620b1993acb912fea5f"
     },
     {
       "path": "factory/factorykit/runtime_profiles.py",
@@ -767,8 +822,13 @@
     },
     {
       "path": "factory/tests/test_handoff_batching.py",
-      "bytes": 27099,
-      "sha256": "26bd9a14d51d8fd465723a0e7e054678015fa857c3eb478aeff36ad3bbdb1ff5"
+      "bytes": 28844,
+      "sha256": "27ae632486d4b5bc48e511cb5d36dfc1213c5447345e306175a0c216d866836c"
+    },
+    {
+      "path": "factory/tests/test_local_terminal_reconciliation.py",
+      "bytes": 4980,
+      "sha256": "1975c6b4acd1509c15eb425b26cb3a61b6c473d4714cdbc8853ed50807262739"
     },
     {
       "path": "factory/tests/test_operational_tools.py",
@@ -1012,8 +1072,8 @@
     },
     {
       "path": "submission/presentation/README.md",
-      "bytes": 724,
-      "sha256": "89b2d7ac0026de809f9bd4bbbd3a7b201c874d5abed0bb9ad2a79a481de3cbbc"
+      "bytes": 773,
+      "sha256": "7696f12285459de1318bf2ca6e4b036a987e0fd2d6a3800299acb0459bdea52b"
     },
     {
       "path": "submission/presentation/Tablekeeper-Local-Sol-Factory.pdf",
@@ -1032,8 +1092,8 @@
     },
     {
       "path": "submission/video/README.md",
-      "bytes": 2892,
-      "sha256": "94dac7945b4244553e052422cad96748ab990ef889bead7ac63b866e69c1a5fe"
+      "bytes": 3025,
+      "sha256": "34a39715f961f6da9336c4af4611a48a9f73619901527d8ea3235ed519830419"
     },
     {
       "path": "submission/video/The-Build-Guild-Tablekeeper-Demo.mp4",

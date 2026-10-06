@@ -386,6 +386,60 @@
       "source_path": "/Users/frank/Downloads/Tablekeeper-Local-Sol-October-5 (1).json",
       "source_sha256": "f79f7f9937325f9689c3e0cf55f450887751706b5cee53dac59afeb58787a132",
       "copied_unchanged": true
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "factory/factorykit/local_terminal_reconciliation.py",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-continuation-source-20261006/factorykit/local_terminal_reconciliation.py",
+      "source_sha256": "71111d046f78ad1a4d999608f420e3f5e4ae18036a5debd0b7ad4089b9a0c866"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "factory/factorykit/handoff_batching.py",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-continuation-source-20261006/factorykit/handoff_batching.py",
+      "source_sha256": "9af86052cde2c75613d30364ab7a599228628ad95b86c9db83b1443bae7b88bf"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "factory/factorykit/runtime.py",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-continuation-source-20261006/factorykit/runtime.py",
+      "source_sha256": "4e4ff4280b3376623c332fc580bac16030cc582aff5d9620b1993acb912fea5f"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "factory/tests/test_handoff_batching.py",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-continuation-source-20261006/tests/test_handoff_batching.py",
+      "source_sha256": "27ae632486d4b5bc48e511cb5d36dfc1213c5447345e306175a0c216d866836c"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "factory/tests/test_local_terminal_reconciliation.py",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-continuation-source-20261006/tests/test_local_terminal_reconciliation.py",
+      "source_sha256": "1975c6b4acd1509c15eb425b26cb3a61b6c473d4714cdbc8853ed50807262739"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/factory-runtime/administrative-scripts/amend-local-8h.py",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-20261005/amend-local-8h.py",
+      "source_sha256": "2a62a573598818c505354c072a6b73b435417db7234c368d51c069cb129962c1"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/factory-runtime/administrative-scripts/dispose-reviewer160-once.py",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-20261005/dispose-reviewer160-once.py",
+      "source_sha256": "6b6b69bffb0217d13cd9fe4f639b812d27a263129fd45fd435447badc291d4c4"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/factory-runtime/local-8h-source-review.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-20261005/readiness/local-8h-source-review.json",
+      "source_sha256": "b7aaf45b69acf94305425d6e3163919d3fadfc9e96123910c28d3596ead1677c"
+    },
+    {
+      "copied_unchanged": true,
+      "destination": "evidence/factory-runtime/local-8h-unit-test-result.json",
+      "source_path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-20261005/readiness/local-8h-unit-test-result.json",
+      "source_sha256": "c9738939af473f8a731f7e4945835c6924859df895f1158a7abc16863fd55887"
     }
   ],
   "render_candidate": "b1f7ef64db7f0dce0b3f3a913a3af280c96d70b9",
@@ -402,5 +456,12 @@
     "designer_evidence_verdict_event_id": "7085ec67-9920-4968-b246-8469a2b0bf8c",
     "record": "evidence/local-sol/reviewer-release-108/record.json",
     "stop_summary": "evidence/local-sol/stop-summary.json"
+  },
+  "local_8h_continuation": {
+    "summary": "evidence/factory-runtime/continuation-summary.json",
+    "source_fingerprint": "ea86bfe452489d5a9f3bb29922c9d3337f7808f8b2870a7f470d84e47f2b443b",
+    "sealed_manifest_sha256": "f5a942cd381d323fff83b553d0de08d0882cdf8fc847a83be3d4f247e80fc14e",
+    "observed_running_at_utc": "2026-10-06T07:28:22.092004+00:00",
+    "scope": "Reviewed local practice terminal reconciliation, exact +28800 clock extension; original failed turn remains interrupted/non-replayable"
   }
 }

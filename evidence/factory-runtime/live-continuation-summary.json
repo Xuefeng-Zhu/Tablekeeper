@@ -1,0 +1,91 @@
+{
+  "status": "RUNNING_STAGE3_REAL_WORK",
+  "at": "2026-10-06T07:33:57.331584+00:00",
+  "mode": "rehearsal",
+  "model": "gpt-6.1-sol",
+  "pid": 76727,
+  "room_id": "4084182d-0b85-46d6-a137-f0bd7d44b498",
+  "all_seven_contexts_running": true,
+  "max_active_turns": 1,
+  "active_turn_ids": [
+    "architect:106:f0aea7ae-a75e-4a12-8e44-d2f563b7336d"
+  ],
+  "configuration_sha256": "72ca7d4e07d4efe7419e021f08d85fb266b668b0d36aacf481b62e013c627a05",
+  "factory_source_sha256": "ea86bfe452489d5a9f3bb29922c9d3337f7808f8b2870a7f470d84e47f2b443b",
+  "absolute_token_cap": 656587855,
+  "current_local_consumption": 130924288,
+  "current_recorded_tokens": 487512143,
+  "current_remaining_tokens": 169075712,
+  "historical_token_baseline": 356587855,
+  "local_total_token_cap": 300000000,
+  "original_interrupted_turn_retained": {
+    "agent_id": "02e4a78d-7d9d-4c77-bf32-b3810a9cfacb",
+    "deadline_at": 1791270667.9238348,
+    "ended_at": 1791270110.043146,
+    "incident_ids": [],
+    "reason_code": "interrupted",
+    "started_at": 1791269467.923935,
+    "status": "interrupted",
+    "trigger_event_id": "b065cc30-6e77-4e05-9422-719b3b614dd4"
+  },
+  "original_incident_retained": {
+    "attempts": 0,
+    "blocked": null,
+    "closed": false,
+    "created_at": 1791270110.043157,
+    "deliveries": [],
+    "failed": true,
+    "next_at": 1791270110.043162,
+    "sender_id": "02e4a78d-7d9d-4c77-bf32-b3810a9cfacb"
+  },
+  "original_blocked_batch_sha256": "57798c812b890a58a3b06ac2ed55d789cefaceac1a423de61871749868b0aca8",
+  "overall_deadline_utc": "2026-10-06T15:01:44.700437+00:00",
+  "room_stage_deadline_utc": "2026-10-06T15:07:44.288395+00:00",
+  "pm_turns_remaining": 22,
+  "stage3_callback": {
+    "agent_id": "974df2f1-b5e8-4873-a1ce-93658e0404a4",
+    "started_at": 1791271940.9746509,
+    "status": "running",
+    "trigger_event_id": "f0aea7ae-a75e-4a12-8e44-d2f563b7336d"
+  },
+  "stage3_ack": {
+    "974df2f1-b5e8-4873-a1ce-93658e0404a4": "42fbdbff-cb59-4aac-8364-9e345dc11457"
+  },
+  "stage3_owner_item": {
+    "goal": "Define implementable Stage3 policies, history and recurring transaction contracts for prompt Backend implementation.",
+    "owner": "@frankzhu94/factory-architect",
+    "starting_revision": "108bcd4c48fa4fb4d7dedf286e94c8e4937f7f10",
+    "state": "IN_PROGRESS"
+  },
+  "new_reviewer_callback": {
+    "agent_id": "02e4a78d-7d9d-4c77-bf32-b3810a9cfacb",
+    "ended_at": 1791271766.5133061,
+    "started_at": 1791271696.928312,
+    "status": "completed",
+    "trigger_event_id": "7dd90341-fe14-47b6-b0b7-d38f318d18f0"
+  },
+  "new_accepted_release_delivery": {
+    "acknowledged": false,
+    "acks": {},
+    "complete": true,
+    "digest": "8d3344de4658052b59aa088c31c95ab70281780ce2138d88a7d799d39772d4a7",
+    "first_at": 1791271758.85939,
+    "incident_id": "turn:reviewer:161:7dd90341-fe14-47b6-b0b7-d38f318d18f0",
+    "parts": {
+      "1": {
+        "event_id": "ba24e073-f3c8-483d-ba41-ebe40226e5c6",
+        "sha256": "7222f8b157ec213d62e9b94682e11aec820ed61d63561e6a846d26ee4ac5ec95"
+      }
+    },
+    "recipient_ids": [
+      "7d26ccf7-2921-4b38-9e16-ca8ebfa2a448"
+    ],
+    "sender_id": "02e4a78d-7d9d-4c77-bf32-b3810a9cfacb",
+    "total": 1
+  },
+  "scope": "Actual same-room continuation with Stage 3 architecture assignment and acknowledgement. Stage 3/4 implementation and acceptance are not claimed; original interrupted Reviewer failure remains retained.",
+  "source_receipt": {
+    "path": "/Users/frank/mygit/Tablekeeper/runs/local-sol-20261005/readiness/local-8h-live-continuation.json",
+    "sha256": "5b49959edc2fae41f093c63c6637cb40aa7508abeb3179f3eb627b146b572e4d"
+  }
+}

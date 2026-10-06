@@ -1,0 +1,7 @@
+# Historical local-run administrative scripts
+
+These two exact scripts are audit code used once for the October 6 local Sol room, not fresh-factory setup entrypoints. They depend on the retained private operator run directory, prior amendment helper, exact identities, source records, current local authentication, stopped-state ownership checks and exclusive attempt records. Do not run them from this copied directory or adapt them by changing IDs.
+
+`amend-local-8h.py` checks direct participant approval, preserves clocks/usage/turns/dispatch and all runtime authority, adds exactly 28,800 seconds to both caps, and clears only the prior overall-time halt. `dispose-reviewer160-once.py` records only the exact known interrupted SDK attempt as failed under authenticated identity/room/journal guards; it never marks the model successful or sends a new task, and never retries an exclusive uncertain operation. Original failure and ACK evidence remain retained.
+
+The newly bundled reusable terminal-reconciliation module and tests enforce an explicit reviewed local-practice manifest and permanently suppress replay of only the acknowledged interrupted claim. Other ambiguous claims remain blocked. Original judged-run/fresh setup policies remain separate. No credentials, authentication nonce, private source configuration or callback transcripts are included here. See ../continuation-summary.json for selected actual amendment/start evidence.

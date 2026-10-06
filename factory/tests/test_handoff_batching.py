@@ -98,6 +98,33 @@ class JournalTests(unittest.TestCase):
         self.j.finish(uid(101),completed=False)
         with self.assertRaises(BatchingError):self.open()
 
+    def test_reviewed_terminal_failure_never_replays_and_allows_new_delivery(self):
+        parts,_=self.complete(); self.j.claim(uid(101))
+        self.j.claim_acknowledgement('RESULT-1'); self.j.confirm_acknowledgement('RESULT-1',uid(300))
+        self.j.finish(uid(101),completed=False)
+        before=self.path.read_bytes(); d=json.loads(before)
+        key,b=next(iter(d['batches'].items()))
+        from factorykit.common import canonical
+        approvals={key:hashlib.sha256(canonical(b)).hexdigest()}
+        self.j=self.open(terminal_reconciliations=approvals)
+        self.assertEqual(self.path.read_bytes(),before)
+        self.assertFalse(self.j.claim(uid(101)))
+        self.assertEqual(self.observe(payload(parts[1],101)).kind,'skip')
+        self.assertEqual(self.path.read_bytes(),before)
+        with self.assertRaises(BatchingError):self.observe(payload(parts[1],102))
+        next_part=fragments(['new result'],delivery='RESULT-2')[0]
+        self.assertEqual(self.observe(payload(next_part,103)).kind,'complete')
+        self.assertTrue(self.j.claim(uid(103)))
+        self.j.finish(uid(103),completed=True)
+        self.assertEqual(json.loads(self.path.read_bytes())['batches'][key],b)
+
+    def test_terminal_allowlist_cannot_authorize_unacknowledged_or_changed_claim(self):
+        self.complete(); self.j.claim(uid(101)); self.j.finish(uid(101),completed=False)
+        from factorykit.common import canonical
+        key,b=next(iter(json.loads(self.path.read_bytes())['batches'].items()))
+        with self.assertRaises(BatchingError):self.open(terminal_reconciliations={key:hashlib.sha256(canonical(b)).hexdigest()})
+        with self.assertRaises(BatchingError):self.open(terminal_reconciliations={'unknown':'0'*64})
+
     def test_completed_duplicate_new_transport_id_is_recorded_not_reexecuted(self):
         parts,_=self.complete(); self.j.claim(uid(101)); self.j.finish(uid(101),completed=True)
         self.j=self.open()

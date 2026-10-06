@@ -1385,6 +1385,8 @@ def create_handoff_journals(config, room, seats, ledger, watchdog, *, recovery=N
                 raise GateError("Batched room continuation/recovery requires journal-aware reconciliation; unsupported.")
             return journals
         workflow_state = json.loads(watchdog.path.read_text())
+        from .local_terminal_reconciliation import load_terminal_reconciliations
+        terminal = load_terminal_reconciliations(config, room, workflow_state)
         previous_turns = workflow_state["turns"]
         expected = {state_dir(config) / f"handoffs-{room}-{seat['id']}.json" for seat in seats}
         expected |= {p.with_suffix(p.suffix + ".lock") for p in expected}
@@ -1394,7 +1396,8 @@ def create_handoff_journals(config, room, seats, ledger, watchdog, *, recovery=N
             path = state_dir(config) / f"handoffs-{room}-{seat['id']}.json"
             if previous_turns and not path.exists():
                 raise GateError("Existing run has no batching journal; automatic migration is blocked.")
-            journals[seat['id']] = HandoffJournal(path, room, seat['agent_id'], [s['agent_id'] for s in seats], workflow=workflow_state)
+            journals[seat['id']] = HandoffJournal(path, room, seat['agent_id'], [s['agent_id'] for s in seats], workflow=workflow_state,
+                                                terminal_reconciliations=terminal.get(seat['id']))
         return journals
     except Exception:
         ledger.halt("handoff journal startup failed; preserve existing runtime state")
