@@ -172,6 +172,21 @@ class Stage4Tests(Stage4InheritedTests):
         self.assertLess(elapsed,5);self.error(response,409,'no_feasible_plan');print('ADVERSE6/4/6_HTTP_SECONDS',elapsed)
         r['tables'].append({'id':'G','label':'G','capacity':4});self.request('POST','/_test/reset',f);self.token=self.request('POST','/auth/login',{'email':'a@b','password':'password1'})[1]['token']
         self.error(self.preview(),422,'planning_limit')
+    def test_explicit_instant_precision_offset_and_boundary_controls(self):
+        old=self.create()
+        for index,(start,end,moved) in enumerate([
+            ('2030-01-07T18:00:00Z','2030-01-07T19:00:00.0000001Z',True),
+            ('2030-01-07T18:00:00Z','2030-01-07T19:00:00Z',False),
+            ('2030-01-07t18:00:00z','2030-01-07t19:00:01z',True),
+            ('2030-01-07T20:00:00+01:00','2030-01-07T20:30:00+01:00',True),
+            ('2030-01-07T20:30:00.0000001Z','2030-01-07T21:00:00Z',False)]):
+            status,p=self.preview('A',start,end,'precision'+str(index));self.assertEqual(status,201)
+            self.assertEqual(p['moved_count'],int(moved));self.assertEqual(len(p['assignments']),int(moved))
+            self.assertEqual(p['closure']['from'],start);self.assertEqual(p['closure']['to'],end)
+        snap=self.snapshot();self.assertEqual(self.request('POST','/_test/import',snap,destination=1)[0],204)
+        p=self.preview('A','2030-01-07T18:00:00Z','2030-01-07T19:00:00.0000001Z','actual-fraction')[1]
+        self.assertEqual(self.apply(p)[0],201);native=self.snapshot();self.assertEqual(self.request('POST','/_test/import',native,destination=1)[0],204)
+        self.error(self.request('POST','/reservations',self.booking(),self.token,'fraction-closed'),409,'table_unavailable')
 
 
 for name in vars(Stage4InheritedTests):

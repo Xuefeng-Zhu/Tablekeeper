@@ -9,6 +9,9 @@ offset applies at the ancient edge. Restore the local year after conversion.
 No shifted date is stored, exposed or used for duration/ordering comparisons.
 """
 from datetime import datetime, timedelta, timezone
+from decimal import Decimal
+from fractions import Fraction
+import re
 from values import fail
 
 UTC = timezone.utc
@@ -31,7 +34,15 @@ def microseconds(value):
 
 def instant(text):
     try:
-        return microseconds(datetime.fromisoformat(text))
+        normalized=text[:-1]+'Z' if text.endswith('z') else text
+        ticks=microseconds(datetime.fromisoformat(normalized))
+        # Closures may supply arbitrary RFC3339 fractional precision. Booking
+        # timestamps remain integer microseconds; rational comparisons preserve
+        # submicrosecond closure boundaries without storing rounded endpoints.
+        match=re.search(r'T\d{2}:\d{2}:\d{2}\.([0-9]+)',normalized,re.IGNORECASE)
+        if match and len(match[1])>6:
+            ticks+=Fraction(Decimal('0.'+match[1][6:]))
+        return ticks
     except (ValueError, TypeError):
         fail()
 

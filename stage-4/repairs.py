@@ -12,7 +12,7 @@ def interval(body):
     values=[]
     for name in ('from','to'):
         text=body.get(name)
-        if not isinstance(text,str) or not re.fullmatch(r'\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2})',text):fail()
+        if not isinstance(text,str) or not re.fullmatch(r'\d{4}-\d{2}-\d{2}[Tt]\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:[Zz]|[+-]\d{2}:\d{2})',text):fail()
         values.append(instant(text))
     if values[0]>=values[1]:fail()
     return values
